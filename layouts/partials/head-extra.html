@@ -1,0 +1,4 @@
+<meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Summary}}{{end}}" />
+{{- if .IsPage -}}
+  <meta name="privacy" content='{{if .Params.private }}{{ "private" }}{{else}}{{"public"}}{{end}}' />
+{{- end -}}

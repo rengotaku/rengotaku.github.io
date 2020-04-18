@@ -1,0 +1,45 @@
+baseURL = "https://www.blog.v41.me"
+title = "ベジタブルプログラミング"
+theme = "hugo-notepadium"
+copyright = "©2018-2020 ベジタブルプログラミング."
+
+languageCode = "ja_JP"
+hasCJKLanguage = true
+
+enableRobotsTXT = true
+
+# Enable Disqus
+disqusShortname = "ベジプロ"
+
+[markup.highlight]
+codeFences = true
+noClasses = false
+
+[markup.goldmark.renderer]
+unsafe = true  # enable raw HTML in Markdown
+
+[params]
+logo = ""  # if you have a logo png
+slogan = "ある人には雑草に、ある人には希望に見える"
+license = "Takasu Ryuji"  # CC License
+description = "ベジタブルプログラムは、「体に優しい。自分に優しい。技術メモ」です。"
+
+[params.math]
+enable = false  # optional: true, false. Enable globally, default: false, you can always enable math on per page.
+use = "katex"  # option: "katex", "mathjax". default: "katex"
+
+[params.syntax]
+use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
+theme = "dracula"
+darkTheme = "xcode-dark"  # apply this theme in dark mode
+webFonts = true  # builtin: 'Source Code Pro'
+
+[params.nav]
+showCategories = false       # /categories/
+showTags = true             # /tags/
+
+# custom navigation items
+
+[[params.nav.custom]]
+title = "About"
+url = "/about"
