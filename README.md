@@ -9,5 +9,5 @@ $ go run main.go xxxx.sqlite3
 ```
 ## Create posts
 ```
-$ hugo
+$ hugo --baseURL https://www.vegetable.blog.v41.me
 ```
