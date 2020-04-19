@@ -97,7 +97,7 @@ keywords: [%s]
 ---
 
 %s
-`, safeEncode(post.Title), post.IsDraft, concatWithQuotation(strings.Split(post.Tags, ",")), post.IsPrivate, post.Uuid, toJst(post.CreatedAt), toJst(post.UpdatedAt), concatWithQuotation(keywords), post.Content)
+`, safeEncode(post.Title), post.IsDraft || post.IsPrivate, concatWithQuotation(strings.Split(post.Tags, ",")), post.IsPrivate, post.Uuid, toJst(post.CreatedAt), toJst(post.UpdatedAt), concatWithQuotation(keywords), post.Content)
 }
 
 func concatWithQuotation(arr []string) string {

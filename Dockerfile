@@ -20,7 +20,7 @@ WORKDIR ${HUGO_SITE}
 
 VOLUME ${HUGO_SITE}
 
-CMD hugo server\
+CMD hugo server \
     --bind 0.0.0.0 \
     --navigateToChanged \
     --templateMetrics \
