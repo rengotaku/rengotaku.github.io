@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  hugo:
+    build: .
+    volumes:
+      - .:/srv/hugo
+    command: >
+      hugo --baseURL https://www.vegetable.blog.v41.me
+    # ports:
+    #   - 1313:1313
+volumes:
+  public_files:
+    driver: local
