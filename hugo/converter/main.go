@@ -53,7 +53,7 @@ func main() {
 	}
 	defer db.Close()
 
-	rows, err := db.Raw("select p.*, group_concat(t.name) as tags from posts as p inner join tag_relationships as tr on tr.post_id = p.id inner join tags as t on t.id = tr.tag_id group by p.id").Rows()
+	rows, err := db.Raw("select p.*, group_concat(t.name) as tags from posts as p inner join tag_relationships as tr on tr.post_id = p.id inner join tags as t on t.id = tr.tag_id where p.is_private = 'f' group by p.id").Rows()
 	defer rows.Close()
 	for rows.Next() {
 		var post Post
@@ -115,8 +115,9 @@ func safeEncode(be string) string {
 	return af
 }
 
-func toJst(t *time.Time) *time.Time {
+func toJst(t *time.Time) string {
 	jst := time.FixedZone("Asia/Tokyo", 9*60*60)
 	tt := t.In(jst)
-	return &tt
+	s := tt.Format(time.RFC3339)
+	return s
 }

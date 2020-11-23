@@ -2,7 +2,7 @@ FROM alpine:3.9
 
 LABEL maintainer='Yan QiDong <yanqd0@outlook.com>'
 
-ENV HUGO_VERSION=0.59.1 \
+ENV HUGO_VERSION=0.68.3 \
     HUGO_SITE=/srv/hugo
 
 RUN apk --no-cache add \
@@ -20,7 +20,7 @@ WORKDIR ${HUGO_SITE}
 
 VOLUME ${HUGO_SITE}
 
-CMD hugo server \
+ENTRYPOINT hugo server \
     --bind 0.0.0.0 \
     --navigateToChanged \
     --templateMetrics \

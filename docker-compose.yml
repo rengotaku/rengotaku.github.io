@@ -4,9 +4,9 @@ services:
   hugo:
     build: .
     volumes:
-      - .:/srv/hugo
+      - ./hugo:/srv/hugo
     command: >
-      hugo server --bind 0.0.0.0
+      --config config.yml
     ports:
       - 1313:1313
 volumes:

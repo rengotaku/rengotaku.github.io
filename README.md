@@ -1,13 +1,8 @@
-# Usage
-sqliteを読み出して、hugoのテンプレートに合うようにファイルを作成する。
-
-# Build
-## Create posts
+# usage
+## start process
 ```
-$ cd converter
-$ go run main.go xxxx.sqlite3
+$ cd hugo
+$ docker-compose up
 ```
-## Create posts
-```
-$ hugo --baseURL https://www.vegetable.blog.v41.me
-```
+## access
+see `http://localhost:1313/`
