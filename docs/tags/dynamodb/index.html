@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>dynamodb | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/tags/dynamodb/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://www.vegetable.blog.v41.me/tags/dynamodb/index.xml">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="dynamodb" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.vegetable.blog.v41.me/tags/dynamodb/" />
+<meta property="og:updated_time" content="2019-07-30T16:20:58+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="dynamodb"/>
+<meta name="twitter:description" content=""/>
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>dynamodb</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      DynamoDBでバックアップよりリストアしたい際に必要なポリシー
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>{ &#34;Version&#34;: &#34;2012-10-17&#34;, &#34;Statement&#34;: [ { &#34;Sid&#34;: &#34;VisualEditor0&#34;, &#34;Effect&#34;: &#34;Allow&#34;, &#34;Action&#34;: [ &#34;dynamodb:Scan&#34;, &#34;dynamodb:Query&#34;, &#34;dynamodb:UpdateItem&#34;, &#34;dynamodb:PutItem&#34;, &#34;dynamodb:GetItem&#34;, &#34;dynamodb:DeleteItem&#34;, &#34;dynamodb:BatchWriteItem&#34;, &#34;dynamodb:ListTables&#34;, &#34;dynamodb:DescribeTable&#34;, &#34;dynamodb:ListBackups&#34;, &#34;dynamodb:RestoreTableFromBackup&#34;, &#34;dynamodb:CreateBackup&#34;, &#34;dynamodb:DeleteTable&#34;, &#34;dynamodb:DescribeBackup&#34;, &#34;dynamodb:DeleteBackup&#34; ], &#34;Resource&#34;: &#34;*&#34; }, { &#34;Effect&#34;: &#34;Deny&#34;, &#34;Action&#34;: [ &#34;dynamodb:DeleteTable&#34; ], &#34;Resource&#34;: &#34;arn:aws:dynamodb:ap-northeast-1:xxxxxx:table/Production*&#34; } ] } create_table する際に、 Scan~BatchWriteItem が必要 Denyで本番のDBは削除対象とし...</p>
+  </section>
+  <footer class="entry-footer">June 14, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to DynamoDBでバックアップよりリストアしたい際に必要なポリシー" href="https://www.vegetable.blog.v41.me/posts/45eafdc5-e37d-4568-b1e2-a498d847635e/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      DynamoDBのポリシー(policy)の一覧
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>BatchGetItem BatchWriteItem CreateBackup CreateGlobalTable CreateTable DeleteBackup DeleteItem DeleteTable DescribeBackup DescribeContinuousBackups DescribeEndpoints DescribeGlobalTable DescribeGlobalTableSettings DescribeLimits DescribeTable DescribeTimeToLive GetItem ListBackups ListGlobalTables ListTables ListTagsOfResource PutItem Query RestoreTableFromBackup RestoreTableToPointInTime Scan TagResource TransactGetItems TransactWriteItems UntagResource UpdateContinuousBackups UpdateGlobalTable UpdateGlobalTableSettings UpdateItem UpdateTable UpdateTimeToLive Amazon DynamoDB - Amazon DynamoDB...</p>
+  </section>
+  <footer class="entry-footer">June 13, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to DynamoDBのポリシー(policy)の一覧" href="https://www.vegetable.blog.v41.me/posts/753c85de-092b-4807-8863-27065b36d51b/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      AWSカスタマーサポートがオススメの試算表
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>DynamoDBのオンデマンドとプロビジョニングの料金を比較をしてみた #reinvent ｜ DevelopersIO 当然ですがプロビジョニングするほうが料金としては安いので必要キャ...</p>
+  </section>
+  <footer class="entry-footer">December 17, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to AWSカスタマーサポートがオススメの試算表" href="https://www.vegetable.blog.v41.me/posts/9475de92-779d-4635-9fbd-f0919e58246e/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      dynamodbをdockerで起動
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>docker: - image: amazon/dynamodb-local:1.11.119 name: dynamodb-local 参考の通りだと、endpointは、dynamodb-local となる...</p>
+  </section>
+  <footer class="entry-footer">October 12, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to dynamodbをdockerで起動" href="https://www.vegetable.blog.v41.me/posts/c24f9540-20dd-40fd-aa3b-3a9f6e7a976e/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      LocalのDynamoに値が入っているか確認
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>rails consoleを起動して。 接続設定 ddb = Aws::DynamoDB::Client.new( endpoint: &#39;http://localhost:8000&#39;, region: &#39;ap-northeast-1&#39; ) =&gt; #&lt;Aws::DynamoDB::Client&gt; テーブル名確認 result = ddb.list_tables result.table_names =&gt; [&#34;TestTables1&#34;, &#34;TestTables2&#34;] 値の確認 result = ddb.scan( table_name: &#39;table_name&#39; ) result.items.each do |item| puts &#34;-------------&#34; item.each do |key, value| puts &#34;#{key}: #{value}&#34; end end =&gt; [{&#34;key1&#34;=&gt;&#34;value1&#34;, &#34;key2&#34;=&gt;&#34;value2&#34;, &#34;key3&#34;=&gt;&#34;value3&#34;}]...</p>
+  </section>
+  <footer class="entry-footer">May 22, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to LocalのDynamoに値が入っているか確認" href="https://www.vegetable.blog.v41.me/posts/2423bb0a-e537-4c90-9a9e-417381e40c5f/"></a>
+</article>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>ロガーの基盤の調査 | Vegetable Programing</title>
+
+<meta name="keywords" content="fluentd, middleware, ベジプロ, プログ, プログラム" />
+<meta name="description" content="調査手順 参考になりそうな資料・サイトを探す ↓ 各手順のメリット、デメリットを洗い出す ↓ 一旦相談数する ↓ （多分）工数の洗い出し 参考資料・サイト fluentd">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/posts/aaf9d0da-97a0-4f7a-b694-8863992996d8/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="ロガーの基盤の調査" />
+<meta property="og:description" content="調査手順 参考になりそうな資料・サイトを探す ↓ 各手順のメリット、デメリットを洗い出す ↓ 一旦相談数する ↓ （多分）工数の洗い出し 参考資料・サイト fluentd" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.vegetable.blog.v41.me/posts/aaf9d0da-97a0-4f7a-b694-8863992996d8/" />
+<meta property="article:published_time" content="2020-01-29T11:37:29+09:00" />
+<meta property="article:modified_time" content="2020-01-29T11:37:29+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ロガーの基盤の調査"/>
+<meta name="twitter:description" content="調査手順 参考になりそうな資料・サイトを探す ↓ 各手順のメリット、デメリットを洗い出す ↓ 一旦相談数する ↓ （多分）工数の洗い出し 参考資料・サイト fluentd"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ロガーの基盤の調査",
+  "name": "ロガーの基盤の調査",
+  "description": "調査手順 参考になりそうな資料・サイトを探す ↓ 各手順のメリット、デメリットを洗い出す ↓ 一旦相談数する ↓ （多分）工数の洗い出し 参考資料・サイト fluentd",
+  "keywords": [
+    "fluentd", "middleware", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "調査手順 参考になりそうな資料・サイトを探す\n↓\n各手順のメリット、デメリットを洗い出す\n↓\n一旦相談数する\n↓\n（多分）工数の洗い出し\n参考資料・サイト fluentd + s3 FluentdでRailsのログをS3に保存する | yosuke.saito\nRails3+devise,nginx,fluent,S3構成でのアクセスログ収集と蓄積 | takemikami’s note\nfluentd + cloudwatch Railsのログ集約とCloudWatch Logsによる分析 - Qiita\nfluentd + treasure data 前業務で行なっていた\nsumo logic Ruby on Rails ログの収集 - Sumo Logic Japanese\nDatadog Ruby on Rails log collection\nfluentd + kibana kibana4によるRailsアプリの可視化 EC2 Amazon Linux - Qiita\nFilebeat + kibana Elasticsearch、Logstash 、Kibana、によるログの可視化　～価値のある情報を導き出す方法のご紹介 ～ | キャスレーコンサルティング株式会社\nLogstash + kafka ログ収集ツールの比較 - Qiita\n基盤の要素  ログ収集 ログ集積 ログ解析  ログ収集     ツール名 集積制限 参考URL 備考     1 fluentd プラグインに依存だがほぼなし [FluentdでRailsのログをS3に保存する yosuke.saito](https://saitoxu.io/2017/10/16/rails-fluentd.html) Railsのログ集約とCloudWatch Logsによる分析 - Qiita   2 Sumo Logic * Sumo Logic パート 1: コレクタをインストールする - Sumo Logic Japanese ログ集積は必然とSumo Logicを使用 情報量が少ない   3 Filebeat Elasticsearch / Logstash / Kafka / Redis / Elastic Cloud https://atsuizo.hatenadiary.jp/entry/2017/08/04/090000 [Configure the output Filebeat Reference [master] Elastic](https://www.elastic.co/guide/en/beats/filebeat/master/configuring-output.html)   4 Apache Flume HDFS / S3 ログ収集フレームワークの新バージョン「FlumeNG」 新(NG)、旧(OG)が存在する   5 Zabbix * Zabbix     6 Logstash Filebeat類似 [Logstash データの一元化、変換、保管    ログ集積     サービス名 fluentd対応 ログ解析 How Read? キーワード検索 要ホスト SaaS OSS 備考     1 Elasticsearch ○ ○ GUI ○ ○ ○ ○ Kibanaと組み合わせる   2 MongoDB ○ - SQLクライアント ○ ○ - ○    3 Datadog ○ ○ GUI - - ○ - 今ホットらしい [FluentdとDatadogの連携 (補足編)   4 InfluxDB ○ ○ GUI - ○ - ○ ログ解析機能あり   5 Amazon Elasticsearch Service ○ ○ GUI ○ - ○ - ElasticsearchをAWSがマネージドしている   6 AWS CloudSearch ○ ○ GUI  - ○ - Amazon CloudSearch にドキュメントを取りこむ Lambda 関数 s32cs のご紹介 - 酒日記 はてな支店   7 AWS S3 ○ - Athena(SQL) ○ - ○ - FluentdでS3に送ったログをAmazon Athenaで集計する。2018-03-26 - Qiita   8 AWS Redshift ○ - SQLクライアント ○ - ○ -    9 GCP BigQuery ○ - SQLクライアント(GUI) ○ - ○ - Google Cloud Platform   10 Sumo Logic ○ ○ GUI ○ - ○ - 情報量が少ない [New Heroku Add-on for Sumo Logic Goes Beta   11 Zabbix ○ ○ GUI - ○ - ○ ログを検索するような仕組みではなく、特定の条件に合致した値を集計する仕組みっぽいZabbixとFluentdを使ってCloudWatchの情報を長期保存する - Qiita   12 Graylog ○ ○ GUI ○ ○ - ○ 複数のミドルウェアを組み合わせる為、構成が複雑になりそう ElasticSearchを使用している [fluentdからGraylogにGELF形式でログを転送する   13 Treasure Data ○ - SQLクライアント(GUI) ○ - ○ - KPIなどでRedushと組み合わせていた。    ログ解析 ログ集積にまとめた\n組み合わせ ホストマネージドをしない、キーワード検索ができる観点で絞りました。\n    収集 集積 解析方法 可視化 所感     1 fluentd Amazon Elasticsearch Service GUI ○ アクセスのKPIを行うなどの際に流用が効きそう   2 fluentd AWS S3 Athena - ログの解析だけをする最低限   3 fluentd Treasure Data クエリ - ログの解析だけをする最低限 別途、契約が必要になる   4 fluentd AWS Redshift クエリ - ログの解析だけをする最低限    ",
+  "wordCount" : "1330",
+  "inLanguage": "en",
+  "datePublished": "2020-01-29T11:37:29+09:00",
+  "dateModified": "2020-01-29T11:37:29+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.vegetable.blog.v41.me/posts/aaf9d0da-97a0-4f7a-b694-8863992996d8/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.vegetable.blog.v41.me/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      ロガーの基盤の調査
+    </h1>
+    <div class="post-meta">January 29, 2020
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h2 id="調査手順">調査手順<a hidden class="anchor" aria-hidden="true" href="#調査手順">#</a></h2>
+<p>参考になりそうな資料・サイトを探す</p>
+<p>↓</p>
+<p>各手順のメリット、デメリットを洗い出す</p>
+<p>↓</p>
+<p>一旦相談数する</p>
+<p>↓</p>
+<p>（多分）工数の洗い出し</p>
+<h2 id="参考資料サイト">参考資料・サイト<a hidden class="anchor" aria-hidden="true" href="#参考資料サイト">#</a></h2>
+<h3 id="fluentd--s3">fluentd + s3<a hidden class="anchor" aria-hidden="true" href="#fluentd--s3">#</a></h3>
+<p><a href="https://saitoxu.io/2017/10/16/rails-fluentd.html">FluentdでRailsのログをS3に保存する | yosuke.saito</a></p>
+<p><a href="https://takemikami.com/archives/1314/">Rails3+devise,nginx,fluent,S3構成でのアクセスログ収集と蓄積 | takemikami&rsquo;s note</a></p>
+<h3 id="fluentd--cloudwatch">fluentd + cloudwatch<a hidden class="anchor" aria-hidden="true" href="#fluentd--cloudwatch">#</a></h3>
+<p><a href="https://qiita.com/Peranikov/items/801287c031db86a21004">Railsのログ集約とCloudWatch Logsによる分析 - Qiita</a></p>
+<h3 id="fluentd--treasure-data">fluentd + treasure data<a hidden class="anchor" aria-hidden="true" href="#fluentd--treasure-data">#</a></h3>
+<p>前業務で行なっていた</p>
+<h3 id="sumo-logic">sumo logic<a hidden class="anchor" aria-hidden="true" href="#sumo-logic">#</a></h3>
+<p><a href="https://help.sumologic.jp/03Send-Data/Collect-from-Other-Data-Sources/Collect_Ruby_on_Rails_Logs">Ruby on Rails ログの収集 - Sumo Logic Japanese</a></p>
+<h3 id="datadog">Datadog<a hidden class="anchor" aria-hidden="true" href="#datadog">#</a></h3>
+<p><a href="https://docs.datadoghq.com/ja/logs/log_collection/ruby/">Ruby on Rails log collection</a></p>
+<h3 id="fluentd--kibana">fluentd + kibana<a hidden class="anchor" aria-hidden="true" href="#fluentd--kibana">#</a></h3>
+<p><a href="https://qiita.com/tos-miyake/items/cafa31049e543dba3049">kibana4によるRailsアプリの可視化 EC2 Amazon Linux - Qiita</a></p>
+<h3 id="span-stylecolor-rgb615757filebeatspan--kibana"><span style="color: rgb(61,57,57);">Filebeat</span> + kibana<a hidden class="anchor" aria-hidden="true" href="#span-stylecolor-rgb615757filebeatspan--kibana">#</a></h3>
+<p><a href="https://www.casleyconsulting.co.jp/blog/engineer/253/">Elasticsearch、Logstash 、Kibana、によるログの可視化　～価値のある情報を導き出す方法のご紹介 ～ | キャスレーコンサルティング株式会社</a></p>
+<h3 id="logstash--kafka">Logstash + kafka<a hidden class="anchor" aria-hidden="true" href="#logstash--kafka">#</a></h3>
+<p><a href="https://qiita.com/kazookie/items/eef3071a0667cb4d5136">ログ収集ツールの比較 - Qiita</a></p>
+<h2 id="基盤の要素">基盤の要素<a hidden class="anchor" aria-hidden="true" href="#基盤の要素">#</a></h2>
+<ul>
+<li>ログ収集</li>
+<li>ログ集積</li>
+<li>ログ解析</li>
+</ul>
+<h3 id="ログ収集">ログ収集<a hidden class="anchor" aria-hidden="true" href="#ログ収集">#</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>ツール名</th>
+<th>集積制限</th>
+<th>参考URL</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>fluentd</td>
+<td>プラグインに依存だがほぼなし</td>
+<td>[FluentdでRailsのログをS3に保存する</td>
+<td>yosuke.saito](<a href="https://saitoxu.io/2017/10/16/rails-fluentd.html">https://saitoxu.io/2017/10/16/rails-fluentd.html</a>) <a href="https://qiita.com/Peranikov/items/801287c031db86a21004">Railsのログ集約とCloudWatch Logsによる分析 - Qiita</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sumo Logic</td>
+<td>*   Sumo Logic</td>
+<td><a href="https://help.sumologic.jp/01Start-Here/Quick-Start-Tutorials/Set-Up-Sumo-Logic-Tutorial/Part-1%3A-Install-a-Collector">パート 1: コレクタをインストールする - Sumo Logic Japanese</a></td>
+<td>ログ集積は必然とSumo Logicを使用 情報量が少ない</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Filebeat</td>
+<td>Elasticsearch / Logstash / Kafka / Redis / Elastic Cloud <a href="https://atsuizo.hatenadiary.jp/entry/2017/08/04/090000">https://atsuizo.hatenadiary.jp/entry/2017/08/04/090000</a> [Configure the output</td>
+<td>Filebeat Reference [master]</td>
+<td>Elastic](<a href="https://www.elastic.co/guide/en/beats/filebeat/master/configuring-output.html">https://www.elastic.co/guide/en/beats/filebeat/master/configuring-output.html</a>)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Apache Flume</td>
+<td>HDFS / S3</td>
+<td><a href="https://www.slideshare.net/AdvancedTechNight/20120301-atn-0402flumeng">ログ収集フレームワークの新バージョン「FlumeNG」</a></td>
+<td>新(NG)、旧(OG)が存在する</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Zabbix</td>
+<td>*   Zabbix</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Logstash</td>
+<td>Filebeat類似</td>
+<td>[Logstash</td>
+<td>データの一元化、変換、保管</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ログ集積">ログ集積<a hidden class="anchor" aria-hidden="true" href="#ログ集積">#</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>サービス名</th>
+<th>fluentd対応</th>
+<th>ログ解析</th>
+<th>How Read?</th>
+<th>キーワード検索</th>
+<th>要ホスト</th>
+<th>SaaS</th>
+<th>OSS</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Elasticsearch</td>
+<td>○</td>
+<td>○</td>
+<td>GUI</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>Kibanaと組み合わせる</td>
+</tr>
+<tr>
+<td>2</td>
+<td>MongoDB</td>
+<td>○</td>
+<td>-</td>
+<td>SQLクライアント</td>
+<td>○</td>
+<td>○</td>
+<td>-</td>
+<td>○</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Datadog</td>
+<td>○</td>
+<td>○</td>
+<td>GUI</td>
+<td>-</td>
+<td>-</td>
+<td>○</td>
+<td>-</td>
+<td>今ホットらしい [FluentdとDatadogの連携 (補足編)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>InfluxDB</td>
+<td>○</td>
+<td>○</td>
+<td>GUI</td>
+<td>-</td>
+<td>○</td>
+<td>-</td>
+<td>○</td>
+<td>ログ解析機能あり</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Amazon Elasticsearch Service</td>
+<td>○</td>
+<td>○</td>
+<td>GUI</td>
+<td>○</td>
+<td>-</td>
+<td>○</td>
+<td>-</td>
+<td>ElasticsearchをAWSがマネージドしている</td>
+</tr>
+<tr>
+<td>6</td>
+<td>AWS CloudSearch</td>
+<td>○</td>
+<td>○</td>
+<td>GUI</td>
+<td></td>
+<td>-</td>
+<td>○</td>
+<td>-</td>
+<td><a href="https://sfujiwara.hatenablog.com/entry/2017/12/19/173139">Amazon CloudSearch にドキュメントを取りこむ Lambda 関数 s32cs のご紹介 - 酒日記 はてな支店</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>AWS S3</td>
+<td>○</td>
+<td>-</td>
+<td>Athena(SQL)</td>
+<td>○</td>
+<td>-</td>
+<td>○</td>
+<td>-</td>
+<td><a href="https://qiita.com/abetomo/items/d242881d0ac260864a05">FluentdでS3に送ったログをAmazon Athenaで集計する。2018-03-26 - Qiita</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>AWS Redshift</td>
+<td>○</td>
+<td>-</td>
+<td>SQLクライアント</td>
+<td>○</td>
+<td>-</td>
+<td>○</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>GCP BigQuery</td>
+<td>○</td>
+<td>-</td>
+<td>SQLクライアント(GUI)</td>
+<td>○</td>
+<td>-</td>
+<td>○</td>
+<td>-</td>
+<td>Google Cloud Platform</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Sumo Logic</td>
+<td><a href="https://github.com/SumoLogic/fluentd-kubernetes-sumologic">○</a></td>
+<td>○</td>
+<td>GUI</td>
+<td><a href="https://help.sumologic.com/05Search/Get-Started-with-Search/How-to-Build-a-Search/Search-Templates">○</a></td>
+<td>-</td>
+<td>○</td>
+<td>-</td>
+<td>情報量が少ない [New Heroku Add-on for Sumo Logic Goes Beta</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Zabbix</td>
+<td>○</td>
+<td>○</td>
+<td>GUI</td>
+<td>-</td>
+<td>○</td>
+<td>-</td>
+<td>○</td>
+<td><a href="http://www.zabbix.jp/documents/what_is_zabbix">ログを検索するような仕組みではなく、特定の条件に合致した値を集計する仕組みっぽい</a><a href="https://qiita.com/toshihirock/items/84954d927bb0e1eae470">ZabbixとFluentdを使ってCloudWatchの情報を長期保存する - Qiita</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Graylog</td>
+<td>○</td>
+<td>○</td>
+<td>GUI</td>
+<td>○</td>
+<td>○</td>
+<td>-</td>
+<td>○</td>
+<td>複数のミドルウェアを組み合わせる為、構成が複雑になりそう ElasticSearchを使用している [fluentdからGraylogにGELF形式でログを転送する</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Treasure Data</td>
+<td>○</td>
+<td>-</td>
+<td>SQLクライアント(GUI)</td>
+<td>○</td>
+<td>-</td>
+<td>○</td>
+<td>-</td>
+<td>KPIなどでRedushと組み合わせていた。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ログ解析">ログ解析<a hidden class="anchor" aria-hidden="true" href="#ログ解析">#</a></h3>
+<p>ログ集積にまとめた</p>
+<h2 id="組み合わせ">組み合わせ<a hidden class="anchor" aria-hidden="true" href="#組み合わせ">#</a></h2>
+<p>ホストマネージドをしない、キーワード検索ができる観点で絞りました。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>収集</th>
+<th>集積</th>
+<th>解析方法</th>
+<th>可視化</th>
+<th>所感</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>fluentd</td>
+<td>Amazon Elasticsearch Service</td>
+<td>GUI</td>
+<td>○</td>
+<td>アクセスのKPIを行うなどの際に流用が効きそう</td>
+</tr>
+<tr>
+<td>2</td>
+<td>fluentd</td>
+<td>AWS S3</td>
+<td>Athena</td>
+<td>-</td>
+<td>ログの解析だけをする最低限</td>
+</tr>
+<tr>
+<td>3</td>
+<td>fluentd</td>
+<td>Treasure Data</td>
+<td>クエリ</td>
+<td>-</td>
+<td>ログの解析だけをする最低限 別途、契約が必要になる</td>
+</tr>
+<tr>
+<td>4</td>
+<td>fluentd</td>
+<td>AWS Redshift</td>
+<td>クエリ</td>
+<td>-</td>
+<td>ログの解析だけをする最低限</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://www.vegetable.blog.v41.me/tags/fluentd">fluentd</a></li>
+      <li><a href="https://www.vegetable.blog.v41.me/tags/middleware">middleware</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://www.vegetable.blog.v41.me/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>小技 on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/%E5%B0%8F%E6%8A%80/</link>
+    <description>Recent content in 小技 on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 22 Apr 2020 16:56:54 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/%E5%B0%8F%E6%8A%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gitlabで特定時間以降のコメントを集約したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/6ed1568a-e614-4e7d-838f-2ce048eb76b6/</link>
+      <pubDate>Wed, 22 Apr 2020 16:56:54 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/6ed1568a-e614-4e7d-838f-2ce048eb76b6/</guid>
+      <description>ソース Bookmarklet javascript:var db={&amp;#34;@xxx&amp;#34;:&amp;#34;1234&amp;#34;};var baseUrl=window.location.href.split(&amp;#34;#&amp;#34;)[0];Date.prototype.addHours=function(h){this.setTime(this.getTime()+(h*60*60*1000));return this};function toDate(timeStr){var timeRegexp=/(.+)(am|pm) (GMT\+\d+)/;var periods=timeStr.replace(timeRegexp,&amp;#39;$2&amp;#39;);baseTime=new Date(timeStr.replace(timeRegexp,&amp;#39;$1&amp;#39;));return periods==&amp;#34;pm&amp;#34;?baseTime.addHours(12):baseTime};var targetTime=toDate(document.querySelector(&amp;#34;#&amp;#34;+window.location.href.split(&amp;#34;#&amp;#34;)[1]+&amp;#34; time&amp;#34;).getAttribute(&amp;#34;title&amp;#34;));var targets={};document.querySelectorAll(&amp;#34;#notes-list .timeline-entry .note-header-info time&amp;#34;).forEach(function(timeE,i){var compareTime=toDate(timeE.getAttribute(&amp;#34;title&amp;#34;));if(targetTime&amp;lt;compareTime){discussion=timeE.closest(&amp;#34;.timeline-content&amp;#34;).getElementsByClassName(&amp;#34;timeline-discussion-body&amp;#34;)[0];if(discussion){target=discussion.getElementsByClassName(&amp;#34;gfm-project_member&amp;#34;)[0];if(target){var urls=targets[target.textContent];urls=urls?urls:[];urls.push(baseUrl+&amp;#34;/&amp;#34;+timeE.closest(&amp;#34;a&amp;#34;).getAttribute(&amp;#34;href&amp;#34;));targets[target.textContent]=urls}}}});message=document.title.split(/ · /)[0]+&amp;#34;\n&amp;#34;;for(let name in targets){message+=&amp;#34;[To:&amp;#34;+db[name]+&amp;#34;]&amp;#34;;message+=&amp;#34;[info]&amp;#34;;targets[name].forEach(function(url){message+=url+&amp;#34;\n&amp;#34;});message+=&amp;#34;[/info]&amp;#34;};prompt(&amp;#34;Copy &amp;amp; paste&amp;#34;,message+&amp;#34;\n\nコメントのご確認をお願い致し</description>
+    </item>
+    
+    <item>
+      <title>Crowdtech(クラウドテック)の勤怠で不足時間を計算するスクリプト</title>
+      <link>https://www.vegetable.blog.v41.me/posts/c379efc3-f581-4e0e-99a3-201e39edfe72/</link>
+      <pubDate>Mon, 09 Dec 2019 18:19:43 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/c379efc3-f581-4e0e-99a3-201e39edfe72/</guid>
+      <description>ソース javascript:function reportToHash(e){const tds=[];e.querySelectorAll(&#39;td&#39;).forEach(function(e){tds.push(e)});const rawDay=tds[1].textContent;const dayInfo=rawDay.split(&#39; &#39;);const week=dayInfo[1].replace(/\(|\)/gi,&#39;&#39;);const startTime=tds[2].textContent;const endTime=tds[3].textContent;const breakTime=tds[4].textContent;const description=tds[6].textContent;const rawWorkTime=tds[5].textContent;const weekdaysFlag=(week==&#39;土&#39;||week==&#39;日&#39;);const vacationFlag=weekdaysFlag&amp;amp;&amp;amp;rawWorkTime==&#39;&#39;;if(vacationFlag||rawWorkTime==&#39;-&#39;){return{&amp;quot;workTime&amp;quot;:0,&amp;quot;weekdaysFlag&amp;quot;:weekdaysFlag,&amp;quot;vacationFlag&amp;quot;:true,&amp;quot;description&amp;quot;:description,}}var workTime=0;if(rawWorkTime!=&#39;&#39;){const times=rawWor</description>
+    </item>
+    
+    <item>
+      <title>文字化けする文字</title>
+      <link>https://www.vegetable.blog.v41.me/posts/f84a6f40-73e1-422e-b386-a2d067246084/</link>
+      <pubDate>Thu, 11 Oct 2018 13:38:36 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/f84a6f40-73e1-422e-b386-a2d067246084/</guid>
+      <description>&amp;amp;#x8; UTF-8(16進) が 08 。 Githubのコメントで入力すると文字化けします。</description>
+    </item>
+    
+    <item>
+      <title>Rubyワンライナー</title>
+      <link>https://www.vegetable.blog.v41.me/posts/e4c9f397-a4bb-4b9f-aaa5-0871bd7a097c/</link>
+      <pubDate>Sun, 06 May 2018 17:03:14 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/e4c9f397-a4bb-4b9f-aaa5-0871bd7a097c/</guid>
+      <description>指定フォルダ配下のファイルをリネーム ruby -e &#39;Dir.glob(&amp;quot;/path/to/folder/*.jpg&amp;quot;){|item| File.rename(item, &amp;quot;#{File.dirname(item)}/#{File.basename(item).split(&amp;quot;_&amp;quot;)[1]}_#{File.basename(item).split(&amp;quot;_&amp;quot;)[0]}#{File.extname(item)}&amp;quot;) }&#39; 結果 images/target_img.jpg =&amp;gt; images/img_target.jpg /path/to/folder/*.jpgを変更 img_#{File.basena</description>
+    </item>
+    
+    <item>
+      <title>Bookmarklet(ブックマークレット)で、タイトルとURLを取得</title>
+      <link>https://www.vegetable.blog.v41.me/posts/77f1445c-60ab-4ec8-bfea-b4e374829a83/</link>
+      <pubDate>Fri, 27 Apr 2018 10:08:13 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/77f1445c-60ab-4ec8-bfea-b4e374829a83/</guid>
+      <description>適当なサイトをブックマークして、URLを書き換える javascript:prompt(&#39;Title + URL&#39;,document.title+&#39;\n&#39;+location.href)(); マークダウン用 javascript:prompt(&#39;Title + URL&#39;, &#39;[&#39; + document.title+&#39;](&#39;+location.href + &#39;)&#39;)(); クリックすると、ポップアップが出てきて、下記をコピペで</description>
+    </item>
+    
+  </channel>
+</rss>

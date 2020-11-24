@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>rails | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/tags/rails/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://www.vegetable.blog.v41.me/tags/rails/index.xml">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="rails" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.vegetable.blog.v41.me/tags/rails/" />
+<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="rails"/>
+<meta name="twitter:description" content=""/>
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>rails</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      本日の範囲を取得したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 all_day を使用する。 `where(created_at: Time.zone.now.all_day)` [1] pry(main)&gt; Time.now.all_day =&gt; 2019-08-19 00:00:00 &#43;0000..2019-08-19 23:59:59 &#43;0000 RailsのActiveRecordで今日・昨日など特定の日に保存されたレコードを取得 | EasyRamble...</p>
+  </section>
+  <footer class="entry-footer">August 19, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 本日の範囲を取得したい" href="https://www.vegetable.blog.v41.me/posts/9b60faba-13e0-48ab-a745-0392b0374de7/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      `Style/ClassVars` でクラス変数の誤りを指摘される
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 instance_variable_get メソッドを使用する。 class A @client = SomeClient.new def do_api client.do end def client self.class.instance_variable_get(:@client) end end ruby - How to correct Style/ClassVars in RuboCop? - Stack Overflow 事象 class A def do_api client.do end def client @@client ||= SomeClient.new end end のように、クライアントを一度きりし...</p>
+  </section>
+  <footer class="entry-footer">August 15, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to `Style/ClassVars` でクラス変数の誤りを指摘される" href="https://www.vegetable.blog.v41.me/posts/c5b69aa1-f4ec-47ab-95c0-0ca1c5ab1188/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      verifyメソッドのテストが失敗する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 Mockクラスではなく、define_singleton_methodを使用してmethodを生やす。 ただし、assertメソッドなどが...</p>
+  </section>
+  <footer class="entry-footer">August 15, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to verifyメソッドのテストが失敗する" href="https://www.vegetable.blog.v41.me/posts/ce4e5dde-88a5-468e-9e57-d8490989ff23/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      railsからmysqlにアクセスできない
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 /sbin/ip route|awk &#39;/default/ { print $3 }&#39; を実行し、取得したIPを database.ymlの host に記載する。 $ docker-compose exec [container name of rails] sh # /sbin/ip route|awk &#39;/default/ { print $3 }&#39; 192.168.112.1 How to get the IP address of the docker host from inside...</p>
+  </section>
+  <footer class="entry-footer">August 15, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to railsからmysqlにアクセスできない" href="https://www.vegetable.blog.v41.me/posts/9bfb2b48-5b6a-4dc8-8082-361faca014f4/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      railsでリレーションカラムにIDを自動で挿入
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 メソッド名: build_関連付けメソッド名 使用例: @car.build_engine(name: “エンジン1”) Railsモデルの関連付けでbuildを使う...</p>
+  </section>
+  <footer class="entry-footer">August 9, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to railsでリレーションカラムにIDを自動で挿入" href="https://www.vegetable.blog.v41.me/posts/ed7f57ea-7a0d-4af9-9293-fb076858ffc8/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      rails向けのnginxコンフの一例
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>ssl_protocols TLSv1 TLSv1.1 TLSv1.2; server { listen 80; server_name www.example.com; return 301 https://$host$request_uri; } server { ssl on; listen 443; server_name www.example.com; ssl_certificate /etc/letsencrypt/live/www.example.com/fullchain.pem; ssl_certificate_key /etc/letsencrypt/live/www.example.com/privkey.pem; include /etc/nginx/default.d/*.conf; root /path/to/public; location ^~ /.well-known/acme-challenge { return 200; } location ^~ /.well-known/assetlinks.json { return 404; } # apple-touch-icon-57x57.png の対策 location ~ ^/apple-touch-icon-(.*)\.png$ { rewrite ^(.*)$ /apple-touch-icon.png last; } location ~ ^/android-chrome-(.*)\.png$ { rewrite ^(.*)$ /android-chrome.png last; } location / {...</p>
+  </section>
+  <footer class="entry-footer">August 8, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to rails向けのnginxコンフの一例" href="https://www.vegetable.blog.v41.me/posts/25b64c4f-8f69-480f-90ad-6e891874a375/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      urlヘルパーでホストを指定
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>app.root_url(host: &#39;http://www.customdomain.org&#39;, protocol: &#39;https&#39;) =&gt; &#34;https://www.customdomain.org/&#34; Set the Domain or Host in Rails URL Helpers - Today I Learned...</p>
+  </section>
+  <footer class="entry-footer">August 7, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to urlヘルパーでホストを指定" href="https://www.vegetable.blog.v41.me/posts/9d577d16-3300-4bc3-8517-524e1eb84c29/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      taskでカスタムのloggerで出力したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>@logger = ActiveSupport::Logger.new(STDOUT) @logger.formatter = ::Logger::Formatter.new Railsのログについて(Rails.logger) | 酒と涙とRubyとRailsと...</p>
+  </section>
+  <footer class="entry-footer">August 7, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to taskでカスタムのloggerで出力したい" href="https://www.vegetable.blog.v41.me/posts/83976073-f018-4b07-bce6-f3b84b0c5009/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      validationで空の場合は、formatを確認させたくない
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 :allow_blank =&gt; true を設定 validates :name_kana, format: { with: /\A[ぁ-んァ-ヶー－]&#43;\z/, message: &#39;をカタカナで入力してください&#39;, allow_blank: true }, presence: true Rails: How to validate format only if value is present? - Stack Overflow 事象 validates...</p>
+  </section>
+  <footer class="entry-footer">August 5, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to validationで空の場合は、formatを確認させたくない" href="https://www.vegetable.blog.v41.me/posts/272571e2-eac6-4bc8-a918-331896bc3481/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      undefined method `before_validation&#39;が発生
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 ActiveModel::Validations::Callbacks をincludeする ruby - How can I use before validation callback with form object in Rails 4? - Stack Overflow class TestForm include ActiveModel::Model ActiveModel::Validations::Callbacks before_validation :format_hogehoge protected def format_hoge if hoge.present? self.hoge = NKF.nkf(&#39;-w --katakana&#39;, hoge.gsub(/[\s ]/, &#39;&#39;)) end end end 事象 test_form = TestForm.new(params) test_form.invalid? #&lt;= エラー class TestForm include ActiveModel::Model before_validation :format_hogehoge protected...</p>
+  </section>
+  <footer class="entry-footer">August 5, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to undefined method `before_validation&#39;が発生" href="https://www.vegetable.blog.v41.me/posts/e8ae4fbb-7171-4147-b36a-c08b150a4779/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="/tags/rails/page/5/">« Prev Page</a>
+    <a class="next" href="/tags/rails/page/7/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

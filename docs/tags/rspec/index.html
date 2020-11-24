@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>rspec | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/tags/rspec/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://www.vegetable.blog.v41.me/tags/rspec/index.xml">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="rspec" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.vegetable.blog.v41.me/tags/rspec/" />
+<meta property="og:updated_time" content="2020-06-26T17:13:06+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="rspec"/>
+<meta name="twitter:description" content=""/>
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>rspec</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      rspecのcontrollerとrequestのタイプ違い
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 requestは複数のcontrollerを使用した場合に使用する。 controllerは単体の動作の確認をする為に確認する。 request spec - Request specs...</p>
+  </section>
+  <footer class="entry-footer">June 26, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to rspecのcontrollerとrequestのタイプ違い" href="https://www.vegetable.blog.v41.me/posts/3b804c9b-47db-4e45-aa32-163eb8d9e5bb/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      factorybotで関連テーブルの作成を簡易に行なっているのに引数を渡したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 FactoryBot.define do factory :user_action_error do user user_action_history { association(:user_action_history, user: user) } end end 参考 Creating associations initialized via ‘build’ no longer works in FactoryBot 5.0 · Issue #1255 · thoughtbot/factory_bot 事象 FactoryBot.define do factory :user_action_error do user user_action_history end end のように、has_many、has_one、bel...</p>
+  </section>
+  <footer class="entry-footer">June 22, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to factorybotで関連テーブルの作成を簡易に行なっているのに引数を渡したい" href="https://www.vegetable.blog.v41.me/posts/cb6fde25-ff82-4b5b-b2ed-444d26e0da9f/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      rspecでよく見た書き方
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>エラーが発生しないテスト not_to raise_error RSpec.describe &#34;#to_s&#34; do it &#34;does not raise&#34; do expect { Object.new.to_s }.not_to raise_error end end raise_error matcher - Built in matchers - RSpec Expectations - RSpec - Relish モックでエラーを発生させる and_raise RSpec.describe &#34;Making it raise an error&#34; do it &#34;raises the provided exception&#34; do dbl...</p>
+  </section>
+  <footer class="entry-footer">March 6, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to rspecでよく見た書き方" href="https://www.vegetable.blog.v41.me/posts/6542ae14-4854-4050-bf96-54b6cc4100d5/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Active Jobが失敗した場合のリトライについてテストする
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 described_class.perform_later rescue nil RSpec.describe MyJob, type: :job do include ActiveJob::TestHelper context &#39;when `MyError` is raised&#39; do before do allow_any_instance_of(described_class).to receive(:perform).and_raise(MyError.new) end it &#39;makes 4 attempts&#39; do assert_performed_jobs 4 do described_class.perform_later rescue nil end end it &#39;does something in the `retry_on` block&#39; do expect(Something).to receive(:something) perform_enqueued_jobs do described_class.perform_later rescue nil end end end end perform_nowでは再実...</p>
+  </section>
+  <footer class="entry-footer">March 6, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to Active Jobが失敗した場合のリトライについてテストする" href="https://www.vegetable.blog.v41.me/posts/990bd1dc-2f44-46fa-9fa6-91b5914e7669/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      インスタンス変数のメソッドをstubにしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>let(:hoge_instance) { instance_double(Hoge) } before do allow(Hoge).to receive(:new).and_return(hoge_instance) allow(hoge_instance).to receive(:say).and_return(&#34;night!&#34;) end...</p>
+  </section>
+  <footer class="entry-footer">March 6, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to インスタンス変数のメソッドをstubにしたい" href="https://www.vegetable.blog.v41.me/posts/2a2be20a-44d0-4ff4-ac0c-0630ee4e6763/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      rspecでエラーテストが失敗する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 export { subject } に変更 context &#34;test&#34; do subject { raise RuntimeError } it { expect { subject }.to raise_error(RuntimeError) } end 事象 Failure/Error: raise RuntimeError が発生する。 context &#34;test&#34; do subject { raise RuntimeError } it { is_expected.to raise_error(RuntimeError) } end RSpec の is_expected で raise_error を検知したかった - Secret Garden(Instrumental) RSpec/ImplicitSubject エラ...</p>
+  </section>
+  <footer class="entry-footer">February 17, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to rspecでエラーテストが失敗する" href="https://www.vegetable.blog.v41.me/posts/5b43c92f-d394-416c-9877-0ecc11e77366/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Omniauthのsetupをテストしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 def setup omniauth_strategy.options[:consumer_key] = Global..twitter.consumer_key omniauth_strategy.options[:consumer_secret] = Global..twitter.consumer_key_secret render json: { message: &#34;Omniauth setup phase.&#34; }, status: :not_found end RSpec.describe SessionController, type: :controller do subject { get :setup, params: { provider: :twitter } } let(:strategy_options) { Struct.new(:options).new({consumer_key: nil, consumer_secret: nil}) } let(:consumer_key) { &#34;twitter-mock-consumer_key&#34; } let(:consumer_secret) { &#34;twitter-mock-consumer_key_secret&#34; } before do allow(Global.twitter).to receive(:consumer_key).and_return(consumer_key) allow(Global.twitter).to receive(:consumer_key_secret).and_return(consumer_secret) allow(controller.request.env).to receive(:[]).and_call_original allow(controller.request.env).to receive(:[]).with(&#34;omniauth.strategy&#34;).and_return(strategy_options) end context &#34;Success&#34; do it &#34;...</p>
+  </section>
+  <footer class="entry-footer">February 14, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to Omniauthのsetupをテストしたい" href="https://www.vegetable.blog.v41.me/posts/130dacd5-87b4-4877-a521-5623d7b9be6b/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Middlewareをテストしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>対象モジュール railsのログにタグづけしたい | ベジタブルプログラム テスト RSpec.describe TaggedLogger do subject { TaggedLogger::Middleware.new(app) } let(:app) { -&gt;(env) { [200, env, &#34;app&#34;] } } let(:request) { Rack::MockRequest.new(subject) } let(:action_dispatch_request) { ActionDispatch::TestRequest.create } before do allow(ActionDispatch::Request).to receive(:new).and_return(action_dispatch_request) allow(action_dispatch_request).to receive(:session).and_return(Struct.new(:user_id, :loaded?).new(*session_methods)) allow(Rails.logger).to receive(:tagged).and_yield...</p>
+  </section>
+  <footer class="entry-footer">February 10, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to Middlewareをテストしたい" href="https://www.vegetable.blog.v41.me/posts/a876ea6d-99a6-43fe-b419-71896f26c406/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      RSpec/MultipleExpectationsを回避
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 aggregate_failures を使用する it &#34;正常動作する&#34; do subject aggregate_failures &#34;最後まで通過&#34; do expect(job_instance).to have_received(:hoge1) expect(job_instance).to have_received(:hoge2).at_least(1).times end end 実用的な新機能が盛りだくさん！RSpe...</p>
+  </section>
+  <footer class="entry-footer">February 6, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to RSpec/MultipleExpectationsを回避" href="https://www.vegetable.blog.v41.me/posts/74af4a87-af15-46ef-bd8d-2b59f87d850e/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      修正したファイルのみチェック
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>For rubocop $ echo $(git diff origin/master `git branch | grep &#39;*&#39; | cut -d&#39; &#39; -f2` | grep &#39;diff --git&#39; | sed -E &#39;s#diff --git a\/(.&#43;) b\/.&#43;#\1#&#39;) | { read FILES; bundle exec rubocop $FILES; } For rspec $ echo $(git diff origin/master `git branch | grep &#39;*&#39; | cut -d&#39; &#39; -f2` | grep &#39;diff --git&#39; | sed -E &#39;s#diff --git a\/(.&#43;) b\/.&#43;#\1#&#39; | grep spec) | {...</p>
+  </section>
+  <footer class="entry-footer">January 28, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to 修正したファイルのみチェック" href="https://www.vegetable.blog.v41.me/posts/a13365d5-d033-404d-ae83-b8f7fa0dd4c8/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="/tags/rspec/page/2/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

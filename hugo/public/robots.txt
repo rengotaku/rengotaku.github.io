@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /
-Sitemap: https://www.vegetable.blog.v41.me/sitemap.xml

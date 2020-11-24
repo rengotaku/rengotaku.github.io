@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>ロックとトランザクションの検証 | Vegetable Programing</title>
+
+<meta name="keywords" content="rails, ruby, ベジプロ, プログ, プログラム" />
+<meta name="description" content="検証結果 lockしたレコードはtransactionがcommitされるまでロックされ続ける。 実行結果 コンソール1 コンソール2 検索前: 03:01:03.185, 100 ↓">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/posts/7a558e73-d48b-4304-b444-74afe9843a67/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="ロックとトランザクションの検証" />
+<meta property="og:description" content="検証結果 lockしたレコードはtransactionがcommitされるまでロックされ続ける。 実行結果 コンソール1 コンソール2 検索前: 03:01:03.185, 100 ↓" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.vegetable.blog.v41.me/posts/7a558e73-d48b-4304-b444-74afe9843a67/" />
+<meta property="article:published_time" content="2020-09-30T12:12:13+09:00" />
+<meta property="article:modified_time" content="2020-09-30T12:12:13+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ロックとトランザクションの検証"/>
+<meta name="twitter:description" content="検証結果 lockしたレコードはtransactionがcommitされるまでロックされ続ける。 実行結果 コンソール1 コンソール2 検索前: 03:01:03.185, 100 ↓"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ロックとトランザクションの検証",
+  "name": "ロックとトランザクションの検証",
+  "description": "検証結果 lockしたレコードはtransactionがcommitされるまでロックされ続ける。 実行結果 コンソール1 コンソール2 検索前: 03:01:03.185, 100 ↓",
+  "keywords": [
+    "rails", "ruby", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "検証結果 lockしたレコードはtransactionがcommitされるまでロックされ続ける。\n実行結果    コンソール1 コンソール2     検索前: 03:01:03.185, 100 ↓   検索後: 03:01:03.188, 100 ↓   ロック前: 03:01:03.189, 100 ↓   ロック後: 03:01:03.193, 100 ↓   スリープ前: 03:01:03.194, 100 ↓   ↓ 検索前: 03:01:04.203, 100   ↓ 検索後: 03:01:04.208, 100   ↓ ロック前: 03:01:04.210, 100   スリープ後: 03:01:08.201, 100 ↓   更新前: 03:01:08.207, 100 ↓   更新後: 03:01:08.216, 0 ↓   スリープ前: 03:01:08.218, 0 ↓   スリープ後: 03:01:13.197, 0 ↓   ロールバック前: 03:01:13.203, 0 ↓   ↓ ロック後: 03:01:13.210, 100   ↓ 更新前: 03:01:13.213, 100   ロールバック後: 03:01:13.219, 100 ↓    更新後: 03:01:13.220, 50    検証に用いたコード コンソール１で実行(first_execution) def now; Time.now.strftime(\"%H:%M:%S.%L\"); end\rdef tagging(action, timeline)\rtimeline  \"#{action}前: #{now}, #{point}\"\rvalue = yield\rtimeline  \"#{action}後: #{now}, #{point}\"\rreturn value\rend\rdef point\rUserPoint.find(1).point\rend\rdef first_execution\rtimeline = []\rrup = UserPoint.find(1)\rrup.assign_attributes(point: 100)\rrup.save!\rbegin\rApplicationRecord.transaction do\ruser_point = tagging(\"検索\", timeline, \u0026- () { UserPoint.find(1) })\rtagging(\"ロック\", timeline, \u0026- () { user_point.lock! })\rtagging(\"スリープ\", timeline, \u0026- () { sleep 5 })\ruser_point.point = user_point.point - 100\rtagging(\"更新\", timeline, \u0026- () { user_point.save! })\rtagging(\"スリープ\", timeline, \u0026- () { sleep 5 })\rtagging(\"ロールバック\", timeline, \u0026- () { raise ActiveRecord::Rollback })\rend\rensure\rtimeline  \"ロールバック後: #{now}, #{point}\"\rputs timeline\rend\rend\rコンソール２で実行(second_execution) def now; Time.now.strftime(\"%H:%M:%S.%L\"); end\rdef tagging(action, timeline)\rtimeline  \"#{action}前: #{now}, #{point}\"\rvalue = yield\rtimeline  \"#{action}後: #{now}, #{point}\"\rreturn value\rend\rdef point\rUserPoint.find(1).point\rend\rdef second_execution\rtimeline = []\rbegin\rApplicationRecord.transaction do\ruser_point = tagging(\"検索\", timeline, \u0026- () { UserPoint.find(1) })\rtagging(\"ロック\", timeline, \u0026- () { user_point.lock! })\ruser_point.point = user_point.point - 50\rtagging(\"更新\", timeline, \u0026- () { user_point.save! })\rend\rensure\rputs timeline\rend\rend\r",
+  "wordCount" : "705",
+  "inLanguage": "en",
+  "datePublished": "2020-09-30T12:12:13+09:00",
+  "dateModified": "2020-09-30T12:12:13+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.vegetable.blog.v41.me/posts/7a558e73-d48b-4304-b444-74afe9843a67/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.vegetable.blog.v41.me/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      ロックとトランザクションの検証
+    </h1>
+    <div class="post-meta">September 30, 2020
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="検証結果">検証結果<a hidden class="anchor" aria-hidden="true" href="#検証結果">#</a></h1>
+<p>lockしたレコードはtransactionがcommitされるまでロックされ続ける。</p>
+<h1 id="実行結果">実行結果<a hidden class="anchor" aria-hidden="true" href="#実行結果">#</a></h1>
+<table>
+<thead>
+<tr>
+<th>コンソール1</th>
+<th>コンソール2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>検索前: 03:01:03.185, 100</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>検索後: 03:01:03.188, 100</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>ロック前: 03:01:03.189, 100</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>ロック後: 03:01:03.193, 100</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>スリープ前: 03:01:03.194, 100</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>↓</td>
+<td>検索前: 03:01:04.203, 100</td>
+</tr>
+<tr>
+<td>↓</td>
+<td>検索後: 03:01:04.208, 100</td>
+</tr>
+<tr>
+<td>↓</td>
+<td>ロック前: 03:01:04.210, 100</td>
+</tr>
+<tr>
+<td>スリープ後: 03:01:08.201, 100</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>更新前: 03:01:08.207, 100</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>更新後: 03:01:08.216, 0</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>スリープ前: 03:01:08.218, 0</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>スリープ後: 03:01:13.197, 0</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>ロールバック前: 03:01:13.203, 0</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>↓</td>
+<td>ロック後: 03:01:13.210, 100</td>
+</tr>
+<tr>
+<td>↓</td>
+<td>更新前: 03:01:13.213, 100</td>
+</tr>
+<tr>
+<td>ロールバック後: 03:01:13.219, 100</td>
+<td>↓</td>
+</tr>
+<tr>
+<td></td>
+<td>更新後: 03:01:13.220, 50</td>
+</tr>
+</tbody>
+</table>
+<h1 id="検証に用いたコード">検証に用いたコード<a hidden class="anchor" aria-hidden="true" href="#検証に用いたコード">#</a></h1>
+<h2 id="コンソール１で実行first_execution">コンソール１で実行(first_execution)<a hidden class="anchor" aria-hidden="true" href="#コンソール１で実行first_execution">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">now</span>; <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%H:%M:%S.%L&#34;</span>); <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tagging</span>(action, timeline)
+  timeline <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>action<span style="color:#e6db74">}</span><span style="color:#e6db74">前: </span><span style="color:#e6db74">#{</span>now<span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">#{</span>point<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  value <span style="color:#f92672">=</span> <span style="color:#66d9ef">yield</span>
+  timeline <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>action<span style="color:#e6db74">}</span><span style="color:#e6db74">後: </span><span style="color:#e6db74">#{</span>now<span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">#{</span>point<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+
+  <span style="color:#66d9ef">return</span> value
+<span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">point</span>
+  <span style="color:#66d9ef">UserPoint</span><span style="color:#f92672">.</span>find(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>point
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">first_execution</span>
+  timeline <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+
+  rup <span style="color:#f92672">=</span> <span style="color:#66d9ef">UserPoint</span><span style="color:#f92672">.</span>find(<span style="color:#ae81ff">1</span>)
+  rup<span style="color:#f92672">.</span>assign_attributes(<span style="color:#e6db74">point</span>: <span style="color:#ae81ff">100</span>)
+  rup<span style="color:#f92672">.</span>save!
+
+  <span style="color:#66d9ef">begin</span>
+    <span style="color:#66d9ef">ApplicationRecord</span><span style="color:#f92672">.</span>transaction <span style="color:#66d9ef">do</span>
+      user_point <span style="color:#f92672">=</span> tagging(<span style="color:#e6db74">&#34;検索&#34;</span>, timeline, <span style="color:#f92672">&amp;-&gt;</span> () { <span style="color:#66d9ef">UserPoint</span><span style="color:#f92672">.</span>find(<span style="color:#ae81ff">1</span>) })
+
+      tagging(<span style="color:#e6db74">&#34;ロック&#34;</span>, timeline, <span style="color:#f92672">&amp;-&gt;</span> () { user_point<span style="color:#f92672">.</span>lock! })
+
+      tagging(<span style="color:#e6db74">&#34;スリープ&#34;</span>, timeline, <span style="color:#f92672">&amp;-&gt;</span> () { sleep <span style="color:#ae81ff">5</span> })
+
+      user_point<span style="color:#f92672">.</span>point <span style="color:#f92672">=</span> user_point<span style="color:#f92672">.</span>point <span style="color:#f92672">-</span> <span style="color:#ae81ff">100</span>
+      tagging(<span style="color:#e6db74">&#34;更新&#34;</span>, timeline, <span style="color:#f92672">&amp;-&gt;</span> () { user_point<span style="color:#f92672">.</span>save! })
+
+      tagging(<span style="color:#e6db74">&#34;スリープ&#34;</span>, timeline, <span style="color:#f92672">&amp;-&gt;</span> () { sleep <span style="color:#ae81ff">5</span> })
+
+      tagging(<span style="color:#e6db74">&#34;ロールバック&#34;</span>, timeline, <span style="color:#f92672">&amp;-&gt;</span> () { <span style="color:#66d9ef">raise</span> <span style="color:#66d9ef">ActiveRecord</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Rollback</span> })
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">ensure</span>
+    timeline <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;ロールバック後: </span><span style="color:#e6db74">#{</span>now<span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">#{</span>point<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+    puts timeline
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><h2 id="コンソール２で実行second_execution">コンソール２で実行(second_execution)<a hidden class="anchor" aria-hidden="true" href="#コンソール２で実行second_execution">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">now</span>; <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%H:%M:%S.%L&#34;</span>); <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tagging</span>(action, timeline)
+  timeline <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>action<span style="color:#e6db74">}</span><span style="color:#e6db74">前: </span><span style="color:#e6db74">#{</span>now<span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">#{</span>point<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  value <span style="color:#f92672">=</span> <span style="color:#66d9ef">yield</span>
+  timeline <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>action<span style="color:#e6db74">}</span><span style="color:#e6db74">後: </span><span style="color:#e6db74">#{</span>now<span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">#{</span>point<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+
+  <span style="color:#66d9ef">return</span> value
+<span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">point</span>
+  <span style="color:#66d9ef">UserPoint</span><span style="color:#f92672">.</span>find(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>point
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">second_execution</span>
+  timeline <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+
+  <span style="color:#66d9ef">begin</span>
+    <span style="color:#66d9ef">ApplicationRecord</span><span style="color:#f92672">.</span>transaction <span style="color:#66d9ef">do</span>
+      user_point <span style="color:#f92672">=</span> tagging(<span style="color:#e6db74">&#34;検索&#34;</span>, timeline, <span style="color:#f92672">&amp;-&gt;</span> () { <span style="color:#66d9ef">UserPoint</span><span style="color:#f92672">.</span>find(<span style="color:#ae81ff">1</span>) })
+
+      tagging(<span style="color:#e6db74">&#34;ロック&#34;</span>, timeline, <span style="color:#f92672">&amp;-&gt;</span> () { user_point<span style="color:#f92672">.</span>lock! })
+
+      user_point<span style="color:#f92672">.</span>point <span style="color:#f92672">=</span> user_point<span style="color:#f92672">.</span>point <span style="color:#f92672">-</span> <span style="color:#ae81ff">50</span>
+      tagging(<span style="color:#e6db74">&#34;更新&#34;</span>, timeline, <span style="color:#f92672">&amp;-&gt;</span> () { user_point<span style="color:#f92672">.</span>save! })
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">ensure</span>
+    puts timeline
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div>
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://www.vegetable.blog.v41.me/tags/rails">rails</a></li>
+      <li><a href="https://www.vegetable.blog.v41.me/tags/ruby">ruby</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://www.vegetable.blog.v41.me/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

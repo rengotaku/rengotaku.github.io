@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>ruby | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/tags/ruby/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://www.vegetable.blog.v41.me/tags/ruby/index.xml">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="ruby" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.vegetable.blog.v41.me/tags/ruby/" />
+<meta property="og:updated_time" content="2020-11-20T21:57:49+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ruby"/>
+<meta name="twitter:description" content=""/>
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>ruby</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      リクエストのremote_ipを変更してテストしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 get &#34;/path&#34;, params: { }, headers: { &#34;REMOTE_ADDR&#34; =&gt; &#34;1.2.3.4&#34; } Change value of request.remote_ip in Ruby on Rails - Stack Overflow 事象 allow_any_instance_of(ActionDispatch::Request).to receive(:remote_ip).and_return(&#34;1.2.3.4&#34;) でも実現可能だが、 rubocopで RSpec/AnyInstance が発生してしまう。(instance_doubl...</p>
+  </section>
+  <footer class="entry-footer">January 27, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to リクエストのremote_ipを変更してテストしたい" href="https://www.vegetable.blog.v41.me/posts/957c64fd-ee2e-4ce6-bb60-093b3a665189/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      コントローラーのテストで例外が発生してテストが失敗する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 context に、 show_exceptions: true オプションを設定する。 context &#34;failed&#34;, show_exceptions: true do ... end Rails アプリケーションの不安定なテストを撲滅したい 〜system spec のデバッグ方法とテストを不安...</p>
+  </section>
+  <footer class="entry-footer">January 27, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to コントローラーのテストで例外が発生してテストが失敗する" href="https://www.vegetable.blog.v41.me/posts/e848d251-d646-4d69-b394-c113fb84410c/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      削除処理を呼び出し時にActionController::InvalidAuthenticityTokenが発生
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 dockerで開発しているが、ポートを変更している為に発生している模様。nginxなどでヘッダーのトークンを書き換えればいいかなと。 それ...</p>
+  </section>
+  <footer class="entry-footer">January 21, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to 削除処理を呼び出し時にActionController::InvalidAuthenticityTokenが発生" href="https://www.vegetable.blog.v41.me/posts/e7758338-63b3-420c-8b10-3a37107141a7/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      rspecでテストをまとめる
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>テストメソッド def self.runnable! return if !(Rails.env.staging? || Rails.env.production?) || ENV[&#34;IMPORTANT_CODE&#34;].present? raise Error end アフター describe &#34;#runnable!&#34; do subject { described_class.runnable! } let(:set_code) { ENV[&#34;IMPORTANT_CODE&#34;] = &#34;hoge&#34; } let(:unset_code) { ENV[&#34;IMPORTANT_CODE&#34;] = nil } context &#34;development&#34; do before { allow(Rails.env).to receive(:development?).and_return(true) } it_behaves_like &#34;check important code for development&#34; end context &#34;staging&#34; do before { allow(Rails.env).to receive(:staging?).and_return(true) } it_behaves_like &#34;check important code for...</p>
+  </section>
+  <footer class="entry-footer">January 16, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to rspecでテストをまとめる" href="https://www.vegetable.blog.v41.me/posts/c572bdd1-576f-4caf-a2b0-fb2dcda032be/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      application.rb内でI18nを使用すると翻訳できない
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 config.after_initialize 内で行う。 module KuraPlatformBackend class Application &lt; Rails::Application ... config.after_initialize do raise I18n.t(&#34;error_messages.not_hoge&#34;) if hoge end end end 事象 サーバ起動直後に特定の条件でエラーを発生させるようにしたい。 しかし、 translation missing: en.error_messages.not_hoge となる。 module KuraPlatformBackend class...</p>
+  </section>
+  <footer class="entry-footer">January 16, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to application.rb内でI18nを使用すると翻訳できない" href="https://www.vegetable.blog.v41.me/posts/11d31c8e-a7bd-4661-85fc-353749bbca68/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      rspecでスタブを使用
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>staticメソッド describe &#34;comment&#34; do context &#34;サービスがHOGEの場合&#34; do before do allow(Global.application).to receive(:service).and_return(&#34;HOGE&#34;) #&lt;= キモ ... end it &#39;hoge&#39; do ... end end end [RSpec] allow、receive、an...</p>
+  </section>
+  <footer class="entry-footer">January 14, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to rspecでスタブを使用" href="https://www.vegetable.blog.v41.me/posts/bd537f3d-6cad-4d94-9efd-d1200b7bd294/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      macにrbenvをインストール
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>rbenvインストール $ brew update $ brew install rbenv ruby-build $ echo &#39;eval &#34;$(rbenv init -)&#34;&#39; &gt;&gt; ~/.bash_profile $ source ~/.bash_profile $ rbenv --version rubyインストール $ rbenv install --list Available versions: ・ ・ 2.1.1 2.1.2 2.2.0-dev jruby-1.5.6 jruby-1.6.3 jruby-1.6.4 ・ ・ $ rbenv install 2.7.0 全環境のバージ...</p>
+  </section>
+  <footer class="entry-footer">January 9, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to macにrbenvをインストール" href="https://www.vegetable.blog.v41.me/posts/234d437a-767d-4df2-9e49-5f4a2674bd40/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      モデルの値を正規化する独自クラス
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>クラス # 値を設定(setter)する際に、指定の方法で正規化した値を設定する。 # # 宣言方法：string_normalizable :name, :type # name: カ...</p>
+  </section>
+  <footer class="entry-footer">October 21, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to モデルの値を正規化する独自クラス" href="https://www.vegetable.blog.v41.me/posts/3fc93131-69e4-43c8-a7af-438cf8ab97a8/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      rubyの正規表現
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>入れ子のマッチ 対象 部屋面積は0.3〜200.0(帖)範囲内でなければなりません(テスト (テスト２)) 建物階数(テスト)は1〜10範囲内でなけ...</p>
+  </section>
+  <footer class="entry-footer">October 8, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to rubyの正規表現" href="https://www.vegetable.blog.v41.me/posts/c1459315-6374-417e-bc36-818aee249b45/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      文字コードの16進数を得たい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 .unpack(&#39;H*&#39;) を使用する。 &#34;ア&#34;.unpack(&#39;H*&#39;) =&gt; [&#34;e382a2&#34;] カナを16進数変換 &#34;アイウエオカキクケコサシ...</p>
+  </section>
+  <footer class="entry-footer">October 4, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 文字コードの16進数を得たい" href="https://www.vegetable.blog.v41.me/posts/7e937e59-6b00-4a19-a044-7d037d25ff76/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="/tags/ruby/page/4/">« Prev Page</a>
+    <a class="next" href="/tags/ruby/page/6/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

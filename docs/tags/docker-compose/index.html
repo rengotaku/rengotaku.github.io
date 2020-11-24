@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>docker-compose | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/tags/docker-compose/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://www.vegetable.blog.v41.me/tags/docker-compose/index.xml">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="docker-compose" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.vegetable.blog.v41.me/tags/docker-compose/" />
+<meta property="og:updated_time" content="2020-05-20T23:21:16+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="docker-compose"/>
+<meta name="twitter:description" content=""/>
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>docker-compose</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      golangをdockerでbuildする際に参考にしたサイト
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Go build LDFlags Alpine Linux packages Create the smallest and secured golang docker image based on scratch golang/Dockerfile at d57a23e1c68ef0a393ef9c9267bddf0086959e3e · docker-library/golang...</p>
+  </section>
+  <footer class="entry-footer">May 20, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to golangをdockerでbuildする際に参考にしたサイト" href="https://www.vegetable.blog.v41.me/posts/62a912a2-35fd-45d9-8fea-8c34a2675445/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      td-agentをdockerで動かす
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>構成 td-agent/ ├── docker-compose.yml ├── Dockerfile ├── test.log ├── conf │ ├── app.conf │ └── td-agent.conf └── install-redhat-td-agent2.5.sh 設定 docker FROM drecom/centos-ruby:2.6.5 ADD install-redhat-td-agent2.5.sh /tmp/ RUN sh /tmp/install-redhat-td-agent2.5.sh RUN td-agent-gem install \ fluent-plugin-multiprocess \ fluent-plugin-forest \ fluent-plugin-rewrite-tag-filter RUN /etc/init.d/td-agent start CMD [&#34;td-agent&#34;] version: “3” services: minio: image: minio/minio:RELEASE.2020-01-25T02-50-51Z volumes: - minio_volume:/data ports: - “9090:9000”...</p>
+  </section>
+  <footer class="entry-footer">February 10, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to td-agentをdockerで動かす" href="https://www.vegetable.blog.v41.me/posts/2b3ece27-3f34-4f13-9edf-3881a7821751/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Dockerfileでスマートなコマンド設定
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>minioの公式Dockerfileでは Dockerfile CMD [&#34;minio&#34;] docker-compose.yml command: server /data 結果 minio server /data として実行される。 minio/minio Dockerfile - Docker Hub ということはrailsだと Dockerfile CMD [&#34;bundle&#34;, &#34;exec&#34;, &#34;rails&#34;, &#34;s&#34;] docker-compose.yml command: -p 3001 結...</p>
+  </section>
+  <footer class="entry-footer">February 7, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to Dockerfileでスマートなコマンド設定" href="https://www.vegetable.blog.v41.me/posts/0306c4bd-acdf-43da-841d-24ea1f5227ef/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      docker-composeでサイドカー方式を取りたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>結論 ボリュームを共有して擬似的に行う。 kubanetesみたいに、一つのホストに複数プロセスを共存させるやり方はできなさそう。 version: &#39;3&#39; services: tomcat: image: tomcat:alpine container_name:...</p>
+  </section>
+  <footer class="entry-footer">February 6, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to docker-composeでサイドカー方式を取りたい" href="https://www.vegetable.blog.v41.me/posts/f90584af-b2a0-4162-a73f-46ae993cab30/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Knowledge about docker for windows
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Add user for development RUN groupadd -g 1000 developer &amp;&amp; \ useradd -g developer -G sudo -m -s /bin/bash developer &amp;&amp; \ echo &#39;developer:hogehoge&#39; | chpasswd RUN echo &#39;Defaults visiblepw&#39; &gt;&gt; /etc/sudoers RUN echo &#39;developer ALL=(ALL) NOPASSWD:ALL&#39; &gt;&gt; /etc/sudoers Dockerコンテナ内にsudoユーザを追加する - Qiita Docker - Docker run で...</p>
+  </section>
+  <footer class="entry-footer">December 26, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to Knowledge about docker for windows" href="https://www.vegetable.blog.v41.me/posts/3543a3d7-fc8e-4755-b855-d39fd5cf3010/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      composerでインストールされない？
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>未解決 imageが作成された後に、プロジェクトをコンテナにマウントさせinstall処理を行うようにした。 （プロジェクト内に vendor フォルダが作成...</p>
+  </section>
+  <footer class="entry-footer">November 29, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to composerでインストールされない？" href="https://www.vegetable.blog.v41.me/posts/e7f13673-f4f9-450b-8d51-f61e78dceff3/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      TTYを使用せずにexecを実行
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 -T オプションを付与する ... docker-compose exec -T rails ... The input device is not a TTY · Issue #5696 · docker/compose 事象 $ find ./test -name *_test.rb | egrep &#39;form|model&#39; | xargs -I _test_ docker-compose exec rails rails test _test_ を実行したところ the input device is not a TTY が発生し...</p>
+  </section>
+  <footer class="entry-footer">November 12, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to TTYを使用せずにexecを実行" href="https://www.vegetable.blog.v41.me/posts/4b7054b1-cd68-4d4f-9eaa-563de14c556d/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      docker-compose logsをtailで早く閲覧したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 -f --tail=500 をオプションに付与する 例 $ docker-compose logs -f --tail=500 container-name docker-compose logs | Docker Documentation...</p>
+  </section>
+  <footer class="entry-footer">September 30, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to docker-compose logsをtailで早く閲覧したい" href="https://www.vegetable.blog.v41.me/posts/e892c4e7-9462-4fe3-a644-66faef4b809e/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      docker-composeでmysqlの起動を待機したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 dockerize を使用する dockerize -wait tcp://mysql-local:3306 -timeout 120s dockerize を使って他のコンテナ内サービス起動を待つ - Qiita...</p>
+  </section>
+  <footer class="entry-footer">August 27, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to docker-composeでmysqlの起動を待機したい" href="https://www.vegetable.blog.v41.me/posts/07c5e4a3-d964-4917-9972-1520705f3de5/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      docker-compose.ymlのcommandに記述ミスがあるとエラーになる
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 $ を $$ と記述しエスケープする Compose file version 3 reference | Docker Documentation export DOCKER_HOST=`/sbin/ip route|awk &#39;/default/ { print $$3 }&#39;` export DOCKER_HOST=`/sbin/ip route|awk &#39;/default/ { print $3 }&#39;` 事象 command: &gt; /bin/sh -c &#34;rm -f /var/tmp/pids/server.pid &amp;&amp; bundle install &amp;&amp; export DOCKER_HOST=`/sbin/ip route|awk &#39;/default/ { print $3 }&#39;` &amp;&amp; bundle exec rails s&#34; を実行す...</p>
+  </section>
+  <footer class="entry-footer">August 19, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to docker-compose.ymlのcommandに記述ミスがあるとエラーになる" href="https://www.vegetable.blog.v41.me/posts/fd876cdf-6ca0-48c3-b5f0-a4f9572340d4/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="/tags/docker-compose/page/2/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>factory botでユニークな値を設定 | Vegetable Programing</title>
+
+<meta name="keywords" content="rails, gem, ベジプロ, プログ, プログラム" />
+<meta name="description" content="sequence(:username) { |n| &quot;user#{n}&quot; } FactoryBot.define do factory :user do first_name &#39;John&#39; last_name &#39;Doe&#39; birthdate { 21.years.ago } admin false sequence(:username) { |n| &quot;user#{n}&quot; } end end Factory Bot cheatsheet">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/posts/9b22bf01-bb92-4598-93a2-bd78d7efe635/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="factory botでユニークな値を設定" />
+<meta property="og:description" content="sequence(:username) { |n| &quot;user#{n}&quot; } FactoryBot.define do factory :user do first_name &#39;John&#39; last_name &#39;Doe&#39; birthdate { 21.years.ago } admin false sequence(:username) { |n| &quot;user#{n}&quot; } end end Factory Bot cheatsheet" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.vegetable.blog.v41.me/posts/9b22bf01-bb92-4598-93a2-bd78d7efe635/" />
+<meta property="article:published_time" content="2019-06-26T13:35:55+09:00" />
+<meta property="article:modified_time" content="2019-06-26T13:35:55+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="factory botでユニークな値を設定"/>
+<meta name="twitter:description" content="sequence(:username) { |n| &quot;user#{n}&quot; } FactoryBot.define do factory :user do first_name &#39;John&#39; last_name &#39;Doe&#39; birthdate { 21.years.ago } admin false sequence(:username) { |n| &quot;user#{n}&quot; } end end Factory Bot cheatsheet"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "factory botでユニークな値を設定",
+  "name": "factory botでユニークな値を設定",
+  "description": "sequence(:username) { |n| \u0026amp;quot;user#{n}\u0026amp;quot; } FactoryBot.define do factory :user do first_name \u0026#39;John\u0026#39; last_name \u0026#39;Doe\u0026#39; birthdate { 21.years.ago } admin false sequence(:username) …",
+  "keywords": [
+    "rails", "gem", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "sequence(:username) { |n| \"user#{n}\" }\nFactoryBot.define do\rfactory :user do\rfirst_name 'John'\rlast_name 'Doe'\rbirthdate { 21.years.ago }\radmin false\rsequence(:username) { |n| \"user#{n}\" }\rend\rend\r Factory Bot cheatsheet\n ",
+  "wordCount" : "30",
+  "inLanguage": "en",
+  "datePublished": "2019-06-26T13:35:55+09:00",
+  "dateModified": "2019-06-26T13:35:55+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.vegetable.blog.v41.me/posts/9b22bf01-bb92-4598-93a2-bd78d7efe635/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.vegetable.blog.v41.me/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      factory botでユニークな値を設定
+    </h1>
+    <div class="post-meta">June 26, 2019
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<p><code>sequence(:username) { |n| &quot;user#{n}&quot; }</code></p>
+<pre><code>FactoryBot.define do
+  factory :user do
+    first_name 'John'
+    last_name  'Doe'
+    birthdate  { 21.years.ago }
+    admin false
+
+    sequence(:username) { |n| &quot;user#{n}&quot; }
+  end
+end
+</code></pre><blockquote>
+<p><a href="https://devhints.io/factory_bot">Factory Bot cheatsheet</a></p>
+</blockquote>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://www.vegetable.blog.v41.me/tags/rails">rails</a></li>
+      <li><a href="https://www.vegetable.blog.v41.me/tags/gem">gem</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://www.vegetable.blog.v41.me/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

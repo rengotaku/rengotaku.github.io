@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>stub_any_instanceのproc内でNoMethodError: undefined method `assert&#39;  | Vegetable Programing</title>
+
+<meta name="keywords" content="minitest, ベジプロ, プログ, プログラム" />
+<meta name="description" content="解決 対象インスタンスをprocで厳密に指定 test_instance = self #&lt;= 重要 post_stub = proc do |address| test_instance.assert { address == &#39;address&#39; } end 注意 共通化しようと、インスタンス変数に格納してしまうと、正しく">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/posts/a9fbcb15-a9bb-4ff0-95e5-207000c6e190/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="stub_any_instanceのproc内でNoMethodError: undefined method `assert&#39; " />
+<meta property="og:description" content="解決 対象インスタンスをprocで厳密に指定 test_instance = self #&lt;= 重要 post_stub = proc do |address| test_instance.assert { address == &#39;address&#39; } end 注意 共通化しようと、インスタンス変数に格納してしまうと、正しく" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.vegetable.blog.v41.me/posts/a9fbcb15-a9bb-4ff0-95e5-207000c6e190/" />
+<meta property="article:published_time" content="2019-07-04T11:59:35+09:00" />
+<meta property="article:modified_time" content="2019-08-23T15:26:24+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="stub_any_instanceのproc内でNoMethodError: undefined method `assert&#39; "/>
+<meta name="twitter:description" content="解決 対象インスタンスをprocで厳密に指定 test_instance = self #&lt;= 重要 post_stub = proc do |address| test_instance.assert { address == &#39;address&#39; } end 注意 共通化しようと、インスタンス変数に格納してしまうと、正しく"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "stub_any_instanceのproc内でNoMethodError: undefined method `assert' ",
+  "name": "stub_any_instanceのproc内でNoMethodError: undefined method `assert\x27 ",
+  "description": "解決 対象インスタンスをprocで厳密に指定 test_instance = self #\u0026amp;lt;= 重要 post_stub = proc do |address| test_instance.assert { address == \u0026amp;#39;address\u0026amp;#39; } end 注意 共通化しようと、インスタンス変数に格納してしまうと、正しく",
+  "keywords": [
+    "minitest", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "解決 対象インスタンスをprocで厳密に指定\ntest_instance = self #post_stub = proc do |address|\rtest_instance.assert { address == 'address' }\rend\r注意 共通化しようと、インスタンス変数に格納してしまうと、正しく動作しない。\nsetup do\r@test_instance = self\rend\rit 'message' do\rpost_stub = proc do |address|\r@test_instance.assert { address == 'address' } #end\rend\r事象 post_stub = proc do |address|\rassert { address == 'address' } #end\rMail.stub_any_instance(:post, post_stub) do # Mail.send内で呼ばれる\r Mail.send\rend\r",
+  "wordCount" : "145",
+  "inLanguage": "en",
+  "datePublished": "2019-07-04T11:59:35+09:00",
+  "dateModified": "2019-08-23T15:26:24+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.vegetable.blog.v41.me/posts/a9fbcb15-a9bb-4ff0-95e5-207000c6e190/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.vegetable.blog.v41.me/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      stub_any_instanceのproc内でNoMethodError: undefined method `assert&#39; 
+    </h1>
+    <div class="post-meta">July 4, 2019
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="解決">解決<a hidden class="anchor" aria-hidden="true" href="#解決">#</a></h1>
+<p>対象インスタンスをprocで厳密に指定</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">test_instance <span style="color:#f92672">=</span> self <span style="color:#75715e">#&lt;= 重要</span>
+post_stub <span style="color:#f92672">=</span> proc <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>address<span style="color:#f92672">|</span>
+  test_instance<span style="color:#f92672">.</span>assert { address <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;address&#39;</span> }
+<span style="color:#66d9ef">end</span>
+</code></pre></div><h2 id="注意">注意<a hidden class="anchor" aria-hidden="true" href="#注意">#</a></h2>
+<p>共通化しようと、インスタンス変数に格納してしまうと、正しく動作しない。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">setup <span style="color:#66d9ef">do</span>
+  @test_instance <span style="color:#f92672">=</span> self
+<span style="color:#66d9ef">end</span>
+
+it <span style="color:#e6db74">&#39;message&#39;</span> <span style="color:#66d9ef">do</span>
+  post_stub <span style="color:#f92672">=</span> proc <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>address<span style="color:#f92672">|</span>
+    @test_instance<span style="color:#f92672">.</span>assert { address <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;address&#39;</span> } <span style="color:#75715e">#&lt;= NoMethodError: undefined method `assert&#39; for nil:NilClass</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><h1 id="事象">事象<a hidden class="anchor" aria-hidden="true" href="#事象">#</a></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">post_stub <span style="color:#f92672">=</span> proc <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>address<span style="color:#f92672">|</span>
+  assert { address <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;address&#39;</span> } <span style="color:#75715e">#&lt;= `NoMethodError: undefined method `assert&#39;`</span>
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">Mail</span><span style="color:#f92672">.</span>stub_any_instance(<span style="color:#e6db74">:post</span>, post_stub) <span style="color:#66d9ef">do</span> <span style="color:#75715e"># Mail.send内で呼ばれる</span>
+  <span style="color:#66d9ef">Mail</span><span style="color:#f92672">.</span>send
+<span style="color:#66d9ef">end</span>
+</code></pre></div>
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://www.vegetable.blog.v41.me/tags/minitest">minitest</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://www.vegetable.blog.v41.me/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

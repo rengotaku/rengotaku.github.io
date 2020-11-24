@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>rails | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/tags/rails/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://www.vegetable.blog.v41.me/tags/rails/index.xml">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="rails" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.vegetable.blog.v41.me/tags/rails/" />
+<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="rails"/>
+<meta name="twitter:description" content=""/>
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>rails</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      factory botでユニークな値を設定
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>sequence(:username) { |n| &#34;user#{n}&#34; } FactoryBot.define do factory :user do first_name &#39;John&#39; last_name &#39;Doe&#39; birthdate { 21.years.ago } admin false sequence(:username) { |n| &#34;user#{n}&#34; } end end Factory Bot cheatsheet...</p>
+  </section>
+  <footer class="entry-footer">June 26, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to factory botでユニークな値を設定" href="https://www.vegetable.blog.v41.me/posts/9b22bf01-bb92-4598-93a2-bd78d7efe635/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      mockの使い方
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>基本 mock = Minitest::Mock.new.expect(:method_name, &#39;return_value&#39;, [&#39;param1&#39;, &#39;param2&#39;]) mock.method_name(&#39;param1&#39;, &#39;param2&#39;) # &lt;= return value is &#39;return_value&#39; mock.verify # &lt;= true 第一のメソッド名、第二の戻り値までは必須 応用 入れ子 mock2 = Minitest::Mock.new.expect(:second, &#39;second value&#39;) mock1 = Minitest::Mock.new.expect(:first, mock2) mock1.first.second #&lt;= &#39;second value&#39; stubと組み合わせる class...</p>
+  </section>
+  <footer class="entry-footer">June 26, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to mockの使い方" href="https://www.vegetable.blog.v41.me/posts/333de691-10b6-4078-94a2-75b176921114/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Minitestで&#34;No more expects available for :something_method&#34;が発生
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>誤り def test_method Rails.logger.info(&#39;one&#39;) Rails.logger.info(&#39;two&#39;) #&lt;= raise end logger_mock = Minitest::Mock.new info_mock = logger_mock.expect(:info, true, [&#39;one&#39;]) Rails.logger = logger_mock test_method &lt;= No more expects available for :info 正解 logger_mock = Minitest::Mock.new info_mock = logger_mock.expect(:info, true, [&#39;one&#39;]).expect(:info, true, [&#39;two&#39;]) Rails.logger = logger_mock ruby - Minitest: No more expects available - Stack Overflow...</p>
+  </section>
+  <footer class="entry-footer">June 14, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to Minitestで&#34;No more expects available for :something_method&#34;が発生" href="https://www.vegetable.blog.v41.me/posts/b3b9ba25-b8e1-4f67-b6f2-884a85b8dfc7/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      minitestで意図的にraise
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>api_mock = MiniTest::Mock.new api_mock.expect(:get, retval_get) do |args_update| raise StandardError(&#39;Mock#getで例外発生&#39;) end Rails minitest Mockで例外発生パターンのテスト - Qiita...</p>
+  </section>
+  <footer class="entry-footer">June 14, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to minitestで意図的にraise" href="https://www.vegetable.blog.v41.me/posts/889f9fef-5b01-475d-bc0c-104e2086a684/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      minitestでエラーメッセージを検証
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>class FooTest &lt; Minitest::Test def test_boo! # RuntimeErrorが発生することを検証 e = assert_raises RuntimeError do Foo.boo! # &lt;= boo!random-messages-continue... end # エラーメッセージを検証 assert { e.message.start_with?(&#34;boo!&#34;) } end end Minitestで例外クラ...</p>
+  </section>
+  <footer class="entry-footer">June 14, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to minitestでエラーメッセージを検証" href="https://www.vegetable.blog.v41.me/posts/ca10b1b5-76b1-4c89-868e-f0ee7f32be9c/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      minitestでconstをstub化
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>module Foo BAR = :original end Foo.stub_const(:BAR, :stubbed) do Foo::BAR end # =&gt; :stubbed Foo::BAR # =&gt; :original adammck/minitest-stub-const: Stub constants for the duration of a block in MiniTest...</p>
+  </section>
+  <footer class="entry-footer">June 14, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to minitestでconstをstub化" href="https://www.vegetable.blog.v41.me/posts/89c7127b-1494-4e7c-b613-d7156ef09fc2/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ActionMailerで送信後に送信ログを記録したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>未解決 コールバックの仕組みはあるが、引数を増やす事ができず、拡張する仕組みが不明。 Registered observer on one mailer gets called with every email delivering, possible bug? · Issue #29671 · rails/rails は回答ないままクローズ...</p>
+  </section>
+  <footer class="entry-footer">June 4, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to ActionMailerで送信後に送信ログを記録したい" href="https://www.vegetable.blog.v41.me/posts/77b571b7-9eab-4c93-95cb-37e97eff8b68/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      指定のメソッドを実行時にフックする
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>※未検証 ActiveSupport::Notification.subscribe(&#34;deliver.action_mailer&#34;) do |name, start, finish, id, payload| puts &#34;name: #{name}&#34; puts &#34;payload: #{payload}&#34; end ActionMailer の送信ログをとりたい - Qiita...</p>
+  </section>
+  <footer class="entry-footer">June 3, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 指定のメソッドを実行時にフックする" href="https://www.vegetable.blog.v41.me/posts/abef202c-814f-469c-b0fc-1f55e20b2f3b/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      dockerで動いているrailsでbetter_errorsのirbが動作しない
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>未解決 画面右側のirbでデバッグできる画面が表示されない。 binding_of_caller が関連しているようだが、原因が不明。 画面を出すようにする BetterErrors::Middleware.allow_ip! &#34;0.0.0.0/0&#34; better_errors not working in a Docker container · Issue #270...</p>
+  </section>
+  <footer class="entry-footer">May 30, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to dockerで動いているrailsでbetter_errorsのirbが動作しない" href="https://www.vegetable.blog.v41.me/posts/bc3ee1e4-fa92-4af9-bdd1-7dced7696686/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      dockerで動くrailsでデバックを行いたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>設定 docker-compose.yml services: rails: &amp;app_base tty: true stdin_open: true 操作 アタッチ docker attach [container_name] $ docker-compose run --rm --service-ports [service name] でいけるかと思ったが、再度コンテナを立ち上げる挙動になり期待しない動きをする 便利コマンド...</p>
+  </section>
+  <footer class="entry-footer">May 30, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to dockerで動くrailsでデバックを行いたい" href="https://www.vegetable.blog.v41.me/posts/b6b89728-605f-40b8-9d57-2bb1cc14b932/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="/tags/rails/page/7/">« Prev Page</a>
+    <a class="next" href="/tags/rails/page/9/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>
