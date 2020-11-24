@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name=" robots" content="noindex, nofollow">
+<title>docker | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/tags/docker/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://www.vegetable.blog.v41.me/tags/docker/index.xml">
+
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>docker</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      dockerのみでfluentdを動作させる
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>$ docker build -f fluentd/Dockerfile . --tag fluentd $ docker run -d \ -p 24224:24224 \ -p 24224:24224/udp \ --name fluentd_c \ --env-file .env \ fluentd $ docker exec -it fluentd_c /bin/sh $ docker stop fluentd_c $ docker rm fluentd_c...</p>
+  </section>
+  <footer class="entry-footer">August 13, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to dockerのみでfluentdを動作させる" href="https://www.vegetable.blog.v41.me/posts/972bfb28-b80a-4967-a2a4-121abbc464bc/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      golangをdockerでbuildする際に参考にしたサイト
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Go build LDFlags Alpine Linux packages Create the smallest and secured golang docker image based on scratch golang/Dockerfile at d57a23e1c68ef0a393ef9c9267bddf0086959e3e · docker-library/golang...</p>
+  </section>
+  <footer class="entry-footer">May 20, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to golangをdockerでbuildする際に参考にしたサイト" href="https://www.vegetable.blog.v41.me/posts/62a912a2-35fd-45d9-8fea-8c34a2675445/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      dockerでホストのIPを参照する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 host.docker.internal のホスト名で参照可能に Networking features in Docker Desktop for Windows | Docker Documentation...</p>
+  </section>
+  <footer class="entry-footer">April 14, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to dockerでホストのIPを参照する" href="https://www.vegetable.blog.v41.me/posts/97ac32f6-f847-44b6-aab3-09ceb6850fc2/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      td-agentをdockerで動かす
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>構成 td-agent/ ├── docker-compose.yml ├── Dockerfile ├── test.log ├── conf │ ├── app.conf │ └── td-agent.conf └── install-redhat-td-agent2.5.sh 設定 docker FROM drecom/centos-ruby:2.6.5 ADD install-redhat-td-agent2.5.sh /tmp/ RUN sh /tmp/install-redhat-td-agent2.5.sh RUN td-agent-gem install \ fluent-plugin-multiprocess \ fluent-plugin-forest \ fluent-plugin-rewrite-tag-filter RUN /etc/init.d/td-agent start CMD [&#34;td-agent&#34;] version: “3” services: minio: image: minio/minio:RELEASE.2020-01-25T02-50-51Z volumes: - minio_volume:/data ports: - “9090:9000”...</p>
+  </section>
+  <footer class="entry-footer">February 10, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to td-agentをdockerで動かす" href="https://www.vegetable.blog.v41.me/posts/2b3ece27-3f34-4f13-9edf-3881a7821751/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Dockerfileでスマートなコマンド設定
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>minioの公式Dockerfileでは Dockerfile CMD [&#34;minio&#34;] docker-compose.yml command: server /data 結果 minio server /data として実行される。 minio/minio Dockerfile - Docker Hub ということはrailsだと Dockerfile CMD [&#34;bundle&#34;, &#34;exec&#34;, &#34;rails&#34;, &#34;s&#34;] docker-compose.yml command: -p 3001 結...</p>
+  </section>
+  <footer class="entry-footer">February 7, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to Dockerfileでスマートなコマンド設定" href="https://www.vegetable.blog.v41.me/posts/0306c4bd-acdf-43da-841d-24ea1f5227ef/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      fluentdからs3への送信をローカルで検証したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>概要 dockerで fluentd、 minio を立てて、S3へのログの送信の検証を行う。 構成 . ├── docker-compose.yml ├── fluentd │ ├── Dockerfile │ └── conf │ └── fluentd.conf └── log └...</p>
+  </section>
+  <footer class="entry-footer">February 5, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to fluentdからs3への送信をローカルで検証したい" href="https://www.vegetable.blog.v41.me/posts/cd79fa35-ab38-484c-86ec-7b0578610cb7/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      dockerのリモートのタグ一覧をコマンドで確認したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>#!/bin/bash # https://stackoverflow.com/questions/28320134/how-can-i-list-all-tags-for-a-docker-image-on-a-remote-registry if [ $# -lt 1 ] then cat &lt;&lt; HELP dockertags -- list all tags for a Docker image on a remote registry. EXAMPLE: - list all tags for ubuntu: dockertags ubuntu - list all php tags containing apache: dockertags php apache HELP exit 1 fi image=&#34;$1&#34; tags=`curl -L -s &#34;https://registry.hub.docker.com/v2/repositories/library/${image}/tags?page_size=1024&#34; | jq -r &#39;.&#34;results&#34;[][&#34;name&#34;]&#39;` if [ -n &#34;$2&#34; ] then tags=` echo &#34;${tags}&#34; | grep &#34;$2&#34;...</p>
+  </section>
+  <footer class="entry-footer">February 4, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to dockerのリモートのタグ一覧をコマンドで確認したい" href="https://www.vegetable.blog.v41.me/posts/89d6aee3-eaa6-4489-855a-a9e6af743728/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      docker上のpry-byebugにショートカットを設定したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 docker上の ~/.pryrc に記載する。 事象 pry-byebugでrubyをデバッグする - Qiita のショートカットをプロジェクトに設置しても、使用できな...</p>
+  </section>
+  <footer class="entry-footer">January 23, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to docker上のpry-byebugにショートカットを設定したい" href="https://www.vegetable.blog.v41.me/posts/5d7fa977-1511-4546-aea2-9b7622a4097c/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Docker上のcapistranoから別途立てたローカルサーバにアクセス
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>構図 Capistrano Server[Docker] &lt;=&gt; Local[Mac] &lt;=&gt; SSHD Server[Docker] 接続先(ファイル設置先) サーバ 設定ファイル version: &#34;3&#34; services: ssh: build: dockerfile: Dockerfile command: [&#34;/usr/sbin/sshd&#34;, &#34;-D&#34;] tty: true ports: - &#34;10022:22&#34; Docker 初心者 — ssh で接続できるサーバーを立てる - Qiita FROM ubuntu:16.04 RUN...</p>
+  </section>
+  <footer class="entry-footer">January 17, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to Docker上のcapistranoから別途立てたローカルサーバにアクセス" href="https://www.vegetable.blog.v41.me/posts/cae07512-deaa-4c5b-94cd-6ea0b68b1ca6/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Knowledge about docker for windows
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Add user for development RUN groupadd -g 1000 developer &amp;&amp; \ useradd -g developer -G sudo -m -s /bin/bash developer &amp;&amp; \ echo &#39;developer:hogehoge&#39; | chpasswd RUN echo &#39;Defaults visiblepw&#39; &gt;&gt; /etc/sudoers RUN echo &#39;developer ALL=(ALL) NOPASSWD:ALL&#39; &gt;&gt; /etc/sudoers Dockerコンテナ内にsudoユーザを追加する - Qiita Docker - Docker run で...</p>
+  </section>
+  <footer class="entry-footer">December 26, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to Knowledge about docker for windows" href="https://www.vegetable.blog.v41.me/posts/3543a3d7-fc8e-4755-b855-d39fd5cf3010/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="/tags/docker/page/2/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

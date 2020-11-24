@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>centos7 on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/centos7/</link>
+    <description>Recent content in centos7 on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Sat, 01 Dec 2018 13:53:06 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/centos7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>etckeeper をインストール</title>
+      <link>https://www.vegetable.blog.v41.me/posts/b1c34e0e-3274-4127-b216-3cb603279e34/</link>
+      <pubDate>Sat, 01 Dec 2018 13:53:06 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/b1c34e0e-3274-4127-b216-3cb603279e34/</guid>
+      <description>インストール $ cd /usr/local/src $ git clone git://git.kitenet.net/etckeeper confのファイル末尾の箇所を修正 # The high-level package manager that&#39;s being used. # (apt, pacman-g2, yum etc) HIGHLEVEL_PACKAGE_MANAGER=yum # The low-level package manager that&#39;s being used. # (dpkg, rpm, pacman-g2, etc) LOWLEVEL_PACKAGE_MANAGER=rpm make $ make install ファーストコミッ</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>googleplay on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/googleplay/</link>
+    <description>Recent content in googleplay on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 25 Apr 2018 10:28:07 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/googleplay/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>レシートの照合【Android編】</title>
+      <link>https://www.vegetable.blog.v41.me/posts/5841c748-ad42-43fc-b9d3-e2c75a015829/</link>
+      <pubDate>Wed, 25 Apr 2018 10:28:07 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/5841c748-ad42-43fc-b9d3-e2c75a015829/</guid>
+      <description>1.「Google API OAuth2.0のアクセストークン&amp;amp;リフレッシュトークン取得手順 2017年2月版」のrefresh_tokenが</description>
+    </item>
+    
+    <item>
+      <title>RubyでGoogleplayのレシートを照合する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/79cc8911-a70d-40cd-8090-bf93aa55b1a0/</link>
+      <pubDate>Wed, 25 Apr 2018 10:23:13 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/79cc8911-a70d-40cd-8090-bf93aa55b1a0/</guid>
+      <description># アンドロイドのレシートチェック def check_receipt_for_android def fetch_receipt_for_android(product_id, purchase_token, token) require &amp;#39;net/http&amp;#39; require &amp;#39;net/https&amp;#39; require &amp;#39;uri&amp;#39; require &amp;#39;json&amp;#39; # path = &amp;#34;https://www.googleapis.com/androidpublisher/v2/applications/#{$ANDROID_PACKAGE_NAME}/purchases/products/#{product_id}/tokens/#{token}&amp;#34; path = &amp;#34;https://www.googleapis.com/androidpublisher/v1.1/applications/#{$ANDROID_PACKAGE_NAME}/inapp/#{product_id}/purchases/#{purchase_token}?access_token=#{token}&amp;#34; uri = URI.parse path https = Net::HTTP.new(uri.host,uri.port) https.use_ssl = true https.verify_mode = OpenSSL::SSL::VERIFY_NONE headers = {} headers[&amp;#34;accept&amp;#34;] = &amp;#34;application/json&amp;#34; headers[&amp;#34;content-type&amp;#34;] = &amp;#34;application/json&amp;#34; # 参考: https://stackoverflow.com/questions/7346398/nethttp-failure-to-access-google-docs-list-data-api https.start do |http| return http.get(uri.request_uri, headers).body</description>
+    </item>
+    
+  </channel>
+</rss>

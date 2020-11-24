@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name=" robots" content="noindex, nofollow">
+<title>shellscript | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/tags/shellscript/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://www.vegetable.blog.v41.me/tags/shellscript/index.xml">
+
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>shellscript</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      railsタスクを変数に格納して実行したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>事象 railsタスクの実行コマンドを変数に入れて実行したいが、予期しないエラーが発生する。 RAILS_TASK=&#39;rbenv exec bundle exec rails hogehoge:hoge1[param1,1,2]&#39; $RAILS_TASK # =&gt; ./test.sh: line 5: [: too many arguments 解決 “...</p>
+  </section>
+  <footer class="entry-footer">July 30, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to railsタスクを変数に格納して実行したい" href="https://www.vegetable.blog.v41.me/posts/d05bd6f3-f718-4da9-9860-ed437c72f657/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      特定のポートで接続が行われていない際に実行する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>while : do if [ $(netstat -n | fgrep &#39;ESTABLISHED&#39; | fgrep &#39;:21&#39; | wc -l) -eq 0 ]; then echo &#34;nobody users established.&#34; break else echo &#34;wait 1 minute.&#34; sleep 1m fi done vsftpdの再起動時などにユーザ接続していな事を確認する時なんかに利用...</p>
+  </section>
+  <footer class="entry-footer">July 22, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 特定のポートで接続が行われていない際に実行する" href="https://www.vegetable.blog.v41.me/posts/46ecb3df-474e-42de-bdab-24e9d8e0e7c2/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ゼロ埋めしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>printf &#34;%0Xd\n&#34; を使用する $ printf &#34;%05d\n&#34; 99 00099 numbers - How to zero pad a sequence of integers in bash so that all have the same width? - Stack Overflow...</p>
+  </section>
+  <footer class="entry-footer">July 19, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to ゼロ埋めしたい" href="https://www.vegetable.blog.v41.me/posts/d5a6610a-3eb3-4467-9c79-ee0e1cd7ce32/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ワンライナーでパスワードを生成
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>openssl rand を使用 $ openssl rand -base64 12 6kRz&#43;U9TCFXs5UsI $ openssl rand -base64 12 | cut -c -12 rncJWN21ftbV macOS の標準機能でパスワードをランダム生成する方法 - Qiita...</p>
+  </section>
+  <footer class="entry-footer">July 19, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to ワンライナーでパスワードを生成" href="https://www.vegetable.blog.v41.me/posts/8d53036e-9ec1-4376-92ee-ede1388c21f8/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Shellscriptでためになる記法
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>複数のコマンドをsudoで実行 # run inside sudo sudo sh &lt;&lt;SCRIPT ~~~ SCRIPT install-redhat-td-agent2.sh...</p>
+  </section>
+  <footer class="entry-footer">July 17, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to Shellscriptでためになる記法" href="https://www.vegetable.blog.v41.me/posts/c0bdc12f-d70f-41fe-a5f4-62ff08b66af1/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ターミナルを再起動
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>コマンド exec $SHELL -l 実行例 $ exec $SHELL -l $ # 何も発生しない シェルを再起動させる簡単な方法 - Qiita...</p>
+  </section>
+  <footer class="entry-footer">July 1, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to ターミナルを再起動" href="https://www.vegetable.blog.v41.me/posts/0bc77502-05c2-4f1a-b791-9cc9dda6d4d9/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      CircleCIでif文内で複数の処理を行う際に途中で失敗してもパスしてしまう
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>事象 下記の場合だと、 decrypt1.sh 、 decrypt2.sh で失敗だったとしても、 decrypt3.sh が成功すればパスしてしまう。 if [ &#34;$CIRCLE_BRANCH&#34; = &#34;master&#34; ]; then ./decrypt1.sh ./decrypt2.sh ./decrypt3.sh fi 修正 &amp;&amp; で連結して成功した場合のみ次のステ...</p>
+  </section>
+  <footer class="entry-footer">June 21, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to CircleCIでif文内で複数の処理を行う際に途中で失敗してもパスしてしまう" href="https://www.vegetable.blog.v41.me/posts/4fb84bda-ee4a-483c-91d5-36d05bdbe114/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      envファイルをexport
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>$ export $(cat .env | grep -v ^# | xargs) コマンドでの環境変数の受け渡し - Qiita...</p>
+  </section>
+  <footer class="entry-footer">June 11, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to envファイルをexport" href="https://www.vegetable.blog.v41.me/posts/9fe9564f-192a-41a8-afe5-8c3cb24fac34/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      shellのfunctionで戻り値を取得したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>例 #!/bin/bash hoge_func() { echo &#39;not output&#39; &gt; /dev/null # こっちは出力しない echo &#39;result&#39; } RESULT=`hoge_func` echo $RESULT # &lt;= result 【Linux】シェルスクリプトの関数の使い方！一通りまとめ...</p>
+  </section>
+  <footer class="entry-footer">June 7, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to shellのfunctionで戻り値を取得したい" href="https://www.vegetable.blog.v41.me/posts/81204ada-4d9b-4611-abf3-0bbdc6422be0/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      CRLFをカウントしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>ライン数を数える $ echo $&#39;record 1\r\nrecord\n2\r\nrecord 3&#39; &gt; file $ awk -v RS=&#39;\r\n&#39; &#39;END{print NR}&#39; file 3 linux - Bash script to count CR/LF in a text file - Stack Overflow fileコマンド $ file path/to/file path/to/file: UTF-8 Unicode text, with very long lines, with CRLF, LF line terminators catコマンド cat -e...</p>
+  </section>
+  <footer class="entry-footer">May 15, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to CRLFをカウントしたい" href="https://www.vegetable.blog.v41.me/posts/9163f352-2f6d-45c5-a27c-3abe3db54496/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="/tags/shellscript/page/2/">« Prev Page</a>
+    <a class="next" href="/tags/shellscript/page/4/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

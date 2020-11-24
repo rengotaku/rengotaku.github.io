@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssl on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/ssl/</link>
+    <description>Recent content in ssl on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Tue, 18 Dec 2018 19:32:52 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>nginxでport:443を受け付け、port:80のhttpdへ、リバースプロキシしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/4e13d4bd-7b83-4322-8dae-a8fa9f4f503a/</link>
+      <pubDate>Tue, 18 Dec 2018 19:32:52 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/4e13d4bd-7b83-4322-8dae-a8fa9f4f503a/</guid>
+      <description>nginx server { listen 80; server_name www.site.com; return 301 https://$host$request_uri; } server { ssl on; listen 443; server_name www.site.com; ssl_certificate /etc/letsencrypt/live/www.site.com/fullchain.pem; ssl_certificate_key /etc/letsencrypt/live/www.site.com/privkey.pem; include /etc/nginx/default.d/*.conf; location / { proxy_pass http://127.0.0.1:8080; proxy_redirect off; proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-Host $host; proxy_set_header X-Forwarded-Server $host; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; } } ssl化にはlets encyptを使用して</description>
+    </item>
+    
+  </channel>
+</rss>

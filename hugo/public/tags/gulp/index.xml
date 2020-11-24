@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gulp on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/gulp/</link>
+    <description>Recent content in gulp on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Tue, 21 Jan 2020 20:00:07 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/gulp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>gulpでjsxコンパイル時にエラー</title>
+      <link>https://www.vegetable.blog.v41.me/posts/cb866f60-e70d-4e05-89b5-b37246c71c55/</link>
+      <pubDate>Tue, 21 Jan 2020 20:00:07 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/cb866f60-e70d-4e05-89b5-b37246c71c55/</guid>
+      <description>解決 babelifyにpresetsを設定する .transform(babelify.configure({ presets: [&amp;quot;@babel/react&amp;quot;,&amp;quot;@babel/preset-env&amp;quot;] })) React.js - webpack4で構築、jsx内でReactの記述が使えない｜teratail node.js -</description>
+    </item>
+    
+    <item>
+      <title>Wating file in docker with gulp</title>
+      <link>https://www.vegetable.blog.v41.me/posts/f548e78f-6f95-4276-bf21-64b6385bab2a/</link>
+      <pubDate>Sat, 28 Dec 2019 13:16:47 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/f548e78f-6f95-4276-bf21-64b6385bab2a/</guid>
+      <description>gulp.watch(&amp;#39;./**/*&amp;#39;, {interval: 1000, usePolling: true}, gulp.series(&amp;#39;superTask&amp;#39;)); node.js - Within Docker VM, Gulp-Watch Seems to not work well on volumes hosted from the host OS - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>gulp4を使用する際に参考にしたサイト</title>
+      <link>https://www.vegetable.blog.v41.me/posts/52a6e29e-4257-4e78-a33c-32e45fbd0cf6/</link>
+      <pubDate>Thu, 22 Aug 2019 13:41:52 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/52a6e29e-4257-4e78-a33c-32e45fbd0cf6/</guid>
+      <description>node.js - Cannot find module &amp;lsquo;../lib/completion&amp;rsquo; Inspite of installing Completion - Stack Overflow 他のプロジェクトからnode_moduleごと移行したら発生した より便利になった gulp 4.0 への移行方法と変更点をまとめま</description>
+    </item>
+    
+    <item>
+      <title>gulpを動かしたらエラーがcss-mqpackerでエラーが発生する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/0cdcf6ba-6e3a-4317-a0d1-c41cb9638af2/</link>
+      <pubDate>Tue, 12 Mar 2019 12:23:04 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/0cdcf6ba-6e3a-4317-a0d1-c41cb9638af2/</guid>
+      <description>事象 $ gulp /path/to/node_modules/css-mqpacker/index.js:139 ...options ^^^ SyntaxError: Unexpected token ... at Object.exports.runInThisContext (vm.js:76:16) at Module._compile (module.js:542:28) at Object.Module._extensions..js (module.js:579:10) at Module.load (module.js:487:32) at tryModuleLoad (module.js:446:12) at Function.Module._load (module.js:438:3) at Module.require (module.js:497:17) at require (internal/module.js:20:19) at Object.&amp;lt;anonymous&amp;gt; (/Users/300807/myspace/web_diff/gulpfile.js:20:14) at Module._compile (module.js:570:32) at Object.Module._extensions..js (module.js:579:10) at Module.load (module.js:487:32) at tryModuleLoad (module.js:446:12) at Function.Module._load (module.js:438:3) at Module.require (module.js:497:17) at require (internal/module.js:20:19) 対応 nodeのバージョ</description>
+    </item>
+    
+    <item>
+      <title>ディレクトリ構成を維持せず出力</title>
+      <link>https://www.vegetable.blog.v41.me/posts/67bbdeee-5d50-4506-b1d8-82b3581bdfb0/</link>
+      <pubDate>Sun, 02 Sep 2018 14:01:21 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/67bbdeee-5d50-4506-b1d8-82b3581bdfb0/</guid>
+      <description>gulp.task(&#39;sass&#39;, function() { return sass(&#39;./app/resource/scss/*.scss&#39;, {style: &#39;expanded&#39;}) .pipe(gulp.dest(&#39;./web/css&#39;)); }); 例だと該当するscssファイルが、`web/css`直下に出力される 日記: gulp-ruby-sassのコンパイル先にディ</description>
+    </item>
+    
+    <item>
+      <title>saccをコンパイルするとlinear-gradientでSyntaxエラー</title>
+      <link>https://www.vegetable.blog.v41.me/posts/d42b09b1-0f8c-424f-94ec-ca2fe144dba7/</link>
+      <pubDate>Wed, 25 Jul 2018 10:17:59 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/d42b09b1-0f8c-424f-94ec-ca2fe144dba7/</guid>
+      <description>概要 gulpでscssをコンパイルしようとすると下記のエラーが発生する Gradient has outdated direction syntax. New syntax is like `to left` instead of `right`.` 対応 linear-gradient(top -&amp;gt; linear-gradient(to topに修正 Gradient has outdated direction syntax. New syntax is like &amp;ldquo;to</description>
+    </item>
+    
+    <item>
+      <title>gulp入門</title>
+      <link>https://www.vegetable.blog.v41.me/posts/e87f594a-d2ed-45b0-ac90-cc5cf20299d6/</link>
+      <pubDate>Tue, 24 Jul 2018 11:33:01 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/e87f594a-d2ed-45b0-ac90-cc5cf20299d6/</guid>
+      <description>行なっていること assets/js 配下のjsをmain.jsにまとめる。 views/*.ejs 配下のxxx.ejs.htmlを変数を埋め込みhtmlに変換する。 assets/s</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>googlesearchconsole on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/googlesearchconsole/</link>
+    <description>Recent content in googlesearchconsole on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Sat, 04 Aug 2018 13:16:30 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/googlesearchconsole/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>google search consoleで、サイトの確認が行えない</title>
+      <link>https://www.vegetable.blog.v41.me/posts/dfcf6aef-6f2a-456d-83a4-af1f7a911b91/</link>
+      <pubDate>Sat, 04 Aug 2018 13:16:30 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/dfcf6aef-6f2a-456d-83a4-af1f7a911b91/</guid>
+      <description>対応 DNSにレコードを追加。 タイプ・・・TXT 名称・・・＠ TTL・・・3600 値・・・指定のもの メモ ＨＴＭＬ設置、metaタグなどを記入など</description>
+    </item>
+    
+  </channel>
+</rss>

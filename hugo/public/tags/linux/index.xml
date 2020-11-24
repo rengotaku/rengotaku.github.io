@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/linux/</link>
+    <description>Recent content in linux on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 20 Feb 2020 09:24:01 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>bashの特異な書き方集</title>
+      <link>https://www.vegetable.blog.v41.me/posts/0481bf97-bb64-404e-ade8-1073e7cbeee5/</link>
+      <pubDate>Thu, 20 Feb 2020 09:24:01 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/0481bf97-bb64-404e-ade8-1073e7cbeee5/</guid>
+      <description>ファイル作成 touch の代わりに &amp;gt; を使用する。 $ cd lib &amp;amp;&amp;amp; &amp;gt; my_gem.rb Create a Simple Ruby Gem - The Startup - Medium 標準出力に文字を渡す echo の代わりに &amp;lt;&amp;lt;&amp;lt; を使用する。 $ cat &amp;lt;&amp;lt;&amp;lt; &amp;#39;hi there&amp;#39; 理解できていな</description>
+    </item>
+    
+    <item>
+      <title>ポートを使用しているアプリケーションを特定したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/5ba8c531-d5c3-4b59-a090-979105b01b4e/</link>
+      <pubDate>Wed, 12 Feb 2020 17:23:49 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/5ba8c531-d5c3-4b59-a090-979105b01b4e/</guid>
+      <description>lsof $ sudo lsof -i -P -n | grep LISTEN systemd 1 root 48u IPv6 11587 0t0 TCP *:111 (LISTEN) systemd 1 root 49u IPv4 11588 0t0 TCP *:111 (LISTEN) sshd 877 root 3u IPv4 15738 0t0 TCP *:58343 (LISTEN) sshd 877 root 4u IPv6 15747 0t0 TCP *:58343 (LISTEN) master 996 root 13u IPv4 16530 0t0 TCP 127.0.0.1:25 (LISTEN) master 996 root 14u IPv6 16531 0t0 TCP [::1]:25 (LISTEN)</description>
+    </item>
+    
+    <item>
+      <title>yumのインストール可能なバージョンを取得</title>
+      <link>https://www.vegetable.blog.v41.me/posts/ffbbc114-2c95-4ad9-bdcc-a64b0fdbf8ca/</link>
+      <pubDate>Thu, 06 Feb 2020 19:30:31 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/ffbbc114-2c95-4ad9-bdcc-a64b0fdbf8ca/</guid>
+      <description>--showduplicates オプションを使用 $ yum --showduplicates list httpd | expand Loaded plugins: fastestmirror, langpacks, refresh-packagekit Loading mirror speeds from cached hostfile * fedora: mirror.steadfast.net Available Packages httpd.x86_64 2.4.6-6.fc20 fedora httpd.x86_64 2.4.10-1.fc20 updates How can I instruct yum to install a specific version of package X? - Unix &amp;amp; Linux Stack Exchange</description>
+    </item>
+    
+    <item>
+      <title>.profile、.bashrc、.bash_profileの違い</title>
+      <link>https://www.vegetable.blog.v41.me/posts/1d962586-8b1d-49d1-8f4f-dddea4e1db71/</link>
+      <pubDate>Tue, 21 Jan 2020 11:14:18 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/1d962586-8b1d-49d1-8f4f-dddea4e1db71/</guid>
+      <description>.profile 環境変数など # 環境変数の設定 export PATH=&amp;quot;/usr/local/opt/mysql@5.7/bin:$PATH&amp;quot; export PATH=&amp;quot;/usr/local/opt/openssl/bin:$PATH&amp;quot; export PATH=&amp;quot;~/Library/Python/3.7/bin:$PATH&amp;quot; export PATH=&amp;quot;$HOME/.nodenv/bin:$PATH&amp;quot; .bashrc エイリアス、シェルオプション、プロンプト設定 # エイリアスの設定 alias ll=&amp;#39;ls -l&amp;#39; alias relogin=&amp;#39;exec $SHELL -l&amp;#39; .bash_profile 標準出力が発生</description>
+    </item>
+    
+    <item>
+      <title>ファイルを一行ずつ処理</title>
+      <link>https://www.vegetable.blog.v41.me/posts/fcb9faca-fcbe-4547-93c4-639f5877b4a4/</link>
+      <pubDate>Tue, 24 Dec 2019 13:41:52 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/fcb9faca-fcbe-4547-93c4-639f5877b4a4/</guid>
+      <description>read を使用する。 $ cat list.txt line 1 line 2 line 3 END $ while read LINE; do echo ${LINE}; done &amp;lt; ./list.txt line 1 line 2 line 3 END</description>
+    </item>
+    
+    <item>
+      <title>cronの設定場所</title>
+      <link>https://www.vegetable.blog.v41.me/posts/d2a743be-31e7-48d6-af73-0eaa83c92ce3/</link>
+      <pubDate>Thu, 14 Nov 2019 13:42:28 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/d2a743be-31e7-48d6-af73-0eaa83c92ce3/</guid>
+      <description>解決 /var/spool/cron 配下 各ユーザのcrontabファイルの場所について - Qiita 事象 wheneverで設定したcronを確認したいが、 /etc/cron* 配下にない。</description>
+    </item>
+    
+    <item>
+      <title>高速な文字検索</title>
+      <link>https://www.vegetable.blog.v41.me/posts/b41d38d0-e53d-4569-be09-11f6f211035e/</link>
+      <pubDate>Wed, 30 Oct 2019 10:04:24 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/b41d38d0-e53d-4569-be09-11f6f211035e/</guid>
+      <description>ag を使用する。 配下のフォルダでgmailドメインを検索する $ ag &#39;\@example.com&#39; ./ test 1:example@example.com ag (The Silver Searcher) コマンド覚え書き - Qiita</description>
+    </item>
+    
+    <item>
+      <title>大きいファイルを圧縮して分割</title>
+      <link>https://www.vegetable.blog.v41.me/posts/964e6d46-42b2-4d30-be86-76e45bbff5db/</link>
+      <pubDate>Fri, 18 Oct 2019 15:24:12 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/964e6d46-42b2-4d30-be86-76e45bbff5db/</guid>
+      <description>パスワード付き圧縮 $ zip -e -r ps_hogedir.zip hogedir/ 【mac】zipファイル操作コマンド - Qiita 分割 $ split -b 45m ps_hogedir.zip ps_hogedir. ps_hogedir.aa ps_hogedir.ab . . . 【Mac】ファイルを指定サイズで分割/結合す</description>
+    </item>
+    
+    <item>
+      <title>サーバーの日付をずらす</title>
+      <link>https://www.vegetable.blog.v41.me/posts/db625d13-7f4f-4de8-aa1b-ac4ab280c331/</link>
+      <pubDate>Mon, 30 Sep 2019 16:13:39 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/db625d13-7f4f-4de8-aa1b-ac4ab280c331/</guid>
+      <description>解決 date -s &amp;quot;01/30 13:00 2015&amp;quot; dateコマンドでLinuxサーバの時刻変更 - Qiita tips 元に戻す方法 $ sudo date -s &amp;quot;`curl https://ntp-a1.nict.go.jp/cgi-bin/time`&amp;quot; Linux の日付の自動調整を即実行したい</description>
+    </item>
+    
+    <item>
+      <title>shellscriptでエラーメッセージをいい感じに出す</title>
+      <link>https://www.vegetable.blog.v41.me/posts/93e5ce61-eb8f-40e3-bd8a-34364d13a6e0/</link>
+      <pubDate>Thu, 12 Sep 2019 11:47:33 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/93e5ce61-eb8f-40e3-bd8a-34364d13a6e0/</guid>
+      <description># Colorize output only if stdout referers to terminal if [ -t 1 ]; then textred=&amp;#34;\033[1;31m&amp;#34; textgreen=&amp;#34;\033[1;32m&amp;#34; textyellow=&amp;#34;\033[1;33m&amp;#34; textblue=&amp;#34;\033[1;34m&amp;#34; textreset=&amp;#34;\033[0m&amp;#34; fi error() { echo -e $textred$@$textreset &amp;gt; /dev/stderr; exit 1; } # 使用例 error fugafuga シェルスクリプトでエラーメッセージに色をつける - pyopyopyo - Linuxとか</description>
+    </item>
+    
+    <item>
+      <title>テキストを逆順で読み込みたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/312e727e-de38-4002-bb19-14955d6dfd18/</link>
+      <pubDate>Fri, 06 Sep 2019 19:02:21 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/312e727e-de38-4002-bb19-14955d6dfd18/</guid>
+      <description>解決 tac を使用する $ printf &amp;quot;1\n2\n3\n&amp;quot; | tac 3 2 1 shell - How can I reverse the order of lines in a file? - Stack Overflow `sort -r` だと値の降順なので違う。`tail -r` はBSDでのみ有効。</description>
+    </item>
+    
+    <item>
+      <title>if文ワンライナー</title>
+      <link>https://www.vegetable.blog.v41.me/posts/66a8ff26-6d7c-4b41-89fc-d491fc799047/</link>
+      <pubDate>Wed, 04 Sep 2019 19:28:26 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/66a8ff26-6d7c-4b41-89fc-d491fc799047/</guid>
+      <description>[ ${PIPESTATUS[0]} == 0 ] のように記載する $ sh -c &#39;true | tee &amp;amp;&amp;amp; [ ${PIPESTATUS[0]} == 0 ]&#39;; echo $? bashの結果の比較 [[ $? == 0 ]] 元 if [ -f ${target} ]; then echo &#39;true&#39; ;fi 簡素なif文は一行で書く - 半径5メー</description>
+    </item>
+    
+    <item>
+      <title>lessのショートカットキー</title>
+      <link>https://www.vegetable.blog.v41.me/posts/fb07982c-f729-4f5a-b6d2-8d619063f7fd/</link>
+      <pubDate>Mon, 02 Sep 2019 13:15:28 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/fb07982c-f729-4f5a-b6d2-8d619063f7fd/</guid>
+      <description>ページ送り ショートカット 説明 cmd + f ページ送り cmd + b ページ戻し まとめ移動 ショートカット 説明 G ファイルを最後へ移動 g ファイルの先頭へ移動 less</description>
+    </item>
+    
+    <item>
+      <title>パイプラインで実行された任意のコマンドの実行結果を取得</title>
+      <link>https://www.vegetable.blog.v41.me/posts/140b2b51-99ad-4e8a-b196-cb95c00c3028/</link>
+      <pubDate>Tue, 27 Aug 2019 13:50:33 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/140b2b51-99ad-4e8a-b196-cb95c00c3028/</guid>
+      <description>解決 PIPESTATUS変数 を使用する $ false | tee -a &#39;/tmp/test&#39; &amp;amp;&amp;amp; if [ &amp;quot;${PIPESTATUS[0]}&amp;quot; -eq 0 ]; then true; else false; fi $ echo $? 1 $ true | tee -a &#39;/tmp/test&#39; &amp;amp;&amp;amp; if [ &amp;quot;${PIPESTATUS[0]}&amp;quot; -eq 0 ]; then true; else false; fi $ echo $? 0 ShellScript Bash 終了コード</description>
+    </item>
+    
+    <item>
+      <title>シェルで無限ループする時のテンプレート</title>
+      <link>https://www.vegetable.blog.v41.me/posts/be30dea1-c2c2-4424-9192-1e8652e150fd/</link>
+      <pubDate>Tue, 06 Aug 2019 15:03:42 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/be30dea1-c2c2-4424-9192-1e8652e150fd/</guid>
+      <description>解決 #!/bin/bash function randbool() { if (( RANDOM %2 )); then true else false fi } while : do randbool if [ $? -eq 0 ]; then echo &amp;#39;break&amp;#39; break else echo &amp;#34;wait 1 sec.&amp;#34; sleep 1 fi done $ infinity_loop.sh wait 1 sec. wait 1 sec. wait 1 sec. wait 1 sec. break Bash: Random numbers for fun and profit</description>
+    </item>
+    
+    <item>
+      <title>osのバージョンを確認</title>
+      <link>https://www.vegetable.blog.v41.me/posts/e1750120-fa37-46a4-9998-5d6fefc21aff/</link>
+      <pubDate>Mon, 05 Aug 2019 12:08:35 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/e1750120-fa37-46a4-9998-5d6fefc21aff/</guid>
+      <description>解決 cat /etc/*-release shell - How to check OS and version using a Linux command - Unix &amp;amp; Linux Stack Exchange 実行例 Debian PRETTY_NAME=&amp;quot;Debian GNU/Linux 9 (stretch)&amp;quot; NAME=&amp;quot;Debian GNU/Linux&amp;quot; VERSION_ID=&amp;quot;9&amp;quot; VERSION=&amp;quot;9 (stretch)&amp;quot; ID=debian HOME_URL=&amp;quot;https://www.debian.org/&amp;quot; SUPPORT_URL=&amp;quot;https://www.debian.org/support&amp;quot; BUG_REPORT_URL=&amp;quot;https://bugs.debian.org/&amp;quot; CentOS CentOS release 6.4 (Final) CentOS release 6.4 (Final) CentOS release 6.4 (Final)</description>
+    </item>
+    
+    <item>
+      <title>cutの用途集</title>
+      <link>https://www.vegetable.blog.v41.me/posts/20bdad9a-6e90-4761-ad79-1a920ff07a72/</link>
+      <pubDate>Fri, 02 Aug 2019 19:11:13 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/20bdad9a-6e90-4761-ad79-1a920ff07a72/</guid>
+      <description>URLのパラメータを削る cut -f1 -d? echo https://test.com?val=1 | cut -f1 -d? https://test.com</description>
+    </item>
+    
+    <item>
+      <title>sedの用途集</title>
+      <link>https://www.vegetable.blog.v41.me/posts/7d0ddaff-29ae-4f20-9e8c-4ff6adcf54c7/</link>
+      <pubDate>Fri, 02 Aug 2019 13:54:42 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/7d0ddaff-29ae-4f20-9e8c-4ff6adcf54c7/</guid>
+      <description>数字を特定の文字列に置換 sed -e &#39;s/[0-9]\{1,\}/xxx/g&#39; $ echo test1234 | sed -e &#39;s/[0-9]\{1,\}/xxx/g&#39; testxxx 使いどき /path/area_1 /path/area_200 みたいなパスを集約したい時 regular expression - How to use sed to replace numbers with parenthese? - Unix &amp;amp; Linux Stack Exchange N番目の(.)を削除</description>
+    </item>
+    
+    <item>
+      <title>awkの各フィールドの値を確認したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/0f2bcc1d-f221-4848-921c-84c194c6b6fa/</link>
+      <pubDate>Fri, 02 Aug 2019 13:36:48 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/0f2bcc1d-f221-4848-921c-84c194c6b6fa/</guid>
+      <description>解決 awk &#39;{for (i = 1; i &amp;lt;= NF; i++) print &amp;quot;$&amp;quot;i&amp;quot;:&amp;quot;$i;}&#39; で確認できる $ head -1 /var/log/https/access_log | awk -F&#39;\t&#39; &#39;{for (i = 1; i &amp;lt;= NF; i++) print &amp;quot;$&amp;quot;i&amp;quot;:&amp;quot;$i;}&#39; $1:domain:hogehoge $2:host:xxx.xxx.xxx.xxx $3:server:xxx.xxx.xxx.xxx $4:ident:- $5:user:- $6:time:28/Jul/2019:03:21:06 +0900 $7:method:GET $8:path:/sitemap/info.xml $9:protocol:HTTP/1.1 $10:status:200 $11:size:576 $12:referer:- $13:agent:xxxx $14:response_time:3421 $15:cookie:- $16:set_cookie:- AWKのこういう時はどう書く? - Qiita</description>
+    </item>
+    
+    <item>
+      <title>railsタスクを変数に格納して実行したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/d05bd6f3-f718-4da9-9860-ed437c72f657/</link>
+      <pubDate>Tue, 30 Jul 2019 15:52:10 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/d05bd6f3-f718-4da9-9860-ed437c72f657/</guid>
+      <description>事象 railsタスクの実行コマンドを変数に入れて実行したいが、予期しないエラーが発生する。 RAILS_TASK=&#39;rbenv exec bundle exec rails hogehoge:hoge1[param1,1,2]&#39; $RAILS_TASK # =&amp;gt; ./test.sh: line 5: [: too many arguments 解決 &amp;ldquo;</description>
+    </item>
+    
+    <item>
+      <title>viの基本操作</title>
+      <link>https://www.vegetable.blog.v41.me/posts/62f7585b-3291-42f9-8f8c-3394e4f37000/</link>
+      <pubDate>Wed, 24 Jul 2019 12:55:16 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/62f7585b-3291-42f9-8f8c-3394e4f37000/</guid>
+      <description>1文字の移動 操作 結果 h 左 j 下 k 上 l 右 1単語の移動 操作 結果 w 次の単語の先頭 (word) b 現在または前の単語の先頭 e 現在または次の単語の末尾 行での移動 操作</description>
+    </item>
+    
+    <item>
+      <title>特定のポートで接続が行われていない際に実行する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/46ecb3df-474e-42de-bdab-24e9d8e0e7c2/</link>
+      <pubDate>Mon, 22 Jul 2019 16:00:49 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/46ecb3df-474e-42de-bdab-24e9d8e0e7c2/</guid>
+      <description>while : do if [ $(netstat -n | fgrep &amp;#39;ESTABLISHED&amp;#39; | fgrep &amp;#39;:21&amp;#39; | wc -l) -eq 0 ]; then echo &amp;#34;nobody users established.&amp;#34; break else echo &amp;#34;wait 1 minute.&amp;#34; sleep 1m fi done vsftpdの再起動時などにユーザ接続していな事を確認する時なんかに利用</description>
+    </item>
+    
+    <item>
+      <title>FTPまわりのログ確認</title>
+      <link>https://www.vegetable.blog.v41.me/posts/f512848b-2c16-4d54-8cd5-64b2d6a8c346/</link>
+      <pubDate>Mon, 22 Jul 2019 10:07:43 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/f512848b-2c16-4d54-8cd5-64b2d6a8c346/</guid>
+      <description># tail -f /var/log/vsftpd.log # less /var/log/messages # less /var/log/secure</description>
+    </item>
+    
+    <item>
+      <title>ゼロ埋めしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/d5a6610a-3eb3-4467-9c79-ee0e1cd7ce32/</link>
+      <pubDate>Fri, 19 Jul 2019 19:12:15 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/d5a6610a-3eb3-4467-9c79-ee0e1cd7ce32/</guid>
+      <description>printf &amp;quot;%0Xd\n&amp;quot; を使用する $ printf &amp;quot;%05d\n&amp;quot; 99 00099 numbers - How to zero pad a sequence of integers in bash so that all have the same width? - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>ワンライナーでパスワードを生成</title>
+      <link>https://www.vegetable.blog.v41.me/posts/8d53036e-9ec1-4376-92ee-ede1388c21f8/</link>
+      <pubDate>Fri, 19 Jul 2019 18:12:55 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/8d53036e-9ec1-4376-92ee-ede1388c21f8/</guid>
+      <description>openssl rand を使用 $ openssl rand -base64 12 6kRz+U9TCFXs5UsI $ openssl rand -base64 12 | cut -c -12 rncJWN21ftbV macOS の標準機能でパスワードをランダム生成する方法 - Qiita</description>
+    </item>
+    
+    <item>
+      <title>Shellscriptでためになる記法</title>
+      <link>https://www.vegetable.blog.v41.me/posts/c0bdc12f-d70f-41fe-a5f4-62ff08b66af1/</link>
+      <pubDate>Wed, 17 Jul 2019 11:45:03 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/c0bdc12f-d70f-41fe-a5f4-62ff08b66af1/</guid>
+      <description>複数のコマンドをsudoで実行 # run inside sudo sudo sh &amp;lt;&amp;lt;SCRIPT ~~~ SCRIPT install-redhat-td-agent2.sh</description>
+    </item>
+    
+    <item>
+      <title>JSONの解析に役立つツール</title>
+      <link>https://www.vegetable.blog.v41.me/posts/88915b03-e1fe-404f-8dee-e97067ec4a25/</link>
+      <pubDate>Wed, 10 Jul 2019 10:23:36 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/88915b03-e1fe-404f-8dee-e97067ec4a25/</guid>
+      <description>jq 検索ワード json mac command</description>
+    </item>
+    
+    <item>
+      <title>ターミナルを再起動</title>
+      <link>https://www.vegetable.blog.v41.me/posts/0bc77502-05c2-4f1a-b791-9cc9dda6d4d9/</link>
+      <pubDate>Mon, 01 Jul 2019 11:49:58 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/0bc77502-05c2-4f1a-b791-9cc9dda6d4d9/</guid>
+      <description>コマンド exec $SHELL -l 実行例 $ exec $SHELL -l $ # 何も発生しない シェルを再起動させる簡単な方法 - Qiita</description>
+    </item>
+    
+    <item>
+      <title>ディレクトリへのシンボリックリンクを上書きしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/f6a2aa14-6761-4bf7-ab30-837cdc5fbb1e/</link>
+      <pubDate>Mon, 15 Apr 2019 18:43:11 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/f6a2aa14-6761-4bf7-ab30-837cdc5fbb1e/</guid>
+      <description>$ ln -nfs [リンク先] [シンボリックリンクのパス] シンボリックリンクの向き先変更（ln -nfs TARGET LINK_NAME） - Qiita</description>
+    </item>
+    
+    <item>
+      <title>sslのメールサーバにアクセスしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/1f1f3f08-f215-43e7-8ea1-b0ef23364013/</link>
+      <pubDate>Wed, 27 Feb 2019 18:04:07 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/1f1f3f08-f215-43e7-8ea1-b0ef23364013/</guid>
+      <description>$openssl s_client -connect mail-server.com:995 +OK Dovecot ready. USER [username] # 入力 +OK PASS [password] # 入力 +OK Logged in. LIST # 入力 +OK 2 messages: 1 4687 2 103667 QUIT 入力のコメント部分は、一列丸ごと入力する。`USER [username]` は、 `USER` も入力する。</description>
+    </item>
+    
+    <item>
+      <title>フルパスのファイル名をリネームしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/5e681e54-25e7-4038-bf8c-879897377540/</link>
+      <pubDate>Tue, 11 Dec 2018 13:55:08 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/5e681e54-25e7-4038-bf8c-879897377540/</guid>
+      <description>fullfile=/path/to/file.ext dirsname=$(dirname $fullfile) # /path/to filename=$(basename -- &amp;quot;$fullfile&amp;quot;) # file.ext extension=&amp;quot;${filename##*.}&amp;quot; # ext filename=&amp;quot;${filename%.*}&amp;quot; # file today=`date &amp;quot;+%Y%m%d&amp;quot;` # 20181211 rename_file=&amp;quot;/var/tmp/${filename}_${today}.${extension}&amp;quot; # /var/tmp/file_20181211.ext dirname - extract the directory name from a full path | Unix Tutorial https://www.unixtutorial.org/commands/dirname/ string - Extract filename and extension in Bash - Stack Overflow https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash</description>
+    </item>
+    
+    <item>
+      <title>etckeeper をインストール</title>
+      <link>https://www.vegetable.blog.v41.me/posts/b1c34e0e-3274-4127-b216-3cb603279e34/</link>
+      <pubDate>Sat, 01 Dec 2018 13:53:06 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/b1c34e0e-3274-4127-b216-3cb603279e34/</guid>
+      <description>インストール $ cd /usr/local/src $ git clone git://git.kitenet.net/etckeeper confのファイル末尾の箇所を修正 # The high-level package manager that&#39;s being used. # (apt, pacman-g2, yum etc) HIGHLEVEL_PACKAGE_MANAGER=yum # The low-level package manager that&#39;s being used. # (dpkg, rpm, pacman-g2, etc) LOWLEVEL_PACKAGE_MANAGER=rpm make $ make install ファーストコミッ</description>
+    </item>
+    
+    <item>
+      <title>各パッケージマネージャ毎の更新タイミング</title>
+      <link>https://www.vegetable.blog.v41.me/posts/f46c0fbe-36a5-471c-910c-aa74648b1529/</link>
+      <pubDate>Thu, 04 Oct 2018 14:01:38 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/f46c0fbe-36a5-471c-910c-aa74648b1529/</guid>
+      <description>普段yumばかり使ってるとあまり意識しないんですが、パッケージインデックスの更新タイミングってそれぞれ違うんですよ yumは自動更新 apt-get/apk 等は明示</description>
+    </item>
+    
+    <item>
+      <title>複数のファイルを一気に作成する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/82df67e3-3088-4d02-8b05-e7e650a42bcd/</link>
+      <pubDate>Tue, 11 Sep 2018 19:13:55 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/82df67e3-3088-4d02-8b05-e7e650a42bcd/</guid>
+      <description>$ touch dir1/{file1,file2} ターミナルの作業が捗るかもな小技５つ</description>
+    </item>
+    
+    <item>
+      <title>日付をYYYYMMDD形式で取得</title>
+      <link>https://www.vegetable.blog.v41.me/posts/57955789-391e-4629-8e2d-a213edb5bb09/</link>
+      <pubDate>Wed, 15 Aug 2018 13:29:28 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/57955789-391e-4629-8e2d-a213edb5bb09/</guid>
+      <description>$ date &amp;quot;+%Y%m%d&amp;quot; =&amp;gt; 20180815 前日に生成されたファイルの存在チェック $ ls &amp;quot;/path/to/file_`date -d &#39;-1 day&#39; &#39;+%Y%m%d&#39;`.csv&amp;quot; =&amp;gt; /path/to/file_20180814.csv date コマンド | コマンドの使い方(Linux) | hydroculのメモ</description>
+    </item>
+    
+    <item>
+      <title>同ディレクトリーにフォルダを複数作成</title>
+      <link>https://www.vegetable.blog.v41.me/posts/75b88755-f843-4ad1-90d8-d0671afccabb/</link>
+      <pubDate>Wed, 15 Aug 2018 11:22:13 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/75b88755-f843-4ad1-90d8-d0671afccabb/</guid>
+      <description>$ mkdir -p /path/to/dirname/{json,csv,log} =&amp;gt; /path/to/dirname/json /path/to/dirname/csv /path/to/dirname/log 複数のディレクトリをいちどに作成したい - ITmedia エンタープライズ</description>
+    </item>
+    
+    <item>
+      <title>文字中から制御文字を取り除く</title>
+      <link>https://www.vegetable.blog.v41.me/posts/95b520c1-2824-4955-8228-aefddefa498f/</link>
+      <pubDate>Wed, 08 Aug 2018 15:03:47 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/95b520c1-2824-4955-8228-aefddefa498f/</guid>
+      <description>$ sed -r &amp;quot;s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})*)?m//g&amp;quot; ANSIエスケープコードによる色をsedで削除する | blog.monophile.net</description>
+    </item>
+    
+    <item>
+      <title>tar.gzが解凍できない</title>
+      <link>https://www.vegetable.blog.v41.me/posts/16676d53-850c-4fe9-9f17-79e453431e43/</link>
+      <pubDate>Tue, 31 Jul 2018 15:46:25 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/16676d53-850c-4fe9-9f17-79e453431e43/</guid>
+      <description>$ tar -zxvf test.tar.gz =&amp;gt; gzip: stdin has more than one entry--rest ignored tar: これは tar アーカイブではないようです tar: 次のヘッダをスキップします tar: Child returned status 2 tar: Error is not recoverable: exiting now ファイルの種類を調べる $ file</description>
+    </item>
+    
+    <item>
+      <title>nginxのログの加工集</title>
+      <link>https://www.vegetable.blog.v41.me/posts/7ead2906-7480-4095-90ff-f0b0c9a9c93a/</link>
+      <pubDate>Mon, 30 Jul 2018 11:06:00 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/7ead2906-7480-4095-90ff-f0b0c9a9c93a/</guid>
+      <description>ユニークなエラー内容を取得 ログ [Mon Jul 30 05:10:33.786914 2018] [:error] [pid 5408] [client 40.77.167.180:11290] PHP Notice: Undefined variable: target_name in /home/path/to/dependencies.php on line 216 ワンライナー cat /var/log/httpd/sll_error_log | grep &amp;quot;Mon Jul 30 05:&amp;quot; | awk -F &#39;] &#39; &#39;{print $5}&#39; | uniq -c | sort 結果 1 PHP Notice: Undefined index: is_new in</description>
+    </item>
+    
+    <item>
+      <title>サイトのステータスコードを定期的に記録する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/af24431e-9837-408f-ad71-cd02fce42b42/</link>
+      <pubDate>Thu, 05 Jul 2018 11:04:51 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/af24431e-9837-408f-ad71-cd02fce42b42/</guid>
+      <description>watch -n30 &amp;quot;curl -LkI &#39;https://XXX&#39; -o /dev/null -w &#39;%{http_code}\n&#39; -s | xargs -L 1 -I &#39;{}&#39; date &#39;+[%Y/%m/%d %H:%M:%S] {}&#39; &amp;gt;&amp;gt; result.txt&amp;quot; -n30・・・インターバル(秒) https://XXX・・・参照先 result.txt・・・出力</description>
+    </item>
+    
+    <item>
+      <title>プロセスをウォッチ</title>
+      <link>https://www.vegetable.blog.v41.me/posts/704917f5-4394-47be-ae97-b9c16ee72376/</link>
+      <pubDate>Mon, 21 May 2018 15:00:26 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/704917f5-4394-47be-ae97-b9c16ee72376/</guid>
+      <description>$ watch -n10 &amp;quot;ps -eo pid,lstart,args | grep &#39;[p]rocessname&#39;&amp;quot; =&amp;gt; Every 10.0s: ps -eo pid,lstart,args | grep &#39;[p]rocessname&#39; 91511 Mon May 21 01:00:00 2018 XXX XXXXXXXXXXXXXXXXXX 91512 Mon May 21 01:00:00 2018 XXX XXXXXXXXXXXXXXXXXX</description>
+    </item>
+    
+    <item>
+      <title>ワンライナーコマンドが掲載されるサイト</title>
+      <link>https://www.vegetable.blog.v41.me/posts/435d6674-9f67-4a19-883e-842ffa9d6db0/</link>
+      <pubDate>Wed, 16 May 2018 16:11:54 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/435d6674-9f67-4a19-883e-842ffa9d6db0/</guid>
+      <description>All commands</description>
+    </item>
+    
+    <item>
+      <title>ログを参照する際に重複行をなくしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/35368e42-62a4-4af0-9045-a68ab4dc4366/</link>
+      <pubDate>Wed, 16 May 2018 11:52:03 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/35368e42-62a4-4af0-9045-a68ab4dc4366/</guid>
+      <description>コマンド # ２番目の要素の先頭10文字が一緒のものを集約 $ cat /var/tmp/XXXX.log | uniq -f2 -w10 例 2018-05-15 09:40:00 SELECT VARIABLE_NAME, VARIABLE_VALUE FROM INFORMATION_SCHEMA.GLOBAL_STATUS WHERE VARIABLE_NAME IN ( &#39;COM_DROP_TRIGGER&#39;... 2018-05-15 09:41:00 SELECT VARIABLE_NAME, VARIABLE_VALUE FROM INFORMATION_SCHEMA.GLOBAL_STATUS WHERE VARIABLE_NAME IN ( &#39;COM_DROP_TABLE&#39;... 2018-05-16 00:47:23 DROP TABLE IF EXISTS `XXXXXXX1` 2018-05-16 00:47:23 DROP TABLE</description>
+    </item>
+    
+    <item>
+      <title>プロセス強制終了</title>
+      <link>https://www.vegetable.blog.v41.me/posts/a1db644d-d9dc-4a89-8d0e-5ad524e14abf/</link>
+      <pubDate>Mon, 14 May 2018 15:24:11 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/a1db644d-d9dc-4a89-8d0e-5ad524e14abf/</guid>
+      <description>$ kill -9 1625</description>
+    </item>
+    
+    <item>
+      <title>Gitコマンドをtab補完</title>
+      <link>https://www.vegetable.blog.v41.me/posts/114739bf-71de-4e5f-85a6-4ad339116184/</link>
+      <pubDate>Wed, 02 May 2018 14:46:26 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/114739bf-71de-4e5f-85a6-4ad339116184/</guid>
+      <description>ファイルを見るける $ sudo find / -name git-completion.bash =&amp;gt; /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash bashrcにパスを追記する $ vi ~/.bashrc ----------------- ... source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash 【2ステップ】Gitコマンドでtab補完を有効にする - Qiita</description>
+    </item>
+    
+    <item>
+      <title>ポートからプロセスを探す</title>
+      <link>https://www.vegetable.blog.v41.me/posts/a129ccbe-7f85-4beb-90d2-c61a0bd41074/</link>
+      <pubDate>Tue, 01 May 2018 12:41:02 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/a129ccbe-7f85-4beb-90d2-c61a0bd41074/</guid>
+      <description>td-agentが24224ポートで起動していることを確認したい ポート番号からPIDを検索 $ sudo netstat -anp | grep 24224 # netstat -anl とするとLISTENのみ表示 =&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>linux上での文字コード判別、変換</title>
+      <link>https://www.vegetable.blog.v41.me/posts/adbd03b9-7eef-43ba-af46-70871ec2b1f3/</link>
+      <pubDate>Fri, 27 Apr 2018 15:31:49 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/adbd03b9-7eef-43ba-af46-70871ec2b1f3/</guid>
+      <description>文字コードを判別する $ nkf -g &amp;lt;textdata&amp;gt; 文字コードを変換 Shift-JISへ変換 $ nkf -s --overwrite &amp;lt;textdata&amp;gt; EUC-JPは-e、UTF-8は-wを設定する 【初心者でも知っ</description>
+    </item>
+    
+    <item>
+      <title>[Linux]ファイルの圧縮、解凍方法</title>
+      <link>https://www.vegetable.blog.v41.me/posts/768bdf02-7ee1-4ccc-bf27-364074bdd72a/</link>
+      <pubDate>Fri, 27 Apr 2018 10:55:38 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/768bdf02-7ee1-4ccc-bf27-364074bdd72a/</guid>
+      <description>tar.gz 圧縮 $ tar -zcvf xxxx.tar.gz directory 解凍 $ tar -zxvf xxxx.tar.gz 参考 [Linux]ファイルの圧縮、解凍方法 - Qiita https://qiita.com/supersaiakujin/items/c6b54e9add21d375161f</description>
+    </item>
+    
+    <item>
+      <title>FluentdでS3にログをアップする</title>
+      <link>https://www.vegetable.blog.v41.me/posts/129e37cb-70dd-4c73-b21e-18453d50b775/</link>
+      <pubDate>Wed, 25 Apr 2018 10:52:57 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/129e37cb-70dd-4c73-b21e-18453d50b775/</guid>
+      <description>Fluentdのインストール $ sudo curl -L https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh $ sudo td-agent-gem install fluent-plugin-config-expander fluent-plugin-tail-asis fluent-plugin-file-alternative fluent-plugin-forest $ sudo mkdir /var/log/td-agent/pos $ sudo mkdir /var/log/td-agent/buffer $ sudo chown -R td-agent. /var/log/td-agent conf設定 $ sudo vi /etc/td-agent/td-agent.conf -------------------------------------------------------------------------------- &amp;lt;source&amp;gt; type config_expander &amp;lt;config&amp;gt; type tail format none path /var/log/ec2-user/XXXX.log pos_file /var/log/td-agent/pos/XXXX.pos tag api_${hostname}/XXXX &amp;lt;/config&amp;gt; &amp;lt;/source&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>ファイル数がいっぱいでファイルを作成できない</title>
+      <link>https://www.vegetable.blog.v41.me/posts/e84cde16-ff25-411b-be61-9b46788f8dd5/</link>
+      <pubDate>Tue, 24 Apr 2018 10:11:52 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/e84cde16-ff25-411b-be61-9b46788f8dd5/</guid>
+      <description>事象 OSからファイルを作成できるスペースがないか通知が来た /home/app/.rbenv/libexec/rbenv-init: line 152: cannot create temp file for here-document: No space left on device ファイル数を確認すると100%近くになっている $ df -i Filesystem</description>
+    </item>
+    
+  </channel>
+</rss>

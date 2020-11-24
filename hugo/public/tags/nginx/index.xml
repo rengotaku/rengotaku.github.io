@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nginx on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/nginx/</link>
+    <description>Recent content in nginx on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Mon, 26 Aug 2019 16:53:24 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>nginxのリバースプロキシ一例</title>
+      <link>https://www.vegetable.blog.v41.me/posts/23387909-2719-4835-930c-4fee4e6ffa82/</link>
+      <pubDate>Mon, 26 Aug 2019 16:53:24 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/23387909-2719-4835-930c-4fee4e6ffa82/</guid>
+      <description>/post/:encryptedId?hoge=1111 -&amp;gt; /posts/:encryptedId?hoge=1111 location ~ ^/post/(?&amp;lt;encryptedId&amp;gt;[a-z1-9]+)/?$ { proxy_pass http://localhost:3000/posts/$encryptedId$is_args$args; } tips match対象を命名したい (?&amp;lt;encryptedId&amp;gt;[a-z1-9]+) のように宣言し、 $encryptedId の変数で値を使用できる。 e.g. /post/a1b2c3 の場合、 $encryptedId =&amp;gt; a1b2c3 nginx location ~ 正規表現でマッチした部分</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s Encryptのrenew（自動延長）でportエラー</title>
+      <link>https://www.vegetable.blog.v41.me/posts/7c5f7801-561d-4421-9b19-e4ba02ca9ccb/</link>
+      <pubDate>Mon, 19 Aug 2019 13:20:21 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/7c5f7801-561d-4421-9b19-e4ba02ca9ccb/</guid>
+      <description>未解決 Problem binding to port 80: Could not bind to IPv4 or IPv6 - Help - Let&amp;rsquo;s Encrypt Community Support より、portが既に占有されているのが問題らしい。 nginxを止めて、実行すれば問題なく更新され</description>
+    </item>
+    
+    <item>
+      <title>nginxでapple-touch-iconをrewriteしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/6290c0de-9dc1-4d3d-b6f0-be9c74f4edf5/</link>
+      <pubDate>Thu, 08 Aug 2019 11:20:08 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/6290c0de-9dc1-4d3d-b6f0-be9c74f4edf5/</guid>
+      <description>解決 rewriteに last を設定する。 location ~ ^/apple-touch-icon-(.*)\.png$ { rewrite ^(.*)$ /apple-touch-icon.png last; } location / { # railsへリバースプロキシ } 事象 実例で学ぶ、Nginxのrewriteに指定で</description>
+    </item>
+    
+    <item>
+      <title>rails向けのnginxコンフの一例</title>
+      <link>https://www.vegetable.blog.v41.me/posts/25b64c4f-8f69-480f-90ad-6e891874a375/</link>
+      <pubDate>Thu, 08 Aug 2019 11:09:56 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/25b64c4f-8f69-480f-90ad-6e891874a375/</guid>
+      <description>ssl_protocols TLSv1 TLSv1.1 TLSv1.2; server { listen 80; server_name www.example.com; return 301 https://$host$request_uri; } server { ssl on; listen 443; server_name www.example.com; ssl_certificate /etc/letsencrypt/live/www.example.com/fullchain.pem; ssl_certificate_key /etc/letsencrypt/live/www.example.com/privkey.pem; include /etc/nginx/default.d/*.conf; root /path/to/public; location ^~ /.well-known/acme-challenge { return 200; } location ^~ /.well-known/assetlinks.json { return 404; } # apple-touch-icon-57x57.png の対策 location ~ ^/apple-touch-icon-(.*)\.png$ { rewrite ^(.*)$ /apple-touch-icon.png last; } location ~ ^/android-chrome-(.*)\.png$ { rewrite ^(.*)$ /android-chrome.png last; } location / {</description>
+    </item>
+    
+    <item>
+      <title>nginxでport:443を受け付け、port:80のhttpdへ、リバースプロキシしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/4e13d4bd-7b83-4322-8dae-a8fa9f4f503a/</link>
+      <pubDate>Tue, 18 Dec 2018 19:32:52 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/4e13d4bd-7b83-4322-8dae-a8fa9f4f503a/</guid>
+      <description>nginx server { listen 80; server_name www.site.com; return 301 https://$host$request_uri; } server { ssl on; listen 443; server_name www.site.com; ssl_certificate /etc/letsencrypt/live/www.site.com/fullchain.pem; ssl_certificate_key /etc/letsencrypt/live/www.site.com/privkey.pem; include /etc/nginx/default.d/*.conf; location / { proxy_pass http://127.0.0.1:8080; proxy_redirect off; proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-Host $host; proxy_set_header X-Forwarded-Server $host; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; } } ssl化にはlets encyptを使用して</description>
+    </item>
+    
+    <item>
+      <title>urlをそのままで参照先を変更したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/baa76ffe-4dc2-49c0-8416-889212bbdb88/</link>
+      <pubDate>Tue, 18 Dec 2018 10:57:13 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/baa76ffe-4dc2-49c0-8416-889212bbdb88/</guid>
+      <description>目的 http://test.com/ にアクセスした場合に、 http://test.com/html/index.html へアクセスさせる conf修正 例はrootパスのみ適用 location = / { rewrite ^ /html/index.html; } 下記のルールはURLが変更される ルール コー</description>
+    </item>
+    
+    <item>
+      <title>リバースプロキシする際のlocationの注意点</title>
+      <link>https://www.vegetable.blog.v41.me/posts/eb1aacea-2a96-4fe2-8e90-c0aa8be4ac3b/</link>
+      <pubDate>Wed, 12 Dec 2018 14:22:19 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/eb1aacea-2a96-4fe2-8e90-c0aa8be4ac3b/</guid>
+      <description># nodejs # www.domain.com/img/path/to/image.jpg # http://localhost:5001/path/to/image.jpg location /img/ { proxy_pass http://localhost:5001/; # &amp;lt;- 後ろの / は大事 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_set_header Host $http_host; proxy_redirect off; } # rails # www.domain.com/index # http://localhost:5002/index location / { proxy_pass http://localhost:5002; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_set_header Host $http_host; proxy_redirect off; } localhost:5001; と(後ろの/を消去)した場合は、img/</description>
+    </item>
+    
+    <item>
+      <title>gcpのキャッシュ用のnginxを(docker上に)作成するポイント</title>
+      <link>https://www.vegetable.blog.v41.me/posts/58b5162f-b8e8-4555-8a0c-e4218c8a2c6f/</link>
+      <pubDate>Wed, 22 Aug 2018 11:18:49 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/58b5162f-b8e8-4555-8a0c-e4218c8a2c6f/</guid>
+      <description>構成 APP &amp;lt;-&amp;gt; NGINX(これ) &amp;lt;-&amp;gt; GCP GCPにアクセスする際にNGINXを通してキャッシュを使用するのが目的。 Dockerfileを作成 Docker</description>
+    </item>
+    
+    <item>
+      <title>nginxのログの加工集</title>
+      <link>https://www.vegetable.blog.v41.me/posts/7ead2906-7480-4095-90ff-f0b0c9a9c93a/</link>
+      <pubDate>Mon, 30 Jul 2018 11:06:00 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/7ead2906-7480-4095-90ff-f0b0c9a9c93a/</guid>
+      <description>ユニークなエラー内容を取得 ログ [Mon Jul 30 05:10:33.786914 2018] [:error] [pid 5408] [client 40.77.167.180:11290] PHP Notice: Undefined variable: target_name in /home/path/to/dependencies.php on line 216 ワンライナー cat /var/log/httpd/sll_error_log | grep &amp;quot;Mon Jul 30 05:&amp;quot; | awk -F &#39;] &#39; &#39;{print $5}&#39; | uniq -c | sort 結果 1 PHP Notice: Undefined index: is_new in</description>
+    </item>
+    
+  </channel>
+</rss>

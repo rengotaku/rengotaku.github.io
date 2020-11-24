@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>athena on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/athena/</link>
+    <description>Recent content in athena on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Tue, 04 Aug 2020 13:15:20 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/athena/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>athenaで日付のフォーマットを指定</title>
+      <link>https://www.vegetable.blog.v41.me/posts/3ece5d34-946a-489c-b273-877c384ca09e/</link>
+      <pubDate>Tue, 04 Aug 2020 13:15:20 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/3ece5d34-946a-489c-b273-877c384ca09e/</guid>
+      <description>解決 amazon web services - AWS Athena and date_format - Stack Overflow select current_timestamp ,date_format (current_timestamp, &amp;#39;%Y_%m_%d&amp;#39;) ,format_datetime (current_timestamp, &amp;#39;y_M_d&amp;#39;)</description>
+    </item>
+    
+    <item>
+      <title>athenaで日付周りをいじる</title>
+      <link>https://www.vegetable.blog.v41.me/posts/87692a75-1722-44e0-b5d2-cda761bf52bd/</link>
+      <pubDate>Tue, 26 May 2020 17:47:16 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/87692a75-1722-44e0-b5d2-cda761bf52bd/</guid>
+      <description>解決 select from_iso8601_timestamp(&amp;#39;2020-03-19T18:01:08+09:00&amp;#39;), -- 2020-03-19 18:01:08.000 +09:00 timestamp &amp;#39;2020-03-19 09:01:09 UTC&amp;#39; AT TIME ZONE &amp;#39;Asia/Tokyo&amp;#39;, -- 2020-03-19 18:01:09.000 Asia/Tokyo from_iso8601_timestamp(&amp;#39;2020-03-19T18:01:08+09:00&amp;#39;) &amp;gt; timestamp &amp;#39;2020-03-19 09:01:09 UTC&amp;#39; AT TIME ZONE &amp;#39;Asia/Tokyo&amp;#39;, -- false from_iso8601_timestamp(&amp;#39;2020-03-19T18:01:08+09:00&amp;#39;) &amp;gt; timestamp &amp;#39;2020-03-19 09:01:07 UTC&amp;#39; AT TIME ZONE &amp;#39;Asia/Tokyo&amp;#39; -- true 参考 Presto/Athena Examples: Date and Datetime functions Convert date columns to date type in generated Athena table · Issue #3 · concurrencylabs/aws-cost-analysis 8.13. Date and</description>
+    </item>
+    
+    <item>
+      <title>ALBのアクセスログを日別に集計</title>
+      <link>https://www.vegetable.blog.v41.me/posts/15ba3a95-b5cd-45e1-b80f-a72f4ac275d2/</link>
+      <pubDate>Tue, 17 Jul 2018 12:12:25 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/15ba3a95-b5cd-45e1-b80f-a72f4ac275d2/</guid>
+      <description>SELECT COUNT(*), date_parse(time, &amp;#39;%Y-%m-%dT%H:%i:%sZ&amp;#39;) as date FROM alb_logs WHERE time &amp;gt; &amp;#39;2018-07-12&amp;#39; AND request_url like &amp;#39;%path%&amp;#39; GROUP BY date_parse(time, &amp;#39;%Y-%m-%dT%H:%i:%sZ&amp;#39;) ORDER BY count(*) desc timeは2017-01-07T00:07:23.752260Zが入る AWS Developer Forums: date_parse() nor parse_datetime() seem &amp;hellip; 6.10. Date and</description>
+    </item>
+    
+  </channel>
+</rss>

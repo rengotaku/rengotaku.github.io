@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name=" robots" content="noindex, nofollow">
+<title>shellscript | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/tags/shellscript/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://www.vegetable.blog.v41.me/tags/shellscript/index.xml">
+
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>shellscript</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      shellscriptでエラーメッセージをいい感じに出す
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p># Colorize output only if stdout referers to terminal if [ -t 1 ]; then textred=&#34;\033[1;31m&#34; textgreen=&#34;\033[1;32m&#34; textyellow=&#34;\033[1;33m&#34; textblue=&#34;\033[1;34m&#34; textreset=&#34;\033[0m&#34; fi error() { echo -e $textred$@$textreset &gt; /dev/stderr; exit 1; } # 使用例 error fugafuga シェルスクリプトでエラーメッセージに色をつける - pyopyopyo - Linuxとか...</p>
+  </section>
+  <footer class="entry-footer">September 12, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to shellscriptでエラーメッセージをいい感じに出す" href="https://www.vegetable.blog.v41.me/posts/93e5ce61-eb8f-40e3-bd8a-34364d13a6e0/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      テキストを逆順で読み込みたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 tac を使用する $ printf &#34;1\n2\n3\n&#34; | tac 3 2 1 shell - How can I reverse the order of lines in a file? - Stack Overflow `sort -r` だと値の降順なので違う。`tail -r` はBSDでのみ有効。...</p>
+  </section>
+  <footer class="entry-footer">September 6, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to テキストを逆順で読み込みたい" href="https://www.vegetable.blog.v41.me/posts/312e727e-de38-4002-bb19-14955d6dfd18/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      if文ワンライナー
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>[ ${PIPESTATUS[0]} == 0 ] のように記載する $ sh -c &#39;true | tee &amp;&amp; [ ${PIPESTATUS[0]} == 0 ]&#39;; echo $? bashの結果の比較 [[ $? == 0 ]] 元 if [ -f ${target} ]; then echo &#39;true&#39; ;fi 簡素なif文は一行で書く - 半径5メー...</p>
+  </section>
+  <footer class="entry-footer">September 4, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to if文ワンライナー" href="https://www.vegetable.blog.v41.me/posts/66a8ff26-6d7c-4b41-89fc-d491fc799047/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      lessのショートカットキー
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>ページ送り ショートカット 説明 cmd &#43; f ページ送り cmd &#43; b ページ戻し まとめ移動 ショートカット 説明 G ファイルを最後へ移動 g ファイルの先頭へ移動 less...</p>
+  </section>
+  <footer class="entry-footer">September 2, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to lessのショートカットキー" href="https://www.vegetable.blog.v41.me/posts/fb07982c-f729-4f5a-b6d2-8d619063f7fd/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      パイプラインで実行された任意のコマンドの実行結果を取得
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 PIPESTATUS変数 を使用する $ false | tee -a &#39;/tmp/test&#39; &amp;&amp; if [ &#34;${PIPESTATUS[0]}&#34; -eq 0 ]; then true; else false; fi $ echo $? 1 $ true | tee -a &#39;/tmp/test&#39; &amp;&amp; if [ &#34;${PIPESTATUS[0]}&#34; -eq 0 ]; then true; else false; fi $ echo $? 0 ShellScript Bash 終了コード...</p>
+  </section>
+  <footer class="entry-footer">August 27, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to パイプラインで実行された任意のコマンドの実行結果を取得" href="https://www.vegetable.blog.v41.me/posts/140b2b51-99ad-4e8a-b196-cb95c00c3028/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      bashでslackに通知
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 メイン処理 Shell/Bash script for sending slack messages. を使用する。 マッピング #!/bin/bash export APP_SLACK_WEBHOOK=&#34;https://hooks.slack.com/services/XXXX&#34; export APP_SLACK_CHANNEL=channel_name #export APP_SLACK_USERNAME=$(hostname) export APP_SLACK_ICON_EMOJI=&#34;:hoge:&#34; /usr/bin/slack &#34;[$(hostname)] $(cat -)&#34; 使い方 /path/to/shell.sh 2&gt;&amp;1 | /usr/local/bin/crontab-slack 結果 [163-44-175-179] test な感じで送信される。 note どっかで使っていたスク...</p>
+  </section>
+  <footer class="entry-footer">August 27, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to bashでslackに通知" href="https://www.vegetable.blog.v41.me/posts/a4f63bc9-ba1a-4b9b-9745-01ee23b7813d/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      シェルで無限ループする時のテンプレート
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 #!/bin/bash function randbool() { if (( RANDOM %2 )); then true else false fi } while : do randbool if [ $? -eq 0 ]; then echo &#39;break&#39; break else echo &#34;wait 1 sec.&#34; sleep 1 fi done $ infinity_loop.sh wait 1 sec. wait 1 sec. wait 1 sec. wait 1 sec. break Bash: Random numbers for fun and profit...</p>
+  </section>
+  <footer class="entry-footer">August 6, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to シェルで無限ループする時のテンプレート" href="https://www.vegetable.blog.v41.me/posts/be30dea1-c2c2-4424-9192-1e8652e150fd/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      cutの用途集
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>URLのパラメータを削る cut -f1 -d? echo https://test.com?val=1 | cut -f1 -d? https://test.com...</p>
+  </section>
+  <footer class="entry-footer">August 2, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to cutの用途集" href="https://www.vegetable.blog.v41.me/posts/20bdad9a-6e90-4761-ad79-1a920ff07a72/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      sedの用途集
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>数字を特定の文字列に置換 sed -e &#39;s/[0-9]\{1,\}/xxx/g&#39; $ echo test1234 | sed -e &#39;s/[0-9]\{1,\}/xxx/g&#39; testxxx 使いどき /path/area_1 /path/area_200 みたいなパスを集約したい時 regular expression - How to use sed to replace numbers with parenthese? - Unix &amp; Linux Stack Exchange N番目の(.)を削除...</p>
+  </section>
+  <footer class="entry-footer">August 2, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to sedの用途集" href="https://www.vegetable.blog.v41.me/posts/7d0ddaff-29ae-4f20-9e8c-4ff6adcf54c7/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      awkの各フィールドの値を確認したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 awk &#39;{for (i = 1; i &lt;= NF; i&#43;&#43;) print &#34;$&#34;i&#34;:&#34;$i;}&#39; で確認できる $ head -1 /var/log/https/access_log | awk -F&#39;\t&#39; &#39;{for (i = 1; i &lt;= NF; i&#43;&#43;) print &#34;$&#34;i&#34;:&#34;$i;}&#39; $1:domain:hogehoge $2:host:xxx.xxx.xxx.xxx $3:server:xxx.xxx.xxx.xxx $4:ident:- $5:user:- $6:time:28/Jul/2019:03:21:06 &#43;0900 $7:method:GET $8:path:/sitemap/info.xml $9:protocol:HTTP/1.1 $10:status:200 $11:size:576 $12:referer:- $13:agent:xxxx $14:response_time:3421 $15:cookie:- $16:set_cookie:- AWKのこういう時はどう書く? - Qiita...</p>
+  </section>
+  <footer class="entry-footer">August 2, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to awkの各フィールドの値を確認したい" href="https://www.vegetable.blog.v41.me/posts/0f2bcc1d-f221-4848-921c-84c194c6b6fa/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="/tags/shellscript/">« Prev Page</a>
+    <a class="next" href="/tags/shellscript/page/3/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>s3 on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/s3/</link>
+    <description>Recent content in s3 on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 03 Jun 2020 14:00:12 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/s3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>S3のパフォーマンス</title>
+      <link>https://www.vegetable.blog.v41.me/posts/fc4f3355-3081-4871-a21a-f0cc2f211231/</link>
+      <pubDate>Wed, 03 Jun 2020 14:00:12 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/fc4f3355-3081-4871-a21a-f0cc2f211231/</guid>
+      <description>Best Practices Design Patterns: Optimizing Amazon S3 Performance - Amazon Simple Storage Service S3のバケットのprefixを分けることはパフォーマン向上に繋がる。 S3はバケットののprefix毎に3,500 PUT/COPY/POST/DELETE</description>
+    </item>
+    
+    <item>
+      <title>ShrineでS3にアップロードする際のmetadataを正しく設定する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/b655ebe5-9784-45db-88cc-341986ee87e2/</link>
+      <pubDate>Mon, 18 May 2020 19:30:20 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/b655ebe5-9784-45db-88cc-341986ee87e2/</guid>
+      <description>解決 image_uri = Addressable::URI.convert_path(&amp;#34;https://path/to/image.jpg&amp;#34;) URI.parse(image_uri).open do |file| metadata = { &amp;#34;mime_type&amp;#34; =&amp;gt; MIME::Types.type_for(@image_uri.to_s).first.content_type, &amp;#34;filename&amp;#34; =&amp;gt; @image_uri.basename, } # metadataが正しく設定されていないと、uploaded_file.metadataも空 uploaded_file = Shrine.upload(file, storage_key, metadata:</description>
+    </item>
+    
+  </channel>
+</rss>

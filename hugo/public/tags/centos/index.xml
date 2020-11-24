@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>centos on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/centos/</link>
+    <description>Recent content in centos on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 06 Feb 2020 19:28:19 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>0.12系のtd-agentをインストールしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/fda62db1-e01b-4b3c-8020-e9d418601235/</link>
+      <pubDate>Thu, 06 Feb 2020 19:28:19 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/fda62db1-e01b-4b3c-8020-e9d418601235/</guid>
+      <description>sudo sh &amp;lt;&amp;lt;SCRIPT # add GPG key rpm --import https://packages.treasuredata.com/GPG-KEY-td-agent # add treasure data repository to yum cat &amp;gt;/etc/yum.repos.d/td.repo &amp;lt;&amp;lt;&#39;EOF&#39;; [treasuredata] name=TreasureData baseurl=http://packages.treasuredata.com/2.5/redhat/\$releasever/\$basearch gpgcheck=1 gpgkey=https://packages.treasuredata.com/GPG-KEY-td-agent EOF # update your sources yum check-update # install the toolbelt yes | yum install -y td-agent SCRIPT install-redhat-td-agent2.5.sh Download | Fluentd</description>
+    </item>
+    
+  </channel>
+</rss>

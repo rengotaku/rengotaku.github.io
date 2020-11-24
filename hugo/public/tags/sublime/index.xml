@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sublime on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/sublime/</link>
+    <description>Recent content in sublime on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 11 Mar 2020 18:45:23 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/sublime/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>rspec、rubocopの結果を色付きでsublimeで閲覧したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/11cd4e51-d748-4bc5-af69-6068e22b6865/</link>
+      <pubDate>Wed, 11 Mar 2020 18:45:23 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/11cd4e51-d748-4bc5-af69-6068e22b6865/</guid>
+      <description>目的 sublimeでrspec、rubocopの結果を色付けされた状態(ANSI color sequence) で閲覧したい。 一つのコンソールで行うと、量が膨大だと切れ</description>
+    </item>
+    
+    <item>
+      <title>作業捗るショートカット</title>
+      <link>https://www.vegetable.blog.v41.me/posts/c24445c1-f62b-4df7-961b-e77a656f3a60/</link>
+      <pubDate>Fri, 05 Oct 2018 12:48:57 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/c24445c1-f62b-4df7-961b-e77a656f3a60/</guid>
+      <description>カーソルを置いている１ワードを選択 windows mac Ctrl + d command + d Sublime Text で格好つけたい時のためのショートカット（windows,mac）</description>
+    </item>
+    
+    <item>
+      <title>全文検索で特定のフォルダを検索対象外にしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/4078d4dd-2f0a-4db9-adb3-f14c7889e0d0/</link>
+      <pubDate>Fri, 24 Aug 2018 11:21:31 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/4078d4dd-2f0a-4db9-adb3-f14c7889e0d0/</guid>
+      <description>-vendor/*,-test/*,-coverage/*,-log/*</description>
+    </item>
+    
+    <item>
+      <title>cpu使用率が劇的に上がる</title>
+      <link>https://www.vegetable.blog.v41.me/posts/de0dc96b-3ee2-4249-a3e7-f8e982a5a14d/</link>
+      <pubDate>Thu, 23 Aug 2018 11:14:04 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/de0dc96b-3ee2-4249-a3e7-f8e982a5a14d/</guid>
+      <description>対策 { &amp;quot;index_files&amp;quot;: false } SublimeText 3がアクティブのときにCPUをバカ喰いしてフリーズする問題の解決方法 - 人生dat落ち</description>
+    </item>
+    
+    <item>
+      <title>SUBLIME3をインストールしたとき</title>
+      <link>https://www.vegetable.blog.v41.me/posts/0969f5e0-0b71-403c-b147-3cd4eed39f01/</link>
+      <pubDate>Tue, 17 Apr 2018 10:28:37 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/0969f5e0-0b71-403c-b147-3cd4eed39f01/</guid>
+      <description>パッケージ command + shift + p Package Control Git Gutter TrailingSpaces SyncedSideBar ProjectManager For メモ auto-save auto-save - Packages - Package Control キーバインドをctrl+super+sにしている。ctrl+shift+sでは名前をつ</description>
+    </item>
+    
+  </channel>
+</rss>

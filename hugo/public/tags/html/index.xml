@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/html/</link>
+    <description>Recent content in html on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 30 Oct 2019 18:01:29 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>cookieの最大値を確認</title>
+      <link>https://www.vegetable.blog.v41.me/posts/98ee4003-d3eb-46df-a3a6-7e71f2c60e9a/</link>
+      <pubDate>Wed, 30 Oct 2019 18:01:29 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/98ee4003-d3eb-46df-a3a6-7e71f2c60e9a/</guid>
+      <description>Browser Cookie Limits</description>
+    </item>
+    
+    <item>
+      <title>pugを使用する際に参考にしたサイト</title>
+      <link>https://www.vegetable.blog.v41.me/posts/2431ed9e-ff55-409a-9588-df18432def81/</link>
+      <pubDate>Fri, 23 Aug 2019 19:09:12 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/2431ed9e-ff55-409a-9588-df18432def81/</guid>
+      <description>htmlからの変換 HTML to PUG - Free HTML to PUG Online Converter</description>
+    </item>
+    
+    <item>
+      <title>HTMLのテンプレート</title>
+      <link>https://www.vegetable.blog.v41.me/posts/bc60ef5c-e0e3-4bb3-bbeb-762e6d9f8e66/</link>
+      <pubDate>Tue, 12 Mar 2019 10:43:33 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/bc60ef5c-e0e3-4bb3-bbeb-762e6d9f8e66/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;ja&amp;#34;&amp;gt; &amp;lt;head prefix=&amp;#34;og: http://ogp.me/ns#&amp;#34;&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=980,user-scalable=yes,target-densitydpi=device-dpi&amp;#34;&amp;gt; &amp;lt;title&amp;gt;ページタイトル&amp;lt;/title&amp;gt; &amp;lt;script src=&amp;#34;https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;main&amp;gt; &amp;lt;article&amp;gt;本文記事</description>
+    </item>
+    
+    <item>
+      <title>buttonでsubmitさせない</title>
+      <link>https://www.vegetable.blog.v41.me/posts/a71c62b4-7143-409a-8acf-54c4b5903c8b/</link>
+      <pubDate>Mon, 05 Nov 2018 14:56:38 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/a71c62b4-7143-409a-8acf-54c4b5903c8b/</guid>
+      <description>type=&amp;quot;button&amp;quot; を付与する &amp;lt;button type=&amp;quot;button&amp;quot;&amp;gt;ID重複チェック&amp;lt;/button&amp;gt; buttonタグがsubm</description>
+    </item>
+    
+    <item>
+      <title>JS、CSSの更新を即時反映したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/14a7b0d8-e80e-4333-a6b6-464dd3e0b8b1/</link>
+      <pubDate>Wed, 26 Sep 2018 09:58:10 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/14a7b0d8-e80e-4333-a6b6-464dd3e0b8b1/</guid>
+      <description>&amp;lt;script src=&amp;quot;./jquery.js?v=&amp;lt;?php echo(microtime()); ?&amp;gt;&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; キャッシュバスティング(Cache Busting) 【ASP】キャッシュを有効にしつつ、cssやjsファイルの変更を確実に反映させる(Cache Busting)</description>
+    </item>
+    
+  </channel>
+</rss>

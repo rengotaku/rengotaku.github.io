@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mac on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/mac/</link>
+    <description>Recent content in mac on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Fri, 08 May 2020 09:44:57 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>macで昨日日付を取得したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/5ec56dc2-9091-4aa2-ae9e-f214aba36901/</link>
+      <pubDate>Fri, 08 May 2020 09:44:57 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/5ec56dc2-9091-4aa2-ae9e-f214aba36901/</guid>
+      <description>解決 date -v-1d +%F を使用する Get yesterday&amp;rsquo;s date in bash on Linux, DST-safe - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>GitlabでマージするMerge RequestのタイトルとURLを列挙する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/2e7b6641-1cdf-4300-9b33-526b977325ce/</link>
+      <pubDate>Fri, 17 Apr 2020 10:54:58 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/2e7b6641-1cdf-4300-9b33-526b977325ce/</guid>
+      <description>Usage Merge RequestのCommitsタブを押下し、コミット一覧を表示 Chromeの検証モードを表示し、Consoleタブで下記のScriptを</description>
+    </item>
+    
+    <item>
+      <title>golangでハローワールド</title>
+      <link>https://www.vegetable.blog.v41.me/posts/489083dc-7430-49b0-8f84-079472642e90/</link>
+      <pubDate>Mon, 10 Feb 2020 19:07:27 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/489083dc-7430-49b0-8f84-079472642e90/</guid>
+      <description>$ mkdir -p $HOME/go/src/github.com/user $ vi ~/.bash_profile export GOPATH=$HOME/go export GOROOT=/usr/local/opt/go/libexec export PATH=$PATH:$GOPATH/bin export PATH=$PATH:$GOROOT/bin $ brew install go $ HOME/go/src/github.com/user $ mkdir hello $ cd hello $ go mod init github.com/user/hello $ vi hello.go package main import &amp;quot;fmt&amp;quot; func main() { fmt.Println(&amp;quot;Hello, world.&amp;quot;) } $ go run hello.go macos - Install go with brew, and running the gotour - Stack Overflow How to Write Go Code - The Go</description>
+    </item>
+    
+    <item>
+      <title>macのタッチバーからsiriを消す</title>
+      <link>https://www.vegetable.blog.v41.me/posts/670ef93f-8448-41e8-97b3-611c1a385388/</link>
+      <pubDate>Tue, 28 Jan 2020 19:00:36 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/670ef93f-8448-41e8-97b3-611c1a385388/</guid>
+      <description>カスタマイズ画面を表示 システム環境設定 -&amp;gt; キーボード -&amp;gt; Touch Barをカスタマイズ siriをタップしてゴミ箱へ How to Remove Siri from Touch Bar on MacBook Pro</description>
+    </item>
+    
+    <item>
+      <title>iTerm2で画像を見る</title>
+      <link>https://www.vegetable.blog.v41.me/posts/f8720630-e429-41f8-9d7b-31c5eca4a2a3/</link>
+      <pubDate>Tue, 28 Jan 2020 10:25:22 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/f8720630-e429-41f8-9d7b-31c5eca4a2a3/</guid>
+      <description>imgcat のスクリプトを配置 $ vi /usr/local/bin/imgcat #&amp;lt;= スクリプトをコピペ $ chmod 755 /usr/local/bin/imgcat $ imgcat /path/to/image Images - Documentation - iTerm2 - macOS Terminal Replacement</description>
+    </item>
+    
+    <item>
+      <title>aws-cliを使用する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/c1304da4-1894-4498-850a-57c5ed46a145/</link>
+      <pubDate>Tue, 14 Jan 2020 15:49:34 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/c1304da4-1894-4498-850a-57c5ed46a145/</guid>
+      <description>インストール $ pip3 install awscli --upgrade --user $ echo &#39;export PATH=&amp;quot;~/Library/Python/3.7/bin:$PATH&amp;quot;&#39; &amp;gt;&amp;gt; ~/.bash_profile ※PATHに追加しているパスは、インストール時のログを確認してください。 AWS CLI をインストールする - Qiita Credential ファ</description>
+    </item>
+    
+    <item>
+      <title>finderで隠しファイルを表示する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/64446da5-f7fa-4ab6-85d8-91a8a95ef1c2/</link>
+      <pubDate>Tue, 14 Jan 2020 14:18:34 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/64446da5-f7fa-4ab6-85d8-91a8a95ef1c2/</guid>
+      <description>Command+Shift+.(Dot) How to show hidden files on Mac</description>
+    </item>
+    
+    <item>
+      <title>mysql2のgemのインストールが失敗する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/0a030ad1-7817-41e7-9a31-5b3c5623c121/</link>
+      <pubDate>Thu, 09 Jan 2020 14:43:22 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/0a030ad1-7817-41e7-9a31-5b3c5623c121/</guid>
+      <description>解決 $ export LDFLAGS=&amp;quot;-L/usr/local/opt/openssl/lib&amp;quot; $ export CPPFLAGS=&amp;quot;-I/usr/local/opt/openssl/include&amp;quot; $ bundle config --local build.mysql2 &amp;quot;--with-cppflags=-I/usr/local/opt/openssl/include&amp;quot; $ bundle config --local build.mysql2 &amp;quot;--with-ldflags=-L/usr/local/opt/openssl/lib&amp;quot; $ bundle install 【Rails】MySQL2がbundle installできない時の対応方法 - Qiita 事象 macでmy</description>
+    </item>
+    
+    <item>
+      <title>macにrbenvをインストール</title>
+      <link>https://www.vegetable.blog.v41.me/posts/234d437a-767d-4df2-9e49-5f4a2674bd40/</link>
+      <pubDate>Thu, 09 Jan 2020 10:09:25 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/234d437a-767d-4df2-9e49-5f4a2674bd40/</guid>
+      <description>rbenvインストール $ brew update $ brew install rbenv ruby-build $ echo &#39;eval &amp;quot;$(rbenv init -)&amp;quot;&#39; &amp;gt;&amp;gt; ~/.bash_profile $ source ~/.bash_profile $ rbenv --version rubyインストール $ rbenv install --list Available versions: ・ ・ 2.1.1 2.1.2 2.2.0-dev jruby-1.5.6 jruby-1.6.3 jruby-1.6.4 ・ ・ $ rbenv install 2.7.0 全環境のバージ</description>
+    </item>
+    
+    <item>
+      <title>スリープのショートカット</title>
+      <link>https://www.vegetable.blog.v41.me/posts/c3223d93-985b-4d39-b3cd-b55ca742a518/</link>
+      <pubDate>Mon, 06 Jan 2020 16:42:09 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/c3223d93-985b-4d39-b3cd-b55ca742a518/</guid>
+      <description>動作 キー すぐに画面をロック control + command + Q Mac のキーボードショートカット - Apple サポート</description>
+    </item>
+    
+    <item>
+      <title>bash_profileに日本語を入力すると文字化けする</title>
+      <link>https://www.vegetable.blog.v41.me/posts/4ddbc7db-3af8-47c5-8653-e2c8c3d0a8f4/</link>
+      <pubDate>Fri, 06 Dec 2019 13:03:54 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/4ddbc7db-3af8-47c5-8653-e2c8c3d0a8f4/</guid>
+      <description>解決 していない。 Macの全置換で sed: RE error: illegal byte sequence が出たら - Qiita bashでUTF-8に設定して日本語表示したり使ったり。Emacsでも。 – サイバーま</description>
+    </item>
+    
+    <item>
+      <title>macでエポックタイムのフォーマットの仕方</title>
+      <link>https://www.vegetable.blog.v41.me/posts/85447867-6cc2-4829-ac76-5ca8b36ffc0e/</link>
+      <pubDate>Wed, 16 Oct 2019 18:16:09 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/85447867-6cc2-4829-ac76-5ca8b36ffc0e/</guid>
+      <description>解決 1000 で割る。 $ date -r `expr 1553024527882 / 1000` 2019年 3月20日 水曜日 04時42分07秒 JST Bash convert epoch to date, showing wrong time - Stack Overflow 事象 macでepoctimeをdateでフォ</description>
+    </item>
+    
+    <item>
+      <title>macでwindowsみたいにカレンダーを表示したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/0dab86d1-6203-4b90-a19b-b3840e7d1030/</link>
+      <pubDate>Tue, 26 Feb 2019 16:03:09 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/0dab86d1-6203-4b90-a19b-b3840e7d1030/</guid>
+      <description>手順 ここに記載されているURLよりダウンロード バージョン２ もできる。 解凍する 展開されたフォルダを /Applications/ 配下に設置する ログイン時に起動したいないら</description>
+    </item>
+    
+    <item>
+      <title>rbenvのrubyが突如動かなくなった</title>
+      <link>https://www.vegetable.blog.v41.me/posts/dac18ae2-3c38-4fbd-a18d-29d134efde9f/</link>
+      <pubDate>Tue, 05 Feb 2019 16:53:04 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/dac18ae2-3c38-4fbd-a18d-29d134efde9f/</guid>
+      <description>事象 railsを動かそうとしたら下記のエラーが発生した。 Sorry, you can&#39;t use byebug without Readline. To solve this, you need to rebuild Ruby with Readline support. If using Ubuntu, try `sudo apt-get install libreadline-dev` and then reinstall your Ruby. 対応 $ RUBY_CONFIGURE_OPTS=--with-readline-dir=`brew --prefix readline` rbenv install 2.3.1 メモ</description>
+    </item>
+    
+    <item>
+      <title>packerをインストール</title>
+      <link>https://www.vegetable.blog.v41.me/posts/8644458c-18a9-47f8-a6fe-f47529ad4c4f/</link>
+      <pubDate>Thu, 22 Nov 2018 16:16:31 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/8644458c-18a9-47f8-a6fe-f47529ad4c4f/</guid>
+      <description>packerのインストール $ brew install packer pluginをインストール darwin_amd64_v0.4.0 をイントール $ mkdir -p ~/.packer.d/plugins $ curl -L https://github.com/wata727/packer-post-processor-amazon-ami-management/releases/download/v0.4.0/packer-post-processor-amazon-ami-management_darwin_amd64.zip &amp;gt; /tmp/packer-post-processor-amazon-ami-management_darwin_amd64.zip $ unzip -d ~/.packer.d/plugins/ /tmp/packer-post-processor-amazon-ami-management_darwin_amd64.zip</description>
+    </item>
+    
+    <item>
+      <title>date/GNUを使用したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/76a31d42-03bd-4e5c-b3a4-0b7668499209/</link>
+      <pubDate>Tue, 20 Nov 2018 11:20:47 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/76a31d42-03bd-4e5c-b3a4-0b7668499209/</guid>
+      <description>$ brew install coreutils 色々と同梱されている。 テキスト処理のための標準的なコマンド群の OS X への導入手順 - Qiita</description>
+    </item>
+    
+    <item>
+      <title>よく使うショートカットキー一覧</title>
+      <link>https://www.vegetable.blog.v41.me/posts/29a20baa-c6ce-4dee-b185-0941b4c32ea8/</link>
+      <pubDate>Wed, 31 Oct 2018 10:52:26 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/29a20baa-c6ce-4dee-b185-0941b4c32ea8/</guid>
+      <description>動作 キー 移動履歴を進む Command + ] 移動履歴を戻る Command + ] 未読一覧 Command + Shift + A スレッド一覧 Command + Shift + T 右サイドバーの開閉 Command + . 全メッセージを既読にする Shift +</description>
+    </item>
+    
+    <item>
+      <title>Finderのショートカット</title>
+      <link>https://www.vegetable.blog.v41.me/posts/d3c7e9f6-f420-46ec-88e8-0908871be19b/</link>
+      <pubDate>Mon, 01 Oct 2018 13:14:35 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/d3c7e9f6-f420-46ec-88e8-0908871be19b/</guid>
+      <description>動作 ショートカット ネットワークのフォルダにアタッチする(SMBなどに使用) Command + K</description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43;をmacで動かす</title>
+      <link>https://www.vegetable.blog.v41.me/posts/2aab4d5d-c80a-4363-a0fe-0f5b1495bc05/</link>
+      <pubDate>Thu, 13 Sep 2018 09:58:21 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/2aab4d5d-c80a-4363-a0fe-0f5b1495bc05/</guid>
+      <description>$ vi test.cpp ============= #include &amp;lt;iostream&amp;gt; using namespace std; int main(void){ int i; cout&amp;lt;&amp;lt;&amp;quot;値を入力：&amp;quot;; cin&amp;gt;&amp;gt;i; cout&amp;lt;&amp;lt;&amp;quot;入力した値：&amp;q</description>
+    </item>
+    
+    <item>
+      <title>cpu使用率を降順で表示</title>
+      <link>https://www.vegetable.blog.v41.me/posts/d59d0f42-37c7-4da3-b02b-2462fc517a28/</link>
+      <pubDate>Wed, 29 Aug 2018 14:03:33 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/d59d0f42-37c7-4da3-b02b-2462fc517a28/</guid>
+      <description>$ top -o cpu MacOSのtopコマンドでCPU使用順にソート | ex1-lab</description>
+    </item>
+    
+    <item>
+      <title>mysqlの起動</title>
+      <link>https://www.vegetable.blog.v41.me/posts/4af59f8a-ac2c-4c66-ad40-680c9be817c5/</link>
+      <pubDate>Wed, 15 Aug 2018 11:39:06 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/4af59f8a-ac2c-4c66-ad40-680c9be817c5/</guid>
+      <description>$ mysql.server start mac MySQL ターミナル 自動起動</description>
+    </item>
+    
+    <item>
+      <title>サイトのステータスコードを定期的に記録する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/af24431e-9837-408f-ad71-cd02fce42b42/</link>
+      <pubDate>Thu, 05 Jul 2018 11:04:51 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/af24431e-9837-408f-ad71-cd02fce42b42/</guid>
+      <description>watch -n30 &amp;quot;curl -LkI &#39;https://XXX&#39; -o /dev/null -w &#39;%{http_code}\n&#39; -s | xargs -L 1 -I &#39;{}&#39; date &#39;+[%Y/%m/%d %H:%M:%S] {}&#39; &amp;gt;&amp;gt; result.txt&amp;quot; -n30・・・インターバル(秒) https://XXX・・・参照先 result.txt・・・出力</description>
+    </item>
+    
+    <item>
+      <title>macでサンバにコマンドでマウントする</title>
+      <link>https://www.vegetable.blog.v41.me/posts/6968c0bf-26d2-4cdf-8ea1-7d9a6aa9ed30/</link>
+      <pubDate>Tue, 26 Jun 2018 17:01:03 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/6968c0bf-26d2-4cdf-8ea1-7d9a6aa9ed30/</guid>
+      <description>マウント状況を確認する $ df Filesystem 512-blocks Used Available Capacity iused XXXX XXXX XXXX //[user]:[password]@[ip]/path/to/share 30254512 10180120 20074392 34% 5090058 10037196 34% /Volumes/path/to/share # ◀︎この行があるか？ マウントを解除する $ umount /Volumes/path/to/share マウントする $ mount_smbfs //[user]:[password]@[ip]/path/to/share share Macでター</description>
+    </item>
+    
+    <item>
+      <title>rubyとrailsのバージョンアップ</title>
+      <link>https://www.vegetable.blog.v41.me/posts/0b8f0eb0-7c73-4a24-a623-a03e8efeda1d/</link>
+      <pubDate>Wed, 06 Jun 2018 10:30:06 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/0b8f0eb0-7c73-4a24-a623-a03e8efeda1d/</guid>
+      <description>現在のバージョン $ rbenv versions =&amp;gt; system * 2.3.1 (set by /path/to/.rbenv/version) 2.4.1 アップグレード $ brew upgrade rbenv ruby-build 特に ruby-build が更新されないと新しいバージョンが表示されない 使用できるバージョン rbenv install -l</description>
+    </item>
+    
+    <item>
+      <title>Macに入れたいツール</title>
+      <link>https://www.vegetable.blog.v41.me/posts/2a3de753-8c67-4cba-8dba-809c9550d48b/</link>
+      <pubDate>Wed, 18 Apr 2018 12:15:08 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/2a3de753-8c67-4cba-8dba-809c9550d48b/</guid>
+      <description>エディタ Visual Studio Code – コード エディター | Microsoft Azure 雑多用 CotEditor -Text Editor for macOS 以前は Download - Sublime Text ターミナル iTerm2 - macOS Terminal Replacement コピペ履歴 Clipy - Clipboard extension app for macOS ペイントツール フリー ペイント</description>
+    </item>
+    
+  </channel>
+</rss>

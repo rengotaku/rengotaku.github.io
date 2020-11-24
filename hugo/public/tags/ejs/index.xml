@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ejs on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/ejs/</link>
+    <description>Recent content in ejs on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Mon, 30 Jul 2018 09:13:25 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/ejs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTMLエスケープせずに変数を出力</title>
+      <link>https://www.vegetable.blog.v41.me/posts/1c5c81e3-a71a-48b1-8924-9fac3f2c60c2/</link>
+      <pubDate>Mon, 30 Jul 2018 09:13:25 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/1c5c81e3-a71a-48b1-8924-9fac3f2c60c2/</guid>
+      <description>&amp;lt;%- &amp;quot;&amp;lt;tags_here&amp;gt;&amp;quot; %&amp;gt; node.js - Print raw html strings on EJS - Stack Overflow</description>
+    </item>
+    
+  </channel>
+</rss>

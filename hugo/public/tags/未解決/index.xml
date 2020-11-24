@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>未解決 on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/%E6%9C%AA%E8%A7%A3%E6%B1%BA/</link>
+    <description>Recent content in 未解決 on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Fri, 06 Dec 2019 13:03:54 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/%E6%9C%AA%E8%A7%A3%E6%B1%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>bash_profileに日本語を入力すると文字化けする</title>
+      <link>https://www.vegetable.blog.v41.me/posts/4ddbc7db-3af8-47c5-8653-e2c8c3d0a8f4/</link>
+      <pubDate>Fri, 06 Dec 2019 13:03:54 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/4ddbc7db-3af8-47c5-8653-e2c8c3d0a8f4/</guid>
+      <description>解決 していない。 Macの全置換で sed: RE error: illegal byte sequence が出たら - Qiita bashでUTF-8に設定して日本語表示したり使ったり。Emacsでも。 – サイバーま</description>
+    </item>
+    
+    <item>
+      <title>composerでインストールされない？</title>
+      <link>https://www.vegetable.blog.v41.me/posts/e7f13673-f4f9-450b-8d51-f61e78dceff3/</link>
+      <pubDate>Fri, 29 Nov 2019 16:15:02 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/e7f13673-f4f9-450b-8d51-f61e78dceff3/</guid>
+      <description>未解決 imageが作成された後に、プロジェクトをコンテナにマウントさせinstall処理を行うようにした。 （プロジェクト内に vendor フォルダが作成</description>
+    </item>
+    
+    <item>
+      <title>basic認証のパスワードを変更したら認証エラーになる</title>
+      <link>https://www.vegetable.blog.v41.me/posts/70fbadf9-25a8-401d-ac06-9277499a36ff/</link>
+      <pubDate>Tue, 01 Oct 2019 11:48:44 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/70fbadf9-25a8-401d-ac06-9277499a36ff/</guid>
+      <description>解決 chromeのパスワード自動入力が、設定前のパスワードを保存していた。削除or変更すればよい。 chrome://settings/passwords にアクセスし、URLなどで検索を行う。 chrome</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s Encryptのrenew（自動延長）でportエラー</title>
+      <link>https://www.vegetable.blog.v41.me/posts/7c5f7801-561d-4421-9b19-e4ba02ca9ccb/</link>
+      <pubDate>Mon, 19 Aug 2019 13:20:21 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/7c5f7801-561d-4421-9b19-e4ba02ca9ccb/</guid>
+      <description>未解決 Problem binding to port 80: Could not bind to IPv4 or IPv6 - Help - Let&amp;rsquo;s Encrypt Community Support より、portが既に占有されているのが問題らしい。 nginxを止めて、実行すれば問題なく更新され</description>
+    </item>
+    
+    <item>
+      <title>verifyメソッドのテストが失敗する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/ce4e5dde-88a5-468e-9e57-d8490989ff23/</link>
+      <pubDate>Thu, 15 Aug 2019 13:45:29 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/ce4e5dde-88a5-468e-9e57-d8490989ff23/</guid>
+      <description>解決 Mockクラスではなく、define_singleton_methodを使用してmethodを生やす。 ただし、assertメソッドなどが</description>
+    </item>
+    
+    <item>
+      <title>rubocop_todo.ymlのルールが適用されない</title>
+      <link>https://www.vegetable.blog.v41.me/posts/efae8a3a-e6f1-4c30-ac6d-262d4cf9e026/</link>
+      <pubDate>Fri, 14 Jun 2019 16:19:28 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/efae8a3a-e6f1-4c30-ac6d-262d4cf9e026/</guid>
+      <description>解決 してない。 複数のルールをマージする機能がないと実現しないが、その機能は外されたらしい。 バージョン $ rubocop -v 0.64.0 事象 inherit_from: .rubocop_1.yml AllCops: Exclude: - b.rb AllCops: Exclude: - a.rb 上記の場</description>
+    </item>
+    
+    <item>
+      <title>ActionMailerで送信後に送信ログを記録したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/77b571b7-9eab-4c93-95cb-37e97eff8b68/</link>
+      <pubDate>Tue, 04 Jun 2019 12:14:10 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/77b571b7-9eab-4c93-95cb-37e97eff8b68/</guid>
+      <description>未解決 コールバックの仕組みはあるが、引数を増やす事ができず、拡張する仕組みが不明。 Registered observer on one mailer gets called with every email delivering, possible bug? · Issue #29671 · rails/rails は回答ないままクローズ</description>
+    </item>
+    
+    <item>
+      <title>dockerで動いているrailsでbetter_errorsのirbが動作しない</title>
+      <link>https://www.vegetable.blog.v41.me/posts/bc3ee1e4-fa92-4af9-bdd1-7dced7696686/</link>
+      <pubDate>Thu, 30 May 2019 19:18:43 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/bc3ee1e4-fa92-4af9-bdd1-7dced7696686/</guid>
+      <description>未解決 画面右側のirbでデバッグできる画面が表示されない。 binding_of_caller が関連しているようだが、原因が不明。 画面を出すようにする BetterErrors::Middleware.allow_ip! &amp;#34;0.0.0.0/0&amp;#34; better_errors not working in a Docker container · Issue #270</description>
+    </item>
+    
+    <item>
+      <title>FluentdでS3にログをアップする</title>
+      <link>https://www.vegetable.blog.v41.me/posts/129e37cb-70dd-4c73-b21e-18453d50b775/</link>
+      <pubDate>Wed, 25 Apr 2018 10:52:57 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/129e37cb-70dd-4c73-b21e-18453d50b775/</guid>
+      <description>Fluentdのインストール $ sudo curl -L https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh $ sudo td-agent-gem install fluent-plugin-config-expander fluent-plugin-tail-asis fluent-plugin-file-alternative fluent-plugin-forest $ sudo mkdir /var/log/td-agent/pos $ sudo mkdir /var/log/td-agent/buffer $ sudo chown -R td-agent. /var/log/td-agent conf設定 $ sudo vi /etc/td-agent/td-agent.conf -------------------------------------------------------------------------------- &amp;lt;source&amp;gt; type config_expander &amp;lt;config&amp;gt; type tail format none path /var/log/ec2-user/XXXX.log pos_file /var/log/td-agent/pos/XXXX.pos tag api_${hostname}/XXXX &amp;lt;/config&amp;gt; &amp;lt;/source&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>DOCKERをインストールしたらGITの操作ができない</title>
+      <link>https://www.vegetable.blog.v41.me/posts/5fe9cd57-10fe-44be-b2bc-1f1c65331c9a/</link>
+      <pubDate>Tue, 24 Apr 2018 10:17:35 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/5fe9cd57-10fe-44be-b2bc-1f1c65331c9a/</guid>
+      <description>明確な解決方法はわかっていない vagrantで192.168.XXX.XXXとipを指定している為発生？ 事象 dockerをインストールすると</description>
+    </item>
+    
+  </channel>
+</rss>

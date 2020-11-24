@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>google on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/google/</link>
+    <description>Recent content in google on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 28 May 2020 10:31:02 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>googleカレンダーのpush通知が設定できない</title>
+      <link>https://www.vegetable.blog.v41.me/posts/aae1ff50-f763-447a-8301-3f7c1a55ff5e/</link>
+      <pubDate>Fri, 12 Jul 2019 14:19:26 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/aae1ff50-f763-447a-8301-3f7c1a55ff5e/</guid>
+      <description>許可に calendar.google.com を追加 Googleカレンダーの通知のオン/オフ設定方法！10分前のポップアップを消すには？ | アプリやWebの疑問に答えるメディア</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rbenv on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/rbenv/</link>
+    <description>Recent content in rbenv on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 09 Jan 2020 10:09:25 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/rbenv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>macにrbenvをインストール</title>
+      <link>https://www.vegetable.blog.v41.me/posts/234d437a-767d-4df2-9e49-5f4a2674bd40/</link>
+      <pubDate>Thu, 09 Jan 2020 10:09:25 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/234d437a-767d-4df2-9e49-5f4a2674bd40/</guid>
+      <description>rbenvインストール $ brew update $ brew install rbenv ruby-build $ echo &#39;eval &amp;quot;$(rbenv init -)&amp;quot;&#39; &amp;gt;&amp;gt; ~/.bash_profile $ source ~/.bash_profile $ rbenv --version rubyインストール $ rbenv install --list Available versions: ・ ・ 2.1.1 2.1.2 2.2.0-dev jruby-1.5.6 jruby-1.6.3 jruby-1.6.4 ・ ・ $ rbenv install 2.7.0 全環境のバージ</description>
+    </item>
+    
+    <item>
+      <title>rootでrbenvを操作する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/5f34e336-31ab-4458-bfd1-6fdd01d1f2ee/</link>
+      <pubDate>Tue, 10 Jul 2018 16:16:05 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/5f34e336-31ab-4458-bfd1-6fdd01d1f2ee/</guid>
+      <description>RBENV_ROOTがミソ $ sudo RBENV_ROOT=/usr/local/rbenv /usr/local/rbenv/bin/rbenv install x.x.x $ sudo RBENV_ROOT=/usr/local/rbenv /usr/local/rbenv/bin/rbenv global x.x.x rbenvで入れたRubyを全ユーザが使えるようにする</description>
+    </item>
+    
+  </channel>
+</rss>

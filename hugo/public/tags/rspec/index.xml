@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rspec on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/rspec/</link>
+    <description>Recent content in rspec on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Fri, 26 Jun 2020 17:13:06 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/rspec/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>rspecのcontrollerとrequestのタイプ違い</title>
+      <link>https://www.vegetable.blog.v41.me/posts/3b804c9b-47db-4e45-aa32-163eb8d9e5bb/</link>
+      <pubDate>Fri, 26 Jun 2020 17:13:06 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/3b804c9b-47db-4e45-aa32-163eb8d9e5bb/</guid>
+      <description>解決 requestは複数のcontrollerを使用した場合に使用する。 controllerは単体の動作の確認をする為に確認する。 request spec - Request specs</description>
+    </item>
+    
+    <item>
+      <title>factorybotで関連テーブルの作成を簡易に行なっているのに引数を渡したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/cb6fde25-ff82-4b5b-b2ed-444d26e0da9f/</link>
+      <pubDate>Mon, 22 Jun 2020 12:15:33 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/cb6fde25-ff82-4b5b-b2ed-444d26e0da9f/</guid>
+      <description>解決 FactoryBot.define do factory :user_action_error do user user_action_history { association(:user_action_history, user: user) } end end 参考 Creating associations initialized via &amp;lsquo;build&amp;rsquo; no longer works in FactoryBot 5.0 · Issue #1255 · thoughtbot/factory_bot 事象 FactoryBot.define do factory :user_action_error do user user_action_history end end のように、has_many、has_one、bel</description>
+    </item>
+    
+    <item>
+      <title>rspecでよく見た書き方</title>
+      <link>https://www.vegetable.blog.v41.me/posts/6542ae14-4854-4050-bf96-54b6cc4100d5/</link>
+      <pubDate>Fri, 06 Mar 2020 19:54:41 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/6542ae14-4854-4050-bf96-54b6cc4100d5/</guid>
+      <description>エラーが発生しないテスト not_to raise_error RSpec.describe &amp;#34;#to_s&amp;#34; do it &amp;#34;does not raise&amp;#34; do expect { Object.new.to_s }.not_to raise_error end end raise_error matcher - Built in matchers - RSpec Expectations - RSpec - Relish モックでエラーを発生させる and_raise RSpec.describe &amp;#34;Making it raise an error&amp;#34; do it &amp;#34;raises the provided exception&amp;#34; do dbl</description>
+    </item>
+    
+    <item>
+      <title>Active Jobが失敗した場合のリトライについてテストする</title>
+      <link>https://www.vegetable.blog.v41.me/posts/990bd1dc-2f44-46fa-9fa6-91b5914e7669/</link>
+      <pubDate>Fri, 06 Mar 2020 19:49:43 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/990bd1dc-2f44-46fa-9fa6-91b5914e7669/</guid>
+      <description>解決 described_class.perform_later rescue nil RSpec.describe MyJob, type: :job do include ActiveJob::TestHelper context &amp;#39;when `MyError` is raised&amp;#39; do before do allow_any_instance_of(described_class).to receive(:perform).and_raise(MyError.new) end it &amp;#39;makes 4 attempts&amp;#39; do assert_performed_jobs 4 do described_class.perform_later rescue nil end end it &amp;#39;does something in the `retry_on` block&amp;#39; do expect(Something).to receive(:something) perform_enqueued_jobs do described_class.perform_later rescue nil end end end end perform_nowでは再実</description>
+    </item>
+    
+    <item>
+      <title>インスタンス変数のメソッドをstubにしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/2a2be20a-44d0-4ff4-ac0c-0630ee4e6763/</link>
+      <pubDate>Fri, 06 Mar 2020 14:17:52 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/2a2be20a-44d0-4ff4-ac0c-0630ee4e6763/</guid>
+      <description>let(:hoge_instance) { instance_double(Hoge) } before do allow(Hoge).to receive(:new).and_return(hoge_instance) allow(hoge_instance).to receive(:say).and_return(&amp;#34;night!&amp;#34;) end</description>
+    </item>
+    
+    <item>
+      <title>rspecでエラーテストが失敗する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/5b43c92f-d394-416c-9877-0ecc11e77366/</link>
+      <pubDate>Mon, 17 Feb 2020 13:41:57 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/5b43c92f-d394-416c-9877-0ecc11e77366/</guid>
+      <description>解決 export { subject } に変更 context &amp;#34;test&amp;#34; do subject { raise RuntimeError } it { expect { subject }.to raise_error(RuntimeError) } end 事象 Failure/Error: raise RuntimeError が発生する。 context &amp;#34;test&amp;#34; do subject { raise RuntimeError } it { is_expected.to raise_error(RuntimeError) } end RSpec の is_expected で raise_error を検知したかった - Secret Garden(Instrumental) RSpec/ImplicitSubject エラ</description>
+    </item>
+    
+    <item>
+      <title>Omniauthのsetupをテストしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/130dacd5-87b4-4877-a521-5623d7b9be6b/</link>
+      <pubDate>Fri, 14 Feb 2020 14:01:16 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/130dacd5-87b4-4877-a521-5623d7b9be6b/</guid>
+      <description>解決 def setup omniauth_strategy.options[:consumer_key] = Global..twitter.consumer_key omniauth_strategy.options[:consumer_secret] = Global..twitter.consumer_key_secret render json: { message: &amp;#34;Omniauth setup phase.&amp;#34; }, status: :not_found end RSpec.describe SessionController, type: :controller do subject { get :setup, params: { provider: :twitter } } let(:strategy_options) { Struct.new(:options).new({consumer_key: nil, consumer_secret: nil}) } let(:consumer_key) { &amp;#34;twitter-mock-consumer_key&amp;#34; } let(:consumer_secret) { &amp;#34;twitter-mock-consumer_key_secret&amp;#34; } before do allow(Global.twitter).to receive(:consumer_key).and_return(consumer_key) allow(Global.twitter).to receive(:consumer_key_secret).and_return(consumer_secret) allow(controller.request.env).to receive(:[]).and_call_original allow(controller.request.env).to receive(:[]).with(&amp;#34;omniauth.strategy&amp;#34;).and_return(strategy_options) end context &amp;#34;Success&amp;#34; do it &amp;#34</description>
+    </item>
+    
+    <item>
+      <title>Middlewareをテストしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/a876ea6d-99a6-43fe-b419-71896f26c406/</link>
+      <pubDate>Mon, 10 Feb 2020 17:41:00 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/a876ea6d-99a6-43fe-b419-71896f26c406/</guid>
+      <description>対象モジュール railsのログにタグづけしたい | ベジタブルプログラム テスト RSpec.describe TaggedLogger do subject { TaggedLogger::Middleware.new(app) } let(:app) { -&amp;gt;(env) { [200, env, &amp;#34;app&amp;#34;] } } let(:request) { Rack::MockRequest.new(subject) } let(:action_dispatch_request) { ActionDispatch::TestRequest.create } before do allow(ActionDispatch::Request).to receive(:new).and_return(action_dispatch_request) allow(action_dispatch_request).to receive(:session).and_return(Struct.new(:user_id, :loaded?).new(*session_methods)) allow(Rails.logger).to receive(:tagged).and_yield</description>
+    </item>
+    
+    <item>
+      <title>RSpec/MultipleExpectationsを回避</title>
+      <link>https://www.vegetable.blog.v41.me/posts/74af4a87-af15-46ef-bd8d-2b59f87d850e/</link>
+      <pubDate>Thu, 06 Feb 2020 11:53:06 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/74af4a87-af15-46ef-bd8d-2b59f87d850e/</guid>
+      <description>解決 aggregate_failures を使用する it &amp;#34;正常動作する&amp;#34; do subject aggregate_failures &amp;#34;最後まで通過&amp;#34; do expect(job_instance).to have_received(:hoge1) expect(job_instance).to have_received(:hoge2).at_least(1).times end end 実用的な新機能が盛りだくさん！RSpe</description>
+    </item>
+    
+    <item>
+      <title>修正したファイルのみチェック</title>
+      <link>https://www.vegetable.blog.v41.me/posts/a13365d5-d033-404d-ae83-b8f7fa0dd4c8/</link>
+      <pubDate>Tue, 28 Jan 2020 16:15:55 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/a13365d5-d033-404d-ae83-b8f7fa0dd4c8/</guid>
+      <description>For rubocop $ echo $(git diff origin/master `git branch | grep &amp;#39;*&amp;#39; | cut -d&amp;#39; &amp;#39; -f2` | grep &amp;#39;diff --git&amp;#39; | sed -E &amp;#39;s#diff --git a\/(.+) b\/.+#\1#&amp;#39;) | { read FILES; bundle exec rubocop $FILES; } For rspec $ echo $(git diff origin/master `git branch | grep &amp;#39;*&amp;#39; | cut -d&amp;#39; &amp;#39; -f2` | grep &amp;#39;diff --git&amp;#39; | sed -E &amp;#39;s#diff --git a\/(.+) b\/.+#\1#&amp;#39; | grep spec) | {</description>
+    </item>
+    
+    <item>
+      <title>リクエストのremote_ipを変更してテストしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/957c64fd-ee2e-4ce6-bb60-093b3a665189/</link>
+      <pubDate>Mon, 27 Jan 2020 17:29:26 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/957c64fd-ee2e-4ce6-bb60-093b3a665189/</guid>
+      <description>解決 get &amp;#34;/path&amp;#34;, params: { }, headers: { &amp;#34;REMOTE_ADDR&amp;#34; =&amp;gt; &amp;#34;1.2.3.4&amp;#34; } Change value of request.remote_ip in Ruby on Rails - Stack Overflow 事象 allow_any_instance_of(ActionDispatch::Request).to receive(:remote_ip).and_return(&amp;#34;1.2.3.4&amp;#34;) でも実現可能だが、 rubocopで RSpec/AnyInstance が発生してしまう。(instance_doubl</description>
+    </item>
+    
+    <item>
+      <title>コントローラーのテストで例外が発生してテストが失敗する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/e848d251-d646-4d69-b394-c113fb84410c/</link>
+      <pubDate>Mon, 27 Jan 2020 17:16:30 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/e848d251-d646-4d69-b394-c113fb84410c/</guid>
+      <description>解決 context に、 show_exceptions: true オプションを設定する。 context &amp;#34;failed&amp;#34;, show_exceptions: true do ... end Rails アプリケーションの不安定なテストを撲滅したい 〜system spec のデバッグ方法とテストを不安</description>
+    </item>
+    
+    <item>
+      <title>rspecでテストをまとめる</title>
+      <link>https://www.vegetable.blog.v41.me/posts/c572bdd1-576f-4caf-a2b0-fb2dcda032be/</link>
+      <pubDate>Thu, 16 Jan 2020 16:14:30 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/c572bdd1-576f-4caf-a2b0-fb2dcda032be/</guid>
+      <description>テストメソッド def self.runnable! return if !(Rails.env.staging? || Rails.env.production?) || ENV[&amp;#34;IMPORTANT_CODE&amp;#34;].present? raise Error end アフター describe &amp;#34;#runnable!&amp;#34; do subject { described_class.runnable! } let(:set_code) { ENV[&amp;#34;IMPORTANT_CODE&amp;#34;] = &amp;#34;hoge&amp;#34; } let(:unset_code) { ENV[&amp;#34;IMPORTANT_CODE&amp;#34;] = nil } context &amp;#34;development&amp;#34; do before { allow(Rails.env).to receive(:development?).and_return(true) } it_behaves_like &amp;#34;check important code for development&amp;#34; end context &amp;#34;staging&amp;#34; do before { allow(Rails.env).to receive(:staging?).and_return(true) } it_behaves_like &amp;#34;check important code for</description>
+    </item>
+    
+    <item>
+      <title>rspecでスタブを使用</title>
+      <link>https://www.vegetable.blog.v41.me/posts/bd537f3d-6cad-4d94-9efd-d1200b7bd294/</link>
+      <pubDate>Tue, 14 Jan 2020 11:45:29 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/bd537f3d-6cad-4d94-9efd-d1200b7bd294/</guid>
+      <description>staticメソッド describe &amp;#34;comment&amp;#34; do context &amp;#34;サービスがHOGEの場合&amp;#34; do before do allow(Global.application).to receive(:service).and_return(&amp;#34;HOGE&amp;#34;) #&amp;lt;= キモ ... end it &amp;#39;hoge&amp;#39; do ... end end end [RSpec] allow、receive、an</description>
+    </item>
+    
+    <item>
+      <title>What is it_behaves_like?</title>
+      <link>https://www.vegetable.blog.v41.me/posts/bacf2ae4-571a-4f97-b217-8771bc382df9/</link>
+      <pubDate>Fri, 10 Jan 2020 16:36:25 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/bacf2ae4-571a-4f97-b217-8771bc382df9/</guid>
+      <description>e.g. RSpec.describe Hoge, type: :model do describe &amp;#34;model validation&amp;#34; do subject { new_comment.validate! } let(:new_comment) { build :comment } describe &amp;#34;comment&amp;#34; do context &amp;#34;コメントが空白&amp;#34; do before { new_comment.comment = &amp;#34;&amp;#34; } it_behaves_like &amp;#34;raise record invalid error&amp;#34; end ... What? it_behaves_like will call the test-case as template. Grep your project with the word shared_examples and</description>
+    </item>
+    
+    <item>
+      <title>rspecを導入する上でハマった箇所</title>
+      <link>https://www.vegetable.blog.v41.me/posts/47e621ef-c154-4be1-9ecb-fdc5795c37ac/</link>
+      <pubDate>Fri, 12 Apr 2019 14:35:34 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/47e621ef-c154-4be1-9ecb-fdc5795c37ac/</guid>
+      <description>controllerの書き方 RSpec.describe EventsController do describe &#39;GET #index&#39; do context &#39;nothing&#39; do it &amp;quot;render witout error&amp;quot; do get :index end end end end Rails RSpecの基本 ~Controller編~ - Qiita 比較の仕方 expect(hoge).to be 1 使える</description>
+    </item>
+    
+  </channel>
+</rss>

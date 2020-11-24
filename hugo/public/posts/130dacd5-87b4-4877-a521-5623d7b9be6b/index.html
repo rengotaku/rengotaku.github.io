@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name=" robots" content="noindex, nofollow">
+<title>Omniauthのsetupをテストしたい | Vegetable Programing</title>
+
+<meta name="keywords" content="rails, ruby, oauth, rspec, ベジプロ, プログ, プログラム" />
+<meta name="description" content="解決 def setup omniauth_strategy.options[:consumer_key] = Global..twitter.consumer_key omniauth_strategy.options[:consumer_secret] = Global..twitter.consumer_key_secret render json: { message: &#34;Omniauth setup phase.&#34; }, status: :not_found end RSpec.describe SessionController, type: :controller do subject { get :setup, params: { provider: :twitter } } let(:strategy_options) { Struct.new(:options).new({consumer_key: nil, consumer_secret: nil}) } let(:consumer_key) { &#34;twitter-mock-consumer_key&#34; } let(:consumer_secret) { &#34;twitter-mock-consumer_key_secret&#34; } before do allow(Global.twitter).to receive(:consumer_key).and_return(consumer_key) allow(Global.twitter).to receive(:consumer_key_secret).and_return(consumer_secret) allow(controller.request.env).to receive(:[]).and_call_original allow(controller.request.env).to receive(:[]).with(&#34;omniauth.strategy&#34;).and_return(strategy_options) end context &#34;Success&#34; do it &#34">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/posts/130dacd5-87b4-4877-a521-5623d7b9be6b/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      Omniauthのsetupをテストしたい
+    </h1>
+    <div class="post-meta">February 14, 2020
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="解決">解決<a hidden class="anchor" aria-hidden="true" href="#解決">#</a></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb:session_controller.rb" data-lang="rb:session_controller.rb">  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">setup</span>
+    omniauth_strategy<span style="color:#f92672">.</span>options<span style="color:#f92672">[</span><span style="color:#e6db74">:consumer_key</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">Global</span><span style="color:#f92672">..</span>twitter<span style="color:#f92672">.</span>consumer_key
+    omniauth_strategy<span style="color:#f92672">.</span>options<span style="color:#f92672">[</span><span style="color:#e6db74">:consumer_secret</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">Global</span><span style="color:#f92672">..</span>twitter<span style="color:#f92672">.</span>consumer_key_secret
+
+    render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">message</span>: <span style="color:#e6db74">&#34;Omniauth setup phase.&#34;</span> }, <span style="color:#e6db74">status</span>: <span style="color:#e6db74">:not_found</span>
+  <span style="color:#66d9ef">end</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#66d9ef">RSpec</span><span style="color:#f92672">.</span>describe <span style="color:#66d9ef">SessionController</span>, <span style="color:#e6db74">type</span>: <span style="color:#e6db74">:controller</span> <span style="color:#66d9ef">do</span>
+  subject { get <span style="color:#e6db74">:setup</span>, <span style="color:#e6db74">params</span>: { <span style="color:#e6db74">provider</span>: <span style="color:#e6db74">:twitter</span> } }
+
+  let(<span style="color:#e6db74">:strategy_options</span>) { <span style="color:#66d9ef">Struct</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">:options</span>)<span style="color:#f92672">.</span>new({<span style="color:#e6db74">consumer_key</span>: <span style="color:#66d9ef">nil</span>, <span style="color:#e6db74">consumer_secret</span>: <span style="color:#66d9ef">nil</span>}) }
+  let(<span style="color:#e6db74">:consumer_key</span>) { <span style="color:#e6db74">&#34;twitter-mock-consumer_key&#34;</span> }
+  let(<span style="color:#e6db74">:consumer_secret</span>) { <span style="color:#e6db74">&#34;twitter-mock-consumer_key_secret&#34;</span> }
+
+  before <span style="color:#66d9ef">do</span>
+    allow(<span style="color:#66d9ef">Global</span><span style="color:#f92672">.</span>twitter)<span style="color:#f92672">.</span>to receive(<span style="color:#e6db74">:consumer_key</span>)<span style="color:#f92672">.</span>and_return(consumer_key)
+    allow(<span style="color:#66d9ef">Global</span><span style="color:#f92672">.</span>twitter)<span style="color:#f92672">.</span>to receive(<span style="color:#e6db74">:consumer_key_secret</span>)<span style="color:#f92672">.</span>and_return(consumer_secret)
+
+    allow(controller<span style="color:#f92672">.</span>request<span style="color:#f92672">.</span>env)<span style="color:#f92672">.</span>to receive(<span style="color:#e6db74">:[]</span>)<span style="color:#f92672">.</span>and_call_original
+    allow(controller<span style="color:#f92672">.</span>request<span style="color:#f92672">.</span>env)<span style="color:#f92672">.</span>to receive(<span style="color:#e6db74">:[]</span>)<span style="color:#f92672">.</span>with(<span style="color:#e6db74">&#34;omniauth.strategy&#34;</span>)<span style="color:#f92672">.</span>and_return(strategy_options)
+  <span style="color:#66d9ef">end</span>
+
+  context <span style="color:#e6db74">&#34;Success&#34;</span> <span style="color:#66d9ef">do</span>
+    it <span style="color:#e6db74">&#34;カスタムキーのセットアップを行う&#34;</span> <span style="color:#66d9ef">do</span>
+      subject
+      aggregate_failures <span style="color:#66d9ef">do</span>
+        expect(strategy_options<span style="color:#f92672">.</span>options<span style="color:#f92672">[</span><span style="color:#e6db74">:consumer_key</span><span style="color:#f92672">]</span>)<span style="color:#f92672">.</span>to eq consumer_key
+        expect(strategy_options<span style="color:#f92672">.</span>options<span style="color:#f92672">[</span><span style="color:#e6db74">:consumer_secret</span><span style="color:#f92672">]</span>)<span style="color:#f92672">.</span>to eq consumer_secret
+        expect(response)<span style="color:#f92672">.</span>to have_http_status(<span style="color:#e6db74">:not_found</span>)
+      <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><h1 id="注意点">注意点<a hidden class="anchor" aria-hidden="true" href="#注意点">#</a></h1>
+<h2 id="paramsの設定">paramsの設定<a hidden class="anchor" aria-hidden="true" href="#paramsの設定">#</a></h2>
+<p><code>subject { get :setup, params: { provider: :twitter } }</code></p>
+<blockquote>
+<p><a href="https://become-a-programmer.hatenablog.com/entry/2018/07/24/200750">【Rspec】ネストされているコントローラーのテストについて。「No route matches」と言わせない書き方 - 文系人間がエンジニアを目指すブログ</a></p>
+</blockquote>
+<h2 id="元の値を引用">元の値を引用<a hidden class="anchor" aria-hidden="true" href="#元の値を引用">#</a></h2>
+<p><code>allow(controller.request.env).to receive(:[]).and_call_original</code></p>
+<blockquote>
+<p><a href="https://qiita.com/YumaInaura/items/e22552edc476167b9213#example-1">Rspec | Make a mock against hash - Qiita</a></p>
+</blockquote>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://www.vegetable.blog.v41.me/tags/rails">rails</a></li>
+      <li><a href="https://www.vegetable.blog.v41.me/tags/ruby">ruby</a></li>
+      <li><a href="https://www.vegetable.blog.v41.me/tags/oauth">oauth</a></li>
+      <li><a href="https://www.vegetable.blog.v41.me/tags/rspec">rspec</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://www.vegetable.blog.v41.me/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

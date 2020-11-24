@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>minitest on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/minitest/</link>
+    <description>Recent content in minitest on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 29 Aug 2019 15:57:36 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/minitest/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>minitestでprivateメソッドをテスト</title>
+      <link>https://www.vegetable.blog.v41.me/posts/1a7b69f1-218d-4982-ba5f-a3fee308cdfe/</link>
+      <pubDate>Thu, 29 Aug 2019 15:57:36 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/1a7b69f1-218d-4982-ba5f-a3fee308cdfe/</guid>
+      <description>解決 __send__を使用する Class Person def initialize(name) @name = name end private def tom(generation) @name = &amp;#39;tom&amp;#39; + generation.to_s end end person = Person.new(&amp;#39;tarou&amp;#39;) person.__send__(:tom, 2) assert { re_inquiry.instance_eval(&amp;#39;@name&amp;#39;).size == &amp;#39;tom2&amp;#39; } #&amp;lt;= インスタンス変数を参照 instance_eval (Object) - Rubyリファレンス send</description>
+    </item>
+    
+    <item>
+      <title>verifyメソッドのテストが失敗する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/ce4e5dde-88a5-468e-9e57-d8490989ff23/</link>
+      <pubDate>Thu, 15 Aug 2019 13:45:29 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/ce4e5dde-88a5-468e-9e57-d8490989ff23/</guid>
+      <description>解決 Mockクラスではなく、define_singleton_methodを使用してmethodを生やす。 ただし、assertメソッドなどが</description>
+    </item>
+    
+    <item>
+      <title>stub_any_instanceのproc内でNoMethodError: undefined method `assert&#39; </title>
+      <link>https://www.vegetable.blog.v41.me/posts/a9fbcb15-a9bb-4ff0-95e5-207000c6e190/</link>
+      <pubDate>Thu, 04 Jul 2019 11:59:35 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/a9fbcb15-a9bb-4ff0-95e5-207000c6e190/</guid>
+      <description>解決 対象インスタンスをprocで厳密に指定 test_instance = self #&amp;lt;= 重要 post_stub = proc do |address| test_instance.assert { address == &amp;#39;address&amp;#39; } end 注意 共通化しようと、インスタンス変数に格納してしまうと、正しく</description>
+    </item>
+    
+    <item>
+      <title>rake taskのテスト</title>
+      <link>https://www.vegetable.blog.v41.me/posts/576d9cd1-5c40-44df-95d1-0d320a889c95/</link>
+      <pubDate>Wed, 26 Jun 2019 14:30:51 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/576d9cd1-5c40-44df-95d1-0d320a889c95/</guid>
+      <description>module Tasks class SampleTest &amp;lt; ActiveSupport::TestCase describe &amp;#39;rake task sample&amp;#39; do before do @rake = Rake::Application.new Rake.application = @rake Rails.application.load_tasks Rake::Task.define_task(:environment) end describe &amp;#39;sample:exec&amp;#39; do it &amp;#39;done without errores.&amp;#39; do assert { @rake[&amp;#39;sample:exec&amp;#39;].execute } end end end end end executeなので一度しか実行されない事象は起きないはずだが</description>
+    </item>
+    
+    <item>
+      <title>mockの使い方</title>
+      <link>https://www.vegetable.blog.v41.me/posts/333de691-10b6-4078-94a2-75b176921114/</link>
+      <pubDate>Wed, 26 Jun 2019 11:05:49 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/333de691-10b6-4078-94a2-75b176921114/</guid>
+      <description>基本 mock = Minitest::Mock.new.expect(:method_name, &amp;#39;return_value&amp;#39;, [&amp;#39;param1&amp;#39;, &amp;#39;param2&amp;#39;]) mock.method_name(&amp;#39;param1&amp;#39;, &amp;#39;param2&amp;#39;) # &amp;lt;= return value is &amp;#39;return_value&amp;#39; mock.verify # &amp;lt;= true 第一のメソッド名、第二の戻り値までは必須 応用 入れ子 mock2 = Minitest::Mock.new.expect(:second, &amp;#39;second value&amp;#39;) mock1 = Minitest::Mock.new.expect(:first, mock2) mock1.first.second #&amp;lt;= &amp;#39;second value&amp;#39; stubと組み合わせる class</description>
+    </item>
+    
+    <item>
+      <title>Minitestで&#34;No more expects available for :something_method&#34;が発生</title>
+      <link>https://www.vegetable.blog.v41.me/posts/b3b9ba25-b8e1-4f67-b6f2-884a85b8dfc7/</link>
+      <pubDate>Fri, 14 Jun 2019 12:30:21 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/b3b9ba25-b8e1-4f67-b6f2-884a85b8dfc7/</guid>
+      <description>誤り def test_method Rails.logger.info(&amp;#39;one&amp;#39;) Rails.logger.info(&amp;#39;two&amp;#39;) #&amp;lt;= raise end logger_mock = Minitest::Mock.new info_mock = logger_mock.expect(:info, true, [&amp;#39;one&amp;#39;]) Rails.logger = logger_mock test_method &amp;lt;= No more expects available for :info 正解 logger_mock = Minitest::Mock.new info_mock = logger_mock.expect(:info, true, [&amp;#39;one&amp;#39;]).expect(:info, true, [&amp;#39;two&amp;#39;]) Rails.logger = logger_mock ruby - Minitest: No more expects available - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>minitestで意図的にraise</title>
+      <link>https://www.vegetable.blog.v41.me/posts/889f9fef-5b01-475d-bc0c-104e2086a684/</link>
+      <pubDate>Fri, 14 Jun 2019 12:24:04 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/889f9fef-5b01-475d-bc0c-104e2086a684/</guid>
+      <description>api_mock = MiniTest::Mock.new api_mock.expect(:get, retval_get) do |args_update| raise StandardError(&amp;#39;Mock#getで例外発生&amp;#39;) end Rails minitest Mockで例外発生パターンのテスト - Qiita</description>
+    </item>
+    
+    <item>
+      <title>minitestでエラーメッセージを検証</title>
+      <link>https://www.vegetable.blog.v41.me/posts/ca10b1b5-76b1-4c89-868e-f0ee7f32be9c/</link>
+      <pubDate>Fri, 14 Jun 2019 12:21:53 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/ca10b1b5-76b1-4c89-868e-f0ee7f32be9c/</guid>
+      <description>class FooTest &amp;lt; Minitest::Test def test_boo! # RuntimeErrorが発生することを検証 e = assert_raises RuntimeError do Foo.boo! # &amp;lt;= boo!random-messages-continue... end # エラーメッセージを検証 assert { e.message.start_with?(&amp;quot;boo!&amp;quot;) } end end Minitestで例外クラ</description>
+    </item>
+    
+    <item>
+      <title>minitestでconstをstub化</title>
+      <link>https://www.vegetable.blog.v41.me/posts/89c7127b-1494-4e7c-b613-d7156ef09fc2/</link>
+      <pubDate>Fri, 14 Jun 2019 12:13:25 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/89c7127b-1494-4e7c-b613-d7156ef09fc2/</guid>
+      <description>module Foo BAR = :original end Foo.stub_const(:BAR, :stubbed) do Foo::BAR end # =&amp;gt; :stubbed Foo::BAR # =&amp;gt; :original adammck/minitest-stub-const: Stub constants for the duration of a block in MiniTest</description>
+    </item>
+    
+    <item>
+      <title>raiseを検証したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/935cf5a3-4605-4c50-96a3-c9f4064f624a/</link>
+      <pubDate>Fri, 17 May 2019 19:01:07 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/935cf5a3-4605-4c50-96a3-c9f4064f624a/</guid>
+      <description>assert_raises RuntimeError do # something to do raise error end module MiniTest::Assertions - Documentation for Ruby 2.1.0 https://docs.ruby-lang.org/en/2.1.0/MiniTest/Assertions.html</description>
+    </item>
+    
+    <item>
+      <title>minitestでmockの引数を厳密にチェックしたくない</title>
+      <link>https://www.vegetable.blog.v41.me/posts/ccbc4a39-2105-4cfa-860a-f6a4c608cbf2/</link>
+      <pubDate>Tue, 14 May 2019 19:34:58 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/ccbc4a39-2105-4cfa-860a-f6a4c608cbf2/</guid>
+      <description>@mock.expect(:do_something_else, true) do |a1, a2| # nothings end minitest/mock.rb at master · seattlerb/minitest</description>
+    </item>
+    
+    <item>
+      <title>stubにしたいけど、block内の処理も実行したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/f5afa8d4-05a2-413f-8021-674ed4f9d523/</link>
+      <pubDate>Fri, 08 Feb 2019 12:32:30 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/f5afa8d4-05a2-413f-8021-674ed4f9d523/</guid>
+      <description>やりたい事 Parallel内でメール配信処理を行いたい Parallel.mapをstub化するが、block内のメール送信処理は実行したい サ</description>
+    </item>
+    
+    <item>
+      <title>stubを使いたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/8dd8839e-e8b9-4fe3-991f-2de32696b47a/</link>
+      <pubDate>Mon, 04 Feb 2019 17:32:21 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/8dd8839e-e8b9-4fe3-991f-2de32696b47a/</guid>
+      <description>具体的な例 require &amp;#39;parallel&amp;#39; namespace :mail do desc &amp;#39;send mail&amp;#39; task send: :environment do |task| some_models = SomeModel.where(~).all send_counts = Parallel.map(some_models, in_process: 4) do |some_model| begin Mail.send(some_model) 1 rescue =&amp;gt; e 0 end end SaveModel.write_log(send_counts) end end end require &amp;#39;test_helper&amp;#39; require &amp;#39;rake&amp;#39; class MailTest &amp;lt; ActiveSupport::TestCase # ParallelによりTransacti</description>
+    </item>
+    
+    <item>
+      <title>test中に投入したデータを消えないようにしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/05fbf34d-d6d3-4399-a072-f8434cb38105/</link>
+      <pubDate>Wed, 30 Jan 2019 12:19:52 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/05fbf34d-d6d3-4399-a072-f8434cb38105/</guid>
+      <description>rails5 class FooTest &amp;lt; ActiveSupport::TestCase self.use_transactional_tests = false end 指定のテスト以降もデータが残る為、以降のテストに影響がでる。対象のテスト終了時にデータを削除するのがベター 以前 class FooTest &amp;lt; ActiveSupport::TestCase self.use_transactional_fixtures =</description>
+    </item>
+    
+    <item>
+      <title>minitestでApplicationControllerをテストしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/af47cda3-b3a4-46e9-9bae-7776f692421a/</link>
+      <pubDate>Fri, 18 Jan 2019 16:41:50 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/af47cda3-b3a4-46e9-9bae-7776f692421a/</guid>
+      <description>テスト require &amp;#39;test_helper&amp;#39; # Add at runtime an action to ApplicationController ApplicationController.class_eval do def development1 Rails.env = &amp;#39;development&amp;#39; response_boolean(development?) end def development2 Rails.env = &amp;#39;production&amp;#39; response_boolean(development?) end private def response_boolean(equation) render :text =&amp;gt; equation ? &amp;#34;true&amp;#34; : &amp;#34;false&amp;#34; end end # If disable_clear_and_finalize is set to true, Rails will not clear other routes when calling again the draw method. Look at the source code at: http://apidock.com/rails/v4.0.2/ActionDispatch/Routing/RouteSet/draw Rails.application.routes.disable_clear_and_finalize =</description>
+    </item>
+    
+    <item>
+      <title>コントローラーのrequestをスタブにしてテストしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/7b892c39-d8f1-49ac-b556-c02970e0a10a/</link>
+      <pubDate>Thu, 20 Dec 2018 14:41:33 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/7b892c39-d8f1-49ac-b556-c02970e0a10a/</guid>
+      <description>class SomeController &amp;lt; ApiController private def get_host(request) schema_and_host = &amp;#34;#{request.scheme}://#{request.host}&amp;#34; request.port.blank? ? schema_and_host : &amp;#34;#{schema_and_host}:#{request.port}&amp;#34; end end describe &amp;#34;test.&amp;#34; do def setup @controller = SomeController.new @request = Object.new @request.define_singleton_method(:scheme) { &amp;#39;http&amp;#39; } @request.define_singleton_method(:host) { &amp;#39;localhost&amp;#39; } @request.define_singleton_method(:port) { nil } end test &amp;#34;get url&amp;#34; do assert { @controller.send(:get_host, @request) == &amp;#39;http://localhost&amp;#39; } end end ruby - Add method to an instanced object - Stack Overflow [ruby-on-rails] Rspe</description>
+    </item>
+    
+    <item>
+      <title>apiのテストケースのサンプル</title>
+      <link>https://www.vegetable.blog.v41.me/posts/7a573d40-4330-42cd-a58d-bf96947f7bc5/</link>
+      <pubDate>Wed, 12 Dec 2018 18:30:04 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/7a573d40-4330-42cd-a58d-bf96947f7bc5/</guid>
+      <description>require &amp;#39;test_helper&amp;#39; module Api class SampleControllerTest &amp;lt; ActionDispatch::IntegrationTest describe &amp;#34;something function test.&amp;#34; do describe &amp;#34;OK case&amp;#34; do test &amp;#34;exist&amp;#34; do get &amp;#39;/api/v1/sample_contract_mails/1/example&amp;#39;, params: { page: 2 } assert_response :success body = JSON.parse(response.body) assert { body.size == 1 } end end describe &amp;#34;NG case&amp;#34; do test &amp;#34;dont exist&amp;#34; do get &amp;#39;/api/v1/sample_contract_mails/2/example&amp;#39; assert_response :missing end end end end end</description>
+    </item>
+    
+    <item>
+      <title>モデルのテストケースのサンプル</title>
+      <link>https://www.vegetable.blog.v41.me/posts/72789551-4a7b-4a54-a6f3-49e1965faf28/</link>
+      <pubDate>Wed, 12 Dec 2018 18:26:14 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/72789551-4a7b-4a54-a6f3-49e1965faf28/</guid>
+      <description>require &amp;#39;test_helper&amp;#39; class SampleModelTest &amp;lt; ActiveSupport::TestCase describe &amp;#39;something function test.&amp;#39; do test &amp;#39;get something.&amp;#39; do assert { SampleModel.find(1).present? } end test &amp;#39;dont get something.&amp;#39; do assert { SampleModel.find(2).blank? } end end describe &amp;#39;something2 function test.&amp;#39; do before do puts &amp;#34;be executed in something2 only.&amp;#34; end after do puts &amp;#34;be executed in something2 only.&amp;#34; end test &amp;#39;get something.&amp;#39; do assert { SampleModel.find(1).present? } end end end minitest-power_assert のgem</description>
+    </item>
+    
+    <item>
+      <title>fixtureでメールのsourceをDBに登録したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/02db3f8e-903e-4814-a7ac-35e0bb0929b2/</link>
+      <pubDate>Wed, 12 Dec 2018 16:51:33 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/02db3f8e-903e-4814-a7ac-35e0bb0929b2/</guid>
+      <description>概要 メールをファイルとして設置し、fixtureに使用するyaml内にRubyの処理を埋め込み、yamlに書き出す。 必要ファイル yaml &amp;lt;% def mail(file_name) File.open(file_name){ |f|</description>
+    </item>
+    
+    <item>
+      <title>minitestを実行してもfixtureが実行されずデータが空</title>
+      <link>https://www.vegetable.blog.v41.me/posts/29f18e5f-fadb-43da-b63f-267791e4d3c0/</link>
+      <pubDate>Mon, 10 Dec 2018 19:02:14 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/29f18e5f-fadb-43da-b63f-267791e4d3c0/</guid>
+      <description>fixtures :all を入れる必要がある。 require File.expand_path(&amp;#39;../../config/environment&amp;#39;, __FILE__) require &amp;#39;rails/test_help&amp;#39; module ActiveSupport class TestCase include FactoryBot::Syntax::Methods include ActiveSupport::Testing::TimeHelpers fixtures :all end end Minitest Tutorial: Getting Started with Minitest | Codeship | via @codeship https://blog.codeship.com/getting-started-with-minitest/</description>
+    </item>
+    
+    <item>
+      <title>Validatorをテスト</title>
+      <link>https://www.vegetable.blog.v41.me/posts/f7766124-b235-4796-a7af-02b44fb666ad/</link>
+      <pubDate>Thu, 25 Oct 2018 16:44:10 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/f7766124-b235-4796-a7af-02b44fb666ad/</guid>
+      <description>require &amp;#39;test_helper&amp;#39; class TelephoneValidatable include ActiveModel::Model attr_accessor :telephone validates :telephone, telephone: true end class TelephoneValidatorTest &amp;lt; ActiveSupport::TestCase def setup @validator = TelephoneValidatable end valid_telephone_addresses = [&amp;#39;123456789&amp;#39;] invalid_telephone_addresses = [&amp;#39;A123456789Z&amp;#39;] describe &amp;#34;OK case&amp;#34; do test &amp;#39;normal telphone&amp;#39; do validator = @validator.new valid_telephone_addresses.each do |telephone| validator.telephone = telephone assert { validator.valid? } end end end describe &amp;#34;NG case&amp;#34; do test &amp;#39;unnormal telephone&amp;#39; do validator = @validator.new invalid_telephone_addresses.each do |telephone| validator.telephone = telephone</description>
+    </item>
+    
+    <item>
+      <title>よく使う比較(アサーション)</title>
+      <link>https://www.vegetable.blog.v41.me/posts/6e0c4b23-119a-4a5b-9f57-61a8964931e5/</link>
+      <pubDate>Fri, 05 Oct 2018 17:56:32 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/6e0c4b23-119a-4a5b-9f57-61a8964931e5/</guid>
+      <description>単純比較 assert_equal &amp;quot;test&amp;quot;, &amp;quot;test&amp;quot; 真偽値 assert { @amount == 100 } を使用する minitestのオススメ設定調べてみた(アサーション編)</description>
+    </item>
+    
+    <item>
+      <title>(Railsデフォルトの)テストを実行</title>
+      <link>https://www.vegetable.blog.v41.me/posts/26bcc032-8848-4dc9-b223-2c903b0b9975/</link>
+      <pubDate>Thu, 04 Oct 2018 15:14:29 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/26bcc032-8848-4dc9-b223-2c903b0b9975/</guid>
+      <description>$ bundle exec rails test $ bundle exec rails test path/to/test_file.rb Rails テスティングガイド | Rails ガイド テスト(test) - - Railsドキュメント</description>
+    </item>
+    
+    <item>
+      <title>定数を変更してテスト</title>
+      <link>https://www.vegetable.blog.v41.me/posts/d719f508-6a6b-4b3a-9726-f3e50a37606d/</link>
+      <pubDate>Mon, 09 Jul 2018 17:21:21 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/d719f508-6a6b-4b3a-9726-f3e50a37606d/</guid>
+      <description>class TargetClass CONSTANT_VARIABLE = %w(1) end TargetClassTest @@origin = TargetClass::CONSTANT_VARIABLE setup do TargetClass.const_set(:CONSTANT_VARIABLE, @@origin) end describe :test do it :one do TargetClass.const_set(:CONSTANT_VARIABLE, w(1, 2, 3)) assert_equal TargetClass::CONSTANT_VARIABLE, %w(1 2 3) end end end 定数を変更すると、別ファイルのテストの際も変更されたままになるので、元に戻</description>
+    </item>
+    
+  </channel>
+</rss>

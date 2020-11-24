@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mocha on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/mocha/</link>
+    <description>Recent content in mocha on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Fri, 19 Oct 2018 14:50:44 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/mocha/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>タイムアウトの時間を延長</title>
+      <link>https://www.vegetable.blog.v41.me/posts/09979da3-342e-45bd-b061-1339863fad3e/</link>
+      <pubDate>Fri, 19 Oct 2018 14:50:44 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/09979da3-342e-45bd-b061-1339863fad3e/</guid>
+      <description>describe(&amp;#39;something slow&amp;#39;, function() { this.slow(10000); it(&amp;#39;should take long enough for me to go make a sandwich&amp;#39;, function() { // ... }); }); セットする時間は、ミリセコンド(ms) Mocha - the fun, simple, flexible JavaScript test framework</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sre on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/sre/</link>
+    <description>Recent content in sre on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Fri, 26 Oct 2018 14:09:33 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/sre/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ポストモーテムのテンプレート</title>
+      <link>https://www.vegetable.blog.v41.me/posts/54a42711-7339-4772-94bb-e299b967c5c5/</link>
+      <pubDate>Fri, 26 Oct 2018 14:09:33 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/54a42711-7339-4772-94bb-e299b967c5c5/</guid>
+      <description>発生事象の概要 事象が発生してから解決に到るまでを完結に記載する。 根本原因 ハインリッヒの法則を元に、１件の重大な原因と、それに纏わる軽微な原因</description>
+    </item>
+    
+  </channel>
+</rss>

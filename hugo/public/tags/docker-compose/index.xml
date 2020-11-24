@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker-compose on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/docker-compose/</link>
+    <description>Recent content in docker-compose on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 20 May 2020 23:20:47 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/docker-compose/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>golangをdockerでbuildする際に参考にしたサイト</title>
+      <link>https://www.vegetable.blog.v41.me/posts/62a912a2-35fd-45d9-8fea-8c34a2675445/</link>
+      <pubDate>Wed, 20 May 2020 23:20:47 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/62a912a2-35fd-45d9-8fea-8c34a2675445/</guid>
+      <description>Go build LDFlags Alpine Linux packages Create the smallest and secured golang docker image based on scratch golang/Dockerfile at d57a23e1c68ef0a393ef9c9267bddf0086959e3e · docker-library/golang</description>
+    </item>
+    
+    <item>
+      <title>td-agentをdockerで動かす</title>
+      <link>https://www.vegetable.blog.v41.me/posts/2b3ece27-3f34-4f13-9edf-3881a7821751/</link>
+      <pubDate>Mon, 10 Feb 2020 11:27:58 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/2b3ece27-3f34-4f13-9edf-3881a7821751/</guid>
+      <description>構成 td-agent/ ├── docker-compose.yml ├── Dockerfile ├── test.log ├── conf │ ├── app.conf │ └── td-agent.conf └── install-redhat-td-agent2.5.sh 設定 docker FROM drecom/centos-ruby:2.6.5 ADD install-redhat-td-agent2.5.sh /tmp/ RUN sh /tmp/install-redhat-td-agent2.5.sh RUN td-agent-gem install \ fluent-plugin-multiprocess \ fluent-plugin-forest \ fluent-plugin-rewrite-tag-filter RUN /etc/init.d/td-agent start CMD [&amp;quot;td-agent&amp;quot;] version: &amp;ldquo;3&amp;rdquo; services: minio: image: minio/minio:RELEASE.2020-01-25T02-50-51Z volumes: - minio_volume:/data ports: - &amp;ldquo;9090:9000&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>Dockerfileでスマートなコマンド設定</title>
+      <link>https://www.vegetable.blog.v41.me/posts/0306c4bd-acdf-43da-841d-24ea1f5227ef/</link>
+      <pubDate>Fri, 07 Feb 2020 13:55:51 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/0306c4bd-acdf-43da-841d-24ea1f5227ef/</guid>
+      <description>minioの公式Dockerfileでは Dockerfile CMD [&amp;quot;minio&amp;quot;] docker-compose.yml command: server /data 結果 minio server /data として実行される。 minio/minio Dockerfile - Docker Hub ということはrailsだと Dockerfile CMD [&amp;quot;bundle&amp;quot;, &amp;quot;exec&amp;quot;, &amp;quot;rails&amp;quot;, &amp;quot;s&amp;quot;] docker-compose.yml command: -p 3001 結</description>
+    </item>
+    
+    <item>
+      <title>docker-composeでサイドカー方式を取りたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/f90584af-b2a0-4162-a73f-46ae993cab30/</link>
+      <pubDate>Thu, 06 Feb 2020 17:17:50 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/f90584af-b2a0-4162-a73f-46ae993cab30/</guid>
+      <description>結論 ボリュームを共有して擬似的に行う。 kubanetesみたいに、一つのホストに複数プロセスを共存させるやり方はできなさそう。 version: &amp;#39;3&amp;#39; services: tomcat: image: tomcat:alpine container_name:</description>
+    </item>
+    
+    <item>
+      <title>Knowledge about docker for windows</title>
+      <link>https://www.vegetable.blog.v41.me/posts/3543a3d7-fc8e-4755-b855-d39fd5cf3010/</link>
+      <pubDate>Thu, 26 Dec 2019 22:16:05 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/3543a3d7-fc8e-4755-b855-d39fd5cf3010/</guid>
+      <description>Add user for development RUN groupadd -g 1000 developer &amp;amp;&amp;amp; \ useradd -g developer -G sudo -m -s /bin/bash developer &amp;amp;&amp;amp; \ echo &#39;developer:hogehoge&#39; | chpasswd RUN echo &#39;Defaults visiblepw&#39; &amp;gt;&amp;gt; /etc/sudoers RUN echo &#39;developer ALL=(ALL) NOPASSWD:ALL&#39; &amp;gt;&amp;gt; /etc/sudoers Dockerコンテナ内にsudoユーザを追加する - Qiita Docker - Docker run で</description>
+    </item>
+    
+    <item>
+      <title>composerでインストールされない？</title>
+      <link>https://www.vegetable.blog.v41.me/posts/e7f13673-f4f9-450b-8d51-f61e78dceff3/</link>
+      <pubDate>Fri, 29 Nov 2019 16:15:02 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/e7f13673-f4f9-450b-8d51-f61e78dceff3/</guid>
+      <description>未解決 imageが作成された後に、プロジェクトをコンテナにマウントさせinstall処理を行うようにした。 （プロジェクト内に vendor フォルダが作成</description>
+    </item>
+    
+    <item>
+      <title>TTYを使用せずにexecを実行</title>
+      <link>https://www.vegetable.blog.v41.me/posts/4b7054b1-cd68-4d4f-9eaa-563de14c556d/</link>
+      <pubDate>Tue, 12 Nov 2019 17:51:47 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/4b7054b1-cd68-4d4f-9eaa-563de14c556d/</guid>
+      <description>解決 -T オプションを付与する ... docker-compose exec -T rails ... The input device is not a TTY · Issue #5696 · docker/compose 事象 $ find ./test -name *_test.rb | egrep &#39;form|model&#39; | xargs -I _test_ docker-compose exec rails rails test _test_ を実行したところ the input device is not a TTY が発生し</description>
+    </item>
+    
+    <item>
+      <title>docker-compose logsをtailで早く閲覧したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/e892c4e7-9462-4fe3-a644-66faef4b809e/</link>
+      <pubDate>Mon, 30 Sep 2019 18:16:32 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/e892c4e7-9462-4fe3-a644-66faef4b809e/</guid>
+      <description>解決 -f --tail=500 をオプションに付与する 例 $ docker-compose logs -f --tail=500 container-name docker-compose logs | Docker Documentation</description>
+    </item>
+    
+    <item>
+      <title>docker-composeでmysqlの起動を待機したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/07c5e4a3-d964-4917-9972-1520705f3de5/</link>
+      <pubDate>Tue, 27 Aug 2019 15:09:06 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/07c5e4a3-d964-4917-9972-1520705f3de5/</guid>
+      <description>解決 dockerize を使用する dockerize -wait tcp://mysql-local:3306 -timeout 120s dockerize を使って他のコンテナ内サービス起動を待つ - Qiita</description>
+    </item>
+    
+    <item>
+      <title>docker-compose.ymlのcommandに記述ミスがあるとエラーになる</title>
+      <link>https://www.vegetable.blog.v41.me/posts/fd876cdf-6ca0-48c3-b5f0-a4f9572340d4/</link>
+      <pubDate>Mon, 19 Aug 2019 10:57:21 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/fd876cdf-6ca0-48c3-b5f0-a4f9572340d4/</guid>
+      <description>解決 $ を $$ と記述しエスケープする Compose file version 3 reference | Docker Documentation export DOCKER_HOST=`/sbin/ip route|awk &#39;/default/ { print $$3 }&#39;` export DOCKER_HOST=`/sbin/ip route|awk &#39;/default/ { print $3 }&#39;` 事象 command: &amp;gt; /bin/sh -c &amp;#34;rm -f /var/tmp/pids/server.pid &amp;amp;&amp;amp; bundle install &amp;amp;&amp;amp; export DOCKER_HOST=`/sbin/ip route|awk &amp;#39;/default/ { print $3 }&amp;#39;` &amp;amp;&amp;amp; bundle exec rails s&amp;#34; を実行す</description>
+    </item>
+    
+    <item>
+      <title>railsからmysqlにアクセスできない</title>
+      <link>https://www.vegetable.blog.v41.me/posts/9bfb2b48-5b6a-4dc8-8082-361faca014f4/</link>
+      <pubDate>Thu, 15 Aug 2019 11:53:50 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/9bfb2b48-5b6a-4dc8-8082-361faca014f4/</guid>
+      <description>解決 /sbin/ip route|awk &#39;/default/ { print $3 }&#39; を実行し、取得したIPを database.ymlの host に記載する。 $ docker-compose exec [container name of rails] sh # /sbin/ip route|awk &#39;/default/ { print $3 }&#39; 192.168.112.1 How to get the IP address of the docker host from inside</description>
+    </item>
+    
+    <item>
+      <title>fluentdをdockerで動かす際のチップ集</title>
+      <link>https://www.vegetable.blog.v41.me/posts/d15ea14f-fed7-4ef3-aab3-8a0e554eae2f/</link>
+      <pubDate>Wed, 05 Jun 2019 18:52:25 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/d15ea14f-fed7-4ef3-aab3-8a0e554eae2f/</guid>
+      <description>構成 . ├── README.md ├── docker-compose.yml ├── fluentd │ ├── Dockerfile │ └── conf │ └── fluentd.conf 設定 docker FROM fluent/fluentd:v0.14.25 ADD conf/fluentd.conf /fluentd/etc/ docker-compose version: &amp;#39;2&amp;#39; services: fluentd: build: fluentd/ ports: - &amp;#34;24224:24224&amp;#34; volumes: - ./fluentd/conf:/fluentd/etc environment: FLUENTD_CONF: fluentd.conf fluentdのconf &amp;lt;source&amp;gt; @type forward &amp;lt;/source&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>dockerで動くrailsでデバックを行いたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/b6b89728-605f-40b8-9d57-2bb1cc14b932/</link>
+      <pubDate>Thu, 30 May 2019 11:10:57 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/b6b89728-605f-40b8-9d57-2bb1cc14b932/</guid>
+      <description>設定 docker-compose.yml services: rails: &amp;amp;app_base tty: true stdin_open: true 操作 アタッチ docker attach [container_name] $ docker-compose run --rm --service-ports [service name] でいけるかと思ったが、再度コンテナを立ち上げる挙動になり期待しない動きをする 便利コマンド</description>
+    </item>
+    
+    <item>
+      <title>docker-composeでvolumeを削除する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/529728e8-bd92-4366-85f0-ff3d9a0e8ba0/</link>
+      <pubDate>Fri, 10 May 2019 10:59:48 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/529728e8-bd92-4366-85f0-ff3d9a0e8ba0/</guid>
+      <description>$ docker-compose down -v Docker Composeでボリューム作成 - Qiita</description>
+    </item>
+    
+    <item>
+      <title>railsプロジェクトの高速化</title>
+      <link>https://www.vegetable.blog.v41.me/posts/90bd049a-ee5d-41e2-b71b-75fdd80f913b/</link>
+      <pubDate>Tue, 23 Apr 2019 10:11:11 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/90bd049a-ee5d-41e2-b71b-75fdd80f913b/</guid>
+      <description>設定ファイル version: &amp;#39;2&amp;#39; services: rails: build: front.door.ac/ command: &amp;gt; /bin/sh -c &amp;#34;rm -f /var/tmp/pids/server.pid &amp;amp;&amp;amp; bundle exec rails s&amp;#34; env_file: .env volumes: - .:/var - bundle:/usr/local/bundle:cached # exclude volumes - /var/vendor - /var/tmp - /var/log - /var/.git ports: - 3000:3000 stdin_open: true tty: true マウントの確認 $ docker inspect contailner_name . . . &amp;quot;Mounts&amp;quot;: [ { &amp;quot;Type&amp;quot;: &amp;quot;volume&amp;quot;, &amp;quot;Name&amp;quot;: &amp;quot;doordevelopmentmiddlewares_bundle&amp;quot;,</description>
+    </item>
+    
+    <item>
+      <title>dockerをインストールしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/6c66ea41-2cb6-4a4e-af25-fc380f41d43a/</link>
+      <pubDate>Mon, 15 Apr 2019 12:14:39 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/6c66ea41-2cb6-4a4e-af25-fc380f41d43a/</guid>
+      <description>dockerをインストール $ sudo yum install -y yum-utils $ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo $ sudo yum makecache fast $ sudo yum install docker-ce dockerユーザーの管理 $ sudo usermod -aG docker $USER Dockerインストールメモ - Qiita d</description>
+    </item>
+    
+    <item>
+      <title>docker内から別のdockerにtcp通信したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/6ff9d493-2315-4f2e-aaf4-b2dedda17263/</link>
+      <pubDate>Mon, 12 Nov 2018 11:44:05 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/6ff9d493-2315-4f2e-aaf4-b2dedda17263/</guid>
+      <description>ymlに記載 version: &amp;#39;2&amp;#39; services: web: build: ./web depends_on: - image_api ports: - 3010:3000 api: build: ./api ports: - 3020:3000 curlを叩く curl api:3000/path/to/api apiはDocker内で3000ポートでListenしている docker-compose, depend</description>
+    </item>
+    
+    <item>
+      <title>docker-compose buildをキャッシュを使わず行う</title>
+      <link>https://www.vegetable.blog.v41.me/posts/33b3af49-63c4-4bf1-84ef-9325e829189d/</link>
+      <pubDate>Tue, 06 Nov 2018 11:43:08 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/33b3af49-63c4-4bf1-84ef-9325e829189d/</guid>
+      <description>docker-compose build --no-cache docker-composeでbuildする時にcacheを使わない - Qiita</description>
+    </item>
+    
+    <item>
+      <title>環境変数を使用して設定したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/0101a50c-faab-4f7d-bbba-8e328fc640c8/</link>
+      <pubDate>Mon, 15 Oct 2018 14:49:40 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/0101a50c-faab-4f7d-bbba-8e328fc640c8/</guid>
+      <description>PORT=3000 version: &amp;#39;2&amp;#39; services: app: build: . env_file: .env ports: - $PORT:$PORT env_fileは宣言してもしなくてもよい？（自由な名前が設定できない） docker-compose.ymlの中で環</description>
+    </item>
+    
+    <item>
+      <title>slim3をdockerで動かす</title>
+      <link>https://www.vegetable.blog.v41.me/posts/a5db633f-bee8-4632-8062-68a079750f53/</link>
+      <pubDate>Mon, 03 Sep 2018 14:42:27 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/a5db633f-bee8-4632-8062-68a079750f53/</guid>
+      <description>appフォルダを作成して、その中にSlim関連のファイルを詰め込むのが良いかも diarmuidie/docker-compose-php-slim: Sample Slim Skeleton app running with Docker Compose</description>
+    </item>
+    
+    <item>
+      <title>gcpのキャッシュ用のnginxを(docker上に)作成するポイント</title>
+      <link>https://www.vegetable.blog.v41.me/posts/58b5162f-b8e8-4555-8a0c-e4218c8a2c6f/</link>
+      <pubDate>Wed, 22 Aug 2018 11:18:49 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/58b5162f-b8e8-4555-8a0c-e4218c8a2c6f/</guid>
+      <description>構成 APP &amp;lt;-&amp;gt; NGINX(これ) &amp;lt;-&amp;gt; GCP GCPにアクセスする際にNGINXを通してキャッシュを使用するのが目的。 Dockerfileを作成 Docker</description>
+    </item>
+    
+    <item>
+      <title>docker-composeでsocketに障害が発生して起動できない</title>
+      <link>https://www.vegetable.blog.v41.me/posts/aaac1fbd-f665-44da-9a93-ac8f1691a704/</link>
+      <pubDate>Tue, 19 Jun 2018 21:07:44 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/aaac1fbd-f665-44da-9a93-ac8f1691a704/</guid>
+      <description>dockerを起動するとCouldn&#39;t connect to Docker daemon at http+docker://localunixsocket - is it runningなるエラーがでて、dockerを再起動、パーミッションの再設定等を行</description>
+    </item>
+    
+  </channel>
+</rss>

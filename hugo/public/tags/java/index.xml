@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/java/</link>
+    <description>Recent content in java on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 22 Apr 2020 16:56:54 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>pom.xmlに記述するpowermockの依存関係</title>
+      <link>https://www.vegetable.blog.v41.me/posts/f5614b24-2ef7-4665-88b7-49b4447f19f4/</link>
+      <pubDate>Thu, 27 Jun 2019 11:37:47 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/f5614b24-2ef7-4665-88b7-49b4447f19f4/</guid>
+      <description>&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.powermock&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;powermock-api-mockito&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.6.3&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.powermock&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;powermock-module-junit4&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.6.3&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt;</description>
+    </item>
+    
+  </channel>
+</rss>

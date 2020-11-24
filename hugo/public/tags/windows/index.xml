@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/windows/</link>
+    <description>Recent content in windows on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Tue, 16 Jun 2020 19:53:37 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使いやすそうなWindows用のターミナル</title>
+      <link>https://www.vegetable.blog.v41.me/posts/35603bfe-0372-45d7-8a4d-ac72a08a2cfe/</link>
+      <pubDate>Tue, 16 Jun 2020 19:53:37 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/35603bfe-0372-45d7-8a4d-ac72a08a2cfe/</guid>
+      <description>MobaXterm Xserver with SSH, telnet, RDP, VNC and X11 - Animated demo</description>
+    </item>
+    
+    <item>
+      <title>Knowledge about docker for windows</title>
+      <link>https://www.vegetable.blog.v41.me/posts/3543a3d7-fc8e-4755-b855-d39fd5cf3010/</link>
+      <pubDate>Thu, 26 Dec 2019 22:16:05 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/3543a3d7-fc8e-4755-b855-d39fd5cf3010/</guid>
+      <description>Add user for development RUN groupadd -g 1000 developer &amp;amp;&amp;amp; \ useradd -g developer -G sudo -m -s /bin/bash developer &amp;amp;&amp;amp; \ echo &#39;developer:hogehoge&#39; | chpasswd RUN echo &#39;Defaults visiblepw&#39; &amp;gt;&amp;gt; /etc/sudoers RUN echo &#39;developer ALL=(ALL) NOPASSWD:ALL&#39; &amp;gt;&amp;gt; /etc/sudoers Dockerコンテナ内にsudoユーザを追加する - Qiita Docker - Docker run で</description>
+    </item>
+    
+    <item>
+      <title>エクスプローラーを起動したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/22fd25eb-b12b-45ac-9631-ceb820036b0f/</link>
+      <pubDate>Thu, 07 Mar 2019 07:54:25 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/22fd25eb-b12b-45ac-9631-ceb820036b0f/</guid>
+      <description>タスクマネージャー -&amp;gt; ファイル -&amp;gt; 新しいタスクの実行 で explorer.exe を入力する。 Windows10 アイコンが消えた場合などにはエクスプローラーを再起動してみる | パソコンの問</description>
+    </item>
+    
+  </channel>
+</rss>

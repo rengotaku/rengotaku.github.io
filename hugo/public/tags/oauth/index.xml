@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>oauth on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/oauth/</link>
+    <description>Recent content in oauth on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Fri, 14 Feb 2020 14:01:16 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/oauth/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Omniauthのsetupをテストしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/130dacd5-87b4-4877-a521-5623d7b9be6b/</link>
+      <pubDate>Fri, 14 Feb 2020 14:01:16 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/130dacd5-87b4-4877-a521-5623d7b9be6b/</guid>
+      <description>解決 def setup omniauth_strategy.options[:consumer_key] = Global..twitter.consumer_key omniauth_strategy.options[:consumer_secret] = Global..twitter.consumer_key_secret render json: { message: &amp;#34;Omniauth setup phase.&amp;#34; }, status: :not_found end RSpec.describe SessionController, type: :controller do subject { get :setup, params: { provider: :twitter } } let(:strategy_options) { Struct.new(:options).new({consumer_key: nil, consumer_secret: nil}) } let(:consumer_key) { &amp;#34;twitter-mock-consumer_key&amp;#34; } let(:consumer_secret) { &amp;#34;twitter-mock-consumer_key_secret&amp;#34; } before do allow(Global.twitter).to receive(:consumer_key).and_return(consumer_key) allow(Global.twitter).to receive(:consumer_key_secret).and_return(consumer_secret) allow(controller.request.env).to receive(:[]).and_call_original allow(controller.request.env).to receive(:[]).with(&amp;#34;omniauth.strategy&amp;#34;).and_return(strategy_options) end context &amp;#34;Success&amp;#34; do it &amp;#34</description>
+    </item>
+    
+    <item>
+      <title>omniauthのTwitterプロバイダーのauthキーをコントローラーで設定</title>
+      <link>https://www.vegetable.blog.v41.me/posts/4fce0411-7c96-42a2-8d3e-2861e57754e1/</link>
+      <pubDate>Wed, 12 Feb 2020 15:14:26 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/4fce0411-7c96-42a2-8d3e-2861e57754e1/</guid>
+      <description>解決 遷移するパスが正しくなかった。(/api/auth/:provider/setup の様にscopeをネストしていた) デフォルトで遷移する</description>
+    </item>
+    
+    <item>
+      <title>omniauthのTwitterプロバイダーのoptionsを動的に変更する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/457eeb3b-3e8a-411b-bca0-38561b0ec80f/</link>
+      <pubDate>Wed, 12 Feb 2020 11:33:04 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/457eeb3b-3e8a-411b-bca0-38561b0ec80f/</guid>
+      <description>SETUP_PROC = lambda do |env| request = Rack::Request.new(env) user = User.find_by_subdomain(request.subdomain) env[&amp;#39;omniauth.strategy&amp;#39;].options[:client_id] = user.consumer_key # if using omniauth-oauth2 env[&amp;#39;omniauth.strategy&amp;#39;].options[:client_secret] = user.consumer_secret # if using omniauth-oauth2 env[&amp;#39;omniauth.strategy&amp;#39;].options[:consumer_key] = user.consumer_key # if using omniauth-oauth env[&amp;#39;omniauth.strategy&amp;#39;].options[:consumer_secret] = user.consumer_secret # if using omniauth-oauth end use OmniAuth::Builder.new do provider :twitter, setup: SETUP_PROC, callback_path: &amp;#34;/path/to/callback&amp;#34;, image_size: &amp;#34;original&amp;#34; end Setup Phase · omniauth/omniauth Wiki · GitHub</description>
+    </item>
+    
+  </channel>
+</rss>

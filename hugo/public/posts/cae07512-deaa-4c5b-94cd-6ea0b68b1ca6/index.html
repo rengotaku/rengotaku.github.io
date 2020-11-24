@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name=" robots" content="noindex, nofollow">
+<title>Docker上のcapistranoから別途立てたローカルサーバにアクセス | Vegetable Programing</title>
+
+<meta name="keywords" content="docker, capistrano, gem, ベジプロ, プログ, プログラム" />
+<meta name="description" content="構図 Capistrano Server[Docker] &lt;=&gt; Local[Mac] &lt;=&gt; SSHD Server[Docker] 接続先(ファイル設置先) サーバ 設定ファイル version: &#34;3&#34; services: ssh: build: dockerfile: Dockerfile command: [&#34;/usr/sbin/sshd&#34;, &#34;-D&#34;] tty: true ports: - &#34;10022:22&#34; Docker 初心者 — ssh で接続できるサーバーを立てる - Qiita FROM ubuntu:16.04 RUN">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/posts/cae07512-deaa-4c5b-94cd-6ea0b68b1ca6/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      Docker上のcapistranoから別途立てたローカルサーバにアクセス
+    </h1>
+    <div class="post-meta">January 17, 2020
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="構図">構図<a hidden class="anchor" aria-hidden="true" href="#構図">#</a></h1>
+<pre><code>Capistrano Server[Docker] &lt;=&gt; Local[Mac] &lt;=&gt; SSHD Server[Docker]
+</code></pre><h1 id="接続先ファイル設置先-サーバ">接続先(ファイル設置先) サーバ<a hidden class="anchor" aria-hidden="true" href="#接続先ファイル設置先-サーバ">#</a></h1>
+<h2 id="設定ファイル">設定ファイル<a hidden class="anchor" aria-hidden="true" href="#設定ファイル">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml:docker-compose.yml" data-lang="yml:docker-compose.yml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#34;3&#34;</span>
+services:
+  ssh:
+    build:
+      <span style="color:#66d9ef">dockerfile</span>: Dockerfile
+    <span style="color:#66d9ef">command</span>: [<span style="color:#e6db74">&#34;/usr/sbin/sshd&#34;</span>, <span style="color:#e6db74">&#34;-D&#34;</span>]
+    <span style="color:#66d9ef">tty</span>: <span style="color:#66d9ef">true</span>
+    ports:
+      - <span style="color:#e6db74">&#34;10022:22&#34;</span>
+</code></pre></div><blockquote>
+<p><a href="https://qiita.com/YumaInaura/items/adb20c8083fce2da86e1">Docker 初心者 — ssh で接続できるサーバーを立てる - Qiita</a></p>
+</blockquote>
+<pre><code class="language-yml:Dockerfile" data-lang="yml:Dockerfile">FROM ubuntu:16.04
+
+RUN apt-get update &amp;&amp; apt-get install -y \
+    openssh-server \
+    sudo
+RUN mkdir /var/run/sshd
+RUN echo 'root:admin' | chpasswd
+RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+
+# SSH login fix. Otherwise user is kicked off after login
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+
+ENV NOTVISIBLE &quot;in users profile&quot;
+RUN echo &quot;export VISIBLE=now&quot; &gt;&gt; /etc/profile
+
+# add user
+RUN groupadd -g 1000 app &amp;&amp; \
+    useradd  -g      app -G sudo -m -s /bin/bash app &amp;&amp; \
+    echo 'app:pass' | chpasswd
+
+RUN echo 'Defaults visiblepw'             &gt;&gt; /etc/sudoers
+RUN echo 'app ALL=(ALL) NOPASSWD:ALL' &gt;&gt; /etc/sudoers
+</code></pre><pre><code class="language-!" data-lang="!">パスワードは、rootは `admin` 、appは `pass` です。
+</code></pre><h2 id="起動">起動<a hidden class="anchor" aria-hidden="true" href="#起動">#</a></h2>
+<pre><code>$ docker-compose up
+</code></pre><h2 id="確認">確認<a hidden class="anchor" aria-hidden="true" href="#確認">#</a></h2>
+<pre><code>$ ssh app@localhost -p 10022
+app@localhost's password: $&lt;= input password
+</code></pre><h1 id="capistranoin-docker">capistrano(in Docker)<a hidden class="anchor" aria-hidden="true" href="#capistranoin-docker">#</a></h1>
+<h2 id="ゲートウェイの確認">ゲートウェイの確認<a hidden class="anchor" aria-hidden="true" href="#ゲートウェイの確認">#</a></h2>
+<h3 id="コンテナidを確認">コンテナIDを確認<a hidden class="anchor" aria-hidden="true" href="#コンテナidを確認">#</a></h3>
+<pre><code>$ docker ps
+CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                                            NAMES
+21efaa7faf20        hoge     &quot;/usr/sbin/sshd -D&quot;      33 minutes ago      Up 33 minutes       0.0.0.0:10022-&gt;22/tcp                            hoge_1
+</code></pre><h3 id="コンテナidよりgatewayを確認">コンテナIDよりGatewayを確認<a hidden class="anchor" aria-hidden="true" href="#コンテナidよりgatewayを確認">#</a></h3>
+<pre><code>$ docker inspect 21efaa7faf20
+[
+    {
+        &quot;Id&quot;: &quot;b28f7fa806b13afb411f1a69baf76d6d122184f1542c79074d3320414ad36596&quot;,
+        ...
+        &quot;NetworkSettings&quot;: {
+            ...
+            &quot;Networks&quot;: {
+                &quot;hoge-service&quot;: {
+                    ...
+                    &quot;NetworkID&quot;: &quot;0cd7d56e94c9134807488f8e0ba82d22eaa49e110b14eb695ed326c02aa7e1b9&quot;,
+                    &quot;EndpointID&quot;: &quot;c46ea719d379e278dadf3a5210ec4239a12aca0ef4aff1cefd3c8478336178d5&quot;,
+                    &quot;Gateway&quot;: &quot;172.18.0.1&quot;,
+                    &quot;IPAddress&quot;: &quot;172.18.0.4&quot;,
+                    ...
+                }
+            }
+        }
+    }
+]
+</code></pre><h2 id="capistranoの設定">capistranoの設定<a hidden class="anchor" aria-hidden="true" href="#capistranoの設定">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-:config/deploy/development.rb" data-lang=":config/deploy/development.rb"><span style="color:#75715e"># -------------------</span>
+<span style="color:#75715e"># Server</span>
+<span style="color:#75715e"># -------------------</span>
+set <span style="color:#e6db74">:user</span>, <span style="color:#e6db74">&#39;app&#39;</span>
+server <span style="color:#e6db74">&#34;172.18.0.1&#34;</span>,
+  <span style="color:#e6db74">port</span>: <span style="color:#ae81ff">10022</span>,
+  <span style="color:#e6db74">roles</span>: <span style="color:#e6db74">%w[hoge]</span>,
+  <span style="color:#e6db74">primary</span>: <span style="color:#66d9ef">true</span>
+set <span style="color:#e6db74">:ssh_options</span>, {
+  <span style="color:#e6db74">auth_methods</span>: <span style="color:#e6db74">%w(password)</span>,
+  <span style="color:#e6db74">password</span>: <span style="color:#e6db74">&#39;pass&#39;</span>,
+  <span style="color:#e6db74">forward_agent</span>: <span style="color:#66d9ef">false</span>,
+}
+</code></pre></div><h2 id="実行">実行<a hidden class="anchor" aria-hidden="true" href="#実行">#</a></h2>
+<pre><code>$ bundle exec cap development --trace
+</code></pre><h1 id="tips">tips<a hidden class="anchor" aria-hidden="true" href="#tips">#</a></h1>
+<ul>
+<li>capistranoからの接続ができないと思っていたら、capistranoの接続先をlocalhostにしていた。</li>
+<li>key認証の [Dockerfile](<a href="https://github.com/YumaInaura/study-docker/tree/master/ssh/public_key_login_with_copy">study-docker/ssh/public_key_login_with_copy at master · YumaInaura/study-docker · GitHub</a>) も見つけたが、上手く接続できない。</li>
+</ul>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://www.vegetable.blog.v41.me/tags/docker">docker</a></li>
+      <li><a href="https://www.vegetable.blog.v41.me/tags/capistrano">capistrano</a></li>
+      <li><a href="https://www.vegetable.blog.v41.me/tags/gem">gem</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://www.vegetable.blog.v41.me/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

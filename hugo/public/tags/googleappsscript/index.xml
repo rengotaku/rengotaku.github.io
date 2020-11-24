@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>googleappsscript on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/googleappsscript/</link>
+    <description>Recent content in googleappsscript on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Sun, 09 Jun 2019 19:31:35 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/googleappsscript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Google Spread SheetをGoogle Apps Scriptで操作する際のtips集</title>
+      <link>https://www.vegetable.blog.v41.me/posts/e6aa600a-b838-4b6a-8f4a-ba3c71472a5d/</link>
+      <pubDate>Sun, 09 Jun 2019 19:31:35 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/e6aa600a-b838-4b6a-8f4a-ba3c71472a5d/</guid>
+      <description>最終行を取得 const sheet = SpreadsheetApp.getActiveSheet(); const LastRow = sheet.getLastRow(); Logger.log(LastRow); //6.0 GoogleSpreadSheetで、指定した範囲の、データが含まれている最終行を取得する方法。 - Qiita セルの値</description>
+    </item>
+    
+  </channel>
+</rss>

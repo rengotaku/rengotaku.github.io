@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mysql5.6 on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/mysql5.6/</link>
+    <description>Recent content in mysql5.6 on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Tue, 09 Oct 2018 13:45:57 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/mysql5.6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ユーザ、DBの追加</title>
+      <link>https://www.vegetable.blog.v41.me/posts/c8651b4b-66de-4ccc-ba78-a4b8f197db58/</link>
+      <pubDate>Tue, 09 Oct 2018 13:45:57 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/c8651b4b-66de-4ccc-ba78-a4b8f197db58/</guid>
+      <description>DB作成 (データベース作成) mysql&amp;gt; CREATE DATABASE dbname; DB名は「`」で囲まない ユーザー作成 (データベースユーザー作成とアクセス権限付与) mysql&amp;gt; GRANT ALL PRIVILEGES ON dbname.* TO dbuser@&#39;localhost&#39; IDENTIFIED BY &#39;dbpassword&#39;;</description>
+    </item>
+    
+  </channel>
+</rss>

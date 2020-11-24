@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name=" robots" content="noindex, nofollow">
+<title>ruby | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/tags/ruby/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://www.vegetable.blog.v41.me/tags/ruby/index.xml">
+
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>ruby</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      指定桁まで0埋めしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>pry(main)&gt; &#39;%04d&#39; % [1] =&gt; &#34;0001&#34; String#%は書式制御 - rubyco（るびこ）の日記...</p>
+  </section>
+  <footer class="entry-footer">January 22, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 指定桁まで0埋めしたい" href="https://www.vegetable.blog.v41.me/posts/ae408920-bcaf-41da-b196-0ee2d23819bb/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      File.openのパーミッション設定で気をつけること
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>対応 File.open(file_path, &#39;w&#43;b&#39;, 0x644) { |f| f.write file } ===&gt; --w----r-- 1 300807 14K 1 11 19:03 mail_21667_image_0.pdf File.open(file_path, &#39;w&#43;b&#39;, 644) { |f| f.write file } ===&gt; --w----r-- 1 300807 14K 1 11 19:03 mail_21667_image_0.pdf 経緯 初めは、0644と記載していたが、lintの指摘で644に変更し...</p>
+  </section>
+  <footer class="entry-footer">January 11, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to File.openのパーミッション設定で気をつけること" href="https://www.vegetable.blog.v41.me/posts/0bfd3a71-fd45-4820-829c-6479c674f34a/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      sublimeでrubocopを動作させたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>前提 RuboCopの .rubocop.yml はプロジェクトのルートディレクトリ配下に作成済み gemがインストールされている(# gem install rubocop) rubyのインストール場所を確...</p>
+  </section>
+  <footer class="entry-footer">January 11, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to sublimeでrubocopを動作させたい" href="https://www.vegetable.blog.v41.me/posts/3670a62b-0146-4ef9-a8b8-da4555ca70fd/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      原文をgzip圧縮しbase64でエンコードされた文字列の原文を確認したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>require &#34;zlib&#34; gzip_char = Base64.decode64(base64_char) begin puts Zlib::Inflate.inflate(gzip_char) rescue Zlib::BufError =&gt; e # 不正な形式のデータの場合 raise &#34;不正な文字列&#34; end phpの gzencode でエンコードされた物も、ちゃんと解凍でき...</p>
+  </section>
+  <footer class="entry-footer">December 20, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to 原文をgzip圧縮しbase64でエンコードされた文字列の原文を確認したい" href="https://www.vegetable.blog.v41.me/posts/3ca7c0b0-bd99-4bd8-a0a1-b589eb8b920a/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      yamlファイルに記載した設定をconfigとしてロード
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>ロード処理 def load_config(key, filepath) yml = YAML.safe_load(ERB.new(File.read(filepath)).result, [], [], true).symbolize_keys raise &#34;No such file #{filepath}&#34; if yml.blank? config = yml[Rails.env.to_sym] raise &#34;No such environment #{Rails.env}on #{filepath}&#34; if config.blank? Rails.application.config.send(&#34;#{key}=&#34;, ActiveSupport::InheritableOptions.new(config.deep_symbolize_keys)) end load_config(:site_info, Rails.root.join(&#39;config&#39;, &#39;site_info.yml&#39;)) yamlファイルに記載されたrubyの式を展開してロードするよう...</p>
+  </section>
+  <footer class="entry-footer">December 17, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to yamlファイルに記載した設定をconfigとしてロード" href="https://www.vegetable.blog.v41.me/posts/4a69b6bb-0474-4600-8f72-2ec0ee7efd4b/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      apiのテストケースのサンプル
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>require &#39;test_helper&#39; module Api class SampleControllerTest &lt; ActionDispatch::IntegrationTest describe &#34;something function test.&#34; do describe &#34;OK case&#34; do test &#34;exist&#34; do get &#39;/api/v1/sample_contract_mails/1/example&#39;, params: { page: 2 } assert_response :success body = JSON.parse(response.body) assert { body.size == 1 } end end describe &#34;NG case&#34; do test &#34;dont exist&#34; do get &#39;/api/v1/sample_contract_mails/2/example&#39; assert_response :missing end end end end end...</p>
+  </section>
+  <footer class="entry-footer">December 12, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to apiのテストケースのサンプル" href="https://www.vegetable.blog.v41.me/posts/7a573d40-4330-42cd-a58d-bf96947f7bc5/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      モデルのテストケースのサンプル
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>require &#39;test_helper&#39; class SampleModelTest &lt; ActiveSupport::TestCase describe &#39;something function test.&#39; do test &#39;get something.&#39; do assert { SampleModel.find(1).present? } end test &#39;dont get something.&#39; do assert { SampleModel.find(2).blank? } end end describe &#39;something2 function test.&#39; do before do puts &#34;be executed in something2 only.&#34; end after do puts &#34;be executed in something2 only.&#34; end test &#39;get something.&#39; do assert { SampleModel.find(1).present? } end end end minitest-power_assert のgem...</p>
+  </section>
+  <footer class="entry-footer">December 12, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to モデルのテストケースのサンプル" href="https://www.vegetable.blog.v41.me/posts/72789551-4a7b-4a54-a6f3-49e1965faf28/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      指定フォルダ配下の1日前のファイルを削除し、空のフォルダを削除したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p># 1日前のファイルを削除 Dir.glob(&#39;path/to/dir/**/*.*&#39;). select{ |f| File.mtime(f) &lt; Time.now - 1.day }. each{ |f| FileUtils.rm(f) } # 空のフォルダを削除 Dir.glob(&#34;path/to/dir/**&#34;).each do |fo| next unless FileTest.directory?(fo) next unless Dir.entries(fo).length == 2 puts &#34;#{fo}empty&#34; Dir.rmdir fo end [Ruby] 空のフォルダだけ削除、Dir::en...</p>
+  </section>
+  <footer class="entry-footer">December 12, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to 指定フォルダ配下の1日前のファイルを削除し、空のフォルダを削除したい" href="https://www.vegetable.blog.v41.me/posts/50477c7a-7a7e-4625-a0f1-5935097b8627/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      minitestを実行してもfixtureが実行されずデータが空
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>fixtures :all を入れる必要がある。 require File.expand_path(&#39;../../config/environment&#39;, __FILE__) require &#39;rails/test_help&#39; module ActiveSupport class TestCase include FactoryBot::Syntax::Methods include ActiveSupport::Testing::TimeHelpers fixtures :all end end Minitest Tutorial: Getting Started with Minitest | Codeship | via @codeship https://blog.codeship.com/getting-started-with-minitest/...</p>
+  </section>
+  <footer class="entry-footer">December 10, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to minitestを実行してもfixtureが実行されずデータが空" href="https://www.vegetable.blog.v41.me/posts/29f18e5f-fadb-43da-b63f-267791e4d3c0/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      アップロードされたファイルをBase64にエンコード
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>upload_file = params[:upload_file] base64_image = &#39;data:image/png;base64,&#39; &#43; Base64.strict_encode64(upload_file.read) urlsafe_encode64 は正しく機能しない 表示される文字列をブラウザへ貼り付ける [ruby]irbで画像URLからbase64エンコード画像を作成...</p>
+  </section>
+  <footer class="entry-footer">November 12, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to アップロードされたファイルをBase64にエンコード" href="https://www.vegetable.blog.v41.me/posts/ed21763f-7ee8-4127-a82e-570bb3fa3cb1/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="/tags/ruby/page/8/">« Prev Page</a>
+    <a class="next" href="/tags/ruby/page/10/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

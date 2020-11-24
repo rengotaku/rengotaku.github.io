@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name=" robots" content="noindex, nofollow">
+<title>rails | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/tags/rails/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://www.vegetable.blog.v41.me/tags/rails/index.xml">
+
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>rails</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      precompileしたらシンタックスエラーで失敗する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>対応 after config.assets.js_compressor = Uglifier.new(harmony: true) before config.assets.js_compressor = :uglifier 事象 RAILS_ENV=production rails assets:precompile すると下記エラーが発生する Uglifier::Error: Unexpected token: keyword (const). To use ES6 syntax uglifier の ES6部分におけるエラー [Rails] - ハッキングバカ...</p>
+  </section>
+  <footer class="entry-footer">December 12, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to precompileしたらシンタックスエラーで失敗する" href="https://www.vegetable.blog.v41.me/posts/b2b33f33-dc36-497d-96ce-35a4dc855351/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      minitestを実行してもfixtureが実行されずデータが空
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>fixtures :all を入れる必要がある。 require File.expand_path(&#39;../../config/environment&#39;, __FILE__) require &#39;rails/test_help&#39; module ActiveSupport class TestCase include FactoryBot::Syntax::Methods include ActiveSupport::Testing::TimeHelpers fixtures :all end end Minitest Tutorial: Getting Started with Minitest | Codeship | via @codeship https://blog.codeship.com/getting-started-with-minitest/...</p>
+  </section>
+  <footer class="entry-footer">December 10, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to minitestを実行してもfixtureが実行されずデータが空" href="https://www.vegetable.blog.v41.me/posts/29f18e5f-fadb-43da-b63f-267791e4d3c0/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ActiveModel::Type::UnsignedIntegerが発生した場合
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>対応 検索をしただけで発生する場合、桁制限で対応。 4294967295までOKなので、バリデーションで10桁だと切り分けが難しいので、9桁まで...</p>
+  </section>
+  <footer class="entry-footer">November 28, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to ActiveModel::Type::UnsignedIntegerが発生した場合" href="https://www.vegetable.blog.v41.me/posts/e310a2f1-1018-432b-8e36-cfa0489a68e9/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Validatorをテスト
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>require &#39;test_helper&#39; class TelephoneValidatable include ActiveModel::Model attr_accessor :telephone validates :telephone, telephone: true end class TelephoneValidatorTest &lt; ActiveSupport::TestCase def setup @validator = TelephoneValidatable end valid_telephone_addresses = [&#39;123456789&#39;] invalid_telephone_addresses = [&#39;A123456789Z&#39;] describe &#34;OK case&#34; do test &#39;normal telphone&#39; do validator = @validator.new valid_telephone_addresses.each do |telephone| validator.telephone = telephone assert { validator.valid? } end end end describe &#34;NG case&#34; do test &#39;unnormal telephone&#39; do validator = @validator.new invalid_telephone_addresses.each do |telephone| validator.telephone = telephone...</p>
+  </section>
+  <footer class="entry-footer">October 25, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to Validatorをテスト" href="https://www.vegetable.blog.v41.me/posts/f7766124-b235-4796-a7af-02b44fb666ad/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      HTTPステータスコード
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>1xx Informational Status Code Status Message Symbol 100 Continue :continue 101 Switching Protocols :switching_protocols 102 Processing :processing 2xx Success Status Code Status Message Symbol 200 OK :ok 201 Created :created 202 Accepted :accepted 203 Non-Authoritative Information :non_authoritative_information 204 No Content :no_content 205 Reset Content :reset_content 206 Partial Content :partial_content 207 Multi-Status :multi_status 226 IM Used :im_used 3xx Redirection Status Code Status Message Symbol 300 Multiple Choices :multiple_choices 301 Moved Permanently...</p>
+  </section>
+  <footer class="entry-footer">October 4, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to HTTPステータスコード" href="https://www.vegetable.blog.v41.me/posts/455e83ac-5a80-482e-9108-40f27404394b/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      pathが見つからない
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>対応 pathを付けるのを忘れてませんか？ building_path(building) building(building) 事象 rails routes でパスを確認して、viewなどで使用としたら、 NameError: undefined local variable or method &#39;path_name&#39; と怒られる...</p>
+  </section>
+  <footer class="entry-footer">October 4, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to pathが見つからない" href="https://www.vegetable.blog.v41.me/posts/c26f2070-69ee-42b5-88d5-aaac75500d2f/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      関連付け (アソシエーション)のメモ
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>前提 お祝い金申請 を受けるためには、商品 を お問い合わせ しておくことが必要。 １問い合わせは１商品と紐づく。 １問い合わせすると、１お祝い金申請がで...</p>
+  </section>
+  <footer class="entry-footer">September 28, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to 関連付け (アソシエーション)のメモ" href="https://www.vegetable.blog.v41.me/posts/e164dd09-2da6-416f-b7d0-f5fd9b2dbeaa/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      scssからfontsを読み込みたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>cssの修正 url(path/to/font) を url(font-path(&#39;path/to/font&#39;)) へ変換 正規表現で一括置換 検索対象を url\((.&#43;?)\)、置換を url(font-path(&#39;$1&#39;)) Railsの読み込み設定 Rails.application.config.assets.paths &lt;&lt; &#34;#{Rails}/assets/fonts&#34; Rails.application.config.assets.precompile &lt;&lt; /\.(?:svg|eot|woff|ttf|woff2)\z/ rails 4.2で fonts をve...</p>
+  </section>
+  <footer class="entry-footer">September 27, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to scssからfontsを読み込みたい" href="https://www.vegetable.blog.v41.me/posts/ce59cb28-0aaf-4eac-95ec-89662840ff9c/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ActiveModelのi18nの設定方法
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>ja: activemodel: models: inquiry_form: &#34;お問い合わせフォーム&#34; tasks/search: &#34;検索フォーム&#34; attributes: inquiry_form: company_id: 企業ID tasks/search: created_at_from: 開始日 created_at_to: 終了日 フォームは以下のような感じ...</p>
+  </section>
+  <footer class="entry-footer">September 25, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to ActiveModelのi18nの設定方法" href="https://www.vegetable.blog.v41.me/posts/e1a43521-07f7-443d-858f-8cdcac4a6162/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      RailsでApiのバリデーションのプラクティス
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>参考の構成 Ruby on Rails で Web API のパラメータをバリデーションする | MMMブログ Validating REST queries with Rails (Example) 変数への代入を簡素化 def self.attr_accessor(*vars) @@attributes ||= [] @@attributes.concat vars super end def attributes @@attributes end Rubyのクラ...</p>
+  </section>
+  <footer class="entry-footer">September 25, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to RailsでApiのバリデーションのプラクティス" href="https://www.vegetable.blog.v41.me/posts/cee0a19e-b296-4bd7-9f9c-7d8eeef88138/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="/tags/rails/page/11/">« Prev Page</a>
+    <a class="next" href="/tags/rails/page/13/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssh on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/ssh/</link>
+    <description>Recent content in ssh on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 16 Apr 2020 15:32:52 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>gitlabに接続できない場合に尋ねる前にするべきこと</title>
+      <link>https://www.vegetable.blog.v41.me/posts/f2061de8-c51c-4db6-a7ac-26159cf1fdc8/</link>
+      <pubDate>Thu, 16 Apr 2020 15:32:52 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/f2061de8-c51c-4db6-a7ac-26159cf1fdc8/</guid>
+      <description>確認 -vvv オプションでデバッグできる ssh -i &amp;lt;秘密鍵の場所&amp;gt; git@example.com -vvv 正常 $ ssh -i ~/.ssh/id_rsa git@git.example.com -vvv OpenSSH_7.9p1, LibreSSL 2.7.3 debug1: Reading configuration data /path/to/.ssh/config debug1: Reading configuration data /etc/ssh/ssh_config debug1: /etc/ssh/ssh_config line 48: Applying options for * debug1: Connecting to example.com. debug1: Connection established.</description>
+    </item>
+    
+    <item>
+      <title>proxy経由でサーバに接続する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/200b1a07-97a8-4275-892e-f2c3b5e68cd5/</link>
+      <pubDate>Wed, 01 Apr 2020 14:04:25 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/200b1a07-97a8-4275-892e-f2c3b5e68cd5/</guid>
+      <description>解決 ProxyCommand nc -v -X 5 -x proxy-ip:1080 %h %p で行えた。 Host remhost HostName my.host.com User myuser ProxyCommand nc -v -X 5 -x proxy-ip:1080 %h %p 2&amp;gt; ssh-err.log ServerAliveInterval 30 ForwardX11 yes ForwardX11 は不要だった 私の場合 下記を設定の上、別タブで接続した状態にしてい</description>
+    </item>
+    
+    <item>
+      <title>IP指定の場合に複数のサーバに同一の設定を適用させる書き方</title>
+      <link>https://www.vegetable.blog.v41.me/posts/a00f40d0-d4c2-4adf-b894-f3d019dc232d/</link>
+      <pubDate>Tue, 14 Jan 2020 17:42:10 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/a00f40d0-d4c2-4adf-b894-f3d019dc232d/</guid>
+      <description>./ssh/configに Host 192.168.* と記載する。 ssh 192.168.0.1 のような呼び出した際に適用されます。 OpenSSH: Configurations Based On Hosts, Etc. - DEV Community 👩‍💻👨‍💻</description>
+    </item>
+    
+    <item>
+      <title>sshで接続しようとすると &#39;REMOTE HOST IDENTIFICATION HAS CHANGED&#39; エラーが発生する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/12091115-3609-4cb1-9e37-b3787b731b2a/</link>
+      <pubDate>Tue, 08 Jan 2019 11:39:48 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/12091115-3609-4cb1-9e37-b3787b731b2a/</guid>
+      <description>対応 コマンド $ ssh-keygen -R 対象アドレス ファイルを編集 /path/to/.ssh/known_hosts:155 で指定の行を削除する 結果はどちらも一緒で、削除されるだけ 事象 $ ssh somehost @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ @ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ IT IS POSSIBLE THAT</description>
+    </item>
+    
+    <item>
+      <title>sshdの最大接続数を変更</title>
+      <link>https://www.vegetable.blog.v41.me/posts/ec82dca6-bcaa-4fde-8d51-79af595ea57b/</link>
+      <pubDate>Mon, 17 Dec 2018 19:18:09 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/ec82dca6-bcaa-4fde-8d51-79af595ea57b/</guid>
+      <description>対応 /etc/ssh/sshd_config を修正 MaxStartups 10:80:20 MaxStartups 2:80:5 最低接続数が2→10に変更 デーモン再起動 $ sudo service sshd reload 事象 Rundeckでバッチサーバのスクリプトを起動しようとしたら、下記</description>
+    </item>
+    
+    <item>
+      <title>sshしたら”REMOTE HOST IDENTIFICATION HAS CHANGED”と警告される</title>
+      <link>https://www.vegetable.blog.v41.me/posts/deb4cac4-9048-4469-a581-9d8522da95de/</link>
+      <pubDate>Sat, 01 Dec 2018 12:51:12 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/deb4cac4-9048-4469-a581-9d8522da95de/</guid>
+      <description>対策 [app@localhost ~]$ ssh-keygen -R somehost # Host xxxxxxx found: line 3 /home/app/.ssh/known_hosts updated. Original contents retained as /home/app/.ssh/known_hosts.old 事象 [localhost ~]$ ssh somehost @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ @ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY! Someone could be eavesdropping on you right now (man-in-the-middle attack)! It is also possible that a host key has just been changed. The fingerprint for</description>
+    </item>
+    
+    <item>
+      <title>sshを自動で切れないようにする</title>
+      <link>https://www.vegetable.blog.v41.me/posts/7072d4f7-7faa-44b2-a722-848937d2cf49/</link>
+      <pubDate>Thu, 04 Oct 2018 11:27:11 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/7072d4f7-7faa-44b2-a722-848937d2cf49/</guid>
+      <description>ServerAliveInterval 300 TCPKeepAlive yes MacのSSHクライアントでkeep-alive | Scribble</description>
+    </item>
+    
+  </channel>
+</rss>

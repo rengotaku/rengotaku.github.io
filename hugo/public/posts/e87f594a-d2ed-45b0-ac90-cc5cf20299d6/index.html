@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name=" robots" content="noindex, nofollow">
+<title>gulp入門 | Vegetable Programing</title>
+
+<meta name="keywords" content="gulp, ベジプロ, プログ, プログラム" />
+<meta name="description" content="行なっていること assets/js 配下のjsをmain.jsにまとめる。 views/*.ejs 配下のxxx.ejs.htmlを変数を埋め込みhtmlに変換する。 assets/s">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.vegetable.blog.v41.me/posts/e87f594a-d2ed-45b0-ac90-cc5cf20299d6/" />
+<link href="https://www.vegetable.blog.v41.me/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://www.vegetable.blog.v41.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.vegetable.blog.v41.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.vegetable.blog.v41.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.vegetable.blog.v41.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.vegetable.blog.v41.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.vegetable.blog.v41.me" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.vegetable.blog.v41.me/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      gulp入門
+    </h1>
+    <div class="post-meta">July 24, 2018
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="行なっていること">行なっていること<a hidden class="anchor" aria-hidden="true" href="#行なっていること">#</a></h1>
+<ul>
+<li>assets/js 配下のjsを<code>main.js</code>にまとめる。</li>
+<li>views/*.ejs 配下のxxx.ejs.htmlを変数を埋め込みhtmlに変換する。</li>
+<li>assets/scss配下のxxx.scss.cssを<code>main.css</code>にまとめる。</li>
+<li>imageを圧縮して、指定のフォルダに送信</li>
+<li>fontを指定のフォルダに送信</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js:gulpfile.js" data-lang="js:gulpfile.js"><span style="color:#75715e">// gulp.js configuration
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span>
+  <span style="color:#75715e">// modules
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">gulp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp&#39;</span>),
+
+  <span style="color:#a6e22e">newer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-newer&#39;</span>),
+  <span style="color:#a6e22e">imagemin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-imagemin&#39;</span>),
+
+  <span style="color:#a6e22e">htmlclean</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-htmlclean&#39;</span>),
+
+  <span style="color:#a6e22e">concat</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-concat&#39;</span>),
+  <span style="color:#a6e22e">deporder</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-deporder&#39;</span>),
+  <span style="color:#a6e22e">stripdebug</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-strip-debug&#39;</span>),
+  <span style="color:#a6e22e">uglify</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-uglify&#39;</span>),
+
+  <span style="color:#a6e22e">sass</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-sass&#39;</span>),
+  <span style="color:#a6e22e">postcss</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-postcss&#39;</span>),
+  <span style="color:#a6e22e">assets</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;postcss-assets&#39;</span>),
+  <span style="color:#a6e22e">autoprefixer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;autoprefixer&#39;</span>),
+  <span style="color:#a6e22e">mqpacker</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;css-mqpacker&#39;</span>),
+  <span style="color:#a6e22e">cssnano</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;cssnano&#39;</span>),
+
+  <span style="color:#a6e22e">plumber</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-plumber&#39;</span>),
+  <span style="color:#a6e22e">rename</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-rename&#39;</span>),
+  <span style="color:#a6e22e">ejs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-ejs&#39;</span>),
+
+  <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>),
+
+  <span style="color:#75715e">// development mode?
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">devBuild</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#39;production&#39;</span>),
+
+  <span style="color:#75715e">// folders
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">folder</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;src/&#39;</span>,
+    <span style="color:#a6e22e">build</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;build/&#39;</span>
+  }
+;
+
+<span style="color:#75715e">// image processing
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;images&#39;</span>, <span style="color:#66d9ef">function</span>() {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">out</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">build</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;images/&#39;</span>;
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;images/**/*&#39;</span>)
+    .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">newer</span>(<span style="color:#a6e22e">out</span>))
+    .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">imagemin</span>({ <span style="color:#a6e22e">optimizationLevel</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span> }))
+    .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>(<span style="color:#a6e22e">out</span>));
+});
+
+<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;ejs&#39;</span>, [<span style="color:#e6db74">&#39;images&#39;</span>], () =&gt; {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">json</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;views/var/var.json&#39;</span>));
+
+    <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>([<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;views/*.ejs&#39;</span>, <span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;views/*.ejs.html&#39;</span>])
+        .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">plumber</span>({
+            <span style="color:#a6e22e">handleError</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">err</span>) {
+                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">err</span>);
+                <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">emit</span>(<span style="color:#e6db74">&#39;end&#39;</span>);
+            }
+        }))
+        .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">ejs</span>(<span style="color:#a6e22e">json</span>))
+        .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">rename</span>({<span style="color:#a6e22e">extname</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>})) <span style="color:#75715e">// 拡張子一個目を消す
+</span><span style="color:#75715e"></span>        .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">rename</span>({<span style="color:#a6e22e">extname</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;.html&#34;</span>}))
+        .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">build</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;html&#39;</span>));
+});
+
+<span style="color:#75715e">// JavaScript processing
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;js.concat&#39;</span>, <span style="color:#66d9ef">function</span>() {
+
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">jsbuild</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>([<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;assets/js/**/*&#39;</span>])
+    .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">deporder</span>())
+    .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">concat</span>(<span style="color:#e6db74">&#39;main.js&#39;</span>));
+
+  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">devBuild</span>) {
+    <span style="color:#a6e22e">jsbuild</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jsbuild</span>
+      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">stripdebug</span>())
+      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">uglify</span>());
+  }
+
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">jsbuild</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">build</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;assets/js/&#39;</span>));
+});
+
+<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>( <span style="color:#e6db74">&#39;font&#39;</span>, [<span style="color:#e6db74">&#39;images&#39;</span>], <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>(
+        [ <span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;assets/fonts/**&#39;</span> ],
+        { <span style="color:#a6e22e">base</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> }
+    )
+    .<span style="color:#a6e22e">pipe</span>( <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">build</span>) );
+} );
+
+<span style="color:#75715e">// CSS processing
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;scss&#39;</span>, [<span style="color:#e6db74">&#39;images&#39;</span>, <span style="color:#e6db74">&#39;font&#39;</span>], <span style="color:#66d9ef">function</span>() {
+
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">postCssOpts</span> <span style="color:#f92672">=</span> [
+  <span style="color:#a6e22e">assets</span>({ <span style="color:#a6e22e">loadPaths</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;images/&#39;</span>] }),
+  <span style="color:#a6e22e">autoprefixer</span>({ <span style="color:#a6e22e">browsers</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;last 2 versions&#39;</span>, <span style="color:#e6db74">&#39;&gt; 2%&#39;</span>] }),
+  <span style="color:#a6e22e">mqpacker</span>
+  ];
+
+  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">devBuild</span>) {
+    <span style="color:#a6e22e">postCssOpts</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">cssnano</span>);
+  }
+
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>([<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;assets/scss/origin/main.scss&#39;</span>, <span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;assets/scss/my_main.scss.css&#39;</span>])
+    .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">sass</span>({
+      <span style="color:#a6e22e">outputStyle</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;nested&#39;</span>,
+      <span style="color:#a6e22e">imagePath</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;images/&#39;</span>,
+      <span style="color:#a6e22e">precision</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,
+      <span style="color:#a6e22e">errLogToConsole</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+    }))
+    .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">postcss</span>(<span style="color:#a6e22e">postCssOpts</span>))
+    .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">concat</span>(<span style="color:#e6db74">&#39;main.css&#39;</span>))
+    .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">build</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;assets/css/&#39;</span>));
+
+});
+
+<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>( <span style="color:#e6db74">&#39;css.min&#39;</span>, [<span style="color:#e6db74">&#39;scss&#39;</span>], <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;assets/scss/*.min.css&#39;</span>)
+    .<span style="color:#a6e22e">pipe</span>( <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">build</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;assets/css&#39;</span>) );
+} );
+
+<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>( <span style="color:#e6db74">&#39;css.image&#39;</span>, [<span style="color:#e6db74">&#39;scss&#39;</span>], <span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;assets/scss/origin/images/**&#39;</span>)
+    .<span style="color:#a6e22e">pipe</span>( <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">dest</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">build</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;assets/css/images&#39;</span>) );
+} );
+
+<span style="color:#75715e">// watch for changes
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;watch&#39;</span>, <span style="color:#66d9ef">function</span>() {
+
+  <span style="color:#75715e">// image changes
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">watch</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;images/**/*&#39;</span>, [<span style="color:#e6db74">&#39;images&#39;</span>]);
+
+  <span style="color:#75715e">// html changes
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">watch</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;views/**/*&#39;</span>, [<span style="color:#e6db74">&#39;html&#39;</span>]);
+
+  <span style="color:#75715e">// javascript changes
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">watch</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;assets/js/**/*&#39;</span>, [<span style="color:#e6db74">&#39;js&#39;</span>]);
+
+  <span style="color:#75715e">// css changes
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">watch</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;assets/scss/**/*&#39;</span>, [<span style="color:#e6db74">&#39;css&#39;</span>]);
+  <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">watch</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;assets/scss/images/**/*&#39;</span>, [<span style="color:#e6db74">&#39;css.image&#39;</span>]);
+
+  <span style="color:#75715e">// font changes
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">watch</span>(<span style="color:#a6e22e">folder</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;assets/fonts/**/*&#39;</span>, [<span style="color:#e6db74">&#39;font&#39;</span>]);
+});
+
+<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;default&#39;</span>, [<span style="color:#e6db74">&#39;run&#39;</span>, <span style="color:#e6db74">&#39;watch&#39;</span>]);
+<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;html&#39;</span>, [<span style="color:#e6db74">&#39;ejs&#39;</span>]);
+<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;js&#39;</span>, [<span style="color:#e6db74">&#39;js.concat&#39;</span>]);
+<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;css&#39;</span>, [<span style="color:#e6db74">&#39;scss&#39;</span>, <span style="color:#e6db74">&#39;css.min&#39;</span>, <span style="color:#e6db74">&#39;css.image&#39;</span>]);
+
+<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;run&#39;</span>, [<span style="color:#e6db74">&#39;html&#39;</span>, <span style="color:#e6db74">&#39;css&#39;</span>, <span style="color:#e6db74">&#39;js&#39;</span>, <span style="color:#e6db74">&#39;font&#39;</span>]);
+</code></pre></div><h1 id="メモ">メモ<a hidden class="anchor" aria-hidden="true" href="#メモ">#</a></h1>
+<pre><code class="language-!" data-lang="!">jsでファイルの読み込む順番を意識する際は、下記のように先に読み込むファイルを記述する。
+</code></pre><pre><code>/* requires:
+origin/jquery.min.js
+*/
+</code></pre><blockquote>
+<p><a href="https://www.webprofessional.jp/introduction-gulp-js/">面倒な作業も発狂しない！Web制作を超効率化するgulp.jsの始め方（2017年版） - WPJ</a></p>
+</blockquote>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://www.vegetable.blog.v41.me/tags/gulp">gulp</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://www.vegetable.blog.v41.me/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

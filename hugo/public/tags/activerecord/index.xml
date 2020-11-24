@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>activerecord on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/activerecord/</link>
+    <description>Recent content in activerecord on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 20 May 2020 13:59:40 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/activerecord/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ActiveRecordが発行するSQLをHookしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/030f1c25-ac39-4e09-8ce6-e5f2ae51e66e/</link>
+      <pubDate>Wed, 20 May 2020 13:59:40 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/030f1c25-ac39-4e09-8ce6-e5f2ae51e66e/</guid>
+      <description>解決 config/initializers/active_model_query_debug.rb module ActiveModelQueryDebug def log(query, *args) # &amp;#39;Model Load&amp;#39; are targeted if args.first&amp;amp;.end_with?(&amp;#34;Load&amp;#34;) Rails.logger.debug(&amp;#34;query: #{query}&amp;#34;) end super end end ActiveRecord::ConnectionAdapters::AbstractAdapter.prepend(ActiveModelQueryDebug) 動作 [1] pry(main)&amp;gt; User.first query: SELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1 User Load (1.3ms) SELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1 参考 active_record-sql_analyzer/sql_analyzer.rb at master · square/active_record-sql_analyzer</description>
+    </item>
+    
+    <item>
+      <title>ActiveRecordでbulk insert とupdateしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/4a40d9e2-ed95-4fa8-867d-768f086e27a9/</link>
+      <pubDate>Fri, 01 May 2020 11:15:48 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/4a40d9e2-ed95-4fa8-867d-768f086e27a9/</guid>
+      <description>解決 insert Book.insert_all([ { id: 1, title: &amp;#34;Rework&amp;#34;, author: &amp;#34;David&amp;#34; }, { id: 1, title: &amp;#34;Eloquent Ruby&amp;#34;, author: &amp;#34;Russ&amp;#34; } ]) created_at, updated_atは自動付与されないことに気をつける（DBの設定が自動挿入になっていればOK</description>
+    </item>
+    
+    <item>
+      <title>railsのenumから値を取得したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/2fdad37c-deb2-46d9-99a5-92a3f5df0b0f/</link>
+      <pubDate>Tue, 28 Jan 2020 16:02:05 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/2fdad37c-deb2-46d9-99a5-92a3f5df0b0f/</guid>
+      <description>enum sale_info: { plan_1: 1, plan_2: 2, plan_3: 3, plan_4: 4, plan_5: 5 } の場合、 Model.sale_infos[:plan_1] で取得 How get integer value from a enum in Rails? - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>旧字体を登録する際にエラーが発生する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/2595f4ec-a3a8-40c4-97dd-7e5eb3343f04/</link>
+      <pubDate>Mon, 02 Sep 2019 10:04:33 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/2595f4ec-a3a8-40c4-97dd-7e5eb3343f04/</guid>
+      <description>未解決 文字コーディングに異常はみられない。 事象 Activerecodeを通して 𣘺本 を登録しようとすると Incorrect string value: &#39;\xF0\xA3\x98\xBA\xE6\x9C...&#39; for column &#39;name&#39; at row 1 が発生する。 調査 文</description>
+    </item>
+    
+    <item>
+      <title>本日の範囲を取得したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/9b60faba-13e0-48ab-a745-0392b0374de7/</link>
+      <pubDate>Mon, 19 Aug 2019 16:33:51 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/9b60faba-13e0-48ab-a745-0392b0374de7/</guid>
+      <description>解決 all_day を使用する。 `where(created_at: Time.zone.now.all_day)` [1] pry(main)&amp;gt; Time.now.all_day =&amp;gt; 2019-08-19 00:00:00 +0000..2019-08-19 23:59:59 +0000 RailsのActiveRecordで今日・昨日など特定の日に保存されたレコードを取得 | EasyRamble</description>
+    </item>
+    
+    <item>
+      <title>railsでリレーションカラムにIDを自動で挿入</title>
+      <link>https://www.vegetable.blog.v41.me/posts/ed7f57ea-7a0d-4af9-9293-fb076858ffc8/</link>
+      <pubDate>Fri, 09 Aug 2019 18:18:35 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/ed7f57ea-7a0d-4af9-9293-fb076858ffc8/</guid>
+      <description>解決 メソッド名: build_関連付けメソッド名 使用例: @car.build_engine(name: &amp;ldquo;エンジン1&amp;rdquo;) Railsモデルの関連付けでbuildを使う</description>
+    </item>
+    
+    <item>
+      <title>activerecord-importで一括してupsert</title>
+      <link>https://www.vegetable.blog.v41.me/posts/260b671b-41a1-4472-84d7-86aaa3c9d2e3/</link>
+      <pubDate>Thu, 18 Jul 2019 11:29:53 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/260b671b-41a1-4472-84d7-86aaa3c9d2e3/</guid>
+      <description>解決 column_names = User.column_names models = [] # datasには[{id: 1, name: &amp;#39;hoge&amp;#39;...}...] datas.each do |data| User.find_or_initialize_by(id: data[:id]) do |model| # FIXME: In this case, new_record is not working model.assign_attributes(data) models &amp;lt;&amp;lt; model end end User.import(models, on_duplicate_key_update: { conflict_target: %i(id), columns: column_names }) new_record?メソッドで</description>
+    </item>
+    
+    <item>
+      <title>has_manyな関係でも条件を設定できる</title>
+      <link>https://www.vegetable.blog.v41.me/posts/ac6b22e9-bbef-4d0a-8bd5-50f1cce3e7bd/</link>
+      <pubDate>Fri, 12 Jul 2019 17:04:08 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/ac6b22e9-bbef-4d0a-8bd5-50f1cce3e7bd/</guid>
+      <description>class User &amp;lt; ApplicationRecord has_many :objects end class Object &amp;lt; ApplicationRecord belongs_to :user scope :open, -&amp;gt; { where(status: 0) } end user = User.find(999) user.objects.open.all #&amp;lt;= できるんだ！？ # =&amp;gt; SELECT `object`.* FROM `object` WHERE `object`.`user_id` = 999 AND `myobject`.`status` = 0</description>
+    </item>
+    
+    <item>
+      <title>Activerecordの条件にis not nullを設定</title>
+      <link>https://www.vegetable.blog.v41.me/posts/2df5cef2-e066-4ad2-a80c-d5738c7d3dd4/</link>
+      <pubDate>Fri, 12 Jul 2019 13:25:04 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/2df5cef2-e066-4ad2-a80c-d5738c7d3dd4/</guid>
+      <description>User.where.not(name: nil) =&amp;gt; SELECT `users`.* FROM `users` WHERE (`users`.`name` IS NOT NULL) [Rails]Where句にNOT NULLを指定する - Qiita</description>
+    </item>
+    
+    <item>
+      <title>ActiveRecordの結果を配列に変換</title>
+      <link>https://www.vegetable.blog.v41.me/posts/abdf896d-2c74-461b-88d0-d5f2e6774d6c/</link>
+      <pubDate>Tue, 02 Jul 2019 11:05:41 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/abdf896d-2c74-461b-88d0-d5f2e6774d6c/</guid>
+      <description>解決 to_a を使用する。 例 SomeModel.where(id: [0, 1]).to_a ruby-on-rails – Rails：activerecordの関係を配列に変換する正しい方法は？ - コードログ 起因 プログラム results = self. select( &amp;#39;inquiry.id as</description>
+    </item>
+    
+    <item>
+      <title>belongs_toに指定しているが、存在しなくても登録できるようにしたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/b3c5ee31-984a-413f-af5d-5378e3a3ec1d/</link>
+      <pubDate>Thu, 07 Mar 2019 19:05:33 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/b3c5ee31-984a-413f-af5d-5378e3a3ec1d/</guid>
+      <description>optional: true を belongs_to に設定すると、xxx_idが存在しない場合でもエラーにならない。 class Product &amp;lt; ActiveRecord::Base belongs_to :user, optional: true end Rails 5におけるbelongs_toの挙動について</description>
+    </item>
+    
+    <item>
+      <title>Raise以外でActiveRecordを使いたい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/2202e750-f995-4978-bd2b-318cfe9d2081/</link>
+      <pubDate>Wed, 20 Feb 2019 14:34:40 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/2202e750-f995-4978-bd2b-318cfe9d2081/</guid>
+      <description>rails じゃなくても ActiveRecord を使う - momota.txt</description>
+    </item>
+    
+    <item>
+      <title>Parallel処理の後にActiverecordで検索しようとすると通信エラーが発生する</title>
+      <link>https://www.vegetable.blog.v41.me/posts/ddddd4c5-0d7e-462f-9d64-d8096812f488/</link>
+      <pubDate>Wed, 30 Jan 2019 12:25:19 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/ddddd4c5-0d7e-462f-9d64-d8096812f488/</guid>
+      <description>対応 検索を行う前に、コネクションを再接続する SomeModel.connection.reconnect! SomeModel.find(1) 事象 メッセージ ActiveRecord::StatementInvalid: Mysql2::Error: MySQL server has gone away: SELECT... 処理 Parallel.map(SomeModel.all, in_process: 4) do |some_model| # something to do... end SomeModel.find(1) # &amp;lt;- ここで発生</description>
+    </item>
+    
+    <item>
+      <title>別のDBに接続するモデルを作成したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/da413a68-86ba-4cd4-9640-25114a03698f/</link>
+      <pubDate>Tue, 22 Jan 2019 18:25:29 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/da413a68-86ba-4cd4-9640-25114a03698f/</guid>
+      <description>修正ファイル app/models/other_db.rb app/models/other_db/o_table.rb config/other_db/database.yml db/other_db/schema.rb db/other_db/seeds.rb 修正内容 モデルの具象クラス module OtherDb class Base &amp;lt; ActiveRecord::Base # 対応する抽象テーブルは設定しない（必ず継承させる） # databases = YAML.load(ERB.new(File.read(&amp;#39;config/other_db/database.yml&amp;#39;)).result) establish_connection(databases[Rails.env]) self.abstract_class = true end end モデル module</description>
+    </item>
+    
+    <item>
+      <title>rails5以前のバージョンでor条件を作成したい</title>
+      <link>https://www.vegetable.blog.v41.me/posts/33b4adfd-caf3-4824-9191-e286eeba6de3/</link>
+      <pubDate>Mon, 07 Jan 2019 16:16:31 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/33b4adfd-caf3-4824-9191-e286eeba6de3/</guid>
+      <description>SomeTable.where(&amp;#34;id = ? or name = ?&amp;#34;, id, name) rails5だと or メソッドが用意されている Rails whereで複数カラムのOR条件を作成する | 酒と涙とRubyとRailsと https://morizyun.github.io/blog/rails-active-record-where-or-dinamic/index.html</description>
+    </item>
+    
+    <item>
+      <title>after_findの実行タイミング</title>
+      <link>https://www.vegetable.blog.v41.me/posts/18a1b201-414e-4a47-bf02-72e995f22fbc/</link>
+      <pubDate>Fri, 14 Dec 2018 11:37:45 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/18a1b201-414e-4a47-bf02-72e995f22fbc/</guid>
+      <description>結論 after_find のfunction内で他モデルをロードするような処理は（N+1問題に繋がるため）入れてはいけない。 モデル class Post &amp;lt; ApplicationRecord has_many :tag_relationships has_many :tags, through: :tag_relationships after_find :find_relate_tags # タグ</description>
+    </item>
+    
+    <item>
+      <title>ActiveModel::Type::UnsignedIntegerが発生した場合</title>
+      <link>https://www.vegetable.blog.v41.me/posts/e310a2f1-1018-432b-8e36-cfa0489a68e9/</link>
+      <pubDate>Wed, 28 Nov 2018 18:28:03 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/e310a2f1-1018-432b-8e36-cfa0489a68e9/</guid>
+      <description>対応 検索をしただけで発生する場合、桁制限で対応。 4294967295までOKなので、バリデーションで10桁だと切り分けが難しいので、9桁まで</description>
+    </item>
+    
+    <item>
+      <title>モデル配列を、キーをid、値をモデルのハッシュに変換</title>
+      <link>https://www.vegetable.blog.v41.me/posts/821546c6-dc95-4071-b1af-9afb8d6ef924/</link>
+      <pubDate>Fri, 19 Oct 2018 11:09:12 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/821546c6-dc95-4071-b1af-9afb8d6ef924/</guid>
+      <description>searched_models =&amp;gt; [model, model, model] searched_models.map { |models| [models.id, models] }.to_h =&amp;gt; { 1: model, 2: model, 3: model}</description>
+    </item>
+    
+    <item>
+      <title>関連付け (アソシエーション)のメモ</title>
+      <link>https://www.vegetable.blog.v41.me/posts/e164dd09-2da6-416f-b7d0-f5fd9b2dbeaa/</link>
+      <pubDate>Fri, 28 Sep 2018 14:04:31 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/e164dd09-2da6-416f-b7d0-f5fd9b2dbeaa/</guid>
+      <description>前提 お祝い金申請 を受けるためには、商品 を お問い合わせ しておくことが必要。 １問い合わせは１商品と紐づく。 １問い合わせすると、１お祝い金申請がで</description>
+    </item>
+    
+    <item>
+      <title>関連付け (アソシエーション)メモ</title>
+      <link>https://www.vegetable.blog.v41.me/posts/95707919-3da6-484a-ac90-c63fcfb94afa/</link>
+      <pubDate>Fri, 14 Sep 2018 15:10:13 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/95707919-3da6-484a-ac90-c63fcfb94afa/</guid>
+      <description>Want # 1件取得 inquiry = Inquiry.find 1 rel = inquiry.object.id # 2件以上取得 object = Object.find 1 rel = object.inquiries.map{|rel| rel.id} How to 前提 物件(buken)に対して、お問い合わせ(inquiry)をする場合のリレー</description>
+    </item>
+    
+    <item>
+      <title>除外テーブルとの結合</title>
+      <link>https://www.vegetable.blog.v41.me/posts/87c68693-ae0c-4c57-af8e-bd7b047fae1a/</link>
+      <pubDate>Thu, 21 Jun 2018 18:43:08 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/87c68693-ae0c-4c57-af8e-bd7b047fae1a/</guid>
+      <description># メインデータテーブル class Identified &amp;lt; ApplicationRecord self.primary_key = :property_id has_one :exclude_building, foreign_key: :identified_building_id, primary_key: :identified_building_id end # 除外データテーブル class ExcludeBuilding &amp;lt; ApplicationRecord belongs_to :identified, foreign_key: :identified_building_id, primary_key: :identified_building_id end # left joinして結合しないデータのみを抽出 IdentifiedProperty. left_joins(:exclude_building). where(exclude_buildings:</description>
+    </item>
+    
+  </channel>
+</rss>

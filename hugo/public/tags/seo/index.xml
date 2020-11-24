@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>seo on Vegetable Programing</title>
+    <link>https://www.vegetable.blog.v41.me/tags/seo/</link>
+    <description>Recent content in seo on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Fri, 25 May 2018 16:46:59 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.vegetable.blog.v41.me/tags/seo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>商品が品切れの時は、404エラーかnoindexか？</title>
+      <link>https://www.vegetable.blog.v41.me/posts/692156f8-4b55-45f4-abdb-94d58d2f9c32/</link>
+      <pubDate>Fri, 25 May 2018 16:46:59 +0900</pubDate>
+      
+      <guid>https://www.vegetable.blog.v41.me/posts/692156f8-4b55-45f4-abdb-94d58d2f9c32/</guid>
+      <description>TL;DR 以上を元に、404ページであってもnoindexをつける必要はなさそうと判断してよいと思います。 調査内容 404エラーについて誤解されている</description>
+    </item>
+    
+  </channel>
+</rss>
