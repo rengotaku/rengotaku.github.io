@@ -5,14 +5,14 @@ jobs:
   build:
     docker:
       - image: cibuilds/hugo:latest
-    machine:
-      docker_layer_caching: true
     working_directory: ~/work
     environment:
       HUGO_BUILD_DIR: ~/work/hugo/public
     steps:
-      - run: sudo apt-get update && sudo apt-get install -y git
       - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run: sudo apt-get update && sudo apt-get install -y git
       - run: git submodule sync && git submodule update --init
       - run: cd hugo
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
