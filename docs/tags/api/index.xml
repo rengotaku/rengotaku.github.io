@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>api on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/api/</link>
+    <link>https://rengotaku.github.io/tags/api/</link>
     <description>Recent content in api on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Fri, 10 Jul 2020 12:31:21 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/api/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/api/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>API設計で参考になるサイト</title>
-      <link>https://www.vegetable.blog.v41.me/posts/252b9b36-74ff-4b3b-8494-210c63f95f98/</link>
+      <link>https://rengotaku.github.io/posts/252b9b36-74ff-4b3b-8494-210c63f95f98/</link>
       <pubDate>Fri, 10 Jul 2020 12:31:21 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/252b9b36-74ff-4b3b-8494-210c63f95f98/</guid>
+      <guid>https://rengotaku.github.io/posts/252b9b36-74ff-4b3b-8494-210c63f95f98/</guid>
       <description>Google JSON Style Guide</description>
     </item>
     
     <item>
       <title>RailsでApiのバリデーションのプラクティス</title>
-      <link>https://www.vegetable.blog.v41.me/posts/cee0a19e-b296-4bd7-9f9c-7d8eeef88138/</link>
+      <link>https://rengotaku.github.io/posts/cee0a19e-b296-4bd7-9f9c-7d8eeef88138/</link>
       <pubDate>Tue, 25 Sep 2018 16:22:01 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/cee0a19e-b296-4bd7-9f9c-7d8eeef88138/</guid>
+      <guid>https://rengotaku.github.io/posts/cee0a19e-b296-4bd7-9f9c-7d8eeef88138/</guid>
       <description>参考の構成 Ruby on Rails で Web API のパラメータをバリデーションする | MMMブログ Validating REST queries with Rails (Example) 変数への代入を簡素化 def self.attr_accessor(*vars) @@attributes ||= [] @@attributes.concat vars super end def attributes @@attributes end Rubyのクラ</description>
     </item>
     
     <item>
       <title>APIのステータスコード</title>
-      <link>https://www.vegetable.blog.v41.me/posts/fec80f0e-63ab-4672-ad46-74218498a94a/</link>
+      <link>https://rengotaku.github.io/posts/fec80f0e-63ab-4672-ad46-74218498a94a/</link>
       <pubDate>Tue, 22 May 2018 10:25:27 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/fec80f0e-63ab-4672-ad46-74218498a94a/</guid>
+      <guid>https://rengotaku.github.io/posts/fec80f0e-63ab-4672-ad46-74218498a94a/</guid>
       <description>1xx Informational Status Code Status Message Symbol 100 Continue :continue 101 Switching Protocols :switching_protocols 102 Processing :processing 2xx Success Status Code Status Message Symbol 200 OK :ok 201 Created :created 202 Accepted :accepted 203 Non-Authoritative Information :non_authoritative_information 204 No Content :no_content 205 Reset Content :reset_content 206 Partial Content :partial_content 207 Multi-Status :multi_status 226 IM Used :im_used 3xx Redirection Status Code Status Message Symbol 300 Multiple Choices :multiple_choices 301 Moved Permanently</description>
     </item>
     
     <item>
       <title>API確認ツール</title>
-      <link>https://www.vegetable.blog.v41.me/posts/1bea6768-7ee6-4ed5-be22-bde0842305d1/</link>
+      <link>https://rengotaku.github.io/posts/1bea6768-7ee6-4ed5-be22-bde0842305d1/</link>
       <pubDate>Mon, 14 May 2018 11:41:03 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/1bea6768-7ee6-4ed5-be22-bde0842305d1/</guid>
+      <guid>https://rengotaku.github.io/posts/1bea6768-7ee6-4ed5-be22-bde0842305d1/</guid>
       <description>Restlet Client - REST API Testing - Chrome ウェブストア</description>
     </item>
     

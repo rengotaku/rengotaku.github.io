@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pug on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/pug/</link>
+    <link>https://rengotaku.github.io/tags/pug/</link>
     <description>Recent content in pug on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Fri, 23 Aug 2019 19:09:12 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/pug/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/pug/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>pugを使用する際に参考にしたサイト</title>
-      <link>https://www.vegetable.blog.v41.me/posts/2431ed9e-ff55-409a-9588-df18432def81/</link>
+      <link>https://rengotaku.github.io/posts/2431ed9e-ff55-409a-9588-df18432def81/</link>
       <pubDate>Fri, 23 Aug 2019 19:09:12 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/2431ed9e-ff55-409a-9588-df18432def81/</guid>
+      <guid>https://rengotaku.github.io/posts/2431ed9e-ff55-409a-9588-df18432def81/</guid>
       <description>htmlからの変換 HTML to PUG - Free HTML to PUG Online Converter</description>
     </item>
     

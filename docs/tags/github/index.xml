@@ -2,76 +2,76 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>github on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/github/</link>
+    <link>https://rengotaku.github.io/tags/github/</link>
     <description>Recent content in github on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Thu, 03 Oct 2019 12:58:25 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>railsでissue(バグ)のあげ方</title>
-      <link>https://www.vegetable.blog.v41.me/posts/8f24c929-ebd0-4976-b007-fbbb5d7093e4/</link>
+      <link>https://rengotaku.github.io/posts/8f24c929-ebd0-4976-b007-fbbb5d7093e4/</link>
       <pubDate>Thu, 03 Oct 2019 12:58:25 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/8f24c929-ebd0-4976-b007-fbbb5d7093e4/</guid>
+      <guid>https://rengotaku.github.io/posts/8f24c929-ebd0-4976-b007-fbbb5d7093e4/</guid>
       <description>Can you create an executable test script using one of the templates here, that would demonstrate the problem you are seeing? ActiveRecord 5: method_missing&#39;: undefined method helper&amp;rsquo; for MyMailer · Issue #27359 · rails/rails</description>
     </item>
     
     <item>
       <title>いつもと違うアカウントのPCで自分のリポジトリにpushしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/8c3152ba-44d9-4e8f-8183-34a67606c524/</link>
+      <link>https://rengotaku.github.io/posts/8c3152ba-44d9-4e8f-8183-34a67606c524/</link>
       <pubDate>Tue, 09 Jul 2019 18:48:33 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/8c3152ba-44d9-4e8f-8183-34a67606c524/</guid>
+      <guid>https://rengotaku.github.io/posts/8c3152ba-44d9-4e8f-8183-34a67606c524/</guid>
       <description>事象 別PCで、グローバルにいつもと違うユーザを使用しており、 プライベートのリポジトリにpushしようとしたらエラーが発生する。 $ git push -u origin master ERROR:</description>
     </item>
     
     <item>
       <title>CODEOWNERでチームを設定しているが機能しない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/bf686840-6604-489b-a07b-b01766ad1faf/</link>
+      <link>https://rengotaku.github.io/posts/bf686840-6604-489b-a07b-b01766ad1faf/</link>
       <pubDate>Wed, 06 Mar 2019 11:31:39 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/bf686840-6604-489b-a07b-b01766ad1faf/</guid>
+      <guid>https://rengotaku.github.io/posts/bf686840-6604-489b-a07b-b01766ad1faf/</guid>
       <description>チーム設定の Team visibility の状態を Visible にする Solved: CODEOWNERS works with users but not teams - GitHub Community Forum</description>
     </item>
     
     <item>
       <title>web上でPRの更新に対して通知がでるように設定</title>
-      <link>https://www.vegetable.blog.v41.me/posts/d1156c5a-c96c-45d8-8a32-732e1404b1d3/</link>
+      <link>https://rengotaku.github.io/posts/d1156c5a-c96c-45d8-8a32-732e1404b1d3/</link>
       <pubDate>Tue, 18 Dec 2018 16:38:35 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/d1156c5a-c96c-45d8-8a32-732e1404b1d3/</guid>
+      <guid>https://rengotaku.github.io/posts/d1156c5a-c96c-45d8-8a32-732e1404b1d3/</guid>
       <description>Settings -&amp;gt; Notifications を開き、 Participating , Watching のwebをチェックする。 通知は一度見ると消えてしまう為、再度閲覧したい場合はトップの `Pull requests` -&amp;gt; `Review requests` で可能。</description>
     </item>
     
     <item>
       <title>httpsでcloneできない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/31cfb886-589d-43b4-9a02-29e7d6153fb4/</link>
+      <link>https://rengotaku.github.io/posts/31cfb886-589d-43b4-9a02-29e7d6153fb4/</link>
       <pubDate>Fri, 14 Dec 2018 18:14:19 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/31cfb886-589d-43b4-9a02-29e7d6153fb4/</guid>
+      <guid>https://rengotaku.github.io/posts/31cfb886-589d-43b4-9a02-29e7d6153fb4/</guid>
       <description>対応 下記ファイルにgithubのログイン情報を作成して保存。 machine github.com login username password xxxxxxx 事象 $ git clone --recursive https://github.com/user/repo.git Cloning into &#39;repo&#39;... remote: Repository not found. fatal: repository &#39;https://github.com/user/repo.git&#39; not found メモ 単品だと、 https://username:password@github.com/~... で対応できるが</description>
     </item>
     
     <item>
       <title>githubで障害が発生していないか確認</title>
-      <link>https://www.vegetable.blog.v41.me/posts/5e6088b4-4629-4067-9496-03aee0f778cb/</link>
+      <link>https://rengotaku.github.io/posts/5e6088b4-4629-4067-9496-03aee0f778cb/</link>
       <pubDate>Tue, 10 Jul 2018 17:34:23 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/5e6088b4-4629-4067-9496-03aee0f778cb/</guid>
+      <guid>https://rengotaku.github.io/posts/5e6088b4-4629-4067-9496-03aee0f778cb/</guid>
       <description>GitHub Status</description>
     </item>
     
     <item>
       <title>githubのプルリクのテンプレート</title>
-      <link>https://www.vegetable.blog.v41.me/posts/c80a5223-9198-4a80-ae1f-6411d19f63b8/</link>
+      <link>https://rengotaku.github.io/posts/c80a5223-9198-4a80-ae1f-6411d19f63b8/</link>
       <pubDate>Mon, 07 May 2018 14:13:43 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/c80a5223-9198-4a80-ae1f-6411d19f63b8/</guid>
+      <guid>https://rengotaku.github.io/posts/c80a5223-9198-4a80-ae1f-6411d19f63b8/</guid>
       <description>リポジトリに.github/PULL_REQUEST_TEMPLATE.mdを追加する。 ## 概要 &amp;lt;!-- [必須] 変更の目的、理由、背景、関連するJI</description>
     </item>
     

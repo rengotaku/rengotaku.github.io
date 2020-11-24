@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>lambda on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/lambda/</link>
+    <link>https://rengotaku.github.io/tags/lambda/</link>
     <description>Recent content in lambda on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Thu, 29 Oct 2020 22:16:52 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/lambda/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/lambda/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Serverlessでdeployをする際に必要な権限</title>
-      <link>https://www.vegetable.blog.v41.me/posts/c8968a24-0b87-4521-b6f8-da267356ae85/</link>
+      <link>https://rengotaku.github.io/posts/c8968a24-0b87-4521-b6f8-da267356ae85/</link>
       <pubDate>Thu, 29 Oct 2020 22:16:52 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/c8968a24-0b87-4521-b6f8-da267356ae85/</guid>
+      <guid>https://rengotaku.github.io/posts/c8968a24-0b87-4521-b6f8-da267356ae85/</guid>
       <description>{ &amp;#34;Version&amp;#34;: &amp;#34;2012-10-17&amp;#34;, &amp;#34;Statement&amp;#34;: [ { &amp;#34;Effect&amp;#34;: &amp;#34;Allow&amp;#34;, &amp;#34;Action&amp;#34;: [ &amp;#34;cloudformation:DescribeChangeSet&amp;#34;, &amp;#34;cloudformation:DescribeStackResources&amp;#34;, &amp;#34;cloudformation:DescribeStacks&amp;#34;, &amp;#34;cloudformation:GetTemplate&amp;#34;, &amp;#34;cloudformation:ListStackResources&amp;#34;, &amp;#34;cloudwatch:*&amp;#34;, &amp;#34;cognito-identity:ListIdentityPools&amp;#34;, &amp;#34;cognito-sync:GetCognitoEvents&amp;#34;, &amp;#34;cognito-sync:SetCognitoEvents&amp;#34;, &amp;#34;dynamodb:*&amp;#34;, &amp;#34;ec2:DescribeSecurityGroups&amp;#34;, &amp;#34;ec2:DescribeSubnets&amp;#34;, &amp;#34;ec2:DescribeVpcs&amp;#34;, &amp;#34;events:*&amp;#34;, &amp;#34;iam:GetPolicy&amp;#34;, &amp;#34;iam:GetPolicyVersion&amp;#34;, &amp;#34;iam:GetRole&amp;#34;, &amp;#34;iam:GetRolePolicy&amp;#34;, &amp;#34;iam:ListAttachedRolePolicies&amp;#34;, &amp;#34;iam:ListRolePolicies&amp;#34;, &amp;#34;iam:ListRoles&amp;#34;, &amp;#34;iam:PassRole&amp;#34;, &amp;#34;iot:AttachPrincipalPolicy&amp;#34;, &amp;#34;iot:AttachThingPrincipal&amp;#34;, &amp;#34;iot:CreateKeysAndCertificate&amp;#34;, &amp;#34;iot:CreatePolicy&amp;#34;, &amp;#34;iot:CreateThing&amp;#34;, &amp;#34;iot:CreateTopicRule&amp;#34;, &amp;#34;iot:DescribeEndpoint&amp;#34;, &amp;#34;iot:GetTopicRule&amp;#34;, &amp;#34;iot:ListPolicies&amp;#34;, &amp;#34;iot:ListThings&amp;#34;, &amp;#34;iot:ListTopicRules&amp;#34;, &amp;#34;iot:ReplaceTopicRule&amp;#34;, &amp;#34;kinesis:DescribeStream&amp;#34;, &amp;#34;kinesis:ListStreams&amp;#34;, &amp;#34;kinesis:PutRecord&amp;#34;, &amp;#34;kms:ListAliases&amp;#34;, &amp;#34;lambda:*&amp;#34;, &amp;#34;logs:*&amp;#34;, &amp;#34;s3:*&amp;#34;, &amp;#34;sns:ListSubscriptions&amp;#34;, &amp;#34;sns:ListSubscriptionsByTopic&amp;#34;, &amp;#34;sns:ListTopics&amp;#34;, &amp;#34;sns:Publish&amp;#34;, &amp;#34;sns:Subscribe&amp;#34;, &amp;#34;sns:Unsubscribe&amp;#34;, &amp;#34;sqs:ListQueues&amp;#34;, &amp;#34;sqs:SendMessage&amp;#34;, &amp;#34;tag:GetResources&amp;#34;, &amp;#34;xray:PutTelemetryRecords&amp;#34;, &amp;#34;xray:PutTraceSegments&amp;#34; ], &amp;#34;Resource&amp;#34;: &amp;#34;*&amp;#34; } ] } { &amp;#34;Version&amp;#34;:</description>
     </item>
     
     <item>
       <title>get-log-eventsにてクラウドウォッチのログを取得</title>
-      <link>https://www.vegetable.blog.v41.me/posts/fa16caf8-964e-4fa3-a4f5-12f431e7aadb/</link>
+      <link>https://rengotaku.github.io/posts/fa16caf8-964e-4fa3-a4f5-12f431e7aadb/</link>
       <pubDate>Tue, 20 Nov 2018 11:15:59 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/fa16caf8-964e-4fa3-a4f5-12f431e7aadb/</guid>
+      <guid>https://rengotaku.github.io/posts/fa16caf8-964e-4fa3-a4f5-12f431e7aadb/</guid>
       <description>aws logs get-log-events --log-group-name &amp;quot;/path/to/group&amp;quot; \ --log-stream-name &#39;YYYY/MM/DD/[$LATEST]xxxxxxxxxxxxxxxxxxxxx&#39; \ --start-time $(date -d &#39;2018-11-19T04:19:35.000Z&#39; &#39;+%s%3N&#39;) --end-time $(date -d &#39;2018-11-19T06:00:00.000Z&#39; &#39;+%s%3N&#39;) \ --region ap-northeast-1 --profile xxxxx --start-from-head --start-from-head が重要 { &amp;quot;nextForwardToken&amp;quot;: &amp;quot;f/xxxxxxxxxxx&amp;quot;, &amp;quot;events&amp;quot;: [ { &amp;quot;ingestionTime&amp;quot;: 1542601190191, &amp;quot;timestamp&amp;quot;: 1542601175153, &amp;quot;message&amp;quot;: &amp;quot;ERROR-MESSAGE&amp;quot; }, { &amp;quot;ingestionTime&amp;quot;: 1542601190191, &amp;quot;timestamp&amp;quot;: 1542601175153, &amp;quot;message&amp;quot;: &amp;quot;ERROR-MESSAGE&amp;quot; }, . . . ・timestampは `$ date -d @1542601175 +&amp;quot;%Y/%m/%d %</description>
     </item>
     
     <item>
       <title>バージョンを削除</title>
-      <link>https://www.vegetable.blog.v41.me/posts/94302818-feb8-46cd-b921-1e323415a3f3/</link>
+      <link>https://rengotaku.github.io/posts/94302818-feb8-46cd-b921-1e323415a3f3/</link>
       <pubDate>Wed, 24 Oct 2018 17:07:41 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/94302818-feb8-46cd-b921-1e323415a3f3/</guid>
+      <guid>https://rengotaku.github.io/posts/94302818-feb8-46cd-b921-1e323415a3f3/</guid>
       <description>functionが、lambda_funの場合 現状を確認 $ aws lambda list-versions-by-function \ --function-name lambda_fun { &amp;quot;Versions&amp;quot;: [ { &amp;quot;TracingConfig&amp;quot;: { &amp;quot;Mode&amp;quot;: &amp;quot;PassThrough&amp;quot; }, &amp;quot;Version&amp;quot;: &amp;quot;$LATEST&amp;quot;, &amp;quot;CodeSha256&amp;quot;: &amp;quot;xxxx=&amp;quot;, &amp;quot;FunctionName&amp;quot;: &amp;quot;lambda_fun&amp;quot;, &amp;quot;MemorySize&amp;quot;: 1234, &amp;quot;RevisionId&amp;quot;: &amp;quot;xxxx&amp;quot;, &amp;quot;CodeSize&amp;quot;: 1234, &amp;quot;FunctionArn&amp;quot;: &amp;quot;arn:aws:lambda:ap-northeast-1:1234:function:lambda_fun:$LATEST&amp;quot;, # バージョンが最新 &amp;quot;Handler&amp;quot;: &amp;quot;index.handler&amp;quot;, &amp;quot;Role&amp;quot;:</description>
     </item>
     
     <item>
       <title>バージョン管理した際のarn(エンドポイント)の変化</title>
-      <link>https://www.vegetable.blog.v41.me/posts/75004ce5-80af-4b74-905f-eaa9a2114572/</link>
+      <link>https://rengotaku.github.io/posts/75004ce5-80af-4b74-905f-eaa9a2114572/</link>
       <pubDate>Wed, 24 Oct 2018 16:53:00 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/75004ce5-80af-4b74-905f-eaa9a2114572/</guid>
+      <guid>https://rengotaku.github.io/posts/75004ce5-80af-4b74-905f-eaa9a2114572/</guid>
       <description>最新バージョンを参照 arn:aws:lambda:ap-northeast-x:xxxxxx:function:xxxxxx arn:aws:lambda:ap-northeast-x:xxxxxx:function:xxxxxx:$LATEST 特定バージョンを参照 arn:aws:lambda:ap-northeast-x:xxxxxx:function:xxxxxx:1 AWS Lambdaバージョン管理のススメ</description>
     </item>
     
     <item>
       <title>ラムダの呼び出し回数メトリクスを取得</title>
-      <link>https://www.vegetable.blog.v41.me/posts/3f178e58-317d-4a14-8595-e18bac3209ca/</link>
+      <link>https://rengotaku.github.io/posts/3f178e58-317d-4a14-8595-e18bac3209ca/</link>
       <pubDate>Wed, 05 Sep 2018 15:09:24 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/3f178e58-317d-4a14-8595-e18bac3209ca/</guid>
+      <guid>https://rengotaku.github.io/posts/3f178e58-317d-4a14-8595-e18bac3209ca/</guid>
       <description>$ aws cloudwatch list-metrics --namespace AWS/Lambda --metric-name Invocations $ aws cloudwatch get-metric-statistics --namespace AWS/Lambda --metric-name Invocations \ --dimensions Name=FunctionName,Value=XXXXX --statistics Maximum \ --start-time 2018-08-01T00:00:00 --end-time 2018-09-04T23:59:59 --period 360 get-metric-statistics — AWS CLI 1.16.7 Command Reference list-functions — AWS CLI 1.16.7 Command Referenceˆ¨</description>
     </item>
     
     <item>
       <title>Lambdaにアップロードしたファイルを取得</title>
-      <link>https://www.vegetable.blog.v41.me/posts/7bbe1dc6-aef9-4916-bd48-06ea2b196d8b/</link>
+      <link>https://rengotaku.github.io/posts/7bbe1dc6-aef9-4916-bd48-06ea2b196d8b/</link>
       <pubDate>Tue, 24 Apr 2018 14:42:57 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/7bbe1dc6-aef9-4916-bd48-06ea2b196d8b/</guid>
+      <guid>https://rengotaku.github.io/posts/7bbe1dc6-aef9-4916-bd48-06ea2b196d8b/</guid>
       <description>aws-cliでlambda get-functionを実行 $ aws lambda get-function --function-name [your function name] { &amp;quot;Code&amp;quot;: { &amp;quot;RepositoryType&amp;quot;: &amp;quot;S3&amp;quot;, &amp;quot;Location&amp;quot;: &amp;quot;https://awslambda-ap-ne-1-tasks.s3.ap-northeast-1.amazonaws.com/snapshots...&amp;quot; }, . . . } ダウンロード 取得したLocationのUR</description>
     </item>
     

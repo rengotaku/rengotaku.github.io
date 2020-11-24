@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>scss on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/scss/</link>
+    <link>https://rengotaku.github.io/tags/scss/</link>
     <description>Recent content in scss on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Mon, 08 Jul 2019 11:46:08 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/scss/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/scss/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>アクションによって別の要素のスタイルを変更</title>
-      <link>https://www.vegetable.blog.v41.me/posts/7b1b8c12-3466-4fbd-bb9b-fddfee301cec/</link>
+      <link>https://rengotaku.github.io/posts/7b1b8c12-3466-4fbd-bb9b-fddfee301cec/</link>
       <pubDate>Mon, 08 Jul 2019 11:46:08 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/7b1b8c12-3466-4fbd-bb9b-fddfee301cec/</guid>
+      <guid>https://rengotaku.github.io/posts/7b1b8c12-3466-4fbd-bb9b-fddfee301cec/</guid>
       <description>動作イメージ ※文字の位置がずれているのは無視して下さい 実装 /* ①要素内 */ .post-line { ul.actions { opacity: 0; } &amp;amp;:hover .actions { opacity: 1; } /* OR */ &amp;amp;:hover &amp;gt; .col-md-3 .actions { opacity: 1; } } /* ②要素と同位置 */ .line</description>
     </item>
     
     <item>
       <title>ラベルのデザイン</title>
-      <link>https://www.vegetable.blog.v41.me/posts/4a53119f-0a1b-4456-9ef5-8cacd5febdb4/</link>
+      <link>https://rengotaku.github.io/posts/4a53119f-0a1b-4456-9ef5-8cacd5febdb4/</link>
       <pubDate>Tue, 02 Oct 2018 11:03:26 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/4a53119f-0a1b-4456-9ef5-8cacd5febdb4/</guid>
+      <guid>https://rengotaku.github.io/posts/4a53119f-0a1b-4456-9ef5-8cacd5febdb4/</guid>
       <description>ul { margin-left: 0; padding-left: 0; li { border-style: none; display: inline-block; a { background: #e89980; color: #fff; padding: 5px 12px; -webkit-border-radius: 24px; -moz-border-radius: 24px; border-bottom: none; &amp;amp;:active { background: #777; color: #fff; } &amp;amp;:hover { background: #eee; color: #e89980; } } } } [CSS]ナビゲーションに明確なラベルを与えて実装す</description>
     </item>
     
     <item>
       <title>saccをコンパイルするとlinear-gradientでSyntaxエラー</title>
-      <link>https://www.vegetable.blog.v41.me/posts/d42b09b1-0f8c-424f-94ec-ca2fe144dba7/</link>
+      <link>https://rengotaku.github.io/posts/d42b09b1-0f8c-424f-94ec-ca2fe144dba7/</link>
       <pubDate>Wed, 25 Jul 2018 10:17:59 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/d42b09b1-0f8c-424f-94ec-ca2fe144dba7/</guid>
+      <guid>https://rengotaku.github.io/posts/d42b09b1-0f8c-424f-94ec-ca2fe144dba7/</guid>
       <description>概要 gulpでscssをコンパイルしようとすると下記のエラーが発生する Gradient has outdated direction syntax. New syntax is like `to left` instead of `right`.` 対応 linear-gradient(top -&amp;gt; linear-gradient(to topに修正 Gradient has outdated direction syntax. New syntax is like &amp;ldquo;to</description>
     </item>
     

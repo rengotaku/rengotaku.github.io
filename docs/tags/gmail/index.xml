@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gmail on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/gmail/</link>
+    <link>https://rengotaku.github.io/tags/gmail/</link>
     <description>Recent content in gmail on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Wed, 31 Oct 2018 15:19:26 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/gmail/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/gmail/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>よく使うショートカットキー一覧</title>
-      <link>https://www.vegetable.blog.v41.me/posts/4f8585a9-f8b7-4974-aba5-23bbef758eb7/</link>
+      <link>https://rengotaku.github.io/posts/4f8585a9-f8b7-4974-aba5-23bbef758eb7/</link>
       <pubDate>Wed, 31 Oct 2018 15:19:26 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/4f8585a9-f8b7-4974-aba5-23bbef758eb7/</guid>
+      <guid>https://rengotaku.github.io/posts/4f8585a9-f8b7-4974-aba5-23bbef758eb7/</guid>
       <description>動作 キー 未読スレッドを選択 * + u 既読にする Shift + i 新規メールを作成 c Gmail のキーボード ショートカット - パソコン - Gmail ヘルプ</description>
     </item>
     

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>symfony1.3 on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/symfony1.3/</link>
+    <link>https://rengotaku.github.io/tags/symfony1.3/</link>
     <description>Recent content in symfony1.3 on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Mon, 01 Oct 2018 14:05:07 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/symfony1.3/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/symfony1.3/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>パラメータを全て確認したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/dd63820e-8ccd-466e-a432-c7831804d675/</link>
+      <link>https://rengotaku.github.io/posts/dd63820e-8ccd-466e-a432-c7831804d675/</link>
       <pubDate>Mon, 01 Oct 2018 14:05:07 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/dd63820e-8ccd-466e-a432-c7831804d675/</guid>
+      <guid>https://rengotaku.github.io/posts/dd63820e-8ccd-466e-a432-c7831804d675/</guid>
       <description>$postParameters = $request-&amp;gt;getPostParameters(); print_r($postParameters, true); GETの場合は、getGetParametersを使用する</description>
     </item>
     
     <item>
       <title>エラー内容を全て表示</title>
-      <link>https://www.vegetable.blog.v41.me/posts/f4fab60d-adeb-4218-98b3-472101f683a3/</link>
+      <link>https://rengotaku.github.io/posts/f4fab60d-adeb-4218-98b3-472101f683a3/</link>
       <pubDate>Thu, 27 Sep 2018 17:51:29 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/f4fab60d-adeb-4218-98b3-472101f683a3/</guid>
+      <guid>https://rengotaku.github.io/posts/f4fab60d-adeb-4218-98b3-472101f683a3/</guid>
       <description>&amp;lt;ul class=&amp;#34;error_list&amp;#34;&amp;gt; &amp;lt;?php foreach( $form-&amp;gt;getGlobalErrors() as $name =&amp;gt; $error ) : ?&amp;gt; &amp;lt;li&amp;gt;&amp;lt;?php echo $name ?&amp;gt; : &amp;lt;?php echo $error ?&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;?php endforeach ?&amp;gt; &amp;lt;?php $errors = $form-&amp;gt;getErrorSchema()-&amp;gt;getErrors() ?&amp;gt; &amp;lt;?php if ( count($errors) &amp;gt; 0 ) : ?&amp;gt; &amp;lt;?php foreach( $errors as $name =&amp;gt; $error ) : ?&amp;gt; &amp;lt;li&amp;gt;&amp;lt;?php echo $name ?&amp;gt; : &amp;lt;?php echo $error ?&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;?php endforeach ?&amp;gt; &amp;lt;?php endif ?&amp;gt; &amp;lt;/ul&amp;gt; Symfony 1.4 get all form errors.</description>
     </item>
     

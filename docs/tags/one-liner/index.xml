@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>one-liner on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/one-liner/</link>
+    <link>https://rengotaku.github.io/tags/one-liner/</link>
     <description>Recent content in one-liner on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Wed, 15 Aug 2018 17:18:37 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ワンライナーでCSVを扱う</title>
-      <link>https://www.vegetable.blog.v41.me/posts/91a083ff-58ad-46fb-9fab-7fccd0066e52/</link>
+      <link>https://rengotaku.github.io/posts/91a083ff-58ad-46fb-9fab-7fccd0066e52/</link>
       <pubDate>Wed, 15 Aug 2018 17:18:37 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/91a083ff-58ad-46fb-9fab-7fccd0066e52/</guid>
+      <guid>https://rengotaku.github.io/posts/91a083ff-58ad-46fb-9fab-7fccd0066e52/</guid>
       <description>ruby -rcsv -e&amp;#34;CSV(STDIN).each{|r|p r.join(&amp;#39;,&amp;#39;) if [&amp;#39;400006210&amp;#39;].include? r[0] }&amp;#34; &amp;lt; sample.csv Rubyで標準入力からCSVをパース</description>
     </item>
     
     <item>
       <title>nginxのログの加工集</title>
-      <link>https://www.vegetable.blog.v41.me/posts/7ead2906-7480-4095-90ff-f0b0c9a9c93a/</link>
+      <link>https://rengotaku.github.io/posts/7ead2906-7480-4095-90ff-f0b0c9a9c93a/</link>
       <pubDate>Mon, 30 Jul 2018 11:06:00 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/7ead2906-7480-4095-90ff-f0b0c9a9c93a/</guid>
+      <guid>https://rengotaku.github.io/posts/7ead2906-7480-4095-90ff-f0b0c9a9c93a/</guid>
       <description>ユニークなエラー内容を取得 ログ [Mon Jul 30 05:10:33.786914 2018] [:error] [pid 5408] [client 40.77.167.180:11290] PHP Notice: Undefined variable: target_name in /home/path/to/dependencies.php on line 216 ワンライナー cat /var/log/httpd/sll_error_log | grep &amp;quot;Mon Jul 30 05:&amp;quot; | awk -F &#39;] &#39; &#39;{print $5}&#39; | uniq -c | sort 結果 1 PHP Notice: Undefined index: is_new in</description>
     </item>
     

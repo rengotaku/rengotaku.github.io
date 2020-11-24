@@ -2,1228 +2,1228 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rails on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/rails/</link>
+    <link>https://rengotaku.github.io/tags/rails/</link>
     <description>Recent content in rails on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Tue, 24 Nov 2020 16:07:03 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/rails/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/rails/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Activejobでリトライされた場合でも初回時と変わらない値知りたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/ecd8a0fe-8f12-4479-9ffa-407c78519b2c/</link>
+      <link>https://rengotaku.github.io/posts/ecd8a0fe-8f12-4479-9ffa-407c78519b2c/</link>
       <pubDate>Tue, 24 Nov 2020 16:07:03 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/ecd8a0fe-8f12-4479-9ffa-407c78519b2c/</guid>
+      <guid>https://rengotaku.github.io/posts/ecd8a0fe-8f12-4479-9ffa-407c78519b2c/</guid>
       <description>job_idはretry_onで再実行されても変わらない。 (ex. aaa4e656-9afa-4fc9-88c9-909ea8bea17e) provider_job_idは実行毎に変わる。 (ex. e341c2316979e27e757a4712) 参考 ActiveJob::Core</description>
     </item>
     
     <item>
       <title>railsの環境変数を変えたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/4482a32b-fc91-4243-ab80-fb6f36e3770f/</link>
+      <link>https://rengotaku.github.io/posts/4482a32b-fc91-4243-ab80-fb6f36e3770f/</link>
       <pubDate>Tue, 27 Oct 2020 14:05:23 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/4482a32b-fc91-4243-ab80-fb6f36e3770f/</guid>
+      <guid>https://rengotaku.github.io/posts/4482a32b-fc91-4243-ab80-fb6f36e3770f/</guid>
       <description>Rails.env.define_singleton_method(:trial?, -&amp;gt; { true }) rspecを使用の際は、Rails.env.stub(:development? =&amp;gt; true) で良い rspec2 - mock Rails.env.development? using rspec - Stack Overflow</description>
     </item>
     
     <item>
       <title>ローカルで開発でコントローラーなどの修正が反映されない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/bda229f2-f7c4-4ba2-9881-b3eabe75b0b3/</link>
+      <link>https://rengotaku.github.io/posts/bda229f2-f7c4-4ba2-9881-b3eabe75b0b3/</link>
       <pubDate>Wed, 07 Oct 2020 15:19:26 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/bda229f2-f7c4-4ba2-9881-b3eabe75b0b3/</guid>
+      <guid>https://rengotaku.github.io/posts/bda229f2-f7c4-4ba2-9881-b3eabe75b0b3/</guid>
       <description>解決 config/environments/development.rb の下記をコメントアウトしてサーバを再起動する。 config.file_watcher = ActiveSupport::EventedFileUpdateChecker 根本的な対応策は分かっておらず。 参考 Controllers and models don&amp;rsquo;t reload in dev with Puma Workers enabled · Issue #24990 · rails/rails</description>
     </item>
     
     <item>
       <title>更新を行う前に特定の属性に変更があった場合にチェックを行うスマートな方法</title>
-      <link>https://www.vegetable.blog.v41.me/posts/9c37bd49-cf66-4e7a-9098-ab6ebb71ec51/</link>
+      <link>https://rengotaku.github.io/posts/9c37bd49-cf66-4e7a-9098-ab6ebb71ec51/</link>
       <pubDate>Wed, 30 Sep 2020 13:32:33 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/9c37bd49-cf66-4e7a-9098-ab6ebb71ec51/</guid>
+      <guid>https://rengotaku.github.io/posts/9c37bd49-cf66-4e7a-9098-ab6ebb71ec51/</guid>
       <description>ソース class Code &amp;lt; ApplicationRecord validate :already_used_code, if: -&amp;gt; { will_save_change_to_code_name? } private def already_used_code # validate somethings end end 行っている事 更新前にcode_nameに変更があった場合に検証を行う 参考 ActiveRecord::AttributeMethods::Dirty</description>
     </item>
     
     <item>
       <title>ロックとトランザクションの検証</title>
-      <link>https://www.vegetable.blog.v41.me/posts/7a558e73-d48b-4304-b444-74afe9843a67/</link>
+      <link>https://rengotaku.github.io/posts/7a558e73-d48b-4304-b444-74afe9843a67/</link>
       <pubDate>Wed, 30 Sep 2020 12:12:13 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/7a558e73-d48b-4304-b444-74afe9843a67/</guid>
+      <guid>https://rengotaku.github.io/posts/7a558e73-d48b-4304-b444-74afe9843a67/</guid>
       <description>検証結果 lockしたレコードはtransactionがcommitされるまでロックされ続ける。 実行結果 コンソール1 コンソール2 検索前: 03:01:03.185, 100 ↓</description>
     </item>
     
     <item>
       <title>可逆式で暗号化を実装してみた</title>
-      <link>https://www.vegetable.blog.v41.me/posts/2012302b-4a4b-4a41-9a5f-28f76481b88e/</link>
+      <link>https://rengotaku.github.io/posts/2012302b-4a4b-4a41-9a5f-28f76481b88e/</link>
       <pubDate>Mon, 28 Sep 2020 12:23:48 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/2012302b-4a4b-4a41-9a5f-28f76481b88e/</guid>
+      <guid>https://rengotaku.github.io/posts/2012302b-4a4b-4a41-9a5f-28f76481b88e/</guid>
       <description>ソース # frozen_string_literal: true # NOTE: 可逆式で暗号化して保存する # 対象をcodeとしたい場合 # * テーブルに encrypted_code を定義する # * テーブルに digested_code を定義する(indexに使用</description>
     </item>
     
     <item>
       <title>可逆式、不可逆式で暗号化したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/ab5008a3-27a0-4053-8632-8b6ff84fd0fe/</link>
+      <link>https://rengotaku.github.io/posts/ab5008a3-27a0-4053-8632-8b6ff84fd0fe/</link>
       <pubDate>Thu, 24 Sep 2020 17:10:38 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/ab5008a3-27a0-4053-8632-8b6ff84fd0fe/</guid>
+      <guid>https://rengotaku.github.io/posts/ab5008a3-27a0-4053-8632-8b6ff84fd0fe/</guid>
       <description>不可逆式 Class: BCrypt::Password — Documentation for codahale/bcrypt-ruby (master) encrypted_data = BCrypt::Password.create(&amp;#34;test12345&amp;#34;) # $2a$12$5L9lnrTYgFS5x/pOs15Y3OHTSS1A4ThOlKzbWYJf.AlJMXkeK8AtK encrypted_data == &amp;#34;test12345&amp;#34; # true 可逆式 A simple way to encrypt and decrypt in Rails 5 | by Daveyon Mayne | Medium key = Rails.application.credentials.config[:secret_key_base][1..32] # or ENV[&amp;#34;SECRET_KEY_BASE&amp;#34;][1..32] in trial, staging or production crypt = ActiveSupport::MessageEncryptor.new(key) consumer_key = &amp;#34;test12345&amp;#34; encrypted_data = crypt.encrypt_and_sign(consumer_key, purpose: :campaign_code) # or crypt.encrypt_and_sign(self.consumer_key) puts encrypted_data # UscL3xFA6Lv5Ad/hJz/zl5N37Q==--tgjUj9WFgB1OWIp1--JuYB0iFWEfqYRtfXoZiRvg== puts</description>
     </item>
     
     <item>
       <title>active_model_serializersでネストが深いreferencesが無視される</title>
-      <link>https://www.vegetable.blog.v41.me/posts/f8c8ca2a-5e46-4336-bc9a-6c0fcec2f58b/</link>
+      <link>https://rengotaku.github.io/posts/f8c8ca2a-5e46-4336-bc9a-6c0fcec2f58b/</link>
       <pubDate>Thu, 16 Jul 2020 11:29:40 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/f8c8ca2a-5e46-4336-bc9a-6c0fcec2f58b/</guid>
+      <guid>https://rengotaku.github.io/posts/f8c8ca2a-5e46-4336-bc9a-6c0fcec2f58b/</guid>
       <description>Rails 5, ActiveRecord has_many for nested Serializers not used? · Issue #2011 · rails-api/active_model_serializers より render json: resource, include: &amp;#34;shipment_service_types,shipment_service_types.time_windows&amp;#34; ネスト分をincludeに記載する必要がある。 もし深さが読めない場合は、**とすれば良い。</description>
     </item>
     
     <item>
       <title>railsでサブドメイン間でsessionを共有しないようにする</title>
-      <link>https://www.vegetable.blog.v41.me/posts/580cad9e-2fc2-4e0a-a582-c915c23e7413/</link>
+      <link>https://rengotaku.github.io/posts/580cad9e-2fc2-4e0a-a582-c915c23e7413/</link>
       <pubDate>Tue, 14 Jul 2020 18:10:51 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/580cad9e-2fc2-4e0a-a582-c915c23e7413/</guid>
+      <guid>https://rengotaku.github.io/posts/580cad9e-2fc2-4e0a-a582-c915c23e7413/</guid>
       <description>解決 Share session (cookies) between subdomains in Rails? Ultimately I found that I needed to state the tld_length (top level domain length) in that expression. The default tld_length is 1 while example.lvh.me has a tld_length of 2 and 127.0.0.1.xip.io has a tld_length of 5, for example. So what I had in the session_store.rb file for subdomains on lvh.me in development and whatever else in production was the below. /config/initializers/session_store.rb</description>
     </item>
     
     <item>
       <title>Railsでサービス層を作る際に参考にしたサイト</title>
-      <link>https://www.vegetable.blog.v41.me/posts/2c93eaff-af3f-483c-a9fe-f6cd8b58c4f8/</link>
+      <link>https://rengotaku.github.io/posts/2c93eaff-af3f-483c-a9fe-f6cd8b58c4f8/</link>
       <pubDate>Wed, 01 Jul 2020 20:07:52 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/2c93eaff-af3f-483c-a9fe-f6cd8b58c4f8/</guid>
+      <guid>https://rengotaku.github.io/posts/2c93eaff-af3f-483c-a9fe-f6cd8b58c4f8/</guid>
       <description>A Comprehensive Guide to Rails Service Objects | Toptal</description>
     </item>
     
     <item>
       <title>rspecのcontrollerとrequestのタイプ違い</title>
-      <link>https://www.vegetable.blog.v41.me/posts/3b804c9b-47db-4e45-aa32-163eb8d9e5bb/</link>
+      <link>https://rengotaku.github.io/posts/3b804c9b-47db-4e45-aa32-163eb8d9e5bb/</link>
       <pubDate>Fri, 26 Jun 2020 17:13:06 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/3b804c9b-47db-4e45-aa32-163eb8d9e5bb/</guid>
+      <guid>https://rengotaku.github.io/posts/3b804c9b-47db-4e45-aa32-163eb8d9e5bb/</guid>
       <description>解決 requestは複数のcontrollerを使用した場合に使用する。 controllerは単体の動作の確認をする為に確認する。 request spec - Request specs</description>
     </item>
     
     <item>
       <title>factorybotで関連テーブルの作成を簡易に行なっているのに引数を渡したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/cb6fde25-ff82-4b5b-b2ed-444d26e0da9f/</link>
+      <link>https://rengotaku.github.io/posts/cb6fde25-ff82-4b5b-b2ed-444d26e0da9f/</link>
       <pubDate>Mon, 22 Jun 2020 12:15:33 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/cb6fde25-ff82-4b5b-b2ed-444d26e0da9f/</guid>
+      <guid>https://rengotaku.github.io/posts/cb6fde25-ff82-4b5b-b2ed-444d26e0da9f/</guid>
       <description>解決 FactoryBot.define do factory :user_action_error do user user_action_history { association(:user_action_history, user: user) } end end 参考 Creating associations initialized via &amp;lsquo;build&amp;rsquo; no longer works in FactoryBot 5.0 · Issue #1255 · thoughtbot/factory_bot 事象 FactoryBot.define do factory :user_action_error do user user_action_history end end のように、has_many、has_one、bel</description>
     </item>
     
     <item>
       <title>ActiveRecordが発行するSQLをHookしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/030f1c25-ac39-4e09-8ce6-e5f2ae51e66e/</link>
+      <link>https://rengotaku.github.io/posts/030f1c25-ac39-4e09-8ce6-e5f2ae51e66e/</link>
       <pubDate>Wed, 20 May 2020 13:59:40 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/030f1c25-ac39-4e09-8ce6-e5f2ae51e66e/</guid>
+      <guid>https://rengotaku.github.io/posts/030f1c25-ac39-4e09-8ce6-e5f2ae51e66e/</guid>
       <description>解決 config/initializers/active_model_query_debug.rb module ActiveModelQueryDebug def log(query, *args) # &amp;#39;Model Load&amp;#39; are targeted if args.first&amp;amp;.end_with?(&amp;#34;Load&amp;#34;) Rails.logger.debug(&amp;#34;query: #{query}&amp;#34;) end super end end ActiveRecord::ConnectionAdapters::AbstractAdapter.prepend(ActiveModelQueryDebug) 動作 [1] pry(main)&amp;gt; User.first query: SELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1 User Load (1.3ms) SELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1 参考 active_record-sql_analyzer/sql_analyzer.rb at master · square/active_record-sql_analyzer</description>
     </item>
     
     <item>
       <title>ShrineでS3にアップロードする際のmetadataを正しく設定する</title>
-      <link>https://www.vegetable.blog.v41.me/posts/b655ebe5-9784-45db-88cc-341986ee87e2/</link>
+      <link>https://rengotaku.github.io/posts/b655ebe5-9784-45db-88cc-341986ee87e2/</link>
       <pubDate>Mon, 18 May 2020 19:30:20 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/b655ebe5-9784-45db-88cc-341986ee87e2/</guid>
+      <guid>https://rengotaku.github.io/posts/b655ebe5-9784-45db-88cc-341986ee87e2/</guid>
       <description>解決 image_uri = Addressable::URI.convert_path(&amp;#34;https://path/to/image.jpg&amp;#34;) URI.parse(image_uri).open do |file| metadata = { &amp;#34;mime_type&amp;#34; =&amp;gt; MIME::Types.type_for(@image_uri.to_s).first.content_type, &amp;#34;filename&amp;#34; =&amp;gt; @image_uri.basename, } # metadataが正しく設定されていないと、uploaded_file.metadataも空 uploaded_file = Shrine.upload(file, storage_key, metadata:</description>
     </item>
     
     <item>
       <title>rails consoleで画像をダウンロードしようとすると、No such file or directoryエラーが発生する</title>
-      <link>https://www.vegetable.blog.v41.me/posts/62d115fa-4ce4-4b27-a984-12d947a8f3b8/</link>
+      <link>https://rengotaku.github.io/posts/62d115fa-4ce4-4b27-a984-12d947a8f3b8/</link>
       <pubDate>Mon, 18 May 2020 11:42:10 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/62d115fa-4ce4-4b27-a984-12d947a8f3b8/</guid>
+      <guid>https://rengotaku.github.io/posts/62d115fa-4ce4-4b27-a984-12d947a8f3b8/</guid>
       <description>解決 require &amp;#39;open-uri&amp;#39; open(&amp;#39;tmp/image.png&amp;#39;, &amp;#39;wb&amp;#39;) do |file| file &amp;lt;&amp;lt; open(&amp;#39;https://pbs.twimg.com/profile_images/xxx.jpg&amp;#39;).read end image_io = open(&amp;#39;tmp/image.png&amp;#39;) 事象 rails内で下記の処理を行えており、コンソールで同様の処理を実行したところ、NoMethodError:</description>
     </item>
     
     <item>
       <title>ActiveRecordでbulk insert とupdateしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/4a40d9e2-ed95-4fa8-867d-768f086e27a9/</link>
+      <link>https://rengotaku.github.io/posts/4a40d9e2-ed95-4fa8-867d-768f086e27a9/</link>
       <pubDate>Fri, 01 May 2020 11:15:48 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/4a40d9e2-ed95-4fa8-867d-768f086e27a9/</guid>
+      <guid>https://rengotaku.github.io/posts/4a40d9e2-ed95-4fa8-867d-768f086e27a9/</guid>
       <description>解決 insert Book.insert_all([ { id: 1, title: &amp;#34;Rework&amp;#34;, author: &amp;#34;David&amp;#34; }, { id: 1, title: &amp;#34;Eloquent Ruby&amp;#34;, author: &amp;#34;Russ&amp;#34; } ]) created_at, updated_atは自動付与されないことに気をつける（DBの設定が自動挿入になっていればOK</description>
     </item>
     
     <item>
       <title>Active jobのretryの検証</title>
-      <link>https://www.vegetable.blog.v41.me/posts/a6545460-7706-4d6b-82b1-70e70a9080bc/</link>
+      <link>https://rengotaku.github.io/posts/a6545460-7706-4d6b-82b1-70e70a9080bc/</link>
       <pubDate>Thu, 23 Apr 2020 19:19:01 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/a6545460-7706-4d6b-82b1-70e70a9080bc/</guid>
+      <guid>https://rengotaku.github.io/posts/a6545460-7706-4d6b-82b1-70e70a9080bc/</guid>
       <description>ソース # frozen_string_literal: true class RetryTestJob &amp;lt; ActiveJob::Base class RetryOnlyDoError &amp;lt; StandardError; end class RetryRailseExceptionError &amp;lt; StandardError; end class RetryWithoutProcessError &amp;lt; StandardError; end class DiscardError &amp;lt; StandardError; end FILENAME = &amp;#34;#{Rails.root.to_s}/tmp/jobtest.txt&amp;#34; queue_as :high discard_on StandardError do |job, e| RetryTestJob.write_file(&amp;#34;retry_on&amp;#34;, job.job_id, job.executions, &amp;#34;#{e.class}: #{e.message}&amp;#34;) end # attempts が０になっても何も行わない retry_on RetryWithoutProcessError, wait: 1.seconds, attempts: 3 # attempts が</description>
     </item>
     
     <item>
       <title>annotateが動かない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/d8577cb0-53dc-487a-a624-e607a8551e93/</link>
+      <link>https://rengotaku.github.io/posts/d8577cb0-53dc-487a-a624-e607a8551e93/</link>
       <pubDate>Wed, 25 Mar 2020 18:18:41 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/d8577cb0-53dc-487a-a624-e607a8551e93/</guid>
+      <guid>https://rengotaku.github.io/posts/d8577cb0-53dc-487a-a624-e607a8551e93/</guid>
       <description>解決 --models を付与して実行する。 $ bundle exec annotate --models 事象 gemを起動しても何も変更がかからない。 $ bundle exec annotate</description>
     </item>
     
     <item>
       <title>実行されたmiddlewareをロギングしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/88a0bf8a-defe-4f00-bb73-ddf0daf14044/</link>
+      <link>https://rengotaku.github.io/posts/88a0bf8a-defe-4f00-bb73-ddf0daf14044/</link>
       <pubDate>Tue, 17 Mar 2020 16:14:59 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/88a0bf8a-defe-4f00-bb73-ddf0daf14044/</guid>
+      <guid>https://rengotaku.github.io/posts/88a0bf8a-defe-4f00-bb73-ddf0daf14044/</guid>
       <description>config/initializers 配下に下記のファイルを設置する。 # Trace each middleware module entry/exit. Freely adapted from # https://github.com/DataDog/dd-trace-rb/issues/368 &amp;#34;Trace each middleware in the Rails stack&amp;#34; module MiddlewareTracer def call(env) Rails.logger.debug { &amp;#34;MiddleWare: entry #{self.class.name}&amp;#34; } status, headers, response = super(env) Rails.logger.debug { &amp;#34;MiddleWare: #{self.class.name}, returning with status #{status}&amp;#34; } [status, headers, response] end end # Instrument the middleware stack after</description>
     </item>
     
     <item>
       <title>rspecでよく見た書き方</title>
-      <link>https://www.vegetable.blog.v41.me/posts/6542ae14-4854-4050-bf96-54b6cc4100d5/</link>
+      <link>https://rengotaku.github.io/posts/6542ae14-4854-4050-bf96-54b6cc4100d5/</link>
       <pubDate>Fri, 06 Mar 2020 19:54:41 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/6542ae14-4854-4050-bf96-54b6cc4100d5/</guid>
+      <guid>https://rengotaku.github.io/posts/6542ae14-4854-4050-bf96-54b6cc4100d5/</guid>
       <description>エラーが発生しないテスト not_to raise_error RSpec.describe &amp;#34;#to_s&amp;#34; do it &amp;#34;does not raise&amp;#34; do expect { Object.new.to_s }.not_to raise_error end end raise_error matcher - Built in matchers - RSpec Expectations - RSpec - Relish モックでエラーを発生させる and_raise RSpec.describe &amp;#34;Making it raise an error&amp;#34; do it &amp;#34;raises the provided exception&amp;#34; do dbl</description>
     </item>
     
     <item>
       <title>Active Jobが失敗した場合のリトライについてテストする</title>
-      <link>https://www.vegetable.blog.v41.me/posts/990bd1dc-2f44-46fa-9fa6-91b5914e7669/</link>
+      <link>https://rengotaku.github.io/posts/990bd1dc-2f44-46fa-9fa6-91b5914e7669/</link>
       <pubDate>Fri, 06 Mar 2020 19:49:43 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/990bd1dc-2f44-46fa-9fa6-91b5914e7669/</guid>
+      <guid>https://rengotaku.github.io/posts/990bd1dc-2f44-46fa-9fa6-91b5914e7669/</guid>
       <description>解決 described_class.perform_later rescue nil RSpec.describe MyJob, type: :job do include ActiveJob::TestHelper context &amp;#39;when `MyError` is raised&amp;#39; do before do allow_any_instance_of(described_class).to receive(:perform).and_raise(MyError.new) end it &amp;#39;makes 4 attempts&amp;#39; do assert_performed_jobs 4 do described_class.perform_later rescue nil end end it &amp;#39;does something in the `retry_on` block&amp;#39; do expect(Something).to receive(:something) perform_enqueued_jobs do described_class.perform_later rescue nil end end end end perform_nowでは再実</description>
     </item>
     
     <item>
       <title>時間を操作してテストを実行したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/6c1ae6cb-b824-4eb0-bc31-2fa5ca0d089e/</link>
+      <link>https://rengotaku.github.io/posts/6c1ae6cb-b824-4eb0-bc31-2fa5ca0d089e/</link>
       <pubDate>Fri, 06 Mar 2020 14:54:22 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/6c1ae6cb-b824-4eb0-bc31-2fa5ca0d089e/</guid>
+      <guid>https://rengotaku.github.io/posts/6c1ae6cb-b824-4eb0-bc31-2fa5ca0d089e/</guid>
       <description>travel などを使用する Time.current # =&amp;gt; Sat, 09 Nov 2013 15:34:49 EST -05:00 travel 1.day do User.create.created_at # =&amp;gt; Sun, 10 Nov 2013 15:34:49 EST -05:00 end Time.current # =&amp;gt; Sat, 09 Nov 2013 15:34:49 EST -05:00 ActiveSupport::Testing::TimeHelpers</description>
     </item>
     
     <item>
       <title>インスタンス変数のメソッドをstubにしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/2a2be20a-44d0-4ff4-ac0c-0630ee4e6763/</link>
+      <link>https://rengotaku.github.io/posts/2a2be20a-44d0-4ff4-ac0c-0630ee4e6763/</link>
       <pubDate>Fri, 06 Mar 2020 14:17:52 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/2a2be20a-44d0-4ff4-ac0c-0630ee4e6763/</guid>
+      <guid>https://rengotaku.github.io/posts/2a2be20a-44d0-4ff4-ac0c-0630ee4e6763/</guid>
       <description>let(:hoge_instance) { instance_double(Hoge) } before do allow(Hoge).to receive(:new).and_return(hoge_instance) allow(hoge_instance).to receive(:say).and_return(&amp;#34;night!&amp;#34;) end</description>
     </item>
     
     <item>
       <title>asc、descが混在したソートをしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/cdb55f84-3b86-4723-a081-1abaef9ac8c2/</link>
+      <link>https://rengotaku.github.io/posts/cdb55f84-3b86-4723-a081-1abaef9ac8c2/</link>
       <pubDate>Thu, 20 Feb 2020 13:40:49 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/cdb55f84-3b86-4723-a081-1abaef9ac8c2/</guid>
+      <guid>https://rengotaku.github.io/posts/cdb55f84-3b86-4723-a081-1abaef9ac8c2/</guid>
       <description>解決 複数をソート（asc、descが混在）の場合は、 sort を使用する。 User.all.sort { |a,b| [b.created_at, a.id] &amp;lt;=&amp;gt; [a.created_at, b.id] }.last.id == User.order(created_at: :desc).order(id: :asc).last.id note # gender asc, name asc p(dogs.sort do |a, b| [a[:gender], a[:name]] &amp;lt;=&amp;gt; [b[:gender], b[:name]] end) # gender desc, name asc p(dogs.sort do |a,</description>
     </item>
     
     <item>
       <title>Serializerで特定のfieldだけを出力したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/4b809adb-7e5a-4a4a-9aa5-3904b217ae66/</link>
+      <link>https://rengotaku.github.io/posts/4b809adb-7e5a-4a4a-9aa5-3904b217ae66/</link>
       <pubDate>Tue, 18 Feb 2020 19:59:49 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/4b809adb-7e5a-4a4a-9aa5-3904b217ae66/</guid>
+      <guid>https://rengotaku.github.io/posts/4b809adb-7e5a-4a4a-9aa5-3904b217ae66/</guid>
       <description>解決 fields オプションを使用する。 render json: notifications, fields: [:id, :title] How to filter attributes? · Issue #992 · rails-api/active_model_serializers · GitHub 問題 ActiveModel::MissingAttributeError (missing attribute: description) が発生する。 構成 class NotificationSerializer &amp;lt; ApplicationSerializer attribute :id attribute :title attribute :description end notifications = Notification.select(:id, :title) render json: notifications</description>
     </item>
     
     <item>
       <title>railsのrouteでidを必要としないルーティングを追加したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/24f5619b-95af-4404-b98d-015f0837b896/</link>
+      <link>https://rengotaku.github.io/posts/24f5619b-95af-4404-b98d-015f0837b896/</link>
       <pubDate>Tue, 18 Feb 2020 19:27:27 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/24f5619b-95af-4404-b98d-015f0837b896/</guid>
+      <guid>https://rengotaku.github.io/posts/24f5619b-95af-4404-b98d-015f0837b896/</guid>
       <description>解決 collection を使用する。 比較 resources :notifications, only: %i[index] do get &amp;#34;/on_top&amp;#34;, to: &amp;#34;notifications#on_top&amp;#34; # notification_under GET /notifications/:notification_id/under(.:format) notification#under collection do get &amp;#34;/on_top&amp;#34;, to: &amp;#34;notifications#on_top&amp;#34; # under_notifications GET /notifications/under(.:format) notification#under end member do get &amp;#34;/on_top&amp;#34;, to: &amp;#34;notifications#on_top&amp;#34; # under_notification GET /notifications/:id/under(.:format) notification#under end end Rails 5 Routing Cookbook: 10 recipes for the novice Rails developer and beyond 事象 idを必要</description>
     </item>
     
     <item>
       <title>rspecでエラーテストが失敗する</title>
-      <link>https://www.vegetable.blog.v41.me/posts/5b43c92f-d394-416c-9877-0ecc11e77366/</link>
+      <link>https://rengotaku.github.io/posts/5b43c92f-d394-416c-9877-0ecc11e77366/</link>
       <pubDate>Mon, 17 Feb 2020 13:41:57 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/5b43c92f-d394-416c-9877-0ecc11e77366/</guid>
+      <guid>https://rengotaku.github.io/posts/5b43c92f-d394-416c-9877-0ecc11e77366/</guid>
       <description>解決 export { subject } に変更 context &amp;#34;test&amp;#34; do subject { raise RuntimeError } it { expect { subject }.to raise_error(RuntimeError) } end 事象 Failure/Error: raise RuntimeError が発生する。 context &amp;#34;test&amp;#34; do subject { raise RuntimeError } it { is_expected.to raise_error(RuntimeError) } end RSpec の is_expected で raise_error を検知したかった - Secret Garden(Instrumental) RSpec/ImplicitSubject エラ</description>
     </item>
     
     <item>
       <title>with_optionsでスッキリ</title>
-      <link>https://www.vegetable.blog.v41.me/posts/1986b108-1c43-464d-9e38-7b1140568b67/</link>
+      <link>https://rengotaku.github.io/posts/1986b108-1c43-464d-9e38-7b1140568b67/</link>
       <pubDate>Fri, 14 Feb 2020 15:03:39 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/1986b108-1c43-464d-9e38-7b1140568b67/</guid>
+      <guid>https://rengotaku.github.io/posts/1986b108-1c43-464d-9e38-7b1140568b67/</guid>
       <description>after with_options if: :new_record? do before_validation :initialize_hoge1 before_validation :initialize_hoge2 end def initialize_hoge1 hoge1 end def initialize_hoge2 hoge2 end before before_validation :initialize_hoge1 before_validation :initialize_hoge2 def initialize_hoge1 hoge1 if new_record? end def initialize_hoge2 hoge2 if new_record? end Railsで特定の条件下で走るバリデーションを作りたい - Qiita</description>
     </item>
     
     <item>
       <title>Omniauthのsetupをテストしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/130dacd5-87b4-4877-a521-5623d7b9be6b/</link>
+      <link>https://rengotaku.github.io/posts/130dacd5-87b4-4877-a521-5623d7b9be6b/</link>
       <pubDate>Fri, 14 Feb 2020 14:01:16 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/130dacd5-87b4-4877-a521-5623d7b9be6b/</guid>
+      <guid>https://rengotaku.github.io/posts/130dacd5-87b4-4877-a521-5623d7b9be6b/</guid>
       <description>解決 def setup omniauth_strategy.options[:consumer_key] = Global..twitter.consumer_key omniauth_strategy.options[:consumer_secret] = Global..twitter.consumer_key_secret render json: { message: &amp;#34;Omniauth setup phase.&amp;#34; }, status: :not_found end RSpec.describe SessionController, type: :controller do subject { get :setup, params: { provider: :twitter } } let(:strategy_options) { Struct.new(:options).new({consumer_key: nil, consumer_secret: nil}) } let(:consumer_key) { &amp;#34;twitter-mock-consumer_key&amp;#34; } let(:consumer_secret) { &amp;#34;twitter-mock-consumer_key_secret&amp;#34; } before do allow(Global.twitter).to receive(:consumer_key).and_return(consumer_key) allow(Global.twitter).to receive(:consumer_key_secret).and_return(consumer_secret) allow(controller.request.env).to receive(:[]).and_call_original allow(controller.request.env).to receive(:[]).with(&amp;#34;omniauth.strategy&amp;#34;).and_return(strategy_options) end context &amp;#34;Success&amp;#34; do it &amp;#34</description>
     </item>
     
     <item>
       <title>omniauthのTwitterプロバイダーのauthキーをコントローラーで設定</title>
-      <link>https://www.vegetable.blog.v41.me/posts/4fce0411-7c96-42a2-8d3e-2861e57754e1/</link>
+      <link>https://rengotaku.github.io/posts/4fce0411-7c96-42a2-8d3e-2861e57754e1/</link>
       <pubDate>Wed, 12 Feb 2020 15:14:26 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/4fce0411-7c96-42a2-8d3e-2861e57754e1/</guid>
+      <guid>https://rengotaku.github.io/posts/4fce0411-7c96-42a2-8d3e-2861e57754e1/</guid>
       <description>解決 遷移するパスが正しくなかった。(/api/auth/:provider/setup の様にscopeをネストしていた) デフォルトで遷移する</description>
     </item>
     
     <item>
       <title>omniauthのTwitterプロバイダーのoptionsを動的に変更する</title>
-      <link>https://www.vegetable.blog.v41.me/posts/457eeb3b-3e8a-411b-bca0-38561b0ec80f/</link>
+      <link>https://rengotaku.github.io/posts/457eeb3b-3e8a-411b-bca0-38561b0ec80f/</link>
       <pubDate>Wed, 12 Feb 2020 11:33:04 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/457eeb3b-3e8a-411b-bca0-38561b0ec80f/</guid>
+      <guid>https://rengotaku.github.io/posts/457eeb3b-3e8a-411b-bca0-38561b0ec80f/</guid>
       <description>SETUP_PROC = lambda do |env| request = Rack::Request.new(env) user = User.find_by_subdomain(request.subdomain) env[&amp;#39;omniauth.strategy&amp;#39;].options[:client_id] = user.consumer_key # if using omniauth-oauth2 env[&amp;#39;omniauth.strategy&amp;#39;].options[:client_secret] = user.consumer_secret # if using omniauth-oauth2 env[&amp;#39;omniauth.strategy&amp;#39;].options[:consumer_key] = user.consumer_key # if using omniauth-oauth env[&amp;#39;omniauth.strategy&amp;#39;].options[:consumer_secret] = user.consumer_secret # if using omniauth-oauth end use OmniAuth::Builder.new do provider :twitter, setup: SETUP_PROC, callback_path: &amp;#34;/path/to/callback&amp;#34;, image_size: &amp;#34;original&amp;#34; end Setup Phase · omniauth/omniauth Wiki · GitHub</description>
     </item>
     
     <item>
       <title>Middlewareをテストしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/a876ea6d-99a6-43fe-b419-71896f26c406/</link>
+      <link>https://rengotaku.github.io/posts/a876ea6d-99a6-43fe-b419-71896f26c406/</link>
       <pubDate>Mon, 10 Feb 2020 17:41:00 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/a876ea6d-99a6-43fe-b419-71896f26c406/</guid>
+      <guid>https://rengotaku.github.io/posts/a876ea6d-99a6-43fe-b419-71896f26c406/</guid>
       <description>対象モジュール railsのログにタグづけしたい | ベジタブルプログラム テスト RSpec.describe TaggedLogger do subject { TaggedLogger::Middleware.new(app) } let(:app) { -&amp;gt;(env) { [200, env, &amp;#34;app&amp;#34;] } } let(:request) { Rack::MockRequest.new(subject) } let(:action_dispatch_request) { ActionDispatch::TestRequest.create } before do allow(ActionDispatch::Request).to receive(:new).and_return(action_dispatch_request) allow(action_dispatch_request).to receive(:session).and_return(Struct.new(:user_id, :loaded?).new(*session_methods)) allow(Rails.logger).to receive(:tagged).and_yield</description>
     </item>
     
     <item>
       <title>railsのログにタグづけしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/c8804b8e-6ac2-450c-b5ea-9009c1a43da4/</link>
+      <link>https://rengotaku.github.io/posts/c8804b8e-6ac2-450c-b5ea-9009c1a43da4/</link>
       <pubDate>Mon, 10 Feb 2020 15:38:44 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/c8804b8e-6ac2-450c-b5ea-9009c1a43da4/</guid>
+      <guid>https://rengotaku.github.io/posts/c8804b8e-6ac2-450c-b5ea-9009c1a43da4/</guid>
       <description>設定 class Application &amp;lt; Rails::Application ... require Rails.root.join(&amp;#34;lib/tagged_logger.rb&amp;#34;) initializer &amp;#34;tagged_logger.insert_middleware&amp;#34; do |app| app.config.middleware.use TaggedLogger::Middleware end end # frozen_string_literal: true module TaggedLogger class Middleware def initialize(app) @app = app end def call(env) request = ActionDispatch::Request.new(env) request.session.send(:load!) unless request.session.loaded? if (user_id = request.session[:user_id]) tag = &amp;#34;user_id=#{user_id}&amp;#34; Rails.logger.tagged(tag) do @app.call(env) end else @app.call(env) end end end end アウトプット [user_id=1] が今回付与したタ</description>
     </item>
     
     <item>
       <title>railsのipメソッドとremove_ipメソッドの違い</title>
-      <link>https://www.vegetable.blog.v41.me/posts/ab1cdacb-a34b-45ed-a16a-7cd2627d10b7/</link>
+      <link>https://rengotaku.github.io/posts/ab1cdacb-a34b-45ed-a16a-7cd2627d10b7/</link>
       <pubDate>Mon, 10 Feb 2020 15:36:03 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/ab1cdacb-a34b-45ed-a16a-7cd2627d10b7/</guid>
+      <guid>https://rengotaku.github.io/posts/ab1cdacb-a34b-45ed-a16a-7cd2627d10b7/</guid>
       <description>解決 remote_ip は、 ActionDispatch::RemoteIp で判定したIPを優先する。 その判定がない場合は、 ip メソッドを使用する。 ruby - What&amp;rsquo;s the difference between request.remote_ip and request.ip in Rails? - Stack Overflow</description>
     </item>
     
     <item>
       <title>RSpec/MultipleExpectationsを回避</title>
-      <link>https://www.vegetable.blog.v41.me/posts/74af4a87-af15-46ef-bd8d-2b59f87d850e/</link>
+      <link>https://rengotaku.github.io/posts/74af4a87-af15-46ef-bd8d-2b59f87d850e/</link>
       <pubDate>Thu, 06 Feb 2020 11:53:06 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/74af4a87-af15-46ef-bd8d-2b59f87d850e/</guid>
+      <guid>https://rengotaku.github.io/posts/74af4a87-af15-46ef-bd8d-2b59f87d850e/</guid>
       <description>解決 aggregate_failures を使用する it &amp;#34;正常動作する&amp;#34; do subject aggregate_failures &amp;#34;最後まで通過&amp;#34; do expect(job_instance).to have_received(:hoge1) expect(job_instance).to have_received(:hoge2).at_least(1).times end end 実用的な新機能が盛りだくさん！RSpe</description>
     </item>
     
     <item>
       <title>railsのenumから値を取得したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/2fdad37c-deb2-46d9-99a5-92a3f5df0b0f/</link>
+      <link>https://rengotaku.github.io/posts/2fdad37c-deb2-46d9-99a5-92a3f5df0b0f/</link>
       <pubDate>Tue, 28 Jan 2020 16:02:05 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/2fdad37c-deb2-46d9-99a5-92a3f5df0b0f/</guid>
+      <guid>https://rengotaku.github.io/posts/2fdad37c-deb2-46d9-99a5-92a3f5df0b0f/</guid>
       <description>enum sale_info: { plan_1: 1, plan_2: 2, plan_3: 3, plan_4: 4, plan_5: 5 } の場合、 Model.sale_infos[:plan_1] で取得 How get integer value from a enum in Rails? - Stack Overflow</description>
     </item>
     
     <item>
       <title>Rubyで処理速度の平均を計測したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/9a9f4862-dd9c-4fbd-a90c-bb4551f2ebab/</link>
+      <link>https://rengotaku.github.io/posts/9a9f4862-dd9c-4fbd-a90c-bb4551f2ebab/</link>
       <pubDate>Tue, 28 Jan 2020 15:15:11 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/9a9f4862-dd9c-4fbd-a90c-bb4551f2ebab/</guid>
+      <guid>https://rengotaku.github.io/posts/9a9f4862-dd9c-4fbd-a90c-bb4551f2ebab/</guid>
       <description>計測 require &amp;#39;benchmark&amp;#39; include Benchmark # we need the CAPTION and FORMAT constants nn = 5000000 Benchmark.benchmark(CAPTION, 7, FORMAT, &amp;#34;&amp;gt;total:&amp;#34;, &amp;#34;&amp;gt;avg:&amp;#34;) do |x| tf = x.report(&amp;#34;for:&amp;#34;) { for i in 1..nn; a = &amp;#34;1&amp;#34;; end } tt = x.report(&amp;#34;times:&amp;#34;) { nn.times do ; a = &amp;#34;1&amp;#34;; end } tu = x.report(&amp;#34;upto:&amp;#34;) { 1.upto(nn) do ; a = &amp;#34;1&amp;#34;; end } [tf+tt+tu, (tf+tt+tu)/3] end 結果 user system total real</description>
     </item>
     
     <item>
       <title>リクエストのremote_ipを変更してテストしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/957c64fd-ee2e-4ce6-bb60-093b3a665189/</link>
+      <link>https://rengotaku.github.io/posts/957c64fd-ee2e-4ce6-bb60-093b3a665189/</link>
       <pubDate>Mon, 27 Jan 2020 17:29:26 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/957c64fd-ee2e-4ce6-bb60-093b3a665189/</guid>
+      <guid>https://rengotaku.github.io/posts/957c64fd-ee2e-4ce6-bb60-093b3a665189/</guid>
       <description>解決 get &amp;#34;/path&amp;#34;, params: { }, headers: { &amp;#34;REMOTE_ADDR&amp;#34; =&amp;gt; &amp;#34;1.2.3.4&amp;#34; } Change value of request.remote_ip in Ruby on Rails - Stack Overflow 事象 allow_any_instance_of(ActionDispatch::Request).to receive(:remote_ip).and_return(&amp;#34;1.2.3.4&amp;#34;) でも実現可能だが、 rubocopで RSpec/AnyInstance が発生してしまう。(instance_doubl</description>
     </item>
     
     <item>
       <title>コントローラーのテストで例外が発生してテストが失敗する</title>
-      <link>https://www.vegetable.blog.v41.me/posts/e848d251-d646-4d69-b394-c113fb84410c/</link>
+      <link>https://rengotaku.github.io/posts/e848d251-d646-4d69-b394-c113fb84410c/</link>
       <pubDate>Mon, 27 Jan 2020 17:16:30 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/e848d251-d646-4d69-b394-c113fb84410c/</guid>
+      <guid>https://rengotaku.github.io/posts/e848d251-d646-4d69-b394-c113fb84410c/</guid>
       <description>解決 context に、 show_exceptions: true オプションを設定する。 context &amp;#34;failed&amp;#34;, show_exceptions: true do ... end Rails アプリケーションの不安定なテストを撲滅したい 〜system spec のデバッグ方法とテストを不安</description>
     </item>
     
     <item>
       <title>docker上のpry-byebugにショートカットを設定したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/5d7fa977-1511-4546-aea2-9b7622a4097c/</link>
+      <link>https://rengotaku.github.io/posts/5d7fa977-1511-4546-aea2-9b7622a4097c/</link>
       <pubDate>Thu, 23 Jan 2020 14:35:20 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/5d7fa977-1511-4546-aea2-9b7622a4097c/</guid>
+      <guid>https://rengotaku.github.io/posts/5d7fa977-1511-4546-aea2-9b7622a4097c/</guid>
       <description>解決 docker上の ~/.pryrc に記載する。 事象 pry-byebugでrubyをデバッグする - Qiita のショートカットをプロジェクトに設置しても、使用できな</description>
     </item>
     
     <item>
       <title>ロケールファイルをサービス毎に分割したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/7f458780-45b6-4fa5-ab48-184bb39ad474/</link>
+      <link>https://rengotaku.github.io/posts/7f458780-45b6-4fa5-ab48-184bb39ad474/</link>
       <pubDate>Tue, 21 Jan 2020 18:17:15 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/7f458780-45b6-4fa5-ab48-184bb39ad474/</guid>
+      <guid>https://rengotaku.github.io/posts/7f458780-45b6-4fa5-ab48-184bb39ad474/</guid>
       <description>実現したこと defaultの設定にサービス毎に必要な箇所のメッセージを上書きする 構成 config/locales/ ├── ja.yml └── service1 └── ja.yml └── service2 └── ja.yml 修正 --- ja: application: environment: production:</description>
     </item>
     
     <item>
       <title>削除処理を呼び出し時にActionController::InvalidAuthenticityTokenが発生</title>
-      <link>https://www.vegetable.blog.v41.me/posts/e7758338-63b3-420c-8b10-3a37107141a7/</link>
+      <link>https://rengotaku.github.io/posts/e7758338-63b3-420c-8b10-3a37107141a7/</link>
       <pubDate>Tue, 21 Jan 2020 13:47:15 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/e7758338-63b3-420c-8b10-3a37107141a7/</guid>
+      <guid>https://rengotaku.github.io/posts/e7758338-63b3-420c-8b10-3a37107141a7/</guid>
       <description>解決 dockerで開発しているが、ポートを変更している為に発生している模様。nginxなどでヘッダーのトークンを書き換えればいいかなと。 それ</description>
     </item>
     
     <item>
       <title>rspecでテストをまとめる</title>
-      <link>https://www.vegetable.blog.v41.me/posts/c572bdd1-576f-4caf-a2b0-fb2dcda032be/</link>
+      <link>https://rengotaku.github.io/posts/c572bdd1-576f-4caf-a2b0-fb2dcda032be/</link>
       <pubDate>Thu, 16 Jan 2020 16:14:30 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/c572bdd1-576f-4caf-a2b0-fb2dcda032be/</guid>
+      <guid>https://rengotaku.github.io/posts/c572bdd1-576f-4caf-a2b0-fb2dcda032be/</guid>
       <description>テストメソッド def self.runnable! return if !(Rails.env.staging? || Rails.env.production?) || ENV[&amp;#34;IMPORTANT_CODE&amp;#34;].present? raise Error end アフター describe &amp;#34;#runnable!&amp;#34; do subject { described_class.runnable! } let(:set_code) { ENV[&amp;#34;IMPORTANT_CODE&amp;#34;] = &amp;#34;hoge&amp;#34; } let(:unset_code) { ENV[&amp;#34;IMPORTANT_CODE&amp;#34;] = nil } context &amp;#34;development&amp;#34; do before { allow(Rails.env).to receive(:development?).and_return(true) } it_behaves_like &amp;#34;check important code for development&amp;#34; end context &amp;#34;staging&amp;#34; do before { allow(Rails.env).to receive(:staging?).and_return(true) } it_behaves_like &amp;#34;check important code for</description>
     </item>
     
     <item>
       <title>application.rb内でI18nを使用すると翻訳できない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/11d31c8e-a7bd-4661-85fc-353749bbca68/</link>
+      <link>https://rengotaku.github.io/posts/11d31c8e-a7bd-4661-85fc-353749bbca68/</link>
       <pubDate>Thu, 16 Jan 2020 13:06:53 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/11d31c8e-a7bd-4661-85fc-353749bbca68/</guid>
+      <guid>https://rengotaku.github.io/posts/11d31c8e-a7bd-4661-85fc-353749bbca68/</guid>
       <description>解決 config.after_initialize 内で行う。 module KuraPlatformBackend class Application &amp;lt; Rails::Application ... config.after_initialize do raise I18n.t(&amp;#34;error_messages.not_hoge&amp;#34;) if hoge end end end 事象 サーバ起動直後に特定の条件でエラーを発生させるようにしたい。 しかし、 translation missing: en.error_messages.not_hoge となる。 module KuraPlatformBackend class</description>
     </item>
     
     <item>
       <title>モデルの値を正規化する独自クラス</title>
-      <link>https://www.vegetable.blog.v41.me/posts/3fc93131-69e4-43c8-a7af-438cf8ab97a8/</link>
+      <link>https://rengotaku.github.io/posts/3fc93131-69e4-43c8-a7af-438cf8ab97a8/</link>
       <pubDate>Mon, 21 Oct 2019 10:06:07 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/3fc93131-69e4-43c8-a7af-438cf8ab97a8/</guid>
+      <guid>https://rengotaku.github.io/posts/3fc93131-69e4-43c8-a7af-438cf8ab97a8/</guid>
       <description>クラス # 値を設定(setter)する際に、指定の方法で正規化した値を設定する。 # # 宣言方法：string_normalizable :name, :type # name: カ</description>
     </item>
     
     <item>
       <title>railsでissue(バグ)のあげ方</title>
-      <link>https://www.vegetable.blog.v41.me/posts/8f24c929-ebd0-4976-b007-fbbb5d7093e4/</link>
+      <link>https://rengotaku.github.io/posts/8f24c929-ebd0-4976-b007-fbbb5d7093e4/</link>
       <pubDate>Thu, 03 Oct 2019 12:58:25 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/8f24c929-ebd0-4976-b007-fbbb5d7093e4/</guid>
+      <guid>https://rengotaku.github.io/posts/8f24c929-ebd0-4976-b007-fbbb5d7093e4/</guid>
       <description>Can you create an executable test script using one of the templates here, that would demonstrate the problem you are seeing? ActiveRecord 5: method_missing&#39;: undefined method helper&amp;rsquo; for MyMailer · Issue #27359 · rails/rails</description>
     </item>
     
     <item>
       <title>jbuilderを使用するとレスポンスが空になる</title>
-      <link>https://www.vegetable.blog.v41.me/posts/e9c4805c-aaee-455e-98cc-067b61c46546/</link>
+      <link>https://rengotaku.github.io/posts/e9c4805c-aaee-455e-98cc-067b61c46546/</link>
       <pubDate>Tue, 17 Sep 2019 19:25:56 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/e9c4805c-aaee-455e-98cc-067b61c46546/</guid>
+      <guid>https://rengotaku.github.io/posts/e9c4805c-aaee-455e-98cc-067b61c46546/</guid>
       <description>解決 active_decorator のバージョンを 1.1.0 から 1.3.1 に上げた為。 同様の事象が記載されているPRは見られない。（改修は未定） Pull Requests · amatsuda/active_decorator 事象 render &#39;template_name&#39;, formats: &#39;json&#39;, handlers: &#39;jbuilder&#39; のように、json</description>
     </item>
     
     <item>
       <title>railsで重複送信を防ぐ調査の知見</title>
-      <link>https://www.vegetable.blog.v41.me/posts/54d5813d-3f3a-49dd-b871-22f21203abbb/</link>
+      <link>https://rengotaku.github.io/posts/54d5813d-3f3a-49dd-b871-22f21203abbb/</link>
       <pubDate>Fri, 13 Sep 2019 15:48:23 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/54d5813d-3f3a-49dd-b871-22f21203abbb/</guid>
+      <guid>https://rengotaku.github.io/posts/54d5813d-3f3a-49dd-b871-22f21203abbb/</guid>
       <description>採用 Rails.cacheを使用 Rails.cacheについて | 酒と涙とRubyとRailsと 始めは下記で実装しようとしたが、上記で良さそう</description>
     </item>
     
     <item>
       <title>旧字体を登録する際にエラーが発生する</title>
-      <link>https://www.vegetable.blog.v41.me/posts/2595f4ec-a3a8-40c4-97dd-7e5eb3343f04/</link>
+      <link>https://rengotaku.github.io/posts/2595f4ec-a3a8-40c4-97dd-7e5eb3343f04/</link>
       <pubDate>Mon, 02 Sep 2019 10:04:33 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/2595f4ec-a3a8-40c4-97dd-7e5eb3343f04/</guid>
+      <guid>https://rengotaku.github.io/posts/2595f4ec-a3a8-40c4-97dd-7e5eb3343f04/</guid>
       <description>未解決 文字コーディングに異常はみられない。 事象 Activerecodeを通して 𣘺本 を登録しようとすると Incorrect string value: &#39;\xF0\xA3\x98\xBA\xE6\x9C...&#39; for column &#39;name&#39; at row 1 が発生する。 調査 文</description>
     </item>
     
     <item>
       <title>minitestでprivateメソッドをテスト</title>
-      <link>https://www.vegetable.blog.v41.me/posts/1a7b69f1-218d-4982-ba5f-a3fee308cdfe/</link>
+      <link>https://rengotaku.github.io/posts/1a7b69f1-218d-4982-ba5f-a3fee308cdfe/</link>
       <pubDate>Thu, 29 Aug 2019 15:57:36 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/1a7b69f1-218d-4982-ba5f-a3fee308cdfe/</guid>
+      <guid>https://rengotaku.github.io/posts/1a7b69f1-218d-4982-ba5f-a3fee308cdfe/</guid>
       <description>解決 __send__を使用する Class Person def initialize(name) @name = name end private def tom(generation) @name = &amp;#39;tom&amp;#39; + generation.to_s end end person = Person.new(&amp;#39;tarou&amp;#39;) person.__send__(:tom, 2) assert { re_inquiry.instance_eval(&amp;#39;@name&amp;#39;).size == &amp;#39;tom2&amp;#39; } #&amp;lt;= インスタンス変数を参照 instance_eval (Object) - Rubyリファレンス send</description>
     </item>
     
     <item>
       <title>本日の範囲を取得したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/9b60faba-13e0-48ab-a745-0392b0374de7/</link>
+      <link>https://rengotaku.github.io/posts/9b60faba-13e0-48ab-a745-0392b0374de7/</link>
       <pubDate>Mon, 19 Aug 2019 16:33:51 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/9b60faba-13e0-48ab-a745-0392b0374de7/</guid>
+      <guid>https://rengotaku.github.io/posts/9b60faba-13e0-48ab-a745-0392b0374de7/</guid>
       <description>解決 all_day を使用する。 `where(created_at: Time.zone.now.all_day)` [1] pry(main)&amp;gt; Time.now.all_day =&amp;gt; 2019-08-19 00:00:00 +0000..2019-08-19 23:59:59 +0000 RailsのActiveRecordで今日・昨日など特定の日に保存されたレコードを取得 | EasyRamble</description>
     </item>
     
     <item>
       <title>`Style/ClassVars` でクラス変数の誤りを指摘される</title>
-      <link>https://www.vegetable.blog.v41.me/posts/c5b69aa1-f4ec-47ab-95c0-0ca1c5ab1188/</link>
+      <link>https://rengotaku.github.io/posts/c5b69aa1-f4ec-47ab-95c0-0ca1c5ab1188/</link>
       <pubDate>Thu, 15 Aug 2019 16:07:59 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/c5b69aa1-f4ec-47ab-95c0-0ca1c5ab1188/</guid>
+      <guid>https://rengotaku.github.io/posts/c5b69aa1-f4ec-47ab-95c0-0ca1c5ab1188/</guid>
       <description>解決 instance_variable_get メソッドを使用する。 class A @client = SomeClient.new def do_api client.do end def client self.class.instance_variable_get(:@client) end end ruby - How to correct Style/ClassVars in RuboCop? - Stack Overflow 事象 class A def do_api client.do end def client @@client ||= SomeClient.new end end のように、クライアントを一度きりし</description>
     </item>
     
     <item>
       <title>verifyメソッドのテストが失敗する</title>
-      <link>https://www.vegetable.blog.v41.me/posts/ce4e5dde-88a5-468e-9e57-d8490989ff23/</link>
+      <link>https://rengotaku.github.io/posts/ce4e5dde-88a5-468e-9e57-d8490989ff23/</link>
       <pubDate>Thu, 15 Aug 2019 13:45:29 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/ce4e5dde-88a5-468e-9e57-d8490989ff23/</guid>
+      <guid>https://rengotaku.github.io/posts/ce4e5dde-88a5-468e-9e57-d8490989ff23/</guid>
       <description>解決 Mockクラスではなく、define_singleton_methodを使用してmethodを生やす。 ただし、assertメソッドなどが</description>
     </item>
     
     <item>
       <title>railsからmysqlにアクセスできない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/9bfb2b48-5b6a-4dc8-8082-361faca014f4/</link>
+      <link>https://rengotaku.github.io/posts/9bfb2b48-5b6a-4dc8-8082-361faca014f4/</link>
       <pubDate>Thu, 15 Aug 2019 11:53:50 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/9bfb2b48-5b6a-4dc8-8082-361faca014f4/</guid>
+      <guid>https://rengotaku.github.io/posts/9bfb2b48-5b6a-4dc8-8082-361faca014f4/</guid>
       <description>解決 /sbin/ip route|awk &#39;/default/ { print $3 }&#39; を実行し、取得したIPを database.ymlの host に記載する。 $ docker-compose exec [container name of rails] sh # /sbin/ip route|awk &#39;/default/ { print $3 }&#39; 192.168.112.1 How to get the IP address of the docker host from inside</description>
     </item>
     
     <item>
       <title>railsでリレーションカラムにIDを自動で挿入</title>
-      <link>https://www.vegetable.blog.v41.me/posts/ed7f57ea-7a0d-4af9-9293-fb076858ffc8/</link>
+      <link>https://rengotaku.github.io/posts/ed7f57ea-7a0d-4af9-9293-fb076858ffc8/</link>
       <pubDate>Fri, 09 Aug 2019 18:18:35 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/ed7f57ea-7a0d-4af9-9293-fb076858ffc8/</guid>
+      <guid>https://rengotaku.github.io/posts/ed7f57ea-7a0d-4af9-9293-fb076858ffc8/</guid>
       <description>解決 メソッド名: build_関連付けメソッド名 使用例: @car.build_engine(name: &amp;ldquo;エンジン1&amp;rdquo;) Railsモデルの関連付けでbuildを使う</description>
     </item>
     
     <item>
       <title>rails向けのnginxコンフの一例</title>
-      <link>https://www.vegetable.blog.v41.me/posts/25b64c4f-8f69-480f-90ad-6e891874a375/</link>
+      <link>https://rengotaku.github.io/posts/25b64c4f-8f69-480f-90ad-6e891874a375/</link>
       <pubDate>Thu, 08 Aug 2019 11:09:56 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/25b64c4f-8f69-480f-90ad-6e891874a375/</guid>
+      <guid>https://rengotaku.github.io/posts/25b64c4f-8f69-480f-90ad-6e891874a375/</guid>
       <description>ssl_protocols TLSv1 TLSv1.1 TLSv1.2; server { listen 80; server_name www.example.com; return 301 https://$host$request_uri; } server { ssl on; listen 443; server_name www.example.com; ssl_certificate /etc/letsencrypt/live/www.example.com/fullchain.pem; ssl_certificate_key /etc/letsencrypt/live/www.example.com/privkey.pem; include /etc/nginx/default.d/*.conf; root /path/to/public; location ^~ /.well-known/acme-challenge { return 200; } location ^~ /.well-known/assetlinks.json { return 404; } # apple-touch-icon-57x57.png の対策 location ~ ^/apple-touch-icon-(.*)\.png$ { rewrite ^(.*)$ /apple-touch-icon.png last; } location ~ ^/android-chrome-(.*)\.png$ { rewrite ^(.*)$ /android-chrome.png last; } location / {</description>
     </item>
     
     <item>
       <title>urlヘルパーでホストを指定</title>
-      <link>https://www.vegetable.blog.v41.me/posts/9d577d16-3300-4bc3-8517-524e1eb84c29/</link>
+      <link>https://rengotaku.github.io/posts/9d577d16-3300-4bc3-8517-524e1eb84c29/</link>
       <pubDate>Wed, 07 Aug 2019 12:02:43 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/9d577d16-3300-4bc3-8517-524e1eb84c29/</guid>
+      <guid>https://rengotaku.github.io/posts/9d577d16-3300-4bc3-8517-524e1eb84c29/</guid>
       <description>app.root_url(host: &amp;#39;http://www.customdomain.org&amp;#39;, protocol: &amp;#39;https&amp;#39;) =&amp;gt; &amp;#34;https://www.customdomain.org/&amp;#34; Set the Domain or Host in Rails URL Helpers - Today I Learned</description>
     </item>
     
     <item>
       <title>taskでカスタムのloggerで出力したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/83976073-f018-4b07-bce6-f3b84b0c5009/</link>
+      <link>https://rengotaku.github.io/posts/83976073-f018-4b07-bce6-f3b84b0c5009/</link>
       <pubDate>Wed, 07 Aug 2019 12:01:51 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/83976073-f018-4b07-bce6-f3b84b0c5009/</guid>
+      <guid>https://rengotaku.github.io/posts/83976073-f018-4b07-bce6-f3b84b0c5009/</guid>
       <description>@logger = ActiveSupport::Logger.new(STDOUT) @logger.formatter = ::Logger::Formatter.new Railsのログについて(Rails.logger) | 酒と涙とRubyとRailsと</description>
     </item>
     
     <item>
       <title>validationで空の場合は、formatを確認させたくない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/272571e2-eac6-4bc8-a918-331896bc3481/</link>
+      <link>https://rengotaku.github.io/posts/272571e2-eac6-4bc8-a918-331896bc3481/</link>
       <pubDate>Mon, 05 Aug 2019 14:48:13 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/272571e2-eac6-4bc8-a918-331896bc3481/</guid>
+      <guid>https://rengotaku.github.io/posts/272571e2-eac6-4bc8-a918-331896bc3481/</guid>
       <description>解決 :allow_blank =&amp;gt; true を設定 validates :name_kana, format: { with: /\A[ぁ-んァ-ヶー－]+\z/, message: &#39;をカタカナで入力してください&#39;, allow_blank: true }, presence: true Rails: How to validate format only if value is present? - Stack Overflow 事象 validates</description>
     </item>
     
     <item>
       <title>undefined method `before_validation&#39;が発生</title>
-      <link>https://www.vegetable.blog.v41.me/posts/e8ae4fbb-7171-4147-b36a-c08b150a4779/</link>
+      <link>https://rengotaku.github.io/posts/e8ae4fbb-7171-4147-b36a-c08b150a4779/</link>
       <pubDate>Mon, 05 Aug 2019 14:33:11 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/e8ae4fbb-7171-4147-b36a-c08b150a4779/</guid>
+      <guid>https://rengotaku.github.io/posts/e8ae4fbb-7171-4147-b36a-c08b150a4779/</guid>
       <description>解決 ActiveModel::Validations::Callbacks をincludeする ruby - How can I use before validation callback with form object in Rails 4? - Stack Overflow class TestForm include ActiveModel::Model ActiveModel::Validations::Callbacks before_validation :format_hogehoge protected def format_hoge if hoge.present? self.hoge = NKF.nkf(&#39;-w --katakana&#39;, hoge.gsub(/[\s ]/, &#39;&#39;)) end end end 事象 test_form = TestForm.new(params) test_form.invalid? #&amp;lt;= エラー class TestForm include ActiveModel::Model before_validation :format_hogehoge protected</description>
     </item>
     
     <item>
       <title>ActionMailでmailを実行しない場合は、NullMailが返却される</title>
-      <link>https://www.vegetable.blog.v41.me/posts/81d97880-2a3c-4de8-add0-fa3cb5e29c1d/</link>
+      <link>https://rengotaku.github.io/posts/81d97880-2a3c-4de8-add0-fa3cb5e29c1d/</link>
       <pubDate>Wed, 31 Jul 2019 15:22:22 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/81d97880-2a3c-4de8-add0-fa3cb5e29c1d/</guid>
+      <guid>https://rengotaku.github.io/posts/81d97880-2a3c-4de8-add0-fa3cb5e29c1d/</guid>
       <description>事象 ActionMailer::Base を継承したクラスのメソッドをコール時に、メソッド内で mail が呼び出されていない場合は、 ActionMailer::Base::NullMail が返却される。（通常は Mail::Message）</description>
     </item>
     
     <item>
       <title>railsタスクを変数に格納して実行したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/d05bd6f3-f718-4da9-9860-ed437c72f657/</link>
+      <link>https://rengotaku.github.io/posts/d05bd6f3-f718-4da9-9860-ed437c72f657/</link>
       <pubDate>Tue, 30 Jul 2019 15:52:10 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/d05bd6f3-f718-4da9-9860-ed437c72f657/</guid>
+      <guid>https://rengotaku.github.io/posts/d05bd6f3-f718-4da9-9860-ed437c72f657/</guid>
       <description>事象 railsタスクの実行コマンドを変数に入れて実行したいが、予期しないエラーが発生する。 RAILS_TASK=&#39;rbenv exec bundle exec rails hogehoge:hoge1[param1,1,2]&#39; $RAILS_TASK # =&amp;gt; ./test.sh: line 5: [: too many arguments 解決 &amp;ldquo;</description>
     </item>
     
     <item>
       <title>濁点、半濁点の文字を取得</title>
-      <link>https://www.vegetable.blog.v41.me/posts/5b8cab5d-c20a-477d-834b-6c2e2f53e670/</link>
+      <link>https://rengotaku.github.io/posts/5b8cab5d-c20a-477d-834b-6c2e2f53e670/</link>
       <pubDate>Tue, 30 Jul 2019 09:44:49 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/5b8cab5d-c20a-477d-834b-6c2e2f53e670/</guid>
+      <guid>https://rengotaku.github.io/posts/5b8cab5d-c20a-477d-834b-6c2e2f53e670/</guid>
       <description>解決 def find_dakuon_and_handakuon(kana) codepoints = kana.codepoints[0] moji = codepoints.chr(Encoding::UTF_8) dakuon = moji + &amp;quot;\u3099&amp;quot; # 濁点 handakuon = moji + &amp;quot;\u309a&amp;quot; # 半濁点 [ ActiveSupport::Multibyte::Unicode.normalize(dakuon, :c), ActiveSupport::Multibyte::Unicode.normalize(handakuon, :c) ] end 実行結果 find_dakuon_and_handakuon(&#39;ハ&#39;) # =&amp;gt;</description>
     </item>
     
     <item>
       <title>日付計算</title>
-      <link>https://www.vegetable.blog.v41.me/posts/85d69365-98ff-48da-9447-89506aa00079/</link>
+      <link>https://rengotaku.github.io/posts/85d69365-98ff-48da-9447-89506aa00079/</link>
       <pubDate>Fri, 19 Jul 2019 14:49:57 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/85d69365-98ff-48da-9447-89506aa00079/</guid>
+      <guid>https://rengotaku.github.io/posts/85d69365-98ff-48da-9447-89506aa00079/</guid>
       <description>数日前 since を使用する [1] pry(main)&amp;gt; 2.days.since =&amp;gt; Sun, 21 Jul 2019 14:50:21 JST +09:00 Rails の Time#since で混乱したのでまとめる - 雀巽の日記帳</description>
     </item>
     
     <item>
       <title>activerecord-importで一括してupsert</title>
-      <link>https://www.vegetable.blog.v41.me/posts/260b671b-41a1-4472-84d7-86aaa3c9d2e3/</link>
+      <link>https://rengotaku.github.io/posts/260b671b-41a1-4472-84d7-86aaa3c9d2e3/</link>
       <pubDate>Thu, 18 Jul 2019 11:29:53 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/260b671b-41a1-4472-84d7-86aaa3c9d2e3/</guid>
+      <guid>https://rengotaku.github.io/posts/260b671b-41a1-4472-84d7-86aaa3c9d2e3/</guid>
       <description>解決 column_names = User.column_names models = [] # datasには[{id: 1, name: &amp;#39;hoge&amp;#39;...}...] datas.each do |data| User.find_or_initialize_by(id: data[:id]) do |model| # FIXME: In this case, new_record is not working model.assign_attributes(data) models &amp;lt;&amp;lt; model end end User.import(models, on_duplicate_key_update: { conflict_target: %i(id), columns: column_names }) new_record?メソッドで</description>
     </item>
     
     <item>
       <title>hoge_path とヘルパーを使用したいが、アクションの部分がわからない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/d2b90897-c32e-41d2-9bcd-05a59edcc9bc/</link>
+      <link>https://rengotaku.github.io/posts/d2b90897-c32e-41d2-9bcd-05a59edcc9bc/</link>
       <pubDate>Wed, 17 Jul 2019 12:37:22 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/d2b90897-c32e-41d2-9bcd-05a59edcc9bc/</guid>
+      <guid>https://rengotaku.github.io/posts/d2b90897-c32e-41d2-9bcd-05a59edcc9bc/</guid>
       <description>事象 ヘルパーのアクション部分(?)が不明 [1] pry(main)&amp;gt; show-routes Prefix Verb URI Pattern GET /users/new/:encrypted_id(.:format) users#new 解決 as: :~ を付与する。 get &#39;/users/:encrypted_id&#39;, controller: :users, action: :new, as: :users_new_encrypted_id get &#39;/users/:encrypted_id&#39;, controller: :users, action: :new show-routes users_new_encrypted_id GET /users/new/:encrypted_id(.:format) users#new Rails のルーティング - Rails ガ</description>
     </item>
     
     <item>
       <title>has_manyな関係でも条件を設定できる</title>
-      <link>https://www.vegetable.blog.v41.me/posts/ac6b22e9-bbef-4d0a-8bd5-50f1cce3e7bd/</link>
+      <link>https://rengotaku.github.io/posts/ac6b22e9-bbef-4d0a-8bd5-50f1cce3e7bd/</link>
       <pubDate>Fri, 12 Jul 2019 17:04:08 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/ac6b22e9-bbef-4d0a-8bd5-50f1cce3e7bd/</guid>
+      <guid>https://rengotaku.github.io/posts/ac6b22e9-bbef-4d0a-8bd5-50f1cce3e7bd/</guid>
       <description>class User &amp;lt; ApplicationRecord has_many :objects end class Object &amp;lt; ApplicationRecord belongs_to :user scope :open, -&amp;gt; { where(status: 0) } end user = User.find(999) user.objects.open.all #&amp;lt;= できるんだ！？ # =&amp;gt; SELECT `object`.* FROM `object` WHERE `object`.`user_id` = 999 AND `myobject`.`status` = 0</description>
     </item>
     
     <item>
       <title>Activerecordの条件にis not nullを設定</title>
-      <link>https://www.vegetable.blog.v41.me/posts/2df5cef2-e066-4ad2-a80c-d5738c7d3dd4/</link>
+      <link>https://rengotaku.github.io/posts/2df5cef2-e066-4ad2-a80c-d5738c7d3dd4/</link>
       <pubDate>Fri, 12 Jul 2019 13:25:04 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/2df5cef2-e066-4ad2-a80c-d5738c7d3dd4/</guid>
+      <guid>https://rengotaku.github.io/posts/2df5cef2-e066-4ad2-a80c-d5738c7d3dd4/</guid>
       <description>User.where.not(name: nil) =&amp;gt; SELECT `users`.* FROM `users` WHERE (`users`.`name` IS NOT NULL) [Rails]Where句にNOT NULLを指定する - Qiita</description>
     </item>
     
     <item>
       <title>dockerでrails consoleする際の問題解消</title>
-      <link>https://www.vegetable.blog.v41.me/posts/ba5bdc0e-8d02-47cd-8770-1c2b3850b7d3/</link>
+      <link>https://rengotaku.github.io/posts/ba5bdc0e-8d02-47cd-8770-1c2b3850b7d3/</link>
       <pubDate>Tue, 02 Jul 2019 11:46:41 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/ba5bdc0e-8d02-47cd-8770-1c2b3850b7d3/</guid>
+      <guid>https://rengotaku.github.io/posts/ba5bdc0e-8d02-47cd-8770-1c2b3850b7d3/</guid>
       <description>日本語が入力できない export LANG=&amp;quot;C.UTF-8&amp;quot;; rails c する 便利alias alias dcrailsconsole=&amp;quot;docker-compose -f ~/path/to/docker-compose.yml exec [rails service name] sh -c &#39;export LANG=\&amp;quot;C.UTF-8\&amp;quot;; rails c&#39;&amp;quot; トラブルシューティング Dockerfileに記述しても、execで</description>
     </item>
     
     <item>
       <title>ActiveRecordの結果を配列に変換</title>
-      <link>https://www.vegetable.blog.v41.me/posts/abdf896d-2c74-461b-88d0-d5f2e6774d6c/</link>
+      <link>https://rengotaku.github.io/posts/abdf896d-2c74-461b-88d0-d5f2e6774d6c/</link>
       <pubDate>Tue, 02 Jul 2019 11:05:41 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/abdf896d-2c74-461b-88d0-d5f2e6774d6c/</guid>
+      <guid>https://rengotaku.github.io/posts/abdf896d-2c74-461b-88d0-d5f2e6774d6c/</guid>
       <description>解決 to_a を使用する。 例 SomeModel.where(id: [0, 1]).to_a ruby-on-rails – Rails：activerecordの関係を配列に変換する正しい方法は？ - コードログ 起因 プログラム results = self. select( &amp;#39;inquiry.id as</description>
     </item>
     
     <item>
       <title>factory botでユニークな値を設定</title>
-      <link>https://www.vegetable.blog.v41.me/posts/9b22bf01-bb92-4598-93a2-bd78d7efe635/</link>
+      <link>https://rengotaku.github.io/posts/9b22bf01-bb92-4598-93a2-bd78d7efe635/</link>
       <pubDate>Wed, 26 Jun 2019 13:35:55 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/9b22bf01-bb92-4598-93a2-bd78d7efe635/</guid>
+      <guid>https://rengotaku.github.io/posts/9b22bf01-bb92-4598-93a2-bd78d7efe635/</guid>
       <description>sequence(:username) { |n| &amp;quot;user#{n}&amp;quot; } FactoryBot.define do factory :user do first_name &#39;John&#39; last_name &#39;Doe&#39; birthdate { 21.years.ago } admin false sequence(:username) { |n| &amp;quot;user#{n}&amp;quot; } end end Factory Bot cheatsheet</description>
     </item>
     
     <item>
       <title>mockの使い方</title>
-      <link>https://www.vegetable.blog.v41.me/posts/333de691-10b6-4078-94a2-75b176921114/</link>
+      <link>https://rengotaku.github.io/posts/333de691-10b6-4078-94a2-75b176921114/</link>
       <pubDate>Wed, 26 Jun 2019 11:05:49 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/333de691-10b6-4078-94a2-75b176921114/</guid>
+      <guid>https://rengotaku.github.io/posts/333de691-10b6-4078-94a2-75b176921114/</guid>
       <description>基本 mock = Minitest::Mock.new.expect(:method_name, &amp;#39;return_value&amp;#39;, [&amp;#39;param1&amp;#39;, &amp;#39;param2&amp;#39;]) mock.method_name(&amp;#39;param1&amp;#39;, &amp;#39;param2&amp;#39;) # &amp;lt;= return value is &amp;#39;return_value&amp;#39; mock.verify # &amp;lt;= true 第一のメソッド名、第二の戻り値までは必須 応用 入れ子 mock2 = Minitest::Mock.new.expect(:second, &amp;#39;second value&amp;#39;) mock1 = Minitest::Mock.new.expect(:first, mock2) mock1.first.second #&amp;lt;= &amp;#39;second value&amp;#39; stubと組み合わせる class</description>
     </item>
     
     <item>
       <title>Minitestで&#34;No more expects available for :something_method&#34;が発生</title>
-      <link>https://www.vegetable.blog.v41.me/posts/b3b9ba25-b8e1-4f67-b6f2-884a85b8dfc7/</link>
+      <link>https://rengotaku.github.io/posts/b3b9ba25-b8e1-4f67-b6f2-884a85b8dfc7/</link>
       <pubDate>Fri, 14 Jun 2019 12:30:21 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/b3b9ba25-b8e1-4f67-b6f2-884a85b8dfc7/</guid>
+      <guid>https://rengotaku.github.io/posts/b3b9ba25-b8e1-4f67-b6f2-884a85b8dfc7/</guid>
       <description>誤り def test_method Rails.logger.info(&amp;#39;one&amp;#39;) Rails.logger.info(&amp;#39;two&amp;#39;) #&amp;lt;= raise end logger_mock = Minitest::Mock.new info_mock = logger_mock.expect(:info, true, [&amp;#39;one&amp;#39;]) Rails.logger = logger_mock test_method &amp;lt;= No more expects available for :info 正解 logger_mock = Minitest::Mock.new info_mock = logger_mock.expect(:info, true, [&amp;#39;one&amp;#39;]).expect(:info, true, [&amp;#39;two&amp;#39;]) Rails.logger = logger_mock ruby - Minitest: No more expects available - Stack Overflow</description>
     </item>
     
     <item>
       <title>minitestで意図的にraise</title>
-      <link>https://www.vegetable.blog.v41.me/posts/889f9fef-5b01-475d-bc0c-104e2086a684/</link>
+      <link>https://rengotaku.github.io/posts/889f9fef-5b01-475d-bc0c-104e2086a684/</link>
       <pubDate>Fri, 14 Jun 2019 12:24:04 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/889f9fef-5b01-475d-bc0c-104e2086a684/</guid>
+      <guid>https://rengotaku.github.io/posts/889f9fef-5b01-475d-bc0c-104e2086a684/</guid>
       <description>api_mock = MiniTest::Mock.new api_mock.expect(:get, retval_get) do |args_update| raise StandardError(&amp;#39;Mock#getで例外発生&amp;#39;) end Rails minitest Mockで例外発生パターンのテスト - Qiita</description>
     </item>
     
     <item>
       <title>minitestでエラーメッセージを検証</title>
-      <link>https://www.vegetable.blog.v41.me/posts/ca10b1b5-76b1-4c89-868e-f0ee7f32be9c/</link>
+      <link>https://rengotaku.github.io/posts/ca10b1b5-76b1-4c89-868e-f0ee7f32be9c/</link>
       <pubDate>Fri, 14 Jun 2019 12:21:53 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/ca10b1b5-76b1-4c89-868e-f0ee7f32be9c/</guid>
+      <guid>https://rengotaku.github.io/posts/ca10b1b5-76b1-4c89-868e-f0ee7f32be9c/</guid>
       <description>class FooTest &amp;lt; Minitest::Test def test_boo! # RuntimeErrorが発生することを検証 e = assert_raises RuntimeError do Foo.boo! # &amp;lt;= boo!random-messages-continue... end # エラーメッセージを検証 assert { e.message.start_with?(&amp;quot;boo!&amp;quot;) } end end Minitestで例外クラ</description>
     </item>
     
     <item>
       <title>minitestでconstをstub化</title>
-      <link>https://www.vegetable.blog.v41.me/posts/89c7127b-1494-4e7c-b613-d7156ef09fc2/</link>
+      <link>https://rengotaku.github.io/posts/89c7127b-1494-4e7c-b613-d7156ef09fc2/</link>
       <pubDate>Fri, 14 Jun 2019 12:13:25 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/89c7127b-1494-4e7c-b613-d7156ef09fc2/</guid>
+      <guid>https://rengotaku.github.io/posts/89c7127b-1494-4e7c-b613-d7156ef09fc2/</guid>
       <description>module Foo BAR = :original end Foo.stub_const(:BAR, :stubbed) do Foo::BAR end # =&amp;gt; :stubbed Foo::BAR # =&amp;gt; :original adammck/minitest-stub-const: Stub constants for the duration of a block in MiniTest</description>
     </item>
     
     <item>
       <title>ActionMailerで送信後に送信ログを記録したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/77b571b7-9eab-4c93-95cb-37e97eff8b68/</link>
+      <link>https://rengotaku.github.io/posts/77b571b7-9eab-4c93-95cb-37e97eff8b68/</link>
       <pubDate>Tue, 04 Jun 2019 12:14:10 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/77b571b7-9eab-4c93-95cb-37e97eff8b68/</guid>
+      <guid>https://rengotaku.github.io/posts/77b571b7-9eab-4c93-95cb-37e97eff8b68/</guid>
       <description>未解決 コールバックの仕組みはあるが、引数を増やす事ができず、拡張する仕組みが不明。 Registered observer on one mailer gets called with every email delivering, possible bug? · Issue #29671 · rails/rails は回答ないままクローズ</description>
     </item>
     
     <item>
       <title>指定のメソッドを実行時にフックする</title>
-      <link>https://www.vegetable.blog.v41.me/posts/abef202c-814f-469c-b0fc-1f55e20b2f3b/</link>
+      <link>https://rengotaku.github.io/posts/abef202c-814f-469c-b0fc-1f55e20b2f3b/</link>
       <pubDate>Mon, 03 Jun 2019 19:28:12 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/abef202c-814f-469c-b0fc-1f55e20b2f3b/</guid>
+      <guid>https://rengotaku.github.io/posts/abef202c-814f-469c-b0fc-1f55e20b2f3b/</guid>
       <description>※未検証 ActiveSupport::Notification.subscribe(&amp;#34;deliver.action_mailer&amp;#34;) do |name, start, finish, id, payload| puts &amp;#34;name: #{name}&amp;#34; puts &amp;#34;payload: #{payload}&amp;#34; end ActionMailer の送信ログをとりたい - Qiita</description>
     </item>
     
     <item>
       <title>dockerで動いているrailsでbetter_errorsのirbが動作しない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/bc3ee1e4-fa92-4af9-bdd1-7dced7696686/</link>
+      <link>https://rengotaku.github.io/posts/bc3ee1e4-fa92-4af9-bdd1-7dced7696686/</link>
       <pubDate>Thu, 30 May 2019 19:18:43 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/bc3ee1e4-fa92-4af9-bdd1-7dced7696686/</guid>
+      <guid>https://rengotaku.github.io/posts/bc3ee1e4-fa92-4af9-bdd1-7dced7696686/</guid>
       <description>未解決 画面右側のirbでデバッグできる画面が表示されない。 binding_of_caller が関連しているようだが、原因が不明。 画面を出すようにする BetterErrors::Middleware.allow_ip! &amp;#34;0.0.0.0/0&amp;#34; better_errors not working in a Docker container · Issue #270</description>
     </item>
     
     <item>
       <title>dockerで動くrailsでデバックを行いたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/b6b89728-605f-40b8-9d57-2bb1cc14b932/</link>
+      <link>https://rengotaku.github.io/posts/b6b89728-605f-40b8-9d57-2bb1cc14b932/</link>
       <pubDate>Thu, 30 May 2019 11:10:57 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/b6b89728-605f-40b8-9d57-2bb1cc14b932/</guid>
+      <guid>https://rengotaku.github.io/posts/b6b89728-605f-40b8-9d57-2bb1cc14b932/</guid>
       <description>設定 docker-compose.yml services: rails: &amp;amp;app_base tty: true stdin_open: true 操作 アタッチ docker attach [container_name] $ docker-compose run --rm --service-ports [service name] でいけるかと思ったが、再度コンテナを立ち上げる挙動になり期待しない動きをする 便利コマンド</description>
     </item>
     
     <item>
       <title>日時をよくあるフォーマットの文字列で取得したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/829f1f8c-5a83-4c37-b05d-204b2b2d70d4/</link>
+      <link>https://rengotaku.github.io/posts/829f1f8c-5a83-4c37-b05d-204b2b2d70d4/</link>
       <pubDate>Mon, 27 May 2019 14:06:52 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/829f1f8c-5a83-4c37-b05d-204b2b2d70d4/</guid>
+      <guid>https://rengotaku.github.io/posts/829f1f8c-5a83-4c37-b05d-204b2b2d70d4/</guid>
       <description>Time.now.strftime(&amp;#39;%Y-%m-%d %H:%M:%S&amp;#39;) strftime - リファレンス - - Railsドキュメント</description>
     </item>
     
     <item>
       <title>loggerを追加</title>
-      <link>https://www.vegetable.blog.v41.me/posts/2fc7b3ad-e171-49ab-aa4f-abb4e3407a53/</link>
+      <link>https://rengotaku.github.io/posts/2fc7b3ad-e171-49ab-aa4f-abb4e3407a53/</link>
       <pubDate>Tue, 21 May 2019 11:21:26 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/2fc7b3ad-e171-49ab-aa4f-abb4e3407a53/</guid>
+      <guid>https://rengotaku.github.io/posts/2fc7b3ad-e171-49ab-aa4f-abb4e3407a53/</guid>
       <description>config.another_logger = Logger.new(Rails.root.join(&amp;#39;log/foo.log&amp;#39;)) [Rails] 任意のファイルにアプリケーションログを吐く - Qiita</description>
     </item>
     
     <item>
       <title>rspecを導入する上でハマった箇所</title>
-      <link>https://www.vegetable.blog.v41.me/posts/47e621ef-c154-4be1-9ecb-fdc5795c37ac/</link>
+      <link>https://rengotaku.github.io/posts/47e621ef-c154-4be1-9ecb-fdc5795c37ac/</link>
       <pubDate>Fri, 12 Apr 2019 14:35:34 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/47e621ef-c154-4be1-9ecb-fdc5795c37ac/</guid>
+      <guid>https://rengotaku.github.io/posts/47e621ef-c154-4be1-9ecb-fdc5795c37ac/</guid>
       <description>controllerの書き方 RSpec.describe EventsController do describe &#39;GET #index&#39; do context &#39;nothing&#39; do it &amp;quot;render witout error&amp;quot; do get :index end end end end Rails RSpecの基本 ~Controller編~ - Qiita 比較の仕方 expect(hoge).to be 1 使える</description>
     </item>
     
     <item>
       <title>v4.8.2のnodejsを使用の為にエラーがでる</title>
-      <link>https://www.vegetable.blog.v41.me/posts/5751a135-f83f-4bb6-9fe7-3e052c5a1f06/</link>
+      <link>https://rengotaku.github.io/posts/5751a135-f83f-4bb6-9fe7-3e052c5a1f06/</link>
       <pubDate>Wed, 10 Apr 2019 16:56:10 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/5751a135-f83f-4bb6-9fe7-3e052c5a1f06/</guid>
+      <guid>https://rengotaku.github.io/posts/5751a135-f83f-4bb6-9fe7-3e052c5a1f06/</guid>
       <description>事象 Autoprefixer doesn’t support Node v4.8.2. Update it 対応 セットアップ( https://deb.nodesource.com/setup_10.x )をしてnodejsをインストールすればよい。 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - sudo apt-get install -y nodejs 指定のURLは公式</description>
     </item>
     
     <item>
       <title>formを使用してhiddenを設定したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/c88be25f-3c75-4f76-9982-890a733fea33/</link>
+      <link>https://rengotaku.github.io/posts/c88be25f-3c75-4f76-9982-890a733fea33/</link>
       <pubDate>Tue, 09 Apr 2019 10:56:19 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/c88be25f-3c75-4f76-9982-890a733fea33/</guid>
+      <guid>https://rengotaku.github.io/posts/c88be25f-3c75-4f76-9982-890a733fea33/</guid>
       <description>&amp;lt;%= f.hidden_field :service, :value =&amp;gt; &amp;#34;test&amp;#34; %&amp;gt; Ruby on Rails - hidden_fieldの使い方 - Qiita</description>
     </item>
     
     <item>
       <title>ローカルのサーバにアクセスしようとするとpumaがエラーを吐く</title>
-      <link>https://www.vegetable.blog.v41.me/posts/7261b61e-185a-4142-8350-8635f5aeefe0/</link>
+      <link>https://rengotaku.github.io/posts/7261b61e-185a-4142-8350-8635f5aeefe0/</link>
       <pubDate>Mon, 18 Mar 2019 17:49:54 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/7261b61e-185a-4142-8350-8635f5aeefe0/</guid>
+      <guid>https://rengotaku.github.io/posts/7261b61e-185a-4142-8350-8635f5aeefe0/</guid>
       <description>事象 サーバーを起動 $ rbenv exec bundle exec rails s =&amp;gt; Booting Puma =&amp;gt; Rails 5.0.0.1 application starting in development_share on http://0.0.0.0:3020 =&amp;gt; Run `rails server -h` for more startup options Puma starting in single mode... * Version 3.6.0 (ruby 2.3.7-p456), codename: Sleepy Sunday Serenity * Min threads: 5, max threads: 5 * Environment: development_share * Listening on tcp://0.0.0.0:3020 Use Ctrl-C to stop サ</description>
     </item>
     
     <item>
       <title>capybara-webkit 1.15.1のインストールに失敗する</title>
-      <link>https://www.vegetable.blog.v41.me/posts/2a9df335-cb6e-46e6-8554-ccf2bb2ab67f/</link>
+      <link>https://rengotaku.github.io/posts/2a9df335-cb6e-46e6-8554-ccf2bb2ab67f/</link>
       <pubDate>Fri, 08 Mar 2019 16:27:38 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/2a9df335-cb6e-46e6-8554-ccf2bb2ab67f/</guid>
+      <guid>https://rengotaku.github.io/posts/2a9df335-cb6e-46e6-8554-ccf2bb2ab67f/</guid>
       <description>Info マシン macOS High Sierra(10.13.4) Gemfile.lock capybara (2.11.0) addressable mime-types (&amp;gt;= 1.16) nokogiri (&amp;gt;= 1.3.3) rack (&amp;gt;= 1.0.0) rack-test (&amp;gt;= 0.5.4) xpath (~&amp;gt; 2.0) capybara-webkit (1.15.1) capybara (&amp;gt;= 2.3, &amp;lt; 4.0) json 事象 bundle install時にエラー current directory: /Users/300807/workspace/front.door.ac/vendor/bundler/ruby/2.3.0/gems/capybara-webkit-1.15.1 /Users/300807/.rbenv/versions/2.3.7/bin/ruby -r ./siteconf20190308-92868-1cuusvw.rb extconf.rb Info: creating stash file /Users/300807/workspace/front.door.ac/vendor/bundler/ruby/2.3.0/gems/capybara-webkit-1.15.1/.qmake.stash cd src/ &amp;amp;&amp;amp; ( test -e Makefile.webkit_server || /usr/local/opt/qt/bin/qmake</description>
     </item>
     
     <item>
       <title>routesの:idを別名にしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/a9bce0e9-16b9-4dba-ace2-818960083ae1/</link>
+      <link>https://rengotaku.github.io/posts/a9bce0e9-16b9-4dba-ace2-818960083ae1/</link>
       <pubDate>Thu, 07 Mar 2019 15:57:03 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/a9bce0e9-16b9-4dba-ace2-818960083ae1/</guid>
+      <guid>https://rengotaku.github.io/posts/a9bce0e9-16b9-4dba-ace2-818960083ae1/</guid>
       <description>resourcesのパラメータに、paramを指定 Rails.application.routes.draw do resources :schedules, param: :other_params_name end railsのroutingで出てくる:idを変更する場合 - Qiita</description>
     </item>
     
     <item>
       <title>link_toで、.(ピリオド)が/(スラッシュ)に変わる</title>
-      <link>https://www.vegetable.blog.v41.me/posts/7ed609fb-0de2-4276-b9fa-1e8b60211580/</link>
+      <link>https://rengotaku.github.io/posts/7ed609fb-0de2-4276-b9fa-1e8b60211580/</link>
       <pubDate>Thu, 07 Mar 2019 15:55:20 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/7ed609fb-0de2-4276-b9fa-1e8b60211580/</guid>
+      <guid>https://rengotaku.github.io/posts/7ed609fb-0de2-4276-b9fa-1e8b60211580/</guid>
       <description>解決策 複数系のパスメソッド（admin_update_datas_path(1)）を使用せずに、単数系（admin_update_data_</description>
     </item>
     
     <item>
       <title>railsでanchorを生成</title>
-      <link>https://www.vegetable.blog.v41.me/posts/a7446c04-7215-43c6-a03d-20fd22ec2847/</link>
+      <link>https://rengotaku.github.io/posts/a7446c04-7215-43c6-a03d-20fd22ec2847/</link>
       <pubDate>Thu, 07 Mar 2019 15:48:53 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/a7446c04-7215-43c6-a03d-20fd22ec2847/</guid>
+      <guid>https://rengotaku.github.io/posts/a7446c04-7215-43c6-a03d-20fd22ec2847/</guid>
       <description>&amp;lt;%= link_to &#39;ユーザーA&#39;, user_path %&amp;gt; メソッドを指定したい場合 &amp;lt;%= link_to &#39;ユーザーA&#39;, user_path, method: :post %&amp;gt; Rails の link_to メソッドでアンカーリンクを作成する - kzy52&amp;rsquo;s blog link_to,b</description>
     </item>
     
     <item>
       <title>consoleでhelperを使用したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/31318f64-7543-40dd-a60b-ccd1106c6e64/</link>
+      <link>https://rengotaku.github.io/posts/31318f64-7543-40dd-a60b-ccd1106c6e64/</link>
       <pubDate>Mon, 25 Feb 2019 13:22:12 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/31318f64-7543-40dd-a60b-ccd1106c6e64/</guid>
+      <guid>https://rengotaku.github.io/posts/31318f64-7543-40dd-a60b-ccd1106c6e64/</guid>
       <description>include ~ を実行してロードする。 [1] pry(main)&amp;gt; number_to_currency(99000, unit: &#39;&#39;, precision: 0) NoMethodError: undefined method `number_to_currency&#39; for main:Object from (pry):1:in `&amp;lt;main&amp;gt;&#39; [2] pry(main)&amp;gt; include ActionView::Helpers::NumberHelper =&amp;gt; Object [3] pry(main)&amp;gt; number_to_currency(99000, unit: &#39;&#39;, precision: 0) =&amp;gt; &amp;quot;99,000&amp;quot; number_to_currency (ActionView::Helpers::NumberHelper) - APIdock</description>
     </item>
     
     <item>
       <title>stubにしたいけど、block内の処理も実行したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/f5afa8d4-05a2-413f-8021-674ed4f9d523/</link>
+      <link>https://rengotaku.github.io/posts/f5afa8d4-05a2-413f-8021-674ed4f9d523/</link>
       <pubDate>Fri, 08 Feb 2019 12:32:30 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/f5afa8d4-05a2-413f-8021-674ed4f9d523/</guid>
+      <guid>https://rengotaku.github.io/posts/f5afa8d4-05a2-413f-8021-674ed4f9d523/</guid>
       <description>やりたい事 Parallel内でメール配信処理を行いたい Parallel.mapをstub化するが、block内のメール送信処理は実行したい サ</description>
     </item>
     
     <item>
       <title>stubを使いたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/8dd8839e-e8b9-4fe3-991f-2de32696b47a/</link>
+      <link>https://rengotaku.github.io/posts/8dd8839e-e8b9-4fe3-991f-2de32696b47a/</link>
       <pubDate>Mon, 04 Feb 2019 17:32:21 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/8dd8839e-e8b9-4fe3-991f-2de32696b47a/</guid>
+      <guid>https://rengotaku.github.io/posts/8dd8839e-e8b9-4fe3-991f-2de32696b47a/</guid>
       <description>具体的な例 require &amp;#39;parallel&amp;#39; namespace :mail do desc &amp;#39;send mail&amp;#39; task send: :environment do |task| some_models = SomeModel.where(~).all send_counts = Parallel.map(some_models, in_process: 4) do |some_model| begin Mail.send(some_model) 1 rescue =&amp;gt; e 0 end end SaveModel.write_log(send_counts) end end end require &amp;#39;test_helper&amp;#39; require &amp;#39;rake&amp;#39; class MailTest &amp;lt; ActiveSupport::TestCase # ParallelによりTransacti</description>
     </item>
     
     <item>
       <title>test中に投入したデータを消えないようにしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/05fbf34d-d6d3-4399-a072-f8434cb38105/</link>
+      <link>https://rengotaku.github.io/posts/05fbf34d-d6d3-4399-a072-f8434cb38105/</link>
       <pubDate>Wed, 30 Jan 2019 12:19:52 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/05fbf34d-d6d3-4399-a072-f8434cb38105/</guid>
+      <guid>https://rengotaku.github.io/posts/05fbf34d-d6d3-4399-a072-f8434cb38105/</guid>
       <description>rails5 class FooTest &amp;lt; ActiveSupport::TestCase self.use_transactional_tests = false end 指定のテスト以降もデータが残る為、以降のテストに影響がでる。対象のテスト終了時にデータを削除するのがベター 以前 class FooTest &amp;lt; ActiveSupport::TestCase self.use_transactional_fixtures =</description>
     </item>
     
     <item>
       <title>画像を表示したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/d0203447-1215-4318-8e12-26220011496c/</link>
+      <link>https://rengotaku.github.io/posts/d0203447-1215-4318-8e12-26220011496c/</link>
       <pubDate>Thu, 24 Jan 2019 10:21:41 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/d0203447-1215-4318-8e12-26220011496c/</guid>
+      <guid>https://rengotaku.github.io/posts/d0203447-1215-4318-8e12-26220011496c/</guid>
       <description>image_tag(画像ファイルへのパス, [, (オプション or HTMLオプション)]) 参考 &amp;lt;%= image_tag(&amp;quot;icon.png&amp;quot;) %&amp;gt; # &amp;lt;img alt=&amp;quot;Icon&amp;quot; src=&amp;quot;/images/icon.png&amp;quot; /&amp;gt; image_tag - リファレンス - - Railsドキュメ</description>
     </item>
     
     <item>
       <title>別のDBに接続するモデルを作成したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/da413a68-86ba-4cd4-9640-25114a03698f/</link>
+      <link>https://rengotaku.github.io/posts/da413a68-86ba-4cd4-9640-25114a03698f/</link>
       <pubDate>Tue, 22 Jan 2019 18:25:29 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/da413a68-86ba-4cd4-9640-25114a03698f/</guid>
+      <guid>https://rengotaku.github.io/posts/da413a68-86ba-4cd4-9640-25114a03698f/</guid>
       <description>修正ファイル app/models/other_db.rb app/models/other_db/o_table.rb config/other_db/database.yml db/other_db/schema.rb db/other_db/seeds.rb 修正内容 モデルの具象クラス module OtherDb class Base &amp;lt; ActiveRecord::Base # 対応する抽象テーブルは設定しない（必ず継承させる） # databases = YAML.load(ERB.new(File.read(&amp;#39;config/other_db/database.yml&amp;#39;)).result) establish_connection(databases[Rails.env]) self.abstract_class = true end end モデル module</description>
     </item>
     
     <item>
       <title>minitestでApplicationControllerをテストしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/af47cda3-b3a4-46e9-9bae-7776f692421a/</link>
+      <link>https://rengotaku.github.io/posts/af47cda3-b3a4-46e9-9bae-7776f692421a/</link>
       <pubDate>Fri, 18 Jan 2019 16:41:50 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/af47cda3-b3a4-46e9-9bae-7776f692421a/</guid>
+      <guid>https://rengotaku.github.io/posts/af47cda3-b3a4-46e9-9bae-7776f692421a/</guid>
       <description>テスト require &amp;#39;test_helper&amp;#39; # Add at runtime an action to ApplicationController ApplicationController.class_eval do def development1 Rails.env = &amp;#39;development&amp;#39; response_boolean(development?) end def development2 Rails.env = &amp;#39;production&amp;#39; response_boolean(development?) end private def response_boolean(equation) render :text =&amp;gt; equation ? &amp;#34;true&amp;#34; : &amp;#34;false&amp;#34; end end # If disable_clear_and_finalize is set to true, Rails will not clear other routes when calling again the draw method. Look at the source code at: http://apidock.com/rails/v4.0.2/ActionDispatch/Routing/RouteSet/draw Rails.application.routes.disable_clear_and_finalize =</description>
     </item>
     
     <item>
       <title>taskをcontrollerから呼びたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/3e8157bd-e0fc-420e-b419-5c7c65dd0edb/</link>
+      <link>https://rengotaku.github.io/posts/3e8157bd-e0fc-420e-b419-5c7c65dd0edb/</link>
       <pubDate>Thu, 10 Jan 2019 15:39:12 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/3e8157bd-e0fc-420e-b419-5c7c65dd0edb/</guid>
+      <guid>https://rengotaku.github.io/posts/3e8157bd-e0fc-420e-b419-5c7c65dd0edb/</guid>
       <description>Rake::Task[&amp;#34;mytask:test&amp;#34;].execute(Rake::TaskArguments.new([:param1, :param2], [&amp;#34;value1&amp;#34;, &amp;#34;value2&amp;#34;])) invokeを使用すると、一度しか呼ばれない事象も発生する為、execute推奨 rakeタスク内で別のタスクを呼び出す - Qiita</description>
     </item>
     
     <item>
       <title>日付の入力フォームを細かく設定したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/fc0bdd55-dc6b-4a8a-b904-fe01a8185b89/</link>
+      <link>https://rengotaku.github.io/posts/fc0bdd55-dc6b-4a8a-b904-fe01a8185b89/</link>
       <pubDate>Thu, 10 Jan 2019 10:20:40 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/fc0bdd55-dc6b-4a8a-b904-fe01a8185b89/</guid>
+      <guid>https://rengotaku.github.io/posts/fc0bdd55-dc6b-4a8a-b904-fe01a8185b89/</guid>
       <description>&amp;lt;%= select_year Time.now, {:prefix=&amp;gt;&amp;#34;reserve&amp;#34;, :field_name=&amp;gt;&amp;#34;time(1i)&amp;#34;, :start_year=&amp;gt;Time.now.year, :end_year=&amp;gt;Time.now.year+2} %&amp;gt;年 &amp;lt;%= select_month Time.now, {:prefix=&amp;gt;&amp;#34;reserve&amp;#34;, :field_name=&amp;gt;&amp;#34;time(2i)&amp;#34;, :use_month_numbers=&amp;gt;true} %&amp;gt;月 &amp;lt;%= select_day Time.now, {:prefix=&amp;gt;&amp;#34;reserve&amp;#34;, :field_name=&amp;gt;&amp;#34;time(3i)&amp;#34; } %&amp;gt;日 &amp;lt;%= select_hour Time.now, {:prefix=&amp;gt;&amp;#34;reserve&amp;#34;, :field_name=&amp;gt;&amp;#34;time(4i)&amp;#34; } %&amp;gt;時 &amp;lt;%= select_minute Time.now, {:prefix=&amp;gt;&amp;#34;reserve&amp;#34;, :field_name=&amp;gt;&amp;#34;time(5i)&amp;#34;, :minute_step=&amp;gt;10 } %&amp;gt;分 datetime_select より詳細に日付</description>
     </item>
     
     <item>
       <title>getで:idなしのルートを作成したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/dd14b9b6-1369-4d82-9e51-733b2ca0a5f6/</link>
+      <link>https://rengotaku.github.io/posts/dd14b9b6-1369-4d82-9e51-733b2ca0a5f6/</link>
       <pubDate>Tue, 08 Jan 2019 15:36:56 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/dd14b9b6-1369-4d82-9e51-733b2ca0a5f6/</guid>
+      <guid>https://rengotaku.github.io/posts/dd14b9b6-1369-4d82-9e51-733b2ca0a5f6/</guid>
       <description>resource :user do get :me, on: :member end # =&amp;gt; me_api_user GET /api/users/me(.:format) api/v1/users#me {:format=&amp;gt;&amp;quot;json&amp;quot;} ruby - Rails routes: GET without param :id - Stack Overflow https://stackoverflow.com/questions/17066637/rails-routes-get-without-param-id</description>
     </item>
     
     <item>
       <title>rails5以前のバージョンでor条件を作成したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/33b4adfd-caf3-4824-9191-e286eeba6de3/</link>
+      <link>https://rengotaku.github.io/posts/33b4adfd-caf3-4824-9191-e286eeba6de3/</link>
       <pubDate>Mon, 07 Jan 2019 16:16:31 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/33b4adfd-caf3-4824-9191-e286eeba6de3/</guid>
+      <guid>https://rengotaku.github.io/posts/33b4adfd-caf3-4824-9191-e286eeba6de3/</guid>
       <description>SomeTable.where(&amp;#34;id = ? or name = ?&amp;#34;, id, name) rails5だと or メソッドが用意されている Rails whereで複数カラムのOR条件を作成する | 酒と涙とRubyとRailsと https://morizyun.github.io/blog/rails-active-record-where-or-dinamic/index.html</description>
     </item>
     
     <item>
       <title>consoleでroutesを確認したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/8169317f-877c-4b26-9681-5e820c98686f/</link>
+      <link>https://rengotaku.github.io/posts/8169317f-877c-4b26-9681-5e820c98686f/</link>
       <pubDate>Fri, 21 Dec 2018 11:06:19 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/8169317f-877c-4b26-9681-5e820c98686f/</guid>
+      <guid>https://rengotaku.github.io/posts/8169317f-877c-4b26-9681-5e820c98686f/</guid>
       <description>show-routes を使用する。 Railsでpathを確認する - Qiita</description>
     </item>
     
     <item>
       <title>コントローラーのrequestをスタブにしてテストしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/7b892c39-d8f1-49ac-b556-c02970e0a10a/</link>
+      <link>https://rengotaku.github.io/posts/7b892c39-d8f1-49ac-b556-c02970e0a10a/</link>
       <pubDate>Thu, 20 Dec 2018 14:41:33 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/7b892c39-d8f1-49ac-b556-c02970e0a10a/</guid>
+      <guid>https://rengotaku.github.io/posts/7b892c39-d8f1-49ac-b556-c02970e0a10a/</guid>
       <description>class SomeController &amp;lt; ApiController private def get_host(request) schema_and_host = &amp;#34;#{request.scheme}://#{request.host}&amp;#34; request.port.blank? ? schema_and_host : &amp;#34;#{schema_and_host}:#{request.port}&amp;#34; end end describe &amp;#34;test.&amp;#34; do def setup @controller = SomeController.new @request = Object.new @request.define_singleton_method(:scheme) { &amp;#39;http&amp;#39; } @request.define_singleton_method(:host) { &amp;#39;localhost&amp;#39; } @request.define_singleton_method(:port) { nil } end test &amp;#34;get url&amp;#34; do assert { @controller.send(:get_host, @request) == &amp;#39;http://localhost&amp;#39; } end end ruby - Add method to an instanced object - Stack Overflow [ruby-on-rails] Rspe</description>
     </item>
     
     <item>
       <title>yamlファイルに記載した設定をconfigとしてロード</title>
-      <link>https://www.vegetable.blog.v41.me/posts/4a69b6bb-0474-4600-8f72-2ec0ee7efd4b/</link>
+      <link>https://rengotaku.github.io/posts/4a69b6bb-0474-4600-8f72-2ec0ee7efd4b/</link>
       <pubDate>Mon, 17 Dec 2018 12:16:56 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/4a69b6bb-0474-4600-8f72-2ec0ee7efd4b/</guid>
+      <guid>https://rengotaku.github.io/posts/4a69b6bb-0474-4600-8f72-2ec0ee7efd4b/</guid>
       <description>ロード処理 def load_config(key, filepath) yml = YAML.safe_load(ERB.new(File.read(filepath)).result, [], [], true).symbolize_keys raise &amp;#34;No such file #{filepath}&amp;#34; if yml.blank? config = yml[Rails.env.to_sym] raise &amp;#34;No such environment #{Rails.env}on #{filepath}&amp;#34; if config.blank? Rails.application.config.send(&amp;#34;#{key}=&amp;#34;, ActiveSupport::InheritableOptions.new(config.deep_symbolize_keys)) end load_config(:site_info, Rails.root.join(&amp;#39;config&amp;#39;, &amp;#39;site_info.yml&amp;#39;)) yamlファイルに記載されたrubyの式を展開してロードするよう</description>
     </item>
     
     <item>
       <title>after_findの実行タイミング</title>
-      <link>https://www.vegetable.blog.v41.me/posts/18a1b201-414e-4a47-bf02-72e995f22fbc/</link>
+      <link>https://rengotaku.github.io/posts/18a1b201-414e-4a47-bf02-72e995f22fbc/</link>
       <pubDate>Fri, 14 Dec 2018 11:37:45 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/18a1b201-414e-4a47-bf02-72e995f22fbc/</guid>
+      <guid>https://rengotaku.github.io/posts/18a1b201-414e-4a47-bf02-72e995f22fbc/</guid>
       <description>結論 after_find のfunction内で他モデルをロードするような処理は（N+1問題に繋がるため）入れてはいけない。 モデル class Post &amp;lt; ApplicationRecord has_many :tag_relationships has_many :tags, through: :tag_relationships after_find :find_relate_tags # タグ</description>
     </item>
     
     <item>
       <title>hamlで参考になるサイト</title>
-      <link>https://www.vegetable.blog.v41.me/posts/a28a6a4a-7af3-4d7b-9363-f267d6465f8f/</link>
+      <link>https://rengotaku.github.io/posts/a28a6a4a-7af3-4d7b-9363-f267d6465f8f/</link>
       <pubDate>Thu, 13 Dec 2018 12:49:16 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/a28a6a4a-7af3-4d7b-9363-f267d6465f8f/</guid>
+      <guid>https://rengotaku.github.io/posts/a28a6a4a-7af3-4d7b-9363-f267d6465f8f/</guid>
       <description>決定版!!Haml小技まとめ！！ - Qiita</description>
     </item>
     
     <item>
       <title>apiのテストケースのサンプル</title>
-      <link>https://www.vegetable.blog.v41.me/posts/7a573d40-4330-42cd-a58d-bf96947f7bc5/</link>
+      <link>https://rengotaku.github.io/posts/7a573d40-4330-42cd-a58d-bf96947f7bc5/</link>
       <pubDate>Wed, 12 Dec 2018 18:30:04 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/7a573d40-4330-42cd-a58d-bf96947f7bc5/</guid>
+      <guid>https://rengotaku.github.io/posts/7a573d40-4330-42cd-a58d-bf96947f7bc5/</guid>
       <description>require &amp;#39;test_helper&amp;#39; module Api class SampleControllerTest &amp;lt; ActionDispatch::IntegrationTest describe &amp;#34;something function test.&amp;#34; do describe &amp;#34;OK case&amp;#34; do test &amp;#34;exist&amp;#34; do get &amp;#39;/api/v1/sample_contract_mails/1/example&amp;#39;, params: { page: 2 } assert_response :success body = JSON.parse(response.body) assert { body.size == 1 } end end describe &amp;#34;NG case&amp;#34; do test &amp;#34;dont exist&amp;#34; do get &amp;#39;/api/v1/sample_contract_mails/2/example&amp;#39; assert_response :missing end end end end end</description>
     </item>
     
     <item>
       <title>モデルのテストケースのサンプル</title>
-      <link>https://www.vegetable.blog.v41.me/posts/72789551-4a7b-4a54-a6f3-49e1965faf28/</link>
+      <link>https://rengotaku.github.io/posts/72789551-4a7b-4a54-a6f3-49e1965faf28/</link>
       <pubDate>Wed, 12 Dec 2018 18:26:14 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/72789551-4a7b-4a54-a6f3-49e1965faf28/</guid>
+      <guid>https://rengotaku.github.io/posts/72789551-4a7b-4a54-a6f3-49e1965faf28/</guid>
       <description>require &amp;#39;test_helper&amp;#39; class SampleModelTest &amp;lt; ActiveSupport::TestCase describe &amp;#39;something function test.&amp;#39; do test &amp;#39;get something.&amp;#39; do assert { SampleModel.find(1).present? } end test &amp;#39;dont get something.&amp;#39; do assert { SampleModel.find(2).blank? } end end describe &amp;#39;something2 function test.&amp;#39; do before do puts &amp;#34;be executed in something2 only.&amp;#34; end after do puts &amp;#34;be executed in something2 only.&amp;#34; end test &amp;#39;get something.&amp;#39; do assert { SampleModel.find(1).present? } end end end minitest-power_assert のgem</description>
     </item>
     
     <item>
       <title>指定フォルダ配下の1日前のファイルを削除し、空のフォルダを削除したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/50477c7a-7a7e-4625-a0f1-5935097b8627/</link>
+      <link>https://rengotaku.github.io/posts/50477c7a-7a7e-4625-a0f1-5935097b8627/</link>
       <pubDate>Wed, 12 Dec 2018 17:10:51 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/50477c7a-7a7e-4625-a0f1-5935097b8627/</guid>
+      <guid>https://rengotaku.github.io/posts/50477c7a-7a7e-4625-a0f1-5935097b8627/</guid>
       <description># 1日前のファイルを削除 Dir.glob(&amp;#39;path/to/dir/**/*.*&amp;#39;). select{ |f| File.mtime(f) &amp;lt; Time.now - 1.day }. each{ |f| FileUtils.rm(f) } # 空のフォルダを削除 Dir.glob(&amp;#34;path/to/dir/**&amp;#34;).each do |fo| next unless FileTest.directory?(fo) next unless Dir.entries(fo).length == 2 puts &amp;#34;#{fo}empty&amp;#34; Dir.rmdir fo end [Ruby] 空のフォルダだけ削除、Dir::en</description>
     </item>
     
     <item>
       <title>fixtureでメールのsourceをDBに登録したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/02db3f8e-903e-4814-a7ac-35e0bb0929b2/</link>
+      <link>https://rengotaku.github.io/posts/02db3f8e-903e-4814-a7ac-35e0bb0929b2/</link>
       <pubDate>Wed, 12 Dec 2018 16:51:33 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/02db3f8e-903e-4814-a7ac-35e0bb0929b2/</guid>
+      <guid>https://rengotaku.github.io/posts/02db3f8e-903e-4814-a7ac-35e0bb0929b2/</guid>
       <description>概要 メールをファイルとして設置し、fixtureに使用するyaml内にRubyの処理を埋め込み、yamlに書き出す。 必要ファイル yaml &amp;lt;% def mail(file_name) File.open(file_name){ |f|</description>
     </item>
     
     <item>
       <title>precompileしたらシンタックスエラーで失敗する</title>
-      <link>https://www.vegetable.blog.v41.me/posts/b2b33f33-dc36-497d-96ce-35a4dc855351/</link>
+      <link>https://rengotaku.github.io/posts/b2b33f33-dc36-497d-96ce-35a4dc855351/</link>
       <pubDate>Wed, 12 Dec 2018 00:40:07 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/b2b33f33-dc36-497d-96ce-35a4dc855351/</guid>
+      <guid>https://rengotaku.github.io/posts/b2b33f33-dc36-497d-96ce-35a4dc855351/</guid>
       <description>対応 after config.assets.js_compressor = Uglifier.new(harmony: true) before config.assets.js_compressor = :uglifier 事象 RAILS_ENV=production rails assets:precompile すると下記エラーが発生する Uglifier::Error: Unexpected token: keyword (const). To use ES6 syntax uglifier の ES6部分におけるエラー [Rails] - ハッキングバカ</description>
     </item>
     
     <item>
       <title>minitestを実行してもfixtureが実行されずデータが空</title>
-      <link>https://www.vegetable.blog.v41.me/posts/29f18e5f-fadb-43da-b63f-267791e4d3c0/</link>
+      <link>https://rengotaku.github.io/posts/29f18e5f-fadb-43da-b63f-267791e4d3c0/</link>
       <pubDate>Mon, 10 Dec 2018 19:02:14 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/29f18e5f-fadb-43da-b63f-267791e4d3c0/</guid>
+      <guid>https://rengotaku.github.io/posts/29f18e5f-fadb-43da-b63f-267791e4d3c0/</guid>
       <description>fixtures :all を入れる必要がある。 require File.expand_path(&amp;#39;../../config/environment&amp;#39;, __FILE__) require &amp;#39;rails/test_help&amp;#39; module ActiveSupport class TestCase include FactoryBot::Syntax::Methods include ActiveSupport::Testing::TimeHelpers fixtures :all end end Minitest Tutorial: Getting Started with Minitest | Codeship | via @codeship https://blog.codeship.com/getting-started-with-minitest/</description>
     </item>
     
     <item>
       <title>ActiveModel::Type::UnsignedIntegerが発生した場合</title>
-      <link>https://www.vegetable.blog.v41.me/posts/e310a2f1-1018-432b-8e36-cfa0489a68e9/</link>
+      <link>https://rengotaku.github.io/posts/e310a2f1-1018-432b-8e36-cfa0489a68e9/</link>
       <pubDate>Wed, 28 Nov 2018 18:28:03 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/e310a2f1-1018-432b-8e36-cfa0489a68e9/</guid>
+      <guid>https://rengotaku.github.io/posts/e310a2f1-1018-432b-8e36-cfa0489a68e9/</guid>
       <description>対応 検索をしただけで発生する場合、桁制限で対応。 4294967295までOKなので、バリデーションで10桁だと切り分けが難しいので、9桁まで</description>
     </item>
     
     <item>
       <title>Validatorをテスト</title>
-      <link>https://www.vegetable.blog.v41.me/posts/f7766124-b235-4796-a7af-02b44fb666ad/</link>
+      <link>https://rengotaku.github.io/posts/f7766124-b235-4796-a7af-02b44fb666ad/</link>
       <pubDate>Thu, 25 Oct 2018 16:44:10 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/f7766124-b235-4796-a7af-02b44fb666ad/</guid>
+      <guid>https://rengotaku.github.io/posts/f7766124-b235-4796-a7af-02b44fb666ad/</guid>
       <description>require &amp;#39;test_helper&amp;#39; class TelephoneValidatable include ActiveModel::Model attr_accessor :telephone validates :telephone, telephone: true end class TelephoneValidatorTest &amp;lt; ActiveSupport::TestCase def setup @validator = TelephoneValidatable end valid_telephone_addresses = [&amp;#39;123456789&amp;#39;] invalid_telephone_addresses = [&amp;#39;A123456789Z&amp;#39;] describe &amp;#34;OK case&amp;#34; do test &amp;#39;normal telphone&amp;#39; do validator = @validator.new valid_telephone_addresses.each do |telephone| validator.telephone = telephone assert { validator.valid? } end end end describe &amp;#34;NG case&amp;#34; do test &amp;#39;unnormal telephone&amp;#39; do validator = @validator.new invalid_telephone_addresses.each do |telephone| validator.telephone = telephone</description>
     </item>
     
     <item>
       <title>HTTPステータスコード</title>
-      <link>https://www.vegetable.blog.v41.me/posts/455e83ac-5a80-482e-9108-40f27404394b/</link>
+      <link>https://rengotaku.github.io/posts/455e83ac-5a80-482e-9108-40f27404394b/</link>
       <pubDate>Thu, 04 Oct 2018 15:51:00 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/455e83ac-5a80-482e-9108-40f27404394b/</guid>
+      <guid>https://rengotaku.github.io/posts/455e83ac-5a80-482e-9108-40f27404394b/</guid>
       <description>1xx Informational Status Code Status Message Symbol 100 Continue :continue 101 Switching Protocols :switching_protocols 102 Processing :processing 2xx Success Status Code Status Message Symbol 200 OK :ok 201 Created :created 202 Accepted :accepted 203 Non-Authoritative Information :non_authoritative_information 204 No Content :no_content 205 Reset Content :reset_content 206 Partial Content :partial_content 207 Multi-Status :multi_status 226 IM Used :im_used 3xx Redirection Status Code Status Message Symbol 300 Multiple Choices :multiple_choices 301 Moved Permanently</description>
     </item>
     
     <item>
       <title>pathが見つからない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/c26f2070-69ee-42b5-88d5-aaac75500d2f/</link>
+      <link>https://rengotaku.github.io/posts/c26f2070-69ee-42b5-88d5-aaac75500d2f/</link>
       <pubDate>Thu, 04 Oct 2018 15:35:11 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/c26f2070-69ee-42b5-88d5-aaac75500d2f/</guid>
+      <guid>https://rengotaku.github.io/posts/c26f2070-69ee-42b5-88d5-aaac75500d2f/</guid>
       <description>対応 pathを付けるのを忘れてませんか？ building_path(building) building(building) 事象 rails routes でパスを確認して、viewなどで使用としたら、 NameError: undefined local variable or method &#39;path_name&#39; と怒られる</description>
     </item>
     
     <item>
       <title>関連付け (アソシエーション)のメモ</title>
-      <link>https://www.vegetable.blog.v41.me/posts/e164dd09-2da6-416f-b7d0-f5fd9b2dbeaa/</link>
+      <link>https://rengotaku.github.io/posts/e164dd09-2da6-416f-b7d0-f5fd9b2dbeaa/</link>
       <pubDate>Fri, 28 Sep 2018 14:04:31 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/e164dd09-2da6-416f-b7d0-f5fd9b2dbeaa/</guid>
+      <guid>https://rengotaku.github.io/posts/e164dd09-2da6-416f-b7d0-f5fd9b2dbeaa/</guid>
       <description>前提 お祝い金申請 を受けるためには、商品 を お問い合わせ しておくことが必要。 １問い合わせは１商品と紐づく。 １問い合わせすると、１お祝い金申請がで</description>
     </item>
     
     <item>
       <title>scssからfontsを読み込みたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/ce59cb28-0aaf-4eac-95ec-89662840ff9c/</link>
+      <link>https://rengotaku.github.io/posts/ce59cb28-0aaf-4eac-95ec-89662840ff9c/</link>
       <pubDate>Thu, 27 Sep 2018 11:13:49 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/ce59cb28-0aaf-4eac-95ec-89662840ff9c/</guid>
+      <guid>https://rengotaku.github.io/posts/ce59cb28-0aaf-4eac-95ec-89662840ff9c/</guid>
       <description>cssの修正 url(path/to/font) を url(font-path(&#39;path/to/font&#39;)) へ変換 正規表現で一括置換 検索対象を url\((.+?)\)、置換を url(font-path(&#39;$1&#39;)) Railsの読み込み設定 Rails.application.config.assets.paths &amp;lt;&amp;lt; &amp;quot;#{Rails}/assets/fonts&amp;quot; Rails.application.config.assets.precompile &amp;lt;&amp;lt; /\.(?:svg|eot|woff|ttf|woff2)\z/ rails 4.2で fonts をve</description>
     </item>
     
     <item>
       <title>ActiveModelのi18nの設定方法</title>
-      <link>https://www.vegetable.blog.v41.me/posts/e1a43521-07f7-443d-858f-8cdcac4a6162/</link>
+      <link>https://rengotaku.github.io/posts/e1a43521-07f7-443d-858f-8cdcac4a6162/</link>
       <pubDate>Tue, 25 Sep 2018 19:15:59 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/e1a43521-07f7-443d-858f-8cdcac4a6162/</guid>
+      <guid>https://rengotaku.github.io/posts/e1a43521-07f7-443d-858f-8cdcac4a6162/</guid>
       <description>ja: activemodel: models: inquiry_form: &amp;#34;お問い合わせフォーム&amp;#34; tasks/search: &amp;#34;検索フォーム&amp;#34; attributes: inquiry_form: company_id: 企業ID tasks/search: created_at_from: 開始日 created_at_to: 終了日 フォームは以下のような感じ</description>
     </item>
     
     <item>
       <title>RailsでApiのバリデーションのプラクティス</title>
-      <link>https://www.vegetable.blog.v41.me/posts/cee0a19e-b296-4bd7-9f9c-7d8eeef88138/</link>
+      <link>https://rengotaku.github.io/posts/cee0a19e-b296-4bd7-9f9c-7d8eeef88138/</link>
       <pubDate>Tue, 25 Sep 2018 16:22:01 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/cee0a19e-b296-4bd7-9f9c-7d8eeef88138/</guid>
+      <guid>https://rengotaku.github.io/posts/cee0a19e-b296-4bd7-9f9c-7d8eeef88138/</guid>
       <description>参考の構成 Ruby on Rails で Web API のパラメータをバリデーションする | MMMブログ Validating REST queries with Rails (Example) 変数への代入を簡素化 def self.attr_accessor(*vars) @@attributes ||= [] @@attributes.concat vars super end def attributes @@attributes end Rubyのクラ</description>
     </item>
     
     <item>
       <title>関連付け (アソシエーション)メモ</title>
-      <link>https://www.vegetable.blog.v41.me/posts/95707919-3da6-484a-ac90-c63fcfb94afa/</link>
+      <link>https://rengotaku.github.io/posts/95707919-3da6-484a-ac90-c63fcfb94afa/</link>
       <pubDate>Fri, 14 Sep 2018 15:10:13 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/95707919-3da6-484a-ac90-c63fcfb94afa/</guid>
+      <guid>https://rengotaku.github.io/posts/95707919-3da6-484a-ac90-c63fcfb94afa/</guid>
       <description>Want # 1件取得 inquiry = Inquiry.find 1 rel = inquiry.object.id # 2件以上取得 object = Object.find 1 rel = object.inquiries.map{|rel| rel.id} How to 前提 物件(buken)に対して、お問い合わせ(inquiry)をする場合のリレー</description>
     </item>
     
     <item>
       <title>dockerのコンテナ内でcronよりrailsタスクを実行する</title>
-      <link>https://www.vegetable.blog.v41.me/posts/b6987182-f19c-40af-bee8-afc04f3078bb/</link>
+      <link>https://rengotaku.github.io/posts/b6987182-f19c-40af-bee8-afc04f3078bb/</link>
       <pubDate>Mon, 06 Aug 2018 11:20:31 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/b6987182-f19c-40af-bee8-afc04f3078bb/</guid>
+      <guid>https://rengotaku.github.io/posts/b6987182-f19c-40af-bee8-afc04f3078bb/</guid>
       <description>tips dockerfileに CMD crond と設定しても駄目。dockerを起動する直前に起動する。(docker-composeに記載する)</description>
     </item>
     
     <item>
       <title>awsのlinux上でcapybaraがインストールできない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/ac5c5b45-7af9-446c-88db-641bac969061/</link>
+      <link>https://rengotaku.github.io/posts/ac5c5b45-7af9-446c-88db-641bac969061/</link>
       <pubDate>Tue, 31 Jul 2018 17:12:49 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/ac5c5b45-7af9-446c-88db-641bac969061/</guid>
+      <guid>https://rengotaku.github.io/posts/ac5c5b45-7af9-446c-88db-641bac969061/</guid>
       <description>ruby on rails - Install capyabara-webkit gem on Amazon Linux AMI - Stack Overflow</description>
     </item>
     
     <item>
       <title>定数を変更してテスト</title>
-      <link>https://www.vegetable.blog.v41.me/posts/d719f508-6a6b-4b3a-9726-f3e50a37606d/</link>
+      <link>https://rengotaku.github.io/posts/d719f508-6a6b-4b3a-9726-f3e50a37606d/</link>
       <pubDate>Mon, 09 Jul 2018 17:21:21 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/d719f508-6a6b-4b3a-9726-f3e50a37606d/</guid>
+      <guid>https://rengotaku.github.io/posts/d719f508-6a6b-4b3a-9726-f3e50a37606d/</guid>
       <description>class TargetClass CONSTANT_VARIABLE = %w(1) end TargetClassTest @@origin = TargetClass::CONSTANT_VARIABLE setup do TargetClass.const_set(:CONSTANT_VARIABLE, @@origin) end describe :test do it :one do TargetClass.const_set(:CONSTANT_VARIABLE, w(1, 2, 3)) assert_equal TargetClass::CONSTANT_VARIABLE, %w(1 2 3) end end end 定数を変更すると、別ファイルのテストの際も変更されたままになるので、元に戻</description>
     </item>
     
     <item>
       <title>ログに色(コード)をつけない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/ccc6f51b-597a-46cc-979a-bda1cc48339a/</link>
+      <link>https://rengotaku.github.io/posts/ccc6f51b-597a-46cc-979a-bda1cc48339a/</link>
       <pubDate>Mon, 09 Jul 2018 12:19:15 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/ccc6f51b-597a-46cc-979a-bda1cc48339a/</guid>
+      <guid>https://rengotaku.github.io/posts/ccc6f51b-597a-46cc-979a-bda1cc48339a/</guid>
       <description>path/to/config/environments/XXXX.rb config.colorize_logging = false ANSIカラーシーケンス・・・色をつけるコード Railsのログになんで色ついてるかなんて気にしたことなかった - hatappi.blog</description>
     </item>
     
     <item>
       <title>Railsのキャッシュ機構を使う</title>
-      <link>https://www.vegetable.blog.v41.me/posts/67808f61-2c77-4b37-a3b6-c282bf77978f/</link>
+      <link>https://rengotaku.github.io/posts/67808f61-2c77-4b37-a3b6-c282bf77978f/</link>
       <pubDate>Fri, 22 Jun 2018 14:18:02 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/67808f61-2c77-4b37-a3b6-c282bf77978f/</guid>
+      <guid>https://rengotaku.github.io/posts/67808f61-2c77-4b37-a3b6-c282bf77978f/</guid>
       <description>キャッシュの使い方 ids = Rails.cache.fetch(&#39;key&#39;, expired_in: 12.hour) do Table.pluck :id end キャッシュのクリーン $ bundle exec rails r &#39;Rails.cache.clear&#39; [【Rails】cacheを消したい時のワンライナー|https://q</description>
     </item>
     
     <item>
       <title>除外テーブルとの結合</title>
-      <link>https://www.vegetable.blog.v41.me/posts/87c68693-ae0c-4c57-af8e-bd7b047fae1a/</link>
+      <link>https://rengotaku.github.io/posts/87c68693-ae0c-4c57-af8e-bd7b047fae1a/</link>
       <pubDate>Thu, 21 Jun 2018 18:43:08 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/87c68693-ae0c-4c57-af8e-bd7b047fae1a/</guid>
+      <guid>https://rengotaku.github.io/posts/87c68693-ae0c-4c57-af8e-bd7b047fae1a/</guid>
       <description># メインデータテーブル class Identified &amp;lt; ApplicationRecord self.primary_key = :property_id has_one :exclude_building, foreign_key: :identified_building_id, primary_key: :identified_building_id end # 除外データテーブル class ExcludeBuilding &amp;lt; ApplicationRecord belongs_to :identified, foreign_key: :identified_building_id, primary_key: :identified_building_id end # left joinして結合しないデータのみを抽出 IdentifiedProperty. left_joins(:exclude_building). where(exclude_buildings:</description>
     </item>
     
     <item>
       <title>rubyとrailsのバージョンアップ</title>
-      <link>https://www.vegetable.blog.v41.me/posts/0b8f0eb0-7c73-4a24-a623-a03e8efeda1d/</link>
+      <link>https://rengotaku.github.io/posts/0b8f0eb0-7c73-4a24-a623-a03e8efeda1d/</link>
       <pubDate>Wed, 06 Jun 2018 10:30:06 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/0b8f0eb0-7c73-4a24-a623-a03e8efeda1d/</guid>
+      <guid>https://rengotaku.github.io/posts/0b8f0eb0-7c73-4a24-a623-a03e8efeda1d/</guid>
       <description>現在のバージョン $ rbenv versions =&amp;gt; system * 2.3.1 (set by /path/to/.rbenv/version) 2.4.1 アップグレード $ brew upgrade rbenv ruby-build 特に ruby-build が更新されないと新しいバージョンが表示されない 使用できるバージョン rbenv install -l</description>
     </item>
     
     <item>
       <title>LocalのDynamoに値が入っているか確認</title>
-      <link>https://www.vegetable.blog.v41.me/posts/2423bb0a-e537-4c90-9a9e-417381e40c5f/</link>
+      <link>https://rengotaku.github.io/posts/2423bb0a-e537-4c90-9a9e-417381e40c5f/</link>
       <pubDate>Tue, 22 May 2018 15:45:57 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/2423bb0a-e537-4c90-9a9e-417381e40c5f/</guid>
+      <guid>https://rengotaku.github.io/posts/2423bb0a-e537-4c90-9a9e-417381e40c5f/</guid>
       <description>rails consoleを起動して。 接続設定 ddb = Aws::DynamoDB::Client.new( endpoint: &#39;http://localhost:8000&#39;, region: &#39;ap-northeast-1&#39; ) =&amp;gt; #&amp;lt;Aws::DynamoDB::Client&amp;gt; テーブル名確認 result = ddb.list_tables result.table_names =&amp;gt; [&amp;quot;TestTables1&amp;quot;, &amp;quot;TestTables2&amp;quot;] 値の確認 result = ddb.scan( table_name: &#39;table_name&#39; ) result.items.each do |item| puts &amp;quot;-------------&amp;quot; item.each do |key, value| puts &amp;quot;#{key}: #{value}&amp;quot; end end =&amp;gt; [{&amp;quot;key1&amp;quot;=&amp;gt;&amp;quot;value1&amp;quot;, &amp;quot;key2&amp;quot;=&amp;gt;&amp;quot;value2&amp;quot;, &amp;quot;key3&amp;quot;=&amp;gt;&amp;quot;value3&amp;quot;}]</description>
     </item>
     
     <item>
       <title>APIのステータスコード</title>
-      <link>https://www.vegetable.blog.v41.me/posts/fec80f0e-63ab-4672-ad46-74218498a94a/</link>
+      <link>https://rengotaku.github.io/posts/fec80f0e-63ab-4672-ad46-74218498a94a/</link>
       <pubDate>Tue, 22 May 2018 10:25:27 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/fec80f0e-63ab-4672-ad46-74218498a94a/</guid>
+      <guid>https://rengotaku.github.io/posts/fec80f0e-63ab-4672-ad46-74218498a94a/</guid>
       <description>1xx Informational Status Code Status Message Symbol 100 Continue :continue 101 Switching Protocols :switching_protocols 102 Processing :processing 2xx Success Status Code Status Message Symbol 200 OK :ok 201 Created :created 202 Accepted :accepted 203 Non-Authoritative Information :non_authoritative_information 204 No Content :no_content 205 Reset Content :reset_content 206 Partial Content :partial_content 207 Multi-Status :multi_status 226 IM Used :im_used 3xx Redirection Status Code Status Message Symbol 300 Multiple Choices :multiple_choices 301 Moved Permanently</description>
     </item>
     
     <item>
       <title>エラーの詳細を表示</title>
-      <link>https://www.vegetable.blog.v41.me/posts/5ceb968e-9bc1-49ab-97b4-a9abe4270ebe/</link>
+      <link>https://rengotaku.github.io/posts/5ceb968e-9bc1-49ab-97b4-a9abe4270ebe/</link>
       <pubDate>Tue, 15 May 2018 18:49:43 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/5ceb968e-9bc1-49ab-97b4-a9abe4270ebe/</guid>
+      <guid>https://rengotaku.github.io/posts/5ceb968e-9bc1-49ab-97b4-a9abe4270ebe/</guid>
       <description>begin # エラー処理 rescue =&amp;gt; e e.message # エラーメッセージのみ e.backtrace.join(&amp;quot;\n&amp;quot;) # 行数などが記載 end</description>
     </item>
     
     <item>
       <title>railsを動かしたら、coffee-railsでエラーが発生</title>
-      <link>https://www.vegetable.blog.v41.me/posts/8a6ce7b9-92af-4d59-98f5-456db5fb2a6d/</link>
+      <link>https://rengotaku.github.io/posts/8a6ce7b9-92af-4d59-98f5-456db5fb2a6d/</link>
       <pubDate>Tue, 01 May 2018 16:14:14 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/8a6ce7b9-92af-4d59-98f5-456db5fb2a6d/</guid>
+      <guid>https://rengotaku.github.io/posts/8a6ce7b9-92af-4d59-98f5-456db5fb2a6d/</guid>
       <description>railsを動かそうとしたら、エラーが発生 $ rails -T =&amp;gt; rails aborted! Bundler::GemRequireError: There was an error while trying to load the gem &#39;coffee-rails&#39;. Gem Load Error is: Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes. Backtrace for gem load error is: nodejsを</description>
     </item>
     
     <item>
       <title>viewでformから生データを取得する</title>
-      <link>https://www.vegetable.blog.v41.me/posts/ab4313e1-2186-4492-81c2-98c2ae05959c/</link>
+      <link>https://rengotaku.github.io/posts/ab4313e1-2186-4492-81c2-98c2ae05959c/</link>
       <pubDate>Sat, 28 Apr 2018 20:48:45 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/ab4313e1-2186-4492-81c2-98c2ae05959c/</guid>
+      <guid>https://rengotaku.github.io/posts/ab4313e1-2186-4492-81c2-98c2ae05959c/</guid>
       <description>form.object =&amp;gt; #&amp;lt;Post id: 1, title: &amp;quot;title&amp;quot;, content: &amp;quot;content&amp;quot;, created_at: &amp;quot;2018-04-28 07:28:22&amp;quot;, updated_at: &amp;quot;2018-04-28 11:25:56&amp;quot;&amp;gt; form.object.id =&amp;gt; 1</description>
     </item>
     
     <item>
       <title>link_toで囲みたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/6b614abe-4642-4a9e-8e74-afd44a30b760/</link>
+      <link>https://rengotaku.github.io/posts/6b614abe-4642-4a9e-8e74-afd44a30b760/</link>
       <pubDate>Tue, 24 Apr 2018 21:17:23 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/6b614abe-4642-4a9e-8e74-afd44a30b760/</guid>
+      <guid>https://rengotaku.github.io/posts/6b614abe-4642-4a9e-8e74-afd44a30b760/</guid>
       <description>link_to fuga_path, class: &amp;#39;foo&amp;#39; do %span.bar end Rails - link_toでブロックを囲む - ざっくりん雑記 link_toメソッドでブロック使おうとしたら&amp;quot;undefined</description>
     </item>
     
     <item>
       <title>RAILSの&#34;-D&#34;オプションでのデーモン化でCSS、JSが読み込まれない。</title>
-      <link>https://www.vegetable.blog.v41.me/posts/e7fb7072-6a1c-4128-b82b-7424bf6c9f1a/</link>
+      <link>https://rengotaku.github.io/posts/e7fb7072-6a1c-4128-b82b-7424bf6c9f1a/</link>
       <pubDate>Mon, 23 Apr 2018 10:27:58 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/e7fb7072-6a1c-4128-b82b-7424bf6c9f1a/</guid>
+      <guid>https://rengotaku.github.io/posts/e7fb7072-6a1c-4128-b82b-7424bf6c9f1a/</guid>
       <description>下記のコマンドで動かしたら、なぜかcss、jsが読み込まれないエラーに遭遇。 $ bundle exec rails s -b 0.0.0.0 -p 3000 -e development -d &amp;gt; _log.log 2&amp;gt;&amp;amp;1 ↓↓↓ $ bundle exec rails s -b 0.0.0.0 -p 3000 -e development &amp;gt; _log.log 2&amp;gt;&amp;amp;1</description>
     </item>
     

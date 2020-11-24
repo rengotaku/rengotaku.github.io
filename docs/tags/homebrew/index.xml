@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>homebrew on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/homebrew/</link>
+    <link>https://rengotaku.github.io/tags/homebrew/</link>
     <description>Recent content in homebrew on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Tue, 20 Nov 2018 11:20:47 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/homebrew/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/homebrew/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>date/GNUを使用したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/76a31d42-03bd-4e5c-b3a4-0b7668499209/</link>
+      <link>https://rengotaku.github.io/posts/76a31d42-03bd-4e5c-b3a4-0b7668499209/</link>
       <pubDate>Tue, 20 Nov 2018 11:20:47 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/76a31d42-03bd-4e5c-b3a4-0b7668499209/</guid>
+      <guid>https://rengotaku.github.io/posts/76a31d42-03bd-4e5c-b3a4-0b7668499209/</guid>
       <description>$ brew install coreutils 色々と同梱されている。 テキスト処理のための標準的なコマンド群の OS X への導入手順 - Qiita</description>
     </item>
     

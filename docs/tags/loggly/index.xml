@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>loggly on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/loggly/</link>
+    <link>https://rengotaku.github.io/tags/loggly/</link>
     <description>Recent content in loggly on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Tue, 20 Nov 2018 12:30:28 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/loggly/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/loggly/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>画面（フロント）から通知したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/06b06968-4edc-44a5-8ae2-f68da3e58853/</link>
+      <link>https://rengotaku.github.io/posts/06b06968-4edc-44a5-8ae2-f68da3e58853/</link>
       <pubDate>Tue, 20 Nov 2018 12:30:28 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/06b06968-4edc-44a5-8ae2-f68da3e58853/</guid>
+      <guid>https://rengotaku.github.io/posts/06b06968-4edc-44a5-8ae2-f68da3e58853/</guid>
       <description>ファイルの読込 loggly.tracker.js loggly-jslogger/src at master · loggly/loggly-jslogger 初期化 var _LTracker = _LTracker || []; ;(function($) { $(function() { var logglySettings = { &amp;#39;logglyKey&amp;#39;: null, &amp;#39;sendConsoleErrors&amp;#39; : true, &amp;#39;tag&amp;#39; : null } logglySettings[&amp;#39;logglyKey&amp;#39;] = $(&amp;#34;meta[name=&amp;#39;loggly_key&amp;#39;]&amp;#34;).attr(&amp;#39;content&amp;#39;); logglySettings[&amp;#39;tag&amp;#39;] = $(&amp;#34;meta[name=&amp;#39;loggly_tag&amp;#39;]&amp;#34;).attr(&amp;#39;content&amp;#39;); _LTracker.push(logglySettings); }); })(jQuery); HTMLに情報の埋め込み &amp;lt;meta name=&amp;#34;loggly_key&amp;#34; content=&amp;#34;&amp;lt;?php echo(&amp;#39;loggly_of_key&amp;#39;); ?&amp;gt;&amp;#34; /&amp;gt; &amp;lt;meta name=&amp;#34;loggly_tag&amp;#34; content=&amp;#34;&amp;lt;?php echo(&amp;#39;loggly_of_tag&amp;#39;);</description>
     </item>
     

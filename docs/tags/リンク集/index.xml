@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>リンク集 on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/%E3%83%AA%E3%83%B3%E3%82%AF%E9%9B%86/</link>
+    <link>https://rengotaku.github.io/tags/%E3%83%AA%E3%83%B3%E3%82%AF%E9%9B%86/</link>
     <description>Recent content in リンク集 on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Tue, 21 Jan 2020 11:32:21 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/%E3%83%AA%E3%83%B3%E3%82%AF%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/%E3%83%AA%E3%83%B3%E3%82%AF%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>いつか読みたいサイト</title>
-      <link>https://www.vegetable.blog.v41.me/posts/24e79626-892b-4fbb-8642-82e534f99df9/</link>
+      <link>https://rengotaku.github.io/posts/24e79626-892b-4fbb-8642-82e534f99df9/</link>
       <pubDate>Tue, 21 Jan 2020 11:32:21 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/24e79626-892b-4fbb-8642-82e534f99df9/</guid>
+      <guid>https://rengotaku.github.io/posts/24e79626-892b-4fbb-8642-82e534f99df9/</guid>
       <description>RURURU HomePage フロント、バックエンド周り linuxのリンク集 | ベジタブルプログラム linux周り POSTD | プログラミングするエンジニアに向けたトレンドメディ</description>
     </item>
     
     <item>
       <title>linuxのリンク集</title>
-      <link>https://www.vegetable.blog.v41.me/posts/da0107d6-1053-4fad-bd04-04181d3fa012/</link>
+      <link>https://rengotaku.github.io/posts/da0107d6-1053-4fad-bd04-04181d3fa012/</link>
       <pubDate>Fri, 25 Oct 2019 13:33:35 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/da0107d6-1053-4fad-bd04-04181d3fa012/</guid>
+      <guid>https://rengotaku.github.io/posts/da0107d6-1053-4fad-bd04-04181d3fa012/</guid>
       <description>FrontPage - Linuxと過ごす</description>
     </item>
     
     <item>
       <title>scalaを軽く触った際に参考にしたサイト</title>
-      <link>https://www.vegetable.blog.v41.me/posts/a9530aa0-5905-4da4-abc9-bac94575b0aa/</link>
+      <link>https://rengotaku.github.io/posts/a9530aa0-5905-4da4-abc9-bac94575b0aa/</link>
       <pubDate>Thu, 28 Feb 2019 18:53:23 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/a9530aa0-5905-4da4-abc9-bac94575b0aa/</guid>
+      <guid>https://rengotaku.github.io/posts/a9530aa0-5905-4da4-abc9-bac94575b0aa/</guid>
       <description>Scalaでリスト処理 Scala の省略ルール早覚え Scala で printf - Qiita ScalaLogging - 2.6.x</description>
     </item>
     
     <item>
       <title>L社で使用しているサービス</title>
-      <link>https://www.vegetable.blog.v41.me/posts/3c87580e-061b-4cd7-b27e-3d03f9ccb82a/</link>
+      <link>https://rengotaku.github.io/posts/3c87580e-061b-4cd7-b27e-3d03f9ccb82a/</link>
       <pubDate>Fri, 20 Apr 2018 11:01:20 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/3c87580e-061b-4cd7-b27e-3d03f9ccb82a/</guid>
+      <guid>https://rengotaku.github.io/posts/3c87580e-061b-4cd7-b27e-3d03f9ccb82a/</guid>
       <description>素材 Fotolia、写真素材、画像、イラスト素材、動画素材 ストック写真、ロイヤリティフリーの画像、グラフィック、ベクターおよびビデオ | Adobe Stock シ</description>
     </item>
     

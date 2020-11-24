@@ -2,112 +2,112 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>php on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/php/</link>
+    <link>https://rengotaku.github.io/tags/php/</link>
     <description>Recent content in php on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Fri, 29 Nov 2019 16:15:02 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/php/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>composerでインストールされない？</title>
-      <link>https://www.vegetable.blog.v41.me/posts/e7f13673-f4f9-450b-8d51-f61e78dceff3/</link>
+      <link>https://rengotaku.github.io/posts/e7f13673-f4f9-450b-8d51-f61e78dceff3/</link>
       <pubDate>Fri, 29 Nov 2019 16:15:02 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/e7f13673-f4f9-450b-8d51-f61e78dceff3/</guid>
+      <guid>https://rengotaku.github.io/posts/e7f13673-f4f9-450b-8d51-f61e78dceff3/</guid>
       <description>未解決 imageが作成された後に、プロジェクトをコンテナにマウントさせinstall処理を行うようにした。 （プロジェクト内に vendor フォルダが作成</description>
     </item>
     
     <item>
       <title>phpで配列をechoで出力したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/e91a0a27-4289-42ad-85e1-d6e70b26e18c/</link>
+      <link>https://rengotaku.github.io/posts/e91a0a27-4289-42ad-85e1-d6e70b26e18c/</link>
       <pubDate>Mon, 09 Sep 2019 18:52:51 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/e91a0a27-4289-42ad-85e1-d6e70b26e18c/</guid>
+      <guid>https://rengotaku.github.io/posts/e91a0a27-4289-42ad-85e1-d6e70b26e18c/</guid>
       <description>var_export($arr , true) を使用する。 $bufArr = array(&amp;quot;aaaa&amp;quot;,&amp;quot;bbbb&amp;quot;,&amp;quot;cccc&amp;quot;); print var_export($bufArr , true); array ( 0 =&amp;gt; &#39;aaaa&#39;, 1 =&amp;gt; &#39;bbbb&#39;, 2 =&amp;gt; &#39;cccc&#39;, } 配列の中身を出力（ログとかで見る場合） - Qiita</description>
     </item>
     
     <item>
       <title>日付の差分を求めたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/2b758ab7-5f14-4932-b67a-61a26e472b47/</link>
+      <link>https://rengotaku.github.io/posts/2b758ab7-5f14-4932-b67a-61a26e472b47/</link>
       <pubDate>Wed, 08 May 2019 11:31:39 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/2b758ab7-5f14-4932-b67a-61a26e472b47/</guid>
+      <guid>https://rengotaku.github.io/posts/2b758ab7-5f14-4932-b67a-61a26e472b47/</guid>
       <description>$datetimePast-&amp;gt;diff($datetimeFeature)-&amp;gt;format(&amp;#39;%a&amp;#39;); 検証 $dateA = new DateTime(&amp;#39;2010-01-01&amp;#39;); $dateB = new DateTime(&amp;#39;2010-03-01&amp;#39;); $interval = $dateB-&amp;gt;diff($dateA); echo $interval-&amp;gt;format(&amp;#39;%a total days&amp;#39;).&amp;#34;\n&amp;#34;; // =&amp;gt; 59 total days echo $interval-&amp;gt;format(&amp;#39;%m month, %d days&amp;#39;); // =&amp;gt; 1 month, 28 days %dだと0~31日までしか表現できない。経過日数を計算する場合は、%aを</description>
     </item>
     
     <item>
       <title>RubyとPHPで日付の差分の違い</title>
-      <link>https://www.vegetable.blog.v41.me/posts/88f9d72c-ce95-4e6d-81e8-88430706e1a5/</link>
+      <link>https://rengotaku.github.io/posts/88f9d72c-ce95-4e6d-81e8-88430706e1a5/</link>
       <pubDate>Tue, 19 Feb 2019 12:02:26 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/88f9d72c-ce95-4e6d-81e8-88430706e1a5/</guid>
+      <guid>https://rengotaku.github.io/posts/88f9d72c-ce95-4e6d-81e8-88430706e1a5/</guid>
       <description>日付の差分の算出方法を似せているつもりだが、差がでてしまう。 [8] pry(main)&amp;gt; now = Time.zone.now =&amp;gt; Tue, 19 Feb 2019 11:45:18 JST +09:00 [9] pry(main)&amp;gt; before_7days = Time.zone.now - 7.days =&amp;gt; Tue, 12 Feb 2019 11:45:18 JST +09:00 [14] pry(main)&amp;gt; ((now - (before_7days)) / 1.day).to_i =&amp;gt; 6 # 差が</description>
     </item>
     
     <item>
       <title>phpで外部apiにアクセスしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/80c56d1e-821e-405d-8a8a-97dc72de5c35/</link>
+      <link>https://rengotaku.github.io/posts/80c56d1e-821e-405d-8a8a-97dc72de5c35/</link>
       <pubDate>Thu, 13 Dec 2018 19:25:36 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/80c56d1e-821e-405d-8a8a-97dc72de5c35/</guid>
+      <guid>https://rengotaku.github.io/posts/80c56d1e-821e-405d-8a8a-97dc72de5c35/</guid>
       <description>&amp;lt;?php $url = &amp;#34;https://qiita.com/api/v2/items&amp;#34;; // cURLセッションを初期化 $ch = curl_init(); // オプションを設定 curl_setopt($ch, CURLOPT_URL, $url); // 取得するURLを指定 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // 実行結果を文字列で返す curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // サーバー証明書</description>
     </item>
     
     <item>
       <title>エラー内容を全て表示</title>
-      <link>https://www.vegetable.blog.v41.me/posts/f4fab60d-adeb-4218-98b3-472101f683a3/</link>
+      <link>https://rengotaku.github.io/posts/f4fab60d-adeb-4218-98b3-472101f683a3/</link>
       <pubDate>Thu, 27 Sep 2018 17:51:29 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/f4fab60d-adeb-4218-98b3-472101f683a3/</guid>
+      <guid>https://rengotaku.github.io/posts/f4fab60d-adeb-4218-98b3-472101f683a3/</guid>
       <description>&amp;lt;ul class=&amp;#34;error_list&amp;#34;&amp;gt; &amp;lt;?php foreach( $form-&amp;gt;getGlobalErrors() as $name =&amp;gt; $error ) : ?&amp;gt; &amp;lt;li&amp;gt;&amp;lt;?php echo $name ?&amp;gt; : &amp;lt;?php echo $error ?&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;?php endforeach ?&amp;gt; &amp;lt;?php $errors = $form-&amp;gt;getErrorSchema()-&amp;gt;getErrors() ?&amp;gt; &amp;lt;?php if ( count($errors) &amp;gt; 0 ) : ?&amp;gt; &amp;lt;?php foreach( $errors as $name =&amp;gt; $error ) : ?&amp;gt; &amp;lt;li&amp;gt;&amp;lt;?php echo $name ?&amp;gt; : &amp;lt;?php echo $error ?&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;?php endforeach ?&amp;gt; &amp;lt;?php endif ?&amp;gt; &amp;lt;/ul&amp;gt; Symfony 1.4 get all form errors.</description>
     </item>
     
     <item>
       <title>slim3をdockerで動かす</title>
-      <link>https://www.vegetable.blog.v41.me/posts/a5db633f-bee8-4632-8062-68a079750f53/</link>
+      <link>https://rengotaku.github.io/posts/a5db633f-bee8-4632-8062-68a079750f53/</link>
       <pubDate>Mon, 03 Sep 2018 14:42:27 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/a5db633f-bee8-4632-8062-68a079750f53/</guid>
+      <guid>https://rengotaku.github.io/posts/a5db633f-bee8-4632-8062-68a079750f53/</guid>
       <description>appフォルダを作成して、その中にSlim関連のファイルを詰め込むのが良いかも diarmuidie/docker-compose-php-slim: Sample Slim Skeleton app running with Docker Compose</description>
     </item>
     
     <item>
       <title>配列をフィルターする</title>
-      <link>https://www.vegetable.blog.v41.me/posts/ec8f5a56-51ad-4c29-a174-e06b91aab586/</link>
+      <link>https://rengotaku.github.io/posts/ec8f5a56-51ad-4c29-a174-e06b91aab586/</link>
       <pubDate>Mon, 06 Aug 2018 19:37:32 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/ec8f5a56-51ad-4c29-a174-e06b91aab586/</guid>
+      <guid>https://rengotaku.github.io/posts/ec8f5a56-51ad-4c29-a174-e06b91aab586/</guid>
       <description>$fruits = [&amp;#39;apple&amp;#39;, &amp;#39;banana&amp;#39;]; $bad_fruits = &amp;#39;apple&amp;#39;; $good_fruits = array_filter($fruits, function($fruit) use ($bad_fruits) { return $fruit != $bad_fruits; }); $good_fruits; // [&amp;#39;banana&amp;#39;] PHP: array_filter - Manual PHP: 無名関数 - Manual</description>
     </item>
     
     <item>
       <title>phpで8系に接続する際に注意すること</title>
-      <link>https://www.vegetable.blog.v41.me/posts/f0e97e2b-18eb-4b62-882e-73769a380af4/</link>
+      <link>https://rengotaku.github.io/posts/f0e97e2b-18eb-4b62-882e-73769a380af4/</link>
       <pubDate>Fri, 20 Jul 2018 19:16:23 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/f0e97e2b-18eb-4b62-882e-73769a380af4/</guid>
+      <guid>https://rengotaku.github.io/posts/f0e97e2b-18eb-4b62-882e-73769a380af4/</guid>
       <description>経緯 5.6系を使う予定が、brewで最新の8系をインストールしていて、謎のエラー[2054] The server requested authentication method unknown to the clientで苦しんだ。 対応 パス</description>
     </item>
     
     <item>
       <title>簡易デバッグ用</title>
-      <link>https://www.vegetable.blog.v41.me/posts/7981240a-377d-4844-8ccd-9ae0932a7642/</link>
+      <link>https://rengotaku.github.io/posts/7981240a-377d-4844-8ccd-9ae0932a7642/</link>
       <pubDate>Fri, 08 Jun 2018 17:25:09 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/7981240a-377d-4844-8ccd-9ae0932a7642/</guid>
+      <guid>https://rengotaku.github.io/posts/7981240a-377d-4844-8ccd-9ae0932a7642/</guid>
       <description>echo __CLASS__ . &amp;quot;#&amp;quot; . __METHOD__ . PHP_EOL; =&amp;gt; ClassName#methodName</description>
     </item>
     
     <item>
       <title>PropelでCriteriaから生のSQLを出力したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/c5c5f8f3-efe2-4b1b-84d5-72185218f589/</link>
+      <link>https://rengotaku.github.io/posts/c5c5f8f3-efe2-4b1b-84d5-72185218f589/</link>
       <pubDate>Fri, 27 Apr 2018 15:38:29 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/c5c5f8f3-efe2-4b1b-84d5-72185218f589/</guid>
+      <guid>https://rengotaku.github.io/posts/c5c5f8f3-efe2-4b1b-84d5-72185218f589/</guid>
       <description>条件を設定したCriteriaオブジェクトを生のSQLを出力してくれる。 function getSqlOfCriteria($c) { $params = array(); $r = BasePeer::createSelectSql($c, $params); $o = preg_replace(&#39;/:p[0-9]+/&#39;, &#39;%s&#39;, $r); $ggg = array(); foreach($params AS $e) { if(is_integer($e[&#39;value&#39;]) OR is_bool($e[&#39;value&#39;])) { $ggg[] = $e[&#39;value&#39;]; } else { $ggg[] =</description>
     </item>
     

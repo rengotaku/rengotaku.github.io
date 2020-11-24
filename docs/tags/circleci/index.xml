@@ -2,58 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>circleci on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/circleci/</link>
+    <link>https://rengotaku.github.io/tags/circleci/</link>
     <description>Recent content in circleci on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Tue, 26 Nov 2019 15:41:51 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/circleci/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/circleci/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CircleCIでエラー</title>
-      <link>https://www.vegetable.blog.v41.me/posts/e62a2808-70e8-4d67-a6cb-89844647d9ec/</link>
+      <link>https://rengotaku.github.io/posts/e62a2808-70e8-4d67-a6cb-89844647d9ec/</link>
       <pubDate>Thu, 15 Aug 2019 16:42:46 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/e62a2808-70e8-4d67-a6cb-89844647d9ec/</guid>
+      <guid>https://rengotaku.github.io/posts/e62a2808-70e8-4d67-a6cb-89844647d9ec/</guid>
       <description>There was an issue while running this container and it was rerun. The most recent run is shown. の注釈が表示される。 Spin up Environment jobのところで下記のエラーが発生。 Unexpected environment preparation error: Error response from daemon: OCI runtime create failed: container_linux.go:345: starting container process caused &amp;quot;process_linux.go:303: getting the final</description>
     </item>
     
     <item>
       <title>CircleCIのCheckout codeで落ちる</title>
-      <link>https://www.vegetable.blog.v41.me/posts/1306a51e-f82f-448a-90c5-396f42dff167/</link>
+      <link>https://rengotaku.github.io/posts/1306a51e-f82f-448a-90c5-396f42dff167/</link>
       <pubDate>Fri, 12 Jul 2019 17:13:58 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/1306a51e-f82f-448a-90c5-396f42dff167/</guid>
+      <guid>https://rengotaku.github.io/posts/1306a51e-f82f-448a-90c5-396f42dff167/</guid>
       <description>原因 feature/AAA というブランチでコミットしていたが、コミットした後に、 feature/BBB に変更した為、 feature/BBB のブランチでPRが作成されているにも関わらず、 Checkout code で feature/AAA が指定さ</description>
     </item>
     
     <item>
       <title>CircleCIでif文内で複数の処理を行う際に途中で失敗してもパスしてしまう</title>
-      <link>https://www.vegetable.blog.v41.me/posts/4fb84bda-ee4a-483c-91d5-36d05bdbe114/</link>
+      <link>https://rengotaku.github.io/posts/4fb84bda-ee4a-483c-91d5-36d05bdbe114/</link>
       <pubDate>Fri, 21 Jun 2019 12:34:33 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/4fb84bda-ee4a-483c-91d5-36d05bdbe114/</guid>
+      <guid>https://rengotaku.github.io/posts/4fb84bda-ee4a-483c-91d5-36d05bdbe114/</guid>
       <description>事象 下記の場合だと、 decrypt1.sh 、 decrypt2.sh で失敗だったとしても、 decrypt3.sh が成功すればパスしてしまう。 if [ &amp;#34;$CIRCLE_BRANCH&amp;#34; = &amp;#34;master&amp;#34; ]; then ./decrypt1.sh ./decrypt2.sh ./decrypt3.sh fi 修正 &amp;amp;&amp;amp; で連結して成功した場合のみ次のステ</description>
     </item>
     
     <item>
       <title>dynamodbをdockerで起動</title>
-      <link>https://www.vegetable.blog.v41.me/posts/c24f9540-20dd-40fd-aa3b-3a9f6e7a976e/</link>
+      <link>https://rengotaku.github.io/posts/c24f9540-20dd-40fd-aa3b-3a9f6e7a976e/</link>
       <pubDate>Fri, 12 Oct 2018 13:53:46 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/c24f9540-20dd-40fd-aa3b-3a9f6e7a976e/</guid>
+      <guid>https://rengotaku.github.io/posts/c24f9540-20dd-40fd-aa3b-3a9f6e7a976e/</guid>
       <description>docker: - image: amazon/dynamodb-local:1.11.119 name: dynamodb-local 参考の通りだと、endpointは、dynamodb-local となる</description>
     </item>
     
     <item>
       <title>Circleciのbuild環境にSSH</title>
-      <link>https://www.vegetable.blog.v41.me/posts/e678385d-f039-4ce9-acad-567c4cd6c4ac/</link>
+      <link>https://rengotaku.github.io/posts/e678385d-f039-4ce9-acad-567c4cd6c4ac/</link>
       <pubDate>Wed, 23 May 2018 12:18:42 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/e678385d-f039-4ce9-acad-567c4cd6c4ac/</guid>
+      <guid>https://rengotaku.github.io/posts/e678385d-f039-4ce9-acad-567c4cd6c4ac/</guid>
       <description>sshの接続情報を取得 情報取得のためにリビルドする build画面右上(プルダウン)からRebuild with SSHを選択する SSH情報を確認 画面上</description>
     </item>
     

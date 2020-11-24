@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sequelize on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/sequelize/</link>
+    <link>https://rengotaku.github.io/tags/sequelize/</link>
     <description>Recent content in sequelize on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Mon, 28 May 2018 19:32:40 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/sequelize/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/sequelize/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>テーブルへデータの追加、検索</title>
-      <link>https://www.vegetable.blog.v41.me/posts/fe507f9e-e22c-4457-9cd0-50edc4353eee/</link>
+      <link>https://rengotaku.github.io/posts/fe507f9e-e22c-4457-9cd0-50edc4353eee/</link>
       <pubDate>Mon, 28 May 2018 19:32:40 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/fe507f9e-e22c-4457-9cd0-50edc4353eee/</guid>
+      <guid>https://rengotaku.github.io/posts/fe507f9e-e22c-4457-9cd0-50edc4353eee/</guid>
       <description>table: users column: username, password, is_active, const Op = Sequelize.Op; const User = sequelize.define(&#39;user&#39;, { id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true }, username: { type: Sequelize.STRING, allowNull: false, }, password: { type: Sequelize.STRING, allowNull: false, }, isActive: { field: &#39;is_active&#39;, type: Sequelize.BOOLEAN, allowNull: false, defaultValue: true, }, },{ timestamps: true, underscored: true, }); console.log(&#39;It worked&#39;); var user = User.create({ username: &amp;quot;test&amp;quot;, password: &amp;quot;test&amp;quot;, isActive: true, }).then(() =&amp;gt; {</description>
     </item>
     

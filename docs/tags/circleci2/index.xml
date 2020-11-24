@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>circleci2 on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/circleci2/</link>
+    <link>https://rengotaku.github.io/tags/circleci2/</link>
     <description>Recent content in circleci2 on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Tue, 26 Nov 2019 15:41:51 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/circleci2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/circleci2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CircleCIでGithubからCheckoutできないエラーが発生</title>
-      <link>https://www.vegetable.blog.v41.me/posts/ecfa30ba-d8cb-41f0-9769-2a3286fc4a83/</link>
+      <link>https://rengotaku.github.io/posts/ecfa30ba-d8cb-41f0-9769-2a3286fc4a83/</link>
       <pubDate>Tue, 26 Nov 2019 15:41:51 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/ecfa30ba-d8cb-41f0-9769-2a3286fc4a83/</guid>
+      <guid>https://rengotaku.github.io/posts/ecfa30ba-d8cb-41f0-9769-2a3286fc4a83/</guid>
       <description>解決 https://circleci.com/gh/organization_name/repository_name/edit#checkout ※organization_name、repository_name を適宜 にて、正しい Checkout keys を設定する。 事象 CircleCIでGithu</description>
     </item>
     
     <item>
       <title>CircleCIでError executing build stepsでエラー</title>
-      <link>https://www.vegetable.blog.v41.me/posts/8600b082-bd66-4a32-8f00-9a9ef1d73aa5/</link>
+      <link>https://rengotaku.github.io/posts/8600b082-bd66-4a32-8f00-9a9ef1d73aa5/</link>
       <pubDate>Mon, 25 Nov 2019 10:35:25 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/8600b082-bd66-4a32-8f00-9a9ef1d73aa5/</guid>
+      <guid>https://rengotaku.github.io/posts/8600b082-bd66-4a32-8f00-9a9ef1d73aa5/</guid>
       <description>対応 imageを circleci/node に変更した。 古いdockerのimageを使用していた為(circleci/build-image:ubuntu-14.0</description>
     </item>
     

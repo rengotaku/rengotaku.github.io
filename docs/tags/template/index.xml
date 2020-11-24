@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>template on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/template/</link>
+    <link>https://rengotaku.github.io/tags/template/</link>
     <description>Recent content in template on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Wed, 27 Feb 2019 15:28:12 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/template/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/template/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>チケット作成時のテンプレート</title>
-      <link>https://www.vegetable.blog.v41.me/posts/d4ece857-d1c9-4c0c-a579-0ba31c96b84f/</link>
+      <link>https://rengotaku.github.io/posts/d4ece857-d1c9-4c0c-a579-0ba31c96b84f/</link>
       <pubDate>Wed, 27 Feb 2019 15:28:12 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/d4ece857-d1c9-4c0c-a579-0ba31c96b84f/</guid>
+      <guid>https://rengotaku.github.io/posts/d4ece857-d1c9-4c0c-a579-0ba31c96b84f/</guid>
       <description>## 解決したい課題 - 企業がログインできないときに状況が先方に聞かないと分からない ## 起こっている現象（詳細を記入） - 企業がログインできない ## 現象</description>
     </item>
     

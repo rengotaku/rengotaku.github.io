@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>業務開始 on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/%E6%A5%AD%E5%8B%99%E9%96%8B%E5%A7%8B/</link>
+    <link>https://rengotaku.github.io/tags/%E6%A5%AD%E5%8B%99%E9%96%8B%E5%A7%8B/</link>
     <description>Recent content in 業務開始 on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Tue, 18 Dec 2018 16:38:35 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/%E6%A5%AD%E5%8B%99%E9%96%8B%E5%A7%8B/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/%E6%A5%AD%E5%8B%99%E9%96%8B%E5%A7%8B/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>web上でPRの更新に対して通知がでるように設定</title>
-      <link>https://www.vegetable.blog.v41.me/posts/d1156c5a-c96c-45d8-8a32-732e1404b1d3/</link>
+      <link>https://rengotaku.github.io/posts/d1156c5a-c96c-45d8-8a32-732e1404b1d3/</link>
       <pubDate>Tue, 18 Dec 2018 16:38:35 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/d1156c5a-c96c-45d8-8a32-732e1404b1d3/</guid>
+      <guid>https://rengotaku.github.io/posts/d1156c5a-c96c-45d8-8a32-732e1404b1d3/</guid>
       <description>Settings -&amp;gt; Notifications を開き、 Participating , Watching のwebをチェックする。 通知は一度見ると消えてしまう為、再度閲覧したい場合はトップの `Pull requests` -&amp;gt; `Review requests` で可能。</description>
     </item>
     
     <item>
       <title>Macに入れたいツール</title>
-      <link>https://www.vegetable.blog.v41.me/posts/2a3de753-8c67-4cba-8dba-809c9550d48b/</link>
+      <link>https://rengotaku.github.io/posts/2a3de753-8c67-4cba-8dba-809c9550d48b/</link>
       <pubDate>Wed, 18 Apr 2018 12:15:08 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/2a3de753-8c67-4cba-8dba-809c9550d48b/</guid>
+      <guid>https://rengotaku.github.io/posts/2a3de753-8c67-4cba-8dba-809c9550d48b/</guid>
       <description>エディタ Visual Studio Code – コード エディター | Microsoft Azure 雑多用 CotEditor -Text Editor for macOS 以前は Download - Sublime Text ターミナル iTerm2 - macOS Terminal Replacement コピペ履歴 Clipy - Clipboard extension app for macOS ペイントツール フリー ペイント</description>
     </item>
     
     <item>
       <title>Slackを入れたらすること</title>
-      <link>https://www.vegetable.blog.v41.me/posts/44a00a11-d367-462a-a5bf-829b2aee4bad/</link>
+      <link>https://rengotaku.github.io/posts/44a00a11-d367-462a-a5bf-829b2aee4bad/</link>
       <pubDate>Wed, 18 Apr 2018 10:51:20 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/44a00a11-d367-462a-a5bf-829b2aee4bad/</guid>
+      <guid>https://rengotaku.github.io/posts/44a00a11-d367-462a-a5bf-829b2aee4bad/</guid>
       <description>リマインドを設定 /remind me “Are you ready for morning meeting?” at 10:30 every weekday /remind me “It’s lunch time!” at 12:30 every weekday /remind me “You should take a rest.” at 16:30 every weekday トラ</description>
     </item>
     

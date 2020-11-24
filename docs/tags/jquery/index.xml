@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>jquery on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/jquery/</link>
+    <link>https://rengotaku.github.io/tags/jquery/</link>
     <description>Recent content in jquery on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Mon, 01 Jul 2019 17:01:23 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>propがoffにできない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/b0720322-8cc3-48cf-9f23-cc10ef58076a/</link>
+      <link>https://rengotaku.github.io/posts/b0720322-8cc3-48cf-9f23-cc10ef58076a/</link>
       <pubDate>Mon, 01 Jul 2019 17:01:23 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/b0720322-8cc3-48cf-9f23-cc10ef58076a/</guid>
+      <guid>https://rengotaku.github.io/posts/b0720322-8cc3-48cf-9f23-cc10ef58076a/</guid>
       <description>結論 第二引数を ``false(文字列) で渡していた為。 事象 $(&amp;#39;#telephone&amp;#39;).on(&amp;#39;input&amp;#39;, function(e) { if($(this).val().length &amp;gt; 0){ $(&amp;#39;#mail&amp;#39;).prop(&amp;#39;disabled&amp;#39;, &amp;#39;true&amp;#39;); } else { $(&amp;#39;#cashback_search_step1_form_mail&amp;#39;).prop(&amp;#39;disabled&amp;#39;, &amp;#39;false&amp;#39;); } }); 対処 $(&amp;#39;#telephone&amp;#39;).on(&amp;#39;input&amp;#39;, function(e) { if($(this).val().length &amp;gt; 0){ $(&amp;#39;#mail&amp;#39;).prop(&amp;#39;disabled&amp;#39;, true); } else { $(&amp;#39;#cashback_search_step1_form_mail&amp;#39;).prop(&amp;#39;disabled&amp;#39;, false); // &amp;lt;= boolean値で</description>
     </item>
     
     <item>
       <title>複数ワードをオートコンプリートしたい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/2d9b348b-83cb-4449-bed3-9dcc4ac006fa/</link>
+      <link>https://rengotaku.github.io/posts/2d9b348b-83cb-4449-bed3-9dcc4ac006fa/</link>
       <pubDate>Tue, 30 Oct 2018 11:57:09 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/2d9b348b-83cb-4449-bed3-9dcc4ac006fa/</guid>
+      <guid>https://rengotaku.github.io/posts/2d9b348b-83cb-4449-bed3-9dcc4ac006fa/</guid>
       <description>jQuery Tokeninputを使用します。 var tags = JSON.parse($(&#39;#tag_candidate_hidden&#39;).val()); // 全てのタグを追加 $(&amp;quot;#tag_candidate&amp;quot;).tokenInput( tags, { theme: &amp;quot;facebook&amp;quot; } ); // タグを選択済み JSON.parse($(&#39;#target_tag_candidate_hidden&#39;).val()).forEach(function(targetTagName) { tags.forEach(function(tag){ if(tag.name == targetTagName){ $(&amp;quot;#tag_candidate&amp;quot;).tokenInput(&amp;quot;add&amp;quot;, tag); } }) }); // タグの全削除 $(&amp;quot;#tag-eraser&amp;quot;).click(function() { $(&amp;quot;#tag_candidate&amp;quot;).tokenInput(&amp;quot;clear&amp;quot;); return false; });</description>
     </item>
     
     <item>
       <title>ajaxのエラー時のメッセージの取得方法</title>
-      <link>https://www.vegetable.blog.v41.me/posts/b355c347-29ce-482d-9f1a-106e134d2c64/</link>
+      <link>https://rengotaku.github.io/posts/b355c347-29ce-482d-9f1a-106e134d2c64/</link>
       <pubDate>Wed, 26 Sep 2018 14:19:19 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/b355c347-29ce-482d-9f1a-106e134d2c64/</guid>
+      <guid>https://rengotaku.github.io/posts/b355c347-29ce-482d-9f1a-106e134d2c64/</guid>
       <description>$.ajax({ error: function(xhr, textStatus, errorThrown) { var res = $.parseJSON(xhr.responseText); } 【jQuery】Ajaxのエラーレスポンスをパースする方法 | Code &amp;amp; Business</description>
     </item>
     

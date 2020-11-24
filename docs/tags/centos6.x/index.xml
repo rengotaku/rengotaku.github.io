@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>centos6.x on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/centos6.x/</link>
+    <link>https://rengotaku.github.io/tags/centos6.x/</link>
     <description>Recent content in centos6.x on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Tue, 01 May 2018 16:14:14 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/centos6.x/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/centos6.x/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>railsを動かしたら、coffee-railsでエラーが発生</title>
-      <link>https://www.vegetable.blog.v41.me/posts/8a6ce7b9-92af-4d59-98f5-456db5fb2a6d/</link>
+      <link>https://rengotaku.github.io/posts/8a6ce7b9-92af-4d59-98f5-456db5fb2a6d/</link>
       <pubDate>Tue, 01 May 2018 16:14:14 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/8a6ce7b9-92af-4d59-98f5-456db5fb2a6d/</guid>
+      <guid>https://rengotaku.github.io/posts/8a6ce7b9-92af-4d59-98f5-456db5fb2a6d/</guid>
       <description>railsを動かそうとしたら、エラーが発生 $ rails -T =&amp;gt; rails aborted! Bundler::GemRequireError: There was an error while trying to load the gem &#39;coffee-rails&#39;. Gem Load Error is: Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes. Backtrace for gem load error is: nodejsを</description>
     </item>
     

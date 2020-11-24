@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>treasuredata on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/treasuredata/</link>
+    <link>https://rengotaku.github.io/tags/treasuredata/</link>
     <description>Recent content in treasuredata on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Thu, 16 Aug 2018 19:14:31 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/treasuredata/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/treasuredata/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>条件で日付の書き方</title>
-      <link>https://www.vegetable.blog.v41.me/posts/b72f540b-ca57-40aa-b7fa-0f92cfde1f26/</link>
+      <link>https://rengotaku.github.io/posts/b72f540b-ca57-40aa-b7fa-0f92cfde1f26/</link>
       <pubDate>Thu, 16 Aug 2018 19:14:31 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/b72f540b-ca57-40aa-b7fa-0f92cfde1f26/</guid>
+      <guid>https://rengotaku.github.io/posts/b72f540b-ca57-40aa-b7fa-0f92cfde1f26/</guid>
       <description>TD_TIME_RANGE(time, &#39;2018-08-01&#39;, &#39;2018-08-16&#39;, &#39;JST&#39;) &amp;quot;(ダブルクォテーション)にするとエラーになる TreasureDataでHiveクエリを書くとき - 独自関数TD_TIME_</description>
     </item>
     

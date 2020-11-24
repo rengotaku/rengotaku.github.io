@@ -5,9 +5,7 @@ set -e
 
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 
-git checkout html
-
-mv /tmp/public/* ./docs
+cd hugo && HUGO_ENV=production hugo -v -d ../docs && cd -
 
 git add .
 
@@ -17,4 +15,4 @@ if [ -n "$*" ]; then
 fi
 git commit -m "$msg"
 
-git push -f origin html
+git push -f origin master

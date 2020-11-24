@@ -2,76 +2,76 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ショートカットキー on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</link>
+    <link>https://rengotaku.github.io/tags/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/</link>
     <description>Recent content in ショートカットキー on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Mon, 06 Jan 2020 16:42:09 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>スリープのショートカット</title>
-      <link>https://www.vegetable.blog.v41.me/posts/c3223d93-985b-4d39-b3cd-b55ca742a518/</link>
+      <link>https://rengotaku.github.io/posts/c3223d93-985b-4d39-b3cd-b55ca742a518/</link>
       <pubDate>Mon, 06 Jan 2020 16:42:09 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/c3223d93-985b-4d39-b3cd-b55ca742a518/</guid>
+      <guid>https://rengotaku.github.io/posts/c3223d93-985b-4d39-b3cd-b55ca742a518/</guid>
       <description>動作 キー すぐに画面をロック control + command + Q Mac のキーボードショートカット - Apple サポート</description>
     </item>
     
     <item>
       <title>lessのショートカットキー</title>
-      <link>https://www.vegetable.blog.v41.me/posts/fb07982c-f729-4f5a-b6d2-8d619063f7fd/</link>
+      <link>https://rengotaku.github.io/posts/fb07982c-f729-4f5a-b6d2-8d619063f7fd/</link>
       <pubDate>Mon, 02 Sep 2019 13:15:28 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/fb07982c-f729-4f5a-b6d2-8d619063f7fd/</guid>
+      <guid>https://rengotaku.github.io/posts/fb07982c-f729-4f5a-b6d2-8d619063f7fd/</guid>
       <description>ページ送り ショートカット 説明 cmd + f ページ送り cmd + b ページ戻し まとめ移動 ショートカット 説明 G ファイルを最後へ移動 g ファイルの先頭へ移動 less</description>
     </item>
     
     <item>
       <title>iterm2のショートカットキー</title>
-      <link>https://www.vegetable.blog.v41.me/posts/f89cb48f-5de3-44f1-b0cb-cd0e132d9843/</link>
+      <link>https://rengotaku.github.io/posts/f89cb48f-5de3-44f1-b0cb-cd0e132d9843/</link>
       <pubDate>Wed, 27 Mar 2019 10:53:09 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/f89cb48f-5de3-44f1-b0cb-cd0e132d9843/</guid>
+      <guid>https://rengotaku.github.io/posts/f89cb48f-5de3-44f1-b0cb-cd0e132d9843/</guid>
       <description>頻度高め ショートカット 説明 cmd + n 新しいウィンドウを表示 cmd + t 新しいタブを表示 cmd + w ウィンドウを削除 cmd + d ウィンドウを縦に分割 cmd + shift + d ウィン</description>
     </item>
     
     <item>
       <title>よく使うショートカットキー一覧</title>
-      <link>https://www.vegetable.blog.v41.me/posts/29a20baa-c6ce-4dee-b185-0941b4c32ea8/</link>
+      <link>https://rengotaku.github.io/posts/29a20baa-c6ce-4dee-b185-0941b4c32ea8/</link>
       <pubDate>Wed, 31 Oct 2018 10:52:26 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/29a20baa-c6ce-4dee-b185-0941b4c32ea8/</guid>
+      <guid>https://rengotaku.github.io/posts/29a20baa-c6ce-4dee-b185-0941b4c32ea8/</guid>
       <description>動作 キー 移動履歴を進む Command + ] 移動履歴を戻る Command + ] 未読一覧 Command + Shift + A スレッド一覧 Command + Shift + T 右サイドバーの開閉 Command + . 全メッセージを既読にする Shift +</description>
     </item>
     
     <item>
       <title>作業捗るショートカット</title>
-      <link>https://www.vegetable.blog.v41.me/posts/c24445c1-f62b-4df7-961b-e77a656f3a60/</link>
+      <link>https://rengotaku.github.io/posts/c24445c1-f62b-4df7-961b-e77a656f3a60/</link>
       <pubDate>Fri, 05 Oct 2018 12:48:57 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/c24445c1-f62b-4df7-961b-e77a656f3a60/</guid>
+      <guid>https://rengotaku.github.io/posts/c24445c1-f62b-4df7-961b-e77a656f3a60/</guid>
       <description>カーソルを置いている１ワードを選択 windows mac Ctrl + d command + d Sublime Text で格好つけたい時のためのショートカット（windows,mac）</description>
     </item>
     
     <item>
       <title>Finderのショートカット</title>
-      <link>https://www.vegetable.blog.v41.me/posts/d3c7e9f6-f420-46ec-88e8-0908871be19b/</link>
+      <link>https://rengotaku.github.io/posts/d3c7e9f6-f420-46ec-88e8-0908871be19b/</link>
       <pubDate>Mon, 01 Oct 2018 13:14:35 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/d3c7e9f6-f420-46ec-88e8-0908871be19b/</guid>
+      <guid>https://rengotaku.github.io/posts/d3c7e9f6-f420-46ec-88e8-0908871be19b/</guid>
       <description>動作 ショートカット ネットワークのフォルダにアタッチする(SMBなどに使用) Command + K</description>
     </item>
     
     <item>
       <title>ショートカット一覧</title>
-      <link>https://www.vegetable.blog.v41.me/posts/bf3b6961-c62e-4334-95aa-55f49751c144/</link>
+      <link>https://rengotaku.github.io/posts/bf3b6961-c62e-4334-95aa-55f49751c144/</link>
       <pubDate>Thu, 26 Apr 2018 14:22:01 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/bf3b6961-c62e-4334-95aa-55f49751c144/</guid>
+      <guid>https://rengotaku.github.io/posts/bf3b6961-c62e-4334-95aa-55f49751c144/</guid>
       <description>動作 ショートカット ファイル名検索(すべてのファイルを検索) Command + Shift + O ファイル横断テキスト検索 Ctrl + Shift + F ひとつ前に移動 Command + [ ひとつ先に移動 Command +</description>
     </item>
     

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>html5 on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/html5/</link>
+    <link>https://rengotaku.github.io/tags/html5/</link>
     <description>Recent content in html5 on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Tue, 28 Aug 2018 10:25:33 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/html5/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/html5/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>画像に白帯びをつける</title>
-      <link>https://www.vegetable.blog.v41.me/posts/059c9c58-7286-4c0a-b16c-041f9c6c172a/</link>
+      <link>https://rengotaku.github.io/posts/059c9c58-7286-4c0a-b16c-041f9c6c172a/</link>
       <pubDate>Tue, 28 Aug 2018 10:25:33 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/059c9c58-7286-4c0a-b16c-041f9c6c172a/</guid>
+      <guid>https://rengotaku.github.io/posts/059c9c58-7286-4c0a-b16c-041f9c6c172a/</guid>
       <description>枠を書く HTML5 Canvas Line Color Tutorial drawImage() メソッド - Canvasリファレンス - HTML5.JP 画像のリサイズ クライアント側でcanvasを使って画像をリサイズする 画像を加工する</description>
     </item>
     

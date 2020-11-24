@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>iterm on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/iterm/</link>
+    <link>https://rengotaku.github.io/tags/iterm/</link>
     <description>Recent content in iterm on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Tue, 28 Jan 2020 10:25:22 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/iterm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/iterm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>iTerm2で画像を見る</title>
-      <link>https://www.vegetable.blog.v41.me/posts/f8720630-e429-41f8-9d7b-31c5eca4a2a3/</link>
+      <link>https://rengotaku.github.io/posts/f8720630-e429-41f8-9d7b-31c5eca4a2a3/</link>
       <pubDate>Tue, 28 Jan 2020 10:25:22 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/f8720630-e429-41f8-9d7b-31c5eca4a2a3/</guid>
+      <guid>https://rengotaku.github.io/posts/f8720630-e429-41f8-9d7b-31c5eca4a2a3/</guid>
       <description>imgcat のスクリプトを配置 $ vi /usr/local/bin/imgcat #&amp;lt;= スクリプトをコピペ $ chmod 755 /usr/local/bin/imgcat $ imgcat /path/to/image Images - Documentation - iTerm2 - macOS Terminal Replacement</description>
     </item>
     

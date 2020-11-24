@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>googlecloudstorage on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/googlecloudstorage/</link>
+    <link>https://rengotaku.github.io/tags/googlecloudstorage/</link>
     <description>Recent content in googlecloudstorage on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Wed, 21 Nov 2018 11:46:19 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/googlecloudstorage/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/googlecloudstorage/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>シェルからGCPへファイルをアップロード</title>
-      <link>https://www.vegetable.blog.v41.me/posts/1876f788-38a0-4039-9aa9-ead70ce502c6/</link>
+      <link>https://rengotaku.github.io/posts/1876f788-38a0-4039-9aa9-ead70ce502c6/</link>
       <pubDate>Wed, 21 Nov 2018 11:46:19 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/1876f788-38a0-4039-9aa9-ead70ce502c6/</guid>
+      <guid>https://rengotaku.github.io/posts/1876f788-38a0-4039-9aa9-ead70ce502c6/</guid>
       <description>確認 $ gcloud auth activate-service-account XXXXXXX-zzzzzzzzzzzzzzzzzzzzzzzzzz@developer.gserviceaccount.com --key-file /path/to/myproject-9999-9c82deb7e430.json --project myproject-9999 projectには credential(json)の、 project_id activate-service-accountには crede</description>
     </item>
     
     <item>
       <title>gcpのキャッシュ用のnginxを(docker上に)作成するポイント</title>
-      <link>https://www.vegetable.blog.v41.me/posts/58b5162f-b8e8-4555-8a0c-e4218c8a2c6f/</link>
+      <link>https://rengotaku.github.io/posts/58b5162f-b8e8-4555-8a0c-e4218c8a2c6f/</link>
       <pubDate>Wed, 22 Aug 2018 11:18:49 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/58b5162f-b8e8-4555-8a0c-e4218c8a2c6f/</guid>
+      <guid>https://rengotaku.github.io/posts/58b5162f-b8e8-4555-8a0c-e4218c8a2c6f/</guid>
       <description>構成 APP &amp;lt;-&amp;gt; NGINX(これ) &amp;lt;-&amp;gt; GCP GCPにアクセスする際にNGINXを通してキャッシュを使用するのが目的。 Dockerfileを作成 Docker</description>
     </item>
     
     <item>
       <title>bucket内のファイルをフィルターして一覧取得</title>
-      <link>https://www.vegetable.blog.v41.me/posts/629e184e-7d32-4562-85c9-abb408c05410/</link>
+      <link>https://rengotaku.github.io/posts/629e184e-7d32-4562-85c9-abb408c05410/</link>
       <pubDate>Fri, 17 Aug 2018 10:58:38 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/629e184e-7d32-4562-85c9-abb408c05410/</guid>
+      <guid>https://rengotaku.github.io/posts/629e184e-7d32-4562-85c9-abb408c05410/</guid>
       <description>bucket = storage.bucket &amp;#34;bucket_name&amp;#34; files = bucket.files(prefix: &amp;#39;prefix_char/&amp;#39;) files.all do |file| puts file.name end google-cloud-ruby</description>
     </item>
     
     <item>
       <title>ローカルファイルをアップロード</title>
-      <link>https://www.vegetable.blog.v41.me/posts/29233a99-b730-4d3a-8f39-c0ecae4c9c99/</link>
+      <link>https://rengotaku.github.io/posts/29233a99-b730-4d3a-8f39-c0ecae4c9c99/</link>
       <pubDate>Thu, 09 Aug 2018 23:58:53 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/29233a99-b730-4d3a-8f39-c0ecae4c9c99/</guid>
+      <guid>https://rengotaku.github.io/posts/29233a99-b730-4d3a-8f39-c0ecae4c9c99/</guid>
       <description>gemインストール gem &#39;google-cloud-storage&#39; タスク require &amp;#34;google/cloud/storage&amp;#34; namespace :storage do desc &amp;#34;システムDBをGCSにアップロードする&amp;#34; task upload_db: :environment do storage = Google::Cloud::Storage.new( project_id: &amp;#39;project_id&amp;#39;, credentials: &amp;#34;/path/to/jsonfile&amp;#34; ) bucket = storage.bucket ENV[&amp;#39;GCLOUD_STORAGE_BUCKET&amp;#39;] local_file_path = &amp;#34;/path/to/file&amp;#34; storage_file_path =</description>
     </item>
     
     <item>
       <title>バケットを一般開放する</title>
-      <link>https://www.vegetable.blog.v41.me/posts/f7f5f05d-f491-46c5-b36a-0cf427521dd9/</link>
+      <link>https://rengotaku.github.io/posts/f7f5f05d-f491-46c5-b36a-0cf427521dd9/</link>
       <pubDate>Thu, 09 Aug 2018 21:45:27 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/f7f5f05d-f491-46c5-b36a-0cf427521dd9/</guid>
+      <guid>https://rengotaku.github.io/posts/f7f5f05d-f491-46c5-b36a-0cf427521dd9/</guid>
       <description>[バケットの権限を編集] を選択します。 [メンバーを追加] フィールドに allUsers を入力します。 [役割を選択] プルダウン メニューで [ストレージ] サブメニ</description>
     </item>
     
     <item>
       <title>ローカルファイルをアップロード</title>
-      <link>https://www.vegetable.blog.v41.me/posts/3b819e1e-952e-49ae-9962-40befc074e47/</link>
+      <link>https://rengotaku.github.io/posts/3b819e1e-952e-49ae-9962-40befc074e47/</link>
       <pubDate>Thu, 09 Aug 2018 21:16:29 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/3b819e1e-952e-49ae-9962-40befc074e47/</guid>
+      <guid>https://rengotaku.github.io/posts/3b819e1e-952e-49ae-9962-40befc074e47/</guid>
       <description>var projectId = process.env.GCLOUD_PROJECT_ID var gcloud = require(&amp;#39;gcloud&amp;#39;)({ projectId: projectId, keyFilename: &amp;#39;/local/path/to/keyfile&amp;#39; }); var storage = gcloud.storage(); var bucket = storage.bucket(&amp;#39;storageName&amp;#39;); var options = { destination: &amp;#39;2015/05/file&amp;#39;, // ファイル名 validation: &amp;#39;crc32c&amp;#39; // 謎 } bucket.upload(&amp;#34;/local/path/to/file&amp;#34;, options, function(err, file){ if (err) { console.log(&amp;#34;err: &amp;#34; + err); } else if (!file) { console.log(&amp;#34;empty&amp;#34;); } else { console.log(&amp;#34;ok&amp;#34;); } }); Google Cloud Storage</description>
     </item>
     

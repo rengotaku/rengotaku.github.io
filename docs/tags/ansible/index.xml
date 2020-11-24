@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ansible on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/ansible/</link>
+    <link>https://rengotaku.github.io/tags/ansible/</link>
     <description>Recent content in ansible on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Wed, 17 Jul 2019 11:20:50 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ansibleで&#34;yum lockfile is held by another process&#34;が発生</title>
-      <link>https://www.vegetable.blog.v41.me/posts/feea2e50-829c-455c-8a2a-cd8c6435cc31/</link>
+      <link>https://rengotaku.github.io/posts/feea2e50-829c-455c-8a2a-cd8c6435cc31/</link>
       <pubDate>Wed, 17 Jul 2019 11:20:50 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/feea2e50-829c-455c-8a2a-cd8c6435cc31/</guid>
+      <guid>https://rengotaku.github.io/posts/feea2e50-829c-455c-8a2a-cd8c6435cc31/</guid>
       <description>事象 yum lockfile is held by another process でfailedする。 解決 lock_timeout を追加 - name: Install stuff yum: name: - git - python36 lock_timeout: 180 [Ansible] “yum lockfile is held by another process “エラーの対処法｜スクショはつらいよ バージョ</description>
     </item>
     

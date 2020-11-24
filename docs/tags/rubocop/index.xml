@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rubocop on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/rubocop/</link>
+    <link>https://rengotaku.github.io/tags/rubocop/</link>
     <description>Recent content in rubocop on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Tue, 28 Jan 2020 16:15:55 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/rubocop/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/rubocop/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>修正したファイルのみチェック</title>
-      <link>https://www.vegetable.blog.v41.me/posts/a13365d5-d033-404d-ae83-b8f7fa0dd4c8/</link>
+      <link>https://rengotaku.github.io/posts/a13365d5-d033-404d-ae83-b8f7fa0dd4c8/</link>
       <pubDate>Tue, 28 Jan 2020 16:15:55 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/a13365d5-d033-404d-ae83-b8f7fa0dd4c8/</guid>
+      <guid>https://rengotaku.github.io/posts/a13365d5-d033-404d-ae83-b8f7fa0dd4c8/</guid>
       <description>For rubocop $ echo $(git diff origin/master `git branch | grep &amp;#39;*&amp;#39; | cut -d&amp;#39; &amp;#39; -f2` | grep &amp;#39;diff --git&amp;#39; | sed -E &amp;#39;s#diff --git a\/(.+) b\/.+#\1#&amp;#39;) | { read FILES; bundle exec rubocop $FILES; } For rspec $ echo $(git diff origin/master `git branch | grep &amp;#39;*&amp;#39; | cut -d&amp;#39; &amp;#39; -f2` | grep &amp;#39;diff --git&amp;#39; | sed -E &amp;#39;s#diff --git a\/(.+) b\/.+#\1#&amp;#39; | grep spec) | {</description>
     </item>
     
     <item>
       <title>`Style/ClassVars` でクラス変数の誤りを指摘される</title>
-      <link>https://www.vegetable.blog.v41.me/posts/c5b69aa1-f4ec-47ab-95c0-0ca1c5ab1188/</link>
+      <link>https://rengotaku.github.io/posts/c5b69aa1-f4ec-47ab-95c0-0ca1c5ab1188/</link>
       <pubDate>Thu, 15 Aug 2019 16:07:59 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/c5b69aa1-f4ec-47ab-95c0-0ca1c5ab1188/</guid>
+      <guid>https://rengotaku.github.io/posts/c5b69aa1-f4ec-47ab-95c0-0ca1c5ab1188/</guid>
       <description>解決 instance_variable_get メソッドを使用する。 class A @client = SomeClient.new def do_api client.do end def client self.class.instance_variable_get(:@client) end end ruby - How to correct Style/ClassVars in RuboCop? - Stack Overflow 事象 class A def do_api client.do end def client @@client ||= SomeClient.new end end のように、クライアントを一度きりし</description>
     </item>
     
     <item>
       <title>rubocop_todo.ymlのルールが適用されない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/efae8a3a-e6f1-4c30-ac6d-262d4cf9e026/</link>
+      <link>https://rengotaku.github.io/posts/efae8a3a-e6f1-4c30-ac6d-262d4cf9e026/</link>
       <pubDate>Fri, 14 Jun 2019 16:19:28 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/efae8a3a-e6f1-4c30-ac6d-262d4cf9e026/</guid>
+      <guid>https://rengotaku.github.io/posts/efae8a3a-e6f1-4c30-ac6d-262d4cf9e026/</guid>
       <description>解決 してない。 複数のルールをマージする機能がないと実現しないが、その機能は外されたらしい。 バージョン $ rubocop -v 0.64.0 事象 inherit_from: .rubocop_1.yml AllCops: Exclude: - b.rb AllCops: Exclude: - a.rb 上記の場</description>
     </item>
     

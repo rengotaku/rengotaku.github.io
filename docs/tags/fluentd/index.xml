@@ -2,85 +2,85 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fluentd on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/fluentd/</link>
+    <link>https://rengotaku.github.io/tags/fluentd/</link>
     <description>Recent content in fluentd on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Thu, 13 Aug 2020 15:02:13 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/fluentd/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/fluentd/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>dockerのみでfluentdを動作させる</title>
-      <link>https://www.vegetable.blog.v41.me/posts/972bfb28-b80a-4967-a2a4-121abbc464bc/</link>
+      <link>https://rengotaku.github.io/posts/972bfb28-b80a-4967-a2a4-121abbc464bc/</link>
       <pubDate>Thu, 13 Aug 2020 15:02:13 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/972bfb28-b80a-4967-a2a4-121abbc464bc/</guid>
+      <guid>https://rengotaku.github.io/posts/972bfb28-b80a-4967-a2a4-121abbc464bc/</guid>
       <description>$ docker build -f fluentd/Dockerfile . --tag fluentd $ docker run -d \ -p 24224:24224 \ -p 24224:24224/udp \ --name fluentd_c \ --env-file .env \ fluentd $ docker exec -it fluentd_c /bin/sh $ docker stop fluentd_c $ docker rm fluentd_c</description>
     </item>
     
     <item>
       <title>fluentdからs3への送信をローカルで検証したい</title>
-      <link>https://www.vegetable.blog.v41.me/posts/cd79fa35-ab38-484c-86ec-7b0578610cb7/</link>
+      <link>https://rengotaku.github.io/posts/cd79fa35-ab38-484c-86ec-7b0578610cb7/</link>
       <pubDate>Wed, 05 Feb 2020 14:39:53 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/cd79fa35-ab38-484c-86ec-7b0578610cb7/</guid>
+      <guid>https://rengotaku.github.io/posts/cd79fa35-ab38-484c-86ec-7b0578610cb7/</guid>
       <description>概要 dockerで fluentd、 minio を立てて、S3へのログの送信の検証を行う。 構成 . ├── docker-compose.yml ├── fluentd │ ├── Dockerfile │ └── conf │ └── fluentd.conf └── log └</description>
     </item>
     
     <item>
       <title>ロガーの基盤の調査</title>
-      <link>https://www.vegetable.blog.v41.me/posts/aaf9d0da-97a0-4f7a-b694-8863992996d8/</link>
+      <link>https://rengotaku.github.io/posts/aaf9d0da-97a0-4f7a-b694-8863992996d8/</link>
       <pubDate>Wed, 29 Jan 2020 11:37:29 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/aaf9d0da-97a0-4f7a-b694-8863992996d8/</guid>
+      <guid>https://rengotaku.github.io/posts/aaf9d0da-97a0-4f7a-b694-8863992996d8/</guid>
       <description>調査手順 参考になりそうな資料・サイトを探す ↓ 各手順のメリット、デメリットを洗い出す ↓ 一旦相談数する ↓ （多分）工数の洗い出し 参考資料・サイト fluentd</description>
     </item>
     
     <item>
       <title>td-agentにaws-fluent-plugin-kinesisをインストールしたが起動できない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/02006c4c-ed23-4a52-a550-021451b85d43/</link>
+      <link>https://rengotaku.github.io/posts/02006c4c-ed23-4a52-a550-021451b85d43/</link>
       <pubDate>Fri, 12 Jul 2019 10:16:06 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/02006c4c-ed23-4a52-a550-021451b85d43/</guid>
+      <guid>https://rengotaku.github.io/posts/02006c4c-ed23-4a52-a550-021451b85d43/</guid>
       <description>事象 aws-s3のプラグインでエラーが発生している。 less /var/log/td-agent/td-agent.log failed to configure/start sub output s3: Unable to activate fluent-plugin-s3-0.8.5, because aws-sdk- 2.1.36 conflicts with aws-sdk (&amp;lt; 3, &amp;gt;= 2.3.22) 解決 下記の通りにgemのインストールを行う。</description>
     </item>
     
     <item>
       <title>fluent-plugin-kinesisがインストールできない</title>
-      <link>https://www.vegetable.blog.v41.me/posts/a7b64c5a-ac59-4a92-b01e-a7d8a430673e/</link>
+      <link>https://rengotaku.github.io/posts/a7b64c5a-ac59-4a92-b01e-a7d8a430673e/</link>
       <pubDate>Mon, 10 Jun 2019 16:50:40 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/a7b64c5a-ac59-4a92-b01e-a7d8a430673e/</guid>
+      <guid>https://rengotaku.github.io/posts/a7b64c5a-ac59-4a92-b01e-a7d8a430673e/</guid>
       <description>事象 kinesisのfirehoseを使用したいので fluent-plugin-kinesis をインストールした所エラーになる。 $ /usr/sbin/td-agent-gem install fluent-plugin-kinesis Building native extensions. This could take a while... ERROR: Error installing fluent-plugin-kinesis: ERROR: Failed to build gem native extension. current directory: /opt/td-agent/embedded/lib/ruby/gems/2.1.0/gems/strptime-0.2.3/ext/strptime</description>
     </item>
     
     <item>
       <title>fluentdをdockerで動かす際のチップ集</title>
-      <link>https://www.vegetable.blog.v41.me/posts/d15ea14f-fed7-4ef3-aab3-8a0e554eae2f/</link>
+      <link>https://rengotaku.github.io/posts/d15ea14f-fed7-4ef3-aab3-8a0e554eae2f/</link>
       <pubDate>Wed, 05 Jun 2019 18:52:25 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/d15ea14f-fed7-4ef3-aab3-8a0e554eae2f/</guid>
+      <guid>https://rengotaku.github.io/posts/d15ea14f-fed7-4ef3-aab3-8a0e554eae2f/</guid>
       <description>構成 . ├── README.md ├── docker-compose.yml ├── fluentd │ ├── Dockerfile │ └── conf │ └── fluentd.conf 設定 docker FROM fluent/fluentd:v0.14.25 ADD conf/fluentd.conf /fluentd/etc/ docker-compose version: &amp;#39;2&amp;#39; services: fluentd: build: fluentd/ ports: - &amp;#34;24224:24224&amp;#34; volumes: - ./fluentd/conf:/fluentd/etc environment: FLUENTD_CONF: fluentd.conf fluentdのconf &amp;lt;source&amp;gt; @type forward &amp;lt;/source&amp;gt;</description>
     </item>
     
     <item>
       <title>dockerのfluentdをフラッシュさせる</title>
-      <link>https://www.vegetable.blog.v41.me/posts/8e84f183-89fd-420d-ad2c-632eaf6f624f/</link>
+      <link>https://rengotaku.github.io/posts/8e84f183-89fd-420d-ad2c-632eaf6f624f/</link>
       <pubDate>Mon, 09 Jul 2018 12:26:18 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/8e84f183-89fd-420d-ad2c-632eaf6f624f/</guid>
+      <guid>https://rengotaku.github.io/posts/8e84f183-89fd-420d-ad2c-632eaf6f624f/</guid>
       <description>docker kill -s USR1 [contailner_name] fluent/fluentd-docker-image: Docker image for Fluentd</description>
     </item>
     
     <item>
       <title>FluentdでS3にログをアップする</title>
-      <link>https://www.vegetable.blog.v41.me/posts/129e37cb-70dd-4c73-b21e-18453d50b775/</link>
+      <link>https://rengotaku.github.io/posts/129e37cb-70dd-4c73-b21e-18453d50b775/</link>
       <pubDate>Wed, 25 Apr 2018 10:52:57 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/129e37cb-70dd-4c73-b21e-18453d50b775/</guid>
+      <guid>https://rengotaku.github.io/posts/129e37cb-70dd-4c73-b21e-18453d50b775/</guid>
       <description>Fluentdのインストール $ sudo curl -L https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh $ sudo td-agent-gem install fluent-plugin-config-expander fluent-plugin-tail-asis fluent-plugin-file-alternative fluent-plugin-forest $ sudo mkdir /var/log/td-agent/pos $ sudo mkdir /var/log/td-agent/buffer $ sudo chown -R td-agent. /var/log/td-agent conf設定 $ sudo vi /etc/td-agent/td-agent.conf -------------------------------------------------------------------------------- &amp;lt;source&amp;gt; type config_expander &amp;lt;config&amp;gt; type tail format none path /var/log/ec2-user/XXXX.log pos_file /var/log/td-agent/pos/XXXX.pos tag api_${hostname}/XXXX &amp;lt;/config&amp;gt; &amp;lt;/source&amp;gt;</description>
     </item>
     

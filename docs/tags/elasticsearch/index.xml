@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>elasticsearch on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/elasticsearch/</link>
+    <link>https://rengotaku.github.io/tags/elasticsearch/</link>
     <description>Recent content in elasticsearch on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Wed, 11 Jul 2018 14:22:24 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>elasticsearchをcentos7にインストール</title>
-      <link>https://www.vegetable.blog.v41.me/posts/77203dae-d90e-4652-a73e-dd9f9497e16f/</link>
+      <link>https://rengotaku.github.io/posts/77203dae-d90e-4652-a73e-dd9f9497e16f/</link>
       <pubDate>Wed, 11 Jul 2018 14:22:24 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/77203dae-d90e-4652-a73e-dd9f9497e16f/</guid>
+      <guid>https://rengotaku.github.io/posts/77203dae-d90e-4652-a73e-dd9f9497e16f/</guid>
       <description>インストール # rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch # vi /etc/yum.repos.d/elasticsearch.repo ======= [elasticsearch-2.x] name=Elasticsearch repository for 2.x packages baseurl=http://packages.elastic.co/elasticsearch/2.x/centos gpgcheck=1 gpgkey=http://packages.elastic.co/GPG-KEY-elasticsearch enabled=1 # yum install elasticsearch ホストの設定 # vi /etc/elasticsearch/elasticsearch.yml ======= # network.host: 192.168.0.1 network.host: 192.168.33.10 プラグインをインストール kuromoji・・・日本語全</description>
     </item>
     

@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>aws-cli on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/aws-cli/</link>
+    <link>https://rengotaku.github.io/tags/aws-cli/</link>
     <description>Recent content in aws-cli on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Tue, 14 Jan 2020 15:49:34 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/aws-cli/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/aws-cli/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>aws-cliを使用する</title>
-      <link>https://www.vegetable.blog.v41.me/posts/c1304da4-1894-4498-850a-57c5ed46a145/</link>
+      <link>https://rengotaku.github.io/posts/c1304da4-1894-4498-850a-57c5ed46a145/</link>
       <pubDate>Tue, 14 Jan 2020 15:49:34 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/c1304da4-1894-4498-850a-57c5ed46a145/</guid>
+      <guid>https://rengotaku.github.io/posts/c1304da4-1894-4498-850a-57c5ed46a145/</guid>
       <description>インストール $ pip3 install awscli --upgrade --user $ echo &#39;export PATH=&amp;quot;~/Library/Python/3.7/bin:$PATH&amp;quot;&#39; &amp;gt;&amp;gt; ~/.bash_profile ※PATHに追加しているパスは、インストール時のログを確認してください。 AWS CLI をインストールする - Qiita Credential ファ</description>
     </item>
     
     <item>
       <title>EC2のインスタンスをフィルタリングするスクリプト</title>
-      <link>https://www.vegetable.blog.v41.me/posts/98083acc-ca8c-40de-b7a8-bd20d986ea4e/</link>
+      <link>https://rengotaku.github.io/posts/98083acc-ca8c-40de-b7a8-bd20d986ea4e/</link>
       <pubDate>Mon, 11 Nov 2019 14:12:55 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/98083acc-ca8c-40de-b7a8-bd20d986ea4e/</guid>
+      <guid>https://rengotaku.github.io/posts/98083acc-ca8c-40de-b7a8-bd20d986ea4e/</guid>
       <description>alias hoge-ssh=&amp;#39;describe_ec2 | peco | cut -f 5 | xargs -o -n1 ssh&amp;#39; describe_ec2() { aws ec2 describe-instances | \ jq -r &amp;#39;.[][].Instances[] | [.InstanceId, [.Tags[] | select(.Key == &amp;#34;env&amp;#34;).Value][], [.Tags[] | select(.Key == &amp;#34;Name&amp;#34;).Value][], .InstanceType, .NetworkInterfaces[].PrivateIpAddress, .State.Name] | @tsv&amp;#39; } 表示する項目数に合わせて、cutのフィールドを調整する必要</description>
     </item>
     
     <item>
       <title>ラムダの呼び出し回数メトリクスを取得</title>
-      <link>https://www.vegetable.blog.v41.me/posts/3f178e58-317d-4a14-8595-e18bac3209ca/</link>
+      <link>https://rengotaku.github.io/posts/3f178e58-317d-4a14-8595-e18bac3209ca/</link>
       <pubDate>Wed, 05 Sep 2018 15:09:24 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/3f178e58-317d-4a14-8595-e18bac3209ca/</guid>
+      <guid>https://rengotaku.github.io/posts/3f178e58-317d-4a14-8595-e18bac3209ca/</guid>
       <description>$ aws cloudwatch list-metrics --namespace AWS/Lambda --metric-name Invocations $ aws cloudwatch get-metric-statistics --namespace AWS/Lambda --metric-name Invocations \ --dimensions Name=FunctionName,Value=XXXXX --statistics Maximum \ --start-time 2018-08-01T00:00:00 --end-time 2018-09-04T23:59:59 --period 360 get-metric-statistics — AWS CLI 1.16.7 Command Reference list-functions — AWS CLI 1.16.7 Command Referenceˆ¨</description>
     </item>
     
     <item>
       <title>aws-cliを使用してs3からファイルを取得</title>
-      <link>https://www.vegetable.blog.v41.me/posts/d39b79ce-8059-4d89-95f8-2480d8564c85/</link>
+      <link>https://rengotaku.github.io/posts/d39b79ce-8059-4d89-95f8-2480d8564c85/</link>
       <pubDate>Tue, 31 Jul 2018 17:46:37 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/d39b79ce-8059-4d89-95f8-2480d8564c85/</guid>
+      <guid>https://rengotaku.github.io/posts/d39b79ce-8059-4d89-95f8-2480d8564c85/</guid>
       <description>$ aws s3 cp --region ap-northeast-1 s3://path/to/bucket/path . 特定のパス配下をダウンロードしたい場合 $ aws s3 cp --region ap-northeast-1 s3://path/to/bucket/path . --recursive S3 から ファイルをAWSCLIでディレクトリごとダウンロード https://qiita.com/FSMS/items/481fa5107b2901a07ec6</description>
     </item>
     

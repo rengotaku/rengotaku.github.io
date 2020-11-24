@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>packer on Vegetable Programing</title>
-    <link>https://www.vegetable.blog.v41.me/tags/packer/</link>
+    <link>https://rengotaku.github.io/tags/packer/</link>
     <description>Recent content in packer on Vegetable Programing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
     <lastBuildDate>Tue, 16 Jul 2019 19:22:31 +0900</lastBuildDate>
     
-	<atom:link href="https://www.vegetable.blog.v41.me/tags/packer/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rengotaku.github.io/tags/packer/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>packerで作成するAMIのベースAMIを最新を使用する</title>
-      <link>https://www.vegetable.blog.v41.me/posts/a156f5f4-9b2b-4121-a69a-644837a7763b/</link>
+      <link>https://rengotaku.github.io/posts/a156f5f4-9b2b-4121-a69a-644837a7763b/</link>
       <pubDate>Tue, 16 Jul 2019 19:22:31 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/a156f5f4-9b2b-4121-a69a-644837a7763b/</guid>
+      <guid>https://rengotaku.github.io/posts/a156f5f4-9b2b-4121-a69a-644837a7763b/</guid>
       <description>解決 &amp;#34;builders&amp;#34;: [{ &amp;#34;source_ami_filter&amp;#34;: { &amp;#34;filters&amp;#34;: { &amp;#34;name&amp;#34;: &amp;#34;amzn-ami-hvm-*-x86_64-gp2&amp;#34; }, &amp;#34;owners&amp;#34;: [&amp;#34;137112412989&amp;#34;], &amp;#34;most_recent&amp;#34;: true }, 10分で理解するPacker - Qiita メモ -gp2とは？ ボリュームの種類。他に、 gp2 io1 st1 sc1 Amazon EBS ボリュームの種類 - Amazon Elastic</description>
     </item>
     
     <item>
       <title>packerをインストール</title>
-      <link>https://www.vegetable.blog.v41.me/posts/8644458c-18a9-47f8-a6fe-f47529ad4c4f/</link>
+      <link>https://rengotaku.github.io/posts/8644458c-18a9-47f8-a6fe-f47529ad4c4f/</link>
       <pubDate>Thu, 22 Nov 2018 16:16:31 +0900</pubDate>
       
-      <guid>https://www.vegetable.blog.v41.me/posts/8644458c-18a9-47f8-a6fe-f47529ad4c4f/</guid>
+      <guid>https://rengotaku.github.io/posts/8644458c-18a9-47f8-a6fe-f47529ad4c4f/</guid>
       <description>packerのインストール $ brew install packer pluginをインストール darwin_amd64_v0.4.0 をイントール $ mkdir -p ~/.packer.d/plugins $ curl -L https://github.com/wata727/packer-post-processor-amazon-ami-management/releases/download/v0.4.0/packer-post-processor-amazon-ami-management_darwin_amd64.zip &amp;gt; /tmp/packer-post-processor-amazon-ami-management_darwin_amd64.zip $ unzip -d ~/.packer.d/plugins/ /tmp/packer-post-processor-amazon-ami-management_darwin_amd64.zip</description>
     </item>
     
