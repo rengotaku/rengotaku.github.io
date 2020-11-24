@@ -16,13 +16,9 @@ jobs:
       - run: git submodule sync && git submodule update --init
       - run: cd hugo && HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
       - run:
-          name: debug
-          command: |
-            ls $HUGO_BUILD_DIR
-      - run:
           name: test our generated HTML files
           command: |
-            htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
+            cd hugo && htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
             --empty-alt-ignore --disable-external
       - run: mv $HUGO_BUILD_DIR /tmp
 
