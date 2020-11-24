@@ -26,4 +26,4 @@ jobs:
       - deploy:
           name: add htmls to specifiy branch
           command: |
-            ./deploy
+            pwd && ls && ./deploy
