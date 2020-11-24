@@ -15,4 +15,4 @@ if [ -n "$*" ]; then
 fi
 git commit -m "$msg"
 
-git push -f origin master
+git push origin master
