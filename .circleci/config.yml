@@ -1,3 +1,4 @@
+# FIXME: At all, not working deploy, actually restruct flow
 # see@https://circleci.com/blog/automate-your-static-site-deployment-with-circleci/
 version: 2.1
 
