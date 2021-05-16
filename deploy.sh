@@ -9,6 +9,8 @@ cd hugo && HUGO_ENV=production hugo -v -d ../docs && cd -
 
 printf "\033[0;32m%s\033[0m\n" "Done hugo..."
 
+git checkout html
+
 git add .
 
 msg="rebuilding site $(date)"
@@ -17,4 +19,4 @@ if [ -n "$*" ]; then
 fi
 git commit -m "$msg"
 
-git push origin master
+git push origin html
