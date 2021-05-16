@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>activerecord | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/tags/activerecord/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/activerecord/index.xml">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="activerecord" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://rengotaku.github.io/tags/activerecord/" />
+<meta property="og:updated_time" content="2020-05-20T14:01:50+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="activerecord"/>
+<meta name="twitter:description" content=""/>
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>activerecord</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      belongs_toに指定しているが、存在しなくても登録できるようにしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>optional: true を belongs_to に設定すると、xxx_idが存在しない場合でもエラーにならない。 class Product &lt; ActiveRecord::Base belongs_to :user, optional: true end Rails 5におけるbelongs_toの挙動について...</p>
+  </section>
+  <footer class="entry-footer">March 7, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to belongs_toに指定しているが、存在しなくても登録できるようにしたい" href="https://rengotaku.github.io/posts/b3c5ee31-984a-413f-af5d-5378e3a3ec1d/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Raise以外でActiveRecordを使いたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>rails じゃなくても ActiveRecord を使う - momota.txt...</p>
+  </section>
+  <footer class="entry-footer">February 20, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to Raise以外でActiveRecordを使いたい" href="https://rengotaku.github.io/posts/2202e750-f995-4978-bd2b-318cfe9d2081/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Parallel処理の後にActiverecordで検索しようとすると通信エラーが発生する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>対応 検索を行う前に、コネクションを再接続する SomeModel.connection.reconnect! SomeModel.find(1) 事象 メッセージ ActiveRecord::StatementInvalid: Mysql2::Error: MySQL server has gone away: SELECT... 処理 Parallel.map(SomeModel.all, in_process: 4) do |some_model| # something to do... end SomeModel.find(1) # &lt;- ここで発生...</p>
+  </section>
+  <footer class="entry-footer">January 30, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to Parallel処理の後にActiverecordで検索しようとすると通信エラーが発生する" href="https://rengotaku.github.io/posts/ddddd4c5-0d7e-462f-9d64-d8096812f488/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      別のDBに接続するモデルを作成したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>修正ファイル app/models/other_db.rb app/models/other_db/o_table.rb config/other_db/database.yml db/other_db/schema.rb db/other_db/seeds.rb 修正内容 モデルの具象クラス module OtherDb class Base &lt; ActiveRecord::Base # 対応する抽象テーブルは設定しない（必ず継承させる） # databases = YAML.load(ERB.new(File.read(&#39;config/other_db/database.yml&#39;)).result) establish_connection(databases[Rails.env]) self.abstract_class = true end end モデル module...</p>
+  </section>
+  <footer class="entry-footer">January 22, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 別のDBに接続するモデルを作成したい" href="https://rengotaku.github.io/posts/da413a68-86ba-4cd4-9640-25114a03698f/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      rails5以前のバージョンでor条件を作成したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>SomeTable.where(&#34;id = ? or name = ?&#34;, id, name) rails5だと or メソッドが用意されている Rails whereで複数カラムのOR条件を作成する | 酒と涙とRubyとRailsと https://morizyun.github.io/blog/rails-active-record-where-or-dinamic/index.html...</p>
+  </section>
+  <footer class="entry-footer">January 7, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to rails5以前のバージョンでor条件を作成したい" href="https://rengotaku.github.io/posts/33b4adfd-caf3-4824-9191-e286eeba6de3/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      after_findの実行タイミング
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>結論 after_find のfunction内で他モデルをロードするような処理は（N&#43;1問題に繋がるため）入れてはいけない。 モデル class Post &lt; ApplicationRecord has_many :tag_relationships has_many :tags, through: :tag_relationships after_find :find_relate_tags # タグ...</p>
+  </section>
+  <footer class="entry-footer">December 14, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to after_findの実行タイミング" href="https://rengotaku.github.io/posts/18a1b201-414e-4a47-bf02-72e995f22fbc/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ActiveModel::Type::UnsignedIntegerが発生した場合
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>対応 検索をしただけで発生する場合、桁制限で対応。 4294967295までOKなので、バリデーションで10桁だと切り分けが難しいので、9桁まで...</p>
+  </section>
+  <footer class="entry-footer">November 28, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to ActiveModel::Type::UnsignedIntegerが発生した場合" href="https://rengotaku.github.io/posts/e310a2f1-1018-432b-8e36-cfa0489a68e9/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      モデル配列を、キーをid、値をモデルのハッシュに変換
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>searched_models =&gt; [model, model, model] searched_models.map { |models| [models.id, models] }.to_h =&gt; { 1: model, 2: model, 3: model}...</p>
+  </section>
+  <footer class="entry-footer">October 19, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to モデル配列を、キーをid、値をモデルのハッシュに変換" href="https://rengotaku.github.io/posts/821546c6-dc95-4071-b1af-9afb8d6ef924/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      関連付け (アソシエーション)のメモ
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>前提 お祝い金申請 を受けるためには、商品 を お問い合わせ しておくことが必要。 １問い合わせは１商品と紐づく。 １問い合わせすると、１お祝い金申請がで...</p>
+  </section>
+  <footer class="entry-footer">September 28, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to 関連付け (アソシエーション)のメモ" href="https://rengotaku.github.io/posts/e164dd09-2da6-416f-b7d0-f5fd9b2dbeaa/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      関連付け (アソシエーション)メモ
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Want # 1件取得 inquiry = Inquiry.find 1 rel = inquiry.object.id # 2件以上取得 object = Object.find 1 rel = object.inquiries.map{|rel| rel.id} How to 前提 物件(buken)に対して、お問い合わせ(inquiry)をする場合のリレー...</p>
+  </section>
+  <footer class="entry-footer">September 14, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to 関連付け (アソシエーション)メモ" href="https://rengotaku.github.io/posts/95707919-3da6-484a-ac90-c63fcfb94afa/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="/tags/activerecord/">« Prev Page</a>
+    <a class="next" href="/tags/activerecord/page/3/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

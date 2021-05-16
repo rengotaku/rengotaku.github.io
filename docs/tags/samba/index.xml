@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>samba on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/samba/</link>
+    <description>Recent content in samba on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Tue, 26 Jun 2018 17:01:03 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/samba/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>macでサンバにコマンドでマウントする</title>
+      <link>https://rengotaku.github.io/posts/6968c0bf-26d2-4cdf-8ea1-7d9a6aa9ed30/</link>
+      <pubDate>Tue, 26 Jun 2018 17:01:03 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/6968c0bf-26d2-4cdf-8ea1-7d9a6aa9ed30/</guid>
+      <description>マウント状況を確認する $ df Filesystem 512-blocks Used Available Capacity iused XXXX XXXX XXXX //[user]:[password]@[ip]/path/to/share 30254512 10180120 20074392 34% 5090058 10037196 34% /Volumes/path/to/share # ◀︎この行があるか？ マウントを解除する $ umount /Volumes/path/to/share マウントする $ mount_smbfs //[user]:[password]@[ip]/path/to/share share Macでター</description>
+    </item>
+    
+  </channel>
+</rss>

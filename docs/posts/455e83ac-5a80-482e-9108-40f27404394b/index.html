@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>HTTPステータスコード | Vegetable Programing</title>
+
+<meta name="keywords" content="rails, ベジプロ, プログ, プログラム" />
+<meta name="description" content="1xx Informational Status Code Status Message Symbol 100 Continue :continue 101 Switching Protocols :switching_protocols 102 Processing :processing 2xx Success Status Code Status Message Symbol 200 OK :ok 201 Created :created 202 Accepted :accepted 203 Non-Authoritative Information :non_authoritative_information 204 No Content :no_content 205 Reset Content :reset_content 206 Partial Content :partial_content 207 Multi-Status :multi_status 226 IM Used :im_used 3xx Redirection Status Code Status Message Symbol 300 Multiple Choices :multiple_choices 301 Moved Permanently">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/posts/455e83ac-5a80-482e-9108-40f27404394b/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="HTTPステータスコード" />
+<meta property="og:description" content="1xx Informational Status Code Status Message Symbol 100 Continue :continue 101 Switching Protocols :switching_protocols 102 Processing :processing 2xx Success Status Code Status Message Symbol 200 OK :ok 201 Created :created 202 Accepted :accepted 203 Non-Authoritative Information :non_authoritative_information 204 No Content :no_content 205 Reset Content :reset_content 206 Partial Content :partial_content 207 Multi-Status :multi_status 226 IM Used :im_used 3xx Redirection Status Code Status Message Symbol 300 Multiple Choices :multiple_choices 301 Moved Permanently" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rengotaku.github.io/posts/455e83ac-5a80-482e-9108-40f27404394b/" />
+<meta property="article:published_time" content="2018-10-04T15:51:00+09:00" />
+<meta property="article:modified_time" content="2018-10-04T15:51:00+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HTTPステータスコード"/>
+<meta name="twitter:description" content="1xx Informational Status Code Status Message Symbol 100 Continue :continue 101 Switching Protocols :switching_protocols 102 Processing :processing 2xx Success Status Code Status Message Symbol 200 OK :ok 201 Created :created 202 Accepted :accepted 203 Non-Authoritative Information :non_authoritative_information 204 No Content :no_content 205 Reset Content :reset_content 206 Partial Content :partial_content 207 Multi-Status :multi_status 226 IM Used :im_used 3xx Redirection Status Code Status Message Symbol 300 Multiple Choices :multiple_choices 301 Moved Permanently"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "HTTPステータスコード",
+  "name": "HTTPステータスコード",
+  "description": "1xx Informational Status Code Status Message Symbol 100 Continue :continue 101 Switching Protocols :switching_protocols 102 Processing :processing 2xx Success Status Code Status …",
+  "keywords": [
+    "rails", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "1xx Informational    Status Code Status Message Symbol     100 Continue :continue   101 Switching Protocols :switching_protocols   102 Processing :processing    2xx Success    Status Code Status Message Symbol     200 OK :ok   201 Created :created   202 Accepted :accepted   203 Non-Authoritative Information :non_authoritative_information   204 No Content :no_content   205 Reset Content :reset_content   206 Partial Content :partial_content   207 Multi-Status :multi_status   226 IM Used :im_used    3xx Redirection    Status Code Status Message Symbol     300 Multiple Choices :multiple_choices   301 Moved Permanently :moved_permanently   302 Found :found   303 See Other :see_other   304 Not Modified :not_modified   305 Use Proxy :use_proxy   307 Temporary Redirect :temporary_redirect    4xx Client Error    Status Code Status Message Symbol     400 Bad Request :bad_request   401 Unauthorized :unauthorized   402 Payment Required :payment_required   403 Forbidden :forbidden   404 Not Found :not_found   405 Method Not Allowed :method_not_allowed   406 Not Acceptable :not_acceptable   407 Proxy Authentication Required :proxy_authentication_required   408 Request Timeout :request_timeout   409 Conflict :conflict   410 Gone :gone   411 Length Required :length_required   412 Precondition Failed :precondition_failed   413 Request Entity Too Large :request_entity_too_large   414 Request-URI Too Long :request_uri_too_long   415 Unsupported Media Type :unsupported_media_type   416 Requested Range Not Satisfiable :requested_range_not_satisfiable   417 Expectation Failed :expectation_failed   422 Unprocessable Entity :unprocessable_entity   423 Locked :locked   424 Failed Dependency :failed_dependency   426 Upgrade Required :upgrade_required    5xx Server Error    Status Code Status Message Symbol     500 Internal Server Error :internal_server_error   501 Not Implemented :not_implemented   502 Bad Gateway :bad_gateway   503 Service Unavailable :service_unavailable   504 Gateway Timeout :gateway_timeout   505 HTTP Version Not Supported :http_version_not_supported   507 Insufficient Storage :insufficient_storage   510 Not Extended :not_extended    List of Rails Status Code Symbols - Bill Patrianakos\n",
+  "wordCount" : "241",
+  "inLanguage": "en",
+  "datePublished": "2018-10-04T15:51:00+09:00",
+  "dateModified": "2018-10-04T15:51:00+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rengotaku.github.io/posts/455e83ac-5a80-482e-9108-40f27404394b/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rengotaku.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      HTTPステータスコード
+    </h1>
+    <div class="post-meta">October 4, 2018
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="1xx-informational">1xx Informational<a hidden class="anchor" aria-hidden="true" href="#1xx-informational">#</a></h1>
+<table>
+<thead>
+<tr>
+<th align="left">Status Code</th>
+<th align="left">Status Message</th>
+<th align="left">Symbol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">100</td>
+<td align="left">Continue</td>
+<td align="left">:continue</td>
+</tr>
+<tr>
+<td align="left">101</td>
+<td align="left">Switching Protocols</td>
+<td align="left">:switching_protocols</td>
+</tr>
+<tr>
+<td align="left">102</td>
+<td align="left">Processing</td>
+<td align="left">:processing</td>
+</tr>
+</tbody>
+</table>
+<h1 id="2xx-success">2xx Success<a hidden class="anchor" aria-hidden="true" href="#2xx-success">#</a></h1>
+<table>
+<thead>
+<tr>
+<th align="left">Status Code</th>
+<th align="left">Status Message</th>
+<th align="left">Symbol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">200</td>
+<td align="left">OK</td>
+<td align="left">:ok</td>
+</tr>
+<tr>
+<td align="left">201</td>
+<td align="left">Created</td>
+<td align="left">:created</td>
+</tr>
+<tr>
+<td align="left">202</td>
+<td align="left">Accepted</td>
+<td align="left">:accepted</td>
+</tr>
+<tr>
+<td align="left">203</td>
+<td align="left">Non-Authoritative Information</td>
+<td align="left">:non_authoritative_information</td>
+</tr>
+<tr>
+<td align="left">204</td>
+<td align="left">No Content</td>
+<td align="left">:no_content</td>
+</tr>
+<tr>
+<td align="left">205</td>
+<td align="left">Reset Content</td>
+<td align="left">:reset_content</td>
+</tr>
+<tr>
+<td align="left">206</td>
+<td align="left">Partial Content</td>
+<td align="left">:partial_content</td>
+</tr>
+<tr>
+<td align="left">207</td>
+<td align="left">Multi-Status</td>
+<td align="left">:multi_status</td>
+</tr>
+<tr>
+<td align="left">226</td>
+<td align="left">IM Used</td>
+<td align="left">:im_used</td>
+</tr>
+</tbody>
+</table>
+<h1 id="3xx-redirection">3xx Redirection<a hidden class="anchor" aria-hidden="true" href="#3xx-redirection">#</a></h1>
+<table>
+<thead>
+<tr>
+<th align="left">Status Code</th>
+<th align="left">Status Message</th>
+<th align="left">Symbol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">300</td>
+<td align="left">Multiple Choices</td>
+<td align="left">:multiple_choices</td>
+</tr>
+<tr>
+<td align="left">301</td>
+<td align="left">Moved Permanently</td>
+<td align="left">:moved_permanently</td>
+</tr>
+<tr>
+<td align="left">302</td>
+<td align="left">Found</td>
+<td align="left">:found</td>
+</tr>
+<tr>
+<td align="left">303</td>
+<td align="left">See Other</td>
+<td align="left">:see_other</td>
+</tr>
+<tr>
+<td align="left">304</td>
+<td align="left">Not Modified</td>
+<td align="left">:not_modified</td>
+</tr>
+<tr>
+<td align="left">305</td>
+<td align="left">Use Proxy</td>
+<td align="left">:use_proxy</td>
+</tr>
+<tr>
+<td align="left">307</td>
+<td align="left">Temporary Redirect</td>
+<td align="left">:temporary_redirect</td>
+</tr>
+</tbody>
+</table>
+<h1 id="4xx-client-error">4xx Client Error<a hidden class="anchor" aria-hidden="true" href="#4xx-client-error">#</a></h1>
+<table>
+<thead>
+<tr>
+<th align="left">Status Code</th>
+<th align="left">Status Message</th>
+<th align="left">Symbol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">400</td>
+<td align="left">Bad Request</td>
+<td align="left">:bad_request</td>
+</tr>
+<tr>
+<td align="left">401</td>
+<td align="left">Unauthorized</td>
+<td align="left">:unauthorized</td>
+</tr>
+<tr>
+<td align="left">402</td>
+<td align="left">Payment Required</td>
+<td align="left">:payment_required</td>
+</tr>
+<tr>
+<td align="left">403</td>
+<td align="left">Forbidden</td>
+<td align="left">:forbidden</td>
+</tr>
+<tr>
+<td align="left">404</td>
+<td align="left">Not Found</td>
+<td align="left">:not_found</td>
+</tr>
+<tr>
+<td align="left">405</td>
+<td align="left">Method Not Allowed</td>
+<td align="left">:method_not_allowed</td>
+</tr>
+<tr>
+<td align="left">406</td>
+<td align="left">Not Acceptable</td>
+<td align="left">:not_acceptable</td>
+</tr>
+<tr>
+<td align="left">407</td>
+<td align="left">Proxy Authentication Required</td>
+<td align="left">:proxy_authentication_required</td>
+</tr>
+<tr>
+<td align="left">408</td>
+<td align="left">Request Timeout</td>
+<td align="left">:request_timeout</td>
+</tr>
+<tr>
+<td align="left">409</td>
+<td align="left">Conflict</td>
+<td align="left">:conflict</td>
+</tr>
+<tr>
+<td align="left">410</td>
+<td align="left">Gone</td>
+<td align="left">:gone</td>
+</tr>
+<tr>
+<td align="left">411</td>
+<td align="left">Length Required</td>
+<td align="left">:length_required</td>
+</tr>
+<tr>
+<td align="left">412</td>
+<td align="left">Precondition Failed</td>
+<td align="left">:precondition_failed</td>
+</tr>
+<tr>
+<td align="left">413</td>
+<td align="left">Request Entity Too Large</td>
+<td align="left">:request_entity_too_large</td>
+</tr>
+<tr>
+<td align="left">414</td>
+<td align="left">Request-URI Too Long</td>
+<td align="left">:request_uri_too_long</td>
+</tr>
+<tr>
+<td align="left">415</td>
+<td align="left">Unsupported Media Type</td>
+<td align="left">:unsupported_media_type</td>
+</tr>
+<tr>
+<td align="left">416</td>
+<td align="left">Requested Range Not Satisfiable</td>
+<td align="left">:requested_range_not_satisfiable</td>
+</tr>
+<tr>
+<td align="left">417</td>
+<td align="left">Expectation Failed</td>
+<td align="left">:expectation_failed</td>
+</tr>
+<tr>
+<td align="left">422</td>
+<td align="left">Unprocessable Entity</td>
+<td align="left">:unprocessable_entity</td>
+</tr>
+<tr>
+<td align="left">423</td>
+<td align="left">Locked</td>
+<td align="left">:locked</td>
+</tr>
+<tr>
+<td align="left">424</td>
+<td align="left">Failed Dependency</td>
+<td align="left">:failed_dependency</td>
+</tr>
+<tr>
+<td align="left">426</td>
+<td align="left">Upgrade Required</td>
+<td align="left">:upgrade_required</td>
+</tr>
+</tbody>
+</table>
+<h1 id="5xx-server-error">5xx Server Error<a hidden class="anchor" aria-hidden="true" href="#5xx-server-error">#</a></h1>
+<table>
+<thead>
+<tr>
+<th align="left">Status Code</th>
+<th align="left">Status Message</th>
+<th align="left">Symbol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">500</td>
+<td align="left">Internal Server Error</td>
+<td align="left">:internal_server_error</td>
+</tr>
+<tr>
+<td align="left">501</td>
+<td align="left">Not Implemented</td>
+<td align="left">:not_implemented</td>
+</tr>
+<tr>
+<td align="left">502</td>
+<td align="left">Bad Gateway</td>
+<td align="left">:bad_gateway</td>
+</tr>
+<tr>
+<td align="left">503</td>
+<td align="left">Service Unavailable</td>
+<td align="left">:service_unavailable</td>
+</tr>
+<tr>
+<td align="left">504</td>
+<td align="left">Gateway Timeout</td>
+<td align="left">:gateway_timeout</td>
+</tr>
+<tr>
+<td align="left">505</td>
+<td align="left">HTTP Version Not Supported</td>
+<td align="left">:http_version_not_supported</td>
+</tr>
+<tr>
+<td align="left">507</td>
+<td align="left">Insufficient Storage</td>
+<td align="left">:insufficient_storage</td>
+</tr>
+<tr>
+<td align="left">510</td>
+<td align="left">Not Extended</td>
+<td align="left">:not_extended</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://billpatrianakos.me/blog/2013/10/13/list-of-rails-status-code-symbols/">List of Rails Status Code Symbols - Bill Patrianakos</a></p>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rengotaku.github.io/tags/rails">rails</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

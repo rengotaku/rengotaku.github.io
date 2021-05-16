@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>golangでランダム値を算出 | Vegetable Programing</title>
+
+<meta name="keywords" content="go, golang, ベジプロ, プログ, プログラム" />
+<meta name="description" content="解決 import ( &#34;math/rand&#34; &#34;time&#34; ) const charset = &#34;abcdefghijklmnopqrstuvwxyz&#34; &#43; &#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&#34; var seededRand *rand.Rand = rand.New( rand.NewSource(time.Now().UnixNano())) func StringWithCharset(length int, charset string) string { b := make([]byte, length) for i := range b { b[i] = charset[seededRand.Intn(len(charset))] } return string(b) } func String(length int) string { return StringWithCharset(length, charset) } Creating Random Strings in Go - Calhoun.io 事象 Rubyの関数のよ">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/posts/d5296458-924b-41f2-90fc-346a3840025d/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="golangでランダム値を算出" />
+<meta property="og:description" content="解決 import ( &#34;math/rand&#34; &#34;time&#34; ) const charset = &#34;abcdefghijklmnopqrstuvwxyz&#34; &#43; &#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&#34; var seededRand *rand.Rand = rand.New( rand.NewSource(time.Now().UnixNano())) func StringWithCharset(length int, charset string) string { b := make([]byte, length) for i := range b { b[i] = charset[seededRand.Intn(len(charset))] } return string(b) } func String(length int) string { return StringWithCharset(length, charset) } Creating Random Strings in Go - Calhoun.io 事象 Rubyの関数のよ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rengotaku.github.io/posts/d5296458-924b-41f2-90fc-346a3840025d/" />
+<meta property="article:published_time" content="2020-04-27T18:28:34+09:00" />
+<meta property="article:modified_time" content="2020-04-27T18:28:46+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="golangでランダム値を算出"/>
+<meta name="twitter:description" content="解決 import ( &#34;math/rand&#34; &#34;time&#34; ) const charset = &#34;abcdefghijklmnopqrstuvwxyz&#34; &#43; &#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&#34; var seededRand *rand.Rand = rand.New( rand.NewSource(time.Now().UnixNano())) func StringWithCharset(length int, charset string) string { b := make([]byte, length) for i := range b { b[i] = charset[seededRand.Intn(len(charset))] } return string(b) } func String(length int) string { return StringWithCharset(length, charset) } Creating Random Strings in Go - Calhoun.io 事象 Rubyの関数のよ"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "golangでランダム値を算出",
+  "name": "golangでランダム値を算出",
+  "description": "解決 import ( \u0026amp;#34;math/rand\u0026amp;#34; \u0026amp;#34;time\u0026amp;#34; ) const charset = \u0026amp;#34;abcdefghijklmnopqrstuvwxyz\u0026amp;#34; + \u0026amp;#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\u0026amp;#34; var seededRand *rand.Rand = …",
+  "keywords": [
+    "go", "golang", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "解決 import (\r\"math/rand\"\r\"time\"\r)\rconst charset = \"abcdefghijklmnopqrstuvwxyz\" +\r\"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\"\rvar seededRand *rand.Rand = rand.New(\rrand.NewSource(time.Now().UnixNano()))\rfunc StringWithCharset(length int, charset string) string {\rb := make([]byte, length)\rfor i := range b {\rb[i] = charset[seededRand.Intn(len(charset))]\r}\rreturn string(b)\r}\rfunc String(length int) string {\rreturn StringWithCharset(length, charset)\r}\rCreating Random Strings in Go - Calhoun.io\n事象 Rubyの関数のようなランダム値をgoで算出したい。\np SecureRandom.hex(10) #= \"52750b30ffbc7de3b362\"\r module SecureRandom (Ruby 2.7.0 リファレンスマニュアル)\n",
+  "wordCount" : "107",
+  "inLanguage": "en",
+  "datePublished": "2020-04-27T18:28:34+09:00",
+  "dateModified": "2020-04-27T18:28:46+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rengotaku.github.io/posts/d5296458-924b-41f2-90fc-346a3840025d/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rengotaku.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      golangでランダム値を算出
+    </h1>
+    <div class="post-meta">April 27, 2020
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="解決">解決<a hidden class="anchor" aria-hidden="true" href="#解決">#</a></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">import</span> (
+  <span style="color:#e6db74">&#34;math/rand&#34;</span>
+  <span style="color:#e6db74">&#34;time&#34;</span>
+)
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">charset</span> = <span style="color:#e6db74">&#34;abcdefghijklmnopqrstuvwxyz&#34;</span> <span style="color:#f92672">+</span>
+  <span style="color:#e6db74">&#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&#34;</span>
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">seededRand</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">rand</span>.<span style="color:#a6e22e">Rand</span> = <span style="color:#a6e22e">rand</span>.<span style="color:#a6e22e">New</span>(
+  <span style="color:#a6e22e">rand</span>.<span style="color:#a6e22e">NewSource</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Now</span>().<span style="color:#a6e22e">UnixNano</span>()))
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">StringWithCharset</span>(<span style="color:#a6e22e">length</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">charset</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
+  <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> make([]<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">length</span>)
+  <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">b</span> {
+    <span style="color:#a6e22e">b</span>[<span style="color:#a6e22e">i</span>] = <span style="color:#a6e22e">charset</span>[<span style="color:#a6e22e">seededRand</span>.<span style="color:#a6e22e">Intn</span>(len(<span style="color:#a6e22e">charset</span>))]
+  }
+  <span style="color:#66d9ef">return</span> string(<span style="color:#a6e22e">b</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">String</span>(<span style="color:#a6e22e">length</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">string</span> {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">StringWithCharset</span>(<span style="color:#a6e22e">length</span>, <span style="color:#a6e22e">charset</span>)
+}
+</code></pre></div><p><a href="https://www.calhoun.io/creating-random-strings-in-go/">Creating Random Strings in Go - Calhoun.io</a></p>
+<h1 id="事象">事象<a hidden class="anchor" aria-hidden="true" href="#事象">#</a></h1>
+<p>Rubyの関数のようなランダム値をgoで算出したい。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">p <span style="color:#66d9ef">SecureRandom</span><span style="color:#f92672">.</span>hex(<span style="color:#ae81ff">10</span>) <span style="color:#75715e">#=&gt; &#34;52750b30ffbc7de3b362&#34;</span>
+</code></pre></div><p><a href="https://docs.ruby-lang.org/ja/latest/class/SecureRandom.html">module SecureRandom (Ruby 2.7.0 リファレンスマニュアル)</a></p>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rengotaku.github.io/tags/go">go</a></li>
+      <li><a href="https://rengotaku.github.io/tags/golang">golang</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

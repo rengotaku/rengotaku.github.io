@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>td-agent on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/td-agent/</link>
+    <description>Recent content in td-agent on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Mon, 10 Feb 2020 11:27:58 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/td-agent/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>td-agentをdockerで動かす</title>
+      <link>https://rengotaku.github.io/posts/2b3ece27-3f34-4f13-9edf-3881a7821751/</link>
+      <pubDate>Mon, 10 Feb 2020 11:27:58 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/2b3ece27-3f34-4f13-9edf-3881a7821751/</guid>
+      <description>構成 td-agent/ ├── docker-compose.yml ├── Dockerfile ├── test.log ├── conf │ ├── app.conf │ └── td-agent.conf └── install-redhat-td-agent2.5.sh 設定 docker FROM drecom/centos-ruby:2.6.5 ADD install-redhat-td-agent2.5.sh /tmp/ RUN sh /tmp/install-redhat-td-agent2.5.sh RUN td-agent-gem install \ fluent-plugin-multiprocess \ fluent-plugin-forest \ fluent-plugin-rewrite-tag-filter RUN /etc/init.d/td-agent start CMD [&amp;quot;td-agent&amp;quot;] version: &amp;ldquo;3&amp;rdquo; services: minio: image: minio/minio:RELEASE.2020-01-25T02-50-51Z volumes: - minio_volume:/data ports: - &amp;ldquo;9090:9000&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>0.12系のtd-agentをインストールしたい</title>
+      <link>https://rengotaku.github.io/posts/fda62db1-e01b-4b3c-8020-e9d418601235/</link>
+      <pubDate>Thu, 06 Feb 2020 19:28:19 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/fda62db1-e01b-4b3c-8020-e9d418601235/</guid>
+      <description>sudo sh &amp;lt;&amp;lt;SCRIPT # add GPG key rpm --import https://packages.treasuredata.com/GPG-KEY-td-agent # add treasure data repository to yum cat &amp;gt;/etc/yum.repos.d/td.repo &amp;lt;&amp;lt;&#39;EOF&#39;; [treasuredata] name=TreasureData baseurl=http://packages.treasuredata.com/2.5/redhat/\$releasever/\$basearch gpgcheck=1 gpgkey=https://packages.treasuredata.com/GPG-KEY-td-agent EOF # update your sources yum check-update # install the toolbelt yes | yum install -y td-agent SCRIPT install-redhat-td-agent2.5.sh Download | Fluentd</description>
+    </item>
+    
+    <item>
+      <title>td-agentにaws-fluent-plugin-kinesisをインストールしたが起動できない</title>
+      <link>https://rengotaku.github.io/posts/02006c4c-ed23-4a52-a550-021451b85d43/</link>
+      <pubDate>Fri, 12 Jul 2019 10:16:06 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/02006c4c-ed23-4a52-a550-021451b85d43/</guid>
+      <description>事象 aws-s3のプラグインでエラーが発生している。 less /var/log/td-agent/td-agent.log failed to configure/start sub output s3: Unable to activate fluent-plugin-s3-0.8.5, because aws-sdk- 2.1.36 conflicts with aws-sdk (&amp;lt; 3, &amp;gt;= 2.3.22) 解決 下記の通りにgemのインストールを行う。</description>
+    </item>
+    
+    <item>
+      <title>td-agentを扱う際のtips集</title>
+      <link>https://rengotaku.github.io/posts/36fd1b3f-a21c-4eec-947d-876ba3cc9f47/</link>
+      <pubDate>Mon, 10 Jun 2019 18:25:11 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/36fd1b3f-a21c-4eec-947d-876ba3cc9f47/</guid>
+      <description>コマンドより通知する /opt/td-agent/embedded/bin/fluent-cat を参照 fluentd最低限のメモ - Qiita バッファーを強制出力（flush） sudo kill -SIGUSR1 `cat /var/run/td-agent/td-agent.pid` td-agentのbufferをflu</description>
+    </item>
+    
+  </channel>
+</rss>

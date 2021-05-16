@@ -1,0 +1,41 @@
+# FIXME: At all, not working deploy, actually restruct flow
+# see@https://circleci.com/blog/automate-your-static-site-deployment-with-circleci/
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cibuilds/hugo:latest
+    working_directory: ~/work
+    environment:
+      HUGO_BUILD_DIR: public
+    steps:
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run: git config --global user.name "circle ci"
+      - run: git config --global user.email "taku.kisi.1989+circleci@gmail.com"
+      - run: sudo apt-get update && sudo apt-get install -y git
+      - run: git submodule sync && git submodule update --init
+      - run: cd hugo && HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+      # FIXME: can't solve for garbled charactor
+      # - run:
+      #     name: test our generated HTML files
+      #     command: |
+      #       cd hugo && htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
+      #       --empty-alt-ignore --disable-external
+      - run: cd ~/work/hugo && mv $HUGO_BUILD_DIR /tmp
+
+      - deploy:
+          name: add htmls to specifiy branch
+          command: |
+            pwd && ls && ./deploy.sh
+
+workflows:
+  build-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
+ 

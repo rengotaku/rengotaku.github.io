@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>haproxy on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/haproxy/</link>
+    <description>Recent content in haproxy on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 13 Dec 2018 19:22:43 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/haproxy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HAProxyで参考になるサイト</title>
+      <link>https://rengotaku.github.io/posts/224e9fda-30de-4b15-a406-4dd5fe50e847/</link>
+      <pubDate>Thu, 13 Dec 2018 19:22:43 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/224e9fda-30de-4b15-a406-4dd5fe50e847/</guid>
+      <description>How To Use HAProxy to Set Up HTTP Load Balancing on an Ubuntu VPS | DigitalOcean HAProxyを使ってみた - Qiita HAProxy: hdr_dom(host) with redirects - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>socketの接続先を確認</title>
+      <link>https://rengotaku.github.io/posts/0a52cd33-2cd9-42a4-88e1-73e169654ee4/</link>
+      <pubDate>Tue, 29 May 2018 14:59:55 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/0a52cd33-2cd9-42a4-88e1-73e169654ee4/</guid>
+      <description>コマンド # haproxyの状態確認 $ echo &amp;quot;show info&amp;quot; | sudo socat stdio /var/lib/haproxy/stats # haproxyの状態確認 $ echo &amp;quot;show stat&amp;quot; | sudo socat stdio /var/lib/haproxy/stats # セッション情報の確認 $ echo &amp;quot;show sess&amp;quot; | sudo socat stdio /var/lib/haproxy/stats # サ</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>railsからmysqlにアクセスできない | Vegetable Programing</title>
+
+<meta name="keywords" content="rails, docker, docker-compose, mysql, ベジプロ, プログ, プログラム" />
+<meta name="description" content="解決 /sbin/ip route|awk &#39;/default/ { print $3 }&#39; を実行し、取得したIPを database.ymlの host に記載する。 $ docker-compose exec [container name of rails] sh # /sbin/ip route|awk &#39;/default/ { print $3 }&#39; 192.168.112.1 How to get the IP address of the docker host from inside">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/posts/9bfb2b48-5b6a-4dc8-8082-361faca014f4/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="railsからmysqlにアクセスできない" />
+<meta property="og:description" content="解決 /sbin/ip route|awk &#39;/default/ { print $3 }&#39; を実行し、取得したIPを database.ymlの host に記載する。 $ docker-compose exec [container name of rails] sh # /sbin/ip route|awk &#39;/default/ { print $3 }&#39; 192.168.112.1 How to get the IP address of the docker host from inside" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rengotaku.github.io/posts/9bfb2b48-5b6a-4dc8-8082-361faca014f4/" />
+<meta property="article:published_time" content="2019-08-15T11:53:50+09:00" />
+<meta property="article:modified_time" content="2019-08-15T11:54:22+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="railsからmysqlにアクセスできない"/>
+<meta name="twitter:description" content="解決 /sbin/ip route|awk &#39;/default/ { print $3 }&#39; を実行し、取得したIPを database.ymlの host に記載する。 $ docker-compose exec [container name of rails] sh # /sbin/ip route|awk &#39;/default/ { print $3 }&#39; 192.168.112.1 How to get the IP address of the docker host from inside"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "railsからmysqlにアクセスできない",
+  "name": "railsからmysqlにアクセスできない",
+  "description": "解決 /sbin/ip route|awk \u0026#39;/default/ { print $3 }\u0026#39; を実行し、取得したIPを database.ymlの host に記載する。 $ docker-compose exec [container name of rails] sh # /sbin/ip route|awk \u0026#39;/default/ { print $3 …",
+  "keywords": [
+    "rails", "docker", "docker-compose", "mysql", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "解決 /sbin/ip route|awk '/default/ { print $3 }' を実行し、取得したIPを database.ymlの host に記載する。\n$ docker-compose exec [container name of rails] sh\r# /sbin/ip route|awk '/default/ { print $3 }'\r192.168.112.1\r How to get the IP address of the docker host from inside a docker container - Stack Overflow\n 事象 rails test を実行しようとすると、（別コンテナの）mysqlに接続できないエラーが発生する。\n/usr/local/bundle/gems/mysql2-0.4.10/lib/mysql2/client.rb:89:in `connect': Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2 \"No such file or directory\") (Mysql2::Error)\rdefault: \u0026default\radapter: mysql2\rencoding: utf8\rpool: 5\rusername: root\rpassword: pass\rhost: 'DOCKER_HOST'].to_s[/\\d+\\.\\d+\\.\\d+\\.\\d+/] || \"localhost\" %\r# test ---------------------\r test_default: \u0026test_default\r: *default\rdatabase: test\rtest_read:\r: *test_default\rtest_write: \u0026test_write\r: *test_default\rtest:\r: *test_write\r調査 docker containerからリモートのMySQL dbに接続します - コードログ にリモートのMySQLに接続する方法が記載されている。\nローカルに接続するつもりで検証していたが、結果、別コンテナのmysqlに接続できた（？？？）\ntips Railsでデータベースの内容を確認する方法 - Qiita rails dbconsole のコマンドで、rails経由でDB各種のクライアントを使用できる\n# RAILS_ENV=test rails dbconsole\rReading table information for completion of table and column names\rYou can turn off this feature to get a quicker startup with -A\rWelcome to the MariaDB monitor. Commands end with ; or \\g.\rYour MySQL connection id is 16\rServer version: x.x.x-log MySQL Community Server (GPL)\rCopyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.\rType 'help;' or '\\h' for help. Type '\\c' to clear the current input statement.\rMySQL [door_test]\r",
+  "wordCount" : "422",
+  "inLanguage": "en",
+  "datePublished": "2019-08-15T11:53:50+09:00",
+  "dateModified": "2019-08-15T11:54:22+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rengotaku.github.io/posts/9bfb2b48-5b6a-4dc8-8082-361faca014f4/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rengotaku.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      railsからmysqlにアクセスできない
+    </h1>
+    <div class="post-meta">August 15, 2019
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="解決">解決<a hidden class="anchor" aria-hidden="true" href="#解決">#</a></h1>
+<p><code>/sbin/ip route|awk '/default/ { print $3 }'</code> を実行し、取得したIPを database.ymlの <code>host</code> に記載する。</p>
+<pre><code>$ docker-compose exec [container name of rails] sh
+# /sbin/ip route|awk '/default/ { print $3 }'
+192.168.112.1
+</code></pre><blockquote>
+<p><a href="https://stackoverflow.com/questions/22944631/how-to-get-the-ip-address-of-the-docker-host-from-inside-a-docker-container/24716645#24716645">How to get the IP address of the docker host from inside a docker container - Stack Overflow</a></p>
+</blockquote>
+<h1 id="事象">事象<a hidden class="anchor" aria-hidden="true" href="#事象">#</a></h1>
+<p><code>rails test</code> を実行しようとすると、（別コンテナの）mysqlに接続できないエラーが発生する。</p>
+<pre><code>/usr/local/bundle/gems/mysql2-0.4.10/lib/mysql2/client.rb:89:in `connect': Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2 &quot;No such file or directory&quot;) (Mysql2::Error)
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml:database.yml" data-lang="yaml:database.yml"><span style="color:#66d9ef">default</span>: <span style="color:#75715e">&amp;default</span>
+  <span style="color:#66d9ef">adapter</span>: mysql2
+  <span style="color:#66d9ef">encoding</span>: utf8
+  <span style="color:#66d9ef">pool</span>: <span style="color:#ae81ff">5</span>
+  <span style="color:#66d9ef">username</span>: root
+  <span style="color:#66d9ef">password</span>: pass
+  <span style="color:#66d9ef">host</span>: &lt;%= ENV[<span style="color:#e6db74">&#39;DOCKER_HOST&#39;</span>].to_s[/\d+\.\d+\.\d+\.\d+/] || <span style="color:#e6db74">&#34;localhost&#34;</span> %<span style="color:#e6db74">&gt;
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"># test ---------------------</span>
+<span style="color:#66d9ef">test_default</span>: <span style="color:#75715e">&amp;test_default</span>
+  <span style="color:#66d9ef">&lt;&lt;</span>: <span style="color:#75715e">*default</span>
+  <span style="color:#66d9ef">database</span>: test
+
+test_read:
+  <span style="color:#66d9ef">&lt;&lt;</span>: <span style="color:#75715e">*test_default</span>
+
+<span style="color:#66d9ef">test_write</span>: <span style="color:#75715e">&amp;test_write</span>
+  <span style="color:#66d9ef">&lt;&lt;</span>: <span style="color:#75715e">*test_default</span>
+
+test:
+  <span style="color:#66d9ef">&lt;&lt;</span>: <span style="color:#75715e">*test_write</span>
+</code></pre></div><h1 id="調査">調査<a hidden class="anchor" aria-hidden="true" href="#調査">#</a></h1>
+<p><a href="https://codeday.me/jp/qa/20190416/639333.html">docker containerからリモートのMySQL dbに接続します - コードログ</a>
+にリモートのMySQLに接続する方法が記載されている。</p>
+<p>ローカルに接続するつもりで検証していたが、結果、別コンテナのmysqlに接続できた（？？？）</p>
+<h1 id="tips">tips<a hidden class="anchor" aria-hidden="true" href="#tips">#</a></h1>
+<p><a href="https://qiita.com/kouuuki/items/b6e1a4318d8feee24c9f">Railsでデータベースの内容を確認する方法 - Qiita</a>
+<code>rails dbconsole</code> のコマンドで、rails経由でDB各種のクライアントを使用できる</p>
+<pre><code># RAILS_ENV=test rails dbconsole
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 16
+Server version: x.x.x-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [door_test]&gt;
+</code></pre>
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rengotaku.github.io/tags/rails">rails</a></li>
+      <li><a href="https://rengotaku.github.io/tags/docker">docker</a></li>
+      <li><a href="https://rengotaku.github.io/tags/docker-compose">docker-compose</a></li>
+      <li><a href="https://rengotaku.github.io/tags/mysql">mysql</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

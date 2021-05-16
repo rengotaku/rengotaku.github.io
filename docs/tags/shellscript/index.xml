@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shellscript on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/shellscript/</link>
+    <description>Recent content in shellscript on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 29 Jul 2020 19:37:09 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/shellscript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sentryへの通知があったあたりのログをcloudwatchから取得する</title>
+      <link>https://rengotaku.github.io/posts/d78e5591-d64e-4b11-9410-4342922d7728/</link>
+      <pubDate>Wed, 29 Jul 2020 19:37:09 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/d78e5591-d64e-4b11-9410-4342922d7728/</guid>
+      <description>ソース ※awslogsが4/11/2020 04:50の形式で検索が上手く行かない。 function detecte_log { EXPAND_SECONDS=10 if [ &amp;#34;$#&amp;#34; -ne 1 ]; then echo &amp;#34;Need time such as &amp;#39;July 29 2020 17:24:07 JST&amp;#39;&amp;#34; exit 1 fi occured_time=$1 start_time=`date +&amp;#34;%d/%m/%Y %T&amp;#34; --utc</description>
+    </item>
+    
+    <item>
+      <title>macで昨日日付を取得したい</title>
+      <link>https://rengotaku.github.io/posts/5ec56dc2-9091-4aa2-ae9e-f214aba36901/</link>
+      <pubDate>Fri, 08 May 2020 09:44:57 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/5ec56dc2-9091-4aa2-ae9e-f214aba36901/</guid>
+      <description>解決 date -v-1d +%F を使用する Get yesterday&amp;rsquo;s date in bash on Linux, DST-safe - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>bashの特異な書き方集</title>
+      <link>https://rengotaku.github.io/posts/0481bf97-bb64-404e-ade8-1073e7cbeee5/</link>
+      <pubDate>Thu, 20 Feb 2020 09:24:01 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/0481bf97-bb64-404e-ade8-1073e7cbeee5/</guid>
+      <description>ファイル作成 touch の代わりに &amp;gt; を使用する。 $ cd lib &amp;amp;&amp;amp; &amp;gt; my_gem.rb Create a Simple Ruby Gem - The Startup - Medium 標準出力に文字を渡す echo の代わりに &amp;lt;&amp;lt;&amp;lt; を使用する。 $ cat &amp;lt;&amp;lt;&amp;lt; &amp;#39;hi there&amp;#39; 理解できていな</description>
+    </item>
+    
+    <item>
+      <title>dockerのリモートのタグ一覧をコマンドで確認したい</title>
+      <link>https://rengotaku.github.io/posts/89d6aee3-eaa6-4489-855a-a9e6af743728/</link>
+      <pubDate>Tue, 04 Feb 2020 19:57:07 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/89d6aee3-eaa6-4489-855a-a9e6af743728/</guid>
+      <description>#!/bin/bash # https://stackoverflow.com/questions/28320134/how-can-i-list-all-tags-for-a-docker-image-on-a-remote-registry if [ $# -lt 1 ] then cat &amp;lt;&amp;lt; HELP dockertags -- list all tags for a Docker image on a remote registry. EXAMPLE: - list all tags for ubuntu: dockertags ubuntu - list all php tags containing apache: dockertags php apache HELP exit 1 fi image=&amp;quot;$1&amp;quot; tags=`curl -L -s &amp;quot;https://registry.hub.docker.com/v2/repositories/library/${image}/tags?page_size=1024&amp;quot; | jq -r &#39;.&amp;quot;results&amp;quot;[][&amp;quot;name&amp;quot;]&#39;` if [ -n &amp;quot;$2&amp;quot; ] then tags=` echo &amp;quot;${tags}&amp;quot; | grep &amp;quot;$2&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>.profile、.bashrc、.bash_profileの違い</title>
+      <link>https://rengotaku.github.io/posts/1d962586-8b1d-49d1-8f4f-dddea4e1db71/</link>
+      <pubDate>Tue, 21 Jan 2020 11:14:18 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/1d962586-8b1d-49d1-8f4f-dddea4e1db71/</guid>
+      <description>.profile 環境変数など # 環境変数の設定 export PATH=&amp;quot;/usr/local/opt/mysql@5.7/bin:$PATH&amp;quot; export PATH=&amp;quot;/usr/local/opt/openssl/bin:$PATH&amp;quot; export PATH=&amp;quot;~/Library/Python/3.7/bin:$PATH&amp;quot; export PATH=&amp;quot;$HOME/.nodenv/bin:$PATH&amp;quot; .bashrc エイリアス、シェルオプション、プロンプト設定 # エイリアスの設定 alias ll=&amp;#39;ls -l&amp;#39; alias relogin=&amp;#39;exec $SHELL -l&amp;#39; .bash_profile 標準出力が発生</description>
+    </item>
+    
+    <item>
+      <title>/bin/bashのオプションを設定</title>
+      <link>https://rengotaku.github.io/posts/e5251869-1fec-4b07-921d-0ec288658ed3/</link>
+      <pubDate>Tue, 07 Jan 2020 11:34:52 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/e5251869-1fec-4b07-921d-0ec288658ed3/</guid>
+      <description>シェルスクリプトのbashの箇所にオプションを指定してデバッグなどをし易くする方法 #!/bin/bash -xe # -x シェルスクリプト内で実際に実行されたコマンドを表示</description>
+    </item>
+    
+    <item>
+      <title>ファイルを一行ずつ処理</title>
+      <link>https://rengotaku.github.io/posts/fcb9faca-fcbe-4547-93c4-639f5877b4a4/</link>
+      <pubDate>Tue, 24 Dec 2019 13:41:52 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/fcb9faca-fcbe-4547-93c4-639f5877b4a4/</guid>
+      <description>read を使用する。 $ cat list.txt line 1 line 2 line 3 END $ while read LINE; do echo ${LINE}; done &amp;lt; ./list.txt line 1 line 2 line 3 END</description>
+    </item>
+    
+    <item>
+      <title>sudoで実行するスクリプトで環境変数が設定できない</title>
+      <link>https://rengotaku.github.io/posts/5eab3150-29da-4b54-aeee-e92025cdc4f9/</link>
+      <pubDate>Mon, 25 Nov 2019 18:20:47 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/5eab3150-29da-4b54-aeee-e92025cdc4f9/</guid>
+      <description>解決 sudoコマンドに E オプションを付与して実行する。 $ export TEST_ENV=&#39;prod&#39; $ sudo -E echo $TET_ENV prod #&amp;lt;= 出力される sudoで実行するスクリプトに環境変数を渡すには-Eオプ</description>
+    </item>
+    
+    <item>
+      <title>EC2のインスタンスをフィルタリングするスクリプト</title>
+      <link>https://rengotaku.github.io/posts/98083acc-ca8c-40de-b7a8-bd20d986ea4e/</link>
+      <pubDate>Mon, 11 Nov 2019 14:12:55 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/98083acc-ca8c-40de-b7a8-bd20d986ea4e/</guid>
+      <description>alias hoge-ssh=&amp;#39;describe_ec2 | peco | cut -f 5 | xargs -o -n1 ssh&amp;#39; describe_ec2() { aws ec2 describe-instances | \ jq -r &amp;#39;.[][].Instances[] | [.InstanceId, [.Tags[] | select(.Key == &amp;#34;env&amp;#34;).Value][], [.Tags[] | select(.Key == &amp;#34;Name&amp;#34;).Value][], .InstanceType, .NetworkInterfaces[].PrivateIpAddress, .State.Name] | @tsv&amp;#39; } 表示する項目数に合わせて、cutのフィールドを調整する必要</description>
+    </item>
+    
+    <item>
+      <title>高速な文字検索</title>
+      <link>https://rengotaku.github.io/posts/b41d38d0-e53d-4569-be09-11f6f211035e/</link>
+      <pubDate>Wed, 30 Oct 2019 10:04:24 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/b41d38d0-e53d-4569-be09-11f6f211035e/</guid>
+      <description>ag を使用する。 配下のフォルダでgmailドメインを検索する $ ag &#39;\@example.com&#39; ./ test 1:example@example.com ag (The Silver Searcher) コマンド覚え書き - Qiita</description>
+    </item>
+    
+    <item>
+      <title>shellscriptでエラーメッセージをいい感じに出す</title>
+      <link>https://rengotaku.github.io/posts/93e5ce61-eb8f-40e3-bd8a-34364d13a6e0/</link>
+      <pubDate>Thu, 12 Sep 2019 11:47:33 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/93e5ce61-eb8f-40e3-bd8a-34364d13a6e0/</guid>
+      <description># Colorize output only if stdout referers to terminal if [ -t 1 ]; then textred=&amp;#34;\033[1;31m&amp;#34; textgreen=&amp;#34;\033[1;32m&amp;#34; textyellow=&amp;#34;\033[1;33m&amp;#34; textblue=&amp;#34;\033[1;34m&amp;#34; textreset=&amp;#34;\033[0m&amp;#34; fi error() { echo -e $textred$@$textreset &amp;gt; /dev/stderr; exit 1; } # 使用例 error fugafuga シェルスクリプトでエラーメッセージに色をつける - pyopyopyo - Linuxとか</description>
+    </item>
+    
+    <item>
+      <title>テキストを逆順で読み込みたい</title>
+      <link>https://rengotaku.github.io/posts/312e727e-de38-4002-bb19-14955d6dfd18/</link>
+      <pubDate>Fri, 06 Sep 2019 19:02:21 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/312e727e-de38-4002-bb19-14955d6dfd18/</guid>
+      <description>解決 tac を使用する $ printf &amp;quot;1\n2\n3\n&amp;quot; | tac 3 2 1 shell - How can I reverse the order of lines in a file? - Stack Overflow `sort -r` だと値の降順なので違う。`tail -r` はBSDでのみ有効。</description>
+    </item>
+    
+    <item>
+      <title>if文ワンライナー</title>
+      <link>https://rengotaku.github.io/posts/66a8ff26-6d7c-4b41-89fc-d491fc799047/</link>
+      <pubDate>Wed, 04 Sep 2019 19:28:26 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/66a8ff26-6d7c-4b41-89fc-d491fc799047/</guid>
+      <description>[ ${PIPESTATUS[0]} == 0 ] のように記載する $ sh -c &#39;true | tee &amp;amp;&amp;amp; [ ${PIPESTATUS[0]} == 0 ]&#39;; echo $? bashの結果の比較 [[ $? == 0 ]] 元 if [ -f ${target} ]; then echo &#39;true&#39; ;fi 簡素なif文は一行で書く - 半径5メー</description>
+    </item>
+    
+    <item>
+      <title>lessのショートカットキー</title>
+      <link>https://rengotaku.github.io/posts/fb07982c-f729-4f5a-b6d2-8d619063f7fd/</link>
+      <pubDate>Mon, 02 Sep 2019 13:15:28 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/fb07982c-f729-4f5a-b6d2-8d619063f7fd/</guid>
+      <description>ページ送り ショートカット 説明 cmd + f ページ送り cmd + b ページ戻し まとめ移動 ショートカット 説明 G ファイルを最後へ移動 g ファイルの先頭へ移動 less</description>
+    </item>
+    
+    <item>
+      <title>パイプラインで実行された任意のコマンドの実行結果を取得</title>
+      <link>https://rengotaku.github.io/posts/140b2b51-99ad-4e8a-b196-cb95c00c3028/</link>
+      <pubDate>Tue, 27 Aug 2019 13:50:33 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/140b2b51-99ad-4e8a-b196-cb95c00c3028/</guid>
+      <description>解決 PIPESTATUS変数 を使用する $ false | tee -a &#39;/tmp/test&#39; &amp;amp;&amp;amp; if [ &amp;quot;${PIPESTATUS[0]}&amp;quot; -eq 0 ]; then true; else false; fi $ echo $? 1 $ true | tee -a &#39;/tmp/test&#39; &amp;amp;&amp;amp; if [ &amp;quot;${PIPESTATUS[0]}&amp;quot; -eq 0 ]; then true; else false; fi $ echo $? 0 ShellScript Bash 終了コード</description>
+    </item>
+    
+    <item>
+      <title>bashでslackに通知</title>
+      <link>https://rengotaku.github.io/posts/a4f63bc9-ba1a-4b9b-9745-01ee23b7813d/</link>
+      <pubDate>Tue, 27 Aug 2019 10:56:29 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/a4f63bc9-ba1a-4b9b-9745-01ee23b7813d/</guid>
+      <description>解決 メイン処理 Shell/Bash script for sending slack messages. を使用する。 マッピング #!/bin/bash export APP_SLACK_WEBHOOK=&amp;quot;https://hooks.slack.com/services/XXXX&amp;quot; export APP_SLACK_CHANNEL=channel_name #export APP_SLACK_USERNAME=$(hostname) export APP_SLACK_ICON_EMOJI=&amp;quot;:hoge:&amp;quot; /usr/bin/slack &amp;quot;[$(hostname)] $(cat -)&amp;quot; 使い方 /path/to/shell.sh 2&amp;gt;&amp;amp;1 | /usr/local/bin/crontab-slack 結果 [163-44-175-179] test な感じで送信される。 note どっかで使っていたスク</description>
+    </item>
+    
+    <item>
+      <title>シェルで無限ループする時のテンプレート</title>
+      <link>https://rengotaku.github.io/posts/be30dea1-c2c2-4424-9192-1e8652e150fd/</link>
+      <pubDate>Tue, 06 Aug 2019 15:03:42 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/be30dea1-c2c2-4424-9192-1e8652e150fd/</guid>
+      <description>解決 #!/bin/bash function randbool() { if (( RANDOM %2 )); then true else false fi } while : do randbool if [ $? -eq 0 ]; then echo &amp;#39;break&amp;#39; break else echo &amp;#34;wait 1 sec.&amp;#34; sleep 1 fi done $ infinity_loop.sh wait 1 sec. wait 1 sec. wait 1 sec. wait 1 sec. break Bash: Random numbers for fun and profit</description>
+    </item>
+    
+    <item>
+      <title>cutの用途集</title>
+      <link>https://rengotaku.github.io/posts/20bdad9a-6e90-4761-ad79-1a920ff07a72/</link>
+      <pubDate>Fri, 02 Aug 2019 19:11:13 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/20bdad9a-6e90-4761-ad79-1a920ff07a72/</guid>
+      <description>URLのパラメータを削る cut -f1 -d? echo https://test.com?val=1 | cut -f1 -d? https://test.com</description>
+    </item>
+    
+    <item>
+      <title>sedの用途集</title>
+      <link>https://rengotaku.github.io/posts/7d0ddaff-29ae-4f20-9e8c-4ff6adcf54c7/</link>
+      <pubDate>Fri, 02 Aug 2019 13:54:42 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/7d0ddaff-29ae-4f20-9e8c-4ff6adcf54c7/</guid>
+      <description>数字を特定の文字列に置換 sed -e &#39;s/[0-9]\{1,\}/xxx/g&#39; $ echo test1234 | sed -e &#39;s/[0-9]\{1,\}/xxx/g&#39; testxxx 使いどき /path/area_1 /path/area_200 みたいなパスを集約したい時 regular expression - How to use sed to replace numbers with parenthese? - Unix &amp;amp; Linux Stack Exchange N番目の(.)を削除</description>
+    </item>
+    
+    <item>
+      <title>awkの各フィールドの値を確認したい</title>
+      <link>https://rengotaku.github.io/posts/0f2bcc1d-f221-4848-921c-84c194c6b6fa/</link>
+      <pubDate>Fri, 02 Aug 2019 13:36:48 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/0f2bcc1d-f221-4848-921c-84c194c6b6fa/</guid>
+      <description>解決 awk &#39;{for (i = 1; i &amp;lt;= NF; i++) print &amp;quot;$&amp;quot;i&amp;quot;:&amp;quot;$i;}&#39; で確認できる $ head -1 /var/log/https/access_log | awk -F&#39;\t&#39; &#39;{for (i = 1; i &amp;lt;= NF; i++) print &amp;quot;$&amp;quot;i&amp;quot;:&amp;quot;$i;}&#39; $1:domain:hogehoge $2:host:xxx.xxx.xxx.xxx $3:server:xxx.xxx.xxx.xxx $4:ident:- $5:user:- $6:time:28/Jul/2019:03:21:06 +0900 $7:method:GET $8:path:/sitemap/info.xml $9:protocol:HTTP/1.1 $10:status:200 $11:size:576 $12:referer:- $13:agent:xxxx $14:response_time:3421 $15:cookie:- $16:set_cookie:- AWKのこういう時はどう書く? - Qiita</description>
+    </item>
+    
+    <item>
+      <title>railsタスクを変数に格納して実行したい</title>
+      <link>https://rengotaku.github.io/posts/d05bd6f3-f718-4da9-9860-ed437c72f657/</link>
+      <pubDate>Tue, 30 Jul 2019 15:52:10 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/d05bd6f3-f718-4da9-9860-ed437c72f657/</guid>
+      <description>事象 railsタスクの実行コマンドを変数に入れて実行したいが、予期しないエラーが発生する。 RAILS_TASK=&#39;rbenv exec bundle exec rails hogehoge:hoge1[param1,1,2]&#39; $RAILS_TASK # =&amp;gt; ./test.sh: line 5: [: too many arguments 解決 &amp;ldquo;</description>
+    </item>
+    
+    <item>
+      <title>特定のポートで接続が行われていない際に実行する</title>
+      <link>https://rengotaku.github.io/posts/46ecb3df-474e-42de-bdab-24e9d8e0e7c2/</link>
+      <pubDate>Mon, 22 Jul 2019 16:00:49 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/46ecb3df-474e-42de-bdab-24e9d8e0e7c2/</guid>
+      <description>while : do if [ $(netstat -n | fgrep &amp;#39;ESTABLISHED&amp;#39; | fgrep &amp;#39;:21&amp;#39; | wc -l) -eq 0 ]; then echo &amp;#34;nobody users established.&amp;#34; break else echo &amp;#34;wait 1 minute.&amp;#34; sleep 1m fi done vsftpdの再起動時などにユーザ接続していな事を確認する時なんかに利用</description>
+    </item>
+    
+    <item>
+      <title>ゼロ埋めしたい</title>
+      <link>https://rengotaku.github.io/posts/d5a6610a-3eb3-4467-9c79-ee0e1cd7ce32/</link>
+      <pubDate>Fri, 19 Jul 2019 19:12:15 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/d5a6610a-3eb3-4467-9c79-ee0e1cd7ce32/</guid>
+      <description>printf &amp;quot;%0Xd\n&amp;quot; を使用する $ printf &amp;quot;%05d\n&amp;quot; 99 00099 numbers - How to zero pad a sequence of integers in bash so that all have the same width? - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>ワンライナーでパスワードを生成</title>
+      <link>https://rengotaku.github.io/posts/8d53036e-9ec1-4376-92ee-ede1388c21f8/</link>
+      <pubDate>Fri, 19 Jul 2019 18:12:55 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/8d53036e-9ec1-4376-92ee-ede1388c21f8/</guid>
+      <description>openssl rand を使用 $ openssl rand -base64 12 6kRz+U9TCFXs5UsI $ openssl rand -base64 12 | cut -c -12 rncJWN21ftbV macOS の標準機能でパスワードをランダム生成する方法 - Qiita</description>
+    </item>
+    
+    <item>
+      <title>Shellscriptでためになる記法</title>
+      <link>https://rengotaku.github.io/posts/c0bdc12f-d70f-41fe-a5f4-62ff08b66af1/</link>
+      <pubDate>Wed, 17 Jul 2019 11:45:03 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/c0bdc12f-d70f-41fe-a5f4-62ff08b66af1/</guid>
+      <description>複数のコマンドをsudoで実行 # run inside sudo sudo sh &amp;lt;&amp;lt;SCRIPT ~~~ SCRIPT install-redhat-td-agent2.sh</description>
+    </item>
+    
+    <item>
+      <title>ターミナルを再起動</title>
+      <link>https://rengotaku.github.io/posts/0bc77502-05c2-4f1a-b791-9cc9dda6d4d9/</link>
+      <pubDate>Mon, 01 Jul 2019 11:49:58 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/0bc77502-05c2-4f1a-b791-9cc9dda6d4d9/</guid>
+      <description>コマンド exec $SHELL -l 実行例 $ exec $SHELL -l $ # 何も発生しない シェルを再起動させる簡単な方法 - Qiita</description>
+    </item>
+    
+    <item>
+      <title>CircleCIでif文内で複数の処理を行う際に途中で失敗してもパスしてしまう</title>
+      <link>https://rengotaku.github.io/posts/4fb84bda-ee4a-483c-91d5-36d05bdbe114/</link>
+      <pubDate>Fri, 21 Jun 2019 12:34:33 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/4fb84bda-ee4a-483c-91d5-36d05bdbe114/</guid>
+      <description>事象 下記の場合だと、 decrypt1.sh 、 decrypt2.sh で失敗だったとしても、 decrypt3.sh が成功すればパスしてしまう。 if [ &amp;#34;$CIRCLE_BRANCH&amp;#34; = &amp;#34;master&amp;#34; ]; then ./decrypt1.sh ./decrypt2.sh ./decrypt3.sh fi 修正 &amp;amp;&amp;amp; で連結して成功した場合のみ次のステ</description>
+    </item>
+    
+    <item>
+      <title>envファイルをexport</title>
+      <link>https://rengotaku.github.io/posts/9fe9564f-192a-41a8-afe5-8c3cb24fac34/</link>
+      <pubDate>Tue, 11 Jun 2019 10:11:15 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/9fe9564f-192a-41a8-afe5-8c3cb24fac34/</guid>
+      <description>$ export $(cat .env | grep -v ^# | xargs) コマンドでの環境変数の受け渡し - Qiita</description>
+    </item>
+    
+    <item>
+      <title>shellのfunctionで戻り値を取得したい</title>
+      <link>https://rengotaku.github.io/posts/81204ada-4d9b-4611-abf3-0bbdc6422be0/</link>
+      <pubDate>Fri, 07 Jun 2019 13:31:10 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/81204ada-4d9b-4611-abf3-0bbdc6422be0/</guid>
+      <description>例 #!/bin/bash hoge_func() { echo &amp;#39;not output&amp;#39; &amp;gt; /dev/null # こっちは出力しない echo &amp;#39;result&amp;#39; } RESULT=`hoge_func` echo $RESULT # &amp;lt;= result 【Linux】シェルスクリプトの関数の使い方！一通りまとめ</description>
+    </item>
+    
+    <item>
+      <title>CRLFをカウントしたい</title>
+      <link>https://rengotaku.github.io/posts/9163f352-2f6d-45c5-a27c-3abe3db54496/</link>
+      <pubDate>Wed, 15 May 2019 14:54:02 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/9163f352-2f6d-45c5-a27c-3abe3db54496/</guid>
+      <description>ライン数を数える $ echo $&#39;record 1\r\nrecord\n2\r\nrecord 3&#39; &amp;gt; file $ awk -v RS=&#39;\r\n&#39; &#39;END{print NR}&#39; file 3 linux - Bash script to count CR/LF in a text file - Stack Overflow fileコマンド $ file path/to/file path/to/file: UTF-8 Unicode text, with very long lines, with CRLF, LF line terminators catコマンド cat -e</description>
+    </item>
+    
+    <item>
+      <title>jobsをwatchしたい</title>
+      <link>https://rengotaku.github.io/posts/556a51f0-2f45-4eb3-94be-95155803aeec/</link>
+      <pubDate>Thu, 21 Feb 2019 18:07:57 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/556a51f0-2f45-4eb3-94be-95155803aeec/</guid>
+      <description>$ while true; do jobs; sleep 10; done &#39;$ watch jobs&#39; だと何も表示されない。理由は別のwatchを通して別のセッションを参照するらしいから linux - How do I use the watch and jobs commands together in Bash? - Super User</description>
+    </item>
+    
+    <item>
+      <title>ファイルの文字コード、改行コードを知りたい</title>
+      <link>https://rengotaku.github.io/posts/49842101-f84a-4ee5-8019-c5dae1ce012a/</link>
+      <pubDate>Wed, 28 Nov 2018 10:46:31 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/49842101-f84a-4ee5-8019-c5dae1ce012a/</guid>
+      <description>nkf --guess /path/to/file UTF-8 (LF) 改行コード種類 種類 文字 Windows系(CRLF) \r\n Unix系(LF) \n Mac OSX(CR) \r ファイルの文字コード＆改行コードを確認・変換するため</description>
+    </item>
+    
+    <item>
+      <title>シェルからGCPへファイルをアップロード</title>
+      <link>https://rengotaku.github.io/posts/1876f788-38a0-4039-9aa9-ead70ce502c6/</link>
+      <pubDate>Wed, 21 Nov 2018 11:46:19 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/1876f788-38a0-4039-9aa9-ead70ce502c6/</guid>
+      <description>確認 $ gcloud auth activate-service-account XXXXXXX-zzzzzzzzzzzzzzzzzzzzzzzzzz@developer.gserviceaccount.com --key-file /path/to/myproject-9999-9c82deb7e430.json --project myproject-9999 projectには credential(json)の、 project_id activate-service-accountには crede</description>
+    </item>
+    
+    <item>
+      <title>curlでステータスコードのみ取得</title>
+      <link>https://rengotaku.github.io/posts/0d74e233-fa48-4e16-952f-55a59ef972fb/</link>
+      <pubDate>Thu, 19 Jul 2018 17:08:35 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/0d74e233-fa48-4e16-952f-55a59ef972fb/</guid>
+      <description>$ curl -LI mazgi.com -o /dev/null -w &#39;%{http_code}\n&#39; -s cURLでHTTPステータスコードだけを取得する</description>
+    </item>
+    
+    <item>
+      <title>プロセスをウォッチ</title>
+      <link>https://rengotaku.github.io/posts/704917f5-4394-47be-ae97-b9c16ee72376/</link>
+      <pubDate>Mon, 21 May 2018 15:00:26 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/704917f5-4394-47be-ae97-b9c16ee72376/</guid>
+      <description>$ watch -n10 &amp;quot;ps -eo pid,lstart,args | grep &#39;[p]rocessname&#39;&amp;quot; =&amp;gt; Every 10.0s: ps -eo pid,lstart,args | grep &#39;[p]rocessname&#39; 91511 Mon May 21 01:00:00 2018 XXX XXXXXXXXXXXXXXXXXX 91512 Mon May 21 01:00:00 2018 XXX XXXXXXXXXXXXXXXXXX</description>
+    </item>
+    
+    <item>
+      <title>ワンライナーコマンドが掲載されるサイト</title>
+      <link>https://rengotaku.github.io/posts/435d6674-9f67-4a19-883e-842ffa9d6db0/</link>
+      <pubDate>Wed, 16 May 2018 16:11:54 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/435d6674-9f67-4a19-883e-842ffa9d6db0/</guid>
+      <description>All commands</description>
+    </item>
+    
+    <item>
+      <title>ログを参照する際に重複行をなくしたい</title>
+      <link>https://rengotaku.github.io/posts/35368e42-62a4-4af0-9045-a68ab4dc4366/</link>
+      <pubDate>Wed, 16 May 2018 11:52:03 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/35368e42-62a4-4af0-9045-a68ab4dc4366/</guid>
+      <description>コマンド # ２番目の要素の先頭10文字が一緒のものを集約 $ cat /var/tmp/XXXX.log | uniq -f2 -w10 例 2018-05-15 09:40:00 SELECT VARIABLE_NAME, VARIABLE_VALUE FROM INFORMATION_SCHEMA.GLOBAL_STATUS WHERE VARIABLE_NAME IN ( &#39;COM_DROP_TRIGGER&#39;... 2018-05-15 09:41:00 SELECT VARIABLE_NAME, VARIABLE_VALUE FROM INFORMATION_SCHEMA.GLOBAL_STATUS WHERE VARIABLE_NAME IN ( &#39;COM_DROP_TABLE&#39;... 2018-05-16 00:47:23 DROP TABLE IF EXISTS `XXXXXXX1` 2018-05-16 00:47:23 DROP TABLE</description>
+    </item>
+    
+    <item>
+      <title>linux上での文字コード判別、変換</title>
+      <link>https://rengotaku.github.io/posts/adbd03b9-7eef-43ba-af46-70871ec2b1f3/</link>
+      <pubDate>Fri, 27 Apr 2018 15:31:49 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/adbd03b9-7eef-43ba-af46-70871ec2b1f3/</guid>
+      <description>文字コードを判別する $ nkf -g &amp;lt;textdata&amp;gt; 文字コードを変換 Shift-JISへ変換 $ nkf -s --overwrite &amp;lt;textdata&amp;gt; EUC-JPは-e、UTF-8は-wを設定する 【初心者でも知っ</description>
+    </item>
+    
+    <item>
+      <title>railsプロジェクトを起動する際に使っているshell</title>
+      <link>https://rengotaku.github.io/posts/a218f9ec-4966-42b0-83d0-64a92ea20bd4/</link>
+      <pubDate>Wed, 25 Apr 2018 10:55:02 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/a218f9ec-4966-42b0-83d0-64a92ea20bd4/</guid>
+      <description>(個人の)開発環境とか本番環境で使用している起動シェル。 使い方は、railsのプロジェクトフォルダに設置します。起動するときは「./up de</description>
+    </item>
+    
+    <item>
+      <title>オレオレLINUX便利コマンド</title>
+      <link>https://rengotaku.github.io/posts/a361c59d-6392-4a1d-bda4-f0f13c2d3e98/</link>
+      <pubDate>Thu, 19 Apr 2018 10:17:27 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/a361c59d-6392-4a1d-bda4-f0f13c2d3e98/</guid>
+      <description>今週のタスクの確認 git log --since=&amp;quot;date -v-7d +&#39;%Y-%m-%d 00:00:00&#39;&amp;quot; --oneline | grep -v &#39;Merge&#39; | cut -c 9- 指定形式のブランチを取得し操作する for i in `git branch -r| grep &amp;quot;develop_v3.1.0&amp;quot;`; do echo $i; done 現在のブランチにローカルブランチが</description>
+    </item>
+    
+  </channel>
+</rss>

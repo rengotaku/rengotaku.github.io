@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>ActionMailerで送信後に送信ログを記録したい | Vegetable Programing</title>
+
+<meta name="keywords" content="rails, actionmailer, 未解決, ベジプロ, プログ, プログラム" />
+<meta name="description" content="未解決 コールバックの仕組みはあるが、引数を増やす事ができず、拡張する仕組みが不明。 Registered observer on one mailer gets called with every email delivering, possible bug? · Issue #29671 · rails/rails は回答ないままクローズ">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/posts/77b571b7-9eab-4c93-95cb-37e97eff8b68/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="ActionMailerで送信後に送信ログを記録したい" />
+<meta property="og:description" content="未解決 コールバックの仕組みはあるが、引数を増やす事ができず、拡張する仕組みが不明。 Registered observer on one mailer gets called with every email delivering, possible bug? · Issue #29671 · rails/rails は回答ないままクローズ" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rengotaku.github.io/posts/77b571b7-9eab-4c93-95cb-37e97eff8b68/" />
+<meta property="article:published_time" content="2019-06-04T12:14:10+09:00" />
+<meta property="article:modified_time" content="2019-06-05T16:18:37+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ActionMailerで送信後に送信ログを記録したい"/>
+<meta name="twitter:description" content="未解決 コールバックの仕組みはあるが、引数を増やす事ができず、拡張する仕組みが不明。 Registered observer on one mailer gets called with every email delivering, possible bug? · Issue #29671 · rails/rails は回答ないままクローズ"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ActionMailerで送信後に送信ログを記録したい",
+  "name": "ActionMailerで送信後に送信ログを記録したい",
+  "description": "未解決 コールバックの仕組みはあるが、引数を増やす事ができず、拡張する仕組みが不明。 Registered observer on one mailer gets called with every email delivering, possible bug? · Issue #29671 · rails/rails は回答ないままクローズ",
+  "keywords": [
+    "rails", "actionmailer", "未解決", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "未解決 コールバックの仕組みはあるが、引数を増やす事ができず、拡張する仕組みが不明。\n Registered observer on one mailer gets called with every email delivering, possible bug? · Issue #29671 · rails/rails\n は回答ないままクローズされている\nしたいこと メールを送信した際に、送信情報を(fluentdを使用して)取得したい。\n前提  ActionMailerのafter_actionはメールを送信する前の処理 送信後の処理はobserverで行える（が、引数がmailクラスのみ）  ActionMailerのメール送信ログを出力する - 動かざることバグの如し    調査資料 defaultにjsonを埋め込みobserve after_action : set_mail_info\rprivate\rdef set_mail_info\rheaders[:send_info] = JSON.parse({ hoge: :hoge })\rend\r# ActionMailerが送信した後に実行される\r class MailLogObserver\rdef self.delivered_email(email)\remail['send_info'] # # sending to somewhere\r end\rend\rActionMailer::Base.register_observers(:mail_log_observer)\r ActionMailer::Base\n 問題  mailにheader情報としてsend_infoが記載されてしまう。 observerのdelivered_emailメソッドにパラメーターを追加できない  ",
+  "wordCount" : "392",
+  "inLanguage": "en",
+  "datePublished": "2019-06-04T12:14:10+09:00",
+  "dateModified": "2019-06-05T16:18:37+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rengotaku.github.io/posts/77b571b7-9eab-4c93-95cb-37e97eff8b68/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rengotaku.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      ActionMailerで送信後に送信ログを記録したい
+    </h1>
+    <div class="post-meta">June 4, 2019
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="未解決">未解決<a hidden class="anchor" aria-hidden="true" href="#未解決">#</a></h1>
+<p>コールバックの仕組みはあるが、引数を増やす事ができず、拡張する仕組みが不明。</p>
+<blockquote>
+<p><a href="https://github.com/rails/rails/issues/29671">Registered observer on one mailer gets called with every email delivering, possible bug? · Issue #29671 · rails/rails</a></p>
+</blockquote>
+<p>は回答ないままクローズされている</p>
+<h1 id="したいこと">したいこと<a hidden class="anchor" aria-hidden="true" href="#したいこと">#</a></h1>
+<p>メールを送信した際に、送信情報を(fluentdを使用して)取得したい。</p>
+<h2 id="前提">前提<a hidden class="anchor" aria-hidden="true" href="#前提">#</a></h2>
+<ul>
+<li>ActionMailerのafter_actionはメールを送信する前の処理</li>
+<li>送信後の処理はobserverで行える（が、引数がmailクラスのみ）
+<ul>
+<li><a href="http://thr3a.hatenablog.com/entry/20180511/1526013675">ActionMailerのメール送信ログを出力する - 動かざることバグの如し</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="調査資料">調査資料<a hidden class="anchor" aria-hidden="true" href="#調査資料">#</a></h1>
+<h2 id="defaultにjsonを埋め込みobserve">defaultにjsonを埋め込みobserve<a hidden class="anchor" aria-hidden="true" href="#defaultにjsonを埋め込みobserve">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb:app/mailers/hoge_mailer.rb" data-lang="rb:app/mailers/hoge_mailer.rb">after_action : set_mail_info
+
+<span style="color:#66d9ef">private</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">set_mail_info</span>
+  headers<span style="color:#f92672">[</span><span style="color:#e6db74">:send_info</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">JSON</span><span style="color:#f92672">.</span>parse({ <span style="color:#e6db74">hoge</span>: <span style="color:#e6db74">:hoge</span> })
+<span style="color:#66d9ef">end</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb:config/initializers/mail_log_observer.rb" data-lang="rb:config/initializers/mail_log_observer.rb"><span style="color:#75715e"># ActionMailerが送信した後に実行される</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MailLogObserver</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">delivered_email</span>(email)
+   email<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;send_info&#39;</span><span style="color:#f92672">]</span> <span style="color:#75715e"># &lt;= { hoge: :hoge }</span>
+   <span style="color:#75715e"># sending to somewhere</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">ActionMailer</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Base</span><span style="color:#f92672">.</span>register_observers(<span style="color:#e6db74">:mail_log_observer</span>)
+</code></pre></div><blockquote>
+<p><a href="https://api.rubyonrails.org/v5.2.3/classes/ActionMailer/Base.html">ActionMailer::Base</a></p>
+</blockquote>
+<h3 id="問題">問題<a hidden class="anchor" aria-hidden="true" href="#問題">#</a></h3>
+<ul>
+<li>mailにheader情報としてsend_infoが記載されてしまう。</li>
+<li>observerのdelivered_emailメソッドにパラメーターを追加できない</li>
+</ul>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rengotaku.github.io/tags/rails">rails</a></li>
+      <li><a href="https://rengotaku.github.io/tags/actionmailer">actionmailer</a></li>
+      <li><a href="https://rengotaku.github.io/tags/%E6%9C%AA%E8%A7%A3%E6%B1%BA">未解決</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

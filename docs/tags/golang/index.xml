@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/golang/</link>
+    <description>Recent content in golang on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 20 May 2020 23:20:47 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>golangをdockerでbuildする際に参考にしたサイト</title>
+      <link>https://rengotaku.github.io/posts/62a912a2-35fd-45d9-8fea-8c34a2675445/</link>
+      <pubDate>Wed, 20 May 2020 23:20:47 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/62a912a2-35fd-45d9-8fea-8c34a2675445/</guid>
+      <description>Go build LDFlags Alpine Linux packages Create the smallest and secured golang docker image based on scratch golang/Dockerfile at d57a23e1c68ef0a393ef9c9267bddf0086959e3e · docker-library/golang</description>
+    </item>
+    
+    <item>
+      <title>gormのデフォルトで作成される項目で検索をしたい</title>
+      <link>https://rengotaku.github.io/posts/fb74babf-4f82-4b54-a9cc-cf896e841bb0/</link>
+      <pubDate>Tue, 05 May 2020 22:24:40 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/fb74babf-4f82-4b54-a9cc-cf896e841bb0/</guid>
+      <description>解決 Model: gorm.Model{ID: id} で可能。 c.Ctx.DB.Delete(&amp;amp;models.Address{Model: gorm.Model{ID: id}}) go - How to access gorm.Model.ID? - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>structの名前を取得する</title>
+      <link>https://rengotaku.github.io/posts/0c39628d-ad3f-4ea3-a681-902fd91c99a7/</link>
+      <pubDate>Sun, 03 May 2020 19:13:12 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/0c39628d-ad3f-4ea3-a681-902fd91c99a7/</guid>
+      <description>解決 func getType(myvar interface{}) { valueOf := reflect.ValueOf(myvar) if valueOf.Type().Kind() == reflect.Ptr { fmt.Println(reflect.Indirect(valueOf).Type().Name()) } else { fmt.Println(valueOf.Type().Name()) } } using reflection in Go to get the name of a struct - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>golangでs3を操作する</title>
+      <link>https://rengotaku.github.io/posts/bca8cac8-40fb-4941-8b3c-877ad5d1cbc1/</link>
+      <pubDate>Tue, 28 Apr 2020 14:45:01 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/bca8cac8-40fb-4941-8b3c-877ad5d1cbc1/</guid>
+      <description>オブジェクト一覧を取得 sess, err := session.NewSession(&amp;amp;aws.Config{ Region: aws.String(&amp;#34;ap-northeast-1&amp;#34;), }) svc := s3.New(session.New()) input := &amp;amp;s3.ListObjectsV2Input{ Bucket: aws.String(&amp;#34;examplebucket&amp;#34;), Prefix: aws.String(&amp;#34;path/to/foldername&amp;#34;), } result, err := svc.ListObjectsV2(input) if err != nil { if aerr, ok := err.(awserr.Error); ok { switch aerr.Code() { case s3.ErrCodeNoSuchBucket: fmt.Println(s3.ErrCodeNoSuchBucket, aerr.Error()) default: fmt.Println(aerr.Error()) } } else { // Print the error, cast err to awserr.Error to get the Code</description>
+    </item>
+    
+    <item>
+      <title>golangでランダム値を算出</title>
+      <link>https://rengotaku.github.io/posts/d5296458-924b-41f2-90fc-346a3840025d/</link>
+      <pubDate>Mon, 27 Apr 2020 18:28:34 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/d5296458-924b-41f2-90fc-346a3840025d/</guid>
+      <description>解決 import ( &amp;#34;math/rand&amp;#34; &amp;#34;time&amp;#34; ) const charset = &amp;#34;abcdefghijklmnopqrstuvwxyz&amp;#34; + &amp;#34;ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&amp;#34; var seededRand *rand.Rand = rand.New( rand.NewSource(time.Now().UnixNano())) func StringWithCharset(length int, charset string) string { b := make([]byte, length) for i := range b { b[i] = charset[seededRand.Intn(len(charset))] } return string(b) } func String(length int) string { return StringWithCharset(length, charset) } Creating Random Strings in Go - Calhoun.io 事象 Rubyの関数のよ</description>
+    </item>
+    
+    <item>
+      <title>ginで困ったこと</title>
+      <link>https://rengotaku.github.io/posts/a52beb00-9a91-4255-a29b-b2af35039bfa/</link>
+      <pubDate>Sat, 25 Apr 2020 21:50:20 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/a52beb00-9a91-4255-a29b-b2af35039bfa/</guid>
+      <description>テンプレートの呼び出しが行えない Help with nested template · Issue #339 · gin-gonic/gin validationのカスタムの仕方 go-playground/validator - Gitter</description>
+    </item>
+    
+    <item>
+      <title>構造体(struct)をソートする</title>
+      <link>https://rengotaku.github.io/posts/437a783c-7f30-4413-afa1-de302cb35e6f/</link>
+      <pubDate>Tue, 07 Apr 2020 17:52:22 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/437a783c-7f30-4413-afa1-de302cb35e6f/</guid>
+      <description>解決 reviews_data_map := []reviews_data{} reviews_data_map = append(reviews_data_map, reviews_data{date: time.Now().Add(12 * time.Hour), id: &amp;#34;1&amp;#34;}) reviews_data_map = append(reviews_data_map, reviews_data{date: time.Now(), id: &amp;#34;3&amp;#34;}) reviews_data_map = append(reviews_data_map, reviews_data{date: time.Now().Add(24 * time.Hour), id: &amp;#34;2&amp;#34;}) // 1, 2020-04-08 05:47:11.19533 +0900 JST m=+43200.002075162 // 3, 2020-04-07 17:47:11.195331 +0900 JST m=+0.002076090 // 2, 2020-04-08 17:47:11.195335 +0900 JST m=+86400.002079860 for _, v := range reviews_data_map { fmt.Printf(&amp;#34;%s, %s\n&amp;#34;, v.id, v.date) } // 日付でソート</description>
+    </item>
+    
+    <item>
+      <title>日付のゾーンをutcからjstに変換</title>
+      <link>https://rengotaku.github.io/posts/5978cfb8-9f0c-481e-b766-d42ff9664c79/</link>
+      <pubDate>Tue, 07 Apr 2020 17:49:12 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/5978cfb8-9f0c-481e-b766-d42ff9664c79/</guid>
+      <description>解決 dtstr1 := &amp;#34;Wed Mar 18 00:41:11 +0000 2020&amp;#34; dt, _ := time.Parse(&amp;#34;Mon Jan 02 15:04:05 -0700 2006&amp;#34;, dtstr1) fmt.Println(dt) //2020-03-18 00:41:11 +0000 +0000 jst := time.FixedZone(&amp;#34;Asia/Tokyo&amp;#34;, 9*60*60) nowJST := dt.In(jst) fmt.Println(nowJST) //2020-03-18 09:41:11 +0900 Asia/Tokyo</description>
+    </item>
+    
+    <item>
+      <title>golangのlogのフォーマットを設定したい</title>
+      <link>https://rengotaku.github.io/posts/628c8107-fb47-45a8-879e-27a7eed73eb5/</link>
+      <pubDate>Fri, 28 Feb 2020 10:23:36 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/628c8107-fb47-45a8-879e-27a7eed73eb5/</guid>
+      <description>type logWriter struct { } func (writer logWriter) Write(bytes []byte) (int, error) { return fmt.Print(time.Now().UTC().Format(&amp;#34;2006-01-02T15:04:05.999Z&amp;#34;) + &amp;#34; [DEBUG] &amp;#34; + string(bytes)) } func main() { log.SetFlags(0) log.SetOutput(new(logWriter)) log.Println(&amp;#34;This is something being logged!&amp;#34;) } How to change the date/time format of Go&amp;rsquo;s log package - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>golangでハローワールド</title>
+      <link>https://rengotaku.github.io/posts/489083dc-7430-49b0-8f84-079472642e90/</link>
+      <pubDate>Mon, 10 Feb 2020 19:07:27 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/489083dc-7430-49b0-8f84-079472642e90/</guid>
+      <description>$ mkdir -p $HOME/go/src/github.com/user $ vi ~/.bash_profile export GOPATH=$HOME/go export GOROOT=/usr/local/opt/go/libexec export PATH=$PATH:$GOPATH/bin export PATH=$PATH:$GOROOT/bin $ brew install go $ HOME/go/src/github.com/user $ mkdir hello $ cd hello $ go mod init github.com/user/hello $ vi hello.go package main import &amp;quot;fmt&amp;quot; func main() { fmt.Println(&amp;quot;Hello, world.&amp;quot;) } $ go run hello.go macos - Install go with brew, and running the gotour - Stack Overflow How to Write Go Code - The Go</description>
+    </item>
+    
+    <item>
+      <title>文字の一致率を計算するライブラリ</title>
+      <link>https://rengotaku.github.io/posts/40761006-689c-4d94-81ab-99a9a86cf56a/</link>
+      <pubDate>Thu, 19 Dec 2019 16:32:16 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/40761006-689c-4d94-81ab-99a9a86cf56a/</guid>
+      <description>deltam/go-lsd-parametrized: Weighted Leveshtein Distance and its extended interfaces written in Go. カスタマイズしやすい重み付きレーベンシュタイン距離ライブラリをGoで書きました : サルノオボエガキ</description>
+    </item>
+    
+    <item>
+      <title>golangのtips</title>
+      <link>https://rengotaku.github.io/posts/0229b922-6619-4955-9427-7e7302e6d87e/</link>
+      <pubDate>Tue, 10 Dec 2019 19:25:33 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/0229b922-6619-4955-9427-7e7302e6d87e/</guid>
+      <description>配列から要素を削除 func (s *SliceSample) Remove(index int) { res := []string{} for i, v := range s.List { if i == index { continue } res = append(res, v) } s.List = res } Golang における配列操作（定義、追加、削除） – II 正規表現 package main import &amp;#34;fmt&amp;#34;</description>
+    </item>
+    
+  </channel>
+</rss>

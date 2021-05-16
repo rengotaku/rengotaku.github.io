@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rake on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/rake/</link>
+    <description>Recent content in rake on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 26 Jun 2019 14:30:51 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/rake/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>rake taskのテスト</title>
+      <link>https://rengotaku.github.io/posts/576d9cd1-5c40-44df-95d1-0d320a889c95/</link>
+      <pubDate>Wed, 26 Jun 2019 14:30:51 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/576d9cd1-5c40-44df-95d1-0d320a889c95/</guid>
+      <description>module Tasks class SampleTest &amp;lt; ActiveSupport::TestCase describe &amp;#39;rake task sample&amp;#39; do before do @rake = Rake::Application.new Rake.application = @rake Rails.application.load_tasks Rake::Task.define_task(:environment) end describe &amp;#39;sample:exec&amp;#39; do it &amp;#39;done without errores.&amp;#39; do assert { @rake[&amp;#39;sample:exec&amp;#39;].execute } end end end end end executeなので一度しか実行されない事象は起きないはずだが</description>
+    </item>
+    
+  </channel>
+</rss>

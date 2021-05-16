@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>minio on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/minio/</link>
+    <description>Recent content in minio on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 05 Feb 2020 14:39:53 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/minio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>fluentdからs3への送信をローカルで検証したい</title>
+      <link>https://rengotaku.github.io/posts/cd79fa35-ab38-484c-86ec-7b0578610cb7/</link>
+      <pubDate>Wed, 05 Feb 2020 14:39:53 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/cd79fa35-ab38-484c-86ec-7b0578610cb7/</guid>
+      <description>概要 dockerで fluentd、 minio を立てて、S3へのログの送信の検証を行う。 構成 . ├── docker-compose.yml ├── fluentd │ ├── Dockerfile │ └── conf │ └── fluentd.conf └── log └</description>
+    </item>
+    
+  </channel>
+</rss>

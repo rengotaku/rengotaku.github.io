@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://rengotaku.github.io/sitemap.xml

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>phpで8系に接続する際に注意すること | Vegetable Programing</title>
+
+<meta name="keywords" content="php, mysql, pdo, ベジプロ, プログ, プログラム" />
+<meta name="description" content="経緯 5.6系を使う予定が、brewで最新の8系をインストールしていて、謎のエラー[2054] The server requested authentication method unknown to the clientで苦しんだ。 対応 パス">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/posts/f0e97e2b-18eb-4b62-882e-73769a380af4/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="phpで8系に接続する際に注意すること" />
+<meta property="og:description" content="経緯 5.6系を使う予定が、brewで最新の8系をインストールしていて、謎のエラー[2054] The server requested authentication method unknown to the clientで苦しんだ。 対応 パス" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rengotaku.github.io/posts/f0e97e2b-18eb-4b62-882e-73769a380af4/" />
+<meta property="article:published_time" content="2018-07-20T19:16:23+09:00" />
+<meta property="article:modified_time" content="2018-07-20T19:17:39+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="phpで8系に接続する際に注意すること"/>
+<meta name="twitter:description" content="経緯 5.6系を使う予定が、brewで最新の8系をインストールしていて、謎のエラー[2054] The server requested authentication method unknown to the clientで苦しんだ。 対応 パス"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "phpで8系に接続する際に注意すること",
+  "name": "phpで8系に接続する際に注意すること",
+  "description": "経緯 5.6系を使う予定が、brewで最新の8系をインストールしていて、謎のエラー[2054] The server requested authentication method unknown to the clientで苦しんだ。 対応 パス",
+  "keywords": [
+    "php", "mysql", "pdo", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "経緯 5.6系を使う予定が、brewで最新の8系をインストールしていて、謎のエラー[2054] The server requested authentication method unknown to the clientで苦しんだ。\n対応 パスワード方式を確認 pluginがmysql_native_passwordになっていればOK\nSELECT user, host, plugin FROM mysql.user;\rmysqld.cnfを修正 default-authentication-plugin=mysql_native_passwordを追加 そして、mysqlのリスタート\n phpからMySQL 8.0へPDOで接続時「SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client」 - Symfoware\n そもそもmysqlのバージョンを5.6にする $brew install mysql@5.6\r HomebrewでMySQLをセットアップしたらちょろりとハマった - light log\n ",
+  "wordCount" : "319",
+  "inLanguage": "en",
+  "datePublished": "2018-07-20T19:16:23+09:00",
+  "dateModified": "2018-07-20T19:17:39+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rengotaku.github.io/posts/f0e97e2b-18eb-4b62-882e-73769a380af4/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rengotaku.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      phpで8系に接続する際に注意すること
+    </h1>
+    <div class="post-meta">July 20, 2018
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="経緯">経緯<a hidden class="anchor" aria-hidden="true" href="#経緯">#</a></h1>
+<p>5.6系を使う予定が、brewで最新の8系をインストールしていて、謎のエラー<code>[2054] The server requested authentication method unknown to the client</code>で苦しんだ。</p>
+<h1 id="対応">対応<a hidden class="anchor" aria-hidden="true" href="#対応">#</a></h1>
+<h2 id="パスワード方式を確認">パスワード方式を確認<a hidden class="anchor" aria-hidden="true" href="#パスワード方式を確認">#</a></h2>
+<p>pluginが<code>mysql_native_password</code>になっていればOK</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">user</span>, <span style="color:#66d9ef">host</span>, plugin <span style="color:#66d9ef">FROM</span> mysql.<span style="color:#66d9ef">user</span>;
+</code></pre></div><h2 id="mysqldcnfを修正">mysqld.cnfを修正<a hidden class="anchor" aria-hidden="true" href="#mysqldcnfを修正">#</a></h2>
+<p><code>default-authentication-plugin=mysql_native_password</code>を追加
+そして、mysqlのリスタート</p>
+<blockquote>
+<p><a href="https://symfoware.blog.fc2.com/blog-entry-2160.html">phpからMySQL 8.0へPDOで接続時「SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client」 - Symfoware</a></p>
+</blockquote>
+<h2 id="そもそもmysqlのバージョンを56にする">そもそもmysqlのバージョンを5.6にする<a hidden class="anchor" aria-hidden="true" href="#そもそもmysqlのバージョンを56にする">#</a></h2>
+<pre><code>$brew install mysql@5.6
+</code></pre><blockquote>
+<p><a href="http://yamacent.hatenablog.com/entry/2015/05/21/235243">HomebrewでMySQLをセットアップしたらちょろりとハマった - light log</a></p>
+</blockquote>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rengotaku.github.io/tags/php">php</a></li>
+      <li><a href="https://rengotaku.github.io/tags/mysql">mysql</a></li>
+      <li><a href="https://rengotaku.github.io/tags/pdo">pdo</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

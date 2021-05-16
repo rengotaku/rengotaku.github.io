@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bootstrap on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/bootstrap/</link>
+    <description>Recent content in bootstrap on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Mon, 24 Aug 2020 22:06:39 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/bootstrap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>bootstrapのNavbarの配置の仕方で困ったとき</title>
+      <link>https://rengotaku.github.io/posts/0d6faba8-c360-46f8-81d3-ea4ffc9b1211/</link>
+      <pubDate>Mon, 24 Aug 2020 22:06:39 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/0d6faba8-c360-46f8-81d3-ea4ffc9b1211/</guid>
+      <description>Bootstrap 4 Navbar Center Links Examples on Codeply より &amp;lt;!-- 1 - Navbar with brand left, centered links and right aligned links. The center links collapse into the mobile menu and rightside links show underneath --&amp;gt; &amp;lt;nav class=&amp;#34;navbar navbar-expand-md navbar-dark bg-primary&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;d-flex w-50 order-0&amp;#34;&amp;gt; &amp;lt;a class=&amp;#34;navbar-brand mr-1&amp;#34; href=&amp;#34;#&amp;#34;&amp;gt;Bootstrap 4&amp;lt;/a&amp;gt; &amp;lt;button class=&amp;#34;navbar-toggler&amp;#34; type=&amp;#34;button&amp;#34; data-toggle=&amp;#34;collapse&amp;#34; data-target=&amp;#34;#collapsingNavbar&amp;#34;&amp;gt; &amp;lt;span class=&amp;#34;navbar-toggler-icon&amp;#34;&amp;gt;&amp;lt;/span&amp;gt; &amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;navbar-collapse collapse justify-content-center order-2&amp;#34; id=&amp;#34;collapsingNavbar&amp;#34;&amp;gt; &amp;lt;ul class=&amp;#34;navbar-nav&amp;#34;&amp;gt; &amp;lt;li class=&amp;#34;nav-item</description>
+    </item>
+    
+    <item>
+      <title>bootstrapのspacingの書き方の表</title>
+      <link>https://rengotaku.github.io/posts/2c06040d-2aee-4039-916c-bf48fabf80b3/</link>
+      <pubDate>Sun, 23 Aug 2020 15:55:30 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/2c06040d-2aee-4039-916c-bf48fabf80b3/</guid>
+      <description>React Spacing - Bootstrap 4 &amp;amp; Material Design. Examples &amp;amp; tutorial - Material Design for Bootstrap より Screen Size Class Appears on all .ml-3 Appears only on xs .ml-3 .ml-sm-0 Appears only on sm .ml-sm-3 .ml-md-0 Appears only on md .ml-md-3 .ml-lg-0 Appears only on lg .ml-lg-3 .d-xl-0 Appears only on xl .ml-xl-3</description>
+    </item>
+    
+    <item>
+      <title>Bootstrap4のspacingがデバイス毎に振り分けできない</title>
+      <link>https://rengotaku.github.io/posts/f162c98b-3a6e-4ee2-9511-a9002714a1aa/</link>
+      <pubDate>Wed, 12 Jun 2019 14:47:27 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/f162c98b-3a6e-4ee2-9511-a9002714a1aa/</guid>
+      <description>結論 &amp;lt;div class=&amp;#34;col-12 mb-3 mb-sm-0&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; 誤り &amp;lt;div class=&amp;#34;col-12 mb-sm-0&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; Bootstrap 4 responsive spacing not working - Stack Overflow</description>
+    </item>
+    
+  </channel>
+</rss>

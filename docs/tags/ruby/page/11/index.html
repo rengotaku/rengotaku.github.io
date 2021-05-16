@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>ruby | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/tags/ruby/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/ruby/index.xml">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="ruby" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://rengotaku.github.io/tags/ruby/" />
+<meta property="og:updated_time" content="2020-11-20T21:57:49+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ruby"/>
+<meta name="twitter:description" content=""/>
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>ruby</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ワンライナーでCSVを扱う
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>ruby -rcsv -e&#34;CSV(STDIN).each{|r|p r.join(&#39;,&#39;) if [&#39;400006210&#39;].include? r[0] }&#34; &lt; sample.csv Rubyで標準入力からCSVをパース...</p>
+  </section>
+  <footer class="entry-footer">August 15, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to ワンライナーでCSVを扱う" href="https://rengotaku.github.io/posts/91a083ff-58ad-46fb-9fab-7fccd0066e52/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ローカルファイルをアップロード
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>gemインストール gem &#39;google-cloud-storage&#39; タスク require &#34;google/cloud/storage&#34; namespace :storage do desc &#34;システムDBをGCSにアップロードする&#34; task upload_db: :environment do storage = Google::Cloud::Storage.new( project_id: &#39;project_id&#39;, credentials: &#34;/path/to/jsonfile&#34; ) bucket = storage.bucket ENV[&#39;GCLOUD_STORAGE_BUCKET&#39;] local_file_path = &#34;/path/to/file&#34; storage_file_path =...</p>
+  </section>
+  <footer class="entry-footer">August 9, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to ローカルファイルをアップロード" href="https://rengotaku.github.io/posts/29233a99-b730-4d3a-8f39-c0ecae4c9c99/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      dockerのruby2.3.1を2.3.7に変更する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Dockerfile 変更後 FROM ruby:2.3.7 RUN apt-get update -qq &amp;&amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqtcore4 libqtgui4 libqtwebkit-dev libqtwebkit4 RUN mkdir -p /var WORKDIR /var ENV BUNDLE_JOBS=4 COPY Gemfile Gemfile COPY Gemfile.lock Gemfile.lock RUN bundle install 変更前 FROM ruby:2.3.1 RUN apt-get update -qq &amp;&amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqt4-core libqt4-gui RUN mkdir -p /var WORKDIR /var ENV BUNDLE_JOBS=4...</p>
+  </section>
+  <footer class="entry-footer">July 24, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to dockerのruby2.3.1を2.3.7に変更する" href="https://rengotaku.github.io/posts/e0664390-c0cf-41d4-b4db-86dfd3939938/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      brewでmysqlをインストールしたら、mysqlのgemがインストールできない＆mysqlで何も実行できない
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>gemのインストール対応 バージョン0.4.10を使用する Failed to build gem native extension - unknown type name ‘my_bool’ · Issue #980 · brianmario/mysql2 mysqlの実行エラー対応 mysql&gt; SET GLOBAL innodb_fast_shutdown = 1; $ mysql_upgrade -u root -p Mysql Error:The...</p>
+  </section>
+  <footer class="entry-footer">July 10, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to brewでmysqlをインストールしたら、mysqlのgemがインストールできない＆mysqlで何も実行できない" href="https://rengotaku.github.io/posts/1e336aa2-3910-47a2-890b-1ce379db42bc/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      定数を変更してテスト
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>class TargetClass CONSTANT_VARIABLE = %w(1) end TargetClassTest @@origin = TargetClass::CONSTANT_VARIABLE setup do TargetClass.const_set(:CONSTANT_VARIABLE, @@origin) end describe :test do it :one do TargetClass.const_set(:CONSTANT_VARIABLE, w(1, 2, 3)) assert_equal TargetClass::CONSTANT_VARIABLE, %w(1 2 3) end end end 定数を変更すると、別ファイルのテストの際も変更されたままになるので、元に戻...</p>
+  </section>
+  <footer class="entry-footer">July 9, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to 定数を変更してテスト" href="https://rengotaku.github.io/posts/d719f508-6a6b-4b3a-9726-f3e50a37606d/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      rubyとrailsのバージョンアップ
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>現在のバージョン $ rbenv versions =&gt; system * 2.3.1 (set by /path/to/.rbenv/version) 2.4.1 アップグレード $ brew upgrade rbenv ruby-build 特に ruby-build が更新されないと新しいバージョンが表示されない 使用できるバージョン rbenv install -l...</p>
+  </section>
+  <footer class="entry-footer">June 6, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to rubyとrailsのバージョンアップ" href="https://rengotaku.github.io/posts/0b8f0eb0-7c73-4a24-a623-a03e8efeda1d/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Rubyワンライナー
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>指定フォルダ配下のファイルをリネーム ruby -e &#39;Dir.glob(&#34;/path/to/folder/*.jpg&#34;){|item| File.rename(item, &#34;#{File.dirname(item)}/#{File.basename(item).split(&#34;_&#34;)[1]}_#{File.basename(item).split(&#34;_&#34;)[0]}#{File.extname(item)}&#34;) }&#39; 結果 images/target_img.jpg =&gt; images/img_target.jpg /path/to/folder/*.jpgを変更 img_#{File.basena...</p>
+  </section>
+  <footer class="entry-footer">May 6, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to Rubyワンライナー" href="https://rengotaku.github.io/posts/e4c9f397-a4bb-4b9f-aaa5-0871bd7a097c/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      RubyでGoogleplayのレシートを照合する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p># アンドロイドのレシートチェック def check_receipt_for_android def fetch_receipt_for_android(product_id, purchase_token, token) require &#39;net/http&#39; require &#39;net/https&#39; require &#39;uri&#39; require &#39;json&#39; # path = &#34;https://www.googleapis.com/androidpublisher/v2/applications/#{$ANDROID_PACKAGE_NAME}/purchases/products/#{product_id}/tokens/#{token}&#34; path = &#34;https://www.googleapis.com/androidpublisher/v1.1/applications/#{$ANDROID_PACKAGE_NAME}/inapp/#{product_id}/purchases/#{purchase_token}?access_token=#{token}&#34; uri = URI.parse path https = Net::HTTP.new(uri.host,uri.port) https.use_ssl = true https.verify_mode = OpenSSL::SSL::VERIFY_NONE headers = {} headers[&#34;accept&#34;] = &#34;application/json&#34; headers[&#34;content-type&#34;] = &#34;application/json&#34; # 参考: https://stackoverflow.com/questions/7346398/nethttp-failure-to-access-google-docs-list-data-api https.start do |http| return http.get(uri.request_uri, headers).body...</p>
+  </section>
+  <footer class="entry-footer">April 25, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to RubyでGoogleplayのレシートを照合する" href="https://rengotaku.github.io/posts/79cc8911-a70d-40cd-8090-bf93aa55b1a0/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="/tags/ruby/page/10/">« Prev Page</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

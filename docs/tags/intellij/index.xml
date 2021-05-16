@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>intellij on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/intellij/</link>
+    <description>Recent content in intellij on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 26 Apr 2018 14:22:01 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/intellij/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ショートカット一覧</title>
+      <link>https://rengotaku.github.io/posts/bf3b6961-c62e-4334-95aa-55f49751c144/</link>
+      <pubDate>Thu, 26 Apr 2018 14:22:01 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/bf3b6961-c62e-4334-95aa-55f49751c144/</guid>
+      <description>動作 ショートカット ファイル名検索(すべてのファイルを検索) Command + Shift + O ファイル横断テキスト検索 Ctrl + Shift + F ひとつ前に移動 Command + [ ひとつ先に移動 Command +</description>
+    </item>
+    
+  </channel>
+</rss>

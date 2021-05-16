@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>minitest | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/tags/minitest/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/minitest/index.xml">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="minitest" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://rengotaku.github.io/tags/minitest/" />
+<meta property="og:updated_time" content="2019-08-29T15:58:04+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="minitest"/>
+<meta name="twitter:description" content=""/>
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>minitest</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      minitestでprivateメソッドをテスト
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 __send__を使用する Class Person def initialize(name) @name = name end private def tom(generation) @name = &#39;tom&#39; &#43; generation.to_s end end person = Person.new(&#39;tarou&#39;) person.__send__(:tom, 2) assert { re_inquiry.instance_eval(&#39;@name&#39;).size == &#39;tom2&#39; } #&lt;= インスタンス変数を参照 instance_eval (Object) - Rubyリファレンス send...</p>
+  </section>
+  <footer class="entry-footer">August 29, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to minitestでprivateメソッドをテスト" href="https://rengotaku.github.io/posts/1a7b69f1-218d-4982-ba5f-a3fee308cdfe/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      verifyメソッドのテストが失敗する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 Mockクラスではなく、define_singleton_methodを使用してmethodを生やす。 ただし、assertメソッドなどが...</p>
+  </section>
+  <footer class="entry-footer">August 15, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to verifyメソッドのテストが失敗する" href="https://rengotaku.github.io/posts/ce4e5dde-88a5-468e-9e57-d8490989ff23/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      stub_any_instanceのproc内でNoMethodError: undefined method `assert&#39; 
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 対象インスタンスをprocで厳密に指定 test_instance = self #&lt;= 重要 post_stub = proc do |address| test_instance.assert { address == &#39;address&#39; } end 注意 共通化しようと、インスタンス変数に格納してしまうと、正しく...</p>
+  </section>
+  <footer class="entry-footer">July 4, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to stub_any_instanceのproc内でNoMethodError: undefined method `assert&#39; " href="https://rengotaku.github.io/posts/a9fbcb15-a9bb-4ff0-95e5-207000c6e190/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      rake taskのテスト
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>module Tasks class SampleTest &lt; ActiveSupport::TestCase describe &#39;rake task sample&#39; do before do @rake = Rake::Application.new Rake.application = @rake Rails.application.load_tasks Rake::Task.define_task(:environment) end describe &#39;sample:exec&#39; do it &#39;done without errores.&#39; do assert { @rake[&#39;sample:exec&#39;].execute } end end end end end executeなので一度しか実行されない事象は起きないはずだが...</p>
+  </section>
+  <footer class="entry-footer">June 26, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to rake taskのテスト" href="https://rengotaku.github.io/posts/576d9cd1-5c40-44df-95d1-0d320a889c95/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      mockの使い方
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>基本 mock = Minitest::Mock.new.expect(:method_name, &#39;return_value&#39;, [&#39;param1&#39;, &#39;param2&#39;]) mock.method_name(&#39;param1&#39;, &#39;param2&#39;) # &lt;= return value is &#39;return_value&#39; mock.verify # &lt;= true 第一のメソッド名、第二の戻り値までは必須 応用 入れ子 mock2 = Minitest::Mock.new.expect(:second, &#39;second value&#39;) mock1 = Minitest::Mock.new.expect(:first, mock2) mock1.first.second #&lt;= &#39;second value&#39; stubと組み合わせる class...</p>
+  </section>
+  <footer class="entry-footer">June 26, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to mockの使い方" href="https://rengotaku.github.io/posts/333de691-10b6-4078-94a2-75b176921114/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Minitestで&#34;No more expects available for :something_method&#34;が発生
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>誤り def test_method Rails.logger.info(&#39;one&#39;) Rails.logger.info(&#39;two&#39;) #&lt;= raise end logger_mock = Minitest::Mock.new info_mock = logger_mock.expect(:info, true, [&#39;one&#39;]) Rails.logger = logger_mock test_method &lt;= No more expects available for :info 正解 logger_mock = Minitest::Mock.new info_mock = logger_mock.expect(:info, true, [&#39;one&#39;]).expect(:info, true, [&#39;two&#39;]) Rails.logger = logger_mock ruby - Minitest: No more expects available - Stack Overflow...</p>
+  </section>
+  <footer class="entry-footer">June 14, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to Minitestで&#34;No more expects available for :something_method&#34;が発生" href="https://rengotaku.github.io/posts/b3b9ba25-b8e1-4f67-b6f2-884a85b8dfc7/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      minitestで意図的にraise
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>api_mock = MiniTest::Mock.new api_mock.expect(:get, retval_get) do |args_update| raise StandardError(&#39;Mock#getで例外発生&#39;) end Rails minitest Mockで例外発生パターンのテスト - Qiita...</p>
+  </section>
+  <footer class="entry-footer">June 14, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to minitestで意図的にraise" href="https://rengotaku.github.io/posts/889f9fef-5b01-475d-bc0c-104e2086a684/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      minitestでエラーメッセージを検証
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>class FooTest &lt; Minitest::Test def test_boo! # RuntimeErrorが発生することを検証 e = assert_raises RuntimeError do Foo.boo! # &lt;= boo!random-messages-continue... end # エラーメッセージを検証 assert { e.message.start_with?(&#34;boo!&#34;) } end end Minitestで例外クラ...</p>
+  </section>
+  <footer class="entry-footer">June 14, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to minitestでエラーメッセージを検証" href="https://rengotaku.github.io/posts/ca10b1b5-76b1-4c89-868e-f0ee7f32be9c/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      minitestでconstをstub化
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>module Foo BAR = :original end Foo.stub_const(:BAR, :stubbed) do Foo::BAR end # =&gt; :stubbed Foo::BAR # =&gt; :original adammck/minitest-stub-const: Stub constants for the duration of a block in MiniTest...</p>
+  </section>
+  <footer class="entry-footer">June 14, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to minitestでconstをstub化" href="https://rengotaku.github.io/posts/89c7127b-1494-4e7c-b613-d7156ef09fc2/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      raiseを検証したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>assert_raises RuntimeError do # something to do raise error end module MiniTest::Assertions - Documentation for Ruby 2.1.0 https://docs.ruby-lang.org/en/2.1.0/MiniTest/Assertions.html...</p>
+  </section>
+  <footer class="entry-footer">May 17, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to raiseを検証したい" href="https://rengotaku.github.io/posts/935cf5a3-4605-4c50-96a3-c9f4064f624a/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="/tags/minitest/page/2/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

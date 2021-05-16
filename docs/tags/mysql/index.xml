@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mysql on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/mysql/</link>
+    <description>Recent content in mysql on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Tue, 10 Nov 2020 10:01:21 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mysqlの結果をtsvファイルとして保存する</title>
+      <link>https://rengotaku.github.io/posts/65de0d11-cc3a-4c0a-97bf-990851adafad/</link>
+      <pubDate>Tue, 10 Nov 2020 10:01:21 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/65de0d11-cc3a-4c0a-97bf-990851adafad/</guid>
+      <description>$ mysql -h hostname -u username -p dbname &amp;lt; /tmp/select_records.sql &amp;gt; /tmp/selected_records.tsv 権限問題に当たらなければ、 How to output MySQL query results in CSV format? - Stack Overflow のように指定するが良いかも。</description>
+    </item>
+    
+    <item>
+      <title>sshトンネルを使用してmysql-cliで接続する</title>
+      <link>https://rengotaku.github.io/posts/262df999-3148-446f-a102-0f0d8d6146ca/</link>
+      <pubDate>Tue, 07 Jul 2020 15:24:40 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/262df999-3148-446f-a102-0f0d8d6146ca/</guid>
+      <description>解決 $ ssh -N -L 13306:xxx-db-01.cluster-xxx.ap-northeast-1.rds.amazonaws.com:3306 user_name_for_ssh@connect_to_ip_via_ssh $ mysql -u username -p --port=13306 -h 127.0.0.1 database_name 参考 Connect to RDS using an SSH Tunnel - Michalis Antoniou - Medium 補足 Sequel Pro のSSHタブはどのように接続しているのか調べたら、SSHトンネルを利用</description>
+    </item>
+    
+    <item>
+      <title>MySQLのNULLの扱いで参考になる</title>
+      <link>https://rengotaku.github.io/posts/41e47535-c950-4aa2-aff0-c1d0c8d63d8a/</link>
+      <pubDate>Tue, 23 Jun 2020 14:14:05 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/41e47535-c950-4aa2-aff0-c1d0c8d63d8a/</guid>
+      <description>IS NULL を使用した検索では、インデックスが使用される NULL を許可するカラムにユニークインデックスを貼った場合、各々のNULL は別の値として区別され、</description>
+    </item>
+    
+    <item>
+      <title>MySQLの最適化で参考になりそうな記事</title>
+      <link>https://rengotaku.github.io/posts/2cb27d73-b7ec-4fac-961e-d061d8150ae9/</link>
+      <pubDate>Wed, 20 May 2020 18:22:08 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/2cb27d73-b7ec-4fac-961e-d061d8150ae9/</guid>
+      <description>MySQL Explain Example - Explaining MySQL EXPLAIN using StackOverflow data explainの結果の項目を分かりやすく記載してくれている。</description>
+    </item>
+    
+    <item>
+      <title>mysql2のgemのインストールが失敗する</title>
+      <link>https://rengotaku.github.io/posts/0a030ad1-7817-41e7-9a31-5b3c5623c121/</link>
+      <pubDate>Thu, 09 Jan 2020 14:43:22 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/0a030ad1-7817-41e7-9a31-5b3c5623c121/</guid>
+      <description>解決 $ export LDFLAGS=&amp;quot;-L/usr/local/opt/openssl/lib&amp;quot; $ export CPPFLAGS=&amp;quot;-I/usr/local/opt/openssl/include&amp;quot; $ bundle config --local build.mysql2 &amp;quot;--with-cppflags=-I/usr/local/opt/openssl/include&amp;quot; $ bundle config --local build.mysql2 &amp;quot;--with-ldflags=-L/usr/local/opt/openssl/lib&amp;quot; $ bundle install 【Rails】MySQL2がbundle installできない時の対応方法 - Qiita 事象 macでmy</description>
+    </item>
+    
+    <item>
+      <title>mysqlで既に登録されている値を置換して再登録</title>
+      <link>https://rengotaku.github.io/posts/baaa474f-9a42-4aae-8cd8-811e581d096d/</link>
+      <pubDate>Wed, 06 Nov 2019 13:33:08 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/baaa474f-9a42-4aae-8cd8-811e581d096d/</guid>
+      <description>REPLACE を利用する。 update users, ( select id from users where name regexp &#39; &#39; ) as having_spaces set name = REPLACE(name, &amp;quot; &amp;quot;, &amp;quot;&amp;quot;) where users.id = having_spaces.id</description>
+    </item>
+    
+    <item>
+      <title>mysqlで正規表現を使用して検索</title>
+      <link>https://rengotaku.github.io/posts/316eed96-858c-4429-bd1f-b5ab8dedddd1/</link>
+      <pubDate>Wed, 06 Nov 2019 13:25:44 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/316eed96-858c-4429-bd1f-b5ab8dedddd1/</guid>
+      <description>regexp を使用する。 select * from regexptest where str regexp &#39; | &#39;; 正規表現を使ったパターンマッチングを行う(REGEXP演算子) | MySQLの使い方</description>
+    </item>
+    
+    <item>
+      <title>Ruby2.5.6のDocker Imageを使用したら、mysql-clientがインストールできない</title>
+      <link>https://rengotaku.github.io/posts/88abf94f-1946-4b02-9a70-9c0e3bbd82a6/</link>
+      <pubDate>Tue, 10 Sep 2019 15:35:08 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/88abf94f-1946-4b02-9a70-9c0e3bbd82a6/</guid>
+      <description>解決 default-mysql-client を指定すればよい apt-get install -y default-mysql-client Circle CI で mysql-client が apt-get install できなくなってCI環境が壊れた話 - ユアマイスター株式会社エンジニアブログ 事象 FROM ruby:2.5.6 RUN apt-get update -qq \ &amp;amp;&amp;amp; apt-get install</description>
+    </item>
+    
+    <item>
+      <title>旧字体を登録する際にエラーが発生する</title>
+      <link>https://rengotaku.github.io/posts/2595f4ec-a3a8-40c4-97dd-7e5eb3343f04/</link>
+      <pubDate>Mon, 02 Sep 2019 10:04:33 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/2595f4ec-a3a8-40c4-97dd-7e5eb3343f04/</guid>
+      <description>未解決 文字コーディングに異常はみられない。 事象 Activerecodeを通して 𣘺本 を登録しようとすると Incorrect string value: &#39;\xF0\xA3\x98\xBA\xE6\x9C...&#39; for column &#39;name&#39; at row 1 が発生する。 調査 文</description>
+    </item>
+    
+    <item>
+      <title>どのホストからのアクセスも許容する権限(grant)の付与</title>
+      <link>https://rengotaku.github.io/posts/ed0c8993-6fd1-40ee-af28-c51cc75347ca/</link>
+      <pubDate>Thu, 15 Aug 2019 20:10:20 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/ed0c8993-6fd1-40ee-af28-c51cc75347ca/</guid>
+      <description>解決 username@&amp;quot;%&amp;quot; grant all privileges on xxxdb.* to username@&amp;quot;%&amp;quot; MySQL 外部ホストからアクセスする │ 渋谷生活 tips 書き方色々 コマンド 意味 username@&amp;quot;%&amp;rdquo; 全てのホストからアクセス可能 username@localhost サーバにログインしてからア</description>
+    </item>
+    
+    <item>
+      <title>railsからmysqlにアクセスできない</title>
+      <link>https://rengotaku.github.io/posts/9bfb2b48-5b6a-4dc8-8082-361faca014f4/</link>
+      <pubDate>Thu, 15 Aug 2019 11:53:50 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/9bfb2b48-5b6a-4dc8-8082-361faca014f4/</guid>
+      <description>解決 /sbin/ip route|awk &#39;/default/ { print $3 }&#39; を実行し、取得したIPを database.ymlの host に記載する。 $ docker-compose exec [container name of rails] sh # /sbin/ip route|awk &#39;/default/ { print $3 }&#39; 192.168.112.1 How to get the IP address of the docker host from inside</description>
+    </item>
+    
+    <item>
+      <title>SQLで日付の計算</title>
+      <link>https://rengotaku.github.io/posts/be6a33b1-4871-40f6-b154-b4f8368d9490/</link>
+      <pubDate>Thu, 27 Jun 2019 17:12:44 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/be6a33b1-4871-40f6-b154-b4f8368d9490/</guid>
+      <description>日付を加算・減産 NOW() - INTERVAL 60 SECOND 単位 MICROSECOND SECOND MINUTE HOUR DAY WEEK MONTH 【MySQL】日時の計算（加算・減算） - Qiita ゼロ時から検索したい DATE_FORMAT(NOW() - INTERVAL 60 DAY, &#39;%Y-%m-%d 00:00:00&#39; ) mySQLの日付処</description>
+    </item>
+    
+    <item>
+      <title>schemaのみをdumpしたい</title>
+      <link>https://rengotaku.github.io/posts/88270c85-08b1-4385-a150-c734616c541d/</link>
+      <pubDate>Tue, 22 Jan 2019 17:28:01 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/88270c85-08b1-4385-a150-c734616c541d/</guid>
+      <description>mysqldump -u root -p --no-data dbname &amp;gt; schema.sql sql - MySql export schema without data - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>テーブルを削除する際に外部制約を無視したい</title>
+      <link>https://rengotaku.github.io/posts/82f9c66b-c88b-4b3a-8c73-f20dc350a988/</link>
+      <pubDate>Thu, 17 Jan 2019 14:48:22 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/82f9c66b-c88b-4b3a-8c73-f20dc350a988/</guid>
+      <description>SET FOREIGN_KEY_CHECKS=0 MySQLで外部参照を無視してTRUNCATE - Qiita</description>
+    </item>
+    
+    <item>
+      <title>取得サイズが大きすぎてSELECT時にエラーが発生する</title>
+      <link>https://rengotaku.github.io/posts/be031a68-063a-4203-b72a-7371b954f966/</link>
+      <pubDate>Tue, 04 Dec 2018 14:46:59 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/be031a68-063a-4203-b72a-7371b954f966/</guid>
+      <description>対策 --max_allowed_packet=100Mをオプションに付ける mysql -uroot -proot database_name --max_allowed_packet=100M -e &#39;select source from some_table where id = 14243;&#39; &amp;gt; /path/to/file SET GLOBAL max_allowed_packet=999999*1024*1024; のように、GLOBALの値を</description>
+    </item>
+    
+    <item>
+      <title>LOAD DATA LOCALが使用できない</title>
+      <link>https://rengotaku.github.io/posts/849e2237-85f3-450e-ad8a-f57a1f495b2f/</link>
+      <pubDate>Tue, 13 Nov 2018 14:01:04 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/849e2237-85f3-450e-ad8a-f57a1f495b2f/</guid>
+      <description>対応 DBに入る際に、 --local-infile オプションを渡す。 $ mysql -uroot -proot test_db --local-infile 事象 mysql&amp;gt; LOAD DATA LOCAL INFILE &#39;/path/to/csv&#39; INTO TABLE target_table; ERROR 1148 (42000): The used command is not allowed with this MySQL version</description>
+    </item>
+    
+    <item>
+      <title>sql_modeを変更</title>
+      <link>https://rengotaku.github.io/posts/2c082e10-b6cc-4317-9fbf-02604f271053/</link>
+      <pubDate>Tue, 16 Oct 2018 17:55:54 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/2c082e10-b6cc-4317-9fbf-02604f271053/</guid>
+      <description>確認 mysql&amp;gt; SHOW VARIABLES LIKE &#39;sql_mode&#39;; 更新 SQL mysql&amp;gt; SET sql_mode = &amp;quot;&amp;quot;; conf [mysqld] sql_mode = ONLY_FULL_GROUP_BY,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION untitled: MySQLのSQL_MODEと日付型への値の挿入 その2 MySQLをバージョンアップした際にsql_</description>
+    </item>
+    
+    <item>
+      <title>ユーザが存在していない場合に作成</title>
+      <link>https://rengotaku.github.io/posts/50e31ea3-e95a-44e5-82a6-2c17243d21b5/</link>
+      <pubDate>Mon, 15 Oct 2018 12:59:19 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/50e31ea3-e95a-44e5-82a6-2c17243d21b5/</guid>
+      <description>CREATE USER IF NOT EXISTS &#39;user&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; GRANT ALL ON `database`.* TO &#39;user&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; RDSとかでは下記が一般的？ GRANT ALL ON `database`.* TO &amp;#39;user&amp;#39;@&amp;#39;%&amp;#39; IDENTIFIED BY &amp;#39;password&amp;#39;; mysql create user if not exists - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>DBが存在していない場合に作成</title>
+      <link>https://rengotaku.github.io/posts/ad7d911e-989f-4510-b842-397585bb85c7/</link>
+      <pubDate>Mon, 15 Oct 2018 12:52:06 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/ad7d911e-989f-4510-b842-397585bb85c7/</guid>
+      <description>$ mysql -uroot -e &amp;quot;create database if not exists database_name;&amp;quot;; データベースの作成(CREATE DATABASE文) - データベースの作成 - MySQLの使い方</description>
+    </item>
+    
+    <item>
+      <title>ON DUPLICATE KEY UPDATEの理解</title>
+      <link>https://rengotaku.github.io/posts/49fd0f28-123f-4a1f-adf6-d8207dc4a657/</link>
+      <pubDate>Tue, 11 Sep 2018 12:17:55 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/49fd0f28-123f-4a1f-adf6-d8207dc4a657/</guid>
+      <description>INSERT INTO table (a, b, c) VALUES (1, 12, 100) ON DUPLICATE KEY UPDATE b = 20 , c = 200; は、重複レコードがなければ insert into table (a, b, c) values (1, 12, 100) を行い、重複レコードがあれば update table set a = 1, b = 20, c = 200</description>
+    </item>
+    
+    <item>
+      <title>mysqlの起動</title>
+      <link>https://rengotaku.github.io/posts/4af59f8a-ac2c-4c66-ad40-680c9be817c5/</link>
+      <pubDate>Wed, 15 Aug 2018 11:39:06 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/4af59f8a-ac2c-4c66-ad40-680c9be817c5/</guid>
+      <description>$ mysql.server start mac MySQL ターミナル 自動起動</description>
+    </item>
+    
+    <item>
+      <title>phpで8系に接続する際に注意すること</title>
+      <link>https://rengotaku.github.io/posts/f0e97e2b-18eb-4b62-882e-73769a380af4/</link>
+      <pubDate>Fri, 20 Jul 2018 19:16:23 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/f0e97e2b-18eb-4b62-882e-73769a380af4/</guid>
+      <description>経緯 5.6系を使う予定が、brewで最新の8系をインストールしていて、謎のエラー[2054] The server requested authentication method unknown to the clientで苦しんだ。 対応 パス</description>
+    </item>
+    
+    <item>
+      <title>brewでmysqlをインストールしたら、mysqlのgemがインストールできない＆mysqlで何も実行できない</title>
+      <link>https://rengotaku.github.io/posts/1e336aa2-3910-47a2-890b-1ce379db42bc/</link>
+      <pubDate>Tue, 10 Jul 2018 17:55:00 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/1e336aa2-3910-47a2-890b-1ce379db42bc/</guid>
+      <description>gemのインストール対応 バージョン0.4.10を使用する Failed to build gem native extension - unknown type name &amp;lsquo;my_bool&amp;rsquo; · Issue #980 · brianmario/mysql2 mysqlの実行エラー対応 mysql&amp;gt; SET GLOBAL innodb_fast_shutdown = 1; $ mysql_upgrade -u root -p Mysql Error:The</description>
+    </item>
+    
+    <item>
+      <title>ルートのパスワードを変更</title>
+      <link>https://rengotaku.github.io/posts/e3e39d9c-9083-4e7e-80b3-2afda6cf0cc2/</link>
+      <pubDate>Fri, 06 Jul 2018 11:36:32 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/e3e39d9c-9083-4e7e-80b3-2afda6cf0cc2/</guid>
+      <description>DBを指定 mysql&amp;gt; use mysql パスワードを設定 mysql&amp;gt; UPDATE user SET authentication_string=password(&#39;新規パスワード&#39;) WHERE user=&#39;root&#39;; 設定の反映 mysql&amp;gt; flush</description>
+    </item>
+    
+  </channel>
+</rss>

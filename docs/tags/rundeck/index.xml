@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rundeck on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/rundeck/</link>
+    <description>Recent content in rundeck on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 04 Sep 2019 20:03:07 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/rundeck/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>rundeckのjobを一括取得するスクリプト</title>
+      <link>https://rengotaku.github.io/posts/53e606f7-6aec-42c4-b852-c78779d3d90b/</link>
+      <pubDate>Wed, 04 Sep 2019 20:03:07 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/53e606f7-6aec-42c4-b852-c78779d3d90b/</guid>
+      <description>ソース function loopSleep(_loopLimit,_interval, _mainFunc){ var loopLimit = _loopLimit; var interval = _interval; var mainFunc = _mainFunc; var i = 0; var loopFunc = function () { var result = mainFunc(i); if (result === false) { // break機能 return; } i = i + 1; if (i &amp;lt; loopLimit) { setTimeout(loopFunc, interval); } } loopFunc(); } const WAIT_COUNT = 3; function download_xml() {</description>
+    </item>
+    
+    <item>
+      <title>rundeckのログを確認</title>
+      <link>https://rengotaku.github.io/posts/0d50cdf6-9d84-4b71-aebb-fc4acc87edf8/</link>
+      <pubDate>Tue, 07 May 2019 11:06:45 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/0d50cdf6-9d84-4b71-aebb-fc4acc87edf8/</guid>
+      <description>/var/lib/rundeck/logs/rundeck/${project}/job/${job_id}/logs 各変数は下記より当てはめる http://rundeck/project/${project}/job/show/${job_id} Rundeck でジョブが失敗したときに見るべきログの探し方 - Qiita</description>
+    </item>
+    
+  </channel>
+</rss>

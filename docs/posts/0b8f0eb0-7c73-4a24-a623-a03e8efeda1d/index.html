@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>rubyとrailsのバージョンアップ | Vegetable Programing</title>
+
+<meta name="keywords" content="mac, rails, ruby, ベジプロ, プログ, プログラム" />
+<meta name="description" content="現在のバージョン $ rbenv versions =&gt; system * 2.3.1 (set by /path/to/.rbenv/version) 2.4.1 アップグレード $ brew upgrade rbenv ruby-build 特に ruby-build が更新されないと新しいバージョンが表示されない 使用できるバージョン rbenv install -l">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/posts/0b8f0eb0-7c73-4a24-a623-a03e8efeda1d/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="rubyとrailsのバージョンアップ" />
+<meta property="og:description" content="現在のバージョン $ rbenv versions =&gt; system * 2.3.1 (set by /path/to/.rbenv/version) 2.4.1 アップグレード $ brew upgrade rbenv ruby-build 特に ruby-build が更新されないと新しいバージョンが表示されない 使用できるバージョン rbenv install -l" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rengotaku.github.io/posts/0b8f0eb0-7c73-4a24-a623-a03e8efeda1d/" />
+<meta property="article:published_time" content="2018-06-06T10:30:06+09:00" />
+<meta property="article:modified_time" content="2018-11-20T16:53:44+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="rubyとrailsのバージョンアップ"/>
+<meta name="twitter:description" content="現在のバージョン $ rbenv versions =&gt; system * 2.3.1 (set by /path/to/.rbenv/version) 2.4.1 アップグレード $ brew upgrade rbenv ruby-build 特に ruby-build が更新されないと新しいバージョンが表示されない 使用できるバージョン rbenv install -l"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "rubyとrailsのバージョンアップ",
+  "name": "rubyとrailsのバージョンアップ",
+  "description": "現在のバージョン $ rbenv versions =\u0026amp;gt; system * 2.3.1 (set by /path/to/.rbenv/version) 2.4.1 アップグレード $ brew upgrade rbenv ruby-build 特に ruby-build が更新されないと新しいバージョンが表示されない 使用できるバージョン rbenv …",
+  "keywords": [
+    "mac", "rails", "ruby", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "現在のバージョン $ rbenv versions\r=\rsystem\r* 2.3.1 (set by /path/to/.rbenv/version)\r2.4.1\rアップグレード $ brew upgrade rbenv ruby-build\r特に ruby-build が更新されないと新しいバージョンが表示されない\r使用できるバージョン rbenv install -l\r=\r.\r.\r.\r2.5.0\r2.5.1\r最新バージョンをインストールする $ rbenv install 2.5.1\r=\rruby-build: use openssl from homebrew\rDownloading ruby-2.5.1.tar.bz2...\r- https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.1.tar.bz2\rInstalling ruby-2.5.1...\rruby-build: use readline from homebrew # ここで時間がかかる\rInstalled ruby-2.5.1 to /Users/300807/.rbenv/versions/2.5.1\r再度バージョンチェック $ rbenv versions\rsystem\r* 2.3.1 (set by /path/to/.rbenv/version)\r2.4.1\r2.5.1\rRubyバージョンを変更 $ rbenv local 2.5.1\rbundleを再度インストール $ rbenv exec gem install bundler\rgemをインストール $ bundle install --path vendor/bundler\rFetching gem metadata from https://rubygems.org/.......\rGemfileを書き換える  railsバージョンが5.0.0.1のままだと、key must be 32 bytesが発生してしまう。   key must be 32 bytes\n ruby '2.5.1' # from ruby '2.3.1'\rgem 'rails', '5.0.1' # from gem 'rails', '5.0.0.1'\rrails のアップデート $ bundle update rails\rrailsを起動する  deprecatedがいくつかでる  $ rails s\r= Booting Puma\r= Rails 5.0.1 application starting in development_share on http://0.0.0.0:3000\r= Run `rails server -h` for more startup options\r/Users/300807/workspace/front.door.ac/vendor/bundler/ruby/2.5.0/gems/activesupport-5.0.1/lib/active_support/core_ext/numeric/conversions.rb:138: warning: constant ::Fixnum is deprecated\r/Users/300807/workspace/front.door.ac/vendor/bundler/ruby/2.5.0/gems/activejob-5.0.1/lib/active_job/arguments.rb:38: warning: constant ::Fixnum is deprecated\r/Users/300807/workspace/front.door.ac/vendor/bundler/ruby/2.5.0/gems/activejob-5.0.1/lib/active_job/arguments.rb:38: warning: constant ::Bignum is deprecated\rPuma starting in single mode...\r* Version 3.6.0 (ruby 2.5.1-p57), codename: Sleepy Sunday Serenity\r* Min threads: 5, max threads: 5\r* Environment: development_share\r* Listening on tcp://0.0.0.0:3000\r",
+  "wordCount" : "391",
+  "inLanguage": "en",
+  "datePublished": "2018-06-06T10:30:06+09:00",
+  "dateModified": "2018-11-20T16:53:44+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rengotaku.github.io/posts/0b8f0eb0-7c73-4a24-a623-a03e8efeda1d/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rengotaku.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      rubyとrailsのバージョンアップ
+    </h1>
+    <div class="post-meta">June 6, 2018
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="現在のバージョン">現在のバージョン<a hidden class="anchor" aria-hidden="true" href="#現在のバージョン">#</a></h1>
+<pre><code>$ rbenv versions
+=&gt;
+  system
+* 2.3.1 (set by /path/to/.rbenv/version)
+  2.4.1
+</code></pre><h1 id="アップグレード">アップグレード<a hidden class="anchor" aria-hidden="true" href="#アップグレード">#</a></h1>
+<pre><code>$ brew upgrade rbenv ruby-build
+</code></pre><pre><code class="language-!" data-lang="!">特に ruby-build が更新されないと新しいバージョンが表示されない
+</code></pre><h1 id="使用できるバージョン">使用できるバージョン<a hidden class="anchor" aria-hidden="true" href="#使用できるバージョン">#</a></h1>
+<pre><code>rbenv install -l
+=&gt;
+.
+.
+.
+2.5.0
+2.5.1
+</code></pre><h1 id="最新バージョンをインストールする">最新バージョンをインストールする<a hidden class="anchor" aria-hidden="true" href="#最新バージョンをインストールする">#</a></h1>
+<pre><code>$ rbenv install 2.5.1
+=&gt;
+ruby-build: use openssl from homebrew
+Downloading ruby-2.5.1.tar.bz2...
+-&gt; https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.1.tar.bz2
+Installing ruby-2.5.1...
+ruby-build: use readline from homebrew # ここで時間がかかる
+Installed ruby-2.5.1 to /Users/300807/.rbenv/versions/2.5.1
+</code></pre><h1 id="再度バージョンチェック">再度バージョンチェック<a hidden class="anchor" aria-hidden="true" href="#再度バージョンチェック">#</a></h1>
+<pre><code>$ rbenv versions
+  system
+* 2.3.1 (set by /path/to/.rbenv/version)
+  2.4.1
+  2.5.1
+</code></pre><h1 id="rubyバージョンを変更">Rubyバージョンを変更<a hidden class="anchor" aria-hidden="true" href="#rubyバージョンを変更">#</a></h1>
+<pre><code>$ rbenv local 2.5.1
+</code></pre><h1 id="bundleを再度インストール">bundleを再度インストール<a hidden class="anchor" aria-hidden="true" href="#bundleを再度インストール">#</a></h1>
+<pre><code>$ rbenv exec gem install bundler
+</code></pre><h1 id="gemをインストール">gemをインストール<a hidden class="anchor" aria-hidden="true" href="#gemをインストール">#</a></h1>
+<pre><code>$ bundle install --path vendor/bundler
+Fetching gem metadata from https://rubygems.org/.......
+</code></pre><h1 id="gemfileを書き換える">Gemfileを書き換える<a hidden class="anchor" aria-hidden="true" href="#gemfileを書き換える">#</a></h1>
+<ul>
+<li>railsバージョンが<code>5.0.0.1</code>のままだと、key must be 32 bytesが発生してしまう。</li>
+</ul>
+<blockquote>
+<p><a href="https://qiita.com/KTakata/items/7bc8057b3b0ca6759b12">key must be 32 bytes</a></p>
+</blockquote>
+<pre><code>ruby '2.5.1' # from ruby '2.3.1'
+
+gem 'rails', '5.0.1' # from gem 'rails', '5.0.0.1'
+</code></pre><h1 id="rails-のアップデート">rails のアップデート<a hidden class="anchor" aria-hidden="true" href="#rails-のアップデート">#</a></h1>
+<pre><code>$ bundle update rails
+</code></pre><h1 id="railsを起動する">railsを起動する<a hidden class="anchor" aria-hidden="true" href="#railsを起動する">#</a></h1>
+<ul>
+<li>deprecatedがいくつかでる</li>
+</ul>
+<pre><code>$ rails s
+=&gt; Booting Puma
+=&gt; Rails 5.0.1 application starting in development_share on http://0.0.0.0:3000
+=&gt; Run `rails server -h` for more startup options
+/Users/300807/workspace/front.door.ac/vendor/bundler/ruby/2.5.0/gems/activesupport-5.0.1/lib/active_support/core_ext/numeric/conversions.rb:138: warning: constant ::Fixnum is deprecated
+/Users/300807/workspace/front.door.ac/vendor/bundler/ruby/2.5.0/gems/activejob-5.0.1/lib/active_job/arguments.rb:38: warning: constant ::Fixnum is deprecated
+/Users/300807/workspace/front.door.ac/vendor/bundler/ruby/2.5.0/gems/activejob-5.0.1/lib/active_job/arguments.rb:38: warning: constant ::Bignum is deprecated
+Puma starting in single mode...
+* Version 3.6.0 (ruby 2.5.1-p57), codename: Sleepy Sunday Serenity
+* Min threads: 5, max threads: 5
+* Environment: development_share
+* Listening on tcp://0.0.0.0:3000
+</code></pre>
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rengotaku.github.io/tags/mac">mac</a></li>
+      <li><a href="https://rengotaku.github.io/tags/rails">rails</a></li>
+      <li><a href="https://rengotaku.github.io/tags/ruby">ruby</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

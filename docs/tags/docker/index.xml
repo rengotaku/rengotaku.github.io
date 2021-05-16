@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/docker/</link>
+    <description>Recent content in docker on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 13 Aug 2020 15:02:13 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>dockerのみでfluentdを動作させる</title>
+      <link>https://rengotaku.github.io/posts/972bfb28-b80a-4967-a2a4-121abbc464bc/</link>
+      <pubDate>Thu, 13 Aug 2020 15:02:13 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/972bfb28-b80a-4967-a2a4-121abbc464bc/</guid>
+      <description>$ docker build -f fluentd/Dockerfile . --tag fluentd $ docker run -d \ -p 24224:24224 \ -p 24224:24224/udp \ --name fluentd_c \ --env-file .env \ fluentd $ docker exec -it fluentd_c /bin/sh $ docker stop fluentd_c $ docker rm fluentd_c</description>
+    </item>
+    
+    <item>
+      <title>golangをdockerでbuildする際に参考にしたサイト</title>
+      <link>https://rengotaku.github.io/posts/62a912a2-35fd-45d9-8fea-8c34a2675445/</link>
+      <pubDate>Wed, 20 May 2020 23:20:47 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/62a912a2-35fd-45d9-8fea-8c34a2675445/</guid>
+      <description>Go build LDFlags Alpine Linux packages Create the smallest and secured golang docker image based on scratch golang/Dockerfile at d57a23e1c68ef0a393ef9c9267bddf0086959e3e · docker-library/golang</description>
+    </item>
+    
+    <item>
+      <title>dockerでホストのIPを参照する</title>
+      <link>https://rengotaku.github.io/posts/97ac32f6-f847-44b6-aab3-09ceb6850fc2/</link>
+      <pubDate>Tue, 14 Apr 2020 11:00:34 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/97ac32f6-f847-44b6-aab3-09ceb6850fc2/</guid>
+      <description>解決 host.docker.internal のホスト名で参照可能に Networking features in Docker Desktop for Windows | Docker Documentation</description>
+    </item>
+    
+    <item>
+      <title>td-agentをdockerで動かす</title>
+      <link>https://rengotaku.github.io/posts/2b3ece27-3f34-4f13-9edf-3881a7821751/</link>
+      <pubDate>Mon, 10 Feb 2020 11:27:58 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/2b3ece27-3f34-4f13-9edf-3881a7821751/</guid>
+      <description>構成 td-agent/ ├── docker-compose.yml ├── Dockerfile ├── test.log ├── conf │ ├── app.conf │ └── td-agent.conf └── install-redhat-td-agent2.5.sh 設定 docker FROM drecom/centos-ruby:2.6.5 ADD install-redhat-td-agent2.5.sh /tmp/ RUN sh /tmp/install-redhat-td-agent2.5.sh RUN td-agent-gem install \ fluent-plugin-multiprocess \ fluent-plugin-forest \ fluent-plugin-rewrite-tag-filter RUN /etc/init.d/td-agent start CMD [&amp;quot;td-agent&amp;quot;] version: &amp;ldquo;3&amp;rdquo; services: minio: image: minio/minio:RELEASE.2020-01-25T02-50-51Z volumes: - minio_volume:/data ports: - &amp;ldquo;9090:9000&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>Dockerfileでスマートなコマンド設定</title>
+      <link>https://rengotaku.github.io/posts/0306c4bd-acdf-43da-841d-24ea1f5227ef/</link>
+      <pubDate>Fri, 07 Feb 2020 13:55:51 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/0306c4bd-acdf-43da-841d-24ea1f5227ef/</guid>
+      <description>minioの公式Dockerfileでは Dockerfile CMD [&amp;quot;minio&amp;quot;] docker-compose.yml command: server /data 結果 minio server /data として実行される。 minio/minio Dockerfile - Docker Hub ということはrailsだと Dockerfile CMD [&amp;quot;bundle&amp;quot;, &amp;quot;exec&amp;quot;, &amp;quot;rails&amp;quot;, &amp;quot;s&amp;quot;] docker-compose.yml command: -p 3001 結</description>
+    </item>
+    
+    <item>
+      <title>fluentdからs3への送信をローカルで検証したい</title>
+      <link>https://rengotaku.github.io/posts/cd79fa35-ab38-484c-86ec-7b0578610cb7/</link>
+      <pubDate>Wed, 05 Feb 2020 14:39:53 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/cd79fa35-ab38-484c-86ec-7b0578610cb7/</guid>
+      <description>概要 dockerで fluentd、 minio を立てて、S3へのログの送信の検証を行う。 構成 . ├── docker-compose.yml ├── fluentd │ ├── Dockerfile │ └── conf │ └── fluentd.conf └── log └</description>
+    </item>
+    
+    <item>
+      <title>dockerのリモートのタグ一覧をコマンドで確認したい</title>
+      <link>https://rengotaku.github.io/posts/89d6aee3-eaa6-4489-855a-a9e6af743728/</link>
+      <pubDate>Tue, 04 Feb 2020 19:57:07 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/89d6aee3-eaa6-4489-855a-a9e6af743728/</guid>
+      <description>#!/bin/bash # https://stackoverflow.com/questions/28320134/how-can-i-list-all-tags-for-a-docker-image-on-a-remote-registry if [ $# -lt 1 ] then cat &amp;lt;&amp;lt; HELP dockertags -- list all tags for a Docker image on a remote registry. EXAMPLE: - list all tags for ubuntu: dockertags ubuntu - list all php tags containing apache: dockertags php apache HELP exit 1 fi image=&amp;quot;$1&amp;quot; tags=`curl -L -s &amp;quot;https://registry.hub.docker.com/v2/repositories/library/${image}/tags?page_size=1024&amp;quot; | jq -r &#39;.&amp;quot;results&amp;quot;[][&amp;quot;name&amp;quot;]&#39;` if [ -n &amp;quot;$2&amp;quot; ] then tags=` echo &amp;quot;${tags}&amp;quot; | grep &amp;quot;$2&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>docker上のpry-byebugにショートカットを設定したい</title>
+      <link>https://rengotaku.github.io/posts/5d7fa977-1511-4546-aea2-9b7622a4097c/</link>
+      <pubDate>Thu, 23 Jan 2020 14:35:20 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/5d7fa977-1511-4546-aea2-9b7622a4097c/</guid>
+      <description>解決 docker上の ~/.pryrc に記載する。 事象 pry-byebugでrubyをデバッグする - Qiita のショートカットをプロジェクトに設置しても、使用できな</description>
+    </item>
+    
+    <item>
+      <title>Docker上のcapistranoから別途立てたローカルサーバにアクセス</title>
+      <link>https://rengotaku.github.io/posts/cae07512-deaa-4c5b-94cd-6ea0b68b1ca6/</link>
+      <pubDate>Fri, 17 Jan 2020 10:46:12 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/cae07512-deaa-4c5b-94cd-6ea0b68b1ca6/</guid>
+      <description>構図 Capistrano Server[Docker] &amp;lt;=&amp;gt; Local[Mac] &amp;lt;=&amp;gt; SSHD Server[Docker] 接続先(ファイル設置先) サーバ 設定ファイル version: &amp;#34;3&amp;#34; services: ssh: build: dockerfile: Dockerfile command: [&amp;#34;/usr/sbin/sshd&amp;#34;, &amp;#34;-D&amp;#34;] tty: true ports: - &amp;#34;10022:22&amp;#34; Docker 初心者 — ssh で接続できるサーバーを立てる - Qiita FROM ubuntu:16.04 RUN</description>
+    </item>
+    
+    <item>
+      <title>Knowledge about docker for windows</title>
+      <link>https://rengotaku.github.io/posts/3543a3d7-fc8e-4755-b855-d39fd5cf3010/</link>
+      <pubDate>Thu, 26 Dec 2019 22:16:05 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/3543a3d7-fc8e-4755-b855-d39fd5cf3010/</guid>
+      <description>Add user for development RUN groupadd -g 1000 developer &amp;amp;&amp;amp; \ useradd -g developer -G sudo -m -s /bin/bash developer &amp;amp;&amp;amp; \ echo &#39;developer:hogehoge&#39; | chpasswd RUN echo &#39;Defaults visiblepw&#39; &amp;gt;&amp;gt; /etc/sudoers RUN echo &#39;developer ALL=(ALL) NOPASSWD:ALL&#39; &amp;gt;&amp;gt; /etc/sudoers Dockerコンテナ内にsudoユーザを追加する - Qiita Docker - Docker run で</description>
+    </item>
+    
+    <item>
+      <title>composerでインストールされない？</title>
+      <link>https://rengotaku.github.io/posts/e7f13673-f4f9-450b-8d51-f61e78dceff3/</link>
+      <pubDate>Fri, 29 Nov 2019 16:15:02 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/e7f13673-f4f9-450b-8d51-f61e78dceff3/</guid>
+      <description>未解決 imageが作成された後に、プロジェクトをコンテナにマウントさせinstall処理を行うようにした。 （プロジェクト内に vendor フォルダが作成</description>
+    </item>
+    
+    <item>
+      <title>TTYを使用せずにexecを実行</title>
+      <link>https://rengotaku.github.io/posts/4b7054b1-cd68-4d4f-9eaa-563de14c556d/</link>
+      <pubDate>Tue, 12 Nov 2019 17:51:47 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/4b7054b1-cd68-4d4f-9eaa-563de14c556d/</guid>
+      <description>解決 -T オプションを付与する ... docker-compose exec -T rails ... The input device is not a TTY · Issue #5696 · docker/compose 事象 $ find ./test -name *_test.rb | egrep &#39;form|model&#39; | xargs -I _test_ docker-compose exec rails rails test _test_ を実行したところ the input device is not a TTY が発生し</description>
+    </item>
+    
+    <item>
+      <title>Ruby2.5.6のDocker Imageを使用したら、mysql-clientがインストールできない</title>
+      <link>https://rengotaku.github.io/posts/88abf94f-1946-4b02-9a70-9c0e3bbd82a6/</link>
+      <pubDate>Tue, 10 Sep 2019 15:35:08 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/88abf94f-1946-4b02-9a70-9c0e3bbd82a6/</guid>
+      <description>解決 default-mysql-client を指定すればよい apt-get install -y default-mysql-client Circle CI で mysql-client が apt-get install できなくなってCI環境が壊れた話 - ユアマイスター株式会社エンジニアブログ 事象 FROM ruby:2.5.6 RUN apt-get update -qq \ &amp;amp;&amp;amp; apt-get install</description>
+    </item>
+    
+    <item>
+      <title>dockerの負荷率を確認する</title>
+      <link>https://rengotaku.github.io/posts/6b176f5b-71d5-4ab8-a0ae-527cc70f35dd/</link>
+      <pubDate>Thu, 05 Sep 2019 19:38:16 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/6b176f5b-71d5-4ab8-a0ae-527cc70f35dd/</guid>
+      <description>$docker stats [container_id] CONTAINER ID NAME CPU % MEM USAGE / LIMIT MEM % NET I/O BLOCK I/O PIDS 34be7f4df705 rails_1 0.01% 473.8MiB / 7.787GiB 5.94% 90.6MB / 125MB 2.25MB / 12.3kB 20 [小ネタ]Docker コンテナに CPU 負荷を掛けた時のメモ - Qiita</description>
+    </item>
+    
+    <item>
+      <title>docker-composeでmysqlの起動を待機したい</title>
+      <link>https://rengotaku.github.io/posts/07c5e4a3-d964-4917-9972-1520705f3de5/</link>
+      <pubDate>Tue, 27 Aug 2019 15:09:06 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/07c5e4a3-d964-4917-9972-1520705f3de5/</guid>
+      <description>解決 dockerize を使用する dockerize -wait tcp://mysql-local:3306 -timeout 120s dockerize を使って他のコンテナ内サービス起動を待つ - Qiita</description>
+    </item>
+    
+    <item>
+      <title>railsからmysqlにアクセスできない</title>
+      <link>https://rengotaku.github.io/posts/9bfb2b48-5b6a-4dc8-8082-361faca014f4/</link>
+      <pubDate>Thu, 15 Aug 2019 11:53:50 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/9bfb2b48-5b6a-4dc8-8082-361faca014f4/</guid>
+      <description>解決 /sbin/ip route|awk &#39;/default/ { print $3 }&#39; を実行し、取得したIPを database.ymlの host に記載する。 $ docker-compose exec [container name of rails] sh # /sbin/ip route|awk &#39;/default/ { print $3 }&#39; 192.168.112.1 How to get the IP address of the docker host from inside</description>
+    </item>
+    
+    <item>
+      <title>dockerでrails consoleする際の問題解消</title>
+      <link>https://rengotaku.github.io/posts/ba5bdc0e-8d02-47cd-8770-1c2b3850b7d3/</link>
+      <pubDate>Tue, 02 Jul 2019 11:46:41 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/ba5bdc0e-8d02-47cd-8770-1c2b3850b7d3/</guid>
+      <description>日本語が入力できない export LANG=&amp;quot;C.UTF-8&amp;quot;; rails c する 便利alias alias dcrailsconsole=&amp;quot;docker-compose -f ~/path/to/docker-compose.yml exec [rails service name] sh -c &#39;export LANG=\&amp;quot;C.UTF-8\&amp;quot;; rails c&#39;&amp;quot; トラブルシューティング Dockerfileに記述しても、execで</description>
+    </item>
+    
+    <item>
+      <title>fluentdをdockerで動かす際のチップ集</title>
+      <link>https://rengotaku.github.io/posts/d15ea14f-fed7-4ef3-aab3-8a0e554eae2f/</link>
+      <pubDate>Wed, 05 Jun 2019 18:52:25 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/d15ea14f-fed7-4ef3-aab3-8a0e554eae2f/</guid>
+      <description>構成 . ├── README.md ├── docker-compose.yml ├── fluentd │ ├── Dockerfile │ └── conf │ └── fluentd.conf 設定 docker FROM fluent/fluentd:v0.14.25 ADD conf/fluentd.conf /fluentd/etc/ docker-compose version: &amp;#39;2&amp;#39; services: fluentd: build: fluentd/ ports: - &amp;#34;24224:24224&amp;#34; volumes: - ./fluentd/conf:/fluentd/etc environment: FLUENTD_CONF: fluentd.conf fluentdのconf &amp;lt;source&amp;gt; @type forward &amp;lt;/source&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>dockerで動いているrailsでbetter_errorsのirbが動作しない</title>
+      <link>https://rengotaku.github.io/posts/bc3ee1e4-fa92-4af9-bdd1-7dced7696686/</link>
+      <pubDate>Thu, 30 May 2019 19:18:43 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/bc3ee1e4-fa92-4af9-bdd1-7dced7696686/</guid>
+      <description>未解決 画面右側のirbでデバッグできる画面が表示されない。 binding_of_caller が関連しているようだが、原因が不明。 画面を出すようにする BetterErrors::Middleware.allow_ip! &amp;#34;0.0.0.0/0&amp;#34; better_errors not working in a Docker container · Issue #270</description>
+    </item>
+    
+    <item>
+      <title>dockerで動くrailsでデバックを行いたい</title>
+      <link>https://rengotaku.github.io/posts/b6b89728-605f-40b8-9d57-2bb1cc14b932/</link>
+      <pubDate>Thu, 30 May 2019 11:10:57 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/b6b89728-605f-40b8-9d57-2bb1cc14b932/</guid>
+      <description>設定 docker-compose.yml services: rails: &amp;amp;app_base tty: true stdin_open: true 操作 アタッチ docker attach [container_name] $ docker-compose run --rm --service-ports [service name] でいけるかと思ったが、再度コンテナを立ち上げる挙動になり期待しない動きをする 便利コマンド</description>
+    </item>
+    
+    <item>
+      <title>dockerの特定のコンテナのlogファイルパスを取得したい</title>
+      <link>https://rengotaku.github.io/posts/b97d9d6b-7b42-45ce-b6de-b2f88537ca44/</link>
+      <pubDate>Wed, 24 Apr 2019 10:23:05 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/b97d9d6b-7b42-45ce-b6de-b2f88537ca44/</guid>
+      <description>$ docker ps -q --filter &amp;quot;name=target_container_name&amp;quot; | xargs docker inspect --format=&#39;{{.LogPath}}&#39; | xargs ls -hl How I filter and grep Docker containers, images, and volumes, and how you can too docker - Where is a log file with logs from a container? - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>dockerをインストールしたい</title>
+      <link>https://rengotaku.github.io/posts/6c66ea41-2cb6-4a4e-af25-fc380f41d43a/</link>
+      <pubDate>Mon, 15 Apr 2019 12:14:39 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/6c66ea41-2cb6-4a4e-af25-fc380f41d43a/</guid>
+      <description>dockerをインストール $ sudo yum install -y yum-utils $ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo $ sudo yum makecache fast $ sudo yum install docker-ce dockerユーザーの管理 $ sudo usermod -aG docker $USER Dockerインストールメモ - Qiita d</description>
+    </item>
+    
+    <item>
+      <title>v4.8.2のnodejsを使用の為にエラーがでる</title>
+      <link>https://rengotaku.github.io/posts/5751a135-f83f-4bb6-9fe7-3e052c5a1f06/</link>
+      <pubDate>Wed, 10 Apr 2019 16:56:10 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/5751a135-f83f-4bb6-9fe7-3e052c5a1f06/</guid>
+      <description>事象 Autoprefixer doesn’t support Node v4.8.2. Update it 対応 セットアップ( https://deb.nodesource.com/setup_10.x )をしてnodejsをインストールすればよい。 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - sudo apt-get install -y nodejs 指定のURLは公式</description>
+    </item>
+    
+    <item>
+      <title>slim3をdockerで動かす</title>
+      <link>https://rengotaku.github.io/posts/a5db633f-bee8-4632-8062-68a079750f53/</link>
+      <pubDate>Mon, 03 Sep 2018 14:42:27 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/a5db633f-bee8-4632-8062-68a079750f53/</guid>
+      <description>appフォルダを作成して、その中にSlim関連のファイルを詰め込むのが良いかも diarmuidie/docker-compose-php-slim: Sample Slim Skeleton app running with Docker Compose</description>
+    </item>
+    
+    <item>
+      <title>イメージ・コンテナの一括削除</title>
+      <link>https://rengotaku.github.io/posts/13dfcd27-8979-4289-8a21-07d7fcd8e605/</link>
+      <pubDate>Wed, 29 Aug 2018 14:05:41 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/13dfcd27-8979-4289-8a21-07d7fcd8e605/</guid>
+      <description>使用していないイメージ $ docker rmi --no-prune=true $(docker images -a -q) docker で使ってないイメージを全部消す時の Tips 全てのコンテナ $ docker rm $(docker ps -aq) [docker] コンテナを一括削除</description>
+    </item>
+    
+    <item>
+      <title>gcpのキャッシュ用のnginxを(docker上に)作成するポイント</title>
+      <link>https://rengotaku.github.io/posts/58b5162f-b8e8-4555-8a0c-e4218c8a2c6f/</link>
+      <pubDate>Wed, 22 Aug 2018 11:18:49 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/58b5162f-b8e8-4555-8a0c-e4218c8a2c6f/</guid>
+      <description>構成 APP &amp;lt;-&amp;gt; NGINX(これ) &amp;lt;-&amp;gt; GCP GCPにアクセスする際にNGINXを通してキャッシュを使用するのが目的。 Dockerfileを作成 Docker</description>
+    </item>
+    
+    <item>
+      <title>dockerのruby2.3.1を2.3.7に変更する</title>
+      <link>https://rengotaku.github.io/posts/e0664390-c0cf-41d4-b4db-86dfd3939938/</link>
+      <pubDate>Tue, 24 Jul 2018 15:34:43 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/e0664390-c0cf-41d4-b4db-86dfd3939938/</guid>
+      <description>Dockerfile 変更後 FROM ruby:2.3.7 RUN apt-get update -qq &amp;amp;&amp;amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqtcore4 libqtgui4 libqtwebkit-dev libqtwebkit4 RUN mkdir -p /var WORKDIR /var ENV BUNDLE_JOBS=4 COPY Gemfile Gemfile COPY Gemfile.lock Gemfile.lock RUN bundle install 変更前 FROM ruby:2.3.1 RUN apt-get update -qq &amp;amp;&amp;amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqt4-core libqt4-gui RUN mkdir -p /var WORKDIR /var ENV BUNDLE_JOBS=4</description>
+    </item>
+    
+    <item>
+      <title>ドッカーの不要なVolumeを削除する</title>
+      <link>https://rengotaku.github.io/posts/eb3a988d-3320-422c-b03d-c4fd8b0c2cd8/</link>
+      <pubDate>Wed, 11 Jul 2018 04:40:04 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/eb3a988d-3320-422c-b03d-c4fd8b0c2cd8/</guid>
+      <description>$ docker volume rm $(docker volume ls -qf dangling=true) DockerでVolumeの容量が増え続けていたときの対処 - より長続きするブログ</description>
+    </item>
+    
+    <item>
+      <title>dockerのfluentdをフラッシュさせる</title>
+      <link>https://rengotaku.github.io/posts/8e84f183-89fd-420d-ad2c-632eaf6f624f/</link>
+      <pubDate>Mon, 09 Jul 2018 12:26:18 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/8e84f183-89fd-420d-ad2c-632eaf6f624f/</guid>
+      <description>docker kill -s USR1 [contailner_name] fluent/fluentd-docker-image: Docker image for Fluentd</description>
+    </item>
+    
+    <item>
+      <title>Docker内でnode_moduleフォルダが消える</title>
+      <link>https://rengotaku.github.io/posts/c9dbb11b-372e-4aca-942d-1f3d66384569/</link>
+      <pubDate>Tue, 19 Jun 2018 13:39:40 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/c9dbb11b-372e-4aca-942d-1f3d66384569/</guid>
+      <description>version: &#39;2&#39; services: batch: build: . container_name: &amp;quot;c_chromium&amp;quot; env_file: .env working_dir: /home/app volumes: - .:/home/app - /home/app/node_modules # コンテナ内のnode_moduleをvolumesに登録 . . . Docker と node_modules と Volume Trick - Memento memo.</description>
+    </item>
+    
+    <item>
+      <title>DOCKERをインストールしたらGITの操作ができない</title>
+      <link>https://rengotaku.github.io/posts/5fe9cd57-10fe-44be-b2bc-1f1c65331c9a/</link>
+      <pubDate>Tue, 24 Apr 2018 10:17:35 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/5fe9cd57-10fe-44be-b2bc-1f1c65331c9a/</guid>
+      <description>明確な解決方法はわかっていない vagrantで192.168.XXX.XXXとipを指定している為発生？ 事象 dockerをインストールすると</description>
+    </item>
+    
+  </channel>
+</rss>

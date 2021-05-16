@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>RubyでGoogleplayのレシートを照合する | Vegetable Programing</title>
+
+<meta name="keywords" content="ruby, googleplay, ベジプロ, プログ, プログラム" />
+<meta name="description" content="# アンドロイドのレシートチェック def check_receipt_for_android def fetch_receipt_for_android(product_id, purchase_token, token) require &#39;net/http&#39; require &#39;net/https&#39; require &#39;uri&#39; require &#39;json&#39; # path = &#34;https://www.googleapis.com/androidpublisher/v2/applications/#{$ANDROID_PACKAGE_NAME}/purchases/products/#{product_id}/tokens/#{token}&#34; path = &#34;https://www.googleapis.com/androidpublisher/v1.1/applications/#{$ANDROID_PACKAGE_NAME}/inapp/#{product_id}/purchases/#{purchase_token}?access_token=#{token}&#34; uri = URI.parse path https = Net::HTTP.new(uri.host,uri.port) https.use_ssl = true https.verify_mode = OpenSSL::SSL::VERIFY_NONE headers = {} headers[&#34;accept&#34;] = &#34;application/json&#34; headers[&#34;content-type&#34;] = &#34;application/json&#34; # 参考: https://stackoverflow.com/questions/7346398/nethttp-failure-to-access-google-docs-list-data-api https.start do |http| return http.get(uri.request_uri, headers).body">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/posts/79cc8911-a70d-40cd-8090-bf93aa55b1a0/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="RubyでGoogleplayのレシートを照合する" />
+<meta property="og:description" content="# アンドロイドのレシートチェック def check_receipt_for_android def fetch_receipt_for_android(product_id, purchase_token, token) require &#39;net/http&#39; require &#39;net/https&#39; require &#39;uri&#39; require &#39;json&#39; # path = &#34;https://www.googleapis.com/androidpublisher/v2/applications/#{$ANDROID_PACKAGE_NAME}/purchases/products/#{product_id}/tokens/#{token}&#34; path = &#34;https://www.googleapis.com/androidpublisher/v1.1/applications/#{$ANDROID_PACKAGE_NAME}/inapp/#{product_id}/purchases/#{purchase_token}?access_token=#{token}&#34; uri = URI.parse path https = Net::HTTP.new(uri.host,uri.port) https.use_ssl = true https.verify_mode = OpenSSL::SSL::VERIFY_NONE headers = {} headers[&#34;accept&#34;] = &#34;application/json&#34; headers[&#34;content-type&#34;] = &#34;application/json&#34; # 参考: https://stackoverflow.com/questions/7346398/nethttp-failure-to-access-google-docs-list-data-api https.start do |http| return http.get(uri.request_uri, headers).body" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rengotaku.github.io/posts/79cc8911-a70d-40cd-8090-bf93aa55b1a0/" />
+<meta property="article:published_time" content="2018-04-25T10:23:13+09:00" />
+<meta property="article:modified_time" content="2019-01-11T12:24:42+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="RubyでGoogleplayのレシートを照合する"/>
+<meta name="twitter:description" content="# アンドロイドのレシートチェック def check_receipt_for_android def fetch_receipt_for_android(product_id, purchase_token, token) require &#39;net/http&#39; require &#39;net/https&#39; require &#39;uri&#39; require &#39;json&#39; # path = &#34;https://www.googleapis.com/androidpublisher/v2/applications/#{$ANDROID_PACKAGE_NAME}/purchases/products/#{product_id}/tokens/#{token}&#34; path = &#34;https://www.googleapis.com/androidpublisher/v1.1/applications/#{$ANDROID_PACKAGE_NAME}/inapp/#{product_id}/purchases/#{purchase_token}?access_token=#{token}&#34; uri = URI.parse path https = Net::HTTP.new(uri.host,uri.port) https.use_ssl = true https.verify_mode = OpenSSL::SSL::VERIFY_NONE headers = {} headers[&#34;accept&#34;] = &#34;application/json&#34; headers[&#34;content-type&#34;] = &#34;application/json&#34; # 参考: https://stackoverflow.com/questions/7346398/nethttp-failure-to-access-google-docs-list-data-api https.start do |http| return http.get(uri.request_uri, headers).body"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "RubyでGoogleplayのレシートを照合する",
+  "name": "RubyでGoogleplayのレシートを照合する",
+  "description": "# アンドロイドのレシートチェック def check_receipt_for_android def fetch_receipt_for_android(product_id, purchase_token, token) require \u0026amp;#39;net/http\u0026amp;#39; require \u0026amp;#39;net/https\u0026amp;#39; require …",
+  "keywords": [
+    "ruby", "googleplay", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "# アンドロイドのレシートチェック\r def check_receipt_for_android\rdef fetch_receipt_for_android(product_id, purchase_token, token)\rrequire 'net/http'\rrequire 'net/https'\rrequire 'uri'\rrequire 'json'\r# path = \"https://www.googleapis.com/androidpublisher/v2/applications/#{$ANDROID_PACKAGE_NAME}/purchases/products/#{product_id}/tokens/#{token}\"\r path = \"https://www.googleapis.com/androidpublisher/v1.1/applications/#{$ANDROID_PACKAGE_NAME}/inapp/#{product_id}/purchases/#{purchase_token}?access_token=#{token}\"\ruri = URI.parse path\rhttps = Net::HTTP.new(uri.host,uri.port)\rhttps.use_ssl = true\rhttps.verify_mode = OpenSSL::SSL::VERIFY_NONE\rheaders = {}\rheaders[\"accept\"] = \"application/json\"\rheaders[\"content-type\"] = \"application/json\"\r# 参考: https://stackoverflow.com/questions/7346398/nethttp-failure-to-access-google-docs-list-data-api\r https.start do |http|\rreturn http.get(uri.request_uri, headers).body\rend\rend\r# main\r # gemfile = gem 'google-api-client', '~ 0.8.6'\r require 'google/api_client'\rclient = Google::APIClient.new(\rapplication_name: '適宜',\rapplication_version: '1.2.3',\r)\rclient.authorization = Signet::OAuth2::Client.new(\rtoken_credential_uri: 'https://accounts.google.com/o/oauth2/token',\raudience: 'https://accounts.google.com/o/oauth2/token',\rscope: [],\r# https://www.eisbahn.jp/yoichiro/2011/10/oauth2-0_google-api.html\r client_id: $ANDROID_CLIENT_ID,\rclient_secret: $ANDROID_CLIENT_SECRET,\rrefresh_token: $ANDROID_REFRESH_KEY,\r)\rp client.authorization.access_token #= nil\r client.authorization.refresh!\rproduct_id = \"product_id\"\rpurchase_token = \"xxxxxxxxxxxx.xx-xxxx-kRhDk04x2ahVCKPxCDYAnxuxxxW1FX5kn8rEZf66d7BpItG411lyUr-xxxxxxxxxxxxxnBaDPZakoUBhUliHrbzwOT1ZoLvP-5uy7Fxii3DsxxxxxxMHf-n_N3c-ozSgxxxJ-LUXxx-bxxxf1Tw\"\rreceipt = get_android_refresh_token(product_id, purchase_token, client.authorization.access_token)\rpp JSON.parse(receipt, {symbolize_names: true})\rend\rAPIに必要なもの($ANDROID_CLIENT_IDなどに代入する)を揃えたら、実行できる。\r",
+  "wordCount" : "190",
+  "inLanguage": "en",
+  "datePublished": "2018-04-25T10:23:13+09:00",
+  "dateModified": "2019-01-11T12:24:42+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rengotaku.github.io/posts/79cc8911-a70d-40cd-8090-bf93aa55b1a0/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rengotaku.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      RubyでGoogleplayのレシートを照合する
+    </h1>
+    <div class="post-meta">April 25, 2018
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># アンドロイドのレシートチェック</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">check_receipt_for_android</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fetch_receipt_for_android</span>(product_id, purchase_token, token)
+    require <span style="color:#e6db74">&#39;net/http&#39;</span>
+    require <span style="color:#e6db74">&#39;net/https&#39;</span>
+    require <span style="color:#e6db74">&#39;uri&#39;</span>
+    require <span style="color:#e6db74">&#39;json&#39;</span>
+
+    <span style="color:#75715e"># path = &#34;https://www.googleapis.com/androidpublisher/v2/applications/#{$ANDROID_PACKAGE_NAME}/purchases/products/#{product_id}/tokens/#{token}&#34;</span>
+    path <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.googleapis.com/androidpublisher/v1.1/applications/</span><span style="color:#e6db74">#{</span>$ANDROID_PACKAGE_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74">/inapp/</span><span style="color:#e6db74">#{</span>product_id<span style="color:#e6db74">}</span><span style="color:#e6db74">/purchases/</span><span style="color:#e6db74">#{</span>purchase_token<span style="color:#e6db74">}</span><span style="color:#e6db74">?access_token=</span><span style="color:#e6db74">#{</span>token<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+
+    uri <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span><span style="color:#f92672">.</span>parse path
+    https <span style="color:#f92672">=</span> <span style="color:#66d9ef">Net</span><span style="color:#f92672">::</span><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">.</span>new(uri<span style="color:#f92672">.</span>host,uri<span style="color:#f92672">.</span>port)
+    https<span style="color:#f92672">.</span>use_ssl <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+    https<span style="color:#f92672">.</span>verify_mode <span style="color:#f92672">=</span> <span style="color:#66d9ef">OpenSSL</span><span style="color:#f92672">::</span><span style="color:#66d9ef">SSL</span><span style="color:#f92672">::</span><span style="color:#66d9ef">VERIFY_NONE</span>
+
+    headers <span style="color:#f92672">=</span> {}
+    headers<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;accept&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;application/json&#34;</span>
+    headers<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;content-type&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;application/json&#34;</span>
+
+    <span style="color:#75715e"># 参考: https://stackoverflow.com/questions/7346398/nethttp-failure-to-access-google-docs-list-data-api</span>
+    https<span style="color:#f92672">.</span>start <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>http<span style="color:#f92672">|</span>
+      <span style="color:#66d9ef">return</span> http<span style="color:#f92672">.</span>get(uri<span style="color:#f92672">.</span>request_uri, headers)<span style="color:#f92672">.</span>body
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
+
+  <span style="color:#75715e"># main</span>
+  <span style="color:#75715e"># gemfile =&gt; gem &#39;google-api-client&#39;, &#39;~&gt; 0.8.6&#39;</span>
+  require <span style="color:#e6db74">&#39;google/api_client&#39;</span>
+
+  client <span style="color:#f92672">=</span> <span style="color:#66d9ef">Google</span><span style="color:#f92672">::</span><span style="color:#66d9ef">APIClient</span><span style="color:#f92672">.</span>new(
+    <span style="color:#e6db74">application_name</span>:    <span style="color:#e6db74">&#39;適宜&#39;</span>,
+    <span style="color:#e6db74">application_version</span>: <span style="color:#e6db74">&#39;1.2.3&#39;</span>,
+  )
+
+  client<span style="color:#f92672">.</span>authorization <span style="color:#f92672">=</span> <span style="color:#66d9ef">Signet</span><span style="color:#f92672">::</span><span style="color:#66d9ef">OAuth2</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Client</span><span style="color:#f92672">.</span>new(
+    <span style="color:#e6db74">token_credential_uri</span>: <span style="color:#e6db74">&#39;https://accounts.google.com/o/oauth2/token&#39;</span>,
+    <span style="color:#e6db74">audience</span>:             <span style="color:#e6db74">&#39;https://accounts.google.com/o/oauth2/token&#39;</span>,
+    <span style="color:#e6db74">scope</span>:                <span style="color:#f92672">[]</span>,
+    <span style="color:#75715e"># https://www.eisbahn.jp/yoichiro/2011/10/oauth2-0_google-api.html</span>
+    <span style="color:#e6db74">client_id</span>:     $ANDROID_CLIENT_ID,
+    <span style="color:#e6db74">client_secret</span>: $ANDROID_CLIENT_SECRET,
+    <span style="color:#e6db74">refresh_token</span>: $ANDROID_REFRESH_KEY,
+  )
+
+  p client<span style="color:#f92672">.</span>authorization<span style="color:#f92672">.</span>access_token <span style="color:#75715e">#=&gt; nil</span>
+
+  client<span style="color:#f92672">.</span>authorization<span style="color:#f92672">.</span>refresh!
+
+  product_id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;product_id&#34;</span>
+  purchase_token <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;xxxxxxxxxxxx.xx-xxxx-kRhDk04x2ahVCKPxCDYAnxuxxxW1FX5kn8rEZf66d7BpItG411lyUr-xxxxxxxxxxxxxnBaDPZakoUBhUliHrbzwOT1ZoLvP-5uy7Fxii3DsxxxxxxMHf-n_N3c-ozSgxxxJ-LUXxx-bxxxf1Tw&#34;</span>
+  receipt <span style="color:#f92672">=</span> get_android_refresh_token(product_id, purchase_token, client<span style="color:#f92672">.</span>authorization<span style="color:#f92672">.</span>access_token)
+
+  pp <span style="color:#66d9ef">JSON</span><span style="color:#f92672">.</span>parse(receipt, {<span style="color:#e6db74">symbolize_names</span>: <span style="color:#66d9ef">true</span>})
+<span style="color:#66d9ef">end</span>
+</code></pre></div><pre><code class="language-!" data-lang="!">APIに必要なもの($ANDROID_CLIENT_IDなどに代入する)を揃えたら、実行できる。
+</code></pre>
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rengotaku.github.io/tags/ruby">ruby</a></li>
+      <li><a href="https://rengotaku.github.io/tags/googleplay">googleplay</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>dockerのruby2.3.1を2.3.7に変更する | Vegetable Programing</title>
+
+<meta name="keywords" content="docker, ruby, ベジプロ, プログ, プログラム" />
+<meta name="description" content="Dockerfile 変更後 FROM ruby:2.3.7 RUN apt-get update -qq &amp;&amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqtcore4 libqtgui4 libqtwebkit-dev libqtwebkit4 RUN mkdir -p /var WORKDIR /var ENV BUNDLE_JOBS=4 COPY Gemfile Gemfile COPY Gemfile.lock Gemfile.lock RUN bundle install 変更前 FROM ruby:2.3.1 RUN apt-get update -qq &amp;&amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqt4-core libqt4-gui RUN mkdir -p /var WORKDIR /var ENV BUNDLE_JOBS=4">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/posts/e0664390-c0cf-41d4-b4db-86dfd3939938/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="dockerのruby2.3.1を2.3.7に変更する" />
+<meta property="og:description" content="Dockerfile 変更後 FROM ruby:2.3.7 RUN apt-get update -qq &amp;&amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqtcore4 libqtgui4 libqtwebkit-dev libqtwebkit4 RUN mkdir -p /var WORKDIR /var ENV BUNDLE_JOBS=4 COPY Gemfile Gemfile COPY Gemfile.lock Gemfile.lock RUN bundle install 変更前 FROM ruby:2.3.1 RUN apt-get update -qq &amp;&amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqt4-core libqt4-gui RUN mkdir -p /var WORKDIR /var ENV BUNDLE_JOBS=4" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rengotaku.github.io/posts/e0664390-c0cf-41d4-b4db-86dfd3939938/" />
+<meta property="article:published_time" content="2018-07-24T15:34:43+09:00" />
+<meta property="article:modified_time" content="2018-07-24T15:37:29+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="dockerのruby2.3.1を2.3.7に変更する"/>
+<meta name="twitter:description" content="Dockerfile 変更後 FROM ruby:2.3.7 RUN apt-get update -qq &amp;&amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqtcore4 libqtgui4 libqtwebkit-dev libqtwebkit4 RUN mkdir -p /var WORKDIR /var ENV BUNDLE_JOBS=4 COPY Gemfile Gemfile COPY Gemfile.lock Gemfile.lock RUN bundle install 変更前 FROM ruby:2.3.1 RUN apt-get update -qq &amp;&amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqt4-core libqt4-gui RUN mkdir -p /var WORKDIR /var ENV BUNDLE_JOBS=4"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "dockerのruby2.3.1を2.3.7に変更する",
+  "name": "dockerのruby2.3.1を2.3.7に変更する",
+  "description": "Dockerfile 変更後 FROM ruby:2.3.7 RUN apt-get update -qq \u0026amp;amp;\u0026amp;amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqtcore4 libqtgui4 …",
+  "keywords": [
+    "docker", "ruby", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "Dockerfile 変更後 FROM ruby:2.3.7\rRUN apt-get update -qq \u0026\u0026 apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqtcore4 libqtgui4 libqtwebkit-dev libqtwebkit4\rRUN mkdir -p /var\rWORKDIR /var\rENV BUNDLE_JOBS=4\rCOPY Gemfile Gemfile\rCOPY Gemfile.lock Gemfile.lock\rRUN bundle install\r変更前 FROM ruby:2.3.1\rRUN apt-get update -qq \u0026\u0026 apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqt4-core libqt4-gui\rRUN mkdir -p /var\rWORKDIR /var\rENV BUNDLE_JOBS=4\rCOPY Gemfile Gemfile\rCOPY Gemfile.lock Gemfile.lock\rRUN bundle install\r2.3.7に変更 FROM ruby:2.3.1をFROM ruby:2.3.7へ\nStep 1/9 : FROM ruby:2.3.7\r--- 77ff091434b0\rStep 2/9 : RUN apt-get update -qq \u0026\u0026 apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqt4-core libqt4-gui\r--- Running in bb58849fe0c4\rReading package lists...\rBuilding dependency tree...\rReading state information...\rE: Unable to locate package libqt4-core\rE: Unable to locate package libqt4-gui\rapt-getでインストールするモジュールを変更 RUN apt-get ... libqt4-core libqt4-guiをRUN apt-get ... libqtcore4 libqtgui4へ\n$ docker-compose build rails\rBuilding rails\rStep 1/9 : FROM ruby:2.3.7\r--- 77ff091434b0\rStep 2/9 : RUN apt-get update -qq \u0026\u0026 apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqtcore4 libqtgui4\r--- Using cache\r--- 8e698bfdb416\rStep 3/9 : RUN mkdir -p /var\r--- Using cache\r--- 6a5851d6602b\rStep 4/9 : WORKDIR /var\r--- Using cache\r--- e30dc10c0946\rStep 5/9 : ENV BUNDLE_JOBS=4\r--- Using cache\r--- a2265255a0f5\rStep 6/9 : COPY Gemfile Gemfile\r--- Using cache\r--- ff5546a0baae\rStep 7/9 : COPY Gemfile.lock Gemfile.lock\r--- 1dae9fff602e\rStep 8/9 : RUN bundle update\r--- Running in 07461c94f948\rFetching gem metadata from https://rubygems.org/.......\rFetching gem metadata from https://rubygems.org/.\rResolving dependencies..............\rFetching rake 12.3.1 (was 11.2.2)\rFetching concurrent-ruby 1.0.5 (was 1.0.2)\r.\r.\r.\rFetching meta-tags 2.10.0 (was 2.1.0)\rFetching kaminari 1.1.1 (was 0.17.0)\rInstalling kaminari 1.1.1 (was 0.17.0)\rInstalling meta-tags 2.10.0 (was 2.1.0)\rGem::Ext::BuildError: ERROR: Failed to build gem native extension.\rcurrent directory: /usr/local/bundle/gems/capybara-webkit-1.15.0\r/usr/local/bin/ruby -r ./siteconf20180724-7-1k7d1f0.rb extconf.rb\rcd src/ \u0026\u0026 /usr/lib/x86_64-linux-gnu/qt4/bin/qmake\r/usr/local/bundle/gems/capybara-webkit-1.15.0/src/webkit_server.pro -o\rMakefile.webkit_server\rcd src/ \u0026\u0026 make -f Makefile.webkit_server\rmake[1]: Entering directory '/usr/local/bundle/gems/capybara-webkit-1.15.0/src'\r.\r.\r.\rstable.h:23:23: fatal error: QWebElement: No such file or directory\r#include \r^\rcompilation terminated.\rMakefile.webkit_server:505: recipe for target 'build/webkit_server.gch/c++'\rfailed\rmake[1]: *** [build/webkit_server.gch/c++] Error 1\rmake[1]: *** Waiting for unfinished jobs....\rmake[1]: Leaving directory '/usr/local/bundle/gems/capybara-webkit-1.15.0/src'\rMakefile:39: recipe for target 'sub-src-webkit_server-pro-make_default-ordered'\rfailed\rmake: *** [sub-src-webkit_server-pro-make_default-ordered] Error 2\rCommand 'make --jobs=4' failed\rcurrent directory: /usr/local/bundle/gems/capybara-webkit-1.15.0\rmake \"DESTDIR=\" clean\rcd src/ \u0026\u0026 make -f Makefile.webkit_server clean\rmake[1]: Entering directory '/usr/local/bundle/gems/capybara-webkit-1.15.0/src'\rrm -f build/moc_BlockUrl.cpp build/moc_AllowUrl.cpp\r.\r.\r.\rstable.h:23:23: fatal error: QWebElement: No such file or directory\r#include \r^\rcompilation terminated.\rMakefile.webkit_server:505: recipe for target 'build/webkit_server.gch/c++'\rfailed\rmake[1]: *** [build/webkit_server.gch/c++] Error 1\rmake[1]: Leaving directory '/usr/local/bundle/gems/capybara-webkit-1.15.0/src'\rMakefile:39: recipe for target 'sub-src-webkit_server-pro-make_default-ordered'\rfailed\rmake: *** [sub-src-webkit_server-pro-make_default-ordered] Error 2\rmake failed, exit code 2\rGem files will remain installed in /usr/local/bundle/gems/capybara-webkit-1.15.0\rfor inspection.\rResults logged to\r/usr/local/bundle/extensions/x86_64-linux/2.3.0/capybara-webkit-1.15.0/gem_make.out\rAn error occurred while installing capybara-webkit (1.15.0), and Bundler cannot\rcontinue.\rMake sure that `gem install capybara-webkit -v '1.15.0' --source\r'https://rubygems.org/'` succeeds before bundling.\rIn Gemfile:\rcapybara-webkit\rERROR: Service 'rails' failed to build: The command '/bin/sh -c bundle update' returned a non-zero code: 5\r apt - Unable to locate package libqt4-core and libqt4-gui on Ubuntu 16 - Ask Ubuntu\n apt-getでインストールするモジュールを追加 RUN apt-get ... libqtwebkit-dev libqtwebkit4 を追加\n Error installing capybara-webkit 1.11.1 with native extensions: QWebElement: No such file or directory · Issue #7729 · travis-ci/travis-ci\n ",
+  "wordCount" : "639",
+  "inLanguage": "en",
+  "datePublished": "2018-07-24T15:34:43+09:00",
+  "dateModified": "2018-07-24T15:37:29+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rengotaku.github.io/posts/e0664390-c0cf-41d4-b4db-86dfd3939938/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rengotaku.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      dockerのruby2.3.1を2.3.7に変更する
+    </h1>
+    <div class="post-meta">July 24, 2018
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="dockerfile">Dockerfile<a hidden class="anchor" aria-hidden="true" href="#dockerfile">#</a></h1>
+<h2 id="変更後">変更後<a hidden class="anchor" aria-hidden="true" href="#変更後">#</a></h2>
+<pre><code>FROM ruby:2.3.7
+
+RUN apt-get update -qq &amp;&amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqtcore4 libqtgui4 libqtwebkit-dev libqtwebkit4
+
+RUN mkdir -p /var
+
+WORKDIR /var
+
+ENV BUNDLE_JOBS=4
+
+COPY Gemfile Gemfile
+COPY Gemfile.lock Gemfile.lock
+
+RUN bundle install
+</code></pre><h2 id="変更前">変更前<a hidden class="anchor" aria-hidden="true" href="#変更前">#</a></h2>
+<pre><code>FROM ruby:2.3.1
+ 
+RUN apt-get update -qq &amp;&amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
+
+RUN mkdir -p /var
+ 
+WORKDIR /var
+
+ENV BUNDLE_JOBS=4
+ 
+COPY Gemfile Gemfile
+COPY Gemfile.lock Gemfile.lock
+
+RUN bundle install
+</code></pre><h1 id="237に変更">2.3.7に変更<a hidden class="anchor" aria-hidden="true" href="#237に変更">#</a></h1>
+<p><code>FROM ruby:2.3.1</code>を<code>FROM ruby:2.3.7</code>へ</p>
+<pre><code>Step 1/9 : FROM ruby:2.3.7
+---&gt; 77ff091434b0
+Step 2/9 : RUN apt-get update -qq &amp;&amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
+---&gt; Running in bb58849fe0c4
+Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package libqt4-core
+E: Unable to locate package libqt4-gui
+</code></pre><h1 id="apt-getでインストールするモジュールを変更">apt-getでインストールするモジュールを変更<a hidden class="anchor" aria-hidden="true" href="#apt-getでインストールするモジュールを変更">#</a></h1>
+<p><code>RUN apt-get ... libqt4-core libqt4-gui</code>を<code>RUN apt-get ... libqtcore4 libqtgui4</code>へ</p>
+<pre><code>$ docker-compose build rails
+Building rails
+Step 1/9 : FROM ruby:2.3.7
+ ---&gt; 77ff091434b0
+Step 2/9 : RUN apt-get update -qq &amp;&amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqtcore4 libqtgui4
+ ---&gt; Using cache
+ ---&gt; 8e698bfdb416
+Step 3/9 : RUN mkdir -p /var
+ ---&gt; Using cache
+ ---&gt; 6a5851d6602b
+Step 4/9 : WORKDIR /var
+ ---&gt; Using cache
+ ---&gt; e30dc10c0946
+Step 5/9 : ENV BUNDLE_JOBS=4
+ ---&gt; Using cache
+ ---&gt; a2265255a0f5
+Step 6/9 : COPY Gemfile Gemfile
+ ---&gt; Using cache
+ ---&gt; ff5546a0baae
+Step 7/9 : COPY Gemfile.lock Gemfile.lock
+ ---&gt; 1dae9fff602e
+Step 8/9 : RUN bundle update
+ ---&gt; Running in 07461c94f948
+Fetching gem metadata from https://rubygems.org/.......
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies..............
+Fetching rake 12.3.1 (was 11.2.2)
+Fetching concurrent-ruby 1.0.5 (was 1.0.2)
+.
+.
+.
+Fetching meta-tags 2.10.0 (was 2.1.0)
+Fetching kaminari 1.1.1 (was 0.17.0)
+Installing kaminari 1.1.1 (was 0.17.0)
+Installing meta-tags 2.10.0 (was 2.1.0)
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    current directory: /usr/local/bundle/gems/capybara-webkit-1.15.0
+/usr/local/bin/ruby -r ./siteconf20180724-7-1k7d1f0.rb extconf.rb
+cd src/ &amp;&amp; /usr/lib/x86_64-linux-gnu/qt4/bin/qmake
+/usr/local/bundle/gems/capybara-webkit-1.15.0/src/webkit_server.pro -o
+Makefile.webkit_server
+cd src/ &amp;&amp; make -f Makefile.webkit_server
+make[1]: Entering directory '/usr/local/bundle/gems/capybara-webkit-1.15.0/src'
+.
+.
+.
+stable.h:23:23: fatal error: QWebElement: No such file or directory
+ #include &lt;QWebElement&gt;
+                       ^
+compilation terminated.
+Makefile.webkit_server:505: recipe for target 'build/webkit_server.gch/c++'
+failed
+make[1]: *** [build/webkit_server.gch/c++] Error 1
+make[1]: *** Waiting for unfinished jobs....
+make[1]: Leaving directory '/usr/local/bundle/gems/capybara-webkit-1.15.0/src'
+Makefile:39: recipe for target 'sub-src-webkit_server-pro-make_default-ordered'
+failed
+make: *** [sub-src-webkit_server-pro-make_default-ordered] Error 2
+Command 'make  --jobs=4' failed
+
+current directory: /usr/local/bundle/gems/capybara-webkit-1.15.0
+make &quot;DESTDIR=&quot; clean
+cd src/ &amp;&amp; make -f Makefile.webkit_server clean
+make[1]: Entering directory '/usr/local/bundle/gems/capybara-webkit-1.15.0/src'
+rm -f build/moc_BlockUrl.cpp build/moc_AllowUrl.cpp
+.
+.
+.
+stable.h:23:23: fatal error: QWebElement: No such file or directory
+ #include &lt;QWebElement&gt;
+                       ^
+compilation terminated.
+Makefile.webkit_server:505: recipe for target 'build/webkit_server.gch/c++'
+failed
+make[1]: *** [build/webkit_server.gch/c++] Error 1
+make[1]: Leaving directory '/usr/local/bundle/gems/capybara-webkit-1.15.0/src'
+Makefile:39: recipe for target 'sub-src-webkit_server-pro-make_default-ordered'
+failed
+make: *** [sub-src-webkit_server-pro-make_default-ordered] Error 2
+
+make failed, exit code 2
+
+Gem files will remain installed in /usr/local/bundle/gems/capybara-webkit-1.15.0
+for inspection.
+Results logged to
+/usr/local/bundle/extensions/x86_64-linux/2.3.0/capybara-webkit-1.15.0/gem_make.out
+
+An error occurred while installing capybara-webkit (1.15.0), and Bundler cannot
+continue.
+Make sure that `gem install capybara-webkit -v '1.15.0' --source
+'https://rubygems.org/'` succeeds before bundling.
+
+In Gemfile:
+  capybara-webkit
+ERROR: Service 'rails' failed to build: The command '/bin/sh -c bundle update' returned a non-zero code: 5
+</code></pre><blockquote>
+<p><a href="https://askubuntu.com/questions/777388/unable-to-locate-package-libqt4-core-and-libqt4-gui-on-ubuntu-16">apt - Unable to locate package libqt4-core and libqt4-gui on Ubuntu 16 - Ask Ubuntu</a></p>
+</blockquote>
+<h1 id="apt-getでインストールするモジュールを追加">apt-getでインストールするモジュールを追加<a hidden class="anchor" aria-hidden="true" href="#apt-getでインストールするモジュールを追加">#</a></h1>
+<p><code>RUN apt-get ... libqtwebkit-dev libqtwebkit4</code> を追加</p>
+<blockquote>
+<p><a href="https://github.com/travis-ci/travis-ci/issues/7729">Error installing capybara-webkit 1.11.1 with native extensions: QWebElement: No such file or directory · Issue #7729 · travis-ci/travis-ci</a></p>
+</blockquote>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rengotaku.github.io/tags/docker">docker</a></li>
+      <li><a href="https://rengotaku.github.io/tags/ruby">ruby</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

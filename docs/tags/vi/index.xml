@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vi on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/vi/</link>
+    <description>Recent content in vi on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 11 Dec 2019 12:41:26 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/vi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>viの基本操作</title>
+      <link>https://rengotaku.github.io/posts/62f7585b-3291-42f9-8f8c-3394e4f37000/</link>
+      <pubDate>Wed, 24 Jul 2019 12:55:16 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/62f7585b-3291-42f9-8f8c-3394e4f37000/</guid>
+      <description>1文字の移動 操作 結果 h 左 j 下 k 上 l 右 1単語の移動 操作 結果 w 次の単語の先頭 (word) b 現在または前の単語の先頭 e 現在または次の単語の末尾 行での移動 操作</description>
+    </item>
+    
+    <item>
+      <title>複数個所をコメントアウト(#)</title>
+      <link>https://rengotaku.github.io/posts/ead9e6be-4103-4d81-8e8d-561c7632fff6/</link>
+      <pubDate>Sun, 29 Jul 2018 09:52:42 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/ead9e6be-4103-4d81-8e8d-561c7632fff6/</guid>
+      <description>:11,20 s/^/#/ vi で範囲を指定してコメントアウト - Bacchus.gif</description>
+    </item>
+    
+  </channel>
+</rss>

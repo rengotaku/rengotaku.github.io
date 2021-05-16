@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>symfony on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/symfony/</link>
+    <description>Recent content in symfony on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Tue, 08 Jan 2019 12:22:49 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/symfony/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>propelでor条件を使用したい</title>
+      <link>https://rengotaku.github.io/posts/c79fe8fe-5499-4a99-a4d0-92c59e098c0a/</link>
+      <pubDate>Tue, 08 Jan 2019 12:22:49 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/c79fe8fe-5499-4a99-a4d0-92c59e098c0a/</guid>
+      <description>$c-&amp;gt;add(TableNamePeer::CLUMN_A, 1); $criterion1 = $c-&amp;gt;getNewCriterion(TableNamePeer::CLUMN_B, &#39;hoge&#39;); $criterion1-&amp;gt;addOr($c-&amp;gt;getNewCriterion(TableNamePeer::CLUMN_B, &#39;piyo&#39;)); ==&amp;gt; select * from table_name where (条件1 or 条件2) Criteriaで複雑な条件のクエリを書く - Qiita</description>
+    </item>
+    
+    <item>
+      <title>PropelでCriteriaから生のSQLを出力したい</title>
+      <link>https://rengotaku.github.io/posts/c5c5f8f3-efe2-4b1b-84d5-72185218f589/</link>
+      <pubDate>Fri, 27 Apr 2018 15:38:29 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/c5c5f8f3-efe2-4b1b-84d5-72185218f589/</guid>
+      <description>条件を設定したCriteriaオブジェクトを生のSQLを出力してくれる。 function getSqlOfCriteria($c) { $params = array(); $r = BasePeer::createSelectSql($c, $params); $o = preg_replace(&#39;/:p[0-9]+/&#39;, &#39;%s&#39;, $r); $ggg = array(); foreach($params AS $e) { if(is_integer($e[&#39;value&#39;]) OR is_bool($e[&#39;value&#39;])) { $ggg[] = $e[&#39;value&#39;]; } else { $ggg[] =</description>
+    </item>
+    
+  </channel>
+</rss>

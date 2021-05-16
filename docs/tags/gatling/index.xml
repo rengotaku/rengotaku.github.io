@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gatling on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/gatling/</link>
+    <description>Recent content in gatling on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Tue, 20 Oct 2020 22:03:41 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/gatling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>gatlingでfeedを無限に生成したい</title>
+      <link>https://rengotaku.github.io/posts/401b2dea-e0ba-4a5e-a016-e9f04e3ea54b/</link>
+      <pubDate>Tue, 20 Oct 2020 22:03:41 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/401b2dea-e0ba-4a5e-a016-e9f04e3ea54b/</guid>
+      <description>ソース class HogeSimulation extends Simulation { val r = scala.util.Random val feeder = Iterator.continually { var id = r.nextInt(9999) + 1 Map( &amp;#34;uid&amp;#34; -&amp;gt; id, &amp;#34;screen_name&amp;#34; -&amp;gt; (&amp;#34;stress_&amp;#34; + id.toString), ) } val scn = scenario(&amp;#34;Login Users&amp;#34;) .feed(feeder) .exec(...) setUp( scn.inject(constantUsersPerSec(Configuration.users) during (Configuration.duration seconds) ) ).protocols(Configuration.httpProtocol) } 参考 Gatling Open-Source Load Testing Documentation – For DevOps and CI/CD メモ Custom feeder with random data for Gatling</description>
+    </item>
+    
+  </channel>
+</rss>

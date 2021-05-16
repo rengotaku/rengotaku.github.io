@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nodejs on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/nodejs/</link>
+    <description>Recent content in nodejs on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Tue, 21 Jan 2020 20:00:07 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>gulpでjsxコンパイル時にエラー</title>
+      <link>https://rengotaku.github.io/posts/cb866f60-e70d-4e05-89b5-b37246c71c55/</link>
+      <pubDate>Tue, 21 Jan 2020 20:00:07 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/cb866f60-e70d-4e05-89b5-b37246c71c55/</guid>
+      <description>解決 babelifyにpresetsを設定する .transform(babelify.configure({ presets: [&amp;quot;@babel/react&amp;quot;,&amp;quot;@babel/preset-env&amp;quot;] })) React.js - webpack4で構築、jsx内でReactの記述が使えない｜teratail node.js -</description>
+    </item>
+    
+    <item>
+      <title>Wating file in docker with gulp</title>
+      <link>https://rengotaku.github.io/posts/f548e78f-6f95-4276-bf21-64b6385bab2a/</link>
+      <pubDate>Sat, 28 Dec 2019 13:16:47 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/f548e78f-6f95-4276-bf21-64b6385bab2a/</guid>
+      <description>gulp.watch(&amp;#39;./**/*&amp;#39;, {interval: 1000, usePolling: true}, gulp.series(&amp;#39;superTask&amp;#39;)); node.js - Within Docker VM, Gulp-Watch Seems to not work well on volumes hosted from the host OS - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>pugを使用する際に参考にしたサイト</title>
+      <link>https://rengotaku.github.io/posts/2431ed9e-ff55-409a-9588-df18432def81/</link>
+      <pubDate>Fri, 23 Aug 2019 19:09:12 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/2431ed9e-ff55-409a-9588-df18432def81/</guid>
+      <description>htmlからの変換 HTML to PUG - Free HTML to PUG Online Converter</description>
+    </item>
+    
+    <item>
+      <title>gulp4を使用する際に参考にしたサイト</title>
+      <link>https://rengotaku.github.io/posts/52a6e29e-4257-4e78-a33c-32e45fbd0cf6/</link>
+      <pubDate>Thu, 22 Aug 2019 13:41:52 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/52a6e29e-4257-4e78-a33c-32e45fbd0cf6/</guid>
+      <description>node.js - Cannot find module &amp;lsquo;../lib/completion&amp;rsquo; Inspite of installing Completion - Stack Overflow 他のプロジェクトからnode_moduleごと移行したら発生した より便利になった gulp 4.0 への移行方法と変更点をまとめま</description>
+    </item>
+    
+    <item>
+      <title>gulpを動かしたらエラーがcss-mqpackerでエラーが発生する</title>
+      <link>https://rengotaku.github.io/posts/0cdcf6ba-6e3a-4317-a0d1-c41cb9638af2/</link>
+      <pubDate>Tue, 12 Mar 2019 12:23:04 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/0cdcf6ba-6e3a-4317-a0d1-c41cb9638af2/</guid>
+      <description>事象 $ gulp /path/to/node_modules/css-mqpacker/index.js:139 ...options ^^^ SyntaxError: Unexpected token ... at Object.exports.runInThisContext (vm.js:76:16) at Module._compile (module.js:542:28) at Object.Module._extensions..js (module.js:579:10) at Module.load (module.js:487:32) at tryModuleLoad (module.js:446:12) at Function.Module._load (module.js:438:3) at Module.require (module.js:497:17) at require (internal/module.js:20:19) at Object.&amp;lt;anonymous&amp;gt; (/Users/300807/myspace/web_diff/gulpfile.js:20:14) at Module._compile (module.js:570:32) at Object.Module._extensions..js (module.js:579:10) at Module.load (module.js:487:32) at tryModuleLoad (module.js:446:12) at Function.Module._load (module.js:438:3) at Module.require (module.js:497:17) at require (internal/module.js:20:19) 対応 nodeのバージョ</description>
+    </item>
+    
+    <item>
+      <title>nvmで管理しているnodeバージョンを切り替える</title>
+      <link>https://rengotaku.github.io/posts/cf9a5956-7738-459a-afa7-f1f775805ced/</link>
+      <pubDate>Tue, 04 Dec 2018 15:13:39 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/cf9a5956-7738-459a-afa7-f1f775805ced/</guid>
+      <description>$ nvm install v0.6.11 $ nvm use v0.6.11 $ nvm alias default v0.6.11 $ node -v v0.6.11 nvm alias default がミソ 【Node.js】nvmをインストールして設定するまでの方法 | creator note</description>
+    </item>
+    
+    <item>
+      <title>base64で受け取り、fileとして保存</title>
+      <link>https://rengotaku.github.io/posts/2fbf82e3-b162-4a8d-b3e4-ea3d4c55452a/</link>
+      <pubDate>Tue, 13 Nov 2018 10:22:38 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/2fbf82e3-b162-4a8d-b3e4-ea3d4c55452a/</guid>
+      <description>const fileData = encodedData.replace(/^data:\w+\/\w+;base64,/, &amp;#39;&amp;#39;) const decodedFile = new Buffer(fileData, &amp;#39;base64&amp;#39;) メモ base64は直書きした場合のみ機能する。 imgタグのsrcにurlを指定し、その結果がbase64の場合は、画像</description>
+    </item>
+    
+    <item>
+      <title>uuidを実装</title>
+      <link>https://rengotaku.github.io/posts/616ffa86-75ee-4374-bab2-be765b51113b/</link>
+      <pubDate>Mon, 15 Oct 2018 14:46:35 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/616ffa86-75ee-4374-bab2-be765b51113b/</guid>
+      <description>インストール $ npm install uuid --save 利用方法 const uuidv5 = require(&amp;#39;uuid/v5&amp;#39;); const MY_NAMESPACE = &amp;#39;1b671a64-40d5-491e-99b0-da01ff1f3341&amp;#39;; uuidv5(&amp;#39;Hello, World!&amp;#39;, MY_NAMESPACE); // ⇨ &amp;#39;630eb68f-e0fa-5ecc-887a-7c7a62614681&amp;#39; uuid - npm</description>
+    </item>
+    
+    <item>
+      <title>404エラーを自前でレスポンスしたい</title>
+      <link>https://rengotaku.github.io/posts/0e600201-1586-4eda-a51c-17d84288c9a7/</link>
+      <pubDate>Mon, 15 Oct 2018 10:25:42 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/0e600201-1586-4eda-a51c-17d84288c9a7/</guid>
+      <description>res.status(404) // HTTP status 404: NotFound .send(&amp;#39;Not found&amp;#39;); javascript - How to programmatically send a 404 response with Express/Node? - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>Error: Cannot promisify an API that has normal methods</title>
+      <link>https://rengotaku.github.io/posts/850c0c9e-2556-4325-9f8b-f8c56f16d618/</link>
+      <pubDate>Tue, 09 Oct 2018 19:11:20 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/850c0c9e-2556-4325-9f8b-f8c56f16d618/</guid>
+      <description>対応 const client = Promise.promisifyAll(new AWS.DynamoDB({ endpoint: HOST }), {suffix: &amp;#34;MySuffix&amp;#34;}) XXXAsyncメソッド名を、XXXMySuffixに変更する必要がある Promise.promisifyAll | bluebird 事象 const client = Promise.promisifyAll(new AWS.DynamoDB({ endpoint: HOST })) Cannot promisify an API that has normal methods with</description>
+    </item>
+    
+    <item>
+      <title>画像API作成のTips</title>
+      <link>https://rengotaku.github.io/posts/1ae218f4-88c7-433e-8ffe-94fab4630b92/</link>
+      <pubDate>Fri, 05 Oct 2018 11:48:29 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/1ae218f4-88c7-433e-8ffe-94fab4630b92/</guid>
+      <description>メイン Node.js + Express + Sqlite3 で画像APIをつくろう - Hello New World シンタックスエラー、put時にレスポンスを返却しない、などを適宜修正する必要がある メモ 画像の送</description>
+    </item>
+    
+    <item>
+      <title>同期処理で画像をダウンロード</title>
+      <link>https://rengotaku.github.io/posts/90e4df68-ccc5-435b-89e9-4f5c6ec83b5f/</link>
+      <pubDate>Tue, 21 Aug 2018 06:58:40 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/90e4df68-ccc5-435b-89e9-4f5c6ec83b5f/</guid>
+      <description>var request = require(&amp;#39;sync-request&amp;#39;); try { const response = await request(&amp;#39;GET&amp;#39;, photoUrl.url); if(response.statusCode === 200){ fs.writeFileSync( &amp;#39;/path/to/image&amp;#39;, response.body, &amp;#39;binary&amp;#39; ); } catch (error) { console.log(error); } node.js でインターネット上の画像をダウンロード - Qiita 同期処理でrequestモジュールの戻り値を</description>
+    </item>
+    
+    <item>
+      <title>ローカルファイルをアップロード</title>
+      <link>https://rengotaku.github.io/posts/3b819e1e-952e-49ae-9962-40befc074e47/</link>
+      <pubDate>Thu, 09 Aug 2018 21:16:29 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/3b819e1e-952e-49ae-9962-40befc074e47/</guid>
+      <description>var projectId = process.env.GCLOUD_PROJECT_ID var gcloud = require(&amp;#39;gcloud&amp;#39;)({ projectId: projectId, keyFilename: &amp;#39;/local/path/to/keyfile&amp;#39; }); var storage = gcloud.storage(); var bucket = storage.bucket(&amp;#39;storageName&amp;#39;); var options = { destination: &amp;#39;2015/05/file&amp;#39;, // ファイル名 validation: &amp;#39;crc32c&amp;#39; // 謎 } bucket.upload(&amp;#34;/local/path/to/file&amp;#34;, options, function(err, file){ if (err) { console.log(&amp;#34;err: &amp;#34; + err); } else if (!file) { console.log(&amp;#34;empty&amp;#34;); } else { console.log(&amp;#34;ok&amp;#34;); } }); Google Cloud Storage</description>
+    </item>
+    
+    <item>
+      <title>HTMLエスケープせずに変数を出力</title>
+      <link>https://rengotaku.github.io/posts/1c5c81e3-a71a-48b1-8924-9fac3f2c60c2/</link>
+      <pubDate>Mon, 30 Jul 2018 09:13:25 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/1c5c81e3-a71a-48b1-8924-9fac3f2c60c2/</guid>
+      <description>&amp;lt;%- &amp;quot;&amp;lt;tags_here&amp;gt;&amp;quot; %&amp;gt; node.js - Print raw html strings on EJS - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>キャメルケースからスネークケースに変換</title>
+      <link>https://rengotaku.github.io/posts/35138fa3-25a2-4bb2-8149-8da0727793b6/</link>
+      <pubDate>Fri, 29 Jun 2018 11:28:51 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/35138fa3-25a2-4bb2-8149-8da0727793b6/</guid>
+      <description>// CamelCaseName =&amp;gt; camel_case_name toSnakCase(name){ return name.replace(/(?:^|\.?)([A-Z])/g, function (x,y){return &amp;quot;_&amp;quot; + y.toLowerCase()}).replace(/^_/, &amp;quot;&amp;quot;); } string - Javascript convert PascalCase to underscore_case - Stack Overflow</description>
+    </item>
+    
+    <item>
+      <title>指定のフォルダ内のファイル数を一定に保つ</title>
+      <link>https://rengotaku.github.io/posts/3ef9338c-81ae-4c67-ba95-58565aea42f0/</link>
+      <pubDate>Mon, 25 Jun 2018 12:25:11 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/3ef9338c-81ae-4c67-ba95-58565aea42f0/</guid>
+      <description>deleteExtraFile(dirPath, limit=100){ const files = fs.readdirSync(dirPath).filter(function(file){ // .XXX は除外 return !/^\..+$/.test(file); }); let fileCreatedAts = []; // fileの生成時間を抽出 for (let i = 0; i &amp;lt; files.length; i++) { const filename = files[i]; const fileStat = fs.statSync(path.join(dirPath, filename)); const filedata = { filename: filename, birthtimeMs: fileStat[&amp;#39;birthtimeMs&amp;#39;], }; fileCreatedAts.push(filedata); } // 日付を降順でソー</description>
+    </item>
+    
+    <item>
+      <title>制御文字を取り除く</title>
+      <link>https://rengotaku.github.io/posts/9d17952b-b340-4686-9b04-3e635bcec8fa/</link>
+      <pubDate>Wed, 20 Jun 2018 20:50:11 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/9d17952b-b340-4686-9b04-3e635bcec8fa/</guid>
+      <description>// 制御文字を取り除く function removeControlCharacter(str){ return str.replace(/[\x00-\x09\x0B\x0C\x0E-\x1F\x7F]\[(3\d|0)m/g, &#39;&#39;) } 制御文字を取り除く方法（改行コードは保持） - Qiita コンソールに出力する文字に色をつける - Qiita</description>
+    </item>
+    
+    <item>
+      <title>Docker内でnode_moduleフォルダが消える</title>
+      <link>https://rengotaku.github.io/posts/c9dbb11b-372e-4aca-942d-1f3d66384569/</link>
+      <pubDate>Tue, 19 Jun 2018 13:39:40 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/c9dbb11b-372e-4aca-942d-1f3d66384569/</guid>
+      <description>version: &#39;2&#39; services: batch: build: . container_name: &amp;quot;c_chromium&amp;quot; env_file: .env working_dir: /home/app volumes: - .:/home/app - /home/app/node_modules # コンテナ内のnode_moduleをvolumesに登録 . . . Docker と node_modules と Volume Trick - Memento memo.</description>
+    </item>
+    
+    <item>
+      <title>テーブルへデータの追加、検索</title>
+      <link>https://rengotaku.github.io/posts/fe507f9e-e22c-4457-9cd0-50edc4353eee/</link>
+      <pubDate>Mon, 28 May 2018 19:32:40 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/fe507f9e-e22c-4457-9cd0-50edc4353eee/</guid>
+      <description>table: users column: username, password, is_active, const Op = Sequelize.Op; const User = sequelize.define(&#39;user&#39;, { id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true }, username: { type: Sequelize.STRING, allowNull: false, }, password: { type: Sequelize.STRING, allowNull: false, }, isActive: { field: &#39;is_active&#39;, type: Sequelize.BOOLEAN, allowNull: false, defaultValue: true, }, },{ timestamps: true, underscored: true, }); console.log(&#39;It worked&#39;); var user = User.create({ username: &amp;quot;test&amp;quot;, password: &amp;quot;test&amp;quot;, isActive: true, }).then(() =&amp;gt; {</description>
+    </item>
+    
+    <item>
+      <title>express(4系)を起動するまで</title>
+      <link>https://rengotaku.github.io/posts/ca275898-a6e9-4213-9df1-2566d168ab62/</link>
+      <pubDate>Tue, 01 May 2018 09:30:43 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/ca275898-a6e9-4213-9df1-2566d168ab62/</guid>
+      <description>express(+ジェネレータ)のインストール $ npm install -g express $ npm install -g express-generator プロジェクトの生成 $ express sample_project ライブラリのインストール $ cd sample_project $ npm install サーバ起動 $ node</description>
+    </item>
+    
+  </channel>
+</rss>

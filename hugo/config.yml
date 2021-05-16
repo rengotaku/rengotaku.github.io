@@ -1,0 +1,45 @@
+baseURL: "https://rengotaku.github.io/"
+title: "Vegetable Programing"
+theme: "hugo-PaperMod"
+copyright: "©2018-2020 Vegetable Programing."
+
+languageCode: "ja_JP"
+hasCJKLanguage: true
+
+enableRobotsTXT: true
+
+googleAnalytics: "UA-109045589-2"
+
+# Enable Disqus
+disqusShortname: "ベジプロ"
+
+markup:
+  highlight:
+    codeFences: true
+    noClasses: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true  # enable raw HTML in Markdown
+
+params:
+  logo: ""  # if you have a logo png
+  slogan: "ある人には雑草に、ある人には希望に見える"
+  license: "Takasu Ryuji"  # CC License
+  description: "Vegetable Programing is kindness to me."
+  env: "production"
+
+params:
+    homeInfoParams:
+        Title: 自分に優しい技術メモ
+        Content: ある人には雑草に、ある人には希望に見える
+
+menu:
+  main:
+  - identifier: about
+    name: about me
+    url: /about/
+  - identifier: Archive
+    name: archive
+    url: /archive/

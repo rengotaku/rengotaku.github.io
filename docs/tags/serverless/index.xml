@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>serverless on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/serverless/</link>
+    <description>Recent content in serverless on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 29 Oct 2020 22:16:52 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/serverless/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Serverlessでdeployをする際に必要な権限</title>
+      <link>https://rengotaku.github.io/posts/c8968a24-0b87-4521-b6f8-da267356ae85/</link>
+      <pubDate>Thu, 29 Oct 2020 22:16:52 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/c8968a24-0b87-4521-b6f8-da267356ae85/</guid>
+      <description>{ &amp;#34;Version&amp;#34;: &amp;#34;2012-10-17&amp;#34;, &amp;#34;Statement&amp;#34;: [ { &amp;#34;Effect&amp;#34;: &amp;#34;Allow&amp;#34;, &amp;#34;Action&amp;#34;: [ &amp;#34;cloudformation:DescribeChangeSet&amp;#34;, &amp;#34;cloudformation:DescribeStackResources&amp;#34;, &amp;#34;cloudformation:DescribeStacks&amp;#34;, &amp;#34;cloudformation:GetTemplate&amp;#34;, &amp;#34;cloudformation:ListStackResources&amp;#34;, &amp;#34;cloudwatch:*&amp;#34;, &amp;#34;cognito-identity:ListIdentityPools&amp;#34;, &amp;#34;cognito-sync:GetCognitoEvents&amp;#34;, &amp;#34;cognito-sync:SetCognitoEvents&amp;#34;, &amp;#34;dynamodb:*&amp;#34;, &amp;#34;ec2:DescribeSecurityGroups&amp;#34;, &amp;#34;ec2:DescribeSubnets&amp;#34;, &amp;#34;ec2:DescribeVpcs&amp;#34;, &amp;#34;events:*&amp;#34;, &amp;#34;iam:GetPolicy&amp;#34;, &amp;#34;iam:GetPolicyVersion&amp;#34;, &amp;#34;iam:GetRole&amp;#34;, &amp;#34;iam:GetRolePolicy&amp;#34;, &amp;#34;iam:ListAttachedRolePolicies&amp;#34;, &amp;#34;iam:ListRolePolicies&amp;#34;, &amp;#34;iam:ListRoles&amp;#34;, &amp;#34;iam:PassRole&amp;#34;, &amp;#34;iot:AttachPrincipalPolicy&amp;#34;, &amp;#34;iot:AttachThingPrincipal&amp;#34;, &amp;#34;iot:CreateKeysAndCertificate&amp;#34;, &amp;#34;iot:CreatePolicy&amp;#34;, &amp;#34;iot:CreateThing&amp;#34;, &amp;#34;iot:CreateTopicRule&amp;#34;, &amp;#34;iot:DescribeEndpoint&amp;#34;, &amp;#34;iot:GetTopicRule&amp;#34;, &amp;#34;iot:ListPolicies&amp;#34;, &amp;#34;iot:ListThings&amp;#34;, &amp;#34;iot:ListTopicRules&amp;#34;, &amp;#34;iot:ReplaceTopicRule&amp;#34;, &amp;#34;kinesis:DescribeStream&amp;#34;, &amp;#34;kinesis:ListStreams&amp;#34;, &amp;#34;kinesis:PutRecord&amp;#34;, &amp;#34;kms:ListAliases&amp;#34;, &amp;#34;lambda:*&amp;#34;, &amp;#34;logs:*&amp;#34;, &amp;#34;s3:*&amp;#34;, &amp;#34;sns:ListSubscriptions&amp;#34;, &amp;#34;sns:ListSubscriptionsByTopic&amp;#34;, &amp;#34;sns:ListTopics&amp;#34;, &amp;#34;sns:Publish&amp;#34;, &amp;#34;sns:Subscribe&amp;#34;, &amp;#34;sns:Unsubscribe&amp;#34;, &amp;#34;sqs:ListQueues&amp;#34;, &amp;#34;sqs:SendMessage&amp;#34;, &amp;#34;tag:GetResources&amp;#34;, &amp;#34;xray:PutTelemetryRecords&amp;#34;, &amp;#34;xray:PutTraceSegments&amp;#34; ], &amp;#34;Resource&amp;#34;: &amp;#34;*&amp;#34; } ] } { &amp;#34;Version&amp;#34;:</description>
+    </item>
+    
+  </channel>
+</rss>

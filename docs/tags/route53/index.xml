@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>route53 on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/route53/</link>
+    <description>Recent content in route53 on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Mon, 20 Aug 2018 15:09:04 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/route53/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>プライベートホストゾーン</title>
+      <link>https://rengotaku.github.io/posts/6624160c-b040-4c45-86f2-ba0ab29fbfda/</link>
+      <pubDate>Mon, 20 Aug 2018 15:09:04 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/6624160c-b040-4c45-86f2-ba0ab29fbfda/</guid>
+      <description>Route53にはパブリックホストゾーンとプライベートホストゾーンが設定できる。 プライベートホストゾーンとは、VPC内でのみ有効な(C・A)</description>
+    </item>
+    
+  </channel>
+</rss>

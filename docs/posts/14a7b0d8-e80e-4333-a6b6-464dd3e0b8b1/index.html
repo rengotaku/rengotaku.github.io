@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>JS、CSSの更新を即時反映したい | Vegetable Programing</title>
+
+<meta name="keywords" content="html, ベジプロ, プログ, プログラム" />
+<meta name="description" content="&lt;script src=&quot;./jquery.js?v=&lt;?php echo(microtime()); ?&gt;&quot;&gt;&lt;/script&gt; キャッシュバスティング(Cache Busting) 【ASP】キャッシュを有効にしつつ、cssやjsファイルの変更を確実に反映させる(Cache Busting)">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/posts/14a7b0d8-e80e-4333-a6b6-464dd3e0b8b1/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="JS、CSSの更新を即時反映したい" />
+<meta property="og:description" content="&lt;script src=&quot;./jquery.js?v=&lt;?php echo(microtime()); ?&gt;&quot;&gt;&lt;/script&gt; キャッシュバスティング(Cache Busting) 【ASP】キャッシュを有効にしつつ、cssやjsファイルの変更を確実に反映させる(Cache Busting)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rengotaku.github.io/posts/14a7b0d8-e80e-4333-a6b6-464dd3e0b8b1/" />
+<meta property="article:published_time" content="2018-09-26T09:58:10+09:00" />
+<meta property="article:modified_time" content="2018-09-26T09:58:23+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JS、CSSの更新を即時反映したい"/>
+<meta name="twitter:description" content="&lt;script src=&quot;./jquery.js?v=&lt;?php echo(microtime()); ?&gt;&quot;&gt;&lt;/script&gt; キャッシュバスティング(Cache Busting) 【ASP】キャッシュを有効にしつつ、cssやjsファイルの変更を確実に反映させる(Cache Busting)"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "JS、CSSの更新を即時反映したい",
+  "name": "JS、CSSの更新を即時反映したい",
+  "description": "\u0026amp;lt;script src=\u0026amp;quot;./jquery.js?v=\u0026amp;lt;?php echo(microtime()); ?\u0026amp;gt;\u0026amp;quot;\u0026amp;gt;\u0026amp;lt;/script\u0026amp;gt; キャッシュバスティング(Cache Busting) 【ASP】キャッシュを有効にしつつ、cssやjsファイルの変更を確実に反映させる(Cache Busting)",
+  "keywords": [
+    "html", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "\"\rキャッシュバスティング(Cache Busting)\r 【ASP】キャッシュを有効にしつつ、cssやjsファイルの変更を確実に反映させる(Cache Busting)\n ",
+  "wordCount" : "69",
+  "inLanguage": "en",
+  "datePublished": "2018-09-26T09:58:10+09:00",
+  "dateModified": "2018-09-26T09:58:23+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rengotaku.github.io/posts/14a7b0d8-e80e-4333-a6b6-464dd3e0b8b1/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rengotaku.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      JS、CSSの更新を即時反映したい
+    </h1>
+    <div class="post-meta">September 26, 2018
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<pre><code class="language-html:php" data-lang="html:php">&lt;script src=&quot;./jquery.js?v=&lt;?php echo(microtime()); ?&gt;&quot;&gt;&lt;/script&gt;
+</code></pre><pre><code class="language-!" data-lang="!">キャッシュバスティング(Cache Busting)
+</code></pre><blockquote>
+<p><a href="https://qiita.com/yaju/items/d0ff9771de4cd854654d">【ASP】キャッシュを有効にしつつ、cssやjsファイルの変更を確実に反映させる(Cache Busting)</a></p>
+</blockquote>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rengotaku.github.io/tags/html">html</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

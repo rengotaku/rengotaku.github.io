@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>bashでslackに通知 | Vegetable Programing</title>
+
+<meta name="keywords" content="slack, shellscript, bash, ベジプロ, プログ, プログラム" />
+<meta name="description" content="解決 メイン処理 Shell/Bash script for sending slack messages. を使用する。 マッピング #!/bin/bash export APP_SLACK_WEBHOOK=&quot;https://hooks.slack.com/services/XXXX&quot; export APP_SLACK_CHANNEL=channel_name #export APP_SLACK_USERNAME=$(hostname) export APP_SLACK_ICON_EMOJI=&quot;:hoge:&quot; /usr/bin/slack &quot;[$(hostname)] $(cat -)&quot; 使い方 /path/to/shell.sh 2&gt;&amp;1 | /usr/local/bin/crontab-slack 結果 [163-44-175-179] test な感じで送信される。 note どっかで使っていたスク">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/posts/a4f63bc9-ba1a-4b9b-9745-01ee23b7813d/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="bashでslackに通知" />
+<meta property="og:description" content="解決 メイン処理 Shell/Bash script for sending slack messages. を使用する。 マッピング #!/bin/bash export APP_SLACK_WEBHOOK=&quot;https://hooks.slack.com/services/XXXX&quot; export APP_SLACK_CHANNEL=channel_name #export APP_SLACK_USERNAME=$(hostname) export APP_SLACK_ICON_EMOJI=&quot;:hoge:&quot; /usr/bin/slack &quot;[$(hostname)] $(cat -)&quot; 使い方 /path/to/shell.sh 2&gt;&amp;1 | /usr/local/bin/crontab-slack 結果 [163-44-175-179] test な感じで送信される。 note どっかで使っていたスク" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rengotaku.github.io/posts/a4f63bc9-ba1a-4b9b-9745-01ee23b7813d/" />
+<meta property="article:published_time" content="2019-08-27T10:56:29+09:00" />
+<meta property="article:modified_time" content="2020-04-23T11:13:11+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="bashでslackに通知"/>
+<meta name="twitter:description" content="解決 メイン処理 Shell/Bash script for sending slack messages. を使用する。 マッピング #!/bin/bash export APP_SLACK_WEBHOOK=&quot;https://hooks.slack.com/services/XXXX&quot; export APP_SLACK_CHANNEL=channel_name #export APP_SLACK_USERNAME=$(hostname) export APP_SLACK_ICON_EMOJI=&quot;:hoge:&quot; /usr/bin/slack &quot;[$(hostname)] $(cat -)&quot; 使い方 /path/to/shell.sh 2&gt;&amp;1 | /usr/local/bin/crontab-slack 結果 [163-44-175-179] test な感じで送信される。 note どっかで使っていたスク"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "bashでslackに通知",
+  "name": "bashでslackに通知",
+  "description": "解決 メイン処理 Shell/Bash script for sending slack messages. を使用する。 マッピング #!/bin/bash export APP_SLACK_WEBHOOK=\u0026amp;quot;https://hooks.slack.com/services/XXXX\u0026amp;quot; export …",
+  "keywords": [
+    "slack", "shellscript", "bash", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "解決 メイン処理 Shell/Bash script for sending slack messages. を使用する。\nマッピング #!/bin/bash\rexport APP_SLACK_WEBHOOK=\"https://hooks.slack.com/services/XXXX\"\rexport APP_SLACK_CHANNEL=channel_name\r#export APP_SLACK_USERNAME=$(hostname)\rexport APP_SLACK_ICON_EMOJI=\":hoge:\"\r/usr/bin/slack \"[$(hostname)] $(cat -)\"\r使い方 /path/to/shell.sh 2\u00261 | /usr/local/bin/crontab-slack\n結果 [163-44-175-179] test な感じで送信される。\nnote どっかで使っていたスクリプト\n# incoming-webhookのURLに対して通知内容を送ります。\rreadonly USERNAME=\"username\"\rreadonly ICON_EMOJI=\":favorite_icon:\"\rusage_exit() {\recho \"Usage: $(basename $0)-c CHANNEL [-f FROM] [-C COLOR] [-L LEVEL] [-S]MESSAGE\" 1\u00262\recho \" OPTIONS:\" 1\u00262\recho \" -S: suppress script name\" 1\u00262\rexit 1\r}\rfunction post() {\rlocal _channel=\"${1}\"\rshift\rlocal _color=\"${1}\"\rshift\rlocal _displayname=\"${1}\"\rshift\rlocal _level=\"${1}\"\rshift\rlocal _msg=\"${@}\"\rlocal _retry_args=\"--retry 3 --retry-delay 2 --retry-max-time 10\"\rcurl -X POST --data-urlencode \"payload={\\\"channel\\\": \\\"${_channel}\\\", \\\"username\\\": \\\"${USERNAME}\\\", \\\"icon_emoji\\\": \\\"${ICON_EMOJI}\\\", \\\"attachments\\\": [{ \\\"color\\\": \\\"${_color}\\\", \\\"title\\\": \\\"${_level}\\\", \\\"text\\\": \\\"${_msg}\\\" }] }\" ${webhook_url} 2/dev/null\r}\r#\r# MAIN\r#\rCALLED_FROM=\"$(ps -o command= $(ps -o ppid= $$))\"\rCHANNEL=\"devnull\"\rSUPPRESS_SCRIPTNAME=0\rLEVEL=\"INFO\"\r## set default display name with Hipchat compatible\rif [[ \"${SLACK_DISPLAY_NAME:-null}\" != \"null\" ]]; then\rFROM=\"${SLACK_DISPLAY_NAME}(${HOSTNAME%%\\.*})\"\r",
+  "wordCount" : "218",
+  "inLanguage": "en",
+  "datePublished": "2019-08-27T10:56:29+09:00",
+  "dateModified": "2020-04-23T11:13:11+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rengotaku.github.io/posts/a4f63bc9-ba1a-4b9b-9745-01ee23b7813d/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rengotaku.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      bashでslackに通知
+    </h1>
+    <div class="post-meta">August 27, 2019
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="解決">解決<a hidden class="anchor" aria-hidden="true" href="#解決">#</a></h1>
+<h2 id="メイン処理">メイン処理<a hidden class="anchor" aria-hidden="true" href="#メイン処理">#</a></h2>
+<p><a href="https://gist.github.com/andkirby/67a774513215d7ba06384186dd441d9e">Shell/Bash script for sending slack messages.</a> を使用する。</p>
+<h2 id="マッピング">マッピング<a hidden class="anchor" aria-hidden="true" href="#マッピング">#</a></h2>
+<pre><code class="language-sh:/usr/local/bin/crontab-slack" data-lang="sh:/usr/local/bin/crontab-slack">#!/bin/bash
+
+export APP_SLACK_WEBHOOK=&quot;https://hooks.slack.com/services/XXXX&quot;
+export APP_SLACK_CHANNEL=channel_name
+#export APP_SLACK_USERNAME=$(hostname)
+export APP_SLACK_ICON_EMOJI=&quot;:hoge:&quot;
+
+/usr/bin/slack &quot;[$(hostname)] $(cat -)&quot;
+</code></pre><h2 id="使い方">使い方<a hidden class="anchor" aria-hidden="true" href="#使い方">#</a></h2>
+<p><code>/path/to/shell.sh 2&gt;&amp;1 | /usr/local/bin/crontab-slack</code></p>
+<h2 id="結果">結果<a hidden class="anchor" aria-hidden="true" href="#結果">#</a></h2>
+<p><code>[163-44-175-179] test</code> な感じで送信される。</p>
+<h1 id="note">note<a hidden class="anchor" aria-hidden="true" href="#note">#</a></h1>
+<p>どっかで使っていたスクリプト</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash:post_slack.sh" data-lang="bash:post_slack.sh"><span style="color:#75715e"># incoming-webhookのURLに対して通知内容を送ります。</span>
+
+readonly USERNAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span>
+readonly ICON_EMOJI<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;:favorite_icon:&#34;</span>
+
+usage_exit<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        echo <span style="color:#e6db74">&#34;Usage: </span><span style="color:#66d9ef">$(</span>basename $0<span style="color:#66d9ef">)</span><span style="color:#e6db74"> -c CHANNEL [-f FROM] [-C COLOR] [-L LEVEL] [-S]MESSAGE&#34;</span> 1&gt;&amp;2
+        echo <span style="color:#e6db74">&#34;       OPTIONS:&#34;</span> 1&gt;&amp;2
+        echo <span style="color:#e6db74">&#34;         -S: suppress script name&#34;</span> 1&gt;&amp;2
+        exit 1
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">function</span> post<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  local _channel<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  shift
+  local _color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  shift
+  local _displayname<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  shift
+  local _level<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  shift
+  local _msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>@<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  local _retry_args<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--retry 3 --retry-delay 2 --retry-max-time 10&#34;</span>
+
+  curl -X POST --data-urlencode <span style="color:#e6db74">&#34;payload={\&#34;channel\&#34;: \&#34;</span><span style="color:#e6db74">${</span>_channel<span style="color:#e6db74">}</span><span style="color:#e6db74">\&#34;, \&#34;username\&#34;: \&#34;</span><span style="color:#e6db74">${</span>USERNAME<span style="color:#e6db74">}</span><span style="color:#e6db74">\&#34;, \&#34;icon_emoji\&#34;: \&#34;</span><span style="color:#e6db74">${</span>ICON_EMOJI<span style="color:#e6db74">}</span><span style="color:#e6db74">\&#34;, \&#34;attachments\&#34;: [{ \&#34;color\&#34;: \&#34;</span><span style="color:#e6db74">${</span>_color<span style="color:#e6db74">}</span><span style="color:#e6db74">\&#34;, \&#34;title\&#34;: \&#34;</span><span style="color:#e6db74">${</span>_level<span style="color:#e6db74">}</span><span style="color:#e6db74">\&#34;, \&#34;text\&#34;: \&#34;</span><span style="color:#e6db74">${</span>_msg<span style="color:#e6db74">}</span><span style="color:#e6db74">\&#34; }] }&#34;</span> <span style="color:#e6db74">${</span>webhook_url<span style="color:#e6db74">}</span> 2&gt;/dev/null
+<span style="color:#f92672">}</span>
+
+
+#
+<span style="color:#75715e"># MAIN</span>
+#
+
+CALLED_FROM<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>ps -o command<span style="color:#f92672">=</span> <span style="color:#66d9ef">$(</span>ps -o ppid<span style="color:#f92672">=</span> $$<span style="color:#66d9ef">))</span><span style="color:#e6db74">&#34;</span>
+CHANNEL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;devnull&#34;</span>
+SUPPRESS_SCRIPTNAME<span style="color:#f92672">=</span>0
+LEVEL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;INFO&#34;</span>
+
+<span style="color:#75715e">## set default display name with Hipchat compatible</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>SLACK_DISPLAY_NAME<span style="color:#66d9ef">:-</span>null<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;null&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+  FROM<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>SLACK_DISPLAY_NAME<span style="color:#e6db74">}</span><span style="color:#e6db74"> (</span><span style="color:#e6db74">${</span>HOSTNAME%%<span style="color:#ae81ff">\.</span>*<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>
+</code></pre></div>
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rengotaku.github.io/tags/slack">slack</a></li>
+      <li><a href="https://rengotaku.github.io/tags/shellscript">shellscript</a></li>
+      <li><a href="https://rengotaku.github.io/tags/bash">bash</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

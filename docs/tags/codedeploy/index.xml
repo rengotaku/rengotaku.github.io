@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>codedeploy on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/codedeploy/</link>
+    <description>Recent content in codedeploy on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Fri, 27 Sep 2019 18:39:58 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/codedeploy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>codedeployで実際の処理はどこでやっているか確認</title>
+      <link>https://rengotaku.github.io/posts/f629646e-f58a-4e3d-927e-a9cacd39e5c0/</link>
+      <pubDate>Fri, 27 Sep 2019 18:39:58 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/f629646e-f58a-4e3d-927e-a9cacd39e5c0/</guid>
+      <description>解決 アプリケーションに配置してある appspec.yml の中身を参照。 下記のような記載があるはず。 version: 0.0 os: linux files: - source: / destination: /var/www/sample-app permissions: - object: /var/www/ pattern: &amp;quot;**&amp;quot; mode: 775 hooks: ApplicationStop: - location: scripts/stop_server.sh timeout: 300 runas: root BeforeInstall: - location: scripts/clean.sh</description>
+    </item>
+    
+  </channel>
+</rss>

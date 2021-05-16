@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Active jobのretryの検証 | Vegetable Programing</title>
+
+<meta name="keywords" content="rails, ruby, gem, ベジプロ, プログ, プログラム" />
+<meta name="description" content="ソース # frozen_string_literal: true class RetryTestJob &lt; ActiveJob::Base class RetryOnlyDoError &lt; StandardError; end class RetryRailseExceptionError &lt; StandardError; end class RetryWithoutProcessError &lt; StandardError; end class DiscardError &lt; StandardError; end FILENAME = &#34;#{Rails.root.to_s}/tmp/jobtest.txt&#34; queue_as :high discard_on StandardError do |job, e| RetryTestJob.write_file(&#34;retry_on&#34;, job.job_id, job.executions, &#34;#{e.class}: #{e.message}&#34;) end # attempts が０になっても何も行わない retry_on RetryWithoutProcessError, wait: 1.seconds, attempts: 3 # attempts が">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/posts/a6545460-7706-4d6b-82b1-70e70a9080bc/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="Active jobのretryの検証" />
+<meta property="og:description" content="ソース # frozen_string_literal: true class RetryTestJob &lt; ActiveJob::Base class RetryOnlyDoError &lt; StandardError; end class RetryRailseExceptionError &lt; StandardError; end class RetryWithoutProcessError &lt; StandardError; end class DiscardError &lt; StandardError; end FILENAME = &#34;#{Rails.root.to_s}/tmp/jobtest.txt&#34; queue_as :high discard_on StandardError do |job, e| RetryTestJob.write_file(&#34;retry_on&#34;, job.job_id, job.executions, &#34;#{e.class}: #{e.message}&#34;) end # attempts が０になっても何も行わない retry_on RetryWithoutProcessError, wait: 1.seconds, attempts: 3 # attempts が" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rengotaku.github.io/posts/a6545460-7706-4d6b-82b1-70e70a9080bc/" />
+<meta property="article:published_time" content="2020-04-23T19:19:01+09:00" />
+<meta property="article:modified_time" content="2020-04-23T19:25:21+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Active jobのretryの検証"/>
+<meta name="twitter:description" content="ソース # frozen_string_literal: true class RetryTestJob &lt; ActiveJob::Base class RetryOnlyDoError &lt; StandardError; end class RetryRailseExceptionError &lt; StandardError; end class RetryWithoutProcessError &lt; StandardError; end class DiscardError &lt; StandardError; end FILENAME = &#34;#{Rails.root.to_s}/tmp/jobtest.txt&#34; queue_as :high discard_on StandardError do |job, e| RetryTestJob.write_file(&#34;retry_on&#34;, job.job_id, job.executions, &#34;#{e.class}: #{e.message}&#34;) end # attempts が０になっても何も行わない retry_on RetryWithoutProcessError, wait: 1.seconds, attempts: 3 # attempts が"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Active jobのretryの検証",
+  "name": "Active jobのretryの検証",
+  "description": "ソース # frozen_string_literal: true class RetryTestJob \u0026amp;lt; ActiveJob::Base class RetryOnlyDoError \u0026amp;lt; StandardError; end class RetryRailseExceptionError \u0026amp;lt; StandardError; end …",
+  "keywords": [
+    "rails", "ruby", "gem", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "ソース # frozen_string_literal: true\r class RetryTestJob  ActiveJob::Base\rclass RetryOnlyDoError  StandardError; end\rclass RetryRailseExceptionError  StandardError; end\rclass RetryWithoutProcessError  StandardError; end\rclass DiscardError  StandardError; end\rFILENAME = \"#{Rails.root.to_s}/tmp/jobtest.txt\"\rqueue_as :high\rdiscard_on StandardError do |job, e|\rRetryTestJob.write_file(\"retry_on\", job.job_id, job.executions, \"#{e.class}: #{e.message}\")\rend\r# attempts が０になっても何も行わない\r retry_on RetryWithoutProcessError, wait: 1.seconds, attempts: 3\r# attempts が０になった場合に処理を行う\r retry_on(RetryOnlyDoError, wait: 1.seconds, attempts: 2) do |job, e|\rRetryTestJob.write_file(\"retry_on\", job.job_id, job.executions, \"#{e.class}: #{e.message}\")\rend\r# 無限にRetryしてしまう\r retry_on(RetryRailseExceptionError, wait: 1.seconds, attempts: 2) do |job, e|\rRetryTestJob.write_file(\"retry_on\", job.job_id, job.executions, \"#{e.class}: #{e.message}\")\rraise StandardError, \"raise StandardError from retry_on: #{job.executions}, #{e.message}\"\rend\rdef perform\rRetryTestJob.write_file(\"perform\", job_id, executions)\r# 確認したいエラーに切り替える\r # error = StandardError\r error = RetryOnlyDoError\r# error = RetryRailseExceptionError\r # error = RetryWithoutProcessError\r raise error, \"raise #{error.name}from perform: #{job_id}, #{executions}\"\rend\rprivate\rdef self.write_file(action, job_id, executions, message=nil)\rFile.open(FILENAME, 'a') { |f| f.write(\"#{action}[#{job_id}, #{executions}]#{message ? \": #{message}\" : \"\"}\\n\") }\rend\rend\r結果 StandardError の場合 perform[fdf6cc91-2f25-4c9c-ac7c-aedbe2202bea, 1]\rretry_on[fdf6cc91-2f25-4c9c-ac7c-aedbe2202bea, 1]: StandardError: raise StandardError from perform: fdf6cc91-2f25-4c9c-ac7c-aedbe2202bea, 1\rRetryOnlyDoError の場合 perform[304646d3-649d-422c-9b04-0b0f551f49c7, 1]\rperform[304646d3-649d-422c-9b04-0b0f551f49c7, 2]\rretry_on[304646d3-649d-422c-9b04-0b0f551f49c7, 2]: RetryTestJob::RetryOnlyDoError: raise RetryTestJob::RetryOnlyDoError from perform: 304646d3-649d-422c-9b04-0b0f551f49c7, 2\rRetryRailseExceptionError の場合 retry_on 内でエラーが発生した場合は、無限に実行されるので気をつける。\nperform[bff00afd-a3a1-4bf4-93ed-987ed600bed8, 1]\rperform[bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2]\rretry_on[bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2]: RetryTestJob::RetryRailseExceptionError: raise RetryTestJob::RetryRailseExceptionError from perform: bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2\rperform[bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2]\rretry_on[bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2]: RetryTestJob::RetryRailseExceptionError: raise RetryTestJob::RetryRailseExceptionError from perform: bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2\rperform[bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2]\rretry_on[bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2]: RetryTestJob::RetryRailseExceptionError: raise RetryTestJob::RetryRailseExceptionError from perform: bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2\rRetryWithoutProcessError perform[aae6bf69-422d-44b2-b575-e7d425f0e976, 1]\rperform[aae6bf69-422d-44b2-b575-e7d425f0e976, 2]\rperform[aae6bf69-422d-44b2-b575-e7d425f0e976, 3]\r",
+  "wordCount" : "307",
+  "inLanguage": "en",
+  "datePublished": "2020-04-23T19:19:01+09:00",
+  "dateModified": "2020-04-23T19:25:21+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rengotaku.github.io/posts/a6545460-7706-4d6b-82b1-70e70a9080bc/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rengotaku.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      Active jobのretryの検証
+    </h1>
+    <div class="post-meta">April 23, 2020
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="ソース">ソース<a hidden class="anchor" aria-hidden="true" href="#ソース">#</a></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#75715e"># frozen_string_literal: true</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RetryTestJob</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ActiveJob</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Base</span>
+  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RetryOnlyDoError</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">StandardError</span>; <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RetryRailseExceptionError</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">StandardError</span>; <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RetryWithoutProcessError</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">StandardError</span>; <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DiscardError</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">StandardError</span>; <span style="color:#66d9ef">end</span>
+
+  <span style="color:#66d9ef">FILENAME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>root<span style="color:#f92672">.</span>to_s<span style="color:#e6db74">}</span><span style="color:#e6db74">/tmp/jobtest.txt&#34;</span>
+
+  queue_as <span style="color:#e6db74">:high</span>
+  discard_on <span style="color:#66d9ef">StandardError</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>job, e<span style="color:#f92672">|</span>
+    <span style="color:#66d9ef">RetryTestJob</span><span style="color:#f92672">.</span>write_file(<span style="color:#e6db74">&#34;retry_on&#34;</span>, job<span style="color:#f92672">.</span>job_id, job<span style="color:#f92672">.</span>executions, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>e<span style="color:#f92672">.</span>class<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">#{</span>e<span style="color:#f92672">.</span>message<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+  <span style="color:#66d9ef">end</span>
+
+  <span style="color:#75715e"># attempts が０になっても何も行わない</span>
+  retry_on <span style="color:#66d9ef">RetryWithoutProcessError</span>, <span style="color:#e6db74">wait</span>: <span style="color:#ae81ff">1</span><span style="color:#f92672">.</span>seconds, <span style="color:#e6db74">attempts</span>: <span style="color:#ae81ff">3</span>
+
+  <span style="color:#75715e"># attempts が０になった場合に処理を行う</span>
+  retry_on(<span style="color:#66d9ef">RetryOnlyDoError</span>, <span style="color:#e6db74">wait</span>: <span style="color:#ae81ff">1</span><span style="color:#f92672">.</span>seconds, <span style="color:#e6db74">attempts</span>: <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>job, e<span style="color:#f92672">|</span>
+    <span style="color:#66d9ef">RetryTestJob</span><span style="color:#f92672">.</span>write_file(<span style="color:#e6db74">&#34;retry_on&#34;</span>, job<span style="color:#f92672">.</span>job_id, job<span style="color:#f92672">.</span>executions, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>e<span style="color:#f92672">.</span>class<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">#{</span>e<span style="color:#f92672">.</span>message<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+  <span style="color:#66d9ef">end</span>
+
+  <span style="color:#75715e"># 無限にRetryしてしまう</span>
+  retry_on(<span style="color:#66d9ef">RetryRailseExceptionError</span>, <span style="color:#e6db74">wait</span>: <span style="color:#ae81ff">1</span><span style="color:#f92672">.</span>seconds, <span style="color:#e6db74">attempts</span>: <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>job, e<span style="color:#f92672">|</span>
+    <span style="color:#66d9ef">RetryTestJob</span><span style="color:#f92672">.</span>write_file(<span style="color:#e6db74">&#34;retry_on&#34;</span>, job<span style="color:#f92672">.</span>job_id, job<span style="color:#f92672">.</span>executions, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>e<span style="color:#f92672">.</span>class<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">#{</span>e<span style="color:#f92672">.</span>message<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+    <span style="color:#66d9ef">raise</span> <span style="color:#66d9ef">StandardError</span>, <span style="color:#e6db74">&#34;raise StandardError from retry_on: </span><span style="color:#e6db74">#{</span>job<span style="color:#f92672">.</span>executions<span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">#{</span>e<span style="color:#f92672">.</span>message<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  <span style="color:#66d9ef">end</span>
+
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">perform</span>
+    <span style="color:#66d9ef">RetryTestJob</span><span style="color:#f92672">.</span>write_file(<span style="color:#e6db74">&#34;perform&#34;</span>, job_id, executions)
+
+    <span style="color:#75715e"># 確認したいエラーに切り替える</span>
+    <span style="color:#75715e"># error = StandardError</span>
+    error <span style="color:#f92672">=</span> <span style="color:#66d9ef">RetryOnlyDoError</span>
+    <span style="color:#75715e"># error = RetryRailseExceptionError</span>
+    <span style="color:#75715e"># error = RetryWithoutProcessError</span>
+
+    <span style="color:#66d9ef">raise</span> error, <span style="color:#e6db74">&#34;raise </span><span style="color:#e6db74">#{</span>error<span style="color:#f92672">.</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74"> from perform: </span><span style="color:#e6db74">#{</span>job_id<span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">#{</span>executions<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  <span style="color:#66d9ef">end</span>
+
+  <span style="color:#66d9ef">private</span>
+
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">write_file</span>(action, job_id, executions, message<span style="color:#f92672">=</span><span style="color:#66d9ef">nil</span>)
+    <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>open(<span style="color:#66d9ef">FILENAME</span>, <span style="color:#e6db74">&#39;a&#39;</span>) { <span style="color:#f92672">|</span>f<span style="color:#f92672">|</span> f<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>action<span style="color:#e6db74">}</span><span style="color:#e6db74">[</span><span style="color:#e6db74">#{</span>job_id<span style="color:#e6db74">}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">#{</span>executions<span style="color:#e6db74">}</span><span style="color:#e6db74">]</span><span style="color:#e6db74">#{</span>message ? <span style="color:#e6db74">&#34;: </span><span style="color:#e6db74">#{</span>message<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> : <span style="color:#e6db74">&#34;&#34;</span><span style="color:#e6db74">}</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>) }
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><h1 id="結果">結果<a hidden class="anchor" aria-hidden="true" href="#結果">#</a></h1>
+<h2 id="standarderror-の場合">StandardError の場合<a hidden class="anchor" aria-hidden="true" href="#standarderror-の場合">#</a></h2>
+<pre><code>perform[fdf6cc91-2f25-4c9c-ac7c-aedbe2202bea, 1]
+retry_on[fdf6cc91-2f25-4c9c-ac7c-aedbe2202bea, 1]: StandardError: raise StandardError from perform: fdf6cc91-2f25-4c9c-ac7c-aedbe2202bea, 1
+</code></pre><h2 id="retryonlydoerror-の場合">RetryOnlyDoError の場合<a hidden class="anchor" aria-hidden="true" href="#retryonlydoerror-の場合">#</a></h2>
+<pre><code>perform[304646d3-649d-422c-9b04-0b0f551f49c7, 1]
+perform[304646d3-649d-422c-9b04-0b0f551f49c7, 2]
+retry_on[304646d3-649d-422c-9b04-0b0f551f49c7, 2]: RetryTestJob::RetryOnlyDoError: raise RetryTestJob::RetryOnlyDoError from perform: 304646d3-649d-422c-9b04-0b0f551f49c7, 2
+</code></pre><h2 id="retryrailseexceptionerror-の場合">RetryRailseExceptionError の場合<a hidden class="anchor" aria-hidden="true" href="#retryrailseexceptionerror-の場合">#</a></h2>
+<p><code>retry_on</code> 内でエラーが発生した場合は、無限に実行されるので気をつける。</p>
+<pre><code>perform[bff00afd-a3a1-4bf4-93ed-987ed600bed8, 1]
+perform[bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2]
+retry_on[bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2]: RetryTestJob::RetryRailseExceptionError: raise RetryTestJob::RetryRailseExceptionError from perform: bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2
+perform[bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2]
+retry_on[bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2]: RetryTestJob::RetryRailseExceptionError: raise RetryTestJob::RetryRailseExceptionError from perform: bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2
+perform[bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2]
+retry_on[bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2]: RetryTestJob::RetryRailseExceptionError: raise RetryTestJob::RetryRailseExceptionError from perform: bff00afd-a3a1-4bf4-93ed-987ed600bed8, 2
+</code></pre><h2 id="retrywithoutprocesserror">RetryWithoutProcessError<a hidden class="anchor" aria-hidden="true" href="#retrywithoutprocesserror">#</a></h2>
+<pre><code>perform[aae6bf69-422d-44b2-b575-e7d425f0e976, 1]
+perform[aae6bf69-422d-44b2-b575-e7d425f0e976, 2]
+perform[aae6bf69-422d-44b2-b575-e7d425f0e976, 3]
+</code></pre>
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rengotaku.github.io/tags/rails">rails</a></li>
+      <li><a href="https://rengotaku.github.io/tags/ruby">ruby</a></li>
+      <li><a href="https://rengotaku.github.io/tags/gem">gem</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

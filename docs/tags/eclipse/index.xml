@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>eclipse on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/eclipse/</link>
+    <description>Recent content in eclipse on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 27 Jun 2019 11:45:03 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/eclipse/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>eclipseで\（バックスラッシュ）を入力の仕方</title>
+      <link>https://rengotaku.github.io/posts/6013c8db-1fb0-4ffe-b3e5-dedef130c085/</link>
+      <pubDate>Thu, 27 Jun 2019 11:45:03 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/6013c8db-1fb0-4ffe-b3e5-dedef130c085/</guid>
+      <description>「option + ￥」で入力しなければいけないようです。 文字のエスケープの際にeclipseに直接いれると￥と入力されつまづきました。</description>
+    </item>
+    
+  </channel>
+</rss>

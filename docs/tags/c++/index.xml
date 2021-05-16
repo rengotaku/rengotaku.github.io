@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c&#43;&#43; on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/c&#43;&#43;/</link>
+    <description>Recent content in c&#43;&#43; on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 13 Sep 2018 09:58:21 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>c&#43;&#43;をmacで動かす</title>
+      <link>https://rengotaku.github.io/posts/2aab4d5d-c80a-4363-a0fe-0f5b1495bc05/</link>
+      <pubDate>Thu, 13 Sep 2018 09:58:21 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/2aab4d5d-c80a-4363-a0fe-0f5b1495bc05/</guid>
+      <description>$ vi test.cpp ============= #include &amp;lt;iostream&amp;gt; using namespace std; int main(void){ int i; cout&amp;lt;&amp;lt;&amp;quot;値を入力：&amp;quot;; cin&amp;gt;&amp;gt;i; cout&amp;lt;&amp;lt;&amp;quot;入力した値：&amp;q</description>
+    </item>
+    
+  </channel>
+</rss>

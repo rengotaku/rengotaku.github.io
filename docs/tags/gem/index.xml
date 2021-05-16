@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gem on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/gem/</link>
+    <description>Recent content in gem on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 09 Sep 2020 18:18:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/gem/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>interactorで引数チェックを行いたい</title>
+      <link>https://rengotaku.github.io/posts/7c9b4e9d-71b0-4fb6-962e-9d02cd979a9b/</link>
+      <pubDate>Wed, 09 Sep 2020 18:18:56 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/7c9b4e9d-71b0-4fb6-962e-9d02cd979a9b/</guid>
+      <description>Validators for Interactors. In our previous blog post, we talked… | by Manoj M J | reflektive-engineering | Medium より module InteractorValidations def self.included(base) base.extend ClassMethods end module ClassMethods def requires(*attributes) before do attributes.each do |attribute| raise ArgumentError.new(&amp;#34;Required attribute #{attribute}is missing&amp;#34;) if context.public_send(attribute).nil? end end end end end</description>
+    </item>
+    
+    <item>
+      <title>active_model_serializersでネストが深いreferencesが無視される</title>
+      <link>https://rengotaku.github.io/posts/f8c8ca2a-5e46-4336-bc9a-6c0fcec2f58b/</link>
+      <pubDate>Thu, 16 Jul 2020 11:29:40 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/f8c8ca2a-5e46-4336-bc9a-6c0fcec2f58b/</guid>
+      <description>Rails 5, ActiveRecord has_many for nested Serializers not used? · Issue #2011 · rails-api/active_model_serializers より render json: resource, include: &amp;#34;shipment_service_types,shipment_service_types.time_windows&amp;#34; ネスト分をincludeに記載する必要がある。 もし深さが読めない場合は、**とすれば良い。</description>
+    </item>
+    
+    <item>
+      <title>ShrineでS3にアップロードする際のmetadataを正しく設定する</title>
+      <link>https://rengotaku.github.io/posts/b655ebe5-9784-45db-88cc-341986ee87e2/</link>
+      <pubDate>Mon, 18 May 2020 19:30:20 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/b655ebe5-9784-45db-88cc-341986ee87e2/</guid>
+      <description>解決 image_uri = Addressable::URI.convert_path(&amp;#34;https://path/to/image.jpg&amp;#34;) URI.parse(image_uri).open do |file| metadata = { &amp;#34;mime_type&amp;#34; =&amp;gt; MIME::Types.type_for(@image_uri.to_s).first.content_type, &amp;#34;filename&amp;#34; =&amp;gt; @image_uri.basename, } # metadataが正しく設定されていないと、uploaded_file.metadataも空 uploaded_file = Shrine.upload(file, storage_key, metadata:</description>
+    </item>
+    
+    <item>
+      <title>Active jobのretryの検証</title>
+      <link>https://rengotaku.github.io/posts/a6545460-7706-4d6b-82b1-70e70a9080bc/</link>
+      <pubDate>Thu, 23 Apr 2020 19:19:01 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/a6545460-7706-4d6b-82b1-70e70a9080bc/</guid>
+      <description>ソース # frozen_string_literal: true class RetryTestJob &amp;lt; ActiveJob::Base class RetryOnlyDoError &amp;lt; StandardError; end class RetryRailseExceptionError &amp;lt; StandardError; end class RetryWithoutProcessError &amp;lt; StandardError; end class DiscardError &amp;lt; StandardError; end FILENAME = &amp;#34;#{Rails.root.to_s}/tmp/jobtest.txt&amp;#34; queue_as :high discard_on StandardError do |job, e| RetryTestJob.write_file(&amp;#34;retry_on&amp;#34;, job.job_id, job.executions, &amp;#34;#{e.class}: #{e.message}&amp;#34;) end # attempts が０になっても何も行わない retry_on RetryWithoutProcessError, wait: 1.seconds, attempts: 3 # attempts が</description>
+    </item>
+    
+    <item>
+      <title>Shrineで画像の入れ替え</title>
+      <link>https://rengotaku.github.io/posts/33b2f3e2-e081-4d9a-a6e9-3cc19857a527/</link>
+      <pubDate>Wed, 22 Apr 2020 15:09:08 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/33b2f3e2-e081-4d9a-a6e9-3cc19857a527/</guid>
+      <description>解決 class User &amp;lt; ApplicationRecord include ImageUploader::Attachment.new(:icon_image) end image_io = URI.parse(&amp;#34;https://path/to/image.jpg&amp;#34;).open image_uri.basename # filename image_io.size # file size MIME::Types.type_for(image_uri.to_s).first.content_type # extentions user.icon_image.replace(image_io) note replaceではエンドポイント（アクセスURL）を変えずに、画像のみ変える。</description>
+    </item>
+    
+    <item>
+      <title>bundle install時に使用するportを指定したい</title>
+      <link>https://rengotaku.github.io/posts/a6f5b613-be19-442f-9672-7a20526f8b0f/</link>
+      <pubDate>Thu, 16 Apr 2020 18:55:21 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/a6f5b613-be19-442f-9672-7a20526f8b0f/</guid>
+      <description>解決 command_socksify をインストールして行う GitHub - tkeo/command_socksify もっと詳細に設定したい configに追記 ~/.ssh/config に下記のように設定して、フォワーディングしているポートを指定する</description>
+    </item>
+    
+    <item>
+      <title>annotateが動かない</title>
+      <link>https://rengotaku.github.io/posts/d8577cb0-53dc-487a-a624-e607a8551e93/</link>
+      <pubDate>Wed, 25 Mar 2020 18:18:41 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/d8577cb0-53dc-487a-a624-e607a8551e93/</guid>
+      <description>解決 --models を付与して実行する。 $ bundle exec annotate --models 事象 gemを起動しても何も変更がかからない。 $ bundle exec annotate</description>
+    </item>
+    
+    <item>
+      <title>Shrineで外部の画像のURLからストレージ（S3など）にアップロードしたい</title>
+      <link>https://rengotaku.github.io/posts/0833cd6b-bebd-4297-9de3-ce9a251a1c4c/</link>
+      <pubDate>Thu, 12 Mar 2020 16:29:25 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/0833cd6b-bebd-4297-9de3-ce9a251a1c4c/</guid>
+      <description>remote_url を利用する。 attacher = Shrine::Attacher.new(cache: :cache, store: :store) attacher.remote_url = &amp;#34;https://path/to/image.jpg&amp;#34; shrine/attacher.md at master · shrinerb/shrine Remote URL · Shrine</description>
+    </item>
+    
+    <item>
+      <title>Serializerで特定のfieldだけを出力したい</title>
+      <link>https://rengotaku.github.io/posts/4b809adb-7e5a-4a4a-9aa5-3904b217ae66/</link>
+      <pubDate>Tue, 18 Feb 2020 19:59:49 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/4b809adb-7e5a-4a4a-9aa5-3904b217ae66/</guid>
+      <description>解決 fields オプションを使用する。 render json: notifications, fields: [:id, :title] How to filter attributes? · Issue #992 · rails-api/active_model_serializers · GitHub 問題 ActiveModel::MissingAttributeError (missing attribute: description) が発生する。 構成 class NotificationSerializer &amp;lt; ApplicationSerializer attribute :id attribute :title attribute :description end notifications = Notification.select(:id, :title) render json: notifications</description>
+    </item>
+    
+    <item>
+      <title>omniauthのTwitterプロバイダーのauthキーをコントローラーで設定</title>
+      <link>https://rengotaku.github.io/posts/4fce0411-7c96-42a2-8d3e-2861e57754e1/</link>
+      <pubDate>Wed, 12 Feb 2020 15:14:26 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/4fce0411-7c96-42a2-8d3e-2861e57754e1/</guid>
+      <description>解決 遷移するパスが正しくなかった。(/api/auth/:provider/setup の様にscopeをネストしていた) デフォルトで遷移する</description>
+    </item>
+    
+    <item>
+      <title>omniauthのTwitterプロバイダーのoptionsを動的に変更する</title>
+      <link>https://rengotaku.github.io/posts/457eeb3b-3e8a-411b-bca0-38561b0ec80f/</link>
+      <pubDate>Wed, 12 Feb 2020 11:33:04 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/457eeb3b-3e8a-411b-bca0-38561b0ec80f/</guid>
+      <description>SETUP_PROC = lambda do |env| request = Rack::Request.new(env) user = User.find_by_subdomain(request.subdomain) env[&amp;#39;omniauth.strategy&amp;#39;].options[:client_id] = user.consumer_key # if using omniauth-oauth2 env[&amp;#39;omniauth.strategy&amp;#39;].options[:client_secret] = user.consumer_secret # if using omniauth-oauth2 env[&amp;#39;omniauth.strategy&amp;#39;].options[:consumer_key] = user.consumer_key # if using omniauth-oauth env[&amp;#39;omniauth.strategy&amp;#39;].options[:consumer_secret] = user.consumer_secret # if using omniauth-oauth end use OmniAuth::Builder.new do provider :twitter, setup: SETUP_PROC, callback_path: &amp;#34;/path/to/callback&amp;#34;, image_size: &amp;#34;original&amp;#34; end Setup Phase · omniauth/omniauth Wiki · GitHub</description>
+    </item>
+    
+    <item>
+      <title>Docker上のcapistranoから別途立てたローカルサーバにアクセス</title>
+      <link>https://rengotaku.github.io/posts/cae07512-deaa-4c5b-94cd-6ea0b68b1ca6/</link>
+      <pubDate>Fri, 17 Jan 2020 10:46:12 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/cae07512-deaa-4c5b-94cd-6ea0b68b1ca6/</guid>
+      <description>構図 Capistrano Server[Docker] &amp;lt;=&amp;gt; Local[Mac] &amp;lt;=&amp;gt; SSHD Server[Docker] 接続先(ファイル設置先) サーバ 設定ファイル version: &amp;#34;3&amp;#34; services: ssh: build: dockerfile: Dockerfile command: [&amp;#34;/usr/sbin/sshd&amp;#34;, &amp;#34;-D&amp;#34;] tty: true ports: - &amp;#34;10022:22&amp;#34; Docker 初心者 — ssh で接続できるサーバーを立てる - Qiita FROM ubuntu:16.04 RUN</description>
+    </item>
+    
+    <item>
+      <title>Sentryのtips</title>
+      <link>https://rengotaku.github.io/posts/5ff76547-776f-496d-9fbc-37941617f0c6/</link>
+      <pubDate>Wed, 15 Jan 2020 16:53:28 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/5ff76547-776f-496d-9fbc-37941617f0c6/</guid>
+      <description>エラーのグルーピング Raven.user_context(id: xxx) でエラーをグルーピングできる。 エラー付近のソースを行単位で修正した場合、グルーピングされない（別エラーの扱い）ので気</description>
+    </item>
+    
+    <item>
+      <title>mysql2のgemのインストールが失敗する</title>
+      <link>https://rengotaku.github.io/posts/0a030ad1-7817-41e7-9a31-5b3c5623c121/</link>
+      <pubDate>Thu, 09 Jan 2020 14:43:22 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/0a030ad1-7817-41e7-9a31-5b3c5623c121/</guid>
+      <description>解決 $ export LDFLAGS=&amp;quot;-L/usr/local/opt/openssl/lib&amp;quot; $ export CPPFLAGS=&amp;quot;-I/usr/local/opt/openssl/include&amp;quot; $ bundle config --local build.mysql2 &amp;quot;--with-cppflags=-I/usr/local/opt/openssl/include&amp;quot; $ bundle config --local build.mysql2 &amp;quot;--with-ldflags=-L/usr/local/opt/openssl/lib&amp;quot; $ bundle install 【Rails】MySQL2がbundle installできない時の対応方法 - Qiita 事象 macでmy</description>
+    </item>
+    
+    <item>
+      <title>グローバルにインストールしたgemの削除</title>
+      <link>https://rengotaku.github.io/posts/6ff9903c-4675-4f7b-b065-45343a171c09/</link>
+      <pubDate>Thu, 09 Jan 2020 13:09:45 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/6ff9903c-4675-4f7b-b065-45343a171c09/</guid>
+      <description>$ gem uninstall -axI `gem list --no-versions | egrep -v &#39;rdoc|psych|json|io-console|bigdecimal&#39;` $ rbenv exec gem install bundler ※Bundlerまで消去されてしまため gemを間違えてグローバルにインストールしてしまった場合</description>
+    </item>
+    
+    <item>
+      <title>jbuilderを使用するとレスポンスが空になる</title>
+      <link>https://rengotaku.github.io/posts/e9c4805c-aaee-455e-98cc-067b61c46546/</link>
+      <pubDate>Tue, 17 Sep 2019 19:25:56 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/e9c4805c-aaee-455e-98cc-067b61c46546/</guid>
+      <description>解決 active_decorator のバージョンを 1.1.0 から 1.3.1 に上げた為。 同様の事象が記載されているPRは見られない。（改修は未定） Pull Requests · amatsuda/active_decorator 事象 render &#39;template_name&#39;, formats: &#39;json&#39;, handlers: &#39;jbuilder&#39; のように、json</description>
+    </item>
+    
+    <item>
+      <title>td-agentにaws-fluent-plugin-kinesisをインストールしたが起動できない</title>
+      <link>https://rengotaku.github.io/posts/02006c4c-ed23-4a52-a550-021451b85d43/</link>
+      <pubDate>Fri, 12 Jul 2019 10:16:06 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/02006c4c-ed23-4a52-a550-021451b85d43/</guid>
+      <description>事象 aws-s3のプラグインでエラーが発生している。 less /var/log/td-agent/td-agent.log failed to configure/start sub output s3: Unable to activate fluent-plugin-s3-0.8.5, because aws-sdk- 2.1.36 conflicts with aws-sdk (&amp;lt; 3, &amp;gt;= 2.3.22) 解決 下記の通りにgemのインストールを行う。</description>
+    </item>
+    
+    <item>
+      <title>gretelのconfigの自動リロードをdevelopment以外の環境で有効にしたい</title>
+      <link>https://rengotaku.github.io/posts/14fcb8b8-6a2e-40e0-af08-3ef565032c12/</link>
+      <pubDate>Fri, 05 Jul 2019 12:23:08 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/14fcb8b8-6a2e-40e0-af08-3ef565032c12/</guid>
+      <description>問題 config/breadcrumbs.rb の編集が即時反映されない。 解決 Rails.application.configure do # config/breadcrumbs.rb を自動ロード Gretel.configure do |config| config.reload_environments &amp;lt;&amp;lt; &amp;#34;my_development&amp;#34; end 原因 ローカルで動作さている環境が development でないため。 普通はローカル開発時は、</description>
+    </item>
+    
+    <item>
+      <title>factory botでユニークな値を設定</title>
+      <link>https://rengotaku.github.io/posts/9b22bf01-bb92-4598-93a2-bd78d7efe635/</link>
+      <pubDate>Wed, 26 Jun 2019 13:35:55 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/9b22bf01-bb92-4598-93a2-bd78d7efe635/</guid>
+      <description>sequence(:username) { |n| &amp;quot;user#{n}&amp;quot; } FactoryBot.define do factory :user do first_name &#39;John&#39; last_name &#39;Doe&#39; birthdate { 21.years.ago } admin false sequence(:username) { |n| &amp;quot;user#{n}&amp;quot; } end end Factory Bot cheatsheet</description>
+    </item>
+    
+    <item>
+      <title>HTTPクライアントライブラリのFaradayを使う</title>
+      <link>https://rengotaku.github.io/posts/d83470fc-978d-4962-99f8-c8dd538b0c35/</link>
+      <pubDate>Mon, 10 Jun 2019 14:25:08 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/d83470fc-978d-4962-99f8-c8dd538b0c35/</guid>
+      <description>conn = Faraday::Connection.new(url: &amp;#34;https://example.com&amp;#34;) do |builder| builder.use Faraday::Request::UrlEncoded builder.use Faraday::Adapter::NetHttp end res = conn.get &amp;#39;/path/to/url&amp;#39; # &amp;lt;= https://example.com/path/to/url res.status # &amp;lt;= 200 or 404 ... Ruby の HTTP クライアントライブラリ Faraday が便利そう</description>
+    </item>
+    
+    <item>
+      <title>dockerで動いているrailsでbetter_errorsのirbが動作しない</title>
+      <link>https://rengotaku.github.io/posts/bc3ee1e4-fa92-4af9-bdd1-7dced7696686/</link>
+      <pubDate>Thu, 30 May 2019 19:18:43 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/bc3ee1e4-fa92-4af9-bdd1-7dced7696686/</guid>
+      <description>未解決 画面右側のirbでデバッグできる画面が表示されない。 binding_of_caller が関連しているようだが、原因が不明。 画面を出すようにする BetterErrors::Middleware.allow_ip! &amp;#34;0.0.0.0/0&amp;#34; better_errors not working in a Docker container · Issue #270</description>
+    </item>
+    
+    <item>
+      <title>rspecを導入する上でハマった箇所</title>
+      <link>https://rengotaku.github.io/posts/47e621ef-c154-4be1-9ecb-fdc5795c37ac/</link>
+      <pubDate>Fri, 12 Apr 2019 14:35:34 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/47e621ef-c154-4be1-9ecb-fdc5795c37ac/</guid>
+      <description>controllerの書き方 RSpec.describe EventsController do describe &#39;GET #index&#39; do context &#39;nothing&#39; do it &amp;quot;render witout error&amp;quot; do get :index end end end end Rails RSpecの基本 ~Controller編~ - Qiita 比較の仕方 expect(hoge).to be 1 使える</description>
+    </item>
+    
+    <item>
+      <title>モデルにカラム名をコメントで記載したい</title>
+      <link>https://rengotaku.github.io/posts/57c034e1-f688-4497-8b56-fcd88c3ee234/</link>
+      <pubDate>Thu, 11 Apr 2019 10:43:56 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/57c034e1-f688-4497-8b56-fcd88c3ee234/</guid>
+      <description>gemのインストール $ gem install annotate $ annotate 書き込まれた状態 # == Schema Information # # Table name: hoges # # id :integer not null, primary key # title :text # class Hoge &amp;lt; ActiveRecord::Base end ctran/annotate_models: Annotate Rails classes with schema and routes info</description>
+    </item>
+    
+    <item>
+      <title>capybara-webkit 1.15.1のインストールに失敗する</title>
+      <link>https://rengotaku.github.io/posts/2a9df335-cb6e-46e6-8554-ccf2bb2ab67f/</link>
+      <pubDate>Fri, 08 Mar 2019 16:27:38 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/2a9df335-cb6e-46e6-8554-ccf2bb2ab67f/</guid>
+      <description>Info マシン macOS High Sierra(10.13.4) Gemfile.lock capybara (2.11.0) addressable mime-types (&amp;gt;= 1.16) nokogiri (&amp;gt;= 1.3.3) rack (&amp;gt;= 1.0.0) rack-test (&amp;gt;= 0.5.4) xpath (~&amp;gt; 2.0) capybara-webkit (1.15.1) capybara (&amp;gt;= 2.3, &amp;lt; 4.0) json 事象 bundle install時にエラー current directory: /Users/300807/workspace/front.door.ac/vendor/bundler/ruby/2.3.0/gems/capybara-webkit-1.15.1 /Users/300807/.rbenv/versions/2.3.7/bin/ruby -r ./siteconf20190308-92868-1cuusvw.rb extconf.rb Info: creating stash file /Users/300807/workspace/front.door.ac/vendor/bundler/ruby/2.3.0/gems/capybara-webkit-1.15.1/.qmake.stash cd src/ &amp;amp;&amp;amp; ( test -e Makefile.webkit_server || /usr/local/opt/qt/bin/qmake</description>
+    </item>
+    
+    <item>
+      <title>middlemanのインストールからhtmlを出力するまで</title>
+      <link>https://rengotaku.github.io/posts/d2809b53-39a5-42f8-8f94-9bdc154cafc9/</link>
+      <pubDate>Thu, 14 Feb 2019 10:26:43 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/d2809b53-39a5-42f8-8f94-9bdc154cafc9/</guid>
+      <description>環境 ruby: ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin17] mac: ProductName: Mac OS X, ProductVersion: 10.13.4, BuildVersion: 17E202 手順 $ gem install middleman # bundlerは用意しなくて良い $ rbenv exec bundle exec middleman init new_project # プロジェクトを作成 create .gitignore create Gemfile create config.rb create source/images/.keep create source/index.html.erb create</description>
+    </item>
+    
+    <item>
+      <title>RubyGems.orgのシステム状態を確認</title>
+      <link>https://rengotaku.github.io/posts/cb77a9e1-4250-422f-8f59-aa5c5c1d04a8/</link>
+      <pubDate>Tue, 11 Sep 2018 10:57:18 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/cb77a9e1-4250-422f-8f59-aa5c5c1d04a8/</guid>
+      <description>RubyGems.org Status Pingdom Public Reports Overview どっちを見るべきか判断がついていない ruby - bundle install時にタイムアウトする場合の原因と対処方法を教えてください - スタック・オー</description>
+    </item>
+    
+    <item>
+      <title>Nokogiriでノードを削除</title>
+      <link>https://rengotaku.github.io/posts/a1ef4360-134c-45a7-9da4-5fb432a0d54e/</link>
+      <pubDate>Mon, 27 Aug 2018 14:56:18 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/a1ef4360-134c-45a7-9da4-5fb432a0d54e/</guid>
+      <description># 最初に見つかった &amp;lt;div&amp;gt; を消す doc.at(:div).&amp;amp;remove puts doc puts &amp;quot;-&amp;quot; * 20 # 全ての &amp;lt;br&amp;gt; を消す doc.search(:br).map &amp;amp;:remove puts doc atの場合、存在しない場合はnilが返却される Nokogiri で任意の node を削除する - Secret Garden(Instrumental)</description>
+    </item>
+    
+    <item>
+      <title>wheneverでrootパス取得</title>
+      <link>https://rengotaku.github.io/posts/333d65ff-998a-4586-931e-ec240b4ef4c4/</link>
+      <pubDate>Fri, 17 Aug 2018 12:32:12 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/333d65ff-998a-4586-931e-ec240b4ef4c4/</guid>
+      <description>require File.expand_path(File.dirname(__FILE__) + &amp;quot;/environment&amp;quot;) set :output, &amp;quot;#{Rails.root}/log/cron.log&amp;quot; Railsでwheneverを使ってcronを設定する</description>
+    </item>
+    
+    <item>
+      <title>brewでmysqlをインストールしたら、mysqlのgemがインストールできない＆mysqlで何も実行できない</title>
+      <link>https://rengotaku.github.io/posts/1e336aa2-3910-47a2-890b-1ce379db42bc/</link>
+      <pubDate>Tue, 10 Jul 2018 17:55:00 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/1e336aa2-3910-47a2-890b-1ce379db42bc/</guid>
+      <description>gemのインストール対応 バージョン0.4.10を使用する Failed to build gem native extension - unknown type name &amp;lsquo;my_bool&amp;rsquo; · Issue #980 · brianmario/mysql2 mysqlの実行エラー対応 mysql&amp;gt; SET GLOBAL innodb_fast_shutdown = 1; $ mysql_upgrade -u root -p Mysql Error:The</description>
+    </item>
+    
+  </channel>
+</rss>

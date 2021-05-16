@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>FluentdでS3にログをアップする | Vegetable Programing</title>
+
+<meta name="keywords" content="linux, fluentd, 未解決, ベジプロ, プログ, プログラム" />
+<meta name="description" content="Fluentdのインストール $ sudo curl -L https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh $ sudo td-agent-gem install fluent-plugin-config-expander fluent-plugin-tail-asis fluent-plugin-file-alternative fluent-plugin-forest $ sudo mkdir /var/log/td-agent/pos $ sudo mkdir /var/log/td-agent/buffer $ sudo chown -R td-agent. /var/log/td-agent conf設定 $ sudo vi /etc/td-agent/td-agent.conf -------------------------------------------------------------------------------- &lt;source&gt; type config_expander &lt;config&gt; type tail format none path /var/log/ec2-user/XXXX.log pos_file /var/log/td-agent/pos/XXXX.pos tag api_${hostname}/XXXX &lt;/config&gt; &lt;/source&gt;">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/posts/129e37cb-70dd-4c73-b21e-18453d50b775/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="FluentdでS3にログをアップする" />
+<meta property="og:description" content="Fluentdのインストール $ sudo curl -L https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh $ sudo td-agent-gem install fluent-plugin-config-expander fluent-plugin-tail-asis fluent-plugin-file-alternative fluent-plugin-forest $ sudo mkdir /var/log/td-agent/pos $ sudo mkdir /var/log/td-agent/buffer $ sudo chown -R td-agent. /var/log/td-agent conf設定 $ sudo vi /etc/td-agent/td-agent.conf -------------------------------------------------------------------------------- &lt;source&gt; type config_expander &lt;config&gt; type tail format none path /var/log/ec2-user/XXXX.log pos_file /var/log/td-agent/pos/XXXX.pos tag api_${hostname}/XXXX &lt;/config&gt; &lt;/source&gt;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rengotaku.github.io/posts/129e37cb-70dd-4c73-b21e-18453d50b775/" />
+<meta property="article:published_time" content="2018-04-25T10:52:57+09:00" />
+<meta property="article:modified_time" content="2019-06-05T16:18:09+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="FluentdでS3にログをアップする"/>
+<meta name="twitter:description" content="Fluentdのインストール $ sudo curl -L https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh $ sudo td-agent-gem install fluent-plugin-config-expander fluent-plugin-tail-asis fluent-plugin-file-alternative fluent-plugin-forest $ sudo mkdir /var/log/td-agent/pos $ sudo mkdir /var/log/td-agent/buffer $ sudo chown -R td-agent. /var/log/td-agent conf設定 $ sudo vi /etc/td-agent/td-agent.conf -------------------------------------------------------------------------------- &lt;source&gt; type config_expander &lt;config&gt; type tail format none path /var/log/ec2-user/XXXX.log pos_file /var/log/td-agent/pos/XXXX.pos tag api_${hostname}/XXXX &lt;/config&gt; &lt;/source&gt;"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "FluentdでS3にログをアップする",
+  "name": "FluentdでS3にログをアップする",
+  "description": "Fluentdのインストール $ sudo curl -L https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh $ sudo td-agent-gem install fluent-plugin-config-expander …",
+  "keywords": [
+    "linux", "fluentd", "未解決", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "Fluentdのインストール $ sudo curl -L https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh\r$ sudo td-agent-gem install fluent-plugin-config-expander fluent-plugin-tail-asis fluent-plugin-file-alternative fluent-plugin-forest\r$ sudo mkdir /var/log/td-agent/pos\r$ sudo mkdir /var/log/td-agent/buffer\r$ sudo chown -R td-agent. /var/log/td-agent\rconf設定 $ sudo vi /etc/td-agent/td-agent.conf\r--------------------------------------------------------------------------------\r\rtype config_expander\r\rtype tail\rformat none\rpath /var/log/ec2-user/XXXX.log\rpos_file /var/log/td-agent/pos/XXXX.pos\rtag api_${hostname}/XXXX\r\r\r\rtype config_expander\r\rtype tail\rformat none\rpath /var/log/ec2-user/XXXX.log\rpos_file /var/log/td-agent/pos/XXXX.pos\rtag api_${hostname}/XXXX\r\r\rtype forest\rsubtype s3\r\raws_key_id XXXX\raws_sec_key XXXX\rs3_bucket XXXX\rs3_region ap-northeast-1\rpath\rbuffer_path /var/log/td-agent/buffer/${tag}\rtime_slice_format %Y/%m/%d/${tag}/ec2-%Y-%m-%d-%H\rretry_wait 30s\rretry_limit 5\rflush_interval 1h\rflush_at_shutdown true\r\r\r起動と自動起動 $ sudo /etc/init.d/td-agent start\r$ sudo chkconfig td-agent on\rリブート時のfuluentdの実行 $ sudo crontab -e\r--------------------------------------------------------------------------------\r@reboot /bin/bash -lc '/etc/init.d/td-agent restart 1/tmp/td-agent-restart.log 2\u00261'\rつまづいた事 fluent-plugin-tail-asis(type tail_asis)を使用していたが下記のようなエラーが発生し起動できない。解決策は見つからず。tailに変更した。\n uninitialized constant Fluent::TailInput (NameError) dry run failed: uninitialized constant Fluent::TailInput  未解決 reboot時にfluentdがログをS3に飛ばしてくれない\n",
+  "wordCount" : "269",
+  "inLanguage": "en",
+  "datePublished": "2018-04-25T10:52:57+09:00",
+  "dateModified": "2019-06-05T16:18:09+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rengotaku.github.io/posts/129e37cb-70dd-4c73-b21e-18453d50b775/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rengotaku.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      FluentdでS3にログをアップする
+    </h1>
+    <div class="post-meta">April 25, 2018
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="fluentdのインストール">Fluentdのインストール<a hidden class="anchor" aria-hidden="true" href="#fluentdのインストール">#</a></h1>
+<pre><code>$ sudo curl -L https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh
+$ sudo td-agent-gem install fluent-plugin-config-expander fluent-plugin-tail-asis fluent-plugin-file-alternative fluent-plugin-forest
+
+$ sudo mkdir /var/log/td-agent/pos
+$ sudo mkdir /var/log/td-agent/buffer
+$ sudo chown -R td-agent. /var/log/td-agent
+</code></pre><h1 id="conf設定">conf設定<a hidden class="anchor" aria-hidden="true" href="#conf設定">#</a></h1>
+<pre><code>$ sudo vi /etc/td-agent/td-agent.conf
+--------------------------------------------------------------------------------
+&lt;source&gt;
+  type config_expander
+  &lt;config&gt;
+    type tail
+    format none
+    path /var/log/ec2-user/XXXX.log
+    pos_file /var/log/td-agent/pos/XXXX.pos
+    tag api_${hostname}/XXXX
+  &lt;/config&gt;
+&lt;/source&gt;
+
+&lt;source&gt;
+  type config_expander
+  &lt;config&gt;
+    type tail
+    format none
+    path /var/log/ec2-user/XXXX.log
+    pos_file /var/log/td-agent/pos/XXXX.pos
+    tag api_${hostname}/XXXX
+  &lt;/config&gt;
+&lt;/source&gt;
+
+&lt;match *.**&gt;
+  type forest
+  subtype s3
+   &lt;template&gt;
+    aws_key_id XXXX
+    aws_sec_key XXXX
+    s3_bucket XXXX
+    s3_region ap-northeast-1
+
+    path
+    buffer_path /var/log/td-agent/buffer/${tag}
+    time_slice_format %Y/%m/%d/${tag}/ec2-%Y-%m-%d-%H
+    retry_wait 30s
+    retry_limit 5
+    flush_interval 1h
+    flush_at_shutdown true
+   &lt;/template&gt;
+&lt;/match&gt;
+</code></pre><h1 id="起動と自動起動">起動と自動起動<a hidden class="anchor" aria-hidden="true" href="#起動と自動起動">#</a></h1>
+<pre><code>$ sudo /etc/init.d/td-agent start
+$ sudo chkconfig td-agent on
+</code></pre><h1 id="リブート時のfuluentdの実行">リブート時のfuluentdの実行<a hidden class="anchor" aria-hidden="true" href="#リブート時のfuluentdの実行">#</a></h1>
+<pre><code>$ sudo crontab -e
+--------------------------------------------------------------------------------
+@reboot /bin/bash -lc '/etc/init.d/td-agent restart 1&gt;/tmp/td-agent-restart.log 2&gt;&amp;1'
+</code></pre><h1 id="つまづいた事">つまづいた事<a hidden class="anchor" aria-hidden="true" href="#つまづいた事">#</a></h1>
+<p>fluent-plugin-tail-asis(type tail_asis)を使用していたが下記のようなエラーが発生し起動できない。解決策は見つからず。tailに変更した。</p>
+<ul>
+<li>uninitialized constant Fluent::TailInput (NameError)</li>
+<li>dry run failed: uninitialized constant Fluent::TailInput</li>
+</ul>
+<h1 id="未解決">未解決<a hidden class="anchor" aria-hidden="true" href="#未解決">#</a></h1>
+<p>reboot時にfluentdがログをS3に飛ばしてくれない</p>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rengotaku.github.io/tags/linux">linux</a></li>
+      <li><a href="https://rengotaku.github.io/tags/fluentd">fluentd</a></li>
+      <li><a href="https://rengotaku.github.io/tags/%E6%9C%AA%E8%A7%A3%E6%B1%BA">未解決</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

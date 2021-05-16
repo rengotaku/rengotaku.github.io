@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>memo on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/memo/</link>
+    <description>Recent content in memo on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 05 Dec 2019 14:06:47 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/memo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>緊急度参考値</title>
+      <link>https://rengotaku.github.io/posts/f9f8235d-9ee3-4295-a095-f4b61e0a0942/</link>
+      <pubDate>Thu, 05 Dec 2019 14:06:47 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/f9f8235d-9ee3-4295-a095-f4b61e0a0942/</guid>
+      <description>緊急（即対応必要） システムがダウンしている コア業務へ多大な影響がある 請求処理が正常に行われない 問い合わせが正常に行われない 企業に対して不正な</description>
+    </item>
+    
+    <item>
+      <title>記号を英語で書くと</title>
+      <link>https://rengotaku.github.io/posts/9d78b4b7-b269-4a78-bf44-19917ace9387/</link>
+      <pubDate>Wed, 31 Jul 2019 10:43:18 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/9d78b4b7-b269-4a78-bf44-19917ace9387/</guid>
+      <description>記号 日本語 英語 [ ] 鉤括弧、カギカッコ brackets, square brackets ( ) 括弧、カッコ brackets, curl brackets, parentheses 『かぎかっこ』は英語で何？他かっこの英語表現もまとめてみた！ | ラボライブ！</description>
+    </item>
+    
+  </channel>
+</rss>

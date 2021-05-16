@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>yum on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/yum/</link>
+    <description>Recent content in yum on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 06 Feb 2020 19:30:31 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/yum/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>yumのインストール可能なバージョンを取得</title>
+      <link>https://rengotaku.github.io/posts/ffbbc114-2c95-4ad9-bdcc-a64b0fdbf8ca/</link>
+      <pubDate>Thu, 06 Feb 2020 19:30:31 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/ffbbc114-2c95-4ad9-bdcc-a64b0fdbf8ca/</guid>
+      <description>--showduplicates オプションを使用 $ yum --showduplicates list httpd | expand Loaded plugins: fastestmirror, langpacks, refresh-packagekit Loading mirror speeds from cached hostfile * fedora: mirror.steadfast.net Available Packages httpd.x86_64 2.4.6-6.fc20 fedora httpd.x86_64 2.4.10-1.fc20 updates How can I instruct yum to install a specific version of package X? - Unix &amp;amp; Linux Stack Exchange</description>
+    </item>
+    
+  </channel>
+</rss>

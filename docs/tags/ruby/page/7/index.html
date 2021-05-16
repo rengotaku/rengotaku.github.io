@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>ruby | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/tags/ruby/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/ruby/index.xml">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="ruby" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://rengotaku.github.io/tags/ruby/" />
+<meta property="og:updated_time" content="2020-11-20T21:57:49+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ruby"/>
+<meta name="twitter:description" content=""/>
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>ruby</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      意味のない継承を構造体に置き換える
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>修正前 クラス構成 module MailSendLog class Base class &lt;&lt; self def post(param) data = default_data.merge( param: param ) @logger.post(@tag, data) end def default_data { tag: tag, specific_item: specific_item, } end def tag raise NotImplementedError, &#34;must implement #{self.class}##{__method__}&#34; end def specific_item raise NotImplementedError, &#34;must implement #{self.class}##{__method__}&#34; end end end end module MailSendLog class Recommend1 &lt; MailSendLog::Base class &lt;&lt; self protected def tag :recommend1 end def specific_item...</p>
+  </section>
+  <footer class="entry-footer">July 3, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 意味のない継承を構造体に置き換える" href="https://rengotaku.github.io/posts/1e7d92ca-3e40-46d9-ab97-056ccb3cb3b5/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      rubyで構造体を使いたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>require &#34;ostruct&#34; config = OpenStruct.new config.level #=&gt; nil config.level = :debug config.level #=&gt; :debug 手軽に構造体を使いたい時にOpenStruct - Qiita...</p>
+  </section>
+  <footer class="entry-footer">June 26, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to rubyで構造体を使いたい" href="https://rengotaku.github.io/posts/2abab715-12a8-4ab0-b451-258c4366fe44/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ::ClassNameの意味
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>定数のスコープ演算子で、トップレベルの定数であることを示す。 A = &#34;::A&#34; class Foo A = &#34;Foo::A&#34; class Bar A = &#34;Foo::Bar::A&#34; p A # =&gt; &#34;Foo::Bar::A&#34; p Foo::A # =&gt; &#34;Foo::A&#34; p ::A # =&gt; &#34;::A&#34; end end chef - ruby でクラス名の先...</p>
+  </section>
+  <footer class="entry-footer">June 26, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to ::ClassNameの意味" href="https://rengotaku.github.io/posts/f474b685-0a9a-42b8-9328-462d2fe49945/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      HTTPクライアントライブラリのFaradayを使う
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>conn = Faraday::Connection.new(url: &#34;https://example.com&#34;) do |builder| builder.use Faraday::Request::UrlEncoded builder.use Faraday::Adapter::NetHttp end res = conn.get &#39;/path/to/url&#39; # &lt;= https://example.com/path/to/url res.status # &lt;= 200 or 404 ... Ruby の HTTP クライアントライブラリ Faraday が便利そう...</p>
+  </section>
+  <footer class="entry-footer">June 10, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to HTTPクライアントライブラリのFaradayを使う" href="https://rengotaku.github.io/posts/d83470fc-978d-4962-99f8-c8dd538b0c35/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      dockerで動くrailsでデバックを行いたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>設定 docker-compose.yml services: rails: &amp;app_base tty: true stdin_open: true 操作 アタッチ docker attach [container_name] $ docker-compose run --rm --service-ports [service name] でいけるかと思ったが、再度コンテナを立ち上げる挙動になり期待しない動きをする 便利コマンド...</p>
+  </section>
+  <footer class="entry-footer">May 30, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to dockerで動くrailsでデバックを行いたい" href="https://rengotaku.github.io/posts/b6b89728-605f-40b8-9d57-2bb1cc14b932/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      日時をよくあるフォーマットの文字列で取得したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Time.now.strftime(&#39;%Y-%m-%d %H:%M:%S&#39;) strftime - リファレンス - - Railsドキュメント...</p>
+  </section>
+  <footer class="entry-footer">May 27, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 日時をよくあるフォーマットの文字列で取得したい" href="https://rengotaku.github.io/posts/829f1f8c-5a83-4c37-b05d-204b2b2d70d4/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      raiseを検証したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>assert_raises RuntimeError do # something to do raise error end module MiniTest::Assertions - Documentation for Ruby 2.1.0 https://docs.ruby-lang.org/en/2.1.0/MiniTest/Assertions.html...</p>
+  </section>
+  <footer class="entry-footer">May 17, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to raiseを検証したい" href="https://rengotaku.github.io/posts/935cf5a3-4605-4c50-96a3-c9f4064f624a/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      csvの一行目にcrlfが含まれている為エラーになる
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>事象 # ファイルから一行ずつ読み込む i_csv = CSV.open(filepath, &#34;rb&#34;, skip_blanks: true, force_quotes: true) processed_position = 0 begin i_csv.each do |row| processed_position = i_csv.pos end rescue CSV::MalformedCSVError =&gt; ex aborted_position = i_csv.pos io = i_csv.to_io io.seek(processed_position) puts &#34;error message: #{ex.message}, stacktrace: #{ex.backtrace.join(&#34;,&#34;)}&#34; puts io.read(aborted_position - processed_position) end エラー error message: Missing or stray quote in line 1,...</p>
+  </section>
+  <footer class="entry-footer">May 16, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to csvの一行目にcrlfが含まれている為エラーになる" href="https://rengotaku.github.io/posts/4db39f95-be1b-4fb1-8503-0560ae376ca6/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      minitestでmockの引数を厳密にチェックしたくない
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>@mock.expect(:do_something_else, true) do |a1, a2| # nothings end minitest/mock.rb at master · seattlerb/minitest...</p>
+  </section>
+  <footer class="entry-footer">May 14, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to minitestでmockの引数を厳密にチェックしたくない" href="https://rengotaku.github.io/posts/ccbc4a39-2105-4cfa-860a-f6a4c608cbf2/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      特定のgemの更新をGemfile.lockに反映させる
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>$ bundle update --source therubyracer bundle updateで特定のgemのみ更新する - Qiita...</p>
+  </section>
+  <footer class="entry-footer">April 26, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 特定のgemの更新をGemfile.lockに反映させる" href="https://rengotaku.github.io/posts/78936827-219a-4307-b689-b15ea2b2c91d/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="/tags/ruby/page/6/">« Prev Page</a>
+    <a class="next" href="/tags/ruby/page/8/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

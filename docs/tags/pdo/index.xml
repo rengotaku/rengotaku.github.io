@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pdo on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/pdo/</link>
+    <description>Recent content in pdo on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Fri, 20 Jul 2018 19:16:23 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/pdo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>phpで8系に接続する際に注意すること</title>
+      <link>https://rengotaku.github.io/posts/f0e97e2b-18eb-4b62-882e-73769a380af4/</link>
+      <pubDate>Fri, 20 Jul 2018 19:16:23 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/f0e97e2b-18eb-4b62-882e-73769a380af4/</guid>
+      <description>経緯 5.6系を使う予定が、brewで最新の8系をインストールしていて、謎のエラー[2054] The server requested authentication method unknown to the clientで苦しんだ。 対応 パス</description>
+    </item>
+    
+  </channel>
+</rss>

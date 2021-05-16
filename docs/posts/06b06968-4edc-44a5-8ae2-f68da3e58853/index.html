@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>画面（フロント）から通知したい | Vegetable Programing</title>
+
+<meta name="keywords" content="javascript, loggly, ベジプロ, プログ, プログラム" />
+<meta name="description" content="ファイルの読込 loggly.tracker.js loggly-jslogger/src at master · loggly/loggly-jslogger 初期化 var _LTracker = _LTracker || []; ;(function($) { $(function() { var logglySettings = { &#39;logglyKey&#39;: null, &#39;sendConsoleErrors&#39; : true, &#39;tag&#39; : null } logglySettings[&#39;logglyKey&#39;] = $(&#34;meta[name=&#39;loggly_key&#39;]&#34;).attr(&#39;content&#39;); logglySettings[&#39;tag&#39;] = $(&#34;meta[name=&#39;loggly_tag&#39;]&#34;).attr(&#39;content&#39;); _LTracker.push(logglySettings); }); })(jQuery); HTMLに情報の埋め込み &lt;meta name=&#34;loggly_key&#34; content=&#34;&lt;?php echo(&#39;loggly_of_key&#39;); ?&gt;&#34; /&gt; &lt;meta name=&#34;loggly_tag&#34; content=&#34;&lt;?php echo(&#39;loggly_of_tag&#39;);">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/posts/06b06968-4edc-44a5-8ae2-f68da3e58853/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="画面（フロント）から通知したい" />
+<meta property="og:description" content="ファイルの読込 loggly.tracker.js loggly-jslogger/src at master · loggly/loggly-jslogger 初期化 var _LTracker = _LTracker || []; ;(function($) { $(function() { var logglySettings = { &#39;logglyKey&#39;: null, &#39;sendConsoleErrors&#39; : true, &#39;tag&#39; : null } logglySettings[&#39;logglyKey&#39;] = $(&#34;meta[name=&#39;loggly_key&#39;]&#34;).attr(&#39;content&#39;); logglySettings[&#39;tag&#39;] = $(&#34;meta[name=&#39;loggly_tag&#39;]&#34;).attr(&#39;content&#39;); _LTracker.push(logglySettings); }); })(jQuery); HTMLに情報の埋め込み &lt;meta name=&#34;loggly_key&#34; content=&#34;&lt;?php echo(&#39;loggly_of_key&#39;); ?&gt;&#34; /&gt; &lt;meta name=&#34;loggly_tag&#34; content=&#34;&lt;?php echo(&#39;loggly_of_tag&#39;);" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rengotaku.github.io/posts/06b06968-4edc-44a5-8ae2-f68da3e58853/" />
+<meta property="article:published_time" content="2018-11-20T12:30:28+09:00" />
+<meta property="article:modified_time" content="2018-11-20T12:31:19+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="画面（フロント）から通知したい"/>
+<meta name="twitter:description" content="ファイルの読込 loggly.tracker.js loggly-jslogger/src at master · loggly/loggly-jslogger 初期化 var _LTracker = _LTracker || []; ;(function($) { $(function() { var logglySettings = { &#39;logglyKey&#39;: null, &#39;sendConsoleErrors&#39; : true, &#39;tag&#39; : null } logglySettings[&#39;logglyKey&#39;] = $(&#34;meta[name=&#39;loggly_key&#39;]&#34;).attr(&#39;content&#39;); logglySettings[&#39;tag&#39;] = $(&#34;meta[name=&#39;loggly_tag&#39;]&#34;).attr(&#39;content&#39;); _LTracker.push(logglySettings); }); })(jQuery); HTMLに情報の埋め込み &lt;meta name=&#34;loggly_key&#34; content=&#34;&lt;?php echo(&#39;loggly_of_key&#39;); ?&gt;&#34; /&gt; &lt;meta name=&#34;loggly_tag&#34; content=&#34;&lt;?php echo(&#39;loggly_of_tag&#39;);"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "画面（フロント）から通知したい",
+  "name": "画面（フロント）から通知したい",
+  "description": "ファイルの読込 loggly.tracker.js loggly-jslogger/src at master · loggly/loggly-jslogger 初期化 var _LTracker = _LTracker || []; ;(function($) { $(function() { var logglySettings = { …",
+  "keywords": [
+    "javascript", "loggly", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "ファイルの読込 loggly.tracker.js\n loggly-jslogger/src at master · loggly/loggly-jslogger\n 初期化 var _LTracker = _LTracker || [];\r;(function($) {\r$(function() {\rvar logglySettings = {\r'logglyKey': null,\r'sendConsoleErrors' : true,\r'tag' : null\r}\rlogglySettings['logglyKey'] = $(\"meta[name='loggly_key']\").attr('content');\rlogglySettings['tag'] = $(\"meta[name='loggly_tag']\").attr('content');\r_LTracker.push(logglySettings);\r});\r})(jQuery);\rHTMLに情報の埋め込み meta name=\"loggly_key\" content=\"\" /\rmeta name=\"loggly_tag\" content=\"\" /\r通知方法 あとは処理中に補足されない例外があれば、logglyに通知するようになっている。 また、意図的に通知したい場合は下記\nvar ajaxError = function(xhr, textStatus, errorThrown) {\r_LTracker.push(xhr.responseText);\r}\r",
+  "wordCount" : "142",
+  "inLanguage": "en",
+  "datePublished": "2018-11-20T12:30:28+09:00",
+  "dateModified": "2018-11-20T12:31:19+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rengotaku.github.io/posts/06b06968-4edc-44a5-8ae2-f68da3e58853/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rengotaku.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      画面（フロント）から通知したい
+    </h1>
+    <div class="post-meta">November 20, 2018
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="ファイルの読込">ファイルの読込<a hidden class="anchor" aria-hidden="true" href="#ファイルの読込">#</a></h1>
+<p><code>loggly.tracker.js</code></p>
+<blockquote>
+<p><a href="https://github.com/loggly/loggly-jslogger/tree/master/src">loggly-jslogger/src at master · loggly/loggly-jslogger</a></p>
+</blockquote>
+<h1 id="初期化">初期化<a hidden class="anchor" aria-hidden="true" href="#初期化">#</a></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js:loggly.tracker.init.js" data-lang="js:loggly.tracker.init.js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_LTracker</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">_LTracker</span> <span style="color:#f92672">||</span> [];
+;(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">$</span>) {
+    <span style="color:#a6e22e">$</span>(<span style="color:#66d9ef">function</span>() {
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">logglySettings</span> <span style="color:#f92672">=</span> {
+            <span style="color:#e6db74">&#39;logglyKey&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span>,
+            <span style="color:#e6db74">&#39;sendConsoleErrors&#39;</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+            <span style="color:#e6db74">&#39;tag&#39;</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span>
+        }
+
+        <span style="color:#a6e22e">logglySettings</span>[<span style="color:#e6db74">&#39;logglyKey&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[name=&#39;loggly_key&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;content&#39;</span>);
+        <span style="color:#a6e22e">logglySettings</span>[<span style="color:#e6db74">&#39;tag&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[name=&#39;loggly_tag&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;content&#39;</span>);
+
+        <span style="color:#a6e22e">_LTracker</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">logglySettings</span>);
+    });
+})(<span style="color:#a6e22e">jQuery</span>);
+</code></pre></div><h1 id="htmlに情報の埋め込み">HTMLに情報の埋め込み<a hidden class="anchor" aria-hidden="true" href="#htmlに情報の埋め込み">#</a></h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;loggly_key&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;?php echo(&#39;loggly_of_key&#39;); ?&gt;&#34;</span> /&gt;
+&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;loggly_tag&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;?php echo(&#39;loggly_of_tag&#39;); ?&gt;&#34;</span> /&gt;
+</code></pre></div><h1 id="通知方法">通知方法<a hidden class="anchor" aria-hidden="true" href="#通知方法">#</a></h1>
+<p>あとは処理中に補足されない例外があれば、logglyに通知するようになっている。
+また、意図的に通知したい場合は下記</p>
+<pre><code class="language-js:ajaxのerror時に詳細を通知" data-lang="js:ajaxのerror時に詳細を通知">var ajaxError = function(xhr, textStatus, errorThrown) {
+  _LTracker.push(xhr.responseText);
+}
+</code></pre>
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rengotaku.github.io/tags/javascript">javascript</a></li>
+      <li><a href="https://rengotaku.github.io/tags/loggly">loggly</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

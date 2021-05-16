@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>actionmailer on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/actionmailer/</link>
+    <description>Recent content in actionmailer on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 31 Jul 2019 15:22:22 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/actionmailer/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ActionMailでmailを実行しない場合は、NullMailが返却される</title>
+      <link>https://rengotaku.github.io/posts/81d97880-2a3c-4de8-add0-fa3cb5e29c1d/</link>
+      <pubDate>Wed, 31 Jul 2019 15:22:22 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/81d97880-2a3c-4de8-add0-fa3cb5e29c1d/</guid>
+      <description>事象 ActionMailer::Base を継承したクラスのメソッドをコール時に、メソッド内で mail が呼び出されていない場合は、 ActionMailer::Base::NullMail が返却される。（通常は Mail::Message）</description>
+    </item>
+    
+    <item>
+      <title>ActionMailerで送信後に送信ログを記録したい</title>
+      <link>https://rengotaku.github.io/posts/77b571b7-9eab-4c93-95cb-37e97eff8b68/</link>
+      <pubDate>Tue, 04 Jun 2019 12:14:10 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/77b571b7-9eab-4c93-95cb-37e97eff8b68/</guid>
+      <description>未解決 コールバックの仕組みはあるが、引数を増やす事ができず、拡張する仕組みが不明。 Registered observer on one mailer gets called with every email delivering, possible bug? · Issue #29671 · rails/rails は回答ないままクローズ</description>
+    </item>
+    
+    <item>
+      <title>指定のメソッドを実行時にフックする</title>
+      <link>https://rengotaku.github.io/posts/abef202c-814f-469c-b0fc-1f55e20b2f3b/</link>
+      <pubDate>Mon, 03 Jun 2019 19:28:12 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/abef202c-814f-469c-b0fc-1f55e20b2f3b/</guid>
+      <description>※未検証 ActiveSupport::Notification.subscribe(&amp;#34;deliver.action_mailer&amp;#34;) do |name, start, finish, id, payload| puts &amp;#34;name: #{name}&amp;#34; puts &amp;#34;payload: #{payload}&amp;#34; end ActionMailer の送信ログをとりたい - Qiita</description>
+    </item>
+    
+  </channel>
+</rss>

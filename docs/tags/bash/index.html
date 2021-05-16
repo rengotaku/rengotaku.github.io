@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>bash | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/tags/bash/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/bash/index.xml">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="bash" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://rengotaku.github.io/tags/bash/" />
+<meta property="og:updated_time" content="2020-11-04T16:35:36+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="bash"/>
+<meta name="twitter:description" content=""/>
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>bash</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      bash作りで一通りやりたいことしているスクリプト
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>#!/bin/bash -e script_dir=$(cd $(dirname $0); pwd) #################### # VARIABLES #################### ATHENA_CATALOG=AwsDataCatalog ENVS=(trial staging production) DEFAULT_AWS_PROFILE=hoge #################### # functions #################### containsElement () { local e match=&#34;$1&#34; shift for e; do [[ &#34;$e&#34; == &#34;$match&#34; ]] &amp;&amp; return; done echo &#34;n&#34; } #################### # usage #################### cmdname=`basename $0` function usage() { echo &#34;Usage: ${cmdname}env [OPTIONS]&#34; echo &#34;&#34; echo &#34;env: ${ENVS[@]}&#34; echo &#34;OPTIONS:&#34; echo &#34; --profile name, aws profile, default &#39;$DEFAULT_AWS_PROFILE&#39;.&#34; echo &#34;&#34;...</p>
+  </section>
+  <footer class="entry-footer">August 27, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to bash作りで一通りやりたいことしているスクリプト" href="https://rengotaku.github.io/posts/8f21c4fe-0f8d-43ff-bf7f-6ba6848bd397/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Sentryへの通知があったあたりのログをcloudwatchから取得する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>ソース ※awslogsが4/11/2020 04:50の形式で検索が上手く行かない。 function detecte_log { EXPAND_SECONDS=10 if [ &#34;$#&#34; -ne 1 ]; then echo &#34;Need time such as &#39;July 29 2020 17:24:07 JST&#39;&#34; exit 1 fi occured_time=$1 start_time=`date &#43;&#34;%d/%m/%Y %T&#34; --utc...</p>
+  </section>
+  <footer class="entry-footer">July 29, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to Sentryへの通知があったあたりのログをcloudwatchから取得する" href="https://rengotaku.github.io/posts/d78e5591-d64e-4b11-9410-4342922d7728/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      bashでdotenv
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>MY_VAR=$(grep MY_VAR .env | cut -d &#39;=&#39; -f 2-) Parse a .env (dotenv) file directly using BASH...</p>
+  </section>
+  <footer class="entry-footer">July 8, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to bashでdotenv" href="https://rengotaku.github.io/posts/fa552802-a5ff-4313-8cd1-4712f06d29d1/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      macで昨日日付を取得したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 date -v-1d &#43;%F を使用する Get yesterday’s date in bash on Linux, DST-safe - Stack Overflow...</p>
+  </section>
+  <footer class="entry-footer">May 8, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to macで昨日日付を取得したい" href="https://rengotaku.github.io/posts/5ec56dc2-9091-4aa2-ae9e-f214aba36901/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      bashでファイルをウォッチしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>#!/bin/bash FILE=&#34;$1&#34; CMD=&#34;$2&#34; LAST=`ls -l &#34;$FILE&#34;` while true; do sleep 1 NEW=`ls -l &#34;$FILE&#34;` if [ &#34;$NEW&#34; != &#34;$LAST&#34; ]; then &#34;$CMD&#34; &#34;$FILE&#34; LAST=&#34;$NEW&#34; fi done linux - Shell command to monitor changes in a file - Server Fault mac では `sleep 1m` は機能しない。秒数のみ。 Linuxコマンド【 sleep 】指定...</p>
+  </section>
+  <footer class="entry-footer">March 13, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to bashでファイルをウォッチしたい" href="https://rengotaku.github.io/posts/ba4099fe-9000-489b-94d5-211f89d11750/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      bashの特異な書き方集
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>ファイル作成 touch の代わりに &gt; を使用する。 $ cd lib &amp;&amp; &gt; my_gem.rb Create a Simple Ruby Gem - The Startup - Medium 標準出力に文字を渡す echo の代わりに &lt;&lt;&lt; を使用する。 $ cat &lt;&lt;&lt; &#39;hi there&#39; 理解できていな...</p>
+  </section>
+  <footer class="entry-footer">February 20, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to bashの特異な書き方集" href="https://rengotaku.github.io/posts/0481bf97-bb64-404e-ade8-1073e7cbeee5/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ポートを使用しているアプリケーションを特定したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>lsof $ sudo lsof -i -P -n | grep LISTEN systemd 1 root 48u IPv6 11587 0t0 TCP *:111 (LISTEN) systemd 1 root 49u IPv4 11588 0t0 TCP *:111 (LISTEN) sshd 877 root 3u IPv4 15738 0t0 TCP *:58343 (LISTEN) sshd 877 root 4u IPv6 15747 0t0 TCP *:58343 (LISTEN) master 996 root 13u IPv4 16530 0t0 TCP 127.0.0.1:25 (LISTEN) master 996 root 14u IPv6 16531 0t0 TCP [::1]:25 (LISTEN)...</p>
+  </section>
+  <footer class="entry-footer">February 12, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to ポートを使用しているアプリケーションを特定したい" href="https://rengotaku.github.io/posts/5ba8c531-d5c3-4b59-a090-979105b01b4e/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      .profile、.bashrc、.bash_profileの違い
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>.profile 環境変数など # 環境変数の設定 export PATH=&#34;/usr/local/opt/mysql@5.7/bin:$PATH&#34; export PATH=&#34;/usr/local/opt/openssl/bin:$PATH&#34; export PATH=&#34;~/Library/Python/3.7/bin:$PATH&#34; export PATH=&#34;$HOME/.nodenv/bin:$PATH&#34; .bashrc エイリアス、シェルオプション、プロンプト設定 # エイリアスの設定 alias ll=&#39;ls -l&#39; alias relogin=&#39;exec $SHELL -l&#39; .bash_profile 標準出力が発生...</p>
+  </section>
+  <footer class="entry-footer">January 21, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to .profile、.bashrc、.bash_profileの違い" href="https://rengotaku.github.io/posts/1d962586-8b1d-49d1-8f4f-dddea4e1db71/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      /bin/bashのオプションを設定
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>シェルスクリプトのbashの箇所にオプションを指定してデバッグなどをし易くする方法 #!/bin/bash -xe # -x シェルスクリプト内で実際に実行されたコマンドを表示...</p>
+  </section>
+  <footer class="entry-footer">January 7, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to /bin/bashのオプションを設定" href="https://rengotaku.github.io/posts/e5251869-1fec-4b07-921d-0ec288658ed3/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ファイルを一行ずつ処理
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>read を使用する。 $ cat list.txt line 1 line 2 line 3 END $ while read LINE; do echo ${LINE}; done &lt; ./list.txt line 1 line 2 line 3 END...</p>
+  </section>
+  <footer class="entry-footer">December 24, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to ファイルを一行ずつ処理" href="https://rengotaku.github.io/posts/fcb9faca-fcbe-4547-93c4-639f5877b4a4/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="/tags/bash/page/2/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dynamodb on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/dynamodb/</link>
+    <description>Recent content in dynamodb on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Fri, 14 Jun 2019 14:08:59 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/dynamodb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DynamoDBでバックアップよりリストアしたい際に必要なポリシー</title>
+      <link>https://rengotaku.github.io/posts/45eafdc5-e37d-4568-b1e2-a498d847635e/</link>
+      <pubDate>Fri, 14 Jun 2019 14:08:59 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/45eafdc5-e37d-4568-b1e2-a498d847635e/</guid>
+      <description>{ &amp;#34;Version&amp;#34;: &amp;#34;2012-10-17&amp;#34;, &amp;#34;Statement&amp;#34;: [ { &amp;#34;Sid&amp;#34;: &amp;#34;VisualEditor0&amp;#34;, &amp;#34;Effect&amp;#34;: &amp;#34;Allow&amp;#34;, &amp;#34;Action&amp;#34;: [ &amp;#34;dynamodb:Scan&amp;#34;, &amp;#34;dynamodb:Query&amp;#34;, &amp;#34;dynamodb:UpdateItem&amp;#34;, &amp;#34;dynamodb:PutItem&amp;#34;, &amp;#34;dynamodb:GetItem&amp;#34;, &amp;#34;dynamodb:DeleteItem&amp;#34;, &amp;#34;dynamodb:BatchWriteItem&amp;#34;, &amp;#34;dynamodb:ListTables&amp;#34;, &amp;#34;dynamodb:DescribeTable&amp;#34;, &amp;#34;dynamodb:ListBackups&amp;#34;, &amp;#34;dynamodb:RestoreTableFromBackup&amp;#34;, &amp;#34;dynamodb:CreateBackup&amp;#34;, &amp;#34;dynamodb:DeleteTable&amp;#34;, &amp;#34;dynamodb:DescribeBackup&amp;#34;, &amp;#34;dynamodb:DeleteBackup&amp;#34; ], &amp;#34;Resource&amp;#34;: &amp;#34;*&amp;#34; }, { &amp;#34;Effect&amp;#34;: &amp;#34;Deny&amp;#34;, &amp;#34;Action&amp;#34;: [ &amp;#34;dynamodb:DeleteTable&amp;#34; ], &amp;#34;Resource&amp;#34;: &amp;#34;arn:aws:dynamodb:ap-northeast-1:xxxxxx:table/Production*&amp;#34; } ] } create_table する際に、 Scan~BatchWriteItem が必要 Denyで本番のDBは削除対象とし</description>
+    </item>
+    
+    <item>
+      <title>DynamoDBのポリシー(policy)の一覧</title>
+      <link>https://rengotaku.github.io/posts/753c85de-092b-4807-8863-27065b36d51b/</link>
+      <pubDate>Thu, 13 Jun 2019 14:34:04 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/753c85de-092b-4807-8863-27065b36d51b/</guid>
+      <description>BatchGetItem BatchWriteItem CreateBackup CreateGlobalTable CreateTable DeleteBackup DeleteItem DeleteTable DescribeBackup DescribeContinuousBackups DescribeEndpoints DescribeGlobalTable DescribeGlobalTableSettings DescribeLimits DescribeTable DescribeTimeToLive GetItem ListBackups ListGlobalTables ListTables ListTagsOfResource PutItem Query RestoreTableFromBackup RestoreTableToPointInTime Scan TagResource TransactGetItems TransactWriteItems UntagResource UpdateContinuousBackups UpdateGlobalTable UpdateGlobalTableSettings UpdateItem UpdateTable UpdateTimeToLive Amazon DynamoDB - Amazon DynamoDB</description>
+    </item>
+    
+    <item>
+      <title>AWSカスタマーサポートがオススメの試算表</title>
+      <link>https://rengotaku.github.io/posts/9475de92-779d-4635-9fbd-f0919e58246e/</link>
+      <pubDate>Mon, 17 Dec 2018 09:49:50 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/9475de92-779d-4635-9fbd-f0919e58246e/</guid>
+      <description>DynamoDBのオンデマンドとプロビジョニングの料金を比較をしてみた #reinvent ｜ DevelopersIO 当然ですがプロビジョニングするほうが料金としては安いので必要キャ</description>
+    </item>
+    
+    <item>
+      <title>dynamodbをdockerで起動</title>
+      <link>https://rengotaku.github.io/posts/c24f9540-20dd-40fd-aa3b-3a9f6e7a976e/</link>
+      <pubDate>Fri, 12 Oct 2018 13:53:46 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/c24f9540-20dd-40fd-aa3b-3a9f6e7a976e/</guid>
+      <description>docker: - image: amazon/dynamodb-local:1.11.119 name: dynamodb-local 参考の通りだと、endpointは、dynamodb-local となる</description>
+    </item>
+    
+    <item>
+      <title>LocalのDynamoに値が入っているか確認</title>
+      <link>https://rengotaku.github.io/posts/2423bb0a-e537-4c90-9a9e-417381e40c5f/</link>
+      <pubDate>Tue, 22 May 2018 15:45:57 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/2423bb0a-e537-4c90-9a9e-417381e40c5f/</guid>
+      <description>rails consoleを起動して。 接続設定 ddb = Aws::DynamoDB::Client.new( endpoint: &#39;http://localhost:8000&#39;, region: &#39;ap-northeast-1&#39; ) =&amp;gt; #&amp;lt;Aws::DynamoDB::Client&amp;gt; テーブル名確認 result = ddb.list_tables result.table_names =&amp;gt; [&amp;quot;TestTables1&amp;quot;, &amp;quot;TestTables2&amp;quot;] 値の確認 result = ddb.scan( table_name: &#39;table_name&#39; ) result.items.each do |item| puts &amp;quot;-------------&amp;quot; item.each do |key, value| puts &amp;quot;#{key}: #{value}&amp;quot; end end =&amp;gt; [{&amp;quot;key1&amp;quot;=&amp;gt;&amp;quot;value1&amp;quot;, &amp;quot;key2&amp;quot;=&amp;gt;&amp;quot;value2&amp;quot;, &amp;quot;key3&amp;quot;=&amp;gt;&amp;quot;value3&amp;quot;}]</description>
+    </item>
+    
+  </channel>
+</rss>

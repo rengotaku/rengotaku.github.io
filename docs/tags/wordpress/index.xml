@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wordpress on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/wordpress/</link>
+    <description>Recent content in wordpress on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Tue, 19 Mar 2019 12:45:12 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SANGOで参考にしたサイト</title>
+      <link>https://rengotaku.github.io/posts/6773dcd7-69b8-4e27-9c68-0ebb47c7b1a9/</link>
+      <pubDate>Tue, 19 Mar 2019 12:45:12 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/6773dcd7-69b8-4e27-9c68-0ebb47c7b1a9/</guid>
+      <description>書き方 SANGOで約30種類のボックスを挿入しよう | SANGO 記事を華やかに！約40種類の見出しデザイン | SANGO 40種類以上のボタンを用意 | SANGO SANGO</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>mysql | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/tags/mysql/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/mysql/index.xml">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="mysql" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://rengotaku.github.io/tags/mysql/" />
+<meta property="og:updated_time" content="2020-11-10T10:36:16+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="mysql"/>
+<meta name="twitter:description" content=""/>
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>mysql</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      mysqlの結果をtsvファイルとして保存する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>$ mysql -h hostname -u username -p dbname &lt; /tmp/select_records.sql &gt; /tmp/selected_records.tsv 権限問題に当たらなければ、 How to output MySQL query results in CSV format? - Stack Overflow のように指定するが良いかも。...</p>
+  </section>
+  <footer class="entry-footer">November 10, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to mysqlの結果をtsvファイルとして保存する" href="https://rengotaku.github.io/posts/65de0d11-cc3a-4c0a-97bf-990851adafad/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      sshトンネルを使用してmysql-cliで接続する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 $ ssh -N -L 13306:xxx-db-01.cluster-xxx.ap-northeast-1.rds.amazonaws.com:3306 user_name_for_ssh@connect_to_ip_via_ssh $ mysql -u username -p --port=13306 -h 127.0.0.1 database_name 参考 Connect to RDS using an SSH Tunnel - Michalis Antoniou - Medium 補足 Sequel Pro のSSHタブはどのように接続しているのか調べたら、SSHトンネルを利用...</p>
+  </section>
+  <footer class="entry-footer">July 7, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to sshトンネルを使用してmysql-cliで接続する" href="https://rengotaku.github.io/posts/262df999-3148-446f-a102-0f0d8d6146ca/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      MySQLのNULLの扱いで参考になる
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>IS NULL を使用した検索では、インデックスが使用される NULL を許可するカラムにユニークインデックスを貼った場合、各々のNULL は別の値として区別され、...</p>
+  </section>
+  <footer class="entry-footer">June 23, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to MySQLのNULLの扱いで参考になる" href="https://rengotaku.github.io/posts/41e47535-c950-4aa2-aff0-c1d0c8d63d8a/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      MySQLの最適化で参考になりそうな記事
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>MySQL Explain Example - Explaining MySQL EXPLAIN using StackOverflow data explainの結果の項目を分かりやすく記載してくれている。...</p>
+  </section>
+  <footer class="entry-footer">May 20, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to MySQLの最適化で参考になりそうな記事" href="https://rengotaku.github.io/posts/2cb27d73-b7ec-4fac-961e-d061d8150ae9/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      mysql2のgemのインストールが失敗する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 $ export LDFLAGS=&#34;-L/usr/local/opt/openssl/lib&#34; $ export CPPFLAGS=&#34;-I/usr/local/opt/openssl/include&#34; $ bundle config --local build.mysql2 &#34;--with-cppflags=-I/usr/local/opt/openssl/include&#34; $ bundle config --local build.mysql2 &#34;--with-ldflags=-L/usr/local/opt/openssl/lib&#34; $ bundle install 【Rails】MySQL2がbundle installできない時の対応方法 - Qiita 事象 macでmy...</p>
+  </section>
+  <footer class="entry-footer">January 9, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to mysql2のgemのインストールが失敗する" href="https://rengotaku.github.io/posts/0a030ad1-7817-41e7-9a31-5b3c5623c121/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      mysqlで既に登録されている値を置換して再登録
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>REPLACE を利用する。 update users, ( select id from users where name regexp &#39; &#39; ) as having_spaces set name = REPLACE(name, &#34; &#34;, &#34;&#34;) where users.id = having_spaces.id...</p>
+  </section>
+  <footer class="entry-footer">November 6, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to mysqlで既に登録されている値を置換して再登録" href="https://rengotaku.github.io/posts/baaa474f-9a42-4aae-8cd8-811e581d096d/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      mysqlで正規表現を使用して検索
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>regexp を使用する。 select * from regexptest where str regexp &#39; | &#39;; 正規表現を使ったパターンマッチングを行う(REGEXP演算子) | MySQLの使い方...</p>
+  </section>
+  <footer class="entry-footer">November 6, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to mysqlで正規表現を使用して検索" href="https://rengotaku.github.io/posts/316eed96-858c-4429-bd1f-b5ab8dedddd1/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Ruby2.5.6のDocker Imageを使用したら、mysql-clientがインストールできない
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 default-mysql-client を指定すればよい apt-get install -y default-mysql-client Circle CI で mysql-client が apt-get install できなくなってCI環境が壊れた話 - ユアマイスター株式会社エンジニアブログ 事象 FROM ruby:2.5.6 RUN apt-get update -qq \ &amp;&amp; apt-get install...</p>
+  </section>
+  <footer class="entry-footer">September 10, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to Ruby2.5.6のDocker Imageを使用したら、mysql-clientがインストールできない" href="https://rengotaku.github.io/posts/88abf94f-1946-4b02-9a70-9c0e3bbd82a6/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      旧字体を登録する際にエラーが発生する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>未解決 文字コーディングに異常はみられない。 事象 Activerecodeを通して 𣘺本 を登録しようとすると Incorrect string value: &#39;\xF0\xA3\x98\xBA\xE6\x9C...&#39; for column &#39;name&#39; at row 1 が発生する。 調査 文...</p>
+  </section>
+  <footer class="entry-footer">September 2, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 旧字体を登録する際にエラーが発生する" href="https://rengotaku.github.io/posts/2595f4ec-a3a8-40c4-97dd-7e5eb3343f04/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      どのホストからのアクセスも許容する権限(grant)の付与
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 username@&#34;%&#34; grant all privileges on xxxdb.* to username@&#34;%&#34; MySQL 外部ホストからアクセスする │ 渋谷生活 tips 書き方色々 コマンド 意味 username@&#34;%” 全てのホストからアクセス可能 username@localhost サーバにログインしてからア...</p>
+  </section>
+  <footer class="entry-footer">August 15, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to どのホストからのアクセスも許容する権限(grant)の付与" href="https://rengotaku.github.io/posts/ed0c8993-6fd1-40ee-af28-c51cc75347ca/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="/tags/mysql/page/2/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

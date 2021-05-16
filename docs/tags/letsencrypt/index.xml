@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>letsencrypt on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/letsencrypt/</link>
+    <description>Recent content in letsencrypt on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Mon, 19 Aug 2019 13:20:21 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/letsencrypt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Let&#39;s Encryptのrenew（自動延長）でportエラー</title>
+      <link>https://rengotaku.github.io/posts/7c5f7801-561d-4421-9b19-e4ba02ca9ccb/</link>
+      <pubDate>Mon, 19 Aug 2019 13:20:21 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/7c5f7801-561d-4421-9b19-e4ba02ca9ccb/</guid>
+      <description>未解決 Problem binding to port 80: Could not bind to IPv4 or IPv6 - Help - Let&amp;rsquo;s Encrypt Community Support より、portが既に占有されているのが問題らしい。 nginxを止めて、実行すれば問題なく更新され</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s Encryptのインストールからnginxの設定まで</title>
+      <link>https://rengotaku.github.io/posts/c2a31b1b-732c-4faf-a7be-c52dc67ae44c/</link>
+      <pubDate>Wed, 03 Jul 2019 11:37:33 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/c2a31b1b-732c-4faf-a7be-c52dc67ae44c/</guid>
+      <description>ツールをインストール $ sudo curl https://dl.eff.org/certbot-auto -o /usr/bin/certbot-auto $ sudo chmod 700 /usr/bin/certbot-auto 実行結果 $ sudo curl https://dl.eff.org/certbot-auto -o /usr/bin/certbot-auto % Total % Received % Xferd Average Speed Time Time Time Current Dload Upload Total Spent Left Speed 100 68023 100 68023 0 0 51134 0 0:00:01 0:00:01 --:--:-- 51106 $ sudo chmod 700 /usr/bin/certbot-auto ngin</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s Encryptの証明書の自動延長が動作しない</title>
+      <link>https://rengotaku.github.io/posts/f1b70ce0-0550-4a95-a5ec-9490d70085fe/</link>
+      <pubDate>Fri, 07 Jun 2019 20:16:44 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/f1b70ce0-0550-4a95-a5ec-9490d70085fe/</guid>
+      <description>事象 $ sudo /usr/bin/certbot-auto renew --post-hook &amp;quot;sudo systemctl reload nginx&amp;quot; Saving debug log to /var/log/letsencrypt/letsencrypt.log - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Processing /etc/letsencrypt/renewal/www.domain.one.com.conf - - - - - - - - - - - -</description>
+    </item>
+    
+    <item>
+      <title>KUSANAGIでSSL証明書の取得ができない</title>
+      <link>https://rengotaku.github.io/posts/99b0e65b-96ee-4146-abd2-f28753278cab/</link>
+      <pubDate>Mon, 18 Mar 2019 22:09:23 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/99b0e65b-96ee-4146-abd2-f28753278cab/</guid>
+      <description>事象 # kusanagi ssl --email hogehoge@gmail.com Saving debug log to /var/log/letsencrypt/letsencrypt.log Plugins selected: Authenticator webroot, Installer None Obtaining a new certificate Performing the following challenges: http-01 challenge for my-site.com Using the webroot path /home/kusanagi/WordPress/DocumentRoot for all unmatched domains. Waiting for verification... Challenge failed for domain my-site.com http-01 challenge for my-site.com Cleaning up challenges Some challenges have failed. IMPORTANT NOTES: - The following errors were reported by the server: Domain:</description>
+    </item>
+    
+    <item>
+      <title>証明書を取得しようとするとAレコードが見つからないとエラーの対応</title>
+      <link>https://rengotaku.github.io/posts/35673815-d253-4f09-9f52-06a0a926b792/</link>
+      <pubDate>Thu, 25 Oct 2018 21:48:47 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/35673815-d253-4f09-9f52-06a0a926b792/</guid>
+      <description>対応 domainにwwwを付与した。(例: www.hogehoge.com) 事象 $ sudo certbot -n certonly --email xxx -d xxx.com --webroot -w /var/www/html --agree-tos Saving debug log to /var/log/letsencrypt/letsencrypt.log Plugins selected: Authenticator webroot, Installer None Starting new HTTPS connection (1): acme-v01.api.letsencrypt.org Obtaining a new certificate Performing the following challenges: http-01 challenge for xxx.com Using the webroot path</description>
+    </item>
+    
+  </channel>
+</rss>

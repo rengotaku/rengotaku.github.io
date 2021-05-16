@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>googlespreadsheet on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/googlespreadsheet/</link>
+    <description>Recent content in googlespreadsheet on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 28 May 2020 10:31:02 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/googlespreadsheet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>スプレッドシートで日、時のセルを結合したい</title>
+      <link>https://rengotaku.github.io/posts/1dbab119-0fd7-4334-ba23-a467668743d4/</link>
+      <pubDate>Thu, 28 May 2020 10:31:02 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/1dbab119-0fd7-4334-ba23-a467668743d4/</guid>
+      <description>=concatenate(text(A2,&amp;quot;mm/dd/yyyy&amp;quot;)&amp;amp;&amp;quot; &amp;quot;&amp;amp;text(B2,&amp;quot;hh:mm:ss&amp;quot;)) 時間(01)だけだと変換に失敗するので、01:00:00などに置換しておく。 How to combine date and time columns into one column in Google sheets?</description>
+    </item>
+    
+    <item>
+      <title>Google Spread SheetをGoogle Apps Scriptで操作する際のtips集</title>
+      <link>https://rengotaku.github.io/posts/e6aa600a-b838-4b6a-8f4a-ba3c71472a5d/</link>
+      <pubDate>Sun, 09 Jun 2019 19:31:35 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/e6aa600a-b838-4b6a-8f4a-ba3c71472a5d/</guid>
+      <description>最終行を取得 const sheet = SpreadsheetApp.getActiveSheet(); const LastRow = sheet.getLastRow(); Logger.log(LastRow); //6.0 GoogleSpreadSheetで、指定した範囲の、データが含まれている最終行を取得する方法。 - Qiita セルの値</description>
+    </item>
+    
+    <item>
+      <title>色のついた列をカウントしたい</title>
+      <link>https://rengotaku.github.io/posts/b2e350d6-b0ed-420b-8cd1-c0a1070c7408/</link>
+      <pubDate>Fri, 01 Mar 2019 17:24:56 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/b2e350d6-b0ed-420b-8cd1-c0a1070c7408/</guid>
+      <description>/** * 色を特定する */ function identifyColor(){ var sheet = SpreadsheetApp.getActiveSheet(); // 特定する色を取得する var targetColor = sheet.getRange(3, 4).getBackground(); // 色一覧の「背景色の配列」と「内容の配列」を取得する var colorNum = 20; var colorsListRange = sheet.getRange(3, 2, colorNum, 1); var colorArray</description>
+    </item>
+    
+    <item>
+      <title>質疑表のテンプレート</title>
+      <link>https://rengotaku.github.io/posts/4bcaa19e-f2f1-42df-b614-d2c23335a6f5/</link>
+      <pubDate>Mon, 23 Apr 2018 10:22:52 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/4bcaa19e-f2f1-42df-b614-d2c23335a6f5/</guid>
+      <description>質疑表</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>rails | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/tags/rails/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/rails/index.xml">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="rails" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://rengotaku.github.io/tags/rails/" />
+<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="rails"/>
+<meta name="twitter:description" content=""/>
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>rails</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      omniauthのTwitterプロバイダーのoptionsを動的に変更する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>SETUP_PROC = lambda do |env| request = Rack::Request.new(env) user = User.find_by_subdomain(request.subdomain) env[&#39;omniauth.strategy&#39;].options[:client_id] = user.consumer_key # if using omniauth-oauth2 env[&#39;omniauth.strategy&#39;].options[:client_secret] = user.consumer_secret # if using omniauth-oauth2 env[&#39;omniauth.strategy&#39;].options[:consumer_key] = user.consumer_key # if using omniauth-oauth env[&#39;omniauth.strategy&#39;].options[:consumer_secret] = user.consumer_secret # if using omniauth-oauth end use OmniAuth::Builder.new do provider :twitter, setup: SETUP_PROC, callback_path: &#34;/path/to/callback&#34;, image_size: &#34;original&#34; end Setup Phase · omniauth/omniauth Wiki · GitHub...</p>
+  </section>
+  <footer class="entry-footer">February 12, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to omniauthのTwitterプロバイダーのoptionsを動的に変更する" href="https://rengotaku.github.io/posts/457eeb3b-3e8a-411b-bca0-38561b0ec80f/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Middlewareをテストしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>対象モジュール railsのログにタグづけしたい | ベジタブルプログラム テスト RSpec.describe TaggedLogger do subject { TaggedLogger::Middleware.new(app) } let(:app) { -&gt;(env) { [200, env, &#34;app&#34;] } } let(:request) { Rack::MockRequest.new(subject) } let(:action_dispatch_request) { ActionDispatch::TestRequest.create } before do allow(ActionDispatch::Request).to receive(:new).and_return(action_dispatch_request) allow(action_dispatch_request).to receive(:session).and_return(Struct.new(:user_id, :loaded?).new(*session_methods)) allow(Rails.logger).to receive(:tagged).and_yield...</p>
+  </section>
+  <footer class="entry-footer">February 10, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to Middlewareをテストしたい" href="https://rengotaku.github.io/posts/a876ea6d-99a6-43fe-b419-71896f26c406/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      railsのログにタグづけしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>設定 class Application &lt; Rails::Application ... require Rails.root.join(&#34;lib/tagged_logger.rb&#34;) initializer &#34;tagged_logger.insert_middleware&#34; do |app| app.config.middleware.use TaggedLogger::Middleware end end # frozen_string_literal: true module TaggedLogger class Middleware def initialize(app) @app = app end def call(env) request = ActionDispatch::Request.new(env) request.session.send(:load!) unless request.session.loaded? if (user_id = request.session[:user_id]) tag = &#34;user_id=#{user_id}&#34; Rails.logger.tagged(tag) do @app.call(env) end else @app.call(env) end end end end アウトプット [user_id=1] が今回付与したタ...</p>
+  </section>
+  <footer class="entry-footer">February 10, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to railsのログにタグづけしたい" href="https://rengotaku.github.io/posts/c8804b8e-6ac2-450c-b5ea-9009c1a43da4/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      railsのipメソッドとremove_ipメソッドの違い
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 remote_ip は、 ActionDispatch::RemoteIp で判定したIPを優先する。 その判定がない場合は、 ip メソッドを使用する。 ruby - What’s the difference between request.remote_ip and request.ip in Rails? - Stack Overflow...</p>
+  </section>
+  <footer class="entry-footer">February 10, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to railsのipメソッドとremove_ipメソッドの違い" href="https://rengotaku.github.io/posts/ab1cdacb-a34b-45ed-a16a-7cd2627d10b7/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      RSpec/MultipleExpectationsを回避
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 aggregate_failures を使用する it &#34;正常動作する&#34; do subject aggregate_failures &#34;最後まで通過&#34; do expect(job_instance).to have_received(:hoge1) expect(job_instance).to have_received(:hoge2).at_least(1).times end end 実用的な新機能が盛りだくさん！RSpe...</p>
+  </section>
+  <footer class="entry-footer">February 6, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to RSpec/MultipleExpectationsを回避" href="https://rengotaku.github.io/posts/74af4a87-af15-46ef-bd8d-2b59f87d850e/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      railsのenumから値を取得したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>enum sale_info: { plan_1: 1, plan_2: 2, plan_3: 3, plan_4: 4, plan_5: 5 } の場合、 Model.sale_infos[:plan_1] で取得 How get integer value from a enum in Rails? - Stack Overflow...</p>
+  </section>
+  <footer class="entry-footer">January 28, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to railsのenumから値を取得したい" href="https://rengotaku.github.io/posts/2fdad37c-deb2-46d9-99a5-92a3f5df0b0f/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Rubyで処理速度の平均を計測したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>計測 require &#39;benchmark&#39; include Benchmark # we need the CAPTION and FORMAT constants nn = 5000000 Benchmark.benchmark(CAPTION, 7, FORMAT, &#34;&gt;total:&#34;, &#34;&gt;avg:&#34;) do |x| tf = x.report(&#34;for:&#34;) { for i in 1..nn; a = &#34;1&#34;; end } tt = x.report(&#34;times:&#34;) { nn.times do ; a = &#34;1&#34;; end } tu = x.report(&#34;upto:&#34;) { 1.upto(nn) do ; a = &#34;1&#34;; end } [tf&#43;tt&#43;tu, (tf&#43;tt&#43;tu)/3] end 結果 user system total real...</p>
+  </section>
+  <footer class="entry-footer">January 28, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to Rubyで処理速度の平均を計測したい" href="https://rengotaku.github.io/posts/9a9f4862-dd9c-4fbd-a90c-bb4551f2ebab/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      リクエストのremote_ipを変更してテストしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 get &#34;/path&#34;, params: { }, headers: { &#34;REMOTE_ADDR&#34; =&gt; &#34;1.2.3.4&#34; } Change value of request.remote_ip in Ruby on Rails - Stack Overflow 事象 allow_any_instance_of(ActionDispatch::Request).to receive(:remote_ip).and_return(&#34;1.2.3.4&#34;) でも実現可能だが、 rubocopで RSpec/AnyInstance が発生してしまう。(instance_doubl...</p>
+  </section>
+  <footer class="entry-footer">January 27, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to リクエストのremote_ipを変更してテストしたい" href="https://rengotaku.github.io/posts/957c64fd-ee2e-4ce6-bb60-093b3a665189/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      コントローラーのテストで例外が発生してテストが失敗する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 context に、 show_exceptions: true オプションを設定する。 context &#34;failed&#34;, show_exceptions: true do ... end Rails アプリケーションの不安定なテストを撲滅したい 〜system spec のデバッグ方法とテストを不安...</p>
+  </section>
+  <footer class="entry-footer">January 27, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to コントローラーのテストで例外が発生してテストが失敗する" href="https://rengotaku.github.io/posts/e848d251-d646-4d69-b394-c113fb84410c/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      docker上のpry-byebugにショートカットを設定したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 docker上の ~/.pryrc に記載する。 事象 pry-byebugでrubyをデバッグする - Qiita のショートカットをプロジェクトに設置しても、使用できな...</p>
+  </section>
+  <footer class="entry-footer">January 23, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to docker上のpry-byebugにショートカットを設定したい" href="https://rengotaku.github.io/posts/5d7fa977-1511-4546-aea2-9b7622a4097c/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="/tags/rails/page/3/">« Prev Page</a>
+    <a class="next" href="/tags/rails/page/5/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

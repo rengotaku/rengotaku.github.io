@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>memcached on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/memcached/</link>
+    <description>Recent content in memcached on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Fri, 13 Sep 2019 15:48:23 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/memcached/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>railsで重複送信を防ぐ調査の知見</title>
+      <link>https://rengotaku.github.io/posts/54d5813d-3f3a-49dd-b871-22f21203abbb/</link>
+      <pubDate>Fri, 13 Sep 2019 15:48:23 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/54d5813d-3f3a-49dd-b871-22f21203abbb/</guid>
+      <description>採用 Rails.cacheを使用 Rails.cacheについて | 酒と涙とRubyとRailsと 始めは下記で実装しようとしたが、上記で良さそう</description>
+    </item>
+    
+  </channel>
+</rss>

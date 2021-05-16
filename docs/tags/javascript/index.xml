@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/javascript/</link>
+    <description>Recent content in javascript on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Wed, 22 Apr 2020 16:56:54 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gitlabで特定時間以降のコメントを集約したい</title>
+      <link>https://rengotaku.github.io/posts/6ed1568a-e614-4e7d-838f-2ce048eb76b6/</link>
+      <pubDate>Wed, 22 Apr 2020 16:56:54 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/6ed1568a-e614-4e7d-838f-2ce048eb76b6/</guid>
+      <description>ソース Bookmarklet javascript:var db={&amp;#34;@xxx&amp;#34;:&amp;#34;1234&amp;#34;};var baseUrl=window.location.href.split(&amp;#34;#&amp;#34;)[0];Date.prototype.addHours=function(h){this.setTime(this.getTime()+(h*60*60*1000));return this};function toDate(timeStr){var timeRegexp=/(.+)(am|pm) (GMT\+\d+)/;var periods=timeStr.replace(timeRegexp,&amp;#39;$2&amp;#39;);baseTime=new Date(timeStr.replace(timeRegexp,&amp;#39;$1&amp;#39;));return periods==&amp;#34;pm&amp;#34;?baseTime.addHours(12):baseTime};var targetTime=toDate(document.querySelector(&amp;#34;#&amp;#34;+window.location.href.split(&amp;#34;#&amp;#34;)[1]+&amp;#34; time&amp;#34;).getAttribute(&amp;#34;title&amp;#34;));var targets={};document.querySelectorAll(&amp;#34;#notes-list .timeline-entry .note-header-info time&amp;#34;).forEach(function(timeE,i){var compareTime=toDate(timeE.getAttribute(&amp;#34;title&amp;#34;));if(targetTime&amp;lt;compareTime){discussion=timeE.closest(&amp;#34;.timeline-content&amp;#34;).getElementsByClassName(&amp;#34;timeline-discussion-body&amp;#34;)[0];if(discussion){target=discussion.getElementsByClassName(&amp;#34;gfm-project_member&amp;#34;)[0];if(target){var urls=targets[target.textContent];urls=urls?urls:[];urls.push(baseUrl+&amp;#34;/&amp;#34;+timeE.closest(&amp;#34;a&amp;#34;).getAttribute(&amp;#34;href&amp;#34;));targets[target.textContent]=urls}}}});message=document.title.split(/ · /)[0]+&amp;#34;\n&amp;#34;;for(let name in targets){message+=&amp;#34;[To:&amp;#34;+db[name]+&amp;#34;]&amp;#34;;message+=&amp;#34;[info]&amp;#34;;targets[name].forEach(function(url){message+=url+&amp;#34;\n&amp;#34;});message+=&amp;#34;[/info]&amp;#34;};prompt(&amp;#34;Copy &amp;amp; paste&amp;#34;,message+&amp;#34;\n\nコメントのご確認をお願い致し</description>
+    </item>
+    
+    <item>
+      <title>GitlabでマージするMerge RequestのタイトルとURLを列挙する</title>
+      <link>https://rengotaku.github.io/posts/2e7b6641-1cdf-4300-9b33-526b977325ce/</link>
+      <pubDate>Fri, 17 Apr 2020 10:54:58 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/2e7b6641-1cdf-4300-9b33-526b977325ce/</guid>
+      <description>Usage Merge RequestのCommitsタブを押下し、コミット一覧を表示 Chromeの検証モードを表示し、Consoleタブで下記のScriptを</description>
+    </item>
+    
+    <item>
+      <title>JavaScriptで変数、関数、メソッド、あるいはオブジェクトの識別子に使用してはいけないもの</title>
+      <link>https://rengotaku.github.io/posts/4cfd5104-2d9f-4ed0-bb11-af6c6e60561a/</link>
+      <pubDate>Mon, 27 Jan 2020 15:13:19 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/4cfd5104-2d9f-4ed0-bb11-af6c6e60561a/</guid>
+      <description>break case catch continue debugger default delete do else finally for function if in instanceof new return switch this throw try typeof var void while with 予約語 - JavaScript | MDN</description>
+    </item>
+    
+    <item>
+      <title>React.renderのrenderファンクションが存在しない</title>
+      <link>https://rengotaku.github.io/posts/360b751d-7cb8-4f74-8fb9-02b5d09107ff/</link>
+      <pubDate>Wed, 22 Jan 2020 09:54:25 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/360b751d-7cb8-4f74-8fb9-02b5d09107ff/</guid>
+      <description>解決 react-dom を読み込み、 ReactDOM.render で実行する。 React.render is not a function | 穀風 事象 React.renderの箇所で、 ReactDOM.render is not a function が発生する</description>
+    </item>
+    
+    <item>
+      <title>Encrypting with password</title>
+      <link>https://rengotaku.github.io/posts/c34fa6d0-a16f-4f69-8a83-f42ccad76c96/</link>
+      <pubDate>Thu, 02 Jan 2020 08:15:01 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/c34fa6d0-a16f-4f69-8a83-f42ccad76c96/</guid>
+      <description>/** * Encrypts plaintext using AES-GCM with supplied password, for decryption with aesGcmDecrypt(). * (c) Chris Veness MIT Licence * * @param {String} plaintext - Plaintext to be encrypted. * @param {String} password - Password to use to encrypt plaintext. * @returns {String} Encrypted ciphertext. * * @example * const ciphertext = await aesGcmEncrypt(&amp;#39;my secret text&amp;#39;, &amp;#39;pw&amp;#39;); * aesGcmEncrypt(&amp;#39;my secret text&amp;#39;, &amp;#39;pw&amp;#39;).then(function(ciphertext) { console.log(ciphertext); }); */ async function aesGcmEncrypt(plaintext, password)</description>
+    </item>
+    
+    <item>
+      <title>Crowdtech(クラウドテック)の勤怠で不足時間を計算するスクリプト</title>
+      <link>https://rengotaku.github.io/posts/c379efc3-f581-4e0e-99a3-201e39edfe72/</link>
+      <pubDate>Mon, 09 Dec 2019 18:19:43 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/c379efc3-f581-4e0e-99a3-201e39edfe72/</guid>
+      <description>ソース javascript:function reportToHash(e){const tds=[];e.querySelectorAll(&#39;td&#39;).forEach(function(e){tds.push(e)});const rawDay=tds[1].textContent;const dayInfo=rawDay.split(&#39; &#39;);const week=dayInfo[1].replace(/\(|\)/gi,&#39;&#39;);const startTime=tds[2].textContent;const endTime=tds[3].textContent;const breakTime=tds[4].textContent;const description=tds[6].textContent;const rawWorkTime=tds[5].textContent;const weekdaysFlag=(week==&#39;土&#39;||week==&#39;日&#39;);const vacationFlag=weekdaysFlag&amp;amp;&amp;amp;rawWorkTime==&#39;&#39;;if(vacationFlag||rawWorkTime==&#39;-&#39;){return{&amp;quot;workTime&amp;quot;:0,&amp;quot;weekdaysFlag&amp;quot;:weekdaysFlag,&amp;quot;vacationFlag&amp;quot;:true,&amp;quot;description&amp;quot;:description,}}var workTime=0;if(rawWorkTime!=&#39;&#39;){const times=rawWor</description>
+    </item>
+    
+    <item>
+      <title>cookieの容量を肥大化させたい</title>
+      <link>https://rengotaku.github.io/posts/6394185b-4c81-4010-b77c-ba0f9386df85/</link>
+      <pubDate>Thu, 24 Oct 2019 17:35:36 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/6394185b-4c81-4010-b77c-ba0f9386df85/</guid>
+      <description>解決 １つの要素に長い文字列を格納するのではなく、要素を分けて程々に長い文字列を格納すればよい。 document.cookie = &amp;#39;test1=aaaaaaaaaaaaaaa...&amp;#39; // 程々に長くする document.cookie = &amp;#39;test2=aaaaaaaaaaaaaaa...&amp;#39; // 程々に長くする 事</description>
+    </item>
+    
+    <item>
+      <title>CSSによる階層を視覚化（ハイライト）</title>
+      <link>https://rengotaku.github.io/posts/7a79f0b0-95fc-48d0-873a-8de142b5fce2/</link>
+      <pubDate>Wed, 11 Sep 2019 19:07:28 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/7a79f0b0-95fc-48d0-873a-8de142b5fce2/</guid>
+      <description>javascript:(function(){var style=document.createElement(&#39;style&#39;);var head=document.getElementsByTagName(&#39;head&#39;);style.setAttribute(&#39;type&#39;, &#39;text\/css&#39;);style.innerHTML=&#39;* {background-color: rgba(255,0,0,.2)!important;}* * {background-color%EF%BC%9Argba(0,255,0%E3%80%81.2)!important;} * * * {background-color%EF%BC%9Argba(0,0,255%E3%80%81.2)!important;} * * * * {background-color%EF%BC%9Argba(255,0,255%E3%80%81.2)!important;} * * * * * {background-color%EF%BC%9Argba(0,255,255%E3%80%81.2)!important;} * * * * * * {background-color%EF%BC%9Argba(255,255,0%E3%80%81.2)!important;} * * * * * * * {background-color%EF%BC%9Argba(255,0,0%E3%80%81.2)!important; } * * * * * * * * {background-color%EF%BC%9Argba(0,255,0%E3%80%81.2)!important;} * * * * * * * * * {background-color%EF%BC%9Argba(0,0,255%E3%80%81.2)!important;}&#39;;head[0].appendChild(style);})(); CSSで実装したレイアウ</description>
+    </item>
+    
+    <item>
+      <title>rundeckのjobを一括取得するスクリプト</title>
+      <link>https://rengotaku.github.io/posts/53e606f7-6aec-42c4-b852-c78779d3d90b/</link>
+      <pubDate>Wed, 04 Sep 2019 20:03:07 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/53e606f7-6aec-42c4-b852-c78779d3d90b/</guid>
+      <description>ソース function loopSleep(_loopLimit,_interval, _mainFunc){ var loopLimit = _loopLimit; var interval = _interval; var mainFunc = _mainFunc; var i = 0; var loopFunc = function () { var result = mainFunc(i); if (result === false) { // break機能 return; } i = i + 1; if (i &amp;lt; loopLimit) { setTimeout(loopFunc, interval); } } loopFunc(); } const WAIT_COUNT = 3; function download_xml() {</description>
+    </item>
+    
+    <item>
+      <title>コンソールで実行するようのスクリプトを書く際のtips</title>
+      <link>https://rengotaku.github.io/posts/5536b5aa-2515-48cb-b52f-ea960450429a/</link>
+      <pubDate>Wed, 04 Sep 2019 17:18:57 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/5536b5aa-2515-48cb-b52f-ea960450429a/</guid>
+      <description>セレクト document.querySelector(&amp;#39;div#hoge&amp;#39;); // &amp;lt;- element document.querySelectorAll(&amp;#39;div.fuga&amp;#39;); // &amp;lt;- NodeList jQueryからネイティブJavaScriptへ置き換えの第一歩 - Qiita 属性 document.querySelector(&amp;#39;[title=&amp;#34;element title attribute value&amp;#34;]&amp;#39;); html - Select an element by title with JavaScript and modify it? - Stack Overflow クリッ</description>
+    </item>
+    
+    <item>
+      <title>propがoffにできない</title>
+      <link>https://rengotaku.github.io/posts/b0720322-8cc3-48cf-9f23-cc10ef58076a/</link>
+      <pubDate>Mon, 01 Jul 2019 17:01:23 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/b0720322-8cc3-48cf-9f23-cc10ef58076a/</guid>
+      <description>結論 第二引数を ``false(文字列) で渡していた為。 事象 $(&amp;#39;#telephone&amp;#39;).on(&amp;#39;input&amp;#39;, function(e) { if($(this).val().length &amp;gt; 0){ $(&amp;#39;#mail&amp;#39;).prop(&amp;#39;disabled&amp;#39;, &amp;#39;true&amp;#39;); } else { $(&amp;#39;#cashback_search_step1_form_mail&amp;#39;).prop(&amp;#39;disabled&amp;#39;, &amp;#39;false&amp;#39;); } }); 対処 $(&amp;#39;#telephone&amp;#39;).on(&amp;#39;input&amp;#39;, function(e) { if($(this).val().length &amp;gt; 0){ $(&amp;#39;#mail&amp;#39;).prop(&amp;#39;disabled&amp;#39;, true); } else { $(&amp;#39;#cashback_search_step1_form_mail&amp;#39;).prop(&amp;#39;disabled&amp;#39;, false); // &amp;lt;= boolean値で</description>
+    </item>
+    
+    <item>
+      <title>文章を一行ずつ処理したい</title>
+      <link>https://rengotaku.github.io/posts/b7035b5e-e9b7-4a21-bf1d-2c4f24bf350a/</link>
+      <pubDate>Tue, 12 Mar 2019 10:26:38 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/b7035b5e-e9b7-4a21-bf1d-2c4f24bf350a/</guid>
+      <description>var input_text = document.getElementById(&amp;#39;input_text&amp;#39;).value; arr = input_text.split(/\r\n|\r|\n/); for (i = 0; i &amp;lt; arr.length; i++) { alert(arr[i]); } テキストを改行で分割して配列に入れる方法 - JavaScript備忘録 - g:javascript</description>
+    </item>
+    
+    <item>
+      <title>正規表現で置換したい</title>
+      <link>https://rengotaku.github.io/posts/3288f3f9-2878-4358-b9a6-96a83473d75d/</link>
+      <pubDate>Tue, 12 Mar 2019 10:25:03 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/3288f3f9-2878-4358-b9a6-96a83473d75d/</guid>
+      <description>var re = /(\w+)\s(\w+)/; var str = &#39;John Smith&#39;; var newstr = str.replace(re, &#39;$2, $1&#39;); console.log(newstr); 正規表現 - JavaScript | MDN</description>
+    </item>
+    
+    <item>
+      <title>英数字を半角にしたい</title>
+      <link>https://rengotaku.github.io/posts/3d097456-535e-43fb-a64d-c2875b2ab5ab/</link>
+      <pubDate>Tue, 12 Mar 2019 10:24:16 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/3d097456-535e-43fb-a64d-c2875b2ab5ab/</guid>
+      <description>str.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) { return String.fromCharCode(s.charCodeAt(0) - 65248); }); JavaScriptで英数を全角/半角に変換する方法 - Qiita</description>
+    </item>
+    
+    <item>
+      <title>日付日時を数値のみ取得したい</title>
+      <link>https://rengotaku.github.io/posts/3e952335-aea7-42d2-9aec-d3543e12c018/</link>
+      <pubDate>Tue, 18 Dec 2018 17:12:02 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/3e952335-aea7-42d2-9aec-d3543e12c018/</guid>
+      <description>function dateFormat(date) { var Y = date.getFullYear(); var M = (&amp;#39;0&amp;#39; + (date.getMonth() + 1)).slice(-2); var D = (&amp;#39;0&amp;#39; + date.getDate()).slice(-2); var h = (&amp;#39;0&amp;#39; + date.getHours()).slice(-2); var m = (&amp;#39;0&amp;#39; + date.getMinutes()).slice(-2); var s = (&amp;#39;0&amp;#39; + date.getSeconds()).slice(-2); return Y + M + D + h + m + s; } dateFormat(new Date()) &amp;quot;20181218171030&amp;quot; 日付フォーマットなど 日付系処理</description>
+    </item>
+    
+    <item>
+      <title>画面（フロント）から通知したい</title>
+      <link>https://rengotaku.github.io/posts/06b06968-4edc-44a5-8ae2-f68da3e58853/</link>
+      <pubDate>Tue, 20 Nov 2018 12:30:28 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/06b06968-4edc-44a5-8ae2-f68da3e58853/</guid>
+      <description>ファイルの読込 loggly.tracker.js loggly-jslogger/src at master · loggly/loggly-jslogger 初期化 var _LTracker = _LTracker || []; ;(function($) { $(function() { var logglySettings = { &amp;#39;logglyKey&amp;#39;: null, &amp;#39;sendConsoleErrors&amp;#39; : true, &amp;#39;tag&amp;#39; : null } logglySettings[&amp;#39;logglyKey&amp;#39;] = $(&amp;#34;meta[name=&amp;#39;loggly_key&amp;#39;]&amp;#34;).attr(&amp;#39;content&amp;#39;); logglySettings[&amp;#39;tag&amp;#39;] = $(&amp;#34;meta[name=&amp;#39;loggly_tag&amp;#39;]&amp;#34;).attr(&amp;#39;content&amp;#39;); _LTracker.push(logglySettings); }); })(jQuery); HTMLに情報の埋め込み &amp;lt;meta name=&amp;#34;loggly_key&amp;#34; content=&amp;#34;&amp;lt;?php echo(&amp;#39;loggly_of_key&amp;#39;); ?&amp;gt;&amp;#34; /&amp;gt; &amp;lt;meta name=&amp;#34;loggly_tag&amp;#34; content=&amp;#34;&amp;lt;?php echo(&amp;#39;loggly_of_tag&amp;#39;);</description>
+    </item>
+    
+    <item>
+      <title>AJAXのテンプレート</title>
+      <link>https://rengotaku.github.io/posts/61f7dd7c-f05b-44d9-9aba-76ed029a23e9/</link>
+      <pubDate>Thu, 08 Nov 2018 18:39:58 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/61f7dd7c-f05b-44d9-9aba-76ed029a23e9/</guid>
+      <description>$.ajax({ type: &amp;#34;GET&amp;#34;, url: &amp;#34;/api/v1/xxx&amp;#34;, dataType: &amp;#34;json&amp;#34;, cache: &amp;#34;false&amp;#34;, data: { id: 1, }, error: function(xhr, textStatus, errorThrown) { if(xhr.status == 404) { var response = JSON.parse(xhr.responseText); // エラー処理 } else { // 通信障害とか } }, success: function(response){ // { data: [{ name: &amp;#34;名前1&amp;#34; }, { name: &amp;#</description>
+    </item>
+    
+    <item>
+      <title>複数ワードをオートコンプリートしたい</title>
+      <link>https://rengotaku.github.io/posts/2d9b348b-83cb-4449-bed3-9dcc4ac006fa/</link>
+      <pubDate>Tue, 30 Oct 2018 11:57:09 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/2d9b348b-83cb-4449-bed3-9dcc4ac006fa/</guid>
+      <description>jQuery Tokeninputを使用します。 var tags = JSON.parse($(&#39;#tag_candidate_hidden&#39;).val()); // 全てのタグを追加 $(&amp;quot;#tag_candidate&amp;quot;).tokenInput( tags, { theme: &amp;quot;facebook&amp;quot; } ); // タグを選択済み JSON.parse($(&#39;#target_tag_candidate_hidden&#39;).val()).forEach(function(targetTagName) { tags.forEach(function(tag){ if(tag.name == targetTagName){ $(&amp;quot;#tag_candidate&amp;quot;).tokenInput(&amp;quot;add&amp;quot;, tag); } }) }); // タグの全削除 $(&amp;quot;#tag-eraser&amp;quot;).click(function() { $(&amp;quot;#tag_candidate&amp;quot;).tokenInput(&amp;quot;clear&amp;quot;); return false; });</description>
+    </item>
+    
+    <item>
+      <title>高階関数の使い方</title>
+      <link>https://rengotaku.github.io/posts/803d5b84-c4c6-49f8-bc9e-62223fe2d4a2/</link>
+      <pubDate>Tue, 30 Oct 2018 11:39:00 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/803d5b84-c4c6-49f8-bc9e-62223fe2d4a2/</guid>
+      <description>指定された個数で引数を渡さないといけない場合（例だとajaxのsuccess）に、関数内でその関数を返却する。 var buttonClick = function() { var val = $(&amp;quot;#send_value&amp;quot;).val(); $.ajax({ type: &amp;quot;GET&amp;quot;, url: &amp;quot;/api/~&amp;quot;, data:</description>
+    </item>
+    
+    <item>
+      <title>jsの軽量バリデーション</title>
+      <link>https://rengotaku.github.io/posts/ed849ba8-97d0-43f6-967b-486017d5a30b/</link>
+      <pubDate>Thu, 25 Oct 2018 10:41:32 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/ed849ba8-97d0-43f6-967b-486017d5a30b/</guid>
+      <description>imbrn/v8n: ☑️ JavaScript fluent validation library</description>
+    </item>
+    
+    <item>
+      <title>改行コードの統一</title>
+      <link>https://rengotaku.github.io/posts/f54e7940-0874-4689-914a-fcb7a74f0fe5/</link>
+      <pubDate>Mon, 22 Oct 2018 13:50:54 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/f54e7940-0874-4689-914a-fcb7a74f0fe5/</guid>
+      <description>&amp;#34;test1\r\ntest2\ntest3&amp;#34;.replace(/\r?\n/g, &amp;#34;\n&amp;#34;) JavaScriptでOS(Linux,Mac,Windows)の改行コードを全て置換</description>
+    </item>
+    
+    <item>
+      <title>変数の安全な初期化</title>
+      <link>https://rengotaku.github.io/posts/16bfcbb3-7980-4f05-acbf-90ea14fa56be/</link>
+      <pubDate>Tue, 16 Oct 2018 17:31:26 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/16bfcbb3-7980-4f05-acbf-90ea14fa56be/</guid>
+      <description>var controllers = controllers || {}; 初期化されていない場合は、初期化を行う。されている場合は、そのまま。 var controllers = controllers || {}; controllers.output = &amp;quot;test&amp;quot;; controllers.output =&amp;gt; &amp;quot;test&amp;quot; var controllers = controllers || {}; controllers.output =&amp;gt; &amp;quot;test&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>Garoonの今日のスケジュールをslackのremindに整形</title>
+      <link>https://rengotaku.github.io/posts/b276a2a4-e240-4e11-95b3-f0a49bed8cfe/</link>
+      <pubDate>Thu, 27 Sep 2018 12:50:48 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/b276a2a4-e240-4e11-95b3-f0a49bed8cfe/</guid>
+      <description>Consoleで流す&#34; data-lang=&#34;js:chromeの検証-Consoleで流す&#34;/* https://xxx/scripts/cbgrn/grn.exe/index? で実行 */ var PRE_MINUTES = 3; var rawDate = document.querySelector(&#39;#schedule_gw_1_date_title&#39;).textContent .match(/(\d{4}).(\d{2}).(\d{2})/); var date = [rawDate[2], rawDate[3], rawDate[1]].join(&#39;/&#39;); var today</description>
+    </item>
+    
+    <item>
+      <title>javascriptでファイルをダウンロード</title>
+      <link>https://rengotaku.github.io/posts/1af5e1a3-d374-4430-a097-e5f983ae998f/</link>
+      <pubDate>Fri, 07 Sep 2018 17:34:20 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/1af5e1a3-d374-4430-a097-e5f983ae998f/</guid>
+      <description>var downloadAsFile = function(fileName, content) { var blob = new Blob([content]); var url = window.URL || window.webkitURL; var blobURL = url.createObjectURL(blob); var a = document.createElement(&#39;a&#39;); a.download = fileName; a.href = blobURL; a.click(); }; javascript - JavaScriptからファイルをダウンロードさせるのはどうしたら良い</description>
+    </item>
+    
+    <item>
+      <title>要素をコピーして他の要素の前に設置する</title>
+      <link>https://rengotaku.github.io/posts/174418da-364e-413d-9c0f-8f00518d2191/</link>
+      <pubDate>Mon, 06 Aug 2018 15:49:41 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/174418da-364e-413d-9c0f-8f00518d2191/</guid>
+      <description>var parent = document.querySelector(&#39;path &amp;gt; to &amp;gt; element&#39;); var inquiry_copy = document.querySelector(&#39;path &amp;gt; to &amp;gt; element&#39;).cloneNode(true); var search_con1 = document.querySelector(&#39;path &amp;gt; to &amp;gt; element&#39;); parent.insertBefore(inquiry_copy, search_con1); element.cloneNode - エレメントを複製する - JavaScriptリファレンス</description>
+    </item>
+    
+    <item>
+      <title>絵文字を正しく抽出するには</title>
+      <link>https://rengotaku.github.io/posts/ca941043-1822-4115-a83a-340aceb8bff8/</link>
+      <pubDate>Mon, 30 Jul 2018 21:37:00 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/ca941043-1822-4115-a83a-340aceb8bff8/</guid>
+      <description>function stringToArray (str) { return str.match(/[\uD800-\uDBFF][\uDC00-\uDFFF]|[^\uD800-\uDFFF]/g) || []; } JavaScriptでのサロゲートペア文字列のメモ - Qiita</description>
+    </item>
+    
+    <item>
+      <title>Bookmarklet(ブックマークレット)で、タイトルとURLを取得</title>
+      <link>https://rengotaku.github.io/posts/77f1445c-60ab-4ec8-bfea-b4e374829a83/</link>
+      <pubDate>Fri, 27 Apr 2018 10:08:13 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/77f1445c-60ab-4ec8-bfea-b4e374829a83/</guid>
+      <description>適当なサイトをブックマークして、URLを書き換える javascript:prompt(&#39;Title + URL&#39;,document.title+&#39;\n&#39;+location.href)(); マークダウン用 javascript:prompt(&#39;Title + URL&#39;, &#39;[&#39; + document.title+&#39;](&#39;+location.href + &#39;)&#39;)(); クリックすると、ポップアップが出てきて、下記をコピペで</description>
+    </item>
+    
+    <item>
+      <title>オブジェクトをJSON文字列（UNICODE）に変換する</title>
+      <link>https://rengotaku.github.io/posts/c2d76e8e-0902-4893-995c-d0f879e9ca72/</link>
+      <pubDate>Thu, 19 Apr 2018 10:11:04 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/c2d76e8e-0902-4893-995c-d0f879e9ca72/</guid>
+      <description>var obj = {&amp;#34;key&amp;#34;:&amp;#34;ü&amp;#34;}; var str1 = JSON.stringify(obj); var str2 = &amp;#34;&amp;#34;; var chr = &amp;#34;&amp;#34;; for(var i = 0; i &amp;lt; str1.length; i++){ if (str1[i].match(/[^\x00-\x7F]/)){ chr = &amp;#34;\\u&amp;#34; + (&amp;#34;000&amp;#34; + str1[i].charCodeAt(0).toString(16)).substr(-4); }else{ chr = str1[i]; } str2 = str2 + chr;</description>
+    </item>
+    
+    <item>
+      <title>レバテックプラットフォームの勤怠の自動入力</title>
+      <link>https://rengotaku.github.io/posts/712bbf92-48e1-495f-982d-5fcf6502cc65/</link>
+      <pubDate>Wed, 18 Apr 2018 10:08:02 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/712bbf92-48e1-495f-982d-5fcf6502cc65/</guid>
+      <description>レバテックプラットフォームの勤怠の自動入力プログラムがあったので、 追加改造して、作業内容に仮入力と入力するようにした。 // 開始終了休憩時間を入</description>
+    </item>
+    
+  </channel>
+</rss>

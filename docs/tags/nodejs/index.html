@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>nodejs | Vegetable Programing</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/tags/nodejs/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+<link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/nodejs/index.xml">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="nodejs" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://rengotaku.github.io/tags/nodejs/" />
+<meta property="og:updated_time" content="2020-01-22T09:55:31+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="nodejs"/>
+<meta name="twitter:description" content=""/>
+
+
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main"> 
+<header class="page-header">
+  <h1>nodejs</h1>
+</header>
+
+
+
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      gulpでjsxコンパイル時にエラー
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 babelifyにpresetsを設定する .transform(babelify.configure({ presets: [&#34;@babel/react&#34;,&#34;@babel/preset-env&#34;] })) React.js - webpack4で構築、jsx内でReactの記述が使えない｜teratail node.js -...</p>
+  </section>
+  <footer class="entry-footer">January 21, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to gulpでjsxコンパイル時にエラー" href="https://rengotaku.github.io/posts/cb866f60-e70d-4e05-89b5-b37246c71c55/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Wating file in docker with gulp
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>gulp.watch(&#39;./**/*&#39;, {interval: 1000, usePolling: true}, gulp.series(&#39;superTask&#39;)); node.js - Within Docker VM, Gulp-Watch Seems to not work well on volumes hosted from the host OS - Stack Overflow...</p>
+  </section>
+  <footer class="entry-footer">December 28, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to Wating file in docker with gulp" href="https://rengotaku.github.io/posts/f548e78f-6f95-4276-bf21-64b6385bab2a/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      pugを使用する際に参考にしたサイト
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>htmlからの変換 HTML to PUG - Free HTML to PUG Online Converter...</p>
+  </section>
+  <footer class="entry-footer">August 23, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to pugを使用する際に参考にしたサイト" href="https://rengotaku.github.io/posts/2431ed9e-ff55-409a-9588-df18432def81/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      gulp4を使用する際に参考にしたサイト
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>node.js - Cannot find module ‘../lib/completion’ Inspite of installing Completion - Stack Overflow 他のプロジェクトからnode_moduleごと移行したら発生した より便利になった gulp 4.0 への移行方法と変更点をまとめま...</p>
+  </section>
+  <footer class="entry-footer">August 22, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to gulp4を使用する際に参考にしたサイト" href="https://rengotaku.github.io/posts/52a6e29e-4257-4e78-a33c-32e45fbd0cf6/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      gulpを動かしたらエラーがcss-mqpackerでエラーが発生する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>事象 $ gulp /path/to/node_modules/css-mqpacker/index.js:139 ...options ^^^ SyntaxError: Unexpected token ... at Object.exports.runInThisContext (vm.js:76:16) at Module._compile (module.js:542:28) at Object.Module._extensions..js (module.js:579:10) at Module.load (module.js:487:32) at tryModuleLoad (module.js:446:12) at Function.Module._load (module.js:438:3) at Module.require (module.js:497:17) at require (internal/module.js:20:19) at Object.&lt;anonymous&gt; (/Users/300807/myspace/web_diff/gulpfile.js:20:14) at Module._compile (module.js:570:32) at Object.Module._extensions..js (module.js:579:10) at Module.load (module.js:487:32) at tryModuleLoad (module.js:446:12) at Function.Module._load (module.js:438:3) at Module.require (module.js:497:17) at require (internal/module.js:20:19) 対応 nodeのバージョ...</p>
+  </section>
+  <footer class="entry-footer">March 12, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to gulpを動かしたらエラーがcss-mqpackerでエラーが発生する" href="https://rengotaku.github.io/posts/0cdcf6ba-6e3a-4317-a0d1-c41cb9638af2/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      nvmで管理しているnodeバージョンを切り替える
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>$ nvm install v0.6.11 $ nvm use v0.6.11 $ nvm alias default v0.6.11 $ node -v v0.6.11 nvm alias default がミソ 【Node.js】nvmをインストールして設定するまでの方法 | creator note...</p>
+  </section>
+  <footer class="entry-footer">December 4, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to nvmで管理しているnodeバージョンを切り替える" href="https://rengotaku.github.io/posts/cf9a5956-7738-459a-afa7-f1f775805ced/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      base64で受け取り、fileとして保存
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>const fileData = encodedData.replace(/^data:\w&#43;\/\w&#43;;base64,/, &#39;&#39;) const decodedFile = new Buffer(fileData, &#39;base64&#39;) メモ base64は直書きした場合のみ機能する。 imgタグのsrcにurlを指定し、その結果がbase64の場合は、画像...</p>
+  </section>
+  <footer class="entry-footer">November 13, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to base64で受け取り、fileとして保存" href="https://rengotaku.github.io/posts/2fbf82e3-b162-4a8d-b3e4-ea3d4c55452a/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      uuidを実装
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>インストール $ npm install uuid --save 利用方法 const uuidv5 = require(&#39;uuid/v5&#39;); const MY_NAMESPACE = &#39;1b671a64-40d5-491e-99b0-da01ff1f3341&#39;; uuidv5(&#39;Hello, World!&#39;, MY_NAMESPACE); // ⇨ &#39;630eb68f-e0fa-5ecc-887a-7c7a62614681&#39; uuid - npm...</p>
+  </section>
+  <footer class="entry-footer">October 15, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to uuidを実装" href="https://rengotaku.github.io/posts/616ffa86-75ee-4374-bab2-be765b51113b/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      404エラーを自前でレスポンスしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>res.status(404) // HTTP status 404: NotFound .send(&#39;Not found&#39;); javascript - How to programmatically send a 404 response with Express/Node? - Stack Overflow...</p>
+  </section>
+  <footer class="entry-footer">October 15, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to 404エラーを自前でレスポンスしたい" href="https://rengotaku.github.io/posts/0e600201-1586-4eda-a51c-17d84288c9a7/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Error: Cannot promisify an API that has normal methods
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>対応 const client = Promise.promisifyAll(new AWS.DynamoDB({ endpoint: HOST }), {suffix: &#34;MySuffix&#34;}) XXXAsyncメソッド名を、XXXMySuffixに変更する必要がある Promise.promisifyAll | bluebird 事象 const client = Promise.promisifyAll(new AWS.DynamoDB({ endpoint: HOST })) Cannot promisify an API that has normal methods with...</p>
+  </section>
+  <footer class="entry-footer">October 9, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to Error: Cannot promisify an API that has normal methods" href="https://rengotaku.github.io/posts/850c0c9e-2556-4325-9f8b-f8c56f16d618/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="/tags/nodejs/page/2/">Next Page »</a>
+  </nav>
+</footer>
+
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

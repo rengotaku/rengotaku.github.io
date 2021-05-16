@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Gitlabで特定時間以降のコメントを集約したい | Vegetable Programing</title>
+
+<meta name="keywords" content="javascript, 小技, tool, ベジプロ, プログ, プログラム" />
+<meta name="description" content="ソース Bookmarklet javascript:var db={&#34;@xxx&#34;:&#34;1234&#34;};var baseUrl=window.location.href.split(&#34;#&#34;)[0];Date.prototype.addHours=function(h){this.setTime(this.getTime()&#43;(h*60*60*1000));return this};function toDate(timeStr){var timeRegexp=/(.&#43;)(am|pm) (GMT\&#43;\d&#43;)/;var periods=timeStr.replace(timeRegexp,&#39;$2&#39;);baseTime=new Date(timeStr.replace(timeRegexp,&#39;$1&#39;));return periods==&#34;pm&#34;?baseTime.addHours(12):baseTime};var targetTime=toDate(document.querySelector(&#34;#&#34;&#43;window.location.href.split(&#34;#&#34;)[1]&#43;&#34; time&#34;).getAttribute(&#34;title&#34;));var targets={};document.querySelectorAll(&#34;#notes-list .timeline-entry .note-header-info time&#34;).forEach(function(timeE,i){var compareTime=toDate(timeE.getAttribute(&#34;title&#34;));if(targetTime&lt;compareTime){discussion=timeE.closest(&#34;.timeline-content&#34;).getElementsByClassName(&#34;timeline-discussion-body&#34;)[0];if(discussion){target=discussion.getElementsByClassName(&#34;gfm-project_member&#34;)[0];if(target){var urls=targets[target.textContent];urls=urls?urls:[];urls.push(baseUrl&#43;&#34;/&#34;&#43;timeE.closest(&#34;a&#34;).getAttribute(&#34;href&#34;));targets[target.textContent]=urls}}}});message=document.title.split(/ · /)[0]&#43;&#34;\n&#34;;for(let name in targets){message&#43;=&#34;[To:&#34;&#43;db[name]&#43;&#34;]&#34;;message&#43;=&#34;[info]&#34;;targets[name].forEach(function(url){message&#43;=url&#43;&#34;\n&#34;});message&#43;=&#34;[/info]&#34;};prompt(&#34;Copy &amp; paste&#34;,message&#43;&#34;\n\nコメントのご確認をお願い致し">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/posts/6ed1568a-e614-4e7d-838f-2ce048eb76b6/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.68.3" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="Gitlabで特定時間以降のコメントを集約したい" />
+<meta property="og:description" content="ソース Bookmarklet javascript:var db={&#34;@xxx&#34;:&#34;1234&#34;};var baseUrl=window.location.href.split(&#34;#&#34;)[0];Date.prototype.addHours=function(h){this.setTime(this.getTime()&#43;(h*60*60*1000));return this};function toDate(timeStr){var timeRegexp=/(.&#43;)(am|pm) (GMT\&#43;\d&#43;)/;var periods=timeStr.replace(timeRegexp,&#39;$2&#39;);baseTime=new Date(timeStr.replace(timeRegexp,&#39;$1&#39;));return periods==&#34;pm&#34;?baseTime.addHours(12):baseTime};var targetTime=toDate(document.querySelector(&#34;#&#34;&#43;window.location.href.split(&#34;#&#34;)[1]&#43;&#34; time&#34;).getAttribute(&#34;title&#34;));var targets={};document.querySelectorAll(&#34;#notes-list .timeline-entry .note-header-info time&#34;).forEach(function(timeE,i){var compareTime=toDate(timeE.getAttribute(&#34;title&#34;));if(targetTime&lt;compareTime){discussion=timeE.closest(&#34;.timeline-content&#34;).getElementsByClassName(&#34;timeline-discussion-body&#34;)[0];if(discussion){target=discussion.getElementsByClassName(&#34;gfm-project_member&#34;)[0];if(target){var urls=targets[target.textContent];urls=urls?urls:[];urls.push(baseUrl&#43;&#34;/&#34;&#43;timeE.closest(&#34;a&#34;).getAttribute(&#34;href&#34;));targets[target.textContent]=urls}}}});message=document.title.split(/ · /)[0]&#43;&#34;\n&#34;;for(let name in targets){message&#43;=&#34;[To:&#34;&#43;db[name]&#43;&#34;]&#34;;message&#43;=&#34;[info]&#34;;targets[name].forEach(function(url){message&#43;=url&#43;&#34;\n&#34;});message&#43;=&#34;[/info]&#34;};prompt(&#34;Copy &amp; paste&#34;,message&#43;&#34;\n\nコメントのご確認をお願い致し" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rengotaku.github.io/posts/6ed1568a-e614-4e7d-838f-2ce048eb76b6/" />
+<meta property="article:published_time" content="2020-04-22T16:56:54+09:00" />
+<meta property="article:modified_time" content="2020-06-09T13:41:14+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Gitlabで特定時間以降のコメントを集約したい"/>
+<meta name="twitter:description" content="ソース Bookmarklet javascript:var db={&#34;@xxx&#34;:&#34;1234&#34;};var baseUrl=window.location.href.split(&#34;#&#34;)[0];Date.prototype.addHours=function(h){this.setTime(this.getTime()&#43;(h*60*60*1000));return this};function toDate(timeStr){var timeRegexp=/(.&#43;)(am|pm) (GMT\&#43;\d&#43;)/;var periods=timeStr.replace(timeRegexp,&#39;$2&#39;);baseTime=new Date(timeStr.replace(timeRegexp,&#39;$1&#39;));return periods==&#34;pm&#34;?baseTime.addHours(12):baseTime};var targetTime=toDate(document.querySelector(&#34;#&#34;&#43;window.location.href.split(&#34;#&#34;)[1]&#43;&#34; time&#34;).getAttribute(&#34;title&#34;));var targets={};document.querySelectorAll(&#34;#notes-list .timeline-entry .note-header-info time&#34;).forEach(function(timeE,i){var compareTime=toDate(timeE.getAttribute(&#34;title&#34;));if(targetTime&lt;compareTime){discussion=timeE.closest(&#34;.timeline-content&#34;).getElementsByClassName(&#34;timeline-discussion-body&#34;)[0];if(discussion){target=discussion.getElementsByClassName(&#34;gfm-project_member&#34;)[0];if(target){var urls=targets[target.textContent];urls=urls?urls:[];urls.push(baseUrl&#43;&#34;/&#34;&#43;timeE.closest(&#34;a&#34;).getAttribute(&#34;href&#34;));targets[target.textContent]=urls}}}});message=document.title.split(/ · /)[0]&#43;&#34;\n&#34;;for(let name in targets){message&#43;=&#34;[To:&#34;&#43;db[name]&#43;&#34;]&#34;;message&#43;=&#34;[info]&#34;;targets[name].forEach(function(url){message&#43;=url&#43;&#34;\n&#34;});message&#43;=&#34;[/info]&#34;};prompt(&#34;Copy &amp; paste&#34;,message&#43;&#34;\n\nコメントのご確認をお願い致し"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Gitlabで特定時間以降のコメントを集約したい",
+  "name": "Gitlabで特定時間以降のコメントを集約したい",
+  "description": "ソース Bookmarklet javascript:var db={\u0026amp;#34;@xxx\u0026amp;#34;:\u0026amp;#34;1234\u0026amp;#34;};var …",
+  "keywords": [
+    "javascript", "小技", "tool", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "ソース Bookmarklet javascript:var db={\"@xxx\":\"1234\"};var baseUrl=window.location.href.split(\"#\")[0];Date.prototype.addHours=function(h){this.setTime(this.getTime()+(h*60*60*1000));return this};function toDate(timeStr){var timeRegexp=/(.+)(am|pm) (GMT\\+\\d+)/;var periods=timeStr.replace(timeRegexp,'$2');baseTime=new Date(timeStr.replace(timeRegexp,'$1'));return periods==\"pm\"?baseTime.addHours(12):baseTime};var targetTime=toDate(document.querySelector(\"#\"+window.location.href.split(\"#\")[1]+\" time\").getAttribute(\"title\"));var targets={};document.querySelectorAll(\"#notes-list .timeline-entry .note-header-info time\").forEach(function(timeE,i){var compareTime=toDate(timeE.getAttribute(\"title\"));if(targetTimecompareTime){discussion=timeE.closest(\".timeline-content\").getElementsByClassName(\"timeline-discussion-body\")[0];if(discussion){target=discussion.getElementsByClassName(\"gfm-project_member\")[0];if(target){var urls=targets[target.textContent];urls=urls?urls:[];urls.push(baseUrl+\"/\"+timeE.closest(\"a\").getAttribute(\"href\"));targets[target.textContent]=urls}}}});message=document.title.split(/ · /)[0]+\"\\n\";for(let name in targets){message+=\"[To:\"+db[name]+\"]\";message+=\"[info]\";targets[name].forEach(function(url){message+=url+\"\\n\"});message+=\"[/info]\"};prompt(\"Copy \u0026 paste\",message+\"\\n\\nコメントのご確認をお願い致します。\")();\r /packer/\n 元 var db={\"@xxx\":\"1234\"};\rvar baseUrl = window.location.href.split(\"#\")[0];\r/* https://stackoverflow.com/questions/1050720/adding-hours-to-javascript-date-object */\rDate.prototype.addHours = function(h) { this.setTime(this.getTime() + (h*60*60*1000)); return this; };\r/* Apr 22, 2020 2:45pm GMT+0900 */\rfunction toDate(timeStr) {\rvar timeRegexp = /(.+)(am|pm) (GMT\\+\\d+)/;\rvar periods = timeStr.replace(timeRegexp, '$2');\rbaseTime = new Date(timeStr.replace(timeRegexp, '$1'));\rreturn periods == \"pm\" ? baseTime.addHours(12) : baseTime;\r};\rvar targetTime = toDate(document.querySelector(\"#\" + window.location.href.split(\"#\")[1] + \" time\").getAttribute(\"title\"));\r/* console.log(targetTime.toString()); */\rvar targets = {};\rdocument.querySelectorAll(\"#notes-list .timeline-entry .note-header-info time\").forEach(function(timeE, i){\r/* console.log(timeE.getAttribute(\"title\")); */\rvar compareTime = toDate(timeE.getAttribute(\"title\"));\r/* console.log(timeE); */\r/* console.log(compareTime.toString()); */\rif(targetTime  compareTime) {\rdiscussion = timeE.closest(\".timeline-content\").getElementsByClassName(\"timeline-discussion-body\")[0];\rif(discussion) {\rtarget = discussion.getElementsByClassName(\"gfm-project_member\")[0];\rif(target) {\rvar urls = targets[target.textContent];\rurls = urls ? urls : [];\rurls.push(baseUrl + \"/\" + timeE.closest(\"a\").getAttribute(\"href\"));\r/* console.log(discussion.getElementsByClassName(\"note-text\")[0].textContent); */\rtargets[target.textContent] = urls;\r};\r};\r};\r});\rmessage = document.title.split(/ · /)[0] + \"\\n\";\rfor (let name in targets) {\rmessage += \"[To:\"+db[name]+ \"]\";\rmessage += \"[info]\";\rtargets[name].forEach(function(url) {\rmessage += url + \"\\n\";\r});\rmessage += \"[/info]\";\r};\rprompt(\"Copy \u0026 paste\", message + \"\\n\\nコメントのご確認をお願い致します。\")();\r実行方法 ソースの修正 dbにGitlabの名称、ChatworkのIDを設定する\nどの時点以降のコメントを対象にするか決定 コメントのヘッダーの右側にある  1 day ago を押下\nスクリプトを実行 結果 Resolve \"HOGEHOGE タイトル\" (!757)\r[To:1234][info]https://exampole.com/path/to/project/-/merge_requests/757/#note_1202832\rhttps://exampole.com/path/to/project/-/merge_requests/757/#note_1202836\r[/info]\rコメントのご確認をお願い致します。\r",
+  "wordCount" : "406",
+  "inLanguage": "en",
+  "datePublished": "2020-04-22T16:56:54+09:00",
+  "dateModified": "2020-06-09T13:41:14+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rengotaku.github.io/posts/6ed1568a-e614-4e7d-838f-2ce048eb76b6/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rengotaku.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      Gitlabで特定時間以降のコメントを集約したい
+    </h1>
+    <div class="post-meta">April 22, 2020
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="ソース">ソース<a hidden class="anchor" aria-hidden="true" href="#ソース">#</a></h1>
+<h2 id="bookmarklet">Bookmarklet<a hidden class="anchor" aria-hidden="true" href="#bookmarklet">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">javascript</span><span style="color:#f92672">:</span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db</span><span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;@xxx&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;1234&#34;</span>};<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">baseUrl</span><span style="color:#f92672">=</span>window.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">href</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;#&#34;</span>)[<span style="color:#ae81ff">0</span>];Date.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">addHours</span><span style="color:#f92672">=</span><span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">h</span>){<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setTime</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getTime</span>()<span style="color:#f92672">+</span>(<span style="color:#a6e22e">h</span><span style="color:#f92672">*</span><span style="color:#ae81ff">60</span><span style="color:#f92672">*</span><span style="color:#ae81ff">60</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1000</span>));<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>};<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">toDate</span>(<span style="color:#a6e22e">timeStr</span>){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">timeRegexp</span><span style="color:#f92672">=</span><span style="color:#e6db74">/(.+)(am|pm) (GMT\+\d+)/</span>;<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">periods</span><span style="color:#f92672">=</span><span style="color:#a6e22e">timeStr</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">timeRegexp</span>,<span style="color:#e6db74">&#39;$2&#39;</span>);<span style="color:#a6e22e">baseTime</span><span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> Date(<span style="color:#a6e22e">timeStr</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">timeRegexp</span>,<span style="color:#e6db74">&#39;$1&#39;</span>));<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">periods</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#34;pm&#34;</span><span style="color:#f92672">?</span><span style="color:#a6e22e">baseTime</span>.<span style="color:#a6e22e">addHours</span>(<span style="color:#ae81ff">12</span>)<span style="color:#f92672">:</span><span style="color:#a6e22e">baseTime</span>};<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">targetTime</span><span style="color:#f92672">=</span><span style="color:#a6e22e">toDate</span>(document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#&#34;</span><span style="color:#f92672">+</span>window.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">href</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;#&#34;</span>)[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; time&#34;</span>).<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;title&#34;</span>));<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">targets</span><span style="color:#f92672">=</span>{};document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;#notes-list .timeline-entry .note-header-info time&#34;</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">timeE</span>,<span style="color:#a6e22e">i</span>){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">compareTime</span><span style="color:#f92672">=</span><span style="color:#a6e22e">toDate</span>(<span style="color:#a6e22e">timeE</span>.<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;title&#34;</span>));<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">targetTime</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">compareTime</span>){<span style="color:#a6e22e">discussion</span><span style="color:#f92672">=</span><span style="color:#a6e22e">timeE</span>.<span style="color:#a6e22e">closest</span>(<span style="color:#e6db74">&#34;.timeline-content&#34;</span>).<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;timeline-discussion-body&#34;</span>)[<span style="color:#ae81ff">0</span>];<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">discussion</span>){<span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#a6e22e">discussion</span>.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;gfm-project_member&#34;</span>)[<span style="color:#ae81ff">0</span>];<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">target</span>){<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">urls</span><span style="color:#f92672">=</span><span style="color:#a6e22e">targets</span>[<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">textContent</span>];<span style="color:#a6e22e">urls</span><span style="color:#f92672">=</span><span style="color:#a6e22e">urls</span><span style="color:#f92672">?</span><span style="color:#a6e22e">urls</span><span style="color:#f92672">:</span>[];<span style="color:#a6e22e">urls</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">baseUrl</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">timeE</span>.<span style="color:#a6e22e">closest</span>(<span style="color:#e6db74">&#34;a&#34;</span>).<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;href&#34;</span>));<span style="color:#a6e22e">targets</span>[<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">textContent</span>]<span style="color:#f92672">=</span><span style="color:#a6e22e">urls</span>}}}});<span style="color:#a6e22e">message</span><span style="color:#f92672">=</span>document.<span style="color:#a6e22e">title</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">/ · /</span>)[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;\n&#34;</span>;<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">targets</span>){<span style="color:#a6e22e">message</span><span style="color:#f92672">+=</span><span style="color:#e6db74">&#34;[To:&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db</span>[<span style="color:#a6e22e">name</span>]<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;]&#34;</span>;<span style="color:#a6e22e">message</span><span style="color:#f92672">+=</span><span style="color:#e6db74">&#34;[info]&#34;</span>;<span style="color:#a6e22e">targets</span>[<span style="color:#a6e22e">name</span>].<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">url</span>){<span style="color:#a6e22e">message</span><span style="color:#f92672">+=</span><span style="color:#a6e22e">url</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;\n&#34;</span>});<span style="color:#a6e22e">message</span><span style="color:#f92672">+=</span><span style="color:#e6db74">&#34;[/info]&#34;</span>};<span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;Copy &amp; paste&#34;</span>,<span style="color:#a6e22e">message</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;\n\nコメントのご確認をお願い致します。&#34;</span>)();
+</code></pre></div><blockquote>
+<p><a href="http://dean.edwards.name/packer/">/packer/</a></p>
+</blockquote>
+<h2 id="元">元<a hidden class="anchor" aria-hidden="true" href="#元">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db</span><span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;@xxx&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;1234&#34;</span>};
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">baseUrl</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">href</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;#&#34;</span>)[<span style="color:#ae81ff">0</span>];
+<span style="color:#75715e">/* https://stackoverflow.com/questions/1050720/adding-hours-to-javascript-date-object */</span>
+Date.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">addHours</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">h</span>) { <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setTime</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getTime</span>() <span style="color:#f92672">+</span> (<span style="color:#a6e22e">h</span><span style="color:#f92672">*</span><span style="color:#ae81ff">60</span><span style="color:#f92672">*</span><span style="color:#ae81ff">60</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1000</span>)); <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>; };
+<span style="color:#75715e">/* Apr 22, 2020 2:45pm GMT+0900 */</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">toDate</span>(<span style="color:#a6e22e">timeStr</span>) {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">timeRegexp</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/(.+)(am|pm) (GMT\+\d+)/</span>;
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">periods</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">timeStr</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">timeRegexp</span>, <span style="color:#e6db74">&#39;$2&#39;</span>);
+    <span style="color:#a6e22e">baseTime</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#a6e22e">timeStr</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">timeRegexp</span>, <span style="color:#e6db74">&#39;$1&#39;</span>));
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">periods</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;pm&#34;</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">baseTime</span>.<span style="color:#a6e22e">addHours</span>(<span style="color:#ae81ff">12</span>) <span style="color:#f92672">:</span> <span style="color:#a6e22e">baseTime</span>;
+};
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">targetTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">toDate</span>(document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#&#34;</span> <span style="color:#f92672">+</span> window.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">href</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;#&#34;</span>)[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; time&#34;</span>).<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;title&#34;</span>));
+<span style="color:#75715e">/* console.log(targetTime.toString()); */</span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">targets</span> <span style="color:#f92672">=</span> {};
+document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;#notes-list .timeline-entry .note-header-info time&#34;</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">timeE</span>, <span style="color:#a6e22e">i</span>){
+  <span style="color:#75715e">/* console.log(timeE.getAttribute(&#34;title&#34;)); */</span>
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">compareTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">toDate</span>(<span style="color:#a6e22e">timeE</span>.<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;title&#34;</span>));
+
+  <span style="color:#75715e">/* console.log(timeE); */</span>
+  <span style="color:#75715e">/* console.log(compareTime.toString()); */</span>
+  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">targetTime</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">compareTime</span>) {
+    <span style="color:#a6e22e">discussion</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">timeE</span>.<span style="color:#a6e22e">closest</span>(<span style="color:#e6db74">&#34;.timeline-content&#34;</span>).<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;timeline-discussion-body&#34;</span>)[<span style="color:#ae81ff">0</span>];
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">discussion</span>) {
+      <span style="color:#a6e22e">target</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">discussion</span>.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;gfm-project_member&#34;</span>)[<span style="color:#ae81ff">0</span>];
+      <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">target</span>) {
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">urls</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">targets</span>[<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">textContent</span>];
+        <span style="color:#a6e22e">urls</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">urls</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">urls</span> <span style="color:#f92672">:</span> [];
+        <span style="color:#a6e22e">urls</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">baseUrl</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">timeE</span>.<span style="color:#a6e22e">closest</span>(<span style="color:#e6db74">&#34;a&#34;</span>).<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;href&#34;</span>));
+        <span style="color:#75715e">/* console.log(discussion.getElementsByClassName(&#34;note-text&#34;)[0].textContent); */</span>
+        <span style="color:#a6e22e">targets</span>[<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">textContent</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">urls</span>;
+      };
+    };
+  };
+});
+<span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">title</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">/ · /</span>)[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\n&#34;</span>;
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">targets</span>) {
+  <span style="color:#a6e22e">message</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;[To:&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">db</span>[<span style="color:#a6e22e">name</span>]<span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;]&#34;</span>;
+  <span style="color:#a6e22e">message</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;[info]&#34;</span>;
+  <span style="color:#a6e22e">targets</span>[<span style="color:#a6e22e">name</span>].<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">url</span>) {
+    <span style="color:#a6e22e">message</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\n&#34;</span>;
+  });
+  <span style="color:#a6e22e">message</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;[/info]&#34;</span>;
+};
+<span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#34;Copy &amp; paste&#34;</span>, <span style="color:#a6e22e">message</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\n\nコメントのご確認をお願い致します。&#34;</span>)();
+</code></pre></div><h1 id="実行方法">実行方法<a hidden class="anchor" aria-hidden="true" href="#実行方法">#</a></h1>
+<h2 id="ソースの修正">ソースの修正<a hidden class="anchor" aria-hidden="true" href="#ソースの修正">#</a></h2>
+<p>dbにGitlabの名称、ChatworkのIDを設定する</p>
+<h2 id="どの時点以降のコメントを対象にするか決定">どの時点以降のコメントを対象にするか決定<a hidden class="anchor" aria-hidden="true" href="#どの時点以降のコメントを対象にするか決定">#</a></h2>
+<p>コメントのヘッダーの右側にある <code> 1 day ago</code> を押下</p>
+<h2 id="スクリプトを実行">スクリプトを実行<a hidden class="anchor" aria-hidden="true" href="#スクリプトを実行">#</a></h2>
+<h1 id="結果">結果<a hidden class="anchor" aria-hidden="true" href="#結果">#</a></h1>
+<pre><code>Resolve &quot;HOGEHOGE タイトル&quot; (!757)
+[To:1234][info]https://exampole.com/path/to/project/-/merge_requests/757/#note_1202832
+https://exampole.com/path/to/project/-/merge_requests/757/#note_1202836
+[/info]
+
+コメントのご確認をお願い致します。
+</code></pre>
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rengotaku.github.io/tags/javascript">javascript</a></li>
+      <li><a href="https://rengotaku.github.io/tags/%E5%B0%8F%E6%8A%80">小技</a></li>
+      <li><a href="https://rengotaku.github.io/tags/tool">tool</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

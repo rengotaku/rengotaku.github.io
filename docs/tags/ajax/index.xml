@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ajax on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/ajax/</link>
+    <description>Recent content in ajax on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Thu, 08 Nov 2018 18:39:58 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/ajax/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AJAXのテンプレート</title>
+      <link>https://rengotaku.github.io/posts/61f7dd7c-f05b-44d9-9aba-76ed029a23e9/</link>
+      <pubDate>Thu, 08 Nov 2018 18:39:58 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/61f7dd7c-f05b-44d9-9aba-76ed029a23e9/</guid>
+      <description>$.ajax({ type: &amp;#34;GET&amp;#34;, url: &amp;#34;/api/v1/xxx&amp;#34;, dataType: &amp;#34;json&amp;#34;, cache: &amp;#34;false&amp;#34;, data: { id: 1, }, error: function(xhr, textStatus, errorThrown) { if(xhr.status == 404) { var response = JSON.parse(xhr.responseText); // エラー処理 } else { // 通信障害とか } }, success: function(response){ // { data: [{ name: &amp;#34;名前1&amp;#34; }, { name: &amp;#</description>
+    </item>
+    
+    <item>
+      <title>ajaxのエラー時のメッセージの取得方法</title>
+      <link>https://rengotaku.github.io/posts/b355c347-29ce-482d-9f1a-106e134d2c64/</link>
+      <pubDate>Wed, 26 Sep 2018 14:19:19 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/b355c347-29ce-482d-9f1a-106e134d2c64/</guid>
+      <description>$.ajax({ error: function(xhr, textStatus, errorThrown) { var res = $.parseJSON(xhr.responseText); } 【jQuery】Ajaxのエラーレスポンスをパースする方法 | Code &amp;amp; Business</description>
+    </item>
+    
+  </channel>
+</rss>

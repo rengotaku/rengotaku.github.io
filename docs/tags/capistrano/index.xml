@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>capistrano on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/capistrano/</link>
+    <description>Recent content in capistrano on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Fri, 17 Jan 2020 10:46:12 +0900</lastBuildDate>
+    
+	<atom:link href="https://rengotaku.github.io/tags/capistrano/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker上のcapistranoから別途立てたローカルサーバにアクセス</title>
+      <link>https://rengotaku.github.io/posts/cae07512-deaa-4c5b-94cd-6ea0b68b1ca6/</link>
+      <pubDate>Fri, 17 Jan 2020 10:46:12 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/cae07512-deaa-4c5b-94cd-6ea0b68b1ca6/</guid>
+      <description>構図 Capistrano Server[Docker] &amp;lt;=&amp;gt; Local[Mac] &amp;lt;=&amp;gt; SSHD Server[Docker] 接続先(ファイル設置先) サーバ 設定ファイル version: &amp;#34;3&amp;#34; services: ssh: build: dockerfile: Dockerfile command: [&amp;#34;/usr/sbin/sshd&amp;#34;, &amp;#34;-D&amp;#34;] tty: true ports: - &amp;#34;10022:22&amp;#34; Docker 初心者 — ssh で接続できるサーバーを立てる - Qiita FROM ubuntu:16.04 RUN</description>
+    </item>
+    
+  </channel>
+</rss>
