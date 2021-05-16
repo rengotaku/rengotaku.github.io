@@ -29,6 +29,12 @@ jobs:
           name: add htmls to specifiy branch
           command: |
             pwd && ls && ./deploy.sh
-    branches:
-      only:
-        - feature/new_post
+
+workflows:
+  build-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: feature/new_post
+ 
