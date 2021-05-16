@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/ruby/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/ruby/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/ruby/" />
-<meta property="og:updated_time" content="2020-11-20T21:57:49+09:00" />
+<meta property="og:updated_time" content="2021-05-06T18:12:31+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ruby"/>
 <meta name="twitter:description" content=""/>
@@ -128,6 +128,104 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
+      オブジェクトをコピー
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>class Cat attr_accessor :name def initialize(name) @name = name end end original = Cat.new(&#34;Tama&#34;) copied = original.clone copied.name = &#34;Mike&#34; puts original.name =&gt; &#34;Tama&#34; puts copied.name =&gt; &#34;Mike&#34; clone, dup (Object) - Rubyリファレンス...</p>
+  </section>
+  <footer class="entry-footer">October 5, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to オブジェクトをコピー" href="https://rengotaku.github.io/posts/ac48611c-a748-4477-9da4-276fb48b62ed/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      半角文字を全角へ
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p># 半角文字を全角に変換する def convert_half_to_full(param) # 半角カナ param = NKF.nkf(&#39;-Xw&#39;, param) # 半角英数字 param = param.tr(&#39;0-9a-zA-Z&#39;, &#39;０-９ａ-ｚＡ-Ｚ&#39;) # 半角記号 param = param.gsub(/[!&#34;#$%&amp;&#39;()*&#43;,-.\/:;&lt;=&gt;?@\[\]^_`{|}~]&#43;/, &#39;!&#39; =&gt; &#39;！&amp;...</p>
+  </section>
+  <footer class="entry-footer">September 26, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to 半角文字を全角へ" href="https://rengotaku.github.io/posts/4afee80f-c733-497f-b0e3-6126c146983e/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      全角数値を半角数値に変換
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>NKF.nkf(&#39;-w -Z4&#39;, zen_suuji) # ０００ -&gt; 000 [Ruby] 全角カタカナを半角カタカナに変換する...</p>
+  </section>
+  <footer class="entry-footer">September 13, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to 全角数値を半角数値に変換" href="https://rengotaku.github.io/posts/0f295ca2-bf16-4fca-8ff2-411c8f49c4a6/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Nokogiriでノードを削除
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p># 最初に見つかった &lt;div&gt; を消す doc.at(:div).&amp;remove puts doc puts &#34;-&#34; * 20 # 全ての &lt;br&gt; を消す doc.search(:br).map &amp;:remove puts doc atの場合、存在しない場合はnilが返却される Nokogiri で任意の node を削除する - Secret Garden(Instrumental)...</p>
+  </section>
+  <footer class="entry-footer">August 27, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to Nokogiriでノードを削除" href="https://rengotaku.github.io/posts/a1ef4360-134c-45a7-9da4-5fb432a0d54e/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      wheneverでrootパス取得
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>require File.expand_path(File.dirname(__FILE__) &#43; &#34;/environment&#34;) set :output, &#34;#{Rails.root}/log/cron.log&#34; Railsでwheneverを使ってcronを設定する...</p>
+  </section>
+  <footer class="entry-footer">August 17, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to wheneverでrootパス取得" href="https://rengotaku.github.io/posts/333d65ff-998a-4586-931e-ec240b4ef4c4/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      bucket内のファイルをフィルターして一覧取得
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>bucket = storage.bucket &#34;bucket_name&#34; files = bucket.files(prefix: &#39;prefix_char/&#39;) files.all do |file| puts file.name end google-cloud-ruby...</p>
+  </section>
+  <footer class="entry-footer">August 17, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to bucket内のファイルをフィルターして一覧取得" href="https://rengotaku.github.io/posts/629e184e-7d32-4562-85c9-abb408c05410/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      キーワード引数
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>対応 bucket.files(prefix: &#39;databases/&#39;) 事象 bucket.files(&#39;databases/&#39;) =&gt; ArgumentError: wrong number of arguments (given 1, expected 0) 該当ソース def files prefix: nil, delimiter: nil, token: nil, max: nil, versions: nil ensure_service! gapi = service.list_files name, prefix: prefix, delimiter: delimiter, token: token, max: max, versions: versions, user_project: user_project File::List.from_gapi gapi, service, name, prefix, delimiter, max, versions, user_project: user_project end Rubyの引数い...</p>
+  </section>
+  <footer class="entry-footer">August 17, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to キーワード引数" href="https://rengotaku.github.io/posts/fb8ad4cd-9463-4795-a759-94de28b6c381/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
       ワンライナーでCSVを扱う
     </h2>
   </header>
@@ -166,79 +264,10 @@ if (!doNotTrack) {
 </footer>
   <a class="entry-link" aria-label="post link to dockerのruby2.3.1を2.3.7に変更する" href="https://rengotaku.github.io/posts/e0664390-c0cf-41d4-b4db-86dfd3939938/"></a>
 </article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      brewでmysqlをインストールしたら、mysqlのgemがインストールできない＆mysqlで何も実行できない
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>gemのインストール対応 バージョン0.4.10を使用する Failed to build gem native extension - unknown type name ‘my_bool’ · Issue #980 · brianmario/mysql2 mysqlの実行エラー対応 mysql&gt; SET GLOBAL innodb_fast_shutdown = 1; $ mysql_upgrade -u root -p Mysql Error:The...</p>
-  </section>
-  <footer class="entry-footer">July 10, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to brewでmysqlをインストールしたら、mysqlのgemがインストールできない＆mysqlで何も実行できない" href="https://rengotaku.github.io/posts/1e336aa2-3910-47a2-890b-1ce379db42bc/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      定数を変更してテスト
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>class TargetClass CONSTANT_VARIABLE = %w(1) end TargetClassTest @@origin = TargetClass::CONSTANT_VARIABLE setup do TargetClass.const_set(:CONSTANT_VARIABLE, @@origin) end describe :test do it :one do TargetClass.const_set(:CONSTANT_VARIABLE, w(1, 2, 3)) assert_equal TargetClass::CONSTANT_VARIABLE, %w(1 2 3) end end end 定数を変更すると、別ファイルのテストの際も変更されたままになるので、元に戻...</p>
-  </section>
-  <footer class="entry-footer">July 9, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to 定数を変更してテスト" href="https://rengotaku.github.io/posts/d719f508-6a6b-4b3a-9726-f3e50a37606d/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      rubyとrailsのバージョンアップ
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>現在のバージョン $ rbenv versions =&gt; system * 2.3.1 (set by /path/to/.rbenv/version) 2.4.1 アップグレード $ brew upgrade rbenv ruby-build 特に ruby-build が更新されないと新しいバージョンが表示されない 使用できるバージョン rbenv install -l...</p>
-  </section>
-  <footer class="entry-footer">June 6, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to rubyとrailsのバージョンアップ" href="https://rengotaku.github.io/posts/0b8f0eb0-7c73-4a24-a623-a03e8efeda1d/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      Rubyワンライナー
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>指定フォルダ配下のファイルをリネーム ruby -e &#39;Dir.glob(&#34;/path/to/folder/*.jpg&#34;){|item| File.rename(item, &#34;#{File.dirname(item)}/#{File.basename(item).split(&#34;_&#34;)[1]}_#{File.basename(item).split(&#34;_&#34;)[0]}#{File.extname(item)}&#34;) }&#39; 結果 images/target_img.jpg =&gt; images/img_target.jpg /path/to/folder/*.jpgを変更 img_#{File.basena...</p>
-  </section>
-  <footer class="entry-footer">May 6, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to Rubyワンライナー" href="https://rengotaku.github.io/posts/e4c9f397-a4bb-4b9f-aaa5-0871bd7a097c/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      RubyでGoogleplayのレシートを照合する
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p># アンドロイドのレシートチェック def check_receipt_for_android def fetch_receipt_for_android(product_id, purchase_token, token) require &#39;net/http&#39; require &#39;net/https&#39; require &#39;uri&#39; require &#39;json&#39; # path = &#34;https://www.googleapis.com/androidpublisher/v2/applications/#{$ANDROID_PACKAGE_NAME}/purchases/products/#{product_id}/tokens/#{token}&#34; path = &#34;https://www.googleapis.com/androidpublisher/v1.1/applications/#{$ANDROID_PACKAGE_NAME}/inapp/#{product_id}/purchases/#{purchase_token}?access_token=#{token}&#34; uri = URI.parse path https = Net::HTTP.new(uri.host,uri.port) https.use_ssl = true https.verify_mode = OpenSSL::SSL::VERIFY_NONE headers = {} headers[&#34;accept&#34;] = &#34;application/json&#34; headers[&#34;content-type&#34;] = &#34;application/json&#34; # 参考: https://stackoverflow.com/questions/7346398/nethttp-failure-to-access-google-docs-list-data-api https.start do |http| return http.get(uri.request_uri, headers).body...</p>
-  </section>
-  <footer class="entry-footer">April 25, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to RubyでGoogleplayのレシートを照合する" href="https://rengotaku.github.io/posts/79cc8911-a70d-40cd-8090-bf93aa55b1a0/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="/tags/ruby/page/10/">« Prev Page</a>
+    <a class="next" href="/tags/ruby/page/12/">Next Page »</a>
   </nav>
 </footer>
 

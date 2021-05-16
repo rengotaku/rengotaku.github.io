@@ -11,7 +11,7 @@
 <meta name="description" content="エラーが発生しないテスト not_to raise_error RSpec.describe &#34;#to_s&#34; do it &#34;does not raise&#34; do expect { Object.new.to_s }.not_to raise_error end end raise_error matcher - Built in matchers - RSpec Expectations - RSpec - Relish モックでエラーを発生させる and_raise RSpec.describe &#34;Making it raise an error&#34; do it &#34;raises the provided exception&#34; do dbl">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/6542ae14-4854-4050-bf96-54b6cc4100d5/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "rails", "ruby", "rspec", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "エラーが発生しないテスト not_to raise_error\nRSpec.describe \"#to_s\" do\rit \"does not raise\" do\rexpect { Object.new.to_s }.not_to raise_error\rend\rend\r raise_error matcher - Built in matchers - RSpec Expectations - RSpec - Relish\n モックでエラーを発生させる and_raise\nRSpec.describe \"Making it raise an error\" do\rit \"raises the provided exception\" do\rdbl = double\rallow(dbl).to receive(:foo).and_raise(\"boom\")\rdbl.foo\rend\rend\r Raising an error - Configuring responses - RSpec Mocks - RSpec - Relish\n モックの引数のチェック expect(...).to receive(...).with()\nRSpec.describe \"Using a RSpec matcher\" do\rlet(:dbl) { double }\rbefore { expect(dbl).to receive(:foo).with(a_collection_containing_exactly(1, 2)) }\rit \"passes when the args match\" do\rdbl.foo([2, 1])\rend\rit \"fails when the args do not match\" do\rdbl.foo([1, 3])\rend\rend\r Matching arguments - Setting constraints - RSpec Mocks - RSpec - Relish\n メソッドが実行された回数 expect(...).to have_received(...).exactly(...).times\nclass Account\rattr_accessor :logger\rdef open\rlogger.account_opened\rend\rend\rdescribe Account do\rcontext \"when opened\" do\rit \"logger#account_opened was called once\" do\rlogger = double(\"logger\")\raccount = Account.new\raccount.logger = logger\rlogger.should_receive(:account_opened).exactly(3).times\raccount.open\raccount.open\raccount.open\rend\rend\rend\r receive counts - Message expectations - RSpec Mocks - RSpec - Relish\n 一つのit内で複数のexpectを実行 aggregate_failures\nrequire 'client'\rRSpec.describe Client do\rafter do\r# this should be appended to failure list\r expect(false).to be(true), \"after hook failure\"\rend\raround do |ex|\rex.run\r# this should also be appended to failure list\r expect(false).to be(true), \"around hook failure\"\rend\rit \"returns a successful response\" do\rresponse = Client.make_request\raggregate_failures \"testing response\" do\rexpect(response.status).to eq(200)\rexpect(response.headers).to include(\"Content-Type\" = \"application/json\")\rexpect(response.body).to eq('{\"message\":\"Success\"}')\rend\rend\rend\rRSpec/MultipleExpectations の対策\r Aggregating Failures - Expectation framework integration - RSpec Core - RSpec - Relish\n mockの引数などをspyする順番 allow(...).to receive(...) - subject - expect(...).to have_received(...) の順番で実行する\nRSpec.describe \"have_received\" do\rit \"passes when the expectation is met\" do\rallow(Invitation).to receive(:deliver)\rInvitation.deliver\rexpect(Invitation).to have_received(:deliver)\rend\rend\r誤り RSpec.describe \"have_received\" do\rit \"passes when the expectation is met\" do\rallow(Invitation).to receive(:deliver)\rexpect(Invitation).to receive(:deliver).once\rInvitation.deliver\rend\rend\rRSpec/MessageSpies の対策\r Spies - Basics - RSpec Mocks - RSpec - Relish\n ",
+  "articleBody": "エラーが発生しないテスト not_to raise_error\nRSpec.describe \"#to_s\" do it \"does not raise\" do expect { Object.new.to_s }.not_to raise_error end end  raise_error matcher - Built in matchers - RSpec Expectations - RSpec - Relish\n モックでエラーを発生させる and_raise\nRSpec.describe \"Making it raise an error\" do it \"raises the provided exception\" do dbl = double allow(dbl).to receive(:foo).and_raise(\"boom\") dbl.foo end end  Raising an error - Configuring responses - RSpec Mocks - RSpec - Relish\n モックの引数のチェック expect(...).to receive(...).with()\nRSpec.describe \"Using a RSpec matcher\" do let(:dbl) { double } before { expect(dbl).to receive(:foo).with(a_collection_containing_exactly(1, 2)) } it \"passes when the args match\" do dbl.foo([2, 1]) end it \"fails when the args do not match\" do dbl.foo([1, 3]) end end  Matching arguments - Setting constraints - RSpec Mocks - RSpec - Relish\n メソッドが実行された回数 expect(...).to have_received(...).exactly(...).times\nclass Account attr_accessor :logger def open logger.account_opened end end describe Account do context \"when opened\" do it \"logger#account_opened was called once\" do logger = double(\"logger\") account = Account.new account.logger = logger logger.should_receive(:account_opened).exactly(3).times account.open account.open account.open end end end  receive counts - Message expectations - RSpec Mocks - RSpec - Relish\n 一つのit内で複数のexpectを実行 aggregate_failures\nrequire 'client' RSpec.describe Client do after do # this should be appended to failure list expect(false).to be(true), \"after hook failure\" end around do |ex| ex.run # this should also be appended to failure list expect(false).to be(true), \"around hook failure\" end it \"returns a successful response\" do response = Client.make_request aggregate_failures \"testing response\" do expect(response.status).to eq(200) expect(response.headers).to include(\"Content-Type\" = \"application/json\") expect(response.body).to eq('{\"message\":\"Success\"}') end end end RSpec/MultipleExpectations の対策\r Aggregating Failures - Expectation framework integration - RSpec Core - RSpec - Relish\n mockの引数などをspyする順番 allow(...).to receive(...) - subject - expect(...).to have_received(...) の順番で実行する\nRSpec.describe \"have_received\" do it \"passes when the expectation is met\" do allow(Invitation).to receive(:deliver) Invitation.deliver expect(Invitation).to have_received(:deliver) end end 誤り RSpec.describe \"have_received\" do it \"passes when the expectation is met\" do allow(Invitation).to receive(:deliver) expect(Invitation).to receive(:deliver).once Invitation.deliver end end RSpec/MessageSpies の対策\r Spies - Basics - RSpec Mocks - RSpec - Relish\n ",
   "wordCount" : "403",
   "inLanguage": "en",
   "datePublished": "2020-03-06T19:54:41+09:00",
@@ -233,13 +233,13 @@ describe <span style="color:#66d9ef">Account</span> <span style="color:#66d9ef">
 
 <span style="color:#66d9ef">RSpec</span><span style="color:#f92672">.</span>describe <span style="color:#66d9ef">Client</span> <span style="color:#66d9ef">do</span>
   after <span style="color:#66d9ef">do</span>
-    <span style="color:#75715e"># this should be appended to failure list</span>
+    <span style="color:#75715e"># this should be appended to failure list</span>
     expect(<span style="color:#66d9ef">false</span>)<span style="color:#f92672">.</span>to be(<span style="color:#66d9ef">true</span>), <span style="color:#e6db74">&#34;after hook failure&#34;</span>
   <span style="color:#66d9ef">end</span>
 
   around <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>ex<span style="color:#f92672">|</span>
     ex<span style="color:#f92672">.</span>run
-    <span style="color:#75715e"># this should also be appended to failure list</span>
+    <span style="color:#75715e"># this should also be appended to failure list</span>
     expect(<span style="color:#66d9ef">false</span>)<span style="color:#f92672">.</span>to be(<span style="color:#66d9ef">true</span>), <span style="color:#e6db74">&#34;around hook failure&#34;</span>
   <span style="color:#66d9ef">end</span>
 
@@ -304,7 +304,7 @@ describe <span style="color:#66d9ef">Account</span> <span style="color:#66d9ef">
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

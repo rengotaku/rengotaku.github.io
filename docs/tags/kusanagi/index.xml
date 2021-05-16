@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Tue, 19 Mar 2019 10:57:13 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/kusanagi/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 19 Mar 2019 10:57:13 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/kusanagi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SSL化後にnet::ERR_INSECURE_RESPONSEのせいで画面が表示されない</title>
       <link>https://rengotaku.github.io/posts/5cc88688-79f5-4d46-807a-404ddabaec8e/</link>

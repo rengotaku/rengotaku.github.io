@@ -11,7 +11,7 @@
 <meta name="description" content="配列から要素を削除 func (s *SliceSample) Remove(index int) { res := []string{} for i, v := range s.List { if i == index { continue } res = append(res, v) } s.List = res } Golang における配列操作（定義、追加、削除） – II 正規表現 package main import &#34;fmt&#34;">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/0229b922-6619-4955-9427-7e7302e6d87e/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "golang", "tips", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "配列から要素を削除 func (s *SliceSample) Remove(index int) {\rres := []string{}\rfor i, v := range s.List {\rif i == index {\rcontinue\r}\rres = append(res, v)\r}\rs.List = res\r}\r Golang における配列操作（定義、追加、削除） – II\n 正規表現 package main\rimport \"fmt\"\rimport \"regexp\"\rfunc main() {\rstr := \"Copyright 2015 by ASHITANI Tatsuji.\"\rrep := regexp.MustCompile(`[A-Za-z]*right`)\rstr = rep.ReplaceAllString(str, \"Copyleft\")\rfmt.Println(str) // = \"Copyleft 2015 by ASHITANI Tatsuji.\"\r}\r 逆引きGolang (正規表現)\n メソッドの継承  Golangでメソッドのオーバーライドをする方法 - ブロックチェーンエンジニアとして生きる\n テンプレートをstringで取得 var tpl bytes.Buffer\rif err := t.Execute(\u0026tpl, data); err != nil {\rreturn err\r}\rresult := tpl.String()\rSimply output go html template execution to strings (Example)\nuniqしたい arr := [string]{\"a\", \"b\", \"c\", \"a\"}\rm := make(map[string]bool)\runiq := [] string{}\rfor _, ele := range arr {\rif !m[ele] {\rm[ele] = true\runiq = append(uniq, ele)\r}\r}\rfmt.Printf(\"%v\", uniq) // [\"a\", \"b\", \"c\"]\rGoのsliceで重複を削除する - emahiro/b.log\nbuild方法 for mac $ ls\rmain.go\r$ GOOS=darwin GOARCH=amd64 go build -o ./test_exe_for_mac\r Goでディレクトリ\u0026ファイル名を指定してビルド - Qiita\n gccのエラーが発生する exec: \"gcc\": executable file not found in %PATH% のエラーが発生する CGO_ENABLED=0 で実行する。\n GO1.11.9のコンテナでgo testしようとするとexec: “gcc”: executable file not found in $PATH と怒られる - Qiita\n ",
+  "articleBody": "配列から要素を削除 func (s *SliceSample) Remove(index int) { res := []string{} for i, v := range s.List { if i == index { continue } res = append(res, v) } s.List = res }  Golang における配列操作（定義、追加、削除） – II\n 正規表現 package main import \"fmt\" import \"regexp\" func main() { str := \"Copyright 2015 by ASHITANI Tatsuji.\" rep := regexp.MustCompile(`[A-Za-z]*right`) str = rep.ReplaceAllString(str, \"Copyleft\") fmt.Println(str) // = \"Copyleft 2015 by ASHITANI Tatsuji.\" }  逆引きGolang (正規表現)\n メソッドの継承  Golangでメソッドのオーバーライドをする方法 - ブロックチェーンエンジニアとして生きる\n テンプレートをstringで取得 var tpl bytes.Buffer if err := t.Execute(\u0026tpl, data); err != nil { return err } result := tpl.String() Simply output go html template execution to strings (Example)\nuniqしたい arr := [string]{\"a\", \"b\", \"c\", \"a\"}\rm := make(map[string]bool)\runiq := [] string{}\rfor _, ele := range arr {\rif !m[ele] {\rm[ele] = true\runiq = append(uniq, ele)\r}\r}\rfmt.Printf(\"%v\", uniq) // [\"a\", \"b\", \"c\"]\rGoのsliceで重複を削除する - emahiro/b.log\nbuild方法 for mac $ ls\rmain.go\r$ GOOS=darwin GOARCH=amd64 go build -o ./test_exe_for_mac\r Goでディレクトリ\u0026ファイル名を指定してビルド - Qiita\n gccのエラーが発生する exec: \"gcc\": executable file not found in %PATH% のエラーが発生する CGO_ENABLED=0 で実行する。\n GO1.11.9のコンテナでgo testしようとするとexec: “gcc”: executable file not found in $PATH と怒られる - Qiita\n ",
   "wordCount" : "400",
   "inLanguage": "en",
   "datePublished": "2019-12-10T19:25:33+09:00",
@@ -255,7 +255,7 @@ $ GOOS=darwin GOARCH=amd64 go build -o ./test_exe_for_mac
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

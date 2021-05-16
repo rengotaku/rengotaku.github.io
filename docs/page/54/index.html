@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/" />
-<meta property="og:updated_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vegetable Programing"/>
 <meta name="twitter:description" content=""/>
@@ -138,141 +138,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      ギットのdiffモード時の操作
+      phpで8系に接続する際に注意すること
     </h2>
   </header>
   <section class="entry-content">
-    <p>次のライン: エンター 次のページ: スペース 前のページ: w git - How do I navigate in the results of Diff - Stack Overflow...</p>
+    <p>経緯 5.6系を使う予定が、brewで最新の8系をインストールしていて、謎のエラー[2054] The server requested authentication method unknown to the clientで苦しんだ。 対応 パス...</p>
   </section>
-  <footer class="entry-footer">June 4, 2018
+  <footer class="entry-footer">July 20, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to ギットのdiffモード時の操作" href="https://rengotaku.github.io/posts/36dd53c3-fc57-47fd-b83a-18ee08f441cd/"></a>
+  <a class="entry-link" aria-label="post link to phpで8系に接続する際に注意すること" href="https://rengotaku.github.io/posts/f0e97e2b-18eb-4b62-882e-73769a380af4/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      socketの接続先を確認
+      curlでステータスコードのみ取得
     </h2>
   </header>
   <section class="entry-content">
-    <p>コマンド # haproxyの状態確認 $ echo &#34;show info&#34; | sudo socat stdio /var/lib/haproxy/stats # haproxyの状態確認 $ echo &#34;show stat&#34; | sudo socat stdio /var/lib/haproxy/stats # セッション情報の確認 $ echo &#34;show sess&#34; | sudo socat stdio /var/lib/haproxy/stats # サ...</p>
+    <p>$ curl -LI mazgi.com -o /dev/null -w &#39;%{http_code}\n&#39; -s cURLでHTTPステータスコードだけを取得する...</p>
   </section>
-  <footer class="entry-footer">May 29, 2018
+  <footer class="entry-footer">July 19, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to socketの接続先を確認" href="https://rengotaku.github.io/posts/0a52cd33-2cd9-42a4-88e1-73e169654ee4/"></a>
+  <a class="entry-link" aria-label="post link to curlでステータスコードのみ取得" href="https://rengotaku.github.io/posts/0d74e233-fa48-4e16-952f-55a59ef972fb/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      テーブルへデータの追加、検索
+      ALBのアクセスログを日別に集計
     </h2>
   </header>
   <section class="entry-content">
-    <p>table: users column: username, password, is_active, const Op = Sequelize.Op; const User = sequelize.define(&#39;user&#39;, { id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true }, username: { type: Sequelize.STRING, allowNull: false, }, password: { type: Sequelize.STRING, allowNull: false, }, isActive: { field: &#39;is_active&#39;, type: Sequelize.BOOLEAN, allowNull: false, defaultValue: true, }, },{ timestamps: true, underscored: true, }); console.log(&#39;It worked&#39;); var user = User.create({ username: &#34;test&#34;, password: &#34;test&#34;, isActive: true, }).then(() =&gt; {...</p>
+    <p>SELECT COUNT(*), date_parse(time, &#39;%Y-%m-%dT%H:%i:%sZ&#39;) as date FROM alb_logs WHERE time &gt; &#39;2018-07-12&#39; AND request_url like &#39;%path%&#39; GROUP BY date_parse(time, &#39;%Y-%m-%dT%H:%i:%sZ&#39;) ORDER BY count(*) desc timeは2017-01-07T00:07:23.752260Zが入る AWS Developer Forums: date_parse() nor parse_datetime() seem … 6.10. Date and...</p>
   </section>
-  <footer class="entry-footer">May 28, 2018
+  <footer class="entry-footer">July 17, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to テーブルへデータの追加、検索" href="https://rengotaku.github.io/posts/fe507f9e-e22c-4457-9cd0-50edc4353eee/"></a>
+  <a class="entry-link" aria-label="post link to ALBのアクセスログを日別に集計" href="https://rengotaku.github.io/posts/15ba3a95-b5cd-45e1-b80f-a72f4ac275d2/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      商品が品切れの時は、404エラーかnoindexか？
+      elasticsearchをcentos7にインストール
     </h2>
   </header>
   <section class="entry-content">
-    <p>TL;DR 以上を元に、404ページであってもnoindexをつける必要はなさそうと判断してよいと思います。 調査内容 404エラーについて誤解されている...</p>
+    <p>インストール # rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch # vi /etc/yum.repos.d/elasticsearch.repo ======= [elasticsearch-2.x] name=Elasticsearch repository for 2.x packages baseurl=http://packages.elastic.co/elasticsearch/2.x/centos gpgcheck=1 gpgkey=http://packages.elastic.co/GPG-KEY-elasticsearch enabled=1 # yum install elasticsearch ホストの設定 # vi /etc/elasticsearch/elasticsearch.yml ======= # network.host: 192.168.0.1 network.host: 192.168.33.10 プラグインをインストール kuromoji・・・日本語全...</p>
   </section>
-  <footer class="entry-footer">May 25, 2018
+  <footer class="entry-footer">July 11, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to 商品が品切れの時は、404エラーかnoindexか？" href="https://rengotaku.github.io/posts/692156f8-4b55-45f4-abdb-94d58d2f9c32/"></a>
+  <a class="entry-link" aria-label="post link to elasticsearchをcentos7にインストール" href="https://rengotaku.github.io/posts/77203dae-d90e-4652-a73e-dd9f9497e16f/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Circleciのbuild環境にSSH
+      ドッカーの不要なVolumeを削除する
     </h2>
   </header>
   <section class="entry-content">
-    <p>sshの接続情報を取得 情報取得のためにリビルドする build画面右上(プルダウン)からRebuild with SSHを選択する SSH情報を確認 画面上...</p>
+    <p>$ docker volume rm $(docker volume ls -qf dangling=true) DockerでVolumeの容量が増え続けていたときの対処 - より長続きするブログ...</p>
   </section>
-  <footer class="entry-footer">May 23, 2018
+  <footer class="entry-footer">July 11, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to Circleciのbuild環境にSSH" href="https://rengotaku.github.io/posts/e678385d-f039-4ce9-acad-567c4cd6c4ac/"></a>
+  <a class="entry-link" aria-label="post link to ドッカーの不要なVolumeを削除する" href="https://rengotaku.github.io/posts/eb3a988d-3320-422c-b03d-c4fd8b0c2cd8/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      LocalのDynamoに値が入っているか確認
+      brewでmysqlをインストールしたら、mysqlのgemがインストールできない＆mysqlで何も実行できない
     </h2>
   </header>
   <section class="entry-content">
-    <p>rails consoleを起動して。 接続設定 ddb = Aws::DynamoDB::Client.new( endpoint: &#39;http://localhost:8000&#39;, region: &#39;ap-northeast-1&#39; ) =&gt; #&lt;Aws::DynamoDB::Client&gt; テーブル名確認 result = ddb.list_tables result.table_names =&gt; [&#34;TestTables1&#34;, &#34;TestTables2&#34;] 値の確認 result = ddb.scan( table_name: &#39;table_name&#39; ) result.items.each do |item| puts &#34;-------------&#34; item.each do |key, value| puts &#34;#{key}: #{value}&#34; end end =&gt; [{&#34;key1&#34;=&gt;&#34;value1&#34;, &#34;key2&#34;=&gt;&#34;value2&#34;, &#34;key3&#34;=&gt;&#34;value3&#34;}]...</p>
+    <p>gemのインストール対応 バージョン0.4.10を使用する Failed to build gem native extension - unknown type name ‘my_bool’ · Issue #980 · brianmario/mysql2 mysqlの実行エラー対応 mysql&gt; SET GLOBAL innodb_fast_shutdown = 1; $ mysql_upgrade -u root -p Mysql Error:The...</p>
   </section>
-  <footer class="entry-footer">May 22, 2018
+  <footer class="entry-footer">July 10, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to LocalのDynamoに値が入っているか確認" href="https://rengotaku.github.io/posts/2423bb0a-e537-4c90-9a9e-417381e40c5f/"></a>
+  <a class="entry-link" aria-label="post link to brewでmysqlをインストールしたら、mysqlのgemがインストールできない＆mysqlで何も実行できない" href="https://rengotaku.github.io/posts/1e336aa2-3910-47a2-890b-1ce379db42bc/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      APIのステータスコード
+      githubで障害が発生していないか確認
     </h2>
   </header>
   <section class="entry-content">
-    <p>1xx Informational Status Code Status Message Symbol 100 Continue :continue 101 Switching Protocols :switching_protocols 102 Processing :processing 2xx Success Status Code Status Message Symbol 200 OK :ok 201 Created :created 202 Accepted :accepted 203 Non-Authoritative Information :non_authoritative_information 204 No Content :no_content 205 Reset Content :reset_content 206 Partial Content :partial_content 207 Multi-Status :multi_status 226 IM Used :im_used 3xx Redirection Status Code Status Message Symbol 300 Multiple Choices :multiple_choices 301 Moved Permanently...</p>
+    <p>GitHub Status...</p>
   </section>
-  <footer class="entry-footer">May 22, 2018
+  <footer class="entry-footer">July 10, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to APIのステータスコード" href="https://rengotaku.github.io/posts/fec80f0e-63ab-4672-ad46-74218498a94a/"></a>
+  <a class="entry-link" aria-label="post link to githubで障害が発生していないか確認" href="https://rengotaku.github.io/posts/5e6088b4-4629-4067-9496-03aee0f778cb/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      プロセスをウォッチ
+      rootでrbenvを操作する
     </h2>
   </header>
   <section class="entry-content">
-    <p>$ watch -n10 &#34;ps -eo pid,lstart,args | grep &#39;[p]rocessname&#39;&#34; =&gt; Every 10.0s: ps -eo pid,lstart,args | grep &#39;[p]rocessname&#39; 91511 Mon May 21 01:00:00 2018 XXX XXXXXXXXXXXXXXXXXX 91512 Mon May 21 01:00:00 2018 XXX XXXXXXXXXXXXXXXXXX...</p>
+    <p>RBENV_ROOTがミソ $ sudo RBENV_ROOT=/usr/local/rbenv /usr/local/rbenv/bin/rbenv install x.x.x $ sudo RBENV_ROOT=/usr/local/rbenv /usr/local/rbenv/bin/rbenv global x.x.x rbenvで入れたRubyを全ユーザが使えるようにする...</p>
   </section>
-  <footer class="entry-footer">May 21, 2018
+  <footer class="entry-footer">July 10, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to プロセスをウォッチ" href="https://rengotaku.github.io/posts/704917f5-4394-47be-ae97-b9c16ee72376/"></a>
+  <a class="entry-link" aria-label="post link to rootでrbenvを操作する" href="https://rengotaku.github.io/posts/5f34e336-31ab-4458-bfd1-6fdd01d1f2ee/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      pumaのプロセスキル
+      定数を変更してテスト
     </h2>
   </header>
   <section class="entry-content">
-    <p>kill -9 $(ps axu | grep &#39;[p]uma&#39; | awk &#39;{print $2}&#39;) ※grepの引数を’[p]uma&#39;にすることでgrepのプロセスを表示させない Find and kill a process in one line using bash and regex - Stack...</p>
+    <p>class TargetClass CONSTANT_VARIABLE = %w(1) end TargetClassTest @@origin = TargetClass::CONSTANT_VARIABLE setup do TargetClass.const_set(:CONSTANT_VARIABLE, @@origin) end describe :test do it :one do TargetClass.const_set(:CONSTANT_VARIABLE, w(1, 2, 3)) assert_equal TargetClass::CONSTANT_VARIABLE, %w(1 2 3) end end end 定数を変更すると、別ファイルのテストの際も変更されたままになるので、元に戻...</p>
   </section>
-  <footer class="entry-footer">May 21, 2018
+  <footer class="entry-footer">July 9, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to pumaのプロセスキル" href="https://rengotaku.github.io/posts/13695112-f753-4395-adbd-5bec2b1a7991/"></a>
+  <a class="entry-link" aria-label="post link to 定数を変更してテスト" href="https://rengotaku.github.io/posts/d719f508-6a6b-4b3a-9726-f3e50a37606d/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      ワンライナーコマンドが掲載されるサイト
+      dockerのfluentdをフラッシュさせる
     </h2>
   </header>
   <section class="entry-content">
-    <p>All commands...</p>
+    <p>docker kill -s USR1 [contailner_name] fluent/fluentd-docker-image: Docker image for Fluentd...</p>
   </section>
-  <footer class="entry-footer">May 16, 2018
+  <footer class="entry-footer">July 9, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to ワンライナーコマンドが掲載されるサイト" href="https://rengotaku.github.io/posts/435d6674-9f67-4a19-883e-842ffa9d6db0/"></a>
+  <a class="entry-link" aria-label="post link to dockerのfluentdをフラッシュさせる" href="https://rengotaku.github.io/posts/8e84f183-89fd-420d-ad2c-632eaf6f624f/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

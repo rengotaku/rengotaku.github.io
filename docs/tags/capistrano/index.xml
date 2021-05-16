@@ -7,10 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Fri, 17 Jan 2020 10:46:12 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/capistrano/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 18 Feb 2021 19:37:57 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/capistrano/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Capistranoのhookをスキップさせたい場合</title>
+      <link>https://rengotaku.github.io/posts/e851761c-6113-4a68-8a81-9b56170a4bc9/</link>
+      <pubDate>Thu, 18 Feb 2021 19:37:57 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/e851761c-6113-4a68-8a81-9b56170a4bc9/</guid>
+      <description>Dynamically skip Capistrano hooks - makandra dev より、 ３の場合は環境変数で行う必要がある(fetchは機能しない) before &amp;#39;deploy:updating&amp;#39;, &amp;#39;db:dump&amp;#39; unless ENV[&amp;#39;SKIP_DUMP&amp;#39;] ※Rails見たく、if文はない。</description>
+    </item>
     
     <item>
       <title>Docker上のcapistranoから別途立てたローカルサーバにアクセス</title>

@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/posts/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/posts/" />
-<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content=""/>
@@ -128,141 +128,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      エラー内容を全て表示
+      sql_modeを変更
     </h2>
   </header>
   <section class="entry-content">
-    <p>&lt;ul class=&#34;error_list&#34;&gt; &lt;?php foreach( $form-&gt;getGlobalErrors() as $name =&gt; $error ) : ?&gt; &lt;li&gt;&lt;?php echo $name ?&gt; : &lt;?php echo $error ?&gt;&lt;/li&gt; &lt;?php endforeach ?&gt; &lt;?php $errors = $form-&gt;getErrorSchema()-&gt;getErrors() ?&gt; &lt;?php if ( count($errors) &gt; 0 ) : ?&gt; &lt;?php foreach( $errors as $name =&gt; $error ) : ?&gt; &lt;li&gt;&lt;?php echo $name ?&gt; : &lt;?php echo $error ?&gt;&lt;/li&gt; &lt;?php endforeach ?&gt; &lt;?php endif ?&gt; &lt;/ul&gt; Symfony 1.4 get all form errors....</p>
+    <p>確認 mysql&gt; SHOW VARIABLES LIKE &#39;sql_mode&#39;; 更新 SQL mysql&gt; SET sql_mode = &#34;&#34;; conf [mysqld] sql_mode = ONLY_FULL_GROUP_BY,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION untitled: MySQLのSQL_MODEと日付型への値の挿入 その2 MySQLをバージョンアップした際にsql_...</p>
   </section>
-  <footer class="entry-footer">September 27, 2018
+  <footer class="entry-footer">October 16, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to エラー内容を全て表示" href="https://rengotaku.github.io/posts/f4fab60d-adeb-4218-98b3-472101f683a3/"></a>
+  <a class="entry-link" aria-label="post link to sql_modeを変更" href="https://rengotaku.github.io/posts/2c082e10-b6cc-4317-9fbf-02604f271053/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Garoonの今日のスケジュールをslackのremindに整形
+      変数の安全な初期化
     </h2>
   </header>
   <section class="entry-content">
-    <p>Consoleで流す&#34; data-lang=&#34;js:chromeの検証-Consoleで流す&#34;/* https://xxx/scripts/cbgrn/grn.exe/index? で実行 */ var PRE_MINUTES = 3; var rawDate = document.querySelector(&#39;#schedule_gw_1_date_title&#39;).textContent .match(/(\d{4}).(\d{2}).(\d{2})/); var date = [rawDate[2], rawDate[3], rawDate[1]].join(&#39;/&#39;); var today...</p>
+    <p>var controllers = controllers || {}; 初期化されていない場合は、初期化を行う。されている場合は、そのまま。 var controllers = controllers || {}; controllers.output = &#34;test&#34;; controllers.output =&gt; &#34;test&#34; var controllers = controllers || {}; controllers.output =&gt; &#34;test&#34;...</p>
   </section>
-  <footer class="entry-footer">September 27, 2018
+  <footer class="entry-footer">October 16, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to Garoonの今日のスケジュールをslackのremindに整形" href="https://rengotaku.github.io/posts/b276a2a4-e240-4e11-95b3-f0a49bed8cfe/"></a>
+  <a class="entry-link" aria-label="post link to 変数の安全な初期化" href="https://rengotaku.github.io/posts/16bfcbb3-7980-4f05-acbf-90ea14fa56be/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      scssからfontsを読み込みたい
+      環境変数を使用して設定したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>cssの修正 url(path/to/font) を url(font-path(&#39;path/to/font&#39;)) へ変換 正規表現で一括置換 検索対象を url\((.&#43;?)\)、置換を url(font-path(&#39;$1&#39;)) Railsの読み込み設定 Rails.application.config.assets.paths &lt;&lt; &#34;#{Rails}/assets/fonts&#34; Rails.application.config.assets.precompile &lt;&lt; /\.(?:svg|eot|woff|ttf|woff2)\z/ rails 4.2で fonts をve...</p>
+    <p>PORT=3000 version: &#39;2&#39; services: app: build: . env_file: .env ports: - $PORT:$PORT env_fileは宣言してもしなくてもよい？（自由な名前が設定できない） docker-compose.ymlの中で環...</p>
   </section>
-  <footer class="entry-footer">September 27, 2018
+  <footer class="entry-footer">October 15, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to scssからfontsを読み込みたい" href="https://rengotaku.github.io/posts/ce59cb28-0aaf-4eac-95ec-89662840ff9c/"></a>
+  <a class="entry-link" aria-label="post link to 環境変数を使用して設定したい" href="https://rengotaku.github.io/posts/0101a50c-faab-4f7d-bbba-8e328fc640c8/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      ajaxのエラー時のメッセージの取得方法
+      uuidを実装
     </h2>
   </header>
   <section class="entry-content">
-    <p>$.ajax({ error: function(xhr, textStatus, errorThrown) { var res = $.parseJSON(xhr.responseText); } 【jQuery】Ajaxのエラーレスポンスをパースする方法 | Code &amp; Business...</p>
+    <p>インストール $ npm install uuid --save 利用方法 const uuidv5 = require(&#39;uuid/v5&#39;); const MY_NAMESPACE = &#39;1b671a64-40d5-491e-99b0-da01ff1f3341&#39;; uuidv5(&#39;Hello, World!&#39;, MY_NAMESPACE); // ⇨ &#39;630eb68f-e0fa-5ecc-887a-7c7a62614681&#39; uuid - npm...</p>
   </section>
-  <footer class="entry-footer">September 26, 2018
+  <footer class="entry-footer">October 15, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to ajaxのエラー時のメッセージの取得方法" href="https://rengotaku.github.io/posts/b355c347-29ce-482d-9f1a-106e134d2c64/"></a>
+  <a class="entry-link" aria-label="post link to uuidを実装" href="https://rengotaku.github.io/posts/616ffa86-75ee-4374-bab2-be765b51113b/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      半角文字を全角へ
+      ユーザが存在していない場合に作成
     </h2>
   </header>
   <section class="entry-content">
-    <p># 半角文字を全角に変換する def convert_half_to_full(param) # 半角カナ param = NKF.nkf(&#39;-Xw&#39;, param) # 半角英数字 param = param.tr(&#39;0-9a-zA-Z&#39;, &#39;０-９ａ-ｚＡ-Ｚ&#39;) # 半角記号 param = param.gsub(/[!&#34;#$%&amp;&#39;()*&#43;,-.\/:;&lt;=&gt;?@\[\]^_`{|}~]&#43;/, &#39;!&#39; =&gt; &#39;！&amp;...</p>
+    <p>CREATE USER IF NOT EXISTS &#39;user&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; GRANT ALL ON `database`.* TO &#39;user&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; RDSとかでは下記が一般的？ GRANT ALL ON `database`.* TO &#39;user&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39;; mysql create user if not exists - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">September 26, 2018
+  <footer class="entry-footer">October 15, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to 半角文字を全角へ" href="https://rengotaku.github.io/posts/4afee80f-c733-497f-b0e3-6126c146983e/"></a>
+  <a class="entry-link" aria-label="post link to ユーザが存在していない場合に作成" href="https://rengotaku.github.io/posts/50e31ea3-e95a-44e5-82a6-2c17243d21b5/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      JS、CSSの更新を即時反映したい
+      DBが存在していない場合に作成
     </h2>
   </header>
   <section class="entry-content">
-    <p>&lt;script src=&#34;./jquery.js?v=&lt;?php echo(microtime()); ?&gt;&#34;&gt;&lt;/script&gt; キャッシュバスティング(Cache Busting) 【ASP】キャッシュを有効にしつつ、cssやjsファイルの変更を確実に反映させる(Cache Busting)...</p>
+    <p>$ mysql -uroot -e &#34;create database if not exists database_name;&#34;; データベースの作成(CREATE DATABASE文) - データベースの作成 - MySQLの使い方...</p>
   </section>
-  <footer class="entry-footer">September 26, 2018
+  <footer class="entry-footer">October 15, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to JS、CSSの更新を即時反映したい" href="https://rengotaku.github.io/posts/14a7b0d8-e80e-4333-a6b6-464dd3e0b8b1/"></a>
+  <a class="entry-link" aria-label="post link to DBが存在していない場合に作成" href="https://rengotaku.github.io/posts/ad7d911e-989f-4510-b842-397585bb85c7/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      ActiveModelのi18nの設定方法
+      404エラーを自前でレスポンスしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>ja: activemodel: models: inquiry_form: &#34;お問い合わせフォーム&#34; tasks/search: &#34;検索フォーム&#34; attributes: inquiry_form: company_id: 企業ID tasks/search: created_at_from: 開始日 created_at_to: 終了日 フォームは以下のような感じ...</p>
+    <p>res.status(404) // HTTP status 404: NotFound .send(&#39;Not found&#39;); javascript - How to programmatically send a 404 response with Express/Node? - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">September 25, 2018
+  <footer class="entry-footer">October 15, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to ActiveModelのi18nの設定方法" href="https://rengotaku.github.io/posts/e1a43521-07f7-443d-858f-8cdcac4a6162/"></a>
+  <a class="entry-link" aria-label="post link to 404エラーを自前でレスポンスしたい" href="https://rengotaku.github.io/posts/0e600201-1586-4eda-a51c-17d84288c9a7/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      RailsでApiのバリデーションのプラクティス
+      dynamodbをdockerで起動
     </h2>
   </header>
   <section class="entry-content">
-    <p>参考の構成 Ruby on Rails で Web API のパラメータをバリデーションする | MMMブログ Validating REST queries with Rails (Example) 変数への代入を簡素化 def self.attr_accessor(*vars) @@attributes ||= [] @@attributes.concat vars super end def attributes @@attributes end Rubyのクラ...</p>
+    <p>docker: - image: amazon/dynamodb-local:1.11.119 name: dynamodb-local 参考の通りだと、endpointは、dynamodb-local となる...</p>
   </section>
-  <footer class="entry-footer">September 25, 2018
+  <footer class="entry-footer">October 12, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to RailsでApiのバリデーションのプラクティス" href="https://rengotaku.github.io/posts/cee0a19e-b296-4bd7-9f9c-7d8eeef88138/"></a>
+  <a class="entry-link" aria-label="post link to dynamodbをdockerで起動" href="https://rengotaku.github.io/posts/c24f9540-20dd-40fd-aa3b-3a9f6e7a976e/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      関連付け (アソシエーション)メモ
+      ファイル名のみ表示
     </h2>
   </header>
   <section class="entry-content">
-    <p>Want # 1件取得 inquiry = Inquiry.find 1 rel = inquiry.object.id # 2件以上取得 object = Object.find 1 rel = object.inquiries.map{|rel| rel.id} How to 前提 物件(buken)に対して、お問い合わせ(inquiry)をする場合のリレー...</p>
+    <p>$ git log --name-only git diff でファイル名のみ表示する...</p>
   </section>
-  <footer class="entry-footer">September 14, 2018
+  <footer class="entry-footer">October 11, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to 関連付け (アソシエーション)メモ" href="https://rengotaku.github.io/posts/95707919-3da6-484a-ac90-c63fcfb94afa/"></a>
+  <a class="entry-link" aria-label="post link to ファイル名のみ表示" href="https://rengotaku.github.io/posts/fd523f94-60ca-46e3-b969-0309793f7426/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      全角数値を半角数値に変換
+      文字化けする文字
     </h2>
   </header>
   <section class="entry-content">
-    <p>NKF.nkf(&#39;-w -Z4&#39;, zen_suuji) # ０００ -&gt; 000 [Ruby] 全角カタカナを半角カタカナに変換する...</p>
+    <p> UTF-8(16進) が 08 。 Githubのコメントで入力すると文字化けします。...</p>
   </section>
-  <footer class="entry-footer">September 13, 2018
+  <footer class="entry-footer">October 11, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to 全角数値を半角数値に変換" href="https://rengotaku.github.io/posts/0f295ca2-bf16-4fca-8ff2-411c8f49c4a6/"></a>
+  <a class="entry-link" aria-label="post link to 文字化けする文字" href="https://rengotaku.github.io/posts/f84a6f40-73e1-422e-b386-a2d067246084/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
@@ -287,7 +287,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

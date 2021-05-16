@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/" />
-<meta property="og:updated_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vegetable Programing"/>
 <meta name="twitter:description" content=""/>
@@ -149,141 +149,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      Activejobでリトライされた場合でも初回時と変わらない値知りたい
+      Docker don&#39;t work in CentOS
     </h2>
   </header>
   <section class="entry-content">
-    <p>job_idはretry_onで再実行されても変わらない。 (ex. aaa4e656-9afa-4fc9-88c9-909ea8bea17e) provider_job_idは実行毎に変わる。 (ex. e341c2316979e27e757a4712) 参考 ActiveJob::Core...</p>
+    <p>Resolution iptables failed - No chain/target/match by that name · Issue #16816 · moby/moby $ iptables -t filter -N DOCKER $ systemctl restart docker Motivation $ docker-compose up Creating network &#34;xxxxx_default&#34; with the default driver ERROR: Failed to Setup IP tables: Unable to enable SKIP DNAT rule: (iptables failed: iptables --wait -t nat -I DOCKER -i br-c85d8bcdd123 -j RETURN: iptables: No chain/target/match by that name. (exit status 1))...</p>
   </section>
-  <footer class="entry-footer">November 24, 2020
+  <footer class="entry-footer">May 15, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to Activejobでリトライされた場合でも初回時と変わらない値知りたい" href="https://rengotaku.github.io/posts/ecd8a0fe-8f12-4479-9ffa-407c78519b2c/"></a>
+  <a class="entry-link" aria-label="post link to Docker don&#39;t work in CentOS" href="https://rengotaku.github.io/posts/b755aae1-712a-4656-b084-c4ab4fab16fd/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      mysqlの結果をtsvファイルとして保存する
+      Nothing downtime with migrating MySQL
     </h2>
   </header>
   <section class="entry-content">
-    <p>$ mysql -h hostname -u username -p dbname &lt; /tmp/select_records.sql &gt; /tmp/selected_records.tsv 権限問題に当たらなければ、 How to output MySQL query results in CSV format? - Stack Overflow のように指定するが良いかも。...</p>
+    <p>Resolution Intended in Avoiding MySQL ALTER table downtime. In my case of runnning 5.6, I can use ..., ALGORITHM=INPLACE, LOCK=NONE. In details MySQL :: MySQL 5.6 Reference Manual :: 14.13.1 Online DDL Operations. But according to MySQL create index with LOCK=NONE still locks a table - Database Administrators Stack Exchange, you can’t this way....</p>
   </section>
-  <footer class="entry-footer">November 10, 2020
+  <footer class="entry-footer">May 14, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to mysqlの結果をtsvファイルとして保存する" href="https://rengotaku.github.io/posts/65de0d11-cc3a-4c0a-97bf-990851adafad/"></a>
+  <a class="entry-link" aria-label="post link to Nothing downtime with migrating MySQL" href="https://rengotaku.github.io/posts/7edcfc48-b596-4357-9e8c-791b07cc595f/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      cherry-pickをマージコミット、各々のコミットでどのような差分が出るか？
+      Using scope as specifying API version in path
     </h2>
   </header>
   <section class="entry-content">
-    <p>概要 既にマージ済みのはずなのに差分として表示された。 推測によると、マージコミットをチェリーピックしているので発生するらしい。 多分、差分は見え...</p>
+    <p>Resolution Rails 5 Routes: Scope vs Namespace - Devblast namespace :service do scope :v1 do resource :product do get &#34;/&#34;, to: &#34;v1/product#hoge&#34; Motivation If don’t expect not to change some APIs behavior even its version increase, you should use scoep instead of namespace. namespace :service do namespace :v1 do resource :product do get &#34;/&#34;, to: &#34;product#hoge&#34; Generated path is service_v1_product GET /service/v1/product(.:format) service/v1/product#hoge....</p>
   </section>
-  <footer class="entry-footer">November 9, 2020
+  <footer class="entry-footer">May 6, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to cherry-pickをマージコミット、各々のコミットでどのような差分が出るか？" href="https://rengotaku.github.io/posts/258130eb-99da-4bcb-ab9f-e50e0813c6cb/"></a>
+  <a class="entry-link" aria-label="post link to Using scope as specifying API version in path" href="https://rengotaku.github.io/posts/8d02a24b-4045-411c-8816-1c07f72f3e4d/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Serverlessでdeployをする際に必要な権限
+      ActiveRecord dosen&#39;t support to nested transaction by default settings
     </h2>
   </header>
   <section class="entry-content">
-    <p>{ &#34;Version&#34;: &#34;2012-10-17&#34;, &#34;Statement&#34;: [ { &#34;Effect&#34;: &#34;Allow&#34;, &#34;Action&#34;: [ &#34;cloudformation:DescribeChangeSet&#34;, &#34;cloudformation:DescribeStackResources&#34;, &#34;cloudformation:DescribeStacks&#34;, &#34;cloudformation:GetTemplate&#34;, &#34;cloudformation:ListStackResources&#34;, &#34;cloudwatch:*&#34;, &#34;cognito-identity:ListIdentityPools&#34;, &#34;cognito-sync:GetCognitoEvents&#34;, &#34;cognito-sync:SetCognitoEvents&#34;, &#34;dynamodb:*&#34;, &#34;ec2:DescribeSecurityGroups&#34;, &#34;ec2:DescribeSubnets&#34;, &#34;ec2:DescribeVpcs&#34;, &#34;events:*&#34;, &#34;iam:GetPolicy&#34;, &#34;iam:GetPolicyVersion&#34;, &#34;iam:GetRole&#34;, &#34;iam:GetRolePolicy&#34;, &#34;iam:ListAttachedRolePolicies&#34;, &#34;iam:ListRolePolicies&#34;, &#34;iam:ListRoles&#34;, &#34;iam:PassRole&#34;, &#34;iot:AttachPrincipalPolicy&#34;, &#34;iot:AttachThingPrincipal&#34;, &#34;iot:CreateKeysAndCertificate&#34;, &#34;iot:CreatePolicy&#34;, &#34;iot:CreateThing&#34;, &#34;iot:CreateTopicRule&#34;, &#34;iot:DescribeEndpoint&#34;, &#34;iot:GetTopicRule&#34;, &#34;iot:ListPolicies&#34;, &#34;iot:ListThings&#34;, &#34;iot:ListTopicRules&#34;, &#34;iot:ReplaceTopicRule&#34;, &#34;kinesis:DescribeStream&#34;, &#34;kinesis:ListStreams&#34;, &#34;kinesis:PutRecord&#34;, &#34;kms:ListAliases&#34;, &#34;lambda:*&#34;, &#34;logs:*&#34;, &#34;s3:*&#34;, &#34;sns:ListSubscriptions&#34;, &#34;sns:ListSubscriptionsByTopic&#34;, &#34;sns:ListTopics&#34;, &#34;sns:Publish&#34;, &#34;sns:Subscribe&#34;, &#34;sns:Unsubscribe&#34;, &#34;sqs:ListQueues&#34;, &#34;sqs:SendMessage&#34;, &#34;tag:GetResources&#34;, &#34;xray:PutTelemetryRecords&#34;, &#34;xray:PutTraceSegments&#34; ], &#34;Resource&#34;: &#34;*&#34; } ] } { &#34;Version&#34;:...</p>
+    <p>Resolution Nested ActiveRecord transaction pitfalls - makandra dev Recoomend to use below: ActiveRecord::Base.transaction(joinable: false, requires_new: true) joinable: false means transactions nested within this transaction will not be discarded (and therefore not be joined to the custom transaction). A real nested transaction will be used, or, if the DBMS does not support nested transaction, this behaviour will be simulated with Savepoints (this is done for MySQL and Postgres). If a custom...</p>
   </section>
-  <footer class="entry-footer">October 29, 2020
+  <footer class="entry-footer">April 27, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to Serverlessでdeployをする際に必要な権限" href="https://rengotaku.github.io/posts/c8968a24-0b87-4521-b6f8-da267356ae85/"></a>
+  <a class="entry-link" aria-label="post link to ActiveRecord dosen&#39;t support to nested transaction by default settings" href="https://rengotaku.github.io/posts/2a1819fd-d848-47ff-b944-2d14a720489a/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      railsの環境変数を変えたい
+      How to get raw SQL from ActiveRecord in without development
     </h2>
   </header>
   <section class="entry-content">
-    <p>Rails.env.define_singleton_method(:trial?, -&gt; { true }) rspecを使用の際は、Rails.env.stub(:development? =&gt; true) で良い rspec2 - mock Rails.env.development? using rspec - Stack Overflow...</p>
+    <p>Resolution The answer is in activerecord - How to show SQL queries run in the Rails console? - Stack Overflow. ActiveRecord::Base.logger = Logger.new(STDOUT)...</p>
   </section>
-  <footer class="entry-footer">October 27, 2020
+  <footer class="entry-footer">April 23, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to railsの環境変数を変えたい" href="https://rengotaku.github.io/posts/4482a32b-fc91-4243-ab80-fb6f36e3770f/"></a>
+  <a class="entry-link" aria-label="post link to How to get raw SQL from ActiveRecord in without development" href="https://rengotaku.github.io/posts/323d9f65-18b0-4373-8a28-62423e4a0074/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      gatlingでfeedを無限に生成したい
+      S3のObject数をカウントしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>ソース class HogeSimulation extends Simulation { val r = scala.util.Random val feeder = Iterator.continually { var id = r.nextInt(9999) &#43; 1 Map( &#34;uid&#34; -&gt; id, &#34;screen_name&#34; -&gt; (&#34;stress_&#34; &#43; id.toString), ) } val scn = scenario(&#34;Login Users&#34;) .feed(feeder) .exec(...) setUp( scn.inject(constantUsersPerSec(Configuration.users) during (Configuration.duration seconds) ) ).protocols(Configuration.httpProtocol) } 参考 Gatling Open-Source Load Testing Documentation – For DevOps and CI/CD メモ Custom feeder with random data for Gatling...</p>
+    <p>解決 file - How can I tell how many objects I’ve stored in an S3 bucket? - Stack Overflow より、下記を実行する $ aws s3 ls s3://mybucket/ --recursive | wc -l...</p>
   </section>
-  <footer class="entry-footer">October 20, 2020
+  <footer class="entry-footer">April 19, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to gatlingでfeedを無限に生成したい" href="https://rengotaku.github.io/posts/401b2dea-e0ba-4a5e-a016-e9f04e3ea54b/"></a>
+  <a class="entry-link" aria-label="post link to S3のObject数をカウントしたい" href="https://rengotaku.github.io/posts/42b91e94-28d3-4074-84af-5b7f11b40415/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      ローカルで開発でコントローラーなどの修正が反映されない
+      bundle config設定時に--localを使用する際の注意点
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 config/environments/development.rb の下記をコメントアウトしてサーバを再起動する。 config.file_watcher = ActiveSupport::EventedFileUpdateChecker 根本的な対応策は分かっておらず。 参考 Controllers and models don’t reload in dev with Puma Workers enabled · Issue #24990 · rails/rails...</p>
+    <p>解決 bundle config set without &#39;development test&#39; --local BUNDLE_WITHOUT: &#34;development:test&#34; 事象 bundle config set without &#39;development test&#39; --localだと.bundle/configに下記のように記されてしまう。 BUNDLE_SET: &#34;without development test&#34;...</p>
   </section>
-  <footer class="entry-footer">October 7, 2020
+  <footer class="entry-footer">April 14, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to ローカルで開発でコントローラーなどの修正が反映されない" href="https://rengotaku.github.io/posts/bda229f2-f7c4-4ba2-9881-b3eabe75b0b3/"></a>
+  <a class="entry-link" aria-label="post link to bundle config設定時に--localを使用する際の注意点" href="https://rengotaku.github.io/posts/1a278cf4-2da6-4dc9-ad95-e4ef511a272e/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      更新を行う前に特定の属性に変更があった場合にチェックを行うスマートな方法
+      HASHのDIFFを取る
     </h2>
   </header>
   <section class="entry-content">
-    <p>ソース class Code &lt; ApplicationRecord validate :already_used_code, if: -&gt; { will_save_change_to_code_name? } private def already_used_code # validate somethings end end 行っている事 更新前にcode_nameに変更があった場合に検証を行う 参考 ActiveRecord::AttributeMethods::Dirty...</p>
+    <p>解決 ruby - How do I compare two hashes? - Stack Overflow より下記 hash3.to_a - hash1.to_a # =&gt; [[&#34;c&#34;, 3]] if (hash3.size &gt; hash1.size) difference = hash3.to_a - hash1.to_a else difference = hash1.to_a - hash3.to_a end Hash[*difference.flatten] # =&gt; {&#34;c&#34;=&gt;3}...</p>
   </section>
-  <footer class="entry-footer">September 30, 2020
+  <footer class="entry-footer">April 13, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to 更新を行う前に特定の属性に変更があった場合にチェックを行うスマートな方法" href="https://rengotaku.github.io/posts/9c37bd49-cf66-4e7a-9098-ab6ebb71ec51/"></a>
+  <a class="entry-link" aria-label="post link to HASHのDIFFを取る" href="https://rengotaku.github.io/posts/7d29c061-fee9-4f20-8e13-1663c5e00e4d/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      ロックとトランザクションの検証
+      SidekiqのRecurring Jobsの画面に表示される項目を取得したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>検証結果 lockしたレコードはtransactionがcommitされるまでロックされ続ける。 実行結果 コンソール1 コンソール2 検索前: 03:01:03.185, 100 ↓...</p>
+    <p>解決 sidekiq-scheduler/job_presenter.rb at master · moove-it/sidekiq-scheduler · GitHub を参考 schedules = Sidekiq.schedule! service_schedules = schedules.select { |key, value| true if something compare } presented_jobs = SidekiqScheduler::JobPresenter.build_collection(service_schedules) presented_jobs[0].next_time presented_jobs[0].last_time presented_jobs[0].enabled? presented_jobs[0].queue...</p>
   </section>
-  <footer class="entry-footer">September 30, 2020
+  <footer class="entry-footer">March 23, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to ロックとトランザクションの検証" href="https://rengotaku.github.io/posts/7a558e73-d48b-4304-b444-74afe9843a67/"></a>
+  <a class="entry-link" aria-label="post link to SidekiqのRecurring Jobsの画面に表示される項目を取得したい" href="https://rengotaku.github.io/posts/30c4cd33-6512-48f0-8091-0e9a123c46d7/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      可逆式で暗号化を実装してみた
+      サーバーを作成する際にセキュリティに参考になる
     </h2>
   </header>
   <section class="entry-content">
-    <p>ソース # frozen_string_literal: true # NOTE: 可逆式で暗号化して保存する # 対象をcodeとしたい場合 # * テーブルに encrypted_code を定義する # * テーブルに digested_code を定義する(indexに使用...</p>
+    <p>Guide to User Data Security - FusionAuth...</p>
   </section>
-  <footer class="entry-footer">September 28, 2020
+  <footer class="entry-footer">March 21, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to 可逆式で暗号化を実装してみた" href="https://rengotaku.github.io/posts/2012302b-4a4b-4a41-9a5f-28f76481b88e/"></a>
+  <a class="entry-link" aria-label="post link to サーバーを作成する際にセキュリティに参考になる" href="https://rengotaku.github.io/posts/ed91b779-20cb-41e4-8d2a-1c577784fe59/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

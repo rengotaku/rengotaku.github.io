@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/ruby/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/ruby/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/ruby/" />
-<meta property="og:updated_time" content="2020-11-20T21:57:49+09:00" />
+<meta property="og:updated_time" content="2021-05-06T18:12:31+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ruby"/>
 <meta name="twitter:description" content=""/>
@@ -128,6 +128,104 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
+      `Style/ClassVars` でクラス変数の誤りを指摘される
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 instance_variable_get メソッドを使用する。 class A @client = SomeClient.new def do_api client.do end def client self.class.instance_variable_get(:@client) end end ruby - How to correct Style/ClassVars in RuboCop? - Stack Overflow 事象 class A def do_api client.do end def client @@client ||= SomeClient.new end end のように、クライアントを一度きりし...</p>
+  </section>
+  <footer class="entry-footer">August 15, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to `Style/ClassVars` でクラス変数の誤りを指摘される" href="https://rengotaku.github.io/posts/c5b69aa1-f4ec-47ab-95c0-0ca1c5ab1188/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      verifyメソッドのテストが失敗する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 Mockクラスではなく、define_singleton_methodを使用してmethodを生やす。 ただし、assertメソッドなどが...</p>
+  </section>
+  <footer class="entry-footer">August 15, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to verifyメソッドのテストが失敗する" href="https://rengotaku.github.io/posts/ce4e5dde-88a5-468e-9e57-d8490989ff23/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ひらがな、カタカナを小文字から大文字に変換
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 【SSIS】日本語の小文字を大文字に変換する - Tumbling Dice の配列を利用する 下記はカタカナのみ対応 def kana_upercase(kana) [ %W(ァ ア), %W(ィ イ), %W(ゥ ウ),...</p>
+  </section>
+  <footer class="entry-footer">August 5, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to ひらがな、カタカナを小文字から大文字に変換" href="https://rengotaku.github.io/posts/770ce494-a1ec-496c-83d2-ec7ebaaa645f/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      濁点、半濁点の文字を取得
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 def find_dakuon_and_handakuon(kana) codepoints = kana.codepoints[0] moji = codepoints.chr(Encoding::UTF_8) dakuon = moji &#43; &#34;\u3099&#34; # 濁点 handakuon = moji &#43; &#34;\u309a&#34; # 半濁点 [ ActiveSupport::Multibyte::Unicode.normalize(dakuon, :c), ActiveSupport::Multibyte::Unicode.normalize(handakuon, :c) ] end 実行結果 find_dakuon_and_handakuon(&#39;ハ&#39;) # =&gt;...</p>
+  </section>
+  <footer class="entry-footer">July 30, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 濁点、半濁点の文字を取得" href="https://rengotaku.github.io/posts/5b8cab5d-c20a-477d-834b-6c2e2f53e670/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      クラス内でselfメソッドをクラス名を指定せず呼び出したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 self.class.method_name で呼び出す class Person def call(num) puts &#34;#{self.class.name(num)}だよ&#34; end def self.name(num) if num = 1 &#39;田中&#39; else &#39;名無し&#39; end end end...</p>
+  </section>
+  <footer class="entry-footer">July 19, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to クラス内でselfメソッドをクラス名を指定せず呼び出したい" href="https://rengotaku.github.io/posts/0a337323-bd67-44b1-b3c9-c5c8ebc05336/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      日付計算
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>数日前 since を使用する [1] pry(main)&gt; 2.days.since =&gt; Sun, 21 Jul 2019 14:50:21 JST &#43;09:00 Rails の Time#since で混乱したのでまとめる - 雀巽の日記帳...</p>
+  </section>
+  <footer class="entry-footer">July 19, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 日付計算" href="https://rengotaku.github.io/posts/85d69365-98ff-48da-9447-89506aa00079/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      gretelのconfigの自動リロードをdevelopment以外の環境で有効にしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>問題 config/breadcrumbs.rb の編集が即時反映されない。 解決 Rails.application.configure do # config/breadcrumbs.rb を自動ロード Gretel.configure do |config| config.reload_environments &lt;&lt; &#34;my_development&#34; end 原因 ローカルで動作さている環境が development でないため。 普通はローカル開発時は、...</p>
+  </section>
+  <footer class="entry-footer">July 5, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to gretelのconfigの自動リロードをdevelopment以外の環境で有効にしたい" href="https://rengotaku.github.io/posts/14fcb8b8-6a2e-40e0-af08-3ef565032c12/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
       意味のない継承を構造体に置き換える
     </h2>
   </header>
@@ -165,104 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">June 26, 2019
 </footer>
   <a class="entry-link" aria-label="post link to ::ClassNameの意味" href="https://rengotaku.github.io/posts/f474b685-0a9a-42b8-9328-462d2fe49945/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      HTTPクライアントライブラリのFaradayを使う
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>conn = Faraday::Connection.new(url: &#34;https://example.com&#34;) do |builder| builder.use Faraday::Request::UrlEncoded builder.use Faraday::Adapter::NetHttp end res = conn.get &#39;/path/to/url&#39; # &lt;= https://example.com/path/to/url res.status # &lt;= 200 or 404 ... Ruby の HTTP クライアントライブラリ Faraday が便利そう...</p>
-  </section>
-  <footer class="entry-footer">June 10, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to HTTPクライアントライブラリのFaradayを使う" href="https://rengotaku.github.io/posts/d83470fc-978d-4962-99f8-c8dd538b0c35/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      dockerで動くrailsでデバックを行いたい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>設定 docker-compose.yml services: rails: &amp;app_base tty: true stdin_open: true 操作 アタッチ docker attach [container_name] $ docker-compose run --rm --service-ports [service name] でいけるかと思ったが、再度コンテナを立ち上げる挙動になり期待しない動きをする 便利コマンド...</p>
-  </section>
-  <footer class="entry-footer">May 30, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to dockerで動くrailsでデバックを行いたい" href="https://rengotaku.github.io/posts/b6b89728-605f-40b8-9d57-2bb1cc14b932/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      日時をよくあるフォーマットの文字列で取得したい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Time.now.strftime(&#39;%Y-%m-%d %H:%M:%S&#39;) strftime - リファレンス - - Railsドキュメント...</p>
-  </section>
-  <footer class="entry-footer">May 27, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to 日時をよくあるフォーマットの文字列で取得したい" href="https://rengotaku.github.io/posts/829f1f8c-5a83-4c37-b05d-204b2b2d70d4/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      raiseを検証したい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>assert_raises RuntimeError do # something to do raise error end module MiniTest::Assertions - Documentation for Ruby 2.1.0 https://docs.ruby-lang.org/en/2.1.0/MiniTest/Assertions.html...</p>
-  </section>
-  <footer class="entry-footer">May 17, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to raiseを検証したい" href="https://rengotaku.github.io/posts/935cf5a3-4605-4c50-96a3-c9f4064f624a/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      csvの一行目にcrlfが含まれている為エラーになる
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>事象 # ファイルから一行ずつ読み込む i_csv = CSV.open(filepath, &#34;rb&#34;, skip_blanks: true, force_quotes: true) processed_position = 0 begin i_csv.each do |row| processed_position = i_csv.pos end rescue CSV::MalformedCSVError =&gt; ex aborted_position = i_csv.pos io = i_csv.to_io io.seek(processed_position) puts &#34;error message: #{ex.message}, stacktrace: #{ex.backtrace.join(&#34;,&#34;)}&#34; puts io.read(aborted_position - processed_position) end エラー error message: Missing or stray quote in line 1,...</p>
-  </section>
-  <footer class="entry-footer">May 16, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to csvの一行目にcrlfが含まれている為エラーになる" href="https://rengotaku.github.io/posts/4db39f95-be1b-4fb1-8503-0560ae376ca6/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      minitestでmockの引数を厳密にチェックしたくない
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>@mock.expect(:do_something_else, true) do |a1, a2| # nothings end minitest/mock.rb at master · seattlerb/minitest...</p>
-  </section>
-  <footer class="entry-footer">May 14, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to minitestでmockの引数を厳密にチェックしたくない" href="https://rengotaku.github.io/posts/ccbc4a39-2105-4cfa-860a-f6a4c608cbf2/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      特定のgemの更新をGemfile.lockに反映させる
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>$ bundle update --source therubyracer bundle updateで特定のgemのみ更新する - Qiita...</p>
-  </section>
-  <footer class="entry-footer">April 26, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to 特定のgemの更新をGemfile.lockに反映させる" href="https://rengotaku.github.io/posts/78936827-219a-4307-b689-b15ea2b2c91d/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Thu, 06 Feb 2020 19:30:31 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/yum/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 06 Feb 2020 19:30:31 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/yum/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>yumのインストール可能なバージョンを取得</title>
       <link>https://rengotaku.github.io/posts/ffbbc114-2c95-4ad9-bdcc-a64b0fdbf8ca/</link>

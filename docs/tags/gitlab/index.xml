@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Wed, 20 May 2020 10:39:48 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 20 May 2020 10:39:48 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GitlabのMRをマージするとissueがクローズされる</title>
       <link>https://rengotaku.github.io/posts/1116de92-d95f-4ca4-a021-d4968741213c/</link>

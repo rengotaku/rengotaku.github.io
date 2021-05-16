@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/rails/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/rails/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/rails/" />
-<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta property="og:updated_time" content="2021-05-14T10:59:10+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="rails"/>
 <meta name="twitter:description" content=""/>
@@ -128,6 +128,104 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
+      yamlファイルに記載した設定をconfigとしてロード
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>ロード処理 def load_config(key, filepath) yml = YAML.safe_load(ERB.new(File.read(filepath)).result, [], [], true).symbolize_keys raise &#34;No such file #{filepath}&#34; if yml.blank? config = yml[Rails.env.to_sym] raise &#34;No such environment #{Rails.env}on #{filepath}&#34; if config.blank? Rails.application.config.send(&#34;#{key}=&#34;, ActiveSupport::InheritableOptions.new(config.deep_symbolize_keys)) end load_config(:site_info, Rails.root.join(&#39;config&#39;, &#39;site_info.yml&#39;)) yamlファイルに記載されたrubyの式を展開してロードするよう...</p>
+  </section>
+  <footer class="entry-footer">December 17, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to yamlファイルに記載した設定をconfigとしてロード" href="https://rengotaku.github.io/posts/4a69b6bb-0474-4600-8f72-2ec0ee7efd4b/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      after_findの実行タイミング
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>結論 after_find のfunction内で他モデルをロードするような処理は（N&#43;1問題に繋がるため）入れてはいけない。 モデル class Post &lt; ApplicationRecord has_many :tag_relationships has_many :tags, through: :tag_relationships after_find :find_relate_tags # タグ...</p>
+  </section>
+  <footer class="entry-footer">December 14, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to after_findの実行タイミング" href="https://rengotaku.github.io/posts/18a1b201-414e-4a47-bf02-72e995f22fbc/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      hamlで参考になるサイト
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>決定版!!Haml小技まとめ！！ - Qiita...</p>
+  </section>
+  <footer class="entry-footer">December 13, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to hamlで参考になるサイト" href="https://rengotaku.github.io/posts/a28a6a4a-7af3-4d7b-9363-f267d6465f8f/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      apiのテストケースのサンプル
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>require &#39;test_helper&#39; module Api class SampleControllerTest &lt; ActionDispatch::IntegrationTest describe &#34;something function test.&#34; do describe &#34;OK case&#34; do test &#34;exist&#34; do get &#39;/api/v1/sample_contract_mails/1/example&#39;, params: { page: 2 } assert_response :success body = JSON.parse(response.body) assert { body.size == 1 } end end describe &#34;NG case&#34; do test &#34;dont exist&#34; do get &#39;/api/v1/sample_contract_mails/2/example&#39; assert_response :missing end end end end end...</p>
+  </section>
+  <footer class="entry-footer">December 12, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to apiのテストケースのサンプル" href="https://rengotaku.github.io/posts/7a573d40-4330-42cd-a58d-bf96947f7bc5/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      モデルのテストケースのサンプル
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>require &#39;test_helper&#39; class SampleModelTest &lt; ActiveSupport::TestCase describe &#39;something function test.&#39; do test &#39;get something.&#39; do assert { SampleModel.find(1).present? } end test &#39;dont get something.&#39; do assert { SampleModel.find(2).blank? } end end describe &#39;something2 function test.&#39; do before do puts &#34;be executed in something2 only.&#34; end after do puts &#34;be executed in something2 only.&#34; end test &#39;get something.&#39; do assert { SampleModel.find(1).present? } end end end minitest-power_assert のgem...</p>
+  </section>
+  <footer class="entry-footer">December 12, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to モデルのテストケースのサンプル" href="https://rengotaku.github.io/posts/72789551-4a7b-4a54-a6f3-49e1965faf28/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      指定フォルダ配下の1日前のファイルを削除し、空のフォルダを削除したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p># 1日前のファイルを削除 Dir.glob(&#39;path/to/dir/**/*.*&#39;). select{ |f| File.mtime(f) &lt; Time.now - 1.day }. each{ |f| FileUtils.rm(f) } # 空のフォルダを削除 Dir.glob(&#34;path/to/dir/**&#34;).each do |fo| next unless FileTest.directory?(fo) next unless Dir.entries(fo).length == 2 puts &#34;#{fo}empty&#34; Dir.rmdir fo end [Ruby] 空のフォルダだけ削除、Dir::en...</p>
+  </section>
+  <footer class="entry-footer">December 12, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to 指定フォルダ配下の1日前のファイルを削除し、空のフォルダを削除したい" href="https://rengotaku.github.io/posts/50477c7a-7a7e-4625-a0f1-5935097b8627/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      fixtureでメールのsourceをDBに登録したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>概要 メールをファイルとして設置し、fixtureに使用するyaml内にRubyの処理を埋め込み、yamlに書き出す。 必要ファイル yaml &lt;% def mail(file_name) File.open(file_name){ |f|...</p>
+  </section>
+  <footer class="entry-footer">December 12, 2018
+</footer>
+  <a class="entry-link" aria-label="post link to fixtureでメールのsourceをDBに登録したい" href="https://rengotaku.github.io/posts/02db3f8e-903e-4814-a7ac-35e0bb0929b2/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
       precompileしたらシンタックスエラーで失敗する
     </h2>
   </header>
@@ -165,104 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">November 28, 2018
 </footer>
   <a class="entry-link" aria-label="post link to ActiveModel::Type::UnsignedIntegerが発生した場合" href="https://rengotaku.github.io/posts/e310a2f1-1018-432b-8e36-cfa0489a68e9/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      Validatorをテスト
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>require &#39;test_helper&#39; class TelephoneValidatable include ActiveModel::Model attr_accessor :telephone validates :telephone, telephone: true end class TelephoneValidatorTest &lt; ActiveSupport::TestCase def setup @validator = TelephoneValidatable end valid_telephone_addresses = [&#39;123456789&#39;] invalid_telephone_addresses = [&#39;A123456789Z&#39;] describe &#34;OK case&#34; do test &#39;normal telphone&#39; do validator = @validator.new valid_telephone_addresses.each do |telephone| validator.telephone = telephone assert { validator.valid? } end end end describe &#34;NG case&#34; do test &#39;unnormal telephone&#39; do validator = @validator.new invalid_telephone_addresses.each do |telephone| validator.telephone = telephone...</p>
-  </section>
-  <footer class="entry-footer">October 25, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to Validatorをテスト" href="https://rengotaku.github.io/posts/f7766124-b235-4796-a7af-02b44fb666ad/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      HTTPステータスコード
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>1xx Informational Status Code Status Message Symbol 100 Continue :continue 101 Switching Protocols :switching_protocols 102 Processing :processing 2xx Success Status Code Status Message Symbol 200 OK :ok 201 Created :created 202 Accepted :accepted 203 Non-Authoritative Information :non_authoritative_information 204 No Content :no_content 205 Reset Content :reset_content 206 Partial Content :partial_content 207 Multi-Status :multi_status 226 IM Used :im_used 3xx Redirection Status Code Status Message Symbol 300 Multiple Choices :multiple_choices 301 Moved Permanently...</p>
-  </section>
-  <footer class="entry-footer">October 4, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to HTTPステータスコード" href="https://rengotaku.github.io/posts/455e83ac-5a80-482e-9108-40f27404394b/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      pathが見つからない
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>対応 pathを付けるのを忘れてませんか？ building_path(building) building(building) 事象 rails routes でパスを確認して、viewなどで使用としたら、 NameError: undefined local variable or method &#39;path_name&#39; と怒られる...</p>
-  </section>
-  <footer class="entry-footer">October 4, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to pathが見つからない" href="https://rengotaku.github.io/posts/c26f2070-69ee-42b5-88d5-aaac75500d2f/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      関連付け (アソシエーション)のメモ
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>前提 お祝い金申請 を受けるためには、商品 を お問い合わせ しておくことが必要。 １問い合わせは１商品と紐づく。 １問い合わせすると、１お祝い金申請がで...</p>
-  </section>
-  <footer class="entry-footer">September 28, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to 関連付け (アソシエーション)のメモ" href="https://rengotaku.github.io/posts/e164dd09-2da6-416f-b7d0-f5fd9b2dbeaa/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      scssからfontsを読み込みたい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>cssの修正 url(path/to/font) を url(font-path(&#39;path/to/font&#39;)) へ変換 正規表現で一括置換 検索対象を url\((.&#43;?)\)、置換を url(font-path(&#39;$1&#39;)) Railsの読み込み設定 Rails.application.config.assets.paths &lt;&lt; &#34;#{Rails}/assets/fonts&#34; Rails.application.config.assets.precompile &lt;&lt; /\.(?:svg|eot|woff|ttf|woff2)\z/ rails 4.2で fonts をve...</p>
-  </section>
-  <footer class="entry-footer">September 27, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to scssからfontsを読み込みたい" href="https://rengotaku.github.io/posts/ce59cb28-0aaf-4eac-95ec-89662840ff9c/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      ActiveModelのi18nの設定方法
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>ja: activemodel: models: inquiry_form: &#34;お問い合わせフォーム&#34; tasks/search: &#34;検索フォーム&#34; attributes: inquiry_form: company_id: 企業ID tasks/search: created_at_from: 開始日 created_at_to: 終了日 フォームは以下のような感じ...</p>
-  </section>
-  <footer class="entry-footer">September 25, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to ActiveModelのi18nの設定方法" href="https://rengotaku.github.io/posts/e1a43521-07f7-443d-858f-8cdcac4a6162/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      RailsでApiのバリデーションのプラクティス
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>参考の構成 Ruby on Rails で Web API のパラメータをバリデーションする | MMMブログ Validating REST queries with Rails (Example) 変数への代入を簡素化 def self.attr_accessor(*vars) @@attributes ||= [] @@attributes.concat vars super end def attributes @@attributes end Rubyのクラ...</p>
-  </section>
-  <footer class="entry-footer">September 25, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to RailsでApiのバリデーションのプラクティス" href="https://rengotaku.github.io/posts/cee0a19e-b296-4bd7-9f9c-7d8eeef88138/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

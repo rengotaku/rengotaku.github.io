@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/aws/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/aws/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/aws/" />
-<meta property="og:updated_time" content="2020-09-02T09:19:54+09:00" />
+<meta property="og:updated_time" content="2021-04-19T17:24:49+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="aws"/>
 <meta name="twitter:description" content=""/>
@@ -124,6 +124,34 @@ if (!doNotTrack) {
 
 
 
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      codedeployで実際の処理はどこでやっているか確認
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 アプリケーションに配置してある appspec.yml の中身を参照。 下記のような記載があるはず。 version: 0.0 os: linux files: - source: / destination: /var/www/sample-app permissions: - object: /var/www/ pattern: &#34;**&#34; mode: 775 hooks: ApplicationStop: - location: scripts/stop_server.sh timeout: 300 runas: root BeforeInstall: - location: scripts/clean.sh...</p>
+  </section>
+  <footer class="entry-footer">September 27, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to codedeployで実際の処理はどこでやっているか確認" href="https://rengotaku.github.io/posts/f629646e-f58a-4e3d-927e-a9cacd39e5c0/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      EC2のインスタンスタイプの `m4` と `m5` の違い
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>インフラ担当者にご教示頂いたこと m4とm5の違い m4 と m5 の違いはスケールアップではなくバージョンの違いです。 m4 系は Xen ベース、 m5 系は KVM ベースの Nitro...</p>
+  </section>
+  <footer class="entry-footer">September 10, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to EC2のインスタンスタイプの `m4` と `m5` の違い" href="https://rengotaku.github.io/posts/ba137bd3-13cc-4b25-9f04-11f7b474a84e/"></a>
+</article>
 <article class="post-entry tag-entry"> 
 
   <header class="entry-header">
@@ -235,34 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">October 24, 2018
 </footer>
   <a class="entry-link" aria-label="post link to バージョン管理した際のarn(エンドポイント)の変化" href="https://rengotaku.github.io/posts/75004ce5-80af-4b74-905f-eaa9a2114572/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      プライベートホストゾーン
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Route53にはパブリックホストゾーンとプライベートホストゾーンが設定できる。 プライベートホストゾーンとは、VPC内でのみ有効な(C・A)...</p>
-  </section>
-  <footer class="entry-footer">August 20, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to プライベートホストゾーン" href="https://rengotaku.github.io/posts/6624160c-b040-4c45-86f2-ba0ab29fbfda/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      awsのlinux上でcapybaraがインストールできない
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>ruby on rails - Install capyabara-webkit gem on Amazon Linux AMI - Stack Overflow...</p>
-  </section>
-  <footer class="entry-footer">July 31, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to awsのlinux上でcapybaraがインストールできない" href="https://rengotaku.github.io/posts/ac5c5b45-7af9-446c-88db-641bac969061/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

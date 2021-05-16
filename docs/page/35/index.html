@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/" />
-<meta property="og:updated_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vegetable Programing"/>
 <meta name="twitter:description" content=""/>
@@ -138,141 +138,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      rbenvのrubyが突如動かなくなった
+      正規表現で置換したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>事象 railsを動かそうとしたら下記のエラーが発生した。 Sorry, you can&#39;t use byebug without Readline. To solve this, you need to rebuild Ruby with Readline support. If using Ubuntu, try `sudo apt-get install libreadline-dev` and then reinstall your Ruby. 対応 $ RUBY_CONFIGURE_OPTS=--with-readline-dir=`brew --prefix readline` rbenv install 2.3.1 メモ...</p>
+    <p>var re = /(\w&#43;)\s(\w&#43;)/; var str = &#39;John Smith&#39;; var newstr = str.replace(re, &#39;$2, $1&#39;); console.log(newstr); 正規表現 - JavaScript | MDN...</p>
   </section>
-  <footer class="entry-footer">February 5, 2019
+  <footer class="entry-footer">March 12, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to rbenvのrubyが突如動かなくなった" href="https://rengotaku.github.io/posts/dac18ae2-3c38-4fbd-a18d-29d134efde9f/"></a>
+  <a class="entry-link" aria-label="post link to 正規表現で置換したい" href="https://rengotaku.github.io/posts/3288f3f9-2878-4358-b9a6-96a83473d75d/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      履歴を追いやすいリッチクライアント「tig」
+      英数字を半角にしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>インストール mac $ brew install tig CentOS $ yum install tig コマンド 履歴をリッチなビューで確認する $ tig ファイルの各行が誰の何のコミットか分かる $ tig blame file_name gitクライアント...</p>
+    <p>str.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) { return String.fromCharCode(s.charCodeAt(0) - 65248); }); JavaScriptで英数を全角/半角に変換する方法 - Qiita...</p>
   </section>
-  <footer class="entry-footer">February 5, 2019
+  <footer class="entry-footer">March 12, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to 履歴を追いやすいリッチクライアント「tig」" href="https://rengotaku.github.io/posts/76e03cef-6cc8-44fb-a5a2-f8fa7ab9f0f0/"></a>
+  <a class="entry-link" aria-label="post link to 英数字を半角にしたい" href="https://rengotaku.github.io/posts/3d097456-535e-43fb-a64d-c2875b2ab5ab/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      stubを使いたい
+      capybara-webkit 1.15.1のインストールに失敗する
     </h2>
   </header>
   <section class="entry-content">
-    <p>具体的な例 require &#39;parallel&#39; namespace :mail do desc &#39;send mail&#39; task send: :environment do |task| some_models = SomeModel.where(~).all send_counts = Parallel.map(some_models, in_process: 4) do |some_model| begin Mail.send(some_model) 1 rescue =&gt; e 0 end end SaveModel.write_log(send_counts) end end end require &#39;test_helper&#39; require &#39;rake&#39; class MailTest &lt; ActiveSupport::TestCase # ParallelによりTransacti...</p>
+    <p>Info マシン macOS High Sierra(10.13.4) Gemfile.lock capybara (2.11.0) addressable mime-types (&gt;= 1.16) nokogiri (&gt;= 1.3.3) rack (&gt;= 1.0.0) rack-test (&gt;= 0.5.4) xpath (~&gt; 2.0) capybara-webkit (1.15.1) capybara (&gt;= 2.3, &lt; 4.0) json 事象 bundle install時にエラー current directory: /Users/300807/workspace/front.door.ac/vendor/bundler/ruby/2.3.0/gems/capybara-webkit-1.15.1 /Users/300807/.rbenv/versions/2.3.7/bin/ruby -r ./siteconf20190308-92868-1cuusvw.rb extconf.rb Info: creating stash file /Users/300807/workspace/front.door.ac/vendor/bundler/ruby/2.3.0/gems/capybara-webkit-1.15.1/.qmake.stash cd src/ &amp;&amp; ( test -e Makefile.webkit_server || /usr/local/opt/qt/bin/qmake...</p>
   </section>
-  <footer class="entry-footer">February 4, 2019
+  <footer class="entry-footer">March 8, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to stubを使いたい" href="https://rengotaku.github.io/posts/8dd8839e-e8b9-4fe3-991f-2de32696b47a/"></a>
+  <a class="entry-link" aria-label="post link to capybara-webkit 1.15.1のインストールに失敗する" href="https://rengotaku.github.io/posts/2a9df335-cb6e-46e6-8554-ccf2bb2ab67f/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Parallel処理の後にActiverecordで検索しようとすると通信エラーが発生する
+      belongs_toに指定しているが、存在しなくても登録できるようにしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>対応 検索を行う前に、コネクションを再接続する SomeModel.connection.reconnect! SomeModel.find(1) 事象 メッセージ ActiveRecord::StatementInvalid: Mysql2::Error: MySQL server has gone away: SELECT... 処理 Parallel.map(SomeModel.all, in_process: 4) do |some_model| # something to do... end SomeModel.find(1) # &lt;- ここで発生...</p>
+    <p>optional: true を belongs_to に設定すると、xxx_idが存在しない場合でもエラーにならない。 class Product &lt; ActiveRecord::Base belongs_to :user, optional: true end Rails 5におけるbelongs_toの挙動について...</p>
   </section>
-  <footer class="entry-footer">January 30, 2019
+  <footer class="entry-footer">March 7, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to Parallel処理の後にActiverecordで検索しようとすると通信エラーが発生する" href="https://rengotaku.github.io/posts/ddddd4c5-0d7e-462f-9d64-d8096812f488/"></a>
+  <a class="entry-link" aria-label="post link to belongs_toに指定しているが、存在しなくても登録できるようにしたい" href="https://rengotaku.github.io/posts/b3c5ee31-984a-413f-af5d-5378e3a3ec1d/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      test中に投入したデータを消えないようにしたい
+      routesの:idを別名にしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>rails5 class FooTest &lt; ActiveSupport::TestCase self.use_transactional_tests = false end 指定のテスト以降もデータが残る為、以降のテストに影響がでる。対象のテスト終了時にデータを削除するのがベター 以前 class FooTest &lt; ActiveSupport::TestCase self.use_transactional_fixtures =...</p>
+    <p>resourcesのパラメータに、paramを指定 Rails.application.routes.draw do resources :schedules, param: :other_params_name end railsのroutingで出てくる:idを変更する場合 - Qiita...</p>
   </section>
-  <footer class="entry-footer">January 30, 2019
+  <footer class="entry-footer">March 7, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to test中に投入したデータを消えないようにしたい" href="https://rengotaku.github.io/posts/05fbf34d-d6d3-4399-a072-f8434cb38105/"></a>
+  <a class="entry-link" aria-label="post link to routesの:idを別名にしたい" href="https://rengotaku.github.io/posts/a9bce0e9-16b9-4dba-ace2-818960083ae1/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      エンコードエラーを無視してCSVをCP932(sjis)で作成したい
+      link_toで、.(ピリオド)が/(スラッシュ)に変わる
     </h2>
   </header>
   <section class="entry-content">
-    <p>def write_csv(filename, data) filepath = &#34;public/#{filename}&#34; Tempfile.create(filename) do |tmpfile| CSV.open(tmpfile.path, &#39;w&#39;) do |csv| csv &lt;&lt; %w(title1 title2 title3) data.each do |d| csv &lt;&lt; d end end # 変換できない文字は?となります File.write( filepath, File.read(tmpfile.path, encoding: &#39;UTF-8&#39;), encoding: Encoding::CP932, invalid: :replace, undef: :replace ) end filepath end 上記は、テンプファイルを作...</p>
+    <p>解決策 複数系のパスメソッド（admin_update_datas_path(1)）を使用せずに、単数系（admin_update_data_...</p>
   </section>
-  <footer class="entry-footer">January 28, 2019
+  <footer class="entry-footer">March 7, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to エンコードエラーを無視してCSVをCP932(sjis)で作成したい" href="https://rengotaku.github.io/posts/95e77622-d4bc-464d-8dde-334ac6c6905e/"></a>
+  <a class="entry-link" aria-label="post link to link_toで、.(ピリオド)が/(スラッシュ)に変わる" href="https://rengotaku.github.io/posts/7ed609fb-0de2-4276-b9fa-1e8b60211580/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      画像を表示したい
+      railsでanchorを生成
     </h2>
   </header>
   <section class="entry-content">
-    <p>image_tag(画像ファイルへのパス, [, (オプション or HTMLオプション)]) 参考 &lt;%= image_tag(&#34;icon.png&#34;) %&gt; # &lt;img alt=&#34;Icon&#34; src=&#34;/images/icon.png&#34; /&gt; image_tag - リファレンス - - Railsドキュメ...</p>
+    <p>&lt;%= link_to &#39;ユーザーA&#39;, user_path %&gt; メソッドを指定したい場合 &lt;%= link_to &#39;ユーザーA&#39;, user_path, method: :post %&gt; Rails の link_to メソッドでアンカーリンクを作成する - kzy52’s blog link_to,b...</p>
   </section>
-  <footer class="entry-footer">January 24, 2019
+  <footer class="entry-footer">March 7, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to 画像を表示したい" href="https://rengotaku.github.io/posts/d0203447-1215-4318-8e12-26220011496c/"></a>
+  <a class="entry-link" aria-label="post link to railsでanchorを生成" href="https://rengotaku.github.io/posts/a7446c04-7215-43c6-a03d-20fd22ec2847/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      難しい言い回し
+      エクスプローラーを起動したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>奏効 流入が増えてるのが奏効してできると面白いなー 流入が増えて効果がでると面白いなー...</p>
+    <p>タスクマネージャー -&gt; ファイル -&gt; 新しいタスクの実行 で explorer.exe を入力する。 Windows10 アイコンが消えた場合などにはエクスプローラーを再起動してみる | パソコンの問...</p>
   </section>
-  <footer class="entry-footer">January 23, 2019
+  <footer class="entry-footer">March 7, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to 難しい言い回し" href="https://rengotaku.github.io/posts/0a698e39-ff97-495d-9719-5af6288f48e9/"></a>
+  <a class="entry-link" aria-label="post link to エクスプローラーを起動したい" href="https://rengotaku.github.io/posts/22fd25eb-b12b-45ac-9631-ceb820036b0f/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      指定桁まで0埋めしたい
+      CODEOWNERでチームを設定しているが機能しない
     </h2>
   </header>
   <section class="entry-content">
-    <p>pry(main)&gt; &#39;%04d&#39; % [1] =&gt; &#34;0001&#34; String#%は書式制御 - rubyco（るびこ）の日記...</p>
+    <p>チーム設定の Team visibility の状態を Visible にする Solved: CODEOWNERS works with users but not teams - GitHub Community Forum...</p>
   </section>
-  <footer class="entry-footer">January 22, 2019
+  <footer class="entry-footer">March 6, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to 指定桁まで0埋めしたい" href="https://rengotaku.github.io/posts/ae408920-bcaf-41da-b196-0ee2d23819bb/"></a>
+  <a class="entry-link" aria-label="post link to CODEOWNERでチームを設定しているが機能しない" href="https://rengotaku.github.io/posts/bf686840-6604-489b-a07b-b01766ad1faf/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      別のDBに接続するモデルを作成したい
+      色のついた列をカウントしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>修正ファイル app/models/other_db.rb app/models/other_db/o_table.rb config/other_db/database.yml db/other_db/schema.rb db/other_db/seeds.rb 修正内容 モデルの具象クラス module OtherDb class Base &lt; ActiveRecord::Base # 対応する抽象テーブルは設定しない（必ず継承させる） # databases = YAML.load(ERB.new(File.read(&#39;config/other_db/database.yml&#39;)).result) establish_connection(databases[Rails.env]) self.abstract_class = true end end モデル module...</p>
+    <p>/** * 色を特定する */ function identifyColor(){ var sheet = SpreadsheetApp.getActiveSheet(); // 特定する色を取得する var targetColor = sheet.getRange(3, 4).getBackground(); // 色一覧の「背景色の配列」と「内容の配列」を取得する var colorNum = 20; var colorsListRange = sheet.getRange(3, 2, colorNum, 1); var colorArray...</p>
   </section>
-  <footer class="entry-footer">January 22, 2019
+  <footer class="entry-footer">March 1, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to 別のDBに接続するモデルを作成したい" href="https://rengotaku.github.io/posts/da413a68-86ba-4cd4-9640-25114a03698f/"></a>
+  <a class="entry-link" aria-label="post link to 色のついた列をカウントしたい" href="https://rengotaku.github.io/posts/b2e350d6-b0ed-420b-8cd1-c0a1070c7408/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

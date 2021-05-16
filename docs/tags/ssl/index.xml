@@ -7,10 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Tue, 18 Dec 2018 19:32:52 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 06 Mar 2021 14:06:00 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nginxまでSSLを使用してリバースプロキシー後は使用しない場合に無限リダイレクトされる</title>
+      <link>https://rengotaku.github.io/posts/47c877b7-ce6e-401f-be57-89f43fbba366/</link>
+      <pubDate>Sat, 06 Mar 2021 14:06:00 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/47c877b7-ce6e-401f-be57-89f43fbba366/</guid>
+      <description>解決 Issue with SSL when using nginx reverse proxy | WordPress.org より、wp-config.phpに下記を追記する define(&#39;FORCE_SSL_ADMIN&#39;, true); if ($_SERVER[&#39;HTTP_X_FORWARDED_PROTO&#39;] == &#39;https&#39;) $_SERVER[&#39;HTTPS&#39;]=&#39;on&#39;; Administration Over SSL | WordPress.org の公式にも注意が書いてあった 事象 https://example.com/wp-admin/index.php にアクセス</description>
+    </item>
     
     <item>
       <title>nginxでport:443を受け付け、port:80のhttpdへ、リバースプロキシしたい</title>

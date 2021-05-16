@@ -11,7 +11,7 @@
 <meta name="description" content="解決 context に、 show_exceptions: true オプションを設定する。 context &#34;failed&#34;, show_exceptions: true do ... end Rails アプリケーションの不安定なテストを撲滅したい 〜system spec のデバッグ方法とテストを不安">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/e848d251-d646-4d69-b394-c113fb84410c/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "rails", "ruby", "rspec", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "解決 context に、 show_exceptions: true オプションを設定する。\ncontext \"failed\", show_exceptions: true do\r...\rend\r Rails アプリケーションの不安定なテストを撲滅したい 〜system spec のデバッグ方法とテストを不安定にさせる要因〜 - あらびき日記\n 事象 APIのレスポンスチェックのテストを作成したが、 api_get を実行した時点で例外が発生してテストが失敗する。\nテスト subject { api_get \"/path/to/api\" }\rcontext \"failed\" do\rbefore do\r# something for failed\r end\rexample \"XXXX のため、エラー\" do\rsubject\rexpect(response).to have_http_status(:forbidden)\rend\rend\rエラー内容 Failure/Error: raise ForbiddenError\rHogeController::ForbiddenError:\rアクセス権限がありません\r# ./app/controllers/hoge_controller.rb:88:in `response_forbidden'\r# ./app/controllers/hoge_controller.rb:51:in `block_foreign_hosts'\r...\r",
+  "articleBody": "解決 context に、 show_exceptions: true オプションを設定する。\ncontext \"failed\", show_exceptions: true do ... end  Rails アプリケーションの不安定なテストを撲滅したい 〜system spec のデバッグ方法とテストを不安定にさせる要因〜 - あらびき日記\n 事象 APIのレスポンスチェックのテストを作成したが、 api_get を実行した時点で例外が発生してテストが失敗する。\nテスト subject { api_get \"/path/to/api\" } context \"failed\" do before do # something for failed end example \"XXXX のため、エラー\" do subject expect(response).to have_http_status(:forbidden) end end エラー内容 Failure/Error: raise ForbiddenError\rHogeController::ForbiddenError:\rアクセス権限がありません\r# ./app/controllers/hoge_controller.rb:88:in `response_forbidden'\r# ./app/controllers/hoge_controller.rb:51:in `block_foreign_hosts'\r...\r",
   "wordCount" : "202",
   "inLanguage": "en",
   "datePublished": "2020-01-27T17:16:30+09:00",
@@ -174,7 +174,7 @@ if (!doNotTrack) {
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">subject { api_get <span style="color:#e6db74">&#34;/path/to/api&#34;</span> }
 context <span style="color:#e6db74">&#34;failed&#34;</span> <span style="color:#66d9ef">do</span>
   before <span style="color:#66d9ef">do</span>
-    <span style="color:#75715e"># something for failed</span>
+    <span style="color:#75715e"># something for failed</span>
   <span style="color:#66d9ef">end</span>
 
   example <span style="color:#e6db74">&#34;XXXX のため、エラー&#34;</span> <span style="color:#66d9ef">do</span>
@@ -216,7 +216,7 @@ HogeController::ForbiddenError:
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

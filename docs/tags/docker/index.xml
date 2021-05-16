@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Thu, 13 Aug 2020 15:02:13 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 15 May 2021 21:11:27 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker don&#39;t work in CentOS</title>
+      <link>https://rengotaku.github.io/posts/b755aae1-712a-4656-b084-c4ab4fab16fd/</link>
+      <pubDate>Sat, 15 May 2021 21:11:27 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/b755aae1-712a-4656-b084-c4ab4fab16fd/</guid>
+      <description>Resolution iptables failed - No chain/target/match by that name · Issue #16816 · moby/moby $ iptables -t filter -N DOCKER $ systemctl restart docker Motivation $ docker-compose up Creating network &amp;quot;xxxxx_default&amp;quot; with the default driver ERROR: Failed to Setup IP tables: Unable to enable SKIP DNAT rule: (iptables failed: iptables --wait -t nat -I DOCKER -i br-c85d8bcdd123 -j RETURN: iptables: No chain/target/match by that name. (exit status 1))</description>
+    </item>
     
-	<atom:link href="https://rengotaku.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>docker-composeのport設定の挙動確認</title>
+      <link>https://rengotaku.github.io/posts/8f1e9d0c-79df-49cc-8302-91ffb382af73/</link>
+      <pubDate>Tue, 26 Jan 2021 13:52:38 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/8f1e9d0c-79df-49cc-8302-91ffb382af73/</guid>
+      <description>behavior Compose file version 3 reference | Docker Documentation ※3.9で確認。 ports: # 0.0.0.0:55006-&amp;gt;3000/tcp - &amp;#34;3000&amp;#34; # 0.0.0.0:55005-&amp;gt;7000/tcp, 0.0.0.0:55004-&amp;gt;7001/tcp, 0.0.0.0:55003-&amp;gt;7002/tcp, 0.0.0.0:55002-&amp;gt;7003/tcp, 0.0.0.0:55001-&amp;gt;7004/tcp, 0.0.0.0:55000-&amp;gt;7005/tcp - &amp;#34;7000-7005&amp;#34; # 0.0.0.0:8000-&amp;gt;8000/tcp - &amp;#34;8000:8000&amp;#34; # 0.0.0.0:9090-&amp;gt;8080/tcp, 0.0.0.0:9091-&amp;gt;8081/tcp - &amp;#34;9090-9091:8080-8081&amp;#34; # 0.0.0.0:49100-&amp;gt;22/tcp - &amp;#34;49100:22&amp;#34; # 127.0.0.1:8001-&amp;gt;8001/tcp - &amp;#34;127.0.0.1:8001:8001&amp;#34; # 127.0.0.1:5000-5010-&amp;gt;5000-5010/tcp - &amp;#34;127.0.0.1:5000-5010:5000-5010&amp;#34; # 0.0.0.0:6060-&amp;gt;6060/udp - &amp;#34;6060:6060/udp&amp;#34; # 0.0.0.0:12401-&amp;gt;1240/tcp - &amp;#34;12400-12500:1240&amp;#34; 12400-1250</description>
+    </item>
     
     <item>
       <title>dockerのみでfluentdを動作させる</title>

@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Thu, 29 Oct 2020 22:16:52 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/lambda/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 29 Oct 2020 22:16:52 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/lambda/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Serverlessでdeployをする際に必要な権限</title>
       <link>https://rengotaku.github.io/posts/c8968a24-0b87-4521-b6f8-da267356ae85/</link>

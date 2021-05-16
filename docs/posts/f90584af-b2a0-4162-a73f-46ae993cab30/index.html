@@ -11,7 +11,7 @@
 <meta name="description" content="結論 ボリュームを共有して擬似的に行う。 kubanetesみたいに、一つのホストに複数プロセスを共存させるやり方はできなさそう。 version: &#39;3&#39; services: tomcat: image: tomcat:alpine container_name:">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/f90584af-b2a0-4162-a73f-46ae993cab30/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "docker-compose", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "結論 ボリュームを共有して擬似的に行う。\nkubanetesみたいに、一つのホストに複数プロセスを共存させるやり方はできなさそう。\nversion: '3'\rservices:\rtomcat:\rimage: tomcat:alpine\rcontainer_name: \"tomcat\"\rvolumes:\r- logs:/usr/local/tomcat/logs\rports:\r- \"8080:8080\"\rlocalhost_logger:\rimage: busybox\rvolumes:\r- logs:/logs\rstop_signal: SIGKILL\rcommand: [\"/bin/sh\", \"-c\", \"\rwhile [ ! -e /logs/localhost.*.log ]; do echo \\\"Waiting for localhost to become available\\\"; sleep 2; done; tail -f /logs/localhost.*.log\"]\raccess_logger:\rimage: busybox\rvolumes:\r- logs:/logs\rstop_signal: SIGKILL\rcommand: [\"/bin/sh\", \"-c\", \"\rwhile [ ! -e /logs/localhost_access_log.*.txt ]; do echo \\\"Waiting for localhost_access_log to become available\\\"; sleep 2; done; tail -f /logs/localhost_access_log.*.txt\"]\rvolumes:\rlogs:\r Docker Tips \u0026 Tricks - NCR Edinburgh - Medium\n ",
+  "articleBody": "結論 ボリュームを共有して擬似的に行う。\nkubanetesみたいに、一つのホストに複数プロセスを共存させるやり方はできなさそう。\nversion: '3' services: tomcat: image: tomcat:alpine container_name: \"tomcat\" volumes: - logs:/usr/local/tomcat/logs ports: - \"8080:8080\" localhost_logger: image: busybox volumes: - logs:/logs stop_signal: SIGKILL command: [\"/bin/sh\", \"-c\", \" while [ ! -e /logs/localhost.*.log ]; do echo \\\"Waiting for localhost to become available\\\"; sleep 2; done; tail -f /logs/localhost.*.log\"] access_logger: image: busybox volumes: - logs:/logs stop_signal: SIGKILL command: [\"/bin/sh\", \"-c\", \" while [ ! -e /logs/localhost_access_log.*.txt ]; do echo \\\"Waiting for localhost_access_log to become available\\\"; sleep 2; done; tail -f /logs/localhost_access_log.*.txt\"] volumes: logs:  Docker Tips \u0026 Tricks - NCR Edinburgh - Medium\n ",
   "wordCount" : "152",
   "inLanguage": "en",
   "datePublished": "2020-02-06T17:17:50+09:00",
@@ -163,22 +163,22 @@ if (!doNotTrack) {
 <h1 id="結論">結論<a hidden class="anchor" aria-hidden="true" href="#結論">#</a></h1>
 <p>ボリュームを共有して擬似的に行う。</p>
 <p>kubanetesみたいに、一つのホストに複数プロセスを共存させるやり方はできなさそう。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;3&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;3&#39;</span>
 
-services:
-  tomcat:
-    <span style="color:#66d9ef">image</span>: tomcat:alpine
-    <span style="color:#66d9ef">container_name</span>: <span style="color:#e6db74">&#34;tomcat&#34;</span>
-    volumes:
-      - logs:/usr/local/tomcat/logs
-    ports:
+<span style="color:#f92672">services</span>:
+  <span style="color:#f92672">tomcat</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">tomcat:alpine</span>
+    <span style="color:#f92672">container_name</span>: <span style="color:#e6db74">&#34;tomcat&#34;</span>
+    <span style="color:#f92672">volumes</span>:
+      - <span style="color:#ae81ff">logs:/usr/local/tomcat/logs</span>
+    <span style="color:#f92672">ports</span>:
       - <span style="color:#e6db74">&#34;8080:8080&#34;</span>
-  localhost_logger:
-    <span style="color:#66d9ef">image</span>: busybox
-    volumes:
-      - logs:/logs
-    <span style="color:#66d9ef">stop_signal</span>: SIGKILL
-    <span style="color:#66d9ef">command</span>: [<span style="color:#e6db74">&#34;/bin/sh&#34;</span>, <span style="color:#e6db74">&#34;-c&#34;</span>, <span style="color:#e6db74">&#34;
+  <span style="color:#f92672">localhost_logger</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">busybox</span>
+    <span style="color:#f92672">volumes</span>:
+      - <span style="color:#ae81ff">logs:/logs</span>
+    <span style="color:#f92672">stop_signal</span>: <span style="color:#ae81ff">SIGKILL</span>
+    <span style="color:#f92672">command</span>: [<span style="color:#e6db74">&#34;/bin/sh&#34;</span>, <span style="color:#e6db74">&#34;-c&#34;</span>, <span style="color:#e6db74">&#34;
 </span><span style="color:#e6db74">                  while [ ! -e /logs/localhost.*.log ]; 
 </span><span style="color:#e6db74">                  do 
 </span><span style="color:#e6db74">                    echo \&#34;Waiting for localhost to become available\&#34;; 
@@ -186,20 +186,20 @@ services:
 </span><span style="color:#e6db74">                  done; 
 </span><span style="color:#e6db74">                  tail -f /logs/localhost.*.log&#34;</span>]
 
-  access_logger:
-    <span style="color:#66d9ef">image</span>: busybox
-    volumes:
-      - logs:/logs
-    <span style="color:#66d9ef">stop_signal</span>: SIGKILL
-    <span style="color:#66d9ef">command</span>: [<span style="color:#e6db74">&#34;/bin/sh&#34;</span>, <span style="color:#e6db74">&#34;-c&#34;</span>, <span style="color:#e6db74">&#34;
+  <span style="color:#f92672">access_logger</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">busybox</span>
+    <span style="color:#f92672">volumes</span>:
+      - <span style="color:#ae81ff">logs:/logs</span>
+    <span style="color:#f92672">stop_signal</span>: <span style="color:#ae81ff">SIGKILL</span>
+    <span style="color:#f92672">command</span>: [<span style="color:#e6db74">&#34;/bin/sh&#34;</span>, <span style="color:#e6db74">&#34;-c&#34;</span>, <span style="color:#e6db74">&#34;
 </span><span style="color:#e6db74">                  while [ ! -e /logs/localhost_access_log.*.txt ]; 
 </span><span style="color:#e6db74">                  do 
 </span><span style="color:#e6db74">                    echo \&#34;Waiting for localhost_access_log to become available\&#34;; 
 </span><span style="color:#e6db74">                    sleep 2; 
 </span><span style="color:#e6db74">                  done; 
 </span><span style="color:#e6db74">                  tail -f /logs/localhost_access_log.*.txt&#34;</span>]
-volumes:
-  logs:
+<span style="color:#f92672">volumes</span>:
+  <span style="color:#f92672">logs</span>:
 </code></pre></div><blockquote>
 <p><a href="https://medium.com/ncr-edinburgh/docker-tips-tricks-516b9ba41aa2">Docker Tips &amp; Tricks - NCR Edinburgh - Medium</a></p>
 </blockquote>
@@ -227,7 +227,7 @@ volumes:
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Tue, 04 Dec 2018 15:13:39 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/nvm/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 04 Dec 2018 15:13:39 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/nvm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>nvmで管理しているnodeバージョンを切り替える</title>
       <link>https://rengotaku.github.io/posts/cf9a5956-7738-459a-afa7-f1f775805ced/</link>

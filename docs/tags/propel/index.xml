@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Tue, 08 Jan 2019 12:22:49 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/propel/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 08 Jan 2019 12:22:49 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/propel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>propelでor条件を使用したい</title>
       <link>https://rengotaku.github.io/posts/c79fe8fe-5499-4a99-a4d0-92c59e098c0a/</link>

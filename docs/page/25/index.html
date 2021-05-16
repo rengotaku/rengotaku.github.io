@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/" />
-<meta property="og:updated_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vegetable Programing"/>
 <meta name="twitter:description" content=""/>
@@ -138,141 +138,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      has_manyな関係でも条件を設定できる
+      シェルで無限ループする時のテンプレート
     </h2>
   </header>
   <section class="entry-content">
-    <p>class User &lt; ApplicationRecord has_many :objects end class Object &lt; ApplicationRecord belongs_to :user scope :open, -&gt; { where(status: 0) } end user = User.find(999) user.objects.open.all #&lt;= できるんだ！？ # =&gt; SELECT `object`.* FROM `object` WHERE `object`.`user_id` = 999 AND `myobject`.`status` = 0...</p>
+    <p>解決 #!/bin/bash function randbool() { if (( RANDOM %2 )); then true else false fi } while : do randbool if [ $? -eq 0 ]; then echo &#39;break&#39; break else echo &#34;wait 1 sec.&#34; sleep 1 fi done $ infinity_loop.sh wait 1 sec. wait 1 sec. wait 1 sec. wait 1 sec. break Bash: Random numbers for fun and profit...</p>
   </section>
-  <footer class="entry-footer">July 12, 2019
+  <footer class="entry-footer">August 6, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to has_manyな関係でも条件を設定できる" href="https://rengotaku.github.io/posts/ac6b22e9-bbef-4d0a-8bd5-50f1cce3e7bd/"></a>
+  <a class="entry-link" aria-label="post link to シェルで無限ループする時のテンプレート" href="https://rengotaku.github.io/posts/be30dea1-c2c2-4424-9192-1e8652e150fd/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      googleカレンダーのpush通知が設定できない
+      ひらがな、カタカナを小文字から大文字に変換
     </h2>
   </header>
   <section class="entry-content">
-    <p>許可に calendar.google.com を追加 Googleカレンダーの通知のオン/オフ設定方法！10分前のポップアップを消すには？ | アプリやWebの疑問に答えるメディア...</p>
+    <p>解決 【SSIS】日本語の小文字を大文字に変換する - Tumbling Dice の配列を利用する 下記はカタカナのみ対応 def kana_upercase(kana) [ %W(ァ ア), %W(ィ イ), %W(ゥ ウ),...</p>
   </section>
-  <footer class="entry-footer">July 12, 2019
+  <footer class="entry-footer">August 5, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to googleカレンダーのpush通知が設定できない" href="https://rengotaku.github.io/posts/aae1ff50-f763-447a-8301-3f7c1a55ff5e/"></a>
+  <a class="entry-link" aria-label="post link to ひらがな、カタカナを小文字から大文字に変換" href="https://rengotaku.github.io/posts/770ce494-a1ec-496c-83d2-ec7ebaaa645f/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Activerecordの条件にis not nullを設定
+      validationで空の場合は、formatを確認させたくない
     </h2>
   </header>
   <section class="entry-content">
-    <p>User.where.not(name: nil) =&gt; SELECT `users`.* FROM `users` WHERE (`users`.`name` IS NOT NULL) [Rails]Where句にNOT NULLを指定する - Qiita...</p>
+    <p>解決 :allow_blank =&gt; true を設定 validates :name_kana, format: { with: /\A[ぁ-んァ-ヶー－]&#43;\z/, message: &#39;をカタカナで入力してください&#39;, allow_blank: true }, presence: true Rails: How to validate format only if value is present? - Stack Overflow 事象 validates...</p>
   </section>
-  <footer class="entry-footer">July 12, 2019
+  <footer class="entry-footer">August 5, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to Activerecordの条件にis not nullを設定" href="https://rengotaku.github.io/posts/2df5cef2-e066-4ad2-a80c-d5738c7d3dd4/"></a>
+  <a class="entry-link" aria-label="post link to validationで空の場合は、formatを確認させたくない" href="https://rengotaku.github.io/posts/272571e2-eac6-4bc8-a918-331896bc3481/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      td-agentにaws-fluent-plugin-kinesisをインストールしたが起動できない
+      undefined method `before_validation&#39;が発生
     </h2>
   </header>
   <section class="entry-content">
-    <p>事象 aws-s3のプラグインでエラーが発生している。 less /var/log/td-agent/td-agent.log failed to configure/start sub output s3: Unable to activate fluent-plugin-s3-0.8.5, because aws-sdk- 2.1.36 conflicts with aws-sdk (&lt; 3, &gt;= 2.3.22) 解決 下記の通りにgemのインストールを行う。...</p>
+    <p>解決 ActiveModel::Validations::Callbacks をincludeする ruby - How can I use before validation callback with form object in Rails 4? - Stack Overflow class TestForm include ActiveModel::Model ActiveModel::Validations::Callbacks before_validation :format_hogehoge protected def format_hoge if hoge.present? self.hoge = NKF.nkf(&#39;-w --katakana&#39;, hoge.gsub(/[\s ]/, &#39;&#39;)) end end end 事象 test_form = TestForm.new(params) test_form.invalid? #&lt;= エラー class TestForm include ActiveModel::Model before_validation :format_hogehoge protected...</p>
   </section>
-  <footer class="entry-footer">July 12, 2019
+  <footer class="entry-footer">August 5, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to td-agentにaws-fluent-plugin-kinesisをインストールしたが起動できない" href="https://rengotaku.github.io/posts/02006c4c-ed23-4a52-a550-021451b85d43/"></a>
+  <a class="entry-link" aria-label="post link to undefined method `before_validation&#39;が発生" href="https://rengotaku.github.io/posts/e8ae4fbb-7171-4147-b36a-c08b150a4779/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      JSONの解析に役立つツール
+      osのバージョンを確認
     </h2>
   </header>
   <section class="entry-content">
-    <p>jq 検索ワード json mac command...</p>
+    <p>解決 cat /etc/*-release shell - How to check OS and version using a Linux command - Unix &amp; Linux Stack Exchange 実行例 Debian PRETTY_NAME=&#34;Debian GNU/Linux 9 (stretch)&#34; NAME=&#34;Debian GNU/Linux&#34; VERSION_ID=&#34;9&#34; VERSION=&#34;9 (stretch)&#34; ID=debian HOME_URL=&#34;https://www.debian.org/&#34; SUPPORT_URL=&#34;https://www.debian.org/support&#34; BUG_REPORT_URL=&#34;https://bugs.debian.org/&#34; CentOS CentOS release 6.4 (Final) CentOS release 6.4 (Final) CentOS release 6.4 (Final)...</p>
   </section>
-  <footer class="entry-footer">July 10, 2019
+  <footer class="entry-footer">August 5, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to JSONの解析に役立つツール" href="https://rengotaku.github.io/posts/88915b03-e1fe-404f-8dee-e97067ec4a25/"></a>
+  <a class="entry-link" aria-label="post link to osのバージョンを確認" href="https://rengotaku.github.io/posts/e1750120-fa37-46a4-9998-5d6fefc21aff/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      いつもと違うアカウントのPCで自分のリポジトリにpushしたい
+      cutの用途集
     </h2>
   </header>
   <section class="entry-content">
-    <p>事象 別PCで、グローバルにいつもと違うユーザを使用しており、 プライベートのリポジトリにpushしようとしたらエラーが発生する。 $ git push -u origin master ERROR:...</p>
+    <p>URLのパラメータを削る cut -f1 -d? echo https://test.com?val=1 | cut -f1 -d? https://test.com...</p>
   </section>
-  <footer class="entry-footer">July 9, 2019
+  <footer class="entry-footer">August 2, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to いつもと違うアカウントのPCで自分のリポジトリにpushしたい" href="https://rengotaku.github.io/posts/8c3152ba-44d9-4e8f-8183-34a67606c524/"></a>
+  <a class="entry-link" aria-label="post link to cutの用途集" href="https://rengotaku.github.io/posts/20bdad9a-6e90-4761-ad79-1a920ff07a72/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      アクションによって別の要素のスタイルを変更
+      sedの用途集
     </h2>
   </header>
   <section class="entry-content">
-    <p>動作イメージ ※文字の位置がずれているのは無視して下さい 実装 /* ①要素内 */ .post-line { ul.actions { opacity: 0; } &amp;:hover .actions { opacity: 1; } /* OR */ &amp;:hover &gt; .col-md-3 .actions { opacity: 1; } } /* ②要素と同位置 */ .line...</p>
+    <p>数字を特定の文字列に置換 sed -e &#39;s/[0-9]\{1,\}/xxx/g&#39; $ echo test1234 | sed -e &#39;s/[0-9]\{1,\}/xxx/g&#39; testxxx 使いどき /path/area_1 /path/area_200 みたいなパスを集約したい時 regular expression - How to use sed to replace numbers with parenthese? - Unix &amp; Linux Stack Exchange N番目の(.)を削除...</p>
   </section>
-  <footer class="entry-footer">July 8, 2019
+  <footer class="entry-footer">August 2, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to アクションによって別の要素のスタイルを変更" href="https://rengotaku.github.io/posts/7b1b8c12-3466-4fbd-bb9b-fddfee301cec/"></a>
+  <a class="entry-link" aria-label="post link to sedの用途集" href="https://rengotaku.github.io/posts/7d0ddaff-29ae-4f20-9e8c-4ff6adcf54c7/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      gretelのconfigの自動リロードをdevelopment以外の環境で有効にしたい
+      awkの各フィールドの値を確認したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>問題 config/breadcrumbs.rb の編集が即時反映されない。 解決 Rails.application.configure do # config/breadcrumbs.rb を自動ロード Gretel.configure do |config| config.reload_environments &lt;&lt; &#34;my_development&#34; end 原因 ローカルで動作さている環境が development でないため。 普通はローカル開発時は、...</p>
+    <p>解決 awk &#39;{for (i = 1; i &lt;= NF; i&#43;&#43;) print &#34;$&#34;i&#34;:&#34;$i;}&#39; で確認できる $ head -1 /var/log/https/access_log | awk -F&#39;\t&#39; &#39;{for (i = 1; i &lt;= NF; i&#43;&#43;) print &#34;$&#34;i&#34;:&#34;$i;}&#39; $1:domain:hogehoge $2:host:xxx.xxx.xxx.xxx $3:server:xxx.xxx.xxx.xxx $4:ident:- $5:user:- $6:time:28/Jul/2019:03:21:06 &#43;0900 $7:method:GET $8:path:/sitemap/info.xml $9:protocol:HTTP/1.1 $10:status:200 $11:size:576 $12:referer:- $13:agent:xxxx $14:response_time:3421 $15:cookie:- $16:set_cookie:- AWKのこういう時はどう書く? - Qiita...</p>
   </section>
-  <footer class="entry-footer">July 5, 2019
+  <footer class="entry-footer">August 2, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to gretelのconfigの自動リロードをdevelopment以外の環境で有効にしたい" href="https://rengotaku.github.io/posts/14fcb8b8-6a2e-40e0-af08-3ef565032c12/"></a>
+  <a class="entry-link" aria-label="post link to awkの各フィールドの値を確認したい" href="https://rengotaku.github.io/posts/0f2bcc1d-f221-4848-921c-84c194c6b6fa/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      stub_any_instanceのproc内でNoMethodError: undefined method `assert&#39; 
+      ActionMailでmailを実行しない場合は、NullMailが返却される
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 対象インスタンスをprocで厳密に指定 test_instance = self #&lt;= 重要 post_stub = proc do |address| test_instance.assert { address == &#39;address&#39; } end 注意 共通化しようと、インスタンス変数に格納してしまうと、正しく...</p>
+    <p>事象 ActionMailer::Base を継承したクラスのメソッドをコール時に、メソッド内で mail が呼び出されていない場合は、 ActionMailer::Base::NullMail が返却される。（通常は Mail::Message）...</p>
   </section>
-  <footer class="entry-footer">July 4, 2019
+  <footer class="entry-footer">July 31, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to stub_any_instanceのproc内でNoMethodError: undefined method `assert&#39; " href="https://rengotaku.github.io/posts/a9fbcb15-a9bb-4ff0-95e5-207000c6e190/"></a>
+  <a class="entry-link" aria-label="post link to ActionMailでmailを実行しない場合は、NullMailが返却される" href="https://rengotaku.github.io/posts/81d97880-2a3c-4de8-add0-fa3cb5e29c1d/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      意味のない継承を構造体に置き換える
+      記号を英語で書くと
     </h2>
   </header>
   <section class="entry-content">
-    <p>修正前 クラス構成 module MailSendLog class Base class &lt;&lt; self def post(param) data = default_data.merge( param: param ) @logger.post(@tag, data) end def default_data { tag: tag, specific_item: specific_item, } end def tag raise NotImplementedError, &#34;must implement #{self.class}##{__method__}&#34; end def specific_item raise NotImplementedError, &#34;must implement #{self.class}##{__method__}&#34; end end end end module MailSendLog class Recommend1 &lt; MailSendLog::Base class &lt;&lt; self protected def tag :recommend1 end def specific_item...</p>
+    <p>記号 日本語 英語 [ ] 鉤括弧、カギカッコ brackets, square brackets ( ) 括弧、カッコ brackets, curl brackets, parentheses 『かぎかっこ』は英語で何？他かっこの英語表現もまとめてみた！ | ラボライブ！...</p>
   </section>
-  <footer class="entry-footer">July 3, 2019
+  <footer class="entry-footer">July 31, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to 意味のない継承を構造体に置き換える" href="https://rengotaku.github.io/posts/1e7d92ca-3e40-46d9-ab97-056ccb3cb3b5/"></a>
+  <a class="entry-link" aria-label="post link to 記号を英語で書くと" href="https://rengotaku.github.io/posts/9d78b4b7-b269-4a78-bf44-19917ace9387/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

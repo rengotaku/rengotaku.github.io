@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/" />
-<meta property="og:updated_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vegetable Programing"/>
 <meta name="twitter:description" content=""/>
@@ -138,141 +138,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      バリデーションのエラーを全て取得したい
+      gcpのキャッシュ用のnginxを(docker上に)作成するポイント
     </h2>
   </header>
   <section class="entry-content">
-    <p>$errors = $form-&gt;getErrorSchema()-&gt;getErrors(); で取得可能 symfony framework forum: symfony 1.2 =&gt; Form Validation - No error but not valid!?...</p>
+    <p>構成 APP &lt;-&gt; NGINX(これ) &lt;-&gt; GCP GCPにアクセスする際にNGINXを通してキャッシュを使用するのが目的。 Dockerfileを作成 Docker...</p>
   </section>
-  <footer class="entry-footer">July 27, 2018
+  <footer class="entry-footer">August 22, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to バリデーションのエラーを全て取得したい" href="https://rengotaku.github.io/posts/ce6bce10-42ad-4949-9a10-ef0dc04b258d/"></a>
+  <a class="entry-link" aria-label="post link to gcpのキャッシュ用のnginxを(docker上に)作成するポイント" href="https://rengotaku.github.io/posts/58b5162f-b8e8-4555-8a0c-e4218c8a2c6f/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      saccをコンパイルするとlinear-gradientでSyntaxエラー
+      同期処理で画像をダウンロード
     </h2>
   </header>
   <section class="entry-content">
-    <p>概要 gulpでscssをコンパイルしようとすると下記のエラーが発生する Gradient has outdated direction syntax. New syntax is like `to left` instead of `right`.` 対応 linear-gradient(top -&gt; linear-gradient(to topに修正 Gradient has outdated direction syntax. New syntax is like “to...</p>
+    <p>var request = require(&#39;sync-request&#39;); try { const response = await request(&#39;GET&#39;, photoUrl.url); if(response.statusCode === 200){ fs.writeFileSync( &#39;/path/to/image&#39;, response.body, &#39;binary&#39; ); } catch (error) { console.log(error); } node.js でインターネット上の画像をダウンロード - Qiita 同期処理でrequestモジュールの戻り値を...</p>
   </section>
-  <footer class="entry-footer">July 25, 2018
+  <footer class="entry-footer">August 21, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to saccをコンパイルするとlinear-gradientでSyntaxエラー" href="https://rengotaku.github.io/posts/d42b09b1-0f8c-424f-94ec-ca2fe144dba7/"></a>
+  <a class="entry-link" aria-label="post link to 同期処理で画像をダウンロード" href="https://rengotaku.github.io/posts/90e4df68-ccc5-435b-89e9-4f5c6ec83b5f/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      dockerのruby2.3.1を2.3.7に変更する
+      プライベートホストゾーン
     </h2>
   </header>
   <section class="entry-content">
-    <p>Dockerfile 変更後 FROM ruby:2.3.7 RUN apt-get update -qq &amp;&amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqtcore4 libqtgui4 libqtwebkit-dev libqtwebkit4 RUN mkdir -p /var WORKDIR /var ENV BUNDLE_JOBS=4 COPY Gemfile Gemfile COPY Gemfile.lock Gemfile.lock RUN bundle install 変更前 FROM ruby:2.3.1 RUN apt-get update -qq &amp;&amp; apt-get install -y apt-utils build-essential libpq-dev nodejs qt4-dev-tools libqt4-dev libqt4-core libqt4-gui RUN mkdir -p /var WORKDIR /var ENV BUNDLE_JOBS=4...</p>
+    <p>Route53にはパブリックホストゾーンとプライベートホストゾーンが設定できる。 プライベートホストゾーンとは、VPC内でのみ有効な(C・A)...</p>
   </section>
-  <footer class="entry-footer">July 24, 2018
+  <footer class="entry-footer">August 20, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to dockerのruby2.3.1を2.3.7に変更する" href="https://rengotaku.github.io/posts/e0664390-c0cf-41d4-b4db-86dfd3939938/"></a>
+  <a class="entry-link" aria-label="post link to プライベートホストゾーン" href="https://rengotaku.github.io/posts/6624160c-b040-4c45-86f2-ba0ab29fbfda/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      gulp入門
+      wheneverでrootパス取得
     </h2>
   </header>
   <section class="entry-content">
-    <p>行なっていること assets/js 配下のjsをmain.jsにまとめる。 views/*.ejs 配下のxxx.ejs.htmlを変数を埋め込みhtmlに変換する。 assets/s...</p>
+    <p>require File.expand_path(File.dirname(__FILE__) &#43; &#34;/environment&#34;) set :output, &#34;#{Rails.root}/log/cron.log&#34; Railsでwheneverを使ってcronを設定する...</p>
   </section>
-  <footer class="entry-footer">July 24, 2018
+  <footer class="entry-footer">August 17, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to gulp入門" href="https://rengotaku.github.io/posts/e87f594a-d2ed-45b0-ac90-cc5cf20299d6/"></a>
+  <a class="entry-link" aria-label="post link to wheneverでrootパス取得" href="https://rengotaku.github.io/posts/333d65ff-998a-4586-931e-ec240b4ef4c4/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      phpで8系に接続する際に注意すること
+      bucket内のファイルをフィルターして一覧取得
     </h2>
   </header>
   <section class="entry-content">
-    <p>経緯 5.6系を使う予定が、brewで最新の8系をインストールしていて、謎のエラー[2054] The server requested authentication method unknown to the clientで苦しんだ。 対応 パス...</p>
+    <p>bucket = storage.bucket &#34;bucket_name&#34; files = bucket.files(prefix: &#39;prefix_char/&#39;) files.all do |file| puts file.name end google-cloud-ruby...</p>
   </section>
-  <footer class="entry-footer">July 20, 2018
+  <footer class="entry-footer">August 17, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to phpで8系に接続する際に注意すること" href="https://rengotaku.github.io/posts/f0e97e2b-18eb-4b62-882e-73769a380af4/"></a>
+  <a class="entry-link" aria-label="post link to bucket内のファイルをフィルターして一覧取得" href="https://rengotaku.github.io/posts/629e184e-7d32-4562-85c9-abb408c05410/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      curlでステータスコードのみ取得
+      キーワード引数
     </h2>
   </header>
   <section class="entry-content">
-    <p>$ curl -LI mazgi.com -o /dev/null -w &#39;%{http_code}\n&#39; -s cURLでHTTPステータスコードだけを取得する...</p>
+    <p>対応 bucket.files(prefix: &#39;databases/&#39;) 事象 bucket.files(&#39;databases/&#39;) =&gt; ArgumentError: wrong number of arguments (given 1, expected 0) 該当ソース def files prefix: nil, delimiter: nil, token: nil, max: nil, versions: nil ensure_service! gapi = service.list_files name, prefix: prefix, delimiter: delimiter, token: token, max: max, versions: versions, user_project: user_project File::List.from_gapi gapi, service, name, prefix, delimiter, max, versions, user_project: user_project end Rubyの引数い...</p>
   </section>
-  <footer class="entry-footer">July 19, 2018
+  <footer class="entry-footer">August 17, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to curlでステータスコードのみ取得" href="https://rengotaku.github.io/posts/0d74e233-fa48-4e16-952f-55a59ef972fb/"></a>
+  <a class="entry-link" aria-label="post link to キーワード引数" href="https://rengotaku.github.io/posts/fb8ad4cd-9463-4795-a759-94de28b6c381/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      ALBのアクセスログを日別に集計
+      条件で日付の書き方
     </h2>
   </header>
   <section class="entry-content">
-    <p>SELECT COUNT(*), date_parse(time, &#39;%Y-%m-%dT%H:%i:%sZ&#39;) as date FROM alb_logs WHERE time &gt; &#39;2018-07-12&#39; AND request_url like &#39;%path%&#39; GROUP BY date_parse(time, &#39;%Y-%m-%dT%H:%i:%sZ&#39;) ORDER BY count(*) desc timeは2017-01-07T00:07:23.752260Zが入る AWS Developer Forums: date_parse() nor parse_datetime() seem … 6.10. Date and...</p>
+    <p>TD_TIME_RANGE(time, &#39;2018-08-01&#39;, &#39;2018-08-16&#39;, &#39;JST&#39;) &#34;(ダブルクォテーション)にするとエラーになる TreasureDataでHiveクエリを書くとき - 独自関数TD_TIME_...</p>
   </section>
-  <footer class="entry-footer">July 17, 2018
+  <footer class="entry-footer">August 16, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to ALBのアクセスログを日別に集計" href="https://rengotaku.github.io/posts/15ba3a95-b5cd-45e1-b80f-a72f4ac275d2/"></a>
+  <a class="entry-link" aria-label="post link to 条件で日付の書き方" href="https://rengotaku.github.io/posts/b72f540b-ca57-40aa-b7fa-0f92cfde1f26/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      elasticsearchをcentos7にインストール
+      ワンライナーでCSVを扱う
     </h2>
   </header>
   <section class="entry-content">
-    <p>インストール # rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch # vi /etc/yum.repos.d/elasticsearch.repo ======= [elasticsearch-2.x] name=Elasticsearch repository for 2.x packages baseurl=http://packages.elastic.co/elasticsearch/2.x/centos gpgcheck=1 gpgkey=http://packages.elastic.co/GPG-KEY-elasticsearch enabled=1 # yum install elasticsearch ホストの設定 # vi /etc/elasticsearch/elasticsearch.yml ======= # network.host: 192.168.0.1 network.host: 192.168.33.10 プラグインをインストール kuromoji・・・日本語全...</p>
+    <p>ruby -rcsv -e&#34;CSV(STDIN).each{|r|p r.join(&#39;,&#39;) if [&#39;400006210&#39;].include? r[0] }&#34; &lt; sample.csv Rubyで標準入力からCSVをパース...</p>
   </section>
-  <footer class="entry-footer">July 11, 2018
+  <footer class="entry-footer">August 15, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to elasticsearchをcentos7にインストール" href="https://rengotaku.github.io/posts/77203dae-d90e-4652-a73e-dd9f9497e16f/"></a>
+  <a class="entry-link" aria-label="post link to ワンライナーでCSVを扱う" href="https://rengotaku.github.io/posts/91a083ff-58ad-46fb-9fab-7fccd0066e52/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      ドッカーの不要なVolumeを削除する
+      日付をYYYYMMDD形式で取得
     </h2>
   </header>
   <section class="entry-content">
-    <p>$ docker volume rm $(docker volume ls -qf dangling=true) DockerでVolumeの容量が増え続けていたときの対処 - より長続きするブログ...</p>
+    <p>$ date &#34;&#43;%Y%m%d&#34; =&gt; 20180815 前日に生成されたファイルの存在チェック $ ls &#34;/path/to/file_`date -d &#39;-1 day&#39; &#39;&#43;%Y%m%d&#39;`.csv&#34; =&gt; /path/to/file_20180814.csv date コマンド | コマンドの使い方(Linux) | hydroculのメモ...</p>
   </section>
-  <footer class="entry-footer">July 11, 2018
+  <footer class="entry-footer">August 15, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to ドッカーの不要なVolumeを削除する" href="https://rengotaku.github.io/posts/eb3a988d-3320-422c-b03d-c4fd8b0c2cd8/"></a>
+  <a class="entry-link" aria-label="post link to 日付をYYYYMMDD形式で取得" href="https://rengotaku.github.io/posts/57955789-391e-4629-8e2d-a213edb5bb09/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      brewでmysqlをインストールしたら、mysqlのgemがインストールできない＆mysqlで何も実行できない
+      mysqlの起動
     </h2>
   </header>
   <section class="entry-content">
-    <p>gemのインストール対応 バージョン0.4.10を使用する Failed to build gem native extension - unknown type name ‘my_bool’ · Issue #980 · brianmario/mysql2 mysqlの実行エラー対応 mysql&gt; SET GLOBAL innodb_fast_shutdown = 1; $ mysql_upgrade -u root -p Mysql Error:The...</p>
+    <p>$ mysql.server start mac MySQL ターミナル 自動起動...</p>
   </section>
-  <footer class="entry-footer">July 10, 2018
+  <footer class="entry-footer">August 15, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to brewでmysqlをインストールしたら、mysqlのgemがインストールできない＆mysqlで何も実行できない" href="https://rengotaku.github.io/posts/1e336aa2-3910-47a2-890b-1ce379db42bc/"></a>
+  <a class="entry-link" aria-label="post link to mysqlの起動" href="https://rengotaku.github.io/posts/4af59f8a-ac2c-4c66-ad40-680c9be817c5/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

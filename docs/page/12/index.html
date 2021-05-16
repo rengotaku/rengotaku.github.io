@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/" />
-<meta property="og:updated_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vegetable Programing"/>
 <meta name="twitter:description" content=""/>
@@ -138,141 +138,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      gulpでjsxコンパイル時にエラー
+      Middlewareをテストしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 babelifyにpresetsを設定する .transform(babelify.configure({ presets: [&#34;@babel/react&#34;,&#34;@babel/preset-env&#34;] })) React.js - webpack4で構築、jsx内でReactの記述が使えない｜teratail node.js -...</p>
+    <p>対象モジュール railsのログにタグづけしたい | ベジタブルプログラム テスト RSpec.describe TaggedLogger do subject { TaggedLogger::Middleware.new(app) } let(:app) { -&gt;(env) { [200, env, &#34;app&#34;] } } let(:request) { Rack::MockRequest.new(subject) } let(:action_dispatch_request) { ActionDispatch::TestRequest.create } before do allow(ActionDispatch::Request).to receive(:new).and_return(action_dispatch_request) allow(action_dispatch_request).to receive(:session).and_return(Struct.new(:user_id, :loaded?).new(*session_methods)) allow(Rails.logger).to receive(:tagged).and_yield...</p>
   </section>
-  <footer class="entry-footer">January 21, 2020
+  <footer class="entry-footer">February 10, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to gulpでjsxコンパイル時にエラー" href="https://rengotaku.github.io/posts/cb866f60-e70d-4e05-89b5-b37246c71c55/"></a>
+  <a class="entry-link" aria-label="post link to Middlewareをテストしたい" href="https://rengotaku.github.io/posts/a876ea6d-99a6-43fe-b419-71896f26c406/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      ロケールファイルをサービス毎に分割したい
+      railsのログにタグづけしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>実現したこと defaultの設定にサービス毎に必要な箇所のメッセージを上書きする 構成 config/locales/ ├── ja.yml └── service1 └── ja.yml └── service2 └── ja.yml 修正 --- ja: application: environment: production:...</p>
+    <p>設定 class Application &lt; Rails::Application ... require Rails.root.join(&#34;lib/tagged_logger.rb&#34;) initializer &#34;tagged_logger.insert_middleware&#34; do |app| app.config.middleware.use TaggedLogger::Middleware end end # frozen_string_literal: true module TaggedLogger class Middleware def initialize(app) @app = app end def call(env) request = ActionDispatch::Request.new(env) request.session.send(:load!) unless request.session.loaded? if (user_id = request.session[:user_id]) tag = &#34;user_id=#{user_id}&#34; Rails.logger.tagged(tag) do @app.call(env) end else @app.call(env) end end end end アウトプット [user_id=1] が今回付与したタ...</p>
   </section>
-  <footer class="entry-footer">January 21, 2020
+  <footer class="entry-footer">February 10, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to ロケールファイルをサービス毎に分割したい" href="https://rengotaku.github.io/posts/7f458780-45b6-4fa5-ab48-184bb39ad474/"></a>
+  <a class="entry-link" aria-label="post link to railsのログにタグづけしたい" href="https://rengotaku.github.io/posts/c8804b8e-6ac2-450c-b5ea-9009c1a43da4/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      削除処理を呼び出し時にActionController::InvalidAuthenticityTokenが発生
+      railsのipメソッドとremove_ipメソッドの違い
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 dockerで開発しているが、ポートを変更している為に発生している模様。nginxなどでヘッダーのトークンを書き換えればいいかなと。 それ...</p>
+    <p>解決 remote_ip は、 ActionDispatch::RemoteIp で判定したIPを優先する。 その判定がない場合は、 ip メソッドを使用する。 ruby - What’s the difference between request.remote_ip and request.ip in Rails? - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">January 21, 2020
+  <footer class="entry-footer">February 10, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to 削除処理を呼び出し時にActionController::InvalidAuthenticityTokenが発生" href="https://rengotaku.github.io/posts/e7758338-63b3-420c-8b10-3a37107141a7/"></a>
+  <a class="entry-link" aria-label="post link to railsのipメソッドとremove_ipメソッドの違い" href="https://rengotaku.github.io/posts/ab1cdacb-a34b-45ed-a16a-7cd2627d10b7/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      submoduleをcloneする
+      td-agentをdockerで動かす
     </h2>
   </header>
   <section class="entry-content">
-    <p>clone時 recursive を付与 $ git clone --recursive git://github.com/foo/bar.git 既にcloneしている $ git submodule update --init --recursive gitでクローンと同時にサブモジュールを初期化、アップデートする – IsaB...</p>
+    <p>構成 td-agent/ ├── docker-compose.yml ├── Dockerfile ├── test.log ├── conf │ ├── app.conf │ └── td-agent.conf └── install-redhat-td-agent2.5.sh 設定 docker FROM drecom/centos-ruby:2.6.5 ADD install-redhat-td-agent2.5.sh /tmp/ RUN sh /tmp/install-redhat-td-agent2.5.sh RUN td-agent-gem install \ fluent-plugin-multiprocess \ fluent-plugin-forest \ fluent-plugin-rewrite-tag-filter RUN /etc/init.d/td-agent start CMD [&#34;td-agent&#34;] version: “3” services: minio: image: minio/minio:RELEASE.2020-01-25T02-50-51Z volumes: - minio_volume:/data ports: - “9090:9000”...</p>
   </section>
-  <footer class="entry-footer">January 21, 2020
+  <footer class="entry-footer">February 10, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to submoduleをcloneする" href="https://rengotaku.github.io/posts/1c62d434-9d02-432d-a4c6-e2621527bb61/"></a>
+  <a class="entry-link" aria-label="post link to td-agentをdockerで動かす" href="https://rengotaku.github.io/posts/2b3ece27-3f34-4f13-9edf-3881a7821751/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      いつか読みたいサイト
+      Dockerfileでスマートなコマンド設定
     </h2>
   </header>
   <section class="entry-content">
-    <p>RURURU HomePage フロント、バックエンド周り linuxのリンク集 | ベジタブルプログラム linux周り POSTD | プログラミングするエンジニアに向けたトレンドメディ...</p>
+    <p>minioの公式Dockerfileでは Dockerfile CMD [&#34;minio&#34;] docker-compose.yml command: server /data 結果 minio server /data として実行される。 minio/minio Dockerfile - Docker Hub ということはrailsだと Dockerfile CMD [&#34;bundle&#34;, &#34;exec&#34;, &#34;rails&#34;, &#34;s&#34;] docker-compose.yml command: -p 3001 結...</p>
   </section>
-  <footer class="entry-footer">January 21, 2020
+  <footer class="entry-footer">February 7, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to いつか読みたいサイト" href="https://rengotaku.github.io/posts/24e79626-892b-4fbb-8642-82e534f99df9/"></a>
+  <a class="entry-link" aria-label="post link to Dockerfileでスマートなコマンド設定" href="https://rengotaku.github.io/posts/0306c4bd-acdf-43da-841d-24ea1f5227ef/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      .profile、.bashrc、.bash_profileの違い
+      yumのインストール可能なバージョンを取得
     </h2>
   </header>
   <section class="entry-content">
-    <p>.profile 環境変数など # 環境変数の設定 export PATH=&#34;/usr/local/opt/mysql@5.7/bin:$PATH&#34; export PATH=&#34;/usr/local/opt/openssl/bin:$PATH&#34; export PATH=&#34;~/Library/Python/3.7/bin:$PATH&#34; export PATH=&#34;$HOME/.nodenv/bin:$PATH&#34; .bashrc エイリアス、シェルオプション、プロンプト設定 # エイリアスの設定 alias ll=&#39;ls -l&#39; alias relogin=&#39;exec $SHELL -l&#39; .bash_profile 標準出力が発生...</p>
+    <p>--showduplicates オプションを使用 $ yum --showduplicates list httpd | expand Loaded plugins: fastestmirror, langpacks, refresh-packagekit Loading mirror speeds from cached hostfile * fedora: mirror.steadfast.net Available Packages httpd.x86_64 2.4.6-6.fc20 fedora httpd.x86_64 2.4.10-1.fc20 updates How can I instruct yum to install a specific version of package X? - Unix &amp; Linux Stack Exchange...</p>
   </section>
-  <footer class="entry-footer">January 21, 2020
+  <footer class="entry-footer">February 6, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to .profile、.bashrc、.bash_profileの違い" href="https://rengotaku.github.io/posts/1d962586-8b1d-49d1-8f4f-dddea4e1db71/"></a>
+  <a class="entry-link" aria-label="post link to yumのインストール可能なバージョンを取得" href="https://rengotaku.github.io/posts/ffbbc114-2c95-4ad9-bdcc-a64b0fdbf8ca/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      propsの宣言のvalueの謎の？(クエスチョンマーク)の意味
+      0.12系のtd-agentをインストールしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>未解決 意味がわかりそうで分からない。 type A = { prop?: T } means that object can have prop of type T or do not have it at all. type B = { prop: ?T } means that object always have prop, it can be of type T or null. type C = { prop?: ?T } means...</p>
+    <p>sudo sh &lt;&lt;SCRIPT # add GPG key rpm --import https://packages.treasuredata.com/GPG-KEY-td-agent # add treasure data repository to yum cat &gt;/etc/yum.repos.d/td.repo &lt;&lt;&#39;EOF&#39;; [treasuredata] name=TreasureData baseurl=http://packages.treasuredata.com/2.5/redhat/\$releasever/\$basearch gpgcheck=1 gpgkey=https://packages.treasuredata.com/GPG-KEY-td-agent EOF # update your sources yum check-update # install the toolbelt yes | yum install -y td-agent SCRIPT install-redhat-td-agent2.5.sh Download | Fluentd...</p>
   </section>
-  <footer class="entry-footer">January 20, 2020
+  <footer class="entry-footer">February 6, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to propsの宣言のvalueの謎の？(クエスチョンマーク)の意味" href="https://rengotaku.github.io/posts/60eb6716-a436-4885-9b37-d288c3ce2def/"></a>
+  <a class="entry-link" aria-label="post link to 0.12系のtd-agentをインストールしたい" href="https://rengotaku.github.io/posts/fda62db1-e01b-4b3c-8020-e9d418601235/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Docker上のcapistranoから別途立てたローカルサーバにアクセス
+      docker-composeでサイドカー方式を取りたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>構図 Capistrano Server[Docker] &lt;=&gt; Local[Mac] &lt;=&gt; SSHD Server[Docker] 接続先(ファイル設置先) サーバ 設定ファイル version: &#34;3&#34; services: ssh: build: dockerfile: Dockerfile command: [&#34;/usr/sbin/sshd&#34;, &#34;-D&#34;] tty: true ports: - &#34;10022:22&#34; Docker 初心者 — ssh で接続できるサーバーを立てる - Qiita FROM ubuntu:16.04 RUN...</p>
+    <p>結論 ボリュームを共有して擬似的に行う。 kubanetesみたいに、一つのホストに複数プロセスを共存させるやり方はできなさそう。 version: &#39;3&#39; services: tomcat: image: tomcat:alpine container_name:...</p>
   </section>
-  <footer class="entry-footer">January 17, 2020
+  <footer class="entry-footer">February 6, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to Docker上のcapistranoから別途立てたローカルサーバにアクセス" href="https://rengotaku.github.io/posts/cae07512-deaa-4c5b-94cd-6ea0b68b1ca6/"></a>
+  <a class="entry-link" aria-label="post link to docker-composeでサイドカー方式を取りたい" href="https://rengotaku.github.io/posts/f90584af-b2a0-4162-a73f-46ae993cab30/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      rspecでテストをまとめる
+      RSpec/MultipleExpectationsを回避
     </h2>
   </header>
   <section class="entry-content">
-    <p>テストメソッド def self.runnable! return if !(Rails.env.staging? || Rails.env.production?) || ENV[&#34;IMPORTANT_CODE&#34;].present? raise Error end アフター describe &#34;#runnable!&#34; do subject { described_class.runnable! } let(:set_code) { ENV[&#34;IMPORTANT_CODE&#34;] = &#34;hoge&#34; } let(:unset_code) { ENV[&#34;IMPORTANT_CODE&#34;] = nil } context &#34;development&#34; do before { allow(Rails.env).to receive(:development?).and_return(true) } it_behaves_like &#34;check important code for development&#34; end context &#34;staging&#34; do before { allow(Rails.env).to receive(:staging?).and_return(true) } it_behaves_like &#34;check important code for...</p>
+    <p>解決 aggregate_failures を使用する it &#34;正常動作する&#34; do subject aggregate_failures &#34;最後まで通過&#34; do expect(job_instance).to have_received(:hoge1) expect(job_instance).to have_received(:hoge2).at_least(1).times end end 実用的な新機能が盛りだくさん！RSpe...</p>
   </section>
-  <footer class="entry-footer">January 16, 2020
+  <footer class="entry-footer">February 6, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to rspecでテストをまとめる" href="https://rengotaku.github.io/posts/c572bdd1-576f-4caf-a2b0-fb2dcda032be/"></a>
+  <a class="entry-link" aria-label="post link to RSpec/MultipleExpectationsを回避" href="https://rengotaku.github.io/posts/74af4a87-af15-46ef-bd8d-2b59f87d850e/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      application.rb内でI18nを使用すると翻訳できない
+      fluentdからs3への送信をローカルで検証したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 config.after_initialize 内で行う。 module KuraPlatformBackend class Application &lt; Rails::Application ... config.after_initialize do raise I18n.t(&#34;error_messages.not_hoge&#34;) if hoge end end end 事象 サーバ起動直後に特定の条件でエラーを発生させるようにしたい。 しかし、 translation missing: en.error_messages.not_hoge となる。 module KuraPlatformBackend class...</p>
+    <p>概要 dockerで fluentd、 minio を立てて、S3へのログの送信の検証を行う。 構成 . ├── docker-compose.yml ├── fluentd │ ├── Dockerfile │ └── conf │ └── fluentd.conf └── log └...</p>
   </section>
-  <footer class="entry-footer">January 16, 2020
+  <footer class="entry-footer">February 5, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to application.rb内でI18nを使用すると翻訳できない" href="https://rengotaku.github.io/posts/11d31c8e-a7bd-4661-85fc-353749bbca68/"></a>
+  <a class="entry-link" aria-label="post link to fluentdからs3への送信をローカルで検証したい" href="https://rengotaku.github.io/posts/cd79fa35-ab38-484c-86ec-7b0578610cb7/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -7,10 +7,69 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Tue, 24 Nov 2020 16:07:03 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 14 May 2021 10:59:10 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/rails/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nothing downtime with migrating MySQL</title>
+      <link>https://rengotaku.github.io/posts/7edcfc48-b596-4357-9e8c-791b07cc595f/</link>
+      <pubDate>Fri, 14 May 2021 10:59:10 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/7edcfc48-b596-4357-9e8c-791b07cc595f/</guid>
+      <description>Resolution Intended in Avoiding MySQL ALTER table downtime. In my case of runnning 5.6, I can use ..., ALGORITHM=INPLACE, LOCK=NONE. In details MySQL :: MySQL 5.6 Reference Manual :: 14.13.1 Online DDL Operations. But according to MySQL create index with LOCK=NONE still locks a table - Database Administrators Stack Exchange, you can&amp;rsquo;t this way.</description>
+    </item>
     
-	<atom:link href="https://rengotaku.github.io/tags/rails/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using scope as specifying API version in path</title>
+      <link>https://rengotaku.github.io/posts/8d02a24b-4045-411c-8816-1c07f72f3e4d/</link>
+      <pubDate>Thu, 06 May 2021 18:12:31 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/8d02a24b-4045-411c-8816-1c07f72f3e4d/</guid>
+      <description>Resolution Rails 5 Routes: Scope vs Namespace - Devblast namespace :service do scope :v1 do resource :product do get &amp;#34;/&amp;#34;, to: &amp;#34;v1/product#hoge&amp;#34; Motivation If don&amp;rsquo;t expect not to change some APIs behavior even its version increase, you should use scoep instead of namespace. namespace :service do namespace :v1 do resource :product do get &amp;#34;/&amp;#34;, to: &amp;#34;product#hoge&amp;#34; Generated path is service_v1_product GET /service/v1/product(.:format) service/v1/product#hoge.</description>
+    </item>
     
+    <item>
+      <title>ActiveRecord dosen&#39;t support to nested transaction by default settings</title>
+      <link>https://rengotaku.github.io/posts/2a1819fd-d848-47ff-b944-2d14a720489a/</link>
+      <pubDate>Tue, 27 Apr 2021 12:36:33 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/2a1819fd-d848-47ff-b944-2d14a720489a/</guid>
+      <description>Resolution Nested ActiveRecord transaction pitfalls - makandra dev Recoomend to use below: ActiveRecord::Base.transaction(joinable: false, requires_new: true) joinable: false means transactions nested within this transaction will not be discarded (and therefore not be joined to the custom transaction). A real nested transaction will be used, or, if the DBMS does not support nested transaction, this behaviour will be simulated with Savepoints (this is done for MySQL and Postgres). If a custom</description>
+    </item>
+    
+    <item>
+      <title>How to get raw SQL from ActiveRecord in without development</title>
+      <link>https://rengotaku.github.io/posts/323d9f65-18b0-4373-8a28-62423e4a0074/</link>
+      <pubDate>Fri, 23 Apr 2021 09:59:03 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/323d9f65-18b0-4373-8a28-62423e4a0074/</guid>
+      <description>Resolution The answer is in activerecord - How to show SQL queries run in the Rails console? - Stack Overflow. ActiveRecord::Base.logger = Logger.new(STDOUT)</description>
+    </item>
+    
+    <item>
+      <title>bundle updateでエラーが発生する</title>
+      <link>https://rengotaku.github.io/posts/7ca95d58-467e-4005-9046-b2abfe6efd16/</link>
+      <pubDate>Wed, 17 Feb 2021 10:56:38 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/7ca95d58-467e-4005-9046-b2abfe6efd16/</guid>
+      <description>解決 https://github.com/rubygems/rubygems/issues/4380#issuecomment-780128796 より、bundlerのバージョンを指定する。 gem install bundler -v 2.2.9 事象 突如、下記のエラーが発生した。 /usr/local/bundle/gems/bundler-2.2.10/lib/bundler/resolver.rb:470:in `block in validate_resolved_specs!&#39;: The gem &#39;capistrano&#39; was found in multiple relevant sources. (Bundler::SecurityError) * rubygems repository http://hoge.example/ or installed locally * rubygems</description>
+    </item>
+    
+    <item>
+      <title>自前のバリデーションを作成する</title>
+      <link>https://rengotaku.github.io/posts/3aad0181-20b1-4f3c-ab4f-0d78fcab067c/</link>
+      <pubDate>Wed, 03 Feb 2021 18:33:47 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/3aad0181-20b1-4f3c-ab4f-0d78fcab067c/</guid>
+      <description>解決 How to Implement Custom ActiveRecord Validations | by Moses Ogwo | Better Programming | Medium の3. Custom Validators (for an Attribute)を参考 concernsに定義 app/models/concerns/type_validator.rb class TypeValidator &amp;lt; ActiveModel::EachValidator def validate_each(record, attribute, value) unless (value === &amp;#34;wood&amp;#34;) || (value === &amp;#34;iron&amp;#34;) # 好きな条</description>
+    </item>
+    
+    <item>
+      <title>Railsで複数のdatabaseを使用する場合</title>
+      <link>https://rengotaku.github.io/posts/70d1e6c2-b452-426d-9c88-8be03c9d7b50/</link>
+      <pubDate>Fri, 11 Dec 2020 17:25:46 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/70d1e6c2-b452-426d-9c88-8be03c9d7b50/</guid>
+      <description>対応 Rails 6.1 にアップグレードが可能なら、GitHub - ankane/multiverse: Multiple databases for Rails を使用した方がよい。 monkey patchを追加 lib配下などに定義する。 module ActiveRecord NEW_DB = &amp;#34;hoge&amp;#34; class Migration def</description>
+    </item>
     
     <item>
       <title>Activejobでリトライされた場合でも初回時と変わらない値知りたい</title>
@@ -423,7 +482,7 @@
       <pubDate>Thu, 03 Oct 2019 12:58:25 +0900</pubDate>
       
       <guid>https://rengotaku.github.io/posts/8f24c929-ebd0-4976-b007-fbbb5d7093e4/</guid>
-      <description>Can you create an executable test script using one of the templates here, that would demonstrate the problem you are seeing? ActiveRecord 5: method_missing&#39;: undefined method helper&amp;rsquo; for MyMailer · Issue #27359 · rails/rails</description>
+      <description>Can you create an executable test script using one of the templates here, that would demonstrate the problem you are seeing? ActiveRecord 5: method_missing&#39;: undefined method helper&#39; for MyMailer · Issue #27359 · rails/rails</description>
     </item>
     
     <item>

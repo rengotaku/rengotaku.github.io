@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/linux/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/linux/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/linux/" />
-<meta property="og:updated_time" content="2020-02-25T09:39:40+09:00" />
+<meta property="og:updated_time" content="2021-03-21T21:21:49+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="linux"/>
 <meta name="twitter:description" content=""/>
@@ -124,6 +124,34 @@ if (!doNotTrack) {
 
 
 
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ディレクトリへのシンボリックリンクを上書きしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>$ ln -nfs [リンク先] [シンボリックリンクのパス] シンボリックリンクの向き先変更（ln -nfs TARGET LINK_NAME） - Qiita...</p>
+  </section>
+  <footer class="entry-footer">April 15, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to ディレクトリへのシンボリックリンクを上書きしたい" href="https://rengotaku.github.io/posts/f6a2aa14-6761-4bf7-ab30-837cdc5fbb1e/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      sslのメールサーバにアクセスしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>$openssl s_client -connect mail-server.com:995 &#43;OK Dovecot ready. USER [username] # 入力 &#43;OK PASS [password] # 入力 &#43;OK Logged in. LIST # 入力 &#43;OK 2 messages: 1 4687 2 103667 QUIT 入力のコメント部分は、一列丸ごと入力する。`USER [username]` は、 `USER` も入力する。...</p>
+  </section>
+  <footer class="entry-footer">February 27, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to sslのメールサーバにアクセスしたい" href="https://rengotaku.github.io/posts/1f1f3f08-f215-43e7-8ea1-b0ef23364013/"></a>
+</article>
 <article class="post-entry tag-entry"> 
 
   <header class="entry-header">
@@ -235,34 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">July 31, 2018
 </footer>
   <a class="entry-link" aria-label="post link to tar.gzが解凍できない" href="https://rengotaku.github.io/posts/16676d53-850c-4fe9-9f17-79e453431e43/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      nginxのログの加工集
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>ユニークなエラー内容を取得 ログ [Mon Jul 30 05:10:33.786914 2018] [:error] [pid 5408] [client 40.77.167.180:11290] PHP Notice: Undefined variable: target_name in /home/path/to/dependencies.php on line 216 ワンライナー cat /var/log/httpd/sll_error_log | grep &#34;Mon Jul 30 05:&#34; | awk -F &#39;] &#39; &#39;{print $5}&#39; | uniq -c | sort 結果 1 PHP Notice: Undefined index: is_new in...</p>
-  </section>
-  <footer class="entry-footer">July 30, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to nginxのログの加工集" href="https://rengotaku.github.io/posts/7ead2906-7480-4095-90ff-f0b0c9a9c93a/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      サイトのステータスコードを定期的に記録する
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>watch -n30 &#34;curl -LkI &#39;https://XXX&#39; -o /dev/null -w &#39;%{http_code}\n&#39; -s | xargs -L 1 -I &#39;{}&#39; date &#39;&#43;[%Y/%m/%d %H:%M:%S] {}&#39; &gt;&gt; result.txt&#34; -n30・・・インターバル(秒) https://XXX・・・参照先 result.txt・・・出力...</p>
-  </section>
-  <footer class="entry-footer">July 5, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to サイトのステータスコードを定期的に記録する" href="https://rengotaku.github.io/posts/af24431e-9837-408f-ad71-cd02fce42b42/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

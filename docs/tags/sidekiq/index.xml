@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sidekiq on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/sidekiq/</link>
+    <description>Recent content in sidekiq on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Tue, 23 Mar 2021 13:49:40 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/sidekiq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SidekiqのRecurring Jobsの画面に表示される項目を取得したい</title>
+      <link>https://rengotaku.github.io/posts/30c4cd33-6512-48f0-8091-0e9a123c46d7/</link>
+      <pubDate>Tue, 23 Mar 2021 13:49:40 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/30c4cd33-6512-48f0-8091-0e9a123c46d7/</guid>
+      <description>解決 sidekiq-scheduler/job_presenter.rb at master · moove-it/sidekiq-scheduler · GitHub を参考 schedules = Sidekiq.schedule! service_schedules = schedules.select { |key, value| true if something compare } presented_jobs = SidekiqScheduler::JobPresenter.build_collection(service_schedules) presented_jobs[0].next_time presented_jobs[0].last_time presented_jobs[0].enabled? presented_jobs[0].queue</description>
+    </item>
+    
+  </channel>
+</rss>

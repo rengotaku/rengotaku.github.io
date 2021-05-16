@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Thu, 13 Aug 2020 15:02:13 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 23 Dec 2020 15:55:19 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/fluentd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>td-agentでtailでログを読み込ませる際にフォーマットが違うのでアウトプットされない</title>
+      <link>https://rengotaku.github.io/posts/dd87555c-4df5-4d67-8679-1f17f5e0ed8f/</link>
+      <pubDate>Wed, 23 Dec 2020 15:55:19 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/dd87555c-4df5-4d67-8679-1f17f5e0ed8f/</guid>
+      <description>解決 applog.confのsourceのformatをmultilineからjsonに変更 json - Fluentd 起因 type tailで読みとったRailsのlo</description>
+    </item>
     
-	<atom:link href="https://rengotaku.github.io/tags/fluentd/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>運用で発生する色々な問題の対応方法が記載された良記事</title>
+      <link>https://rengotaku.github.io/posts/9d4c7ffd-2736-4a23-b163-e0fd84d1ab6e/</link>
+      <pubDate>Fri, 18 Dec 2020 15:27:43 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/9d4c7ffd-2736-4a23-b163-e0fd84d1ab6e/</guid>
+      <description>あと2時間でElastiCacheのメモリが枯渇！そのときあなたは何をしますか？</description>
+    </item>
     
     <item>
       <title>dockerのみでfluentdを動作させる</title>

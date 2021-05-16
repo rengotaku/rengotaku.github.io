@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Sun, 09 Jun 2019 19:31:35 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/googleappsscript/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 09 Jun 2019 19:31:35 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/googleappsscript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Google Spread SheetをGoogle Apps Scriptで操作する際のtips集</title>
       <link>https://rengotaku.github.io/posts/e6aa600a-b838-4b6a-8f4a-ba3c71472a5d/</link>

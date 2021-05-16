@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Thu, 16 Apr 2020 18:55:21 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 14 Apr 2021 16:36:39 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/bundler/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bundle config設定時に--localを使用する際の注意点</title>
+      <link>https://rengotaku.github.io/posts/1a278cf4-2da6-4dc9-ad95-e4ef511a272e/</link>
+      <pubDate>Wed, 14 Apr 2021 16:36:39 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/1a278cf4-2da6-4dc9-ad95-e4ef511a272e/</guid>
+      <description>解決 bundle config set without &#39;development test&#39; --local BUNDLE_WITHOUT: &amp;quot;development:test&amp;quot; 事象 bundle config set without &#39;development test&#39; --localだと.bundle/configに下記のように記されてしまう。 BUNDLE_SET: &amp;quot;without development test&amp;quot;</description>
+    </item>
     
-	<atom:link href="https://rengotaku.github.io/tags/bundler/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>bundle updateでエラーが発生する</title>
+      <link>https://rengotaku.github.io/posts/7ca95d58-467e-4005-9046-b2abfe6efd16/</link>
+      <pubDate>Wed, 17 Feb 2021 10:56:38 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/7ca95d58-467e-4005-9046-b2abfe6efd16/</guid>
+      <description>解決 https://github.com/rubygems/rubygems/issues/4380#issuecomment-780128796 より、bundlerのバージョンを指定する。 gem install bundler -v 2.2.9 事象 突如、下記のエラーが発生した。 /usr/local/bundle/gems/bundler-2.2.10/lib/bundler/resolver.rb:470:in `block in validate_resolved_specs!&#39;: The gem &#39;capistrano&#39; was found in multiple relevant sources. (Bundler::SecurityError) * rubygems repository http://hoge.example/ or installed locally * rubygems</description>
+    </item>
     
     <item>
       <title>bundle install時に使用するportを指定したい</title>

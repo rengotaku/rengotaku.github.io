@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/posts/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/posts/" />
-<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content=""/>
@@ -128,141 +128,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      cronの設定場所
+      rspecでスタブを使用
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 /var/spool/cron 配下 各ユーザのcrontabファイルの場所について - Qiita 事象 wheneverで設定したcronを確認したいが、 /etc/cron* 配下にない。...</p>
+    <p>staticメソッド describe &#34;comment&#34; do context &#34;サービスがHOGEの場合&#34; do before do allow(Global.application).to receive(:service).and_return(&#34;HOGE&#34;) #&lt;= キモ ... end it &#39;hoge&#39; do ... end end end [RSpec] allow、receive、an...</p>
   </section>
-  <footer class="entry-footer">November 14, 2019
+  <footer class="entry-footer">January 14, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to cronの設定場所" href="https://rengotaku.github.io/posts/d2a743be-31e7-48d6-af73-0eaa83c92ce3/"></a>
+  <a class="entry-link" aria-label="post link to rspecでスタブを使用" href="https://rengotaku.github.io/posts/bd537f3d-6cad-4d94-9efd-d1200b7bd294/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      chromeのみでキャプチャを取る
+      What is it_behaves_like?
     </h2>
   </header>
   <section class="entry-content">
-    <p>方法 GUI 検証モードで Capture full size screenshot を実行する。 chromeの画面キャプチャ CUI 検証モードで Mac command&#43;shift&#43;P → 「full」→return を入力する ChromeでWE...</p>
+    <p>e.g. RSpec.describe Hoge, type: :model do describe &#34;model validation&#34; do subject { new_comment.validate! } let(:new_comment) { build :comment } describe &#34;comment&#34; do context &#34;コメントが空白&#34; do before { new_comment.comment = &#34;&#34; } it_behaves_like &#34;raise record invalid error&#34; end ... What? it_behaves_like will call the test-case as template. Grep your project with the word shared_examples and...</p>
   </section>
-  <footer class="entry-footer">November 13, 2019
+  <footer class="entry-footer">January 10, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to chromeのみでキャプチャを取る" href="https://rengotaku.github.io/posts/c61aa639-b75e-4705-8a1e-b71b28ccaaf0/"></a>
+  <a class="entry-link" aria-label="post link to What is it_behaves_like?" href="https://rengotaku.github.io/posts/bacf2ae4-571a-4f97-b217-8771bc382df9/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      TTYを使用せずにexecを実行
+      mysql2のgemのインストールが失敗する
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 -T オプションを付与する ... docker-compose exec -T rails ... The input device is not a TTY · Issue #5696 · docker/compose 事象 $ find ./test -name *_test.rb | egrep &#39;form|model&#39; | xargs -I _test_ docker-compose exec rails rails test _test_ を実行したところ the input device is not a TTY が発生し...</p>
+    <p>解決 $ export LDFLAGS=&#34;-L/usr/local/opt/openssl/lib&#34; $ export CPPFLAGS=&#34;-I/usr/local/opt/openssl/include&#34; $ bundle config --local build.mysql2 &#34;--with-cppflags=-I/usr/local/opt/openssl/include&#34; $ bundle config --local build.mysql2 &#34;--with-ldflags=-L/usr/local/opt/openssl/lib&#34; $ bundle install 【Rails】MySQL2がbundle installできない時の対応方法 - Qiita 事象 macでmy...</p>
   </section>
-  <footer class="entry-footer">November 12, 2019
+  <footer class="entry-footer">January 9, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to TTYを使用せずにexecを実行" href="https://rengotaku.github.io/posts/4b7054b1-cd68-4d4f-9eaa-563de14c556d/"></a>
+  <a class="entry-link" aria-label="post link to mysql2のgemのインストールが失敗する" href="https://rengotaku.github.io/posts/0a030ad1-7817-41e7-9a31-5b3c5623c121/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      EC2のインスタンスをフィルタリングするスクリプト
+      グローバルにインストールしたgemの削除
     </h2>
   </header>
   <section class="entry-content">
-    <p>alias hoge-ssh=&#39;describe_ec2 | peco | cut -f 5 | xargs -o -n1 ssh&#39; describe_ec2() { aws ec2 describe-instances | \ jq -r &#39;.[][].Instances[] | [.InstanceId, [.Tags[] | select(.Key == &#34;env&#34;).Value][], [.Tags[] | select(.Key == &#34;Name&#34;).Value][], .InstanceType, .NetworkInterfaces[].PrivateIpAddress, .State.Name] | @tsv&#39; } 表示する項目数に合わせて、cutのフィールドを調整する必要...</p>
+    <p>$ gem uninstall -axI `gem list --no-versions | egrep -v &#39;rdoc|psych|json|io-console|bigdecimal&#39;` $ rbenv exec gem install bundler ※Bundlerまで消去されてしまため gemを間違えてグローバルにインストールしてしまった場合...</p>
   </section>
-  <footer class="entry-footer">November 11, 2019
+  <footer class="entry-footer">January 9, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to EC2のインスタンスをフィルタリングするスクリプト" href="https://rengotaku.github.io/posts/98083acc-ca8c-40de-b7a8-bd20d986ea4e/"></a>
+  <a class="entry-link" aria-label="post link to グローバルにインストールしたgemの削除" href="https://rengotaku.github.io/posts/6ff9903c-4675-4f7b-b065-45343a171c09/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      mysqlで既に登録されている値を置換して再登録
+      macにrbenvをインストール
     </h2>
   </header>
   <section class="entry-content">
-    <p>REPLACE を利用する。 update users, ( select id from users where name regexp &#39; &#39; ) as having_spaces set name = REPLACE(name, &#34; &#34;, &#34;&#34;) where users.id = having_spaces.id...</p>
+    <p>rbenvインストール $ brew update $ brew install rbenv ruby-build $ echo &#39;eval &#34;$(rbenv init -)&#34;&#39; &gt;&gt; ~/.bash_profile $ source ~/.bash_profile $ rbenv --version rubyインストール $ rbenv install --list Available versions: ・ ・ 2.1.1 2.1.2 2.2.0-dev jruby-1.5.6 jruby-1.6.3 jruby-1.6.4 ・ ・ $ rbenv install 2.7.0 全環境のバージ...</p>
   </section>
-  <footer class="entry-footer">November 6, 2019
+  <footer class="entry-footer">January 9, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to mysqlで既に登録されている値を置換して再登録" href="https://rengotaku.github.io/posts/baaa474f-9a42-4aae-8cd8-811e581d096d/"></a>
+  <a class="entry-link" aria-label="post link to macにrbenvをインストール" href="https://rengotaku.github.io/posts/234d437a-767d-4df2-9e49-5f4a2674bd40/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      mysqlで正規表現を使用して検索
+      yarnでローカルファイルをインストール対象に含めるとエラーになる
     </h2>
   </header>
   <section class="entry-content">
-    <p>regexp を使用する。 select * from regexptest where str regexp &#39; | &#39;; 正規表現を使ったパターンマッチングを行う(REGEXP演算子) | MySQLの使い方...</p>
+    <p>解決 $ yarn add file:hogehoge.tgz --update-checksums yarn install sporadically fails with integrity check failure · Issue #6407 · yarnpkg/yarn · GitHub npm - Yarn: is it possible to ignore the dependency hash validation of just one module (or registry)? - Stack Overflow 事象 &#34;fanmee-base-ui@file:fanmee-base-ui-v0.0.5.tgz&#34;: version &#34;0.0.5&#34; resolved &#34;file:fanmee-base-ui-v0.0.5.tgz#5cdd18a4527b77da7096cebc8e9369913598d7fa&#34; installすると $ yarn install --pure-lockfile yarn install v1.21.1 [1/4] 🔍 Resolving...</p>
   </section>
-  <footer class="entry-footer">November 6, 2019
+  <footer class="entry-footer">January 8, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to mysqlで正規表現を使用して検索" href="https://rengotaku.github.io/posts/316eed96-858c-4429-bd1f-b5ab8dedddd1/"></a>
+  <a class="entry-link" aria-label="post link to yarnでローカルファイルをインストール対象に含めるとエラーになる" href="https://rengotaku.github.io/posts/963a3a67-f9ca-4949-adcb-22594d791c38/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      cookieの最大値を確認
+      /bin/bashのオプションを設定
     </h2>
   </header>
   <section class="entry-content">
-    <p>Browser Cookie Limits...</p>
+    <p>シェルスクリプトのbashの箇所にオプションを指定してデバッグなどをし易くする方法 #!/bin/bash -xe # -x シェルスクリプト内で実際に実行されたコマンドを表示...</p>
   </section>
-  <footer class="entry-footer">October 30, 2019
+  <footer class="entry-footer">January 7, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to cookieの最大値を確認" href="https://rengotaku.github.io/posts/98ee4003-d3eb-46df-a3a6-7e71f2c60e9a/"></a>
+  <a class="entry-link" aria-label="post link to /bin/bashのオプションを設定" href="https://rengotaku.github.io/posts/e5251869-1fec-4b07-921d-0ec288658ed3/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      高速な文字検索
+      スリープのショートカット
     </h2>
   </header>
   <section class="entry-content">
-    <p>ag を使用する。 配下のフォルダでgmailドメインを検索する $ ag &#39;\@example.com&#39; ./ test 1:example@example.com ag (The Silver Searcher) コマンド覚え書き - Qiita...</p>
+    <p>動作 キー すぐに画面をロック control &#43; command &#43; Q Mac のキーボードショートカット - Apple サポート...</p>
   </section>
-  <footer class="entry-footer">October 30, 2019
+  <footer class="entry-footer">January 6, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to 高速な文字検索" href="https://rengotaku.github.io/posts/b41d38d0-e53d-4569-be09-11f6f211035e/"></a>
+  <a class="entry-link" aria-label="post link to スリープのショートカット" href="https://rengotaku.github.io/posts/c3223d93-985b-4d39-b3cd-b55ca742a518/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      TOPみたいに等間隔で表示したい
+      Encrypting with password
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 column -t を使用 $ COL=$(echo -e &#34;COL1\tCOL2\tCOL3&#34;) $ COL=&#34;$COL\n$(echo -e &#34;VAL1\tVAL2\tVAL3&#34;)&#34; $ COL=&#34;$COL\n$(echo -e &#34;VAL1\tVAL2\tVAL3&#34;)&#34; $ echo -e $COL | column -t COL1 COL2 COL3 VAL1 VAL2 VAL3 VAL1 VAL2 VAL3 awk - How can I format the output of a bash command in neat columns - Stack Overflow...</p>
+    <p>/** * Encrypts plaintext using AES-GCM with supplied password, for decryption with aesGcmDecrypt(). * (c) Chris Veness MIT Licence * * @param {String} plaintext - Plaintext to be encrypted. * @param {String} password - Password to use to encrypt plaintext. * @returns {String} Encrypted ciphertext. * * @example * const ciphertext = await aesGcmEncrypt(&#39;my secret text&#39;, &#39;pw&#39;); * aesGcmEncrypt(&#39;my secret text&#39;, &#39;pw&#39;).then(function(ciphertext) { console.log(ciphertext); }); */ async function aesGcmEncrypt(plaintext, password)...</p>
   </section>
-  <footer class="entry-footer">October 29, 2019
+  <footer class="entry-footer">January 2, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to TOPみたいに等間隔で表示したい" href="https://rengotaku.github.io/posts/fd5e989c-57bb-4d63-a6eb-98e4af62cac3/"></a>
+  <a class="entry-link" aria-label="post link to Encrypting with password" href="https://rengotaku.github.io/posts/c34fa6d0-a16f-4f69-8a83-f42ccad76c96/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      linuxのリンク集
+      Wating file in docker with gulp
     </h2>
   </header>
   <section class="entry-content">
-    <p>FrontPage - Linuxと過ごす...</p>
+    <p>gulp.watch(&#39;./**/*&#39;, {interval: 1000, usePolling: true}, gulp.series(&#39;superTask&#39;)); node.js - Within Docker VM, Gulp-Watch Seems to not work well on volumes hosted from the host OS - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">October 25, 2019
+  <footer class="entry-footer">December 28, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to linuxのリンク集" href="https://rengotaku.github.io/posts/da0107d6-1053-4fad-bd04-04181d3fa012/"></a>
+  <a class="entry-link" aria-label="post link to Wating file in docker with gulp" href="https://rengotaku.github.io/posts/f548e78f-6f95-4276-bf21-64b6385bab2a/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
@@ -287,7 +287,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

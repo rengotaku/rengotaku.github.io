@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/posts/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/posts/" />
-<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content=""/>
@@ -128,141 +128,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      Active jobのretryの検証
+      sshトンネルを使用してmysql-cliで接続する
     </h2>
   </header>
   <section class="entry-content">
-    <p>ソース # frozen_string_literal: true class RetryTestJob &lt; ActiveJob::Base class RetryOnlyDoError &lt; StandardError; end class RetryRailseExceptionError &lt; StandardError; end class RetryWithoutProcessError &lt; StandardError; end class DiscardError &lt; StandardError; end FILENAME = &#34;#{Rails.root.to_s}/tmp/jobtest.txt&#34; queue_as :high discard_on StandardError do |job, e| RetryTestJob.write_file(&#34;retry_on&#34;, job.job_id, job.executions, &#34;#{e.class}: #{e.message}&#34;) end # attempts が０になっても何も行わない retry_on RetryWithoutProcessError, wait: 1.seconds, attempts: 3 # attempts が...</p>
+    <p>解決 $ ssh -N -L 13306:xxx-db-01.cluster-xxx.ap-northeast-1.rds.amazonaws.com:3306 user_name_for_ssh@connect_to_ip_via_ssh $ mysql -u username -p --port=13306 -h 127.0.0.1 database_name 参考 Connect to RDS using an SSH Tunnel - Michalis Antoniou - Medium 補足 Sequel Pro のSSHタブはどのように接続しているのか調べたら、SSHトンネルを利用...</p>
   </section>
-  <footer class="entry-footer">April 23, 2020
+  <footer class="entry-footer">July 7, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to Active jobのretryの検証" href="https://rengotaku.github.io/posts/a6545460-7706-4d6b-82b1-70e70a9080bc/"></a>
+  <a class="entry-link" aria-label="post link to sshトンネルを使用してmysql-cliで接続する" href="https://rengotaku.github.io/posts/262df999-3148-446f-a102-0f0d8d6146ca/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Gitlabで特定時間以降のコメントを集約したい
+      Railsでサービス層を作る際に参考にしたサイト
     </h2>
   </header>
   <section class="entry-content">
-    <p>ソース Bookmarklet javascript:var db={&#34;@xxx&#34;:&#34;1234&#34;};var baseUrl=window.location.href.split(&#34;#&#34;)[0];Date.prototype.addHours=function(h){this.setTime(this.getTime()&#43;(h*60*60*1000));return this};function toDate(timeStr){var timeRegexp=/(.&#43;)(am|pm) (GMT\&#43;\d&#43;)/;var periods=timeStr.replace(timeRegexp,&#39;$2&#39;);baseTime=new Date(timeStr.replace(timeRegexp,&#39;$1&#39;));return periods==&#34;pm&#34;?baseTime.addHours(12):baseTime};var targetTime=toDate(document.querySelector(&#34;#&#34;&#43;window.location.href.split(&#34;#&#34;)[1]&#43;&#34; time&#34;).getAttribute(&#34;title&#34;));var targets={};document.querySelectorAll(&#34;#notes-list .timeline-entry .note-header-info time&#34;).forEach(function(timeE,i){var compareTime=toDate(timeE.getAttribute(&#34;title&#34;));if(targetTime&lt;compareTime){discussion=timeE.closest(&#34;.timeline-content&#34;).getElementsByClassName(&#34;timeline-discussion-body&#34;)[0];if(discussion){target=discussion.getElementsByClassName(&#34;gfm-project_member&#34;)[0];if(target){var urls=targets[target.textContent];urls=urls?urls:[];urls.push(baseUrl&#43;&#34;/&#34;&#43;timeE.closest(&#34;a&#34;).getAttribute(&#34;href&#34;));targets[target.textContent]=urls}}}});message=document.title.split(/ · /)[0]&#43;&#34;\n&#34;;for(let name in targets){message&#43;=&#34;[To:&#34;&#43;db[name]&#43;&#34;]&#34;;message&#43;=&#34;[info]&#34;;targets[name].forEach(function(url){message&#43;=url&#43;&#34;\n&#34;});message&#43;=&#34;[/info]&#34;};prompt(&#34;Copy &amp; paste&#34;,message&#43;&#34;\n\nコメントのご確認をお願い致し...</p>
+    <p>A Comprehensive Guide to Rails Service Objects | Toptal...</p>
   </section>
-  <footer class="entry-footer">April 22, 2020
+  <footer class="entry-footer">July 1, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to Gitlabで特定時間以降のコメントを集約したい" href="https://rengotaku.github.io/posts/6ed1568a-e614-4e7d-838f-2ce048eb76b6/"></a>
+  <a class="entry-link" aria-label="post link to Railsでサービス層を作る際に参考にしたサイト" href="https://rengotaku.github.io/posts/2c93eaff-af3f-483c-a9fe-f6cd8b58c4f8/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Shrineで画像の入れ替え
+      rspecのcontrollerとrequestのタイプ違い
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 class User &lt; ApplicationRecord include ImageUploader::Attachment.new(:icon_image) end image_io = URI.parse(&#34;https://path/to/image.jpg&#34;).open image_uri.basename # filename image_io.size # file size MIME::Types.type_for(image_uri.to_s).first.content_type # extentions user.icon_image.replace(image_io) note replaceではエンドポイント（アクセスURL）を変えずに、画像のみ変える。...</p>
+    <p>解決 requestは複数のcontrollerを使用した場合に使用する。 controllerは単体の動作の確認をする為に確認する。 request spec - Request specs...</p>
   </section>
-  <footer class="entry-footer">April 22, 2020
+  <footer class="entry-footer">June 26, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to Shrineで画像の入れ替え" href="https://rengotaku.github.io/posts/33b2f3e2-e081-4d9a-a6e9-3cc19857a527/"></a>
+  <a class="entry-link" aria-label="post link to rspecのcontrollerとrequestのタイプ違い" href="https://rengotaku.github.io/posts/3b804c9b-47db-4e45-aa32-163eb8d9e5bb/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      GitlabでマージするMerge RequestのタイトルとURLを列挙する
+      入れ子形式のテーブルを作成する際に参考になる資料
     </h2>
   </header>
   <section class="entry-content">
-    <p>Usage Merge RequestのCommitsタブを押下し、コミット一覧を表示 Chromeの検証モードを表示し、Consoleタブで下記のScriptを...</p>
+    <p>SQLアンチパターン - ナイーブツリー...</p>
   </section>
-  <footer class="entry-footer">April 17, 2020
+  <footer class="entry-footer">June 23, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to GitlabでマージするMerge RequestのタイトルとURLを列挙する" href="https://rengotaku.github.io/posts/2e7b6641-1cdf-4300-9b33-526b977325ce/"></a>
+  <a class="entry-link" aria-label="post link to 入れ子形式のテーブルを作成する際に参考になる資料" href="https://rengotaku.github.io/posts/62f8880b-3537-423d-a6f1-81605590bd50/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      bundle install時に使用するportを指定したい
+      MySQLのNULLの扱いで参考になる
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 command_socksify をインストールして行う GitHub - tkeo/command_socksify もっと詳細に設定したい configに追記 ~/.ssh/config に下記のように設定して、フォワーディングしているポートを指定する...</p>
+    <p>IS NULL を使用した検索では、インデックスが使用される NULL を許可するカラムにユニークインデックスを貼った場合、各々のNULL は別の値として区別され、...</p>
   </section>
-  <footer class="entry-footer">April 16, 2020
+  <footer class="entry-footer">June 23, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to bundle install時に使用するportを指定したい" href="https://rengotaku.github.io/posts/a6f5b613-be19-442f-9672-7a20526f8b0f/"></a>
+  <a class="entry-link" aria-label="post link to MySQLのNULLの扱いで参考になる" href="https://rengotaku.github.io/posts/41e47535-c950-4aa2-aff0-c1d0c8d63d8a/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      gitlabに接続できない場合に尋ねる前にするべきこと
+      factorybotで関連テーブルの作成を簡易に行なっているのに引数を渡したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>確認 -vvv オプションでデバッグできる ssh -i &lt;秘密鍵の場所&gt; git@example.com -vvv 正常 $ ssh -i ~/.ssh/id_rsa git@git.example.com -vvv OpenSSH_7.9p1, LibreSSL 2.7.3 debug1: Reading configuration data /path/to/.ssh/config debug1: Reading configuration data /etc/ssh/ssh_config debug1: /etc/ssh/ssh_config line 48: Applying options for * debug1: Connecting to example.com. debug1: Connection established....</p>
+    <p>解決 FactoryBot.define do factory :user_action_error do user user_action_history { association(:user_action_history, user: user) } end end 参考 Creating associations initialized via ‘build’ no longer works in FactoryBot 5.0 · Issue #1255 · thoughtbot/factory_bot 事象 FactoryBot.define do factory :user_action_error do user user_action_history end end のように、has_many、has_one、bel...</p>
   </section>
-  <footer class="entry-footer">April 16, 2020
+  <footer class="entry-footer">June 22, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to gitlabに接続できない場合に尋ねる前にするべきこと" href="https://rengotaku.github.io/posts/f2061de8-c51c-4db6-a7ac-26159cf1fdc8/"></a>
+  <a class="entry-link" aria-label="post link to factorybotで関連テーブルの作成を簡易に行なっているのに引数を渡したい" href="https://rengotaku.github.io/posts/cb6fde25-ff82-4b5b-b2ed-444d26e0da9f/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      dockerでホストのIPを参照する
+      使いやすそうなWindows用のターミナル
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 host.docker.internal のホスト名で参照可能に Networking features in Docker Desktop for Windows | Docker Documentation...</p>
+    <p>MobaXterm Xserver with SSH, telnet, RDP, VNC and X11 - Animated demo...</p>
   </section>
-  <footer class="entry-footer">April 14, 2020
+  <footer class="entry-footer">June 16, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to dockerでホストのIPを参照する" href="https://rengotaku.github.io/posts/97ac32f6-f847-44b6-aab3-09ceb6850fc2/"></a>
+  <a class="entry-link" aria-label="post link to 使いやすそうなWindows用のターミナル" href="https://rengotaku.github.io/posts/35603bfe-0372-45d7-8a4d-ac72a08a2cfe/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      構造体(struct)をソートする
+      S3のパフォーマンス
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 reviews_data_map := []reviews_data{} reviews_data_map = append(reviews_data_map, reviews_data{date: time.Now().Add(12 * time.Hour), id: &#34;1&#34;}) reviews_data_map = append(reviews_data_map, reviews_data{date: time.Now(), id: &#34;3&#34;}) reviews_data_map = append(reviews_data_map, reviews_data{date: time.Now().Add(24 * time.Hour), id: &#34;2&#34;}) // 1, 2020-04-08 05:47:11.19533 &#43;0900 JST m=&#43;43200.002075162 // 3, 2020-04-07 17:47:11.195331 &#43;0900 JST m=&#43;0.002076090 // 2, 2020-04-08 17:47:11.195335 &#43;0900 JST m=&#43;86400.002079860 for _, v := range reviews_data_map { fmt.Printf(&#34;%s, %s\n&#34;, v.id, v.date) } // 日付でソート...</p>
+    <p>Best Practices Design Patterns: Optimizing Amazon S3 Performance - Amazon Simple Storage Service S3のバケットのprefixを分けることはパフォーマン向上に繋がる。 S3はバケットののprefix毎に3,500 PUT/COPY/POST/DELETE...</p>
   </section>
-  <footer class="entry-footer">April 7, 2020
+  <footer class="entry-footer">June 3, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to 構造体(struct)をソートする" href="https://rengotaku.github.io/posts/437a783c-7f30-4413-afa1-de302cb35e6f/"></a>
+  <a class="entry-link" aria-label="post link to S3のパフォーマンス" href="https://rengotaku.github.io/posts/fc4f3355-3081-4871-a21a-f0cc2f211231/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      日付のゾーンをutcからjstに変換
+      onsenでリストをスワイプしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 dtstr1 := &#34;Wed Mar 18 00:41:11 &#43;0000 2020&#34; dt, _ := time.Parse(&#34;Mon Jan 02 15:04:05 -0700 2006&#34;, dtstr1) fmt.Println(dt) //2020-03-18 00:41:11 &#43;0000 &#43;0000 jst := time.FixedZone(&#34;Asia/Tokyo&#34;, 9*60*60) nowJST := dt.In(jst) fmt.Println(nowJST) //2020-03-18 09:41:11 &#43;0900 Asia/Tokyo...</p>
+    <p>angularjs - Onsen UI Carousel Swipe list item - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">April 7, 2020
+  <footer class="entry-footer">May 31, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to 日付のゾーンをutcからjstに変換" href="https://rengotaku.github.io/posts/5978cfb8-9f0c-481e-b766-d42ff9664c79/"></a>
+  <a class="entry-link" aria-label="post link to onsenでリストをスワイプしたい" href="https://rengotaku.github.io/posts/6def0507-b28e-43e8-89be-03aa8d3584f3/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      proxy経由でサーバに接続する
+      スプレッドシートで日、時のセルを結合したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 ProxyCommand nc -v -X 5 -x proxy-ip:1080 %h %p で行えた。 Host remhost HostName my.host.com User myuser ProxyCommand nc -v -X 5 -x proxy-ip:1080 %h %p 2&gt; ssh-err.log ServerAliveInterval 30 ForwardX11 yes ForwardX11 は不要だった 私の場合 下記を設定の上、別タブで接続した状態にしてい...</p>
+    <p>=concatenate(text(A2,&#34;mm/dd/yyyy&#34;)&amp;&#34; &#34;&amp;text(B2,&#34;hh:mm:ss&#34;)) 時間(01)だけだと変換に失敗するので、01:00:00などに置換しておく。 How to combine date and time columns into one column in Google sheets?...</p>
   </section>
-  <footer class="entry-footer">April 1, 2020
+  <footer class="entry-footer">May 28, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to proxy経由でサーバに接続する" href="https://rengotaku.github.io/posts/200b1a07-97a8-4275-892e-f2c3b5e68cd5/"></a>
+  <a class="entry-link" aria-label="post link to スプレッドシートで日、時のセルを結合したい" href="https://rengotaku.github.io/posts/1dbab119-0fd7-4334-ba23-a467668743d4/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
@@ -287,7 +287,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

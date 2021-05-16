@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Tue, 26 Nov 2019 15:41:51 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/circleci2/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 26 Nov 2019 15:41:51 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/circleci2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CircleCIでGithubからCheckoutできないエラーが発生</title>
       <link>https://rengotaku.github.io/posts/ecfa30ba-d8cb-41f0-9769-2a3286fc4a83/</link>

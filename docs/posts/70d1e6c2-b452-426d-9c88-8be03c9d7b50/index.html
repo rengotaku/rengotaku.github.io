@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Railsで複数のdatabaseを使用する場合 | Vegetable Programing</title>
+
+<meta name="keywords" content="rails, ベジプロ, プログ, プログラム" />
+<meta name="description" content="対応 Rails 6.1 にアップグレードが可能なら、GitHub - ankane/multiverse: Multiple databases for Rails を使用した方がよい。 monkey patchを追加 lib配下などに定義する。 module ActiveRecord NEW_DB = &#34;hoge&#34; class Migration def">
+<meta name="author" content="">
+<link rel="canonical" href="https://rengotaku.github.io/posts/70d1e6c2-b452-426d-9c88-8be03c9d7b50/" />
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
+    as="style">
+
+<link rel="icon" href="https://rengotaku.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rengotaku.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rengotaku.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://rengotaku.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.83.1" />
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-109045589-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<meta property="og:title" content="Railsで複数のdatabaseを使用する場合" />
+<meta property="og:description" content="対応 Rails 6.1 にアップグレードが可能なら、GitHub - ankane/multiverse: Multiple databases for Rails を使用した方がよい。 monkey patchを追加 lib配下などに定義する。 module ActiveRecord NEW_DB = &#34;hoge&#34; class Migration def" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rengotaku.github.io/posts/70d1e6c2-b452-426d-9c88-8be03c9d7b50/" />
+<meta property="article:published_time" content="2020-12-11T17:25:46+09:00" />
+<meta property="article:modified_time" content="2020-12-14T19:09:26+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Railsで複数のdatabaseを使用する場合"/>
+<meta name="twitter:description" content="対応 Rails 6.1 にアップグレードが可能なら、GitHub - ankane/multiverse: Multiple databases for Rails を使用した方がよい。 monkey patchを追加 lib配下などに定義する。 module ActiveRecord NEW_DB = &#34;hoge&#34; class Migration def"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Railsで複数のdatabaseを使用する場合",
+  "name": "Railsで複数のdatabaseを使用する場合",
+  "description": "対応 Rails 6.1 にアップグレードが可能なら、GitHub - ankane/multiverse: Multiple databases for Rails を使用した方がよい。 monkey patchを追加 lib配下などに定義する。 module ActiveRecord NEW_DB = \u0026amp;#34;hoge\u0026amp;#34; class …",
+  "keywords": [
+    "rails", "ベジプロ", "プログ", "プログラム"
+  ],
+  "articleBody": "対応 Rails 6.1 にアップグレードが可能なら、GitHub - ankane/multiverse: Multiple databases for Rails を使用した方がよい。\nmonkey patchを追加 lib配下などに定義する。\nmodule ActiveRecord NEW_DB = \"hoge\" class Migration def self.load_new_database_schema_if_pending! current_config = Base.connection_config all_configs = ActiveRecord::Base.configurations.configs_for(env_name: \"#{NEW_DB}_#{Rails.env}\") needs_update = !all_configs.all? do |db_config| Tasks::DatabaseTasks.schema_up_to_date?(db_config.config, ActiveRecord::Base.schema_format, nil, Rails.env, db_config.spec_name) end if needs_update # Roundtrip to Rake to allow plugins to hook into database initialization. root = defined?(ENGINE_ROOT) ? ENGINE_ROOT : Rails.root FileUtils.cd(root) do Base.clear_all_connections! system(\"DB=#{NEW_DB}bin/rails db:test:prepare\") end end # Establish a new connection, the old database may be gone (db:test:prepare uses purge) Base.establish_connection(current_config) check_pending! end def self.maintain_test_new_database_schema! #:nodoc: suppress_messages { load_new_database_schema_if_pending! } if ActiveRecord::Base.maintain_test_schema end end end  spec/rails_helper.rb のActiveRecord::Migration.maintain_test_schema!の後に呼ぶ。 rails/migration.rb at v6.0.2.1 · rails/rails · GitHub を参考にしてます。  rspecでテスト実行前後のデータの処理 require \"database_cleaner\" DATABASE_MODELS = [ SecondDbRecord, FirstDbRecord ].freeze RSpec.configure do |config| # If you're not using ActiveRecord, or you'd prefer not to run each of your # examples within a transaction, remove the following line or assign false # instead of true. # NOTE: DatabaseCleaner 使ってるのでこちらは使わない config.use_transactional_fixtures = false config.before do DATABASE_MODELS.each do |model| report_database_cleaner = DatabaseCleaner[:active_record, { db: model }] report_database_cleaner.strategy = :transaction report_database_cleaner.clean_with(:transaction) end end config.before(:each, use_truncation: true) do DATABASE_MODELS.each do |model| report_database_cleaner = DatabaseCleaner[:active_record, { db: model }] report_database_cleaner.strategy = :truncation, { except: %w[ar_internal_metadata] } report_database_cleaner.clean_with(:truncation, except: %w[ar_internal_metadata]) end end config.before do DATABASE_MODELS.each do |model| DatabaseCleaner[:active_record, { db: model }].start end end config.after do DATABASE_MODELS.each do |model| DatabaseCleaner[:active_record, { db: model }].clean end end end  Configure RSpec for multiple databases with Database Cleaner support | Development Simplified  ※メインで接続するDBはDATABASE_MODELS(配列)の最後に定義する\n",
+  "wordCount" : "417",
+  "inLanguage": "en",
+  "datePublished": "2020-12-11T17:25:46+09:00",
+  "dateModified": "2020-12-14T19:09:26+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rengotaku.github.io/posts/70d1e6c2-b452-426d-9c88-8be03c9d7b50/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vegetable Programing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rengotaku.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+</head>
+
+<body class="single" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        .theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://rengotaku.github.io/" accesskey="h">Vegetable Programing</a>
+            <span class="logo-switches">
+                <span class="theme-toggle">
+                    <a id="theme-toggle" accesskey="t">
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </a>
+                </span>
+                
+            </span>
+        </div>
+        <ul class="menu" id="menu" onscroll="menu_on_scroll()">
+            <li>
+                <a href="https://rengotaku.github.io/about/">
+                    <span>
+                        about me
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://rengotaku.github.io/archive/">
+                    <span>
+                        archive
+                    </span>
+                </a>
+            </li></ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      Railsで複数のdatabaseを使用する場合
+    </h1>
+    <div class="post-meta">December 11, 2020
+
+    </div>
+  </header> 
+
+  <div class="post-content">
+<h1 id="対応">対応<a hidden class="anchor" aria-hidden="true" href="#対応">#</a></h1>
+<p>Rails 6.1 にアップグレードが可能なら、<a href="https://github.com/ankane/multiverse#upgrading-to-rails-6">GitHub - ankane/multiverse: Multiple databases for Rails</a> を使用した方がよい。</p>
+<h2 id="monkey-patchを追加">monkey patchを追加<a hidden class="anchor" aria-hidden="true" href="#monkey-patchを追加">#</a></h2>
+<p>lib配下などに定義する。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#66d9ef">module</span> ActiveRecord
+  <span style="color:#66d9ef">NEW_DB</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hoge&#34;</span>
+  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Migration</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">load_new_database_schema_if_pending!</span>
+      current_config <span style="color:#f92672">=</span> <span style="color:#66d9ef">Base</span><span style="color:#f92672">.</span>connection_config
+      all_configs <span style="color:#f92672">=</span> <span style="color:#66d9ef">ActiveRecord</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Base</span><span style="color:#f92672">.</span>configurations<span style="color:#f92672">.</span>configs_for(<span style="color:#e6db74">env_name</span>: <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">NEW_DB</span><span style="color:#e6db74">}</span><span style="color:#e6db74">_</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>env<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+
+      needs_update <span style="color:#f92672">=</span> <span style="color:#f92672">!</span>all_configs<span style="color:#f92672">.</span>all? <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>db_config<span style="color:#f92672">|</span>
+        <span style="color:#66d9ef">Tasks</span><span style="color:#f92672">::</span><span style="color:#66d9ef">DatabaseTasks</span><span style="color:#f92672">.</span>schema_up_to_date?(db_config<span style="color:#f92672">.</span>config, <span style="color:#66d9ef">ActiveRecord</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Base</span><span style="color:#f92672">.</span>schema_format, <span style="color:#66d9ef">nil</span>, <span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>env, db_config<span style="color:#f92672">.</span>spec_name)
+      <span style="color:#66d9ef">end</span>
+
+      <span style="color:#66d9ef">if</span> needs_update
+        <span style="color:#75715e"># Roundtrip to Rake to allow plugins to hook into database initialization.</span>
+        root <span style="color:#f92672">=</span> defined?(<span style="color:#66d9ef">ENGINE_ROOT</span>) ? <span style="color:#66d9ef">ENGINE_ROOT</span> : <span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>root
+        <span style="color:#66d9ef">FileUtils</span><span style="color:#f92672">.</span>cd(root) <span style="color:#66d9ef">do</span>
+          <span style="color:#66d9ef">Base</span><span style="color:#f92672">.</span>clear_all_connections!
+          system(<span style="color:#e6db74">&#34;DB=</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">NEW_DB</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> bin/rails db:test:prepare&#34;</span>)
+        <span style="color:#66d9ef">end</span>
+      <span style="color:#66d9ef">end</span>
+
+      <span style="color:#75715e"># Establish a new connection, the old database may be gone (db:test:prepare uses purge)</span>
+      <span style="color:#66d9ef">Base</span><span style="color:#f92672">.</span>establish_connection(current_config)
+
+      check_pending!
+    <span style="color:#66d9ef">end</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">maintain_test_new_database_schema!</span> <span style="color:#75715e">#:nodoc:</span>
+      suppress_messages { load_new_database_schema_if_pending! } <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">ActiveRecord</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Base</span><span style="color:#f92672">.</span>maintain_test_schema
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><ul>
+<li>spec/rails_helper.rb の<code>ActiveRecord::Migration.maintain_test_schema!</code>の後に呼ぶ。</li>
+<li><a href="https://github.com/rails/rails/blob/v6.0.2.1/activerecord/lib/active_record/migration.rb">rails/migration.rb at v6.0.2.1 · rails/rails · GitHub</a> を参考にしてます。</li>
+</ul>
+<h2 id="rspecでテスト実行前後のデータの処理">rspecでテスト実行前後のデータの処理<a hidden class="anchor" aria-hidden="true" href="#rspecでテスト実行前後のデータの処理">#</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">require <span style="color:#e6db74">&#34;database_cleaner&#34;</span>
+
+<span style="color:#66d9ef">DATABASE_MODELS</span> <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>
+  <span style="color:#66d9ef">SecondDbRecord</span>,
+  <span style="color:#66d9ef">FirstDbRecord</span>
+<span style="color:#f92672">].</span>freeze
+
+<span style="color:#66d9ef">RSpec</span><span style="color:#f92672">.</span>configure <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>config<span style="color:#f92672">|</span>
+  <span style="color:#75715e"># If you&#39;re not using ActiveRecord, or you&#39;d prefer not to run each of your</span>
+  <span style="color:#75715e"># examples within a transaction, remove the following line or assign false</span>
+  <span style="color:#75715e"># instead of true.</span>
+  <span style="color:#75715e"># NOTE: DatabaseCleaner 使ってるのでこちらは使わない</span>
+  config<span style="color:#f92672">.</span>use_transactional_fixtures <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
+
+  config<span style="color:#f92672">.</span>before <span style="color:#66d9ef">do</span>
+    <span style="color:#66d9ef">DATABASE_MODELS</span><span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>model<span style="color:#f92672">|</span>
+      report_database_cleaner <span style="color:#f92672">=</span> <span style="color:#66d9ef">DatabaseCleaner</span><span style="color:#f92672">[</span><span style="color:#e6db74">:active_record</span>, { <span style="color:#e6db74">db</span>: model }<span style="color:#f92672">]</span>
+      report_database_cleaner<span style="color:#f92672">.</span>strategy <span style="color:#f92672">=</span> <span style="color:#e6db74">:transaction</span>
+      report_database_cleaner<span style="color:#f92672">.</span>clean_with(<span style="color:#e6db74">:transaction</span>)
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
+
+  config<span style="color:#f92672">.</span>before(<span style="color:#e6db74">:each</span>, <span style="color:#e6db74">use_truncation</span>: <span style="color:#66d9ef">true</span>) <span style="color:#66d9ef">do</span>
+    <span style="color:#66d9ef">DATABASE_MODELS</span><span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>model<span style="color:#f92672">|</span>
+      report_database_cleaner <span style="color:#f92672">=</span> <span style="color:#66d9ef">DatabaseCleaner</span><span style="color:#f92672">[</span><span style="color:#e6db74">:active_record</span>, { <span style="color:#e6db74">db</span>: model }<span style="color:#f92672">]</span>
+      report_database_cleaner<span style="color:#f92672">.</span>strategy <span style="color:#f92672">=</span> <span style="color:#e6db74">:truncation</span>, { <span style="color:#e6db74">except</span>: <span style="color:#e6db74">%w[ar_internal_metadata]</span> }
+      report_database_cleaner<span style="color:#f92672">.</span>clean_with(<span style="color:#e6db74">:truncation</span>, <span style="color:#e6db74">except</span>: <span style="color:#e6db74">%w[ar_internal_metadata]</span>)
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
+
+  config<span style="color:#f92672">.</span>before <span style="color:#66d9ef">do</span>
+    <span style="color:#66d9ef">DATABASE_MODELS</span><span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>model<span style="color:#f92672">|</span>
+      <span style="color:#66d9ef">DatabaseCleaner</span><span style="color:#f92672">[</span><span style="color:#e6db74">:active_record</span>, { <span style="color:#e6db74">db</span>: model }<span style="color:#f92672">].</span>start
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
+
+  config<span style="color:#f92672">.</span>after <span style="color:#66d9ef">do</span>
+    <span style="color:#66d9ef">DATABASE_MODELS</span><span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>model<span style="color:#f92672">|</span>
+      <span style="color:#66d9ef">DatabaseCleaner</span><span style="color:#f92672">[</span><span style="color:#e6db74">:active_record</span>, { <span style="color:#e6db74">db</span>: model }<span style="color:#f92672">].</span>clean
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><ul>
+<li><a href="http://joshfrankel.me/blog/configure-rspec-for-multiple-databases-with-database-cleaner-support/">Configure RSpec for multiple databases with Database Cleaner support | Development Simplified</a></li>
+</ul>
+<p>※メインで接続するDBはDATABASE_MODELS(配列)の最後に定義する</p>
+
+</div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://rengotaku.github.io/tags/rails">rails</a></li>
+    </ul>
+  </footer>
+</article>
+    </main><footer class="footer">
+    <span>©2018-2020 Vegetable Programing.</span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" accesskey="g">
+    <button class="top-link" id="top-link" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+            <path d="M12 6H0l6-6z" /></svg>
+    </button>
+</a>
+
+
+
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<script>
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+        }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+</body>
+
+</html>

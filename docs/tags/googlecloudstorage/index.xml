@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Wed, 21 Nov 2018 11:46:19 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/googlecloudstorage/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 21 Nov 2018 11:46:19 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/googlecloudstorage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>シェルからGCPへファイルをアップロード</title>
       <link>https://rengotaku.github.io/posts/1876f788-38a0-4039-9aa9-ead70ce502c6/</link>

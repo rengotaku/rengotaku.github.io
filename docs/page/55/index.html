@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/" />
-<meta property="og:updated_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vegetable Programing"/>
 <meta name="twitter:description" content=""/>
@@ -138,141 +138,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      ログを参照する際に重複行をなくしたい
+      ログに色(コード)をつけない
     </h2>
   </header>
   <section class="entry-content">
-    <p>コマンド # ２番目の要素の先頭10文字が一緒のものを集約 $ cat /var/tmp/XXXX.log | uniq -f2 -w10 例 2018-05-15 09:40:00 SELECT VARIABLE_NAME, VARIABLE_VALUE FROM INFORMATION_SCHEMA.GLOBAL_STATUS WHERE VARIABLE_NAME IN ( &#39;COM_DROP_TRIGGER&#39;... 2018-05-15 09:41:00 SELECT VARIABLE_NAME, VARIABLE_VALUE FROM INFORMATION_SCHEMA.GLOBAL_STATUS WHERE VARIABLE_NAME IN ( &#39;COM_DROP_TABLE&#39;... 2018-05-16 00:47:23 DROP TABLE IF EXISTS `XXXXXXX1` 2018-05-16 00:47:23 DROP TABLE...</p>
+    <p>path/to/config/environments/XXXX.rb config.colorize_logging = false ANSIカラーシーケンス・・・色をつけるコード Railsのログになんで色ついてるかなんて気にしたことなかった - hatappi.blog...</p>
   </section>
-  <footer class="entry-footer">May 16, 2018
+  <footer class="entry-footer">July 9, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to ログを参照する際に重複行をなくしたい" href="https://rengotaku.github.io/posts/35368e42-62a4-4af0-9045-a68ab4dc4366/"></a>
+  <a class="entry-link" aria-label="post link to ログに色(コード)をつけない" href="https://rengotaku.github.io/posts/ccc6f51b-597a-46cc-979a-bda1cc48339a/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      エラーの詳細を表示
+      ルートのパスワードを変更
     </h2>
   </header>
   <section class="entry-content">
-    <p>begin # エラー処理 rescue =&gt; e e.message # エラーメッセージのみ e.backtrace.join(&#34;\n&#34;) # 行数などが記載 end...</p>
+    <p>DBを指定 mysql&gt; use mysql パスワードを設定 mysql&gt; UPDATE user SET authentication_string=password(&#39;新規パスワード&#39;) WHERE user=&#39;root&#39;; 設定の反映 mysql&gt; flush...</p>
   </section>
-  <footer class="entry-footer">May 15, 2018
+  <footer class="entry-footer">July 6, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to エラーの詳細を表示" href="https://rengotaku.github.io/posts/5ceb968e-9bc1-49ab-97b4-a9abe4270ebe/"></a>
+  <a class="entry-link" aria-label="post link to ルートのパスワードを変更" href="https://rengotaku.github.io/posts/e3e39d9c-9083-4e7e-80b3-2afda6cf0cc2/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      GB単位でDBのサイズを確認
+      サイトのステータスコードを定期的に記録する
     </h2>
   </header>
   <section class="entry-content">
-    <p>select table_schema, sum(data_length&#43;index_length) /1024 /1024/1024 as GB from information_schema.tables group by table_schema order by sum(data_length&#43;index_length) desc; データベースとテーブルのサイズを確認する方法 - ふってもハレても...</p>
+    <p>watch -n30 &#34;curl -LkI &#39;https://XXX&#39; -o /dev/null -w &#39;%{http_code}\n&#39; -s | xargs -L 1 -I &#39;{}&#39; date &#39;&#43;[%Y/%m/%d %H:%M:%S] {}&#39; &gt;&gt; result.txt&#34; -n30・・・インターバル(秒) https://XXX・・・参照先 result.txt・・・出力...</p>
   </section>
-  <footer class="entry-footer">May 15, 2018
+  <footer class="entry-footer">July 5, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to GB単位でDBのサイズを確認" href="https://rengotaku.github.io/posts/52dc1f33-750d-4bf9-ad28-2b49a9f24187/"></a>
+  <a class="entry-link" aria-label="post link to サイトのステータスコードを定期的に記録する" href="https://rengotaku.github.io/posts/af24431e-9837-408f-ad71-cd02fce42b42/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      プロセス強制終了
+      キャメルケースからスネークケースに変換
     </h2>
   </header>
   <section class="entry-content">
-    <p>$ kill -9 1625...</p>
+    <p>// CamelCaseName =&gt; camel_case_name toSnakCase(name){ return name.replace(/(?:^|\.?)([A-Z])/g, function (x,y){return &#34;_&#34; &#43; y.toLowerCase()}).replace(/^_/, &#34;&#34;); } string - Javascript convert PascalCase to underscore_case - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">May 14, 2018
+  <footer class="entry-footer">June 29, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to プロセス強制終了" href="https://rengotaku.github.io/posts/a1db644d-d9dc-4a89-8d0e-5ad524e14abf/"></a>
+  <a class="entry-link" aria-label="post link to キャメルケースからスネークケースに変換" href="https://rengotaku.github.io/posts/35138fa3-25a2-4bb2-8149-8da0727793b6/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      API確認ツール
+      macでサンバにコマンドでマウントする
     </h2>
   </header>
   <section class="entry-content">
-    <p>Restlet Client - REST API Testing - Chrome ウェブストア...</p>
+    <p>マウント状況を確認する $ df Filesystem 512-blocks Used Available Capacity iused XXXX XXXX XXXX //[user]:[password]@[ip]/path/to/share 30254512 10180120 20074392 34% 5090058 10037196 34% /Volumes/path/to/share # ◀︎この行があるか？ マウントを解除する $ umount /Volumes/path/to/share マウントする $ mount_smbfs //[user]:[password]@[ip]/path/to/share share Macでター...</p>
   </section>
-  <footer class="entry-footer">May 14, 2018
+  <footer class="entry-footer">June 26, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to API確認ツール" href="https://rengotaku.github.io/posts/1bea6768-7ee6-4ed5-be22-bde0842305d1/"></a>
+  <a class="entry-link" aria-label="post link to macでサンバにコマンドでマウントする" href="https://rengotaku.github.io/posts/6968c0bf-26d2-4cdf-8ea1-7d9a6aa9ed30/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      不明ワード全集
+      指定のフォルダ内のファイル数を一定に保つ
     </h2>
   </header>
   <section class="entry-content">
-    <p>ダブルオプトイン ユーザーがメルマガの受信や会員登録を申し込んだ状態を仮登録とみなし、登録アドレスに送信されてきたメールのURLをクリックして...</p>
+    <p>deleteExtraFile(dirPath, limit=100){ const files = fs.readdirSync(dirPath).filter(function(file){ // .XXX は除外 return !/^\..&#43;$/.test(file); }); let fileCreatedAts = []; // fileの生成時間を抽出 for (let i = 0; i &lt; files.length; i&#43;&#43;) { const filename = files[i]; const fileStat = fs.statSync(path.join(dirPath, filename)); const filedata = { filename: filename, birthtimeMs: fileStat[&#39;birthtimeMs&#39;], }; fileCreatedAts.push(filedata); } // 日付を降順でソー...</p>
   </section>
-  <footer class="entry-footer">May 14, 2018
+  <footer class="entry-footer">June 25, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to 不明ワード全集" href="https://rengotaku.github.io/posts/491e182f-c87b-4362-bac4-121b0a1205d4/"></a>
+  <a class="entry-link" aria-label="post link to 指定のフォルダ内のファイル数を一定に保つ" href="https://rengotaku.github.io/posts/3ef9338c-81ae-4c67-ba95-58565aea42f0/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      githubのプルリクのテンプレート
+      シェルでsudoのパスワード入力させる関数
     </h2>
   </header>
   <section class="entry-content">
-    <p>リポジトリに.github/PULL_REQUEST_TEMPLATE.mdを追加する。 ## 概要 &lt;!-- [必須] 変更の目的、理由、背景、関連するJI...</p>
+    <p>password(){ if ! ${password&#43;:} false then printf &#34;password: &#34; read -s password fi } Shell Scriptを書くときのテクニック10選 | κeenのHappy Hacκing Blog...</p>
   </section>
-  <footer class="entry-footer">May 7, 2018
+  <footer class="entry-footer">June 25, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to githubのプルリクのテンプレート" href="https://rengotaku.github.io/posts/c80a5223-9198-4a80-ae1f-6411d19f63b8/"></a>
+  <a class="entry-link" aria-label="post link to シェルでsudoのパスワード入力させる関数" href="https://rengotaku.github.io/posts/329b057c-9c92-4715-8c1c-9cb69cd850d5/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Rubyワンライナー
+      Railsのキャッシュ機構を使う
     </h2>
   </header>
   <section class="entry-content">
-    <p>指定フォルダ配下のファイルをリネーム ruby -e &#39;Dir.glob(&#34;/path/to/folder/*.jpg&#34;){|item| File.rename(item, &#34;#{File.dirname(item)}/#{File.basename(item).split(&#34;_&#34;)[1]}_#{File.basename(item).split(&#34;_&#34;)[0]}#{File.extname(item)}&#34;) }&#39; 結果 images/target_img.jpg =&gt; images/img_target.jpg /path/to/folder/*.jpgを変更 img_#{File.basena...</p>
+    <p>キャッシュの使い方 ids = Rails.cache.fetch(&#39;key&#39;, expired_in: 12.hour) do Table.pluck :id end キャッシュのクリーン $ bundle exec rails r &#39;Rails.cache.clear&#39; [【Rails】cacheを消したい時のワンライナー|https://q...</p>
   </section>
-  <footer class="entry-footer">May 6, 2018
+  <footer class="entry-footer">June 22, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to Rubyワンライナー" href="https://rengotaku.github.io/posts/e4c9f397-a4bb-4b9f-aaa5-0871bd7a097c/"></a>
+  <a class="entry-link" aria-label="post link to Railsのキャッシュ機構を使う" href="https://rengotaku.github.io/posts/67808f61-2c77-4b37-a3b6-c282bf77978f/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      MySQLでCSVをインポート
+      除外テーブルとの結合
     </h2>
   </header>
   <section class="entry-content">
-    <p>LOAD DATA LOCAL INFILE [Csv file path] IGNORE INTO TABLE [Table Name] FIELDS TERMINATED BY &#34;,&#34; ENCLOSED BY \&#39;&#34;\&#39; # 区切り文字、閉じ文字指定 LINES TERMINATED BY &#34;\n&#34; # 改行コード指定 SET zip = NULLIF(zip, &#34;&#34;); # 条件が指定できる...</p>
+    <p># メインデータテーブル class Identified &lt; ApplicationRecord self.primary_key = :property_id has_one :exclude_building, foreign_key: :identified_building_id, primary_key: :identified_building_id end # 除外データテーブル class ExcludeBuilding &lt; ApplicationRecord belongs_to :identified, foreign_key: :identified_building_id, primary_key: :identified_building_id end # left joinして結合しないデータのみを抽出 IdentifiedProperty. left_joins(:exclude_building). where(exclude_buildings:...</p>
   </section>
-  <footer class="entry-footer">May 2, 2018
+  <footer class="entry-footer">June 21, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to MySQLでCSVをインポート" href="https://rengotaku.github.io/posts/cd97b9f0-1acd-4117-825d-a916e2fc4f0b/"></a>
+  <a class="entry-link" aria-label="post link to 除外テーブルとの結合" href="https://rengotaku.github.io/posts/87c68693-ae0c-4c57-af8e-bd7b047fae1a/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Gitコマンドをtab補完
+      間違ってコミットしていたファイルを歴史から全消去
     </h2>
   </header>
   <section class="entry-content">
-    <p>ファイルを見るける $ sudo find / -name git-completion.bash =&gt; /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash bashrcにパスを追記する $ vi ~/.bashrc ----------------- ... source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash 【2ステップ】Gitコマンドでtab補完を有効にする - Qiita...</p>
+    <p>$ git filter-branch -f --index-filter &#39;git rm --cached --ignore-unmatch ファイル名&#39; HEAD [gitでファイルの存在をなかったことにする - baronyan’s blog|http://baronyan.hatenadiary.com/entry/2014/07/14/152517]...</p>
   </section>
-  <footer class="entry-footer">May 2, 2018
+  <footer class="entry-footer">June 21, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to Gitコマンドをtab補完" href="https://rengotaku.github.io/posts/114739bf-71de-4e5f-85a6-4ad339116184/"></a>
+  <a class="entry-link" aria-label="post link to 間違ってコミットしていたファイルを歴史から全消去" href="https://rengotaku.github.io/posts/af3885d5-0e0e-47d5-a81d-46b7f28ffc4f/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

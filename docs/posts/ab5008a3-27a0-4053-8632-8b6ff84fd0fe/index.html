@@ -11,7 +11,7 @@
 <meta name="description" content="不可逆式 Class: BCrypt::Password — Documentation for codahale/bcrypt-ruby (master) encrypted_data = BCrypt::Password.create(&#34;test12345&#34;) # $2a$12$5L9lnrTYgFS5x/pOs15Y3OHTSS1A4ThOlKzbWYJf.AlJMXkeK8AtK encrypted_data == &#34;test12345&#34; # true 可逆式 A simple way to encrypt and decrypt in Rails 5 | by Daveyon Mayne | Medium key = Rails.application.credentials.config[:secret_key_base][1..32] # or ENV[&#34;SECRET_KEY_BASE&#34;][1..32] in trial, staging or production crypt = ActiveSupport::MessageEncryptor.new(key) consumer_key = &#34;test12345&#34; encrypted_data = crypt.encrypt_and_sign(consumer_key, purpose: :campaign_code) # or crypt.encrypt_and_sign(self.consumer_key) puts encrypted_data # UscL3xFA6Lv5Ad/hJz/zl5N37Q==--tgjUj9WFgB1OWIp1--JuYB0iFWEfqYRtfXoZiRvg== puts">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/ab5008a3-27a0-4053-8632-8b6ff84fd0fe/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "rails", "ruby", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "不可逆式 Class: BCrypt::Password — Documentation for codahale/bcrypt-ruby (master)\nencrypted_data = BCrypt::Password.create(\"test12345\")\r# $2a$12$5L9lnrTYgFS5x/pOs15Y3OHTSS1A4ThOlKzbWYJf.AlJMXkeK8AtK\r encrypted_data == \"test12345\"\r# true\r 可逆式 A simple way to encrypt and decrypt in Rails 5 | by Daveyon Mayne | Medium\nkey = Rails.application.credentials.config[:secret_key_base][1..32] # or ENV[\"SECRET_KEY_BASE\"][1..32] in trial, staging or production\r crypt = ActiveSupport::MessageEncryptor.new(key)\rconsumer_key = \"test12345\"\rencrypted_data = crypt.encrypt_and_sign(consumer_key, purpose: :campaign_code) # or crypt.encrypt_and_sign(self.consumer_key)\r puts encrypted_data\r# UscL3xFA6Lv5Ad/hJz/zl5N37Q==--tgjUj9WFgB1OWIp1--JuYB0iFWEfqYRtfXoZiRvg==\r puts crypt.decrypt_and_verify(encrypted_data, purpose: :campaign_code)\r# test12345\r ",
+  "articleBody": "不可逆式 Class: BCrypt::Password — Documentation for codahale/bcrypt-ruby (master)\nencrypted_data = BCrypt::Password.create(\"test12345\") # $2a$12$5L9lnrTYgFS5x/pOs15Y3OHTSS1A4ThOlKzbWYJf.AlJMXkeK8AtK encrypted_data == \"test12345\" # true 可逆式 A simple way to encrypt and decrypt in Rails 5 | by Daveyon Mayne | Medium\nkey = Rails.application.credentials.config[:secret_key_base][1..32] # or ENV[\"SECRET_KEY_BASE\"][1..32] in trial, staging or production crypt = ActiveSupport::MessageEncryptor.new(key) consumer_key = \"test12345\" encrypted_data = crypt.encrypt_and_sign(consumer_key, purpose: :campaign_code) # or crypt.encrypt_and_sign(self.consumer_key) puts encrypted_data # UscL3xFA6Lv5Ad/hJz/zl5N37Q==--tgjUj9WFgB1OWIp1--JuYB0iFWEfqYRtfXoZiRvg== puts crypt.decrypt_and_verify(encrypted_data, purpose: :campaign_code) # test12345 ",
   "wordCount" : "75",
   "inLanguage": "en",
   "datePublished": "2020-09-24T17:10:38+09:00",
@@ -163,21 +163,21 @@ if (!doNotTrack) {
 <h1 id="不可逆式">不可逆式<a hidden class="anchor" aria-hidden="true" href="#不可逆式">#</a></h1>
 <p><a href="https://www.rubydoc.info/github/codahale/bcrypt-ruby/BCrypt/Password">Class: BCrypt::Password — Documentation for codahale/bcrypt-ruby (master)</a></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">encrypted_data <span style="color:#f92672">=</span> <span style="color:#66d9ef">BCrypt</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Password</span><span style="color:#f92672">.</span>create(<span style="color:#e6db74">&#34;test12345&#34;</span>)
-<span style="color:#75715e"># $2a$12$5L9lnrTYgFS5x/pOs15Y3OHTSS1A4ThOlKzbWYJf.AlJMXkeK8AtK</span>
+<span style="color:#75715e"># $2a$12$5L9lnrTYgFS5x/pOs15Y3OHTSS1A4ThOlKzbWYJf.AlJMXkeK8AtK</span>
 encrypted_data <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;test12345&#34;</span>
-<span style="color:#75715e"># true</span>
+<span style="color:#75715e"># true</span>
 </code></pre></div><h1 id="可逆式">可逆式<a hidden class="anchor" aria-hidden="true" href="#可逆式">#</a></h1>
 <p><a href="https://medium.com/@mayneweb/a-simple-way-to-encrypt-and-decrypt-in-rails-5-9a514645d066">A simple way to encrypt and decrypt in Rails 5 | by Daveyon Mayne | Medium</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">key <span style="color:#f92672">=</span> <span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>credentials<span style="color:#f92672">.</span>config<span style="color:#f92672">[</span><span style="color:#e6db74">:secret_key_base</span><span style="color:#f92672">][</span><span style="color:#ae81ff">1</span><span style="color:#f92672">..</span><span style="color:#ae81ff">32</span><span style="color:#f92672">]</span> <span style="color:#75715e"># or ENV[&#34;SECRET_KEY_BASE&#34;][1..32] in trial, staging or production</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">key <span style="color:#f92672">=</span> <span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>credentials<span style="color:#f92672">.</span>config<span style="color:#f92672">[</span><span style="color:#e6db74">:secret_key_base</span><span style="color:#f92672">][</span><span style="color:#ae81ff">1</span><span style="color:#f92672">..</span><span style="color:#ae81ff">32</span><span style="color:#f92672">]</span> <span style="color:#75715e"># or ENV[&#34;SECRET_KEY_BASE&#34;][1..32] in trial, staging or production</span>
 crypt <span style="color:#f92672">=</span> <span style="color:#66d9ef">ActiveSupport</span><span style="color:#f92672">::</span><span style="color:#66d9ef">MessageEncryptor</span><span style="color:#f92672">.</span>new(key)
 consumer_key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test12345&#34;</span>
 
-encrypted_data <span style="color:#f92672">=</span> crypt<span style="color:#f92672">.</span>encrypt_and_sign(consumer_key, <span style="color:#e6db74">purpose</span>: <span style="color:#e6db74">:campaign_code</span>) <span style="color:#75715e"># or crypt.encrypt_and_sign(self.consumer_key)</span>
+encrypted_data <span style="color:#f92672">=</span> crypt<span style="color:#f92672">.</span>encrypt_and_sign(consumer_key, <span style="color:#e6db74">purpose</span>: <span style="color:#e6db74">:campaign_code</span>) <span style="color:#75715e"># or crypt.encrypt_and_sign(self.consumer_key)</span>
 puts encrypted_data
-<span style="color:#75715e"># UscL3xFA6Lv5Ad/hJz/zl5N37Q==--tgjUj9WFgB1OWIp1--JuYB0iFWEfqYRtfXoZiRvg==</span>
+<span style="color:#75715e"># UscL3xFA6Lv5Ad/hJz/zl5N37Q==--tgjUj9WFgB1OWIp1--JuYB0iFWEfqYRtfXoZiRvg==</span>
 
 puts crypt<span style="color:#f92672">.</span>decrypt_and_verify(encrypted_data, <span style="color:#e6db74">purpose</span>: <span style="color:#e6db74">:campaign_code</span>)
-<span style="color:#75715e"># test12345</span>
+<span style="color:#75715e"># test12345</span>
 </code></pre></div>
 </div>
   <footer class="post-footer">
@@ -203,7 +203,7 @@ puts crypt<span style="color:#f92672">.</span>decrypt_and_verify(encrypted_data,
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

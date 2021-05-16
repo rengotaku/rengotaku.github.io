@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Thu, 28 May 2020 10:31:02 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 27 Apr 2020 18:28:34 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>golangでランダム値を算出</title>
       <link>https://rengotaku.github.io/posts/d5296458-924b-41f2-90fc-346a3840025d/</link>

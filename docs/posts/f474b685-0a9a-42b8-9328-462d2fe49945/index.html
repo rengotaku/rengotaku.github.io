@@ -11,7 +11,7 @@
 <meta name="description" content="定数のスコープ演算子で、トップレベルの定数であることを示す。 A = &#34;::A&#34; class Foo A = &#34;Foo::A&#34; class Bar A = &#34;Foo::Bar::A&#34; p A # =&gt; &#34;Foo::Bar::A&#34; p Foo::A # =&gt; &#34;Foo::A&#34; p ::A # =&gt; &#34;::A&#34; end end chef - ruby でクラス名の先">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/f474b685-0a9a-42b8-9328-462d2fe49945/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "ruby", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": " 定数のスコープ演算子で、トップレベルの定数であることを示す。\n A = \"::A\"\rclass Foo\rA = \"Foo::A\"\rclass Bar\rA = \"Foo::Bar::A\"\rp A # = \"Foo::Bar::A\"\r p Foo::A # = \"Foo::A\"\r p ::A # = \"::A\"\r end\rend\r chef - ruby でクラス名の先頭に :: がつくときの意味について - スタック・オーバーフロー\n ",
+  "articleBody": " 定数のスコープ演算子で、トップレベルの定数であることを示す。\n A = \"::A\" class Foo A = \"Foo::A\" class Bar A = \"Foo::Bar::A\" p A # = \"Foo::Bar::A\" p Foo::A # = \"Foo::A\" p ::A # = \"::A\" end end  chef - ruby でクラス名の先頭に :: がつくときの意味について - スタック・オーバーフロー\n ",
   "wordCount" : "98",
   "inLanguage": "en",
   "datePublished": "2019-06-26T15:12:29+09:00",
@@ -171,9 +171,9 @@ if (!doNotTrack) {
     <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Bar</span>
         A <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Foo::Bar::A&#34;</span>
 
-        p A         <span style="color:#75715e"># =&gt; &#34;Foo::Bar::A&#34;</span>
-        p <span style="color:#66d9ef">Foo</span><span style="color:#f92672">::</span>A    <span style="color:#75715e"># =&gt; &#34;Foo::A&#34;</span>
-        p <span style="color:#f92672">::</span>A       <span style="color:#75715e"># =&gt; &#34;::A&#34;</span>
+        p A         <span style="color:#75715e"># =&gt; &#34;Foo::Bar::A&#34;</span>
+        p <span style="color:#66d9ef">Foo</span><span style="color:#f92672">::</span>A    <span style="color:#75715e"># =&gt; &#34;Foo::A&#34;</span>
+        p <span style="color:#f92672">::</span>A       <span style="color:#75715e"># =&gt; &#34;::A&#34;</span>
     <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><blockquote>
@@ -203,7 +203,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>terraform on Vegetable Programing</title>
+    <link>https://rengotaku.github.io/tags/terraform/</link>
+    <description>Recent content in terraform on Vegetable Programing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja_JP</language>
+    <copyright>©2018-2020 Vegetable Programing.</copyright>
+    <lastBuildDate>Mon, 01 Mar 2021 00:18:34 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>conohaのサーバのアウトバンドが全て塞がれる</title>
+      <link>https://rengotaku.github.io/posts/022d8954-06d4-44a1-95ad-188e8b8e8d6d/</link>
+      <pubDate>Mon, 01 Mar 2021 00:18:34 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/022d8954-06d4-44a1-95ad-188e8b8e8d6d/</guid>
+      <description>解決 terraformでサーバを作成した際に、セキュリティグループのegressにCIDR(0.0.0.0/0)を設定していたがDefaul</description>
+    </item>
+    
+  </channel>
+</rss>

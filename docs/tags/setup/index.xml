@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Sat, 01 Dec 2018 13:26:59 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/setup/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 01 Dec 2018 13:26:59 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/setup/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>gitのssh設定</title>
       <link>https://rengotaku.github.io/posts/6024ced5-1778-4d71-828d-82b192f5a3eb/</link>

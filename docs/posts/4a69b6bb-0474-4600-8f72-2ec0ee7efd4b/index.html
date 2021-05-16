@@ -11,7 +11,7 @@
 <meta name="description" content="ロード処理 def load_config(key, filepath) yml = YAML.safe_load(ERB.new(File.read(filepath)).result, [], [], true).symbolize_keys raise &#34;No such file #{filepath}&#34; if yml.blank? config = yml[Rails.env.to_sym] raise &#34;No such environment #{Rails.env}on #{filepath}&#34; if config.blank? Rails.application.config.send(&#34;#{key}=&#34;, ActiveSupport::InheritableOptions.new(config.deep_symbolize_keys)) end load_config(:site_info, Rails.root.join(&#39;config&#39;, &#39;site_info.yml&#39;)) yamlファイルに記載されたrubyの式を展開してロードするよう">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/4a69b6bb-0474-4600-8f72-2ec0ee7efd4b/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "rails", "ruby", "yaml", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "ロード処理 def load_config(key, filepath)\ryml = YAML.safe_load(ERB.new(File.read(filepath)).result, [], [], true).symbolize_keys\rraise \"No such file #{filepath}\" if yml.blank?\rconfig = yml[Rails.env.to_sym]\rraise \"No such environment #{Rails.env}on #{filepath}\" if config.blank?\rRails.application.config.send(\"#{key}=\", ActiveSupport::InheritableOptions.new(config.deep_symbolize_keys))\rend\rload_config(:site_info, Rails.root.join('config', 'site_info.yml'))\ryamlファイルに記載されたrubyの式を展開してロードするように修正\r設定 default: \u0026default\rlogin:\rname: ryuji\rpassword: takasu\rdevelopment:\r: *default\rproduction:\r: *default\rlogin:\rname: \"LOGIN_NAME\"] %\rpassword:  呼び出し Rails.application.config.site_info.login[:name]\r Railsで環境ごとの設定をYAMLから読み込む | 酒と涙とRubyとRailsと\n  YAMLにrubyのコードを書く方法 - rochefort’s blog\n  YAML.load を YAML.safe_load に書き換えると Psych::BadAlias エラーが発生する - Qiita\n ",
+  "articleBody": "ロード処理 def load_config(key, filepath) yml = YAML.safe_load(ERB.new(File.read(filepath)).result, [], [], true).symbolize_keys raise \"No such file #{filepath}\" if yml.blank? config = yml[Rails.env.to_sym] raise \"No such environment #{Rails.env}on #{filepath}\" if config.blank? Rails.application.config.send(\"#{key}=\", ActiveSupport::InheritableOptions.new(config.deep_symbolize_keys)) end load_config(:site_info, Rails.root.join('config', 'site_info.yml')) yamlファイルに記載されたrubyの式を展開してロードするように修正\r設定 default: \u0026default login: name: ryuji password: takasu development: : *default production: : *default login: name:  password:  呼び出し Rails.application.config.site_info.login[:name]\r Railsで環境ごとの設定をYAMLから読み込む | 酒と涙とRubyとRailsと\n  YAMLにrubyのコードを書く方法 - rochefort’s blog\n  YAML.load を YAML.safe_load に書き換えると Psych::BadAlias エラーが発生する - Qiita\n ",
   "wordCount" : "184",
   "inLanguage": "en",
   "datePublished": "2018-12-17T12:16:56+09:00",
@@ -174,19 +174,19 @@ if (!doNotTrack) {
 load_config(<span style="color:#e6db74">:site_info</span>, <span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>root<span style="color:#f92672">.</span>join(<span style="color:#e6db74">&#39;config&#39;</span>, <span style="color:#e6db74">&#39;site_info.yml&#39;</span>))
 </code></pre></div><pre><code class="language-!" data-lang="!">yamlファイルに記載されたrubyの式を展開してロードするように修正
 </code></pre><h1 id="設定">設定<a hidden class="anchor" aria-hidden="true" href="#設定">#</a></h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-:config/site_info.yml" data-lang=":config/site_info.yml"><span style="color:#66d9ef">default</span>: <span style="color:#75715e">&amp;default</span>
-  login:
-    <span style="color:#66d9ef">name</span>: ryuji
-    <span style="color:#66d9ef">password</span>: takasu
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-:config/site_info.yml" data-lang=":config/site_info.yml"><span style="color:#f92672">default</span>: <span style="color:#75715e">&amp;default</span>
+  <span style="color:#f92672">login</span>:
+    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">ryuji</span>
+    <span style="color:#f92672">password</span>: <span style="color:#ae81ff">takasu</span>
 
-development:
-  <span style="color:#66d9ef">&lt;&lt;</span>: <span style="color:#75715e">*default</span>
+<span style="color:#f92672">development</span>:
+  <span style="color:#f92672">&lt;&lt;</span>: <span style="color:#75715e">*default</span>
 
-production:
-  <span style="color:#66d9ef">&lt;&lt;</span>: <span style="color:#75715e">*default</span>
-  login:
-    <span style="color:#66d9ef">name</span>: &lt;%= ENV[<span style="color:#e6db74">&#34;LOGIN_NAME&#34;</span>] %<span style="color:#e6db74">&gt;
-</span><span style="color:#e6db74">    password: &lt;%= ENV[&#34;LOGIN_PASSWORD&#34;] %&gt;</span>
+<span style="color:#f92672">production</span>:
+  <span style="color:#f92672">&lt;&lt;</span>: <span style="color:#75715e">*default</span>
+  <span style="color:#f92672">login</span>:
+    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">&lt;%= ENV[&#34;LOGIN_NAME&#34;] %&gt;</span>
+    <span style="color:#f92672">password</span>: <span style="color:#ae81ff">&lt;%= ENV[&#34;LOGIN_PASSWORD&#34;] %&gt;</span>
 </code></pre></div><h1 id="呼び出し">呼び出し<a hidden class="anchor" aria-hidden="true" href="#呼び出し">#</a></h1>
 <pre><code>Rails.application.config.site_info.login[:name]
 </code></pre><blockquote>
@@ -224,7 +224,7 @@ production:
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/rails/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/rails/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/rails/" />
-<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta property="og:updated_time" content="2021-05-14T10:59:10+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="rails"/>
 <meta name="twitter:description" content=""/>
@@ -128,6 +128,104 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
+      asc、descが混在したソートをしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 複数をソート（asc、descが混在）の場合は、 sort を使用する。 User.all.sort { |a,b| [b.created_at, a.id] &lt;=&gt; [a.created_at, b.id] }.last.id == User.order(created_at: :desc).order(id: :asc).last.id note # gender asc, name asc p(dogs.sort do |a, b| [a[:gender], a[:name]] &lt;=&gt; [b[:gender], b[:name]] end) # gender desc, name asc p(dogs.sort do |a,...</p>
+  </section>
+  <footer class="entry-footer">February 20, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to asc、descが混在したソートをしたい" href="https://rengotaku.github.io/posts/cdb55f84-3b86-4723-a081-1abaef9ac8c2/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Serializerで特定のfieldだけを出力したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 fields オプションを使用する。 render json: notifications, fields: [:id, :title] How to filter attributes? · Issue #992 · rails-api/active_model_serializers · GitHub 問題 ActiveModel::MissingAttributeError (missing attribute: description) が発生する。 構成 class NotificationSerializer &lt; ApplicationSerializer attribute :id attribute :title attribute :description end notifications = Notification.select(:id, :title) render json: notifications...</p>
+  </section>
+  <footer class="entry-footer">February 18, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to Serializerで特定のfieldだけを出力したい" href="https://rengotaku.github.io/posts/4b809adb-7e5a-4a4a-9aa5-3904b217ae66/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      railsのrouteでidを必要としないルーティングを追加したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 collection を使用する。 比較 resources :notifications, only: %i[index] do get &#34;/on_top&#34;, to: &#34;notifications#on_top&#34; # notification_under GET /notifications/:notification_id/under(.:format) notification#under collection do get &#34;/on_top&#34;, to: &#34;notifications#on_top&#34; # under_notifications GET /notifications/under(.:format) notification#under end member do get &#34;/on_top&#34;, to: &#34;notifications#on_top&#34; # under_notification GET /notifications/:id/under(.:format) notification#under end end Rails 5 Routing Cookbook: 10 recipes for the novice Rails developer and beyond 事象 idを必要...</p>
+  </section>
+  <footer class="entry-footer">February 18, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to railsのrouteでidを必要としないルーティングを追加したい" href="https://rengotaku.github.io/posts/24f5619b-95af-4404-b98d-015f0837b896/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      rspecでエラーテストが失敗する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 export { subject } に変更 context &#34;test&#34; do subject { raise RuntimeError } it { expect { subject }.to raise_error(RuntimeError) } end 事象 Failure/Error: raise RuntimeError が発生する。 context &#34;test&#34; do subject { raise RuntimeError } it { is_expected.to raise_error(RuntimeError) } end RSpec の is_expected で raise_error を検知したかった - Secret Garden(Instrumental) RSpec/ImplicitSubject エラ...</p>
+  </section>
+  <footer class="entry-footer">February 17, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to rspecでエラーテストが失敗する" href="https://rengotaku.github.io/posts/5b43c92f-d394-416c-9877-0ecc11e77366/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      with_optionsでスッキリ
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>after with_options if: :new_record? do before_validation :initialize_hoge1 before_validation :initialize_hoge2 end def initialize_hoge1 hoge1 end def initialize_hoge2 hoge2 end before before_validation :initialize_hoge1 before_validation :initialize_hoge2 def initialize_hoge1 hoge1 if new_record? end def initialize_hoge2 hoge2 if new_record? end Railsで特定の条件下で走るバリデーションを作りたい - Qiita...</p>
+  </section>
+  <footer class="entry-footer">February 14, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to with_optionsでスッキリ" href="https://rengotaku.github.io/posts/1986b108-1c43-464d-9e38-7b1140568b67/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Omniauthのsetupをテストしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 def setup omniauth_strategy.options[:consumer_key] = Global..twitter.consumer_key omniauth_strategy.options[:consumer_secret] = Global..twitter.consumer_key_secret render json: { message: &#34;Omniauth setup phase.&#34; }, status: :not_found end RSpec.describe SessionController, type: :controller do subject { get :setup, params: { provider: :twitter } } let(:strategy_options) { Struct.new(:options).new({consumer_key: nil, consumer_secret: nil}) } let(:consumer_key) { &#34;twitter-mock-consumer_key&#34; } let(:consumer_secret) { &#34;twitter-mock-consumer_key_secret&#34; } before do allow(Global.twitter).to receive(:consumer_key).and_return(consumer_key) allow(Global.twitter).to receive(:consumer_key_secret).and_return(consumer_secret) allow(controller.request.env).to receive(:[]).and_call_original allow(controller.request.env).to receive(:[]).with(&#34;omniauth.strategy&#34;).and_return(strategy_options) end context &#34;Success&#34; do it &#34;...</p>
+  </section>
+  <footer class="entry-footer">February 14, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to Omniauthのsetupをテストしたい" href="https://rengotaku.github.io/posts/130dacd5-87b4-4877-a521-5623d7b9be6b/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      omniauthのTwitterプロバイダーのauthキーをコントローラーで設定
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 遷移するパスが正しくなかった。(/api/auth/:provider/setup の様にscopeをネストしていた) デフォルトで遷移する...</p>
+  </section>
+  <footer class="entry-footer">February 12, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to omniauthのTwitterプロバイダーのauthキーをコントローラーで設定" href="https://rengotaku.github.io/posts/4fce0411-7c96-42a2-8d3e-2861e57754e1/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
       omniauthのTwitterプロバイダーのoptionsを動的に変更する
     </h2>
   </header>
@@ -165,104 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">February 10, 2020
 </footer>
   <a class="entry-link" aria-label="post link to railsのログにタグづけしたい" href="https://rengotaku.github.io/posts/c8804b8e-6ac2-450c-b5ea-9009c1a43da4/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      railsのipメソッドとremove_ipメソッドの違い
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 remote_ip は、 ActionDispatch::RemoteIp で判定したIPを優先する。 その判定がない場合は、 ip メソッドを使用する。 ruby - What’s the difference between request.remote_ip and request.ip in Rails? - Stack Overflow...</p>
-  </section>
-  <footer class="entry-footer">February 10, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to railsのipメソッドとremove_ipメソッドの違い" href="https://rengotaku.github.io/posts/ab1cdacb-a34b-45ed-a16a-7cd2627d10b7/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      RSpec/MultipleExpectationsを回避
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 aggregate_failures を使用する it &#34;正常動作する&#34; do subject aggregate_failures &#34;最後まで通過&#34; do expect(job_instance).to have_received(:hoge1) expect(job_instance).to have_received(:hoge2).at_least(1).times end end 実用的な新機能が盛りだくさん！RSpe...</p>
-  </section>
-  <footer class="entry-footer">February 6, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to RSpec/MultipleExpectationsを回避" href="https://rengotaku.github.io/posts/74af4a87-af15-46ef-bd8d-2b59f87d850e/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      railsのenumから値を取得したい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>enum sale_info: { plan_1: 1, plan_2: 2, plan_3: 3, plan_4: 4, plan_5: 5 } の場合、 Model.sale_infos[:plan_1] で取得 How get integer value from a enum in Rails? - Stack Overflow...</p>
-  </section>
-  <footer class="entry-footer">January 28, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to railsのenumから値を取得したい" href="https://rengotaku.github.io/posts/2fdad37c-deb2-46d9-99a5-92a3f5df0b0f/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      Rubyで処理速度の平均を計測したい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>計測 require &#39;benchmark&#39; include Benchmark # we need the CAPTION and FORMAT constants nn = 5000000 Benchmark.benchmark(CAPTION, 7, FORMAT, &#34;&gt;total:&#34;, &#34;&gt;avg:&#34;) do |x| tf = x.report(&#34;for:&#34;) { for i in 1..nn; a = &#34;1&#34;; end } tt = x.report(&#34;times:&#34;) { nn.times do ; a = &#34;1&#34;; end } tu = x.report(&#34;upto:&#34;) { 1.upto(nn) do ; a = &#34;1&#34;; end } [tf&#43;tt&#43;tu, (tf&#43;tt&#43;tu)/3] end 結果 user system total real...</p>
-  </section>
-  <footer class="entry-footer">January 28, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to Rubyで処理速度の平均を計測したい" href="https://rengotaku.github.io/posts/9a9f4862-dd9c-4fbd-a90c-bb4551f2ebab/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      リクエストのremote_ipを変更してテストしたい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 get &#34;/path&#34;, params: { }, headers: { &#34;REMOTE_ADDR&#34; =&gt; &#34;1.2.3.4&#34; } Change value of request.remote_ip in Ruby on Rails - Stack Overflow 事象 allow_any_instance_of(ActionDispatch::Request).to receive(:remote_ip).and_return(&#34;1.2.3.4&#34;) でも実現可能だが、 rubocopで RSpec/AnyInstance が発生してしまう。(instance_doubl...</p>
-  </section>
-  <footer class="entry-footer">January 27, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to リクエストのremote_ipを変更してテストしたい" href="https://rengotaku.github.io/posts/957c64fd-ee2e-4ce6-bb60-093b3a665189/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      コントローラーのテストで例外が発生してテストが失敗する
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 context に、 show_exceptions: true オプションを設定する。 context &#34;failed&#34;, show_exceptions: true do ... end Rails アプリケーションの不安定なテストを撲滅したい 〜system spec のデバッグ方法とテストを不安...</p>
-  </section>
-  <footer class="entry-footer">January 27, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to コントローラーのテストで例外が発生してテストが失敗する" href="https://rengotaku.github.io/posts/e848d251-d646-4d69-b394-c113fb84410c/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      docker上のpry-byebugにショートカットを設定したい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 docker上の ~/.pryrc に記載する。 事象 pry-byebugでrubyをデバッグする - Qiita のショートカットをプロジェクトに設置しても、使用できな...</p>
-  </section>
-  <footer class="entry-footer">January 23, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to docker上のpry-byebugにショートカットを設定したい" href="https://rengotaku.github.io/posts/5d7fa977-1511-4546-aea2-9b7622a4097c/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

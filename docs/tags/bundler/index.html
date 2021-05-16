@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/bundler/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/bundler/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/bundler/" />
-<meta property="og:updated_time" content="2020-04-16T18:56:01+09:00" />
+<meta property="og:updated_time" content="2021-04-14T16:36:39+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="bundler"/>
 <meta name="twitter:description" content=""/>
@@ -124,6 +124,34 @@ if (!doNotTrack) {
 
 
 
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      bundle config設定時に--localを使用する際の注意点
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 bundle config set without &#39;development test&#39; --local BUNDLE_WITHOUT: &#34;development:test&#34; 事象 bundle config set without &#39;development test&#39; --localだと.bundle/configに下記のように記されてしまう。 BUNDLE_SET: &#34;without development test&#34;...</p>
+  </section>
+  <footer class="entry-footer">April 14, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to bundle config設定時に--localを使用する際の注意点" href="https://rengotaku.github.io/posts/1a278cf4-2da6-4dc9-ad95-e4ef511a272e/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      bundle updateでエラーが発生する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 https://github.com/rubygems/rubygems/issues/4380#issuecomment-780128796 より、bundlerのバージョンを指定する。 gem install bundler -v 2.2.9 事象 突如、下記のエラーが発生した。 /usr/local/bundle/gems/bundler-2.2.10/lib/bundler/resolver.rb:470:in `block in validate_resolved_specs!&#39;: The gem &#39;capistrano&#39; was found in multiple relevant sources. (Bundler::SecurityError) * rubygems repository http://hoge.example/ or installed locally * rubygems...</p>
+  </section>
+  <footer class="entry-footer">February 17, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to bundle updateでエラーが発生する" href="https://rengotaku.github.io/posts/7ca95d58-467e-4005-9046-b2abfe6efd16/"></a>
+</article>
 <article class="post-entry tag-entry"> 
 
   <header class="entry-header">

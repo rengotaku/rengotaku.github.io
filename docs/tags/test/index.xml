@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Thu, 01 Nov 2018 10:16:22 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 01 Nov 2018 10:16:22 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>負荷テストツール</title>
       <link>https://rengotaku.github.io/posts/9af89e7f-0dd4-46e8-a0f8-0dacc8af6f08/</link>

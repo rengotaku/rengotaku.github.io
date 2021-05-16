@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/docker/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/docker/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/docker/" />
-<meta property="og:updated_time" content="2020-08-13T15:02:13+09:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="docker"/>
 <meta name="twitter:description" content=""/>
@@ -124,6 +124,34 @@ if (!doNotTrack) {
 
 
 
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      dockerで動いているrailsでbetter_errorsのirbが動作しない
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>未解決 画面右側のirbでデバッグできる画面が表示されない。 binding_of_caller が関連しているようだが、原因が不明。 画面を出すようにする BetterErrors::Middleware.allow_ip! &#34;0.0.0.0/0&#34; better_errors not working in a Docker container · Issue #270...</p>
+  </section>
+  <footer class="entry-footer">May 30, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to dockerで動いているrailsでbetter_errorsのirbが動作しない" href="https://rengotaku.github.io/posts/bc3ee1e4-fa92-4af9-bdd1-7dced7696686/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      dockerで動くrailsでデバックを行いたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>設定 docker-compose.yml services: rails: &amp;app_base tty: true stdin_open: true 操作 アタッチ docker attach [container_name] $ docker-compose run --rm --service-ports [service name] でいけるかと思ったが、再度コンテナを立ち上げる挙動になり期待しない動きをする 便利コマンド...</p>
+  </section>
+  <footer class="entry-footer">May 30, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to dockerで動くrailsでデバックを行いたい" href="https://rengotaku.github.io/posts/b6b89728-605f-40b8-9d57-2bb1cc14b932/"></a>
+</article>
 <article class="post-entry tag-entry"> 
 
   <header class="entry-header">
@@ -235,34 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">July 11, 2018
 </footer>
   <a class="entry-link" aria-label="post link to ドッカーの不要なVolumeを削除する" href="https://rengotaku.github.io/posts/eb3a988d-3320-422c-b03d-c4fd8b0c2cd8/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      dockerのfluentdをフラッシュさせる
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>docker kill -s USR1 [contailner_name] fluent/fluentd-docker-image: Docker image for Fluentd...</p>
-  </section>
-  <footer class="entry-footer">July 9, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to dockerのfluentdをフラッシュさせる" href="https://rengotaku.github.io/posts/8e84f183-89fd-420d-ad2c-632eaf6f624f/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      Docker内でnode_moduleフォルダが消える
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>version: &#39;2&#39; services: batch: build: . container_name: &#34;c_chromium&#34; env_file: .env working_dir: /home/app volumes: - .:/home/app - /home/app/node_modules # コンテナ内のnode_moduleをvolumesに登録 . . . Docker と node_modules と Volume Trick - Memento memo....</p>
-  </section>
-  <footer class="entry-footer">June 19, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to Docker内でnode_moduleフォルダが消える" href="https://rengotaku.github.io/posts/c9dbb11b-372e-4aca-942d-1f3d66384569/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -7,10 +7,69 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Tue, 27 Oct 2020 14:05:23 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 06 May 2021 18:12:31 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using scope as specifying API version in path</title>
+      <link>https://rengotaku.github.io/posts/8d02a24b-4045-411c-8816-1c07f72f3e4d/</link>
+      <pubDate>Thu, 06 May 2021 18:12:31 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/8d02a24b-4045-411c-8816-1c07f72f3e4d/</guid>
+      <description>Resolution Rails 5 Routes: Scope vs Namespace - Devblast namespace :service do scope :v1 do resource :product do get &amp;#34;/&amp;#34;, to: &amp;#34;v1/product#hoge&amp;#34; Motivation If don&amp;rsquo;t expect not to change some APIs behavior even its version increase, you should use scoep instead of namespace. namespace :service do namespace :v1 do resource :product do get &amp;#34;/&amp;#34;, to: &amp;#34;product#hoge&amp;#34; Generated path is service_v1_product GET /service/v1/product(.:format) service/v1/product#hoge.</description>
+    </item>
     
-	<atom:link href="https://rengotaku.github.io/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bundle config設定時に--localを使用する際の注意点</title>
+      <link>https://rengotaku.github.io/posts/1a278cf4-2da6-4dc9-ad95-e4ef511a272e/</link>
+      <pubDate>Wed, 14 Apr 2021 16:36:39 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/1a278cf4-2da6-4dc9-ad95-e4ef511a272e/</guid>
+      <description>解決 bundle config set without &#39;development test&#39; --local BUNDLE_WITHOUT: &amp;quot;development:test&amp;quot; 事象 bundle config set without &#39;development test&#39; --localだと.bundle/configに下記のように記されてしまう。 BUNDLE_SET: &amp;quot;without development test&amp;quot;</description>
+    </item>
     
+    <item>
+      <title>HASHのDIFFを取る</title>
+      <link>https://rengotaku.github.io/posts/7d29c061-fee9-4f20-8e13-1663c5e00e4d/</link>
+      <pubDate>Tue, 13 Apr 2021 16:46:42 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/7d29c061-fee9-4f20-8e13-1663c5e00e4d/</guid>
+      <description>解決 ruby - How do I compare two hashes? - Stack Overflow より下記 hash3.to_a - hash1.to_a # =&amp;gt; [[&amp;#34;c&amp;#34;, 3]] if (hash3.size &amp;gt; hash1.size) difference = hash3.to_a - hash1.to_a else difference = hash1.to_a - hash3.to_a end Hash[*difference.flatten] # =&amp;gt; {&amp;#34;c&amp;#34;=&amp;gt;3}</description>
+    </item>
+    
+    <item>
+      <title>SidekiqのRecurring Jobsの画面に表示される項目を取得したい</title>
+      <link>https://rengotaku.github.io/posts/30c4cd33-6512-48f0-8091-0e9a123c46d7/</link>
+      <pubDate>Tue, 23 Mar 2021 13:49:40 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/30c4cd33-6512-48f0-8091-0e9a123c46d7/</guid>
+      <description>解決 sidekiq-scheduler/job_presenter.rb at master · moove-it/sidekiq-scheduler · GitHub を参考 schedules = Sidekiq.schedule! service_schedules = schedules.select { |key, value| true if something compare } presented_jobs = SidekiqScheduler::JobPresenter.build_collection(service_schedules) presented_jobs[0].next_time presented_jobs[0].last_time presented_jobs[0].enabled? presented_jobs[0].queue</description>
+    </item>
+    
+    <item>
+      <title>bundle updateでエラーが発生する</title>
+      <link>https://rengotaku.github.io/posts/7ca95d58-467e-4005-9046-b2abfe6efd16/</link>
+      <pubDate>Wed, 17 Feb 2021 10:56:38 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/7ca95d58-467e-4005-9046-b2abfe6efd16/</guid>
+      <description>解決 https://github.com/rubygems/rubygems/issues/4380#issuecomment-780128796 より、bundlerのバージョンを指定する。 gem install bundler -v 2.2.9 事象 突如、下記のエラーが発生した。 /usr/local/bundle/gems/bundler-2.2.10/lib/bundler/resolver.rb:470:in `block in validate_resolved_specs!&#39;: The gem &#39;capistrano&#39; was found in multiple relevant sources. (Bundler::SecurityError) * rubygems repository http://hoge.example/ or installed locally * rubygems</description>
+    </item>
+    
+    <item>
+      <title>自前のバリデーションを作成する</title>
+      <link>https://rengotaku.github.io/posts/3aad0181-20b1-4f3c-ab4f-0d78fcab067c/</link>
+      <pubDate>Wed, 03 Feb 2021 18:33:47 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/3aad0181-20b1-4f3c-ab4f-0d78fcab067c/</guid>
+      <description>解決 How to Implement Custom ActiveRecord Validations | by Moses Ogwo | Better Programming | Medium の3. Custom Validators (for an Attribute)を参考 concernsに定義 app/models/concerns/type_validator.rb class TypeValidator &amp;lt; ActiveModel::EachValidator def validate_each(record, attribute, value) unless (value === &amp;#34;wood&amp;#34;) || (value === &amp;#34;iron&amp;#34;) # 好きな条</description>
+    </item>
+    
+    <item>
+      <title>rubyでoffestを実装してみた</title>
+      <link>https://rengotaku.github.io/posts/1c5e79a3-ab8c-4ecd-96e0-187a6b536e09/</link>
+      <pubDate>Tue, 26 Jan 2021 11:21:25 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/1c5e79a3-ab8c-4ecd-96e0-187a6b536e09/</guid>
+      <description>Source def offset(size, chunk_num = 5000) (0...((size / chunk_num) + (size % chunk_num &amp;gt; 0 ? 1 : 0))).to_a.each do |count| start_cnt = chunk_num * count end_cnt = chunk_num * count + chunk_num - 1 end_cnt = size - 1 if end_cnt &amp;gt; size - 1 yield start_cnt, end_cnt end end Usage offset(10000) {|s, e| puts &amp;#34;#{s},#{e}&amp;#34;} 0,4999 5000,9999 offset(10001) {|s, e| puts &amp;#34;#{s},#{e}&amp;#34;} 0,4999 5000,9999 10000,10000</description>
+    </item>
     
     <item>
       <title>railsの環境変数を変えたい</title>

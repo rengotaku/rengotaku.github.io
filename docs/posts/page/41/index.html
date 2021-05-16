@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/posts/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/posts/" />
-<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content=""/>
@@ -128,141 +128,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      base64で受け取り、fileとして保存
+      after_findの実行タイミング
     </h2>
   </header>
   <section class="entry-content">
-    <p>const fileData = encodedData.replace(/^data:\w&#43;\/\w&#43;;base64,/, &#39;&#39;) const decodedFile = new Buffer(fileData, &#39;base64&#39;) メモ base64は直書きした場合のみ機能する。 imgタグのsrcにurlを指定し、その結果がbase64の場合は、画像...</p>
+    <p>結論 after_find のfunction内で他モデルをロードするような処理は（N&#43;1問題に繋がるため）入れてはいけない。 モデル class Post &lt; ApplicationRecord has_many :tag_relationships has_many :tags, through: :tag_relationships after_find :find_relate_tags # タグ...</p>
   </section>
-  <footer class="entry-footer">November 13, 2018
+  <footer class="entry-footer">December 14, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to base64で受け取り、fileとして保存" href="https://rengotaku.github.io/posts/2fbf82e3-b162-4a8d-b3e4-ea3d4c55452a/"></a>
+  <a class="entry-link" aria-label="post link to after_findの実行タイミング" href="https://rengotaku.github.io/posts/18a1b201-414e-4a47-bf02-72e995f22fbc/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      過去のコミット内容を変更
+      phpで外部apiにアクセスしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>修正前後 12817e8bd (HEAD) 変更しないよ b99274780 before 5820bde2e 変更しないよ 0a92dcf8d (HEAD) 変更しないよ 581817819 after 5820bde2e 変更しないよ 作業 rebase -i [変更をしたいコミットより一つ先] $ rebase -i 5820bde2e pick b99274780 before pick 12817e8bd 変更...</p>
+    <p>&lt;?php $url = &#34;https://qiita.com/api/v2/items&#34;; // cURLセッションを初期化 $ch = curl_init(); // オプションを設定 curl_setopt($ch, CURLOPT_URL, $url); // 取得するURLを指定 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // 実行結果を文字列で返す curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // サーバー証明書...</p>
   </section>
-  <footer class="entry-footer">November 12, 2018
+  <footer class="entry-footer">December 13, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to 過去のコミット内容を変更" href="https://rengotaku.github.io/posts/702bff51-5cd7-4ecf-bcf7-19702860ea0a/"></a>
+  <a class="entry-link" aria-label="post link to phpで外部apiにアクセスしたい" href="https://rengotaku.github.io/posts/80c56d1e-821e-405d-8a8a-97dc72de5c35/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      docker内から別のdockerにtcp通信したい
+      HAProxyで参考になるサイト
     </h2>
   </header>
   <section class="entry-content">
-    <p>ymlに記載 version: &#39;2&#39; services: web: build: ./web depends_on: - image_api ports: - 3010:3000 api: build: ./api ports: - 3020:3000 curlを叩く curl api:3000/path/to/api apiはDocker内で3000ポートでListenしている docker-compose, depend...</p>
+    <p>How To Use HAProxy to Set Up HTTP Load Balancing on an Ubuntu VPS | DigitalOcean HAProxyを使ってみた - Qiita HAProxy: hdr_dom(host) with redirects - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">November 12, 2018
+  <footer class="entry-footer">December 13, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to docker内から別のdockerにtcp通信したい" href="https://rengotaku.github.io/posts/6ff9d493-2315-4f2e-aaf4-b2dedda17263/"></a>
+  <a class="entry-link" aria-label="post link to HAProxyで参考になるサイト" href="https://rengotaku.github.io/posts/224e9fda-30de-4b15-a406-4dd5fe50e847/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      アップロードされたファイルをBase64にエンコード
+      hamlで参考になるサイト
     </h2>
   </header>
   <section class="entry-content">
-    <p>upload_file = params[:upload_file] base64_image = &#39;data:image/png;base64,&#39; &#43; Base64.strict_encode64(upload_file.read) urlsafe_encode64 は正しく機能しない 表示される文字列をブラウザへ貼り付ける [ruby]irbで画像URLからbase64エンコード画像を作成...</p>
+    <p>決定版!!Haml小技まとめ！！ - Qiita...</p>
   </section>
-  <footer class="entry-footer">November 12, 2018
+  <footer class="entry-footer">December 13, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to アップロードされたファイルをBase64にエンコード" href="https://rengotaku.github.io/posts/ed21763f-7ee8-4127-a82e-570bb3fa3cb1/"></a>
+  <a class="entry-link" aria-label="post link to hamlで参考になるサイト" href="https://rengotaku.github.io/posts/a28a6a4a-7af3-4d7b-9363-f267d6465f8f/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      AJAXのテンプレート
+      apiのテストケースのサンプル
     </h2>
   </header>
   <section class="entry-content">
-    <p>$.ajax({ type: &#34;GET&#34;, url: &#34;/api/v1/xxx&#34;, dataType: &#34;json&#34;, cache: &#34;false&#34;, data: { id: 1, }, error: function(xhr, textStatus, errorThrown) { if(xhr.status == 404) { var response = JSON.parse(xhr.responseText); // エラー処理 } else { // 通信障害とか } }, success: function(response){ // { data: [{ name: &#34;名前1&#34; }, { name: &amp;#...</p>
+    <p>require &#39;test_helper&#39; module Api class SampleControllerTest &lt; ActionDispatch::IntegrationTest describe &#34;something function test.&#34; do describe &#34;OK case&#34; do test &#34;exist&#34; do get &#39;/api/v1/sample_contract_mails/1/example&#39;, params: { page: 2 } assert_response :success body = JSON.parse(response.body) assert { body.size == 1 } end end describe &#34;NG case&#34; do test &#34;dont exist&#34; do get &#39;/api/v1/sample_contract_mails/2/example&#39; assert_response :missing end end end end end...</p>
   </section>
-  <footer class="entry-footer">November 8, 2018
+  <footer class="entry-footer">December 12, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to AJAXのテンプレート" href="https://rengotaku.github.io/posts/61f7dd7c-f05b-44d9-9aba-76ed029a23e9/"></a>
+  <a class="entry-link" aria-label="post link to apiのテストケースのサンプル" href="https://rengotaku.github.io/posts/7a573d40-4330-42cd-a58d-bf96947f7bc5/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      PR単位のマージをリバートする
+      モデルのテストケースのサンプル
     </h2>
   </header>
   <section class="entry-content">
-    <p>git revert -m 1 [commit_id] を使用する。 $ git log --oneline | grep feature/marged_branch 85059095e Merge pull request #0002 in XXXX/XXXX from feature/marged_branch to feature/development 1526deebf Merge pull request #0001 in XXXX/XXXX from feature/marged_branch to feature/development $ git revert -m 1 85059095e $ git revert -m 1 1526deebf GitでMerge CommitをRe...</p>
+    <p>require &#39;test_helper&#39; class SampleModelTest &lt; ActiveSupport::TestCase describe &#39;something function test.&#39; do test &#39;get something.&#39; do assert { SampleModel.find(1).present? } end test &#39;dont get something.&#39; do assert { SampleModel.find(2).blank? } end end describe &#39;something2 function test.&#39; do before do puts &#34;be executed in something2 only.&#34; end after do puts &#34;be executed in something2 only.&#34; end test &#39;get something.&#39; do assert { SampleModel.find(1).present? } end end end minitest-power_assert のgem...</p>
   </section>
-  <footer class="entry-footer">November 6, 2018
+  <footer class="entry-footer">December 12, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to PR単位のマージをリバートする" href="https://rengotaku.github.io/posts/132a20a0-1b47-4c92-b489-bd506a5d26be/"></a>
+  <a class="entry-link" aria-label="post link to モデルのテストケースのサンプル" href="https://rengotaku.github.io/posts/72789551-4a7b-4a54-a6f3-49e1965faf28/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      docker-compose buildをキャッシュを使わず行う
+      指定フォルダ配下の1日前のファイルを削除し、空のフォルダを削除したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>docker-compose build --no-cache docker-composeでbuildする時にcacheを使わない - Qiita...</p>
+    <p># 1日前のファイルを削除 Dir.glob(&#39;path/to/dir/**/*.*&#39;). select{ |f| File.mtime(f) &lt; Time.now - 1.day }. each{ |f| FileUtils.rm(f) } # 空のフォルダを削除 Dir.glob(&#34;path/to/dir/**&#34;).each do |fo| next unless FileTest.directory?(fo) next unless Dir.entries(fo).length == 2 puts &#34;#{fo}empty&#34; Dir.rmdir fo end [Ruby] 空のフォルダだけ削除、Dir::en...</p>
   </section>
-  <footer class="entry-footer">November 6, 2018
+  <footer class="entry-footer">December 12, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to docker-compose buildをキャッシュを使わず行う" href="https://rengotaku.github.io/posts/33b3af49-63c4-4bf1-84ef-9325e829189d/"></a>
+  <a class="entry-link" aria-label="post link to 指定フォルダ配下の1日前のファイルを削除し、空のフォルダを削除したい" href="https://rengotaku.github.io/posts/50477c7a-7a7e-4625-a0f1-5935097b8627/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      buttonでsubmitさせない
+      fixtureでメールのsourceをDBに登録したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>type=&#34;button&#34; を付与する &lt;button type=&#34;button&#34;&gt;ID重複チェック&lt;/button&gt; buttonタグがsubm...</p>
+    <p>概要 メールをファイルとして設置し、fixtureに使用するyaml内にRubyの処理を埋め込み、yamlに書き出す。 必要ファイル yaml &lt;% def mail(file_name) File.open(file_name){ |f|...</p>
   </section>
-  <footer class="entry-footer">November 5, 2018
+  <footer class="entry-footer">December 12, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to buttonでsubmitさせない" href="https://rengotaku.github.io/posts/a71c62b4-7143-409a-8acf-54c4b5903c8b/"></a>
+  <a class="entry-link" aria-label="post link to fixtureでメールのsourceをDBに登録したい" href="https://rengotaku.github.io/posts/02db3f8e-903e-4814-a7ac-35e0bb0929b2/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      リネーム後のファイルの履歴を追いたい（中身を確認したい）
+      リバースプロキシする際のlocationの注意点
     </h2>
   </header>
   <section class="entry-content">
-    <p>該当のファイルのリネーム以前の名前を取得 $ git log --name-only --follow apps/after.rb commit 7ea918a... Author: ryuji &lt;ryuji@ryuji.com&gt; Date: Mon Apr 24 17:13:16 2017 &#43;0900 リネーム apps/before.rb # &lt;= リネーム前のファイル名 特定リビジョンのファイルの内...</p>
+    <p># nodejs # www.domain.com/img/path/to/image.jpg # http://localhost:5001/path/to/image.jpg location /img/ { proxy_pass http://localhost:5001/; # &lt;- 後ろの / は大事 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_set_header Host $http_host; proxy_redirect off; } # rails # www.domain.com/index # http://localhost:5002/index location / { proxy_pass http://localhost:5002; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_set_header Host $http_host; proxy_redirect off; } localhost:5001; と(後ろの/を消去)した場合は、img/...</p>
   </section>
-  <footer class="entry-footer">November 2, 2018
+  <footer class="entry-footer">December 12, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to リネーム後のファイルの履歴を追いたい（中身を確認したい）" href="https://rengotaku.github.io/posts/0b100e09-a7ca-4ea2-b41a-9c9b1f5a0da3/"></a>
+  <a class="entry-link" aria-label="post link to リバースプロキシする際のlocationの注意点" href="https://rengotaku.github.io/posts/eb1aacea-2a96-4fe2-8e90-c0aa8be4ac3b/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      負荷テストツール
+      precompileしたらシンタックスエラーで失敗する
     </h2>
   </header>
   <section class="entry-content">
-    <p>tsenart/vegeta: HTTP load testing tool and library. It’s over 9000!...</p>
+    <p>対応 after config.assets.js_compressor = Uglifier.new(harmony: true) before config.assets.js_compressor = :uglifier 事象 RAILS_ENV=production rails assets:precompile すると下記エラーが発生する Uglifier::Error: Unexpected token: keyword (const). To use ES6 syntax uglifier の ES6部分におけるエラー [Rails] - ハッキングバカ...</p>
   </section>
-  <footer class="entry-footer">November 1, 2018
+  <footer class="entry-footer">December 12, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to 負荷テストツール" href="https://rengotaku.github.io/posts/9af89e7f-0dd4-46e8-a0f8-0dacc8af6f08/"></a>
+  <a class="entry-link" aria-label="post link to precompileしたらシンタックスエラーで失敗する" href="https://rengotaku.github.io/posts/b2b33f33-dc36-497d-96ce-35a4dc855351/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
@@ -287,7 +287,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

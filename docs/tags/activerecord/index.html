@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/activerecord/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/activerecord/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/activerecord/" />
-<meta property="og:updated_time" content="2020-05-20T14:01:50+09:00" />
+<meta property="og:updated_time" content="2021-04-27T15:14:22+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="activerecord"/>
 <meta name="twitter:description" content=""/>
@@ -124,6 +124,20 @@ if (!doNotTrack) {
 
 
 
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ActiveRecord dosen&#39;t support to nested transaction by default settings
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Resolution Nested ActiveRecord transaction pitfalls - makandra dev Recoomend to use below: ActiveRecord::Base.transaction(joinable: false, requires_new: true) joinable: false means transactions nested within this transaction will not be discarded (and therefore not be joined to the custom transaction). A real nested transaction will be used, or, if the DBMS does not support nested transaction, this behaviour will be simulated with Savepoints (this is done for MySQL and Postgres). If a custom...</p>
+  </section>
+  <footer class="entry-footer">April 27, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to ActiveRecord dosen&#39;t support to nested transaction by default settings" href="https://rengotaku.github.io/posts/2a1819fd-d848-47ff-b944-2d14a720489a/"></a>
+</article>
 <article class="post-entry tag-entry"> 
 
   <header class="entry-header">
@@ -249,20 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">July 12, 2019
 </footer>
   <a class="entry-link" aria-label="post link to Activerecordの条件にis not nullを設定" href="https://rengotaku.github.io/posts/2df5cef2-e066-4ad2-a80c-d5738c7d3dd4/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      ActiveRecordの結果を配列に変換
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 to_a を使用する。 例 SomeModel.where(id: [0, 1]).to_a ruby-on-rails – Rails：activerecordの関係を配列に変換する正しい方法は？ - コードログ 起因 プログラム results = self. select( &#39;inquiry.id as...</p>
-  </section>
-  <footer class="entry-footer">July 2, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to ActiveRecordの結果を配列に変換" href="https://rengotaku.github.io/posts/abdf896d-2c74-461b-88d0-d5f2e6774d6c/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

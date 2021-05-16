@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Wed, 01 Apr 2020 14:04:25 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 01 Apr 2020 14:04:25 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>proxy経由でサーバに接続する</title>
       <link>https://rengotaku.github.io/posts/200b1a07-97a8-4275-892e-f2c3b5e68cd5/</link>

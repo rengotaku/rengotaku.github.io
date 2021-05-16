@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/posts/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/posts/" />
-<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content=""/>
@@ -128,141 +128,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      railsのenumから値を取得したい
+      Serializerで特定のfieldだけを出力したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>enum sale_info: { plan_1: 1, plan_2: 2, plan_3: 3, plan_4: 4, plan_5: 5 } の場合、 Model.sale_infos[:plan_1] で取得 How get integer value from a enum in Rails? - Stack Overflow...</p>
+    <p>解決 fields オプションを使用する。 render json: notifications, fields: [:id, :title] How to filter attributes? · Issue #992 · rails-api/active_model_serializers · GitHub 問題 ActiveModel::MissingAttributeError (missing attribute: description) が発生する。 構成 class NotificationSerializer &lt; ApplicationSerializer attribute :id attribute :title attribute :description end notifications = Notification.select(:id, :title) render json: notifications...</p>
   </section>
-  <footer class="entry-footer">January 28, 2020
+  <footer class="entry-footer">February 18, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to railsのenumから値を取得したい" href="https://rengotaku.github.io/posts/2fdad37c-deb2-46d9-99a5-92a3f5df0b0f/"></a>
+  <a class="entry-link" aria-label="post link to Serializerで特定のfieldだけを出力したい" href="https://rengotaku.github.io/posts/4b809adb-7e5a-4a4a-9aa5-3904b217ae66/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Rubyで処理速度の平均を計測したい
+      railsのrouteでidを必要としないルーティングを追加したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>計測 require &#39;benchmark&#39; include Benchmark # we need the CAPTION and FORMAT constants nn = 5000000 Benchmark.benchmark(CAPTION, 7, FORMAT, &#34;&gt;total:&#34;, &#34;&gt;avg:&#34;) do |x| tf = x.report(&#34;for:&#34;) { for i in 1..nn; a = &#34;1&#34;; end } tt = x.report(&#34;times:&#34;) { nn.times do ; a = &#34;1&#34;; end } tu = x.report(&#34;upto:&#34;) { 1.upto(nn) do ; a = &#34;1&#34;; end } [tf&#43;tt&#43;tu, (tf&#43;tt&#43;tu)/3] end 結果 user system total real...</p>
+    <p>解決 collection を使用する。 比較 resources :notifications, only: %i[index] do get &#34;/on_top&#34;, to: &#34;notifications#on_top&#34; # notification_under GET /notifications/:notification_id/under(.:format) notification#under collection do get &#34;/on_top&#34;, to: &#34;notifications#on_top&#34; # under_notifications GET /notifications/under(.:format) notification#under end member do get &#34;/on_top&#34;, to: &#34;notifications#on_top&#34; # under_notification GET /notifications/:id/under(.:format) notification#under end end Rails 5 Routing Cookbook: 10 recipes for the novice Rails developer and beyond 事象 idを必要...</p>
   </section>
-  <footer class="entry-footer">January 28, 2020
+  <footer class="entry-footer">February 18, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to Rubyで処理速度の平均を計測したい" href="https://rengotaku.github.io/posts/9a9f4862-dd9c-4fbd-a90c-bb4551f2ebab/"></a>
+  <a class="entry-link" aria-label="post link to railsのrouteでidを必要としないルーティングを追加したい" href="https://rengotaku.github.io/posts/24f5619b-95af-4404-b98d-015f0837b896/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      iTerm2で画像を見る
+      rspecでエラーテストが失敗する
     </h2>
   </header>
   <section class="entry-content">
-    <p>imgcat のスクリプトを配置 $ vi /usr/local/bin/imgcat #&lt;= スクリプトをコピペ $ chmod 755 /usr/local/bin/imgcat $ imgcat /path/to/image Images - Documentation - iTerm2 - macOS Terminal Replacement...</p>
+    <p>解決 export { subject } に変更 context &#34;test&#34; do subject { raise RuntimeError } it { expect { subject }.to raise_error(RuntimeError) } end 事象 Failure/Error: raise RuntimeError が発生する。 context &#34;test&#34; do subject { raise RuntimeError } it { is_expected.to raise_error(RuntimeError) } end RSpec の is_expected で raise_error を検知したかった - Secret Garden(Instrumental) RSpec/ImplicitSubject エラ...</p>
   </section>
-  <footer class="entry-footer">January 28, 2020
+  <footer class="entry-footer">February 17, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to iTerm2で画像を見る" href="https://rengotaku.github.io/posts/f8720630-e429-41f8-9d7b-31c5eca4a2a3/"></a>
+  <a class="entry-link" aria-label="post link to rspecでエラーテストが失敗する" href="https://rengotaku.github.io/posts/5b43c92f-d394-416c-9877-0ecc11e77366/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      リクエストのremote_ipを変更してテストしたい
+      with_optionsでスッキリ
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 get &#34;/path&#34;, params: { }, headers: { &#34;REMOTE_ADDR&#34; =&gt; &#34;1.2.3.4&#34; } Change value of request.remote_ip in Ruby on Rails - Stack Overflow 事象 allow_any_instance_of(ActionDispatch::Request).to receive(:remote_ip).and_return(&#34;1.2.3.4&#34;) でも実現可能だが、 rubocopで RSpec/AnyInstance が発生してしまう。(instance_doubl...</p>
+    <p>after with_options if: :new_record? do before_validation :initialize_hoge1 before_validation :initialize_hoge2 end def initialize_hoge1 hoge1 end def initialize_hoge2 hoge2 end before before_validation :initialize_hoge1 before_validation :initialize_hoge2 def initialize_hoge1 hoge1 if new_record? end def initialize_hoge2 hoge2 if new_record? end Railsで特定の条件下で走るバリデーションを作りたい - Qiita...</p>
   </section>
-  <footer class="entry-footer">January 27, 2020
+  <footer class="entry-footer">February 14, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to リクエストのremote_ipを変更してテストしたい" href="https://rengotaku.github.io/posts/957c64fd-ee2e-4ce6-bb60-093b3a665189/"></a>
+  <a class="entry-link" aria-label="post link to with_optionsでスッキリ" href="https://rengotaku.github.io/posts/1986b108-1c43-464d-9e38-7b1140568b67/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      コントローラーのテストで例外が発生してテストが失敗する
+      Omniauthのsetupをテストしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 context に、 show_exceptions: true オプションを設定する。 context &#34;failed&#34;, show_exceptions: true do ... end Rails アプリケーションの不安定なテストを撲滅したい 〜system spec のデバッグ方法とテストを不安...</p>
+    <p>解決 def setup omniauth_strategy.options[:consumer_key] = Global..twitter.consumer_key omniauth_strategy.options[:consumer_secret] = Global..twitter.consumer_key_secret render json: { message: &#34;Omniauth setup phase.&#34; }, status: :not_found end RSpec.describe SessionController, type: :controller do subject { get :setup, params: { provider: :twitter } } let(:strategy_options) { Struct.new(:options).new({consumer_key: nil, consumer_secret: nil}) } let(:consumer_key) { &#34;twitter-mock-consumer_key&#34; } let(:consumer_secret) { &#34;twitter-mock-consumer_key_secret&#34; } before do allow(Global.twitter).to receive(:consumer_key).and_return(consumer_key) allow(Global.twitter).to receive(:consumer_key_secret).and_return(consumer_secret) allow(controller.request.env).to receive(:[]).and_call_original allow(controller.request.env).to receive(:[]).with(&#34;omniauth.strategy&#34;).and_return(strategy_options) end context &#34;Success&#34; do it &#34;...</p>
   </section>
-  <footer class="entry-footer">January 27, 2020
+  <footer class="entry-footer">February 14, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to コントローラーのテストで例外が発生してテストが失敗する" href="https://rengotaku.github.io/posts/e848d251-d646-4d69-b394-c113fb84410c/"></a>
+  <a class="entry-link" aria-label="post link to Omniauthのsetupをテストしたい" href="https://rengotaku.github.io/posts/130dacd5-87b4-4877-a521-5623d7b9be6b/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      JavaScriptで変数、関数、メソッド、あるいはオブジェクトの識別子に使用してはいけないもの
+      rubyでランダムな文字列を生成したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>break case catch continue debugger default delete do else finally for function if in instanceof new return switch this throw try typeof var void while with 予約語 - JavaScript | MDN...</p>
+    <p>(0...8).map { (65 &#43; rand(26)).chr }.join # OYOTTDME How to generate a random string in Ruby - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">January 27, 2020
+  <footer class="entry-footer">February 13, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to JavaScriptで変数、関数、メソッド、あるいはオブジェクトの識別子に使用してはいけないもの" href="https://rengotaku.github.io/posts/4cfd5104-2d9f-4ed0-bb11-af6c6e60561a/"></a>
+  <a class="entry-link" aria-label="post link to rubyでランダムな文字列を生成したい" href="https://rengotaku.github.io/posts/6389b75c-03d6-4668-9cc4-f694b17d1d6b/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      LightSailでVPNをつなぐまで
+      ポートを使用しているアプリケーションを特定したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>create instance $ aws lightsail create-instances --instance-names ubuntu_18_vpn --blueprint-id ubuntu_18_04 --bundle-id nano_2_0 --region us-west-2 --availability-zone us-west-2a --user-data &#34;wget https://git.io/vpnsetup -O vpnsetup.sh &amp;&amp; VPN_IPSEC_PSK=&#39;dB_G4N.bfe{bKQkK&#39; VPN_USER=&#39;vpn_ryuji&#39; VPN_PASSWORD=&#39;~Y,&gt;V5-bttc^q8c4&#39; sudo sh vpnsetup.sh&#34; 引数がわたっていないのか、指定したユーザー名、パスワードが別のものになる。（サーバに...</p>
+    <p>lsof $ sudo lsof -i -P -n | grep LISTEN systemd 1 root 48u IPv6 11587 0t0 TCP *:111 (LISTEN) systemd 1 root 49u IPv4 11588 0t0 TCP *:111 (LISTEN) sshd 877 root 3u IPv4 15738 0t0 TCP *:58343 (LISTEN) sshd 877 root 4u IPv6 15747 0t0 TCP *:58343 (LISTEN) master 996 root 13u IPv4 16530 0t0 TCP 127.0.0.1:25 (LISTEN) master 996 root 14u IPv6 16531 0t0 TCP [::1]:25 (LISTEN)...</p>
   </section>
-  <footer class="entry-footer">January 25, 2020
+  <footer class="entry-footer">February 12, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to LightSailでVPNをつなぐまで" href="https://rengotaku.github.io/posts/7118cb77-fe70-4d76-aa85-cc9f57cab09b/"></a>
+  <a class="entry-link" aria-label="post link to ポートを使用しているアプリケーションを特定したい" href="https://rengotaku.github.io/posts/5ba8c531-d5c3-4b59-a090-979105b01b4e/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      docker上のpry-byebugにショートカットを設定したい
+      omniauthのTwitterプロバイダーのauthキーをコントローラーで設定
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 docker上の ~/.pryrc に記載する。 事象 pry-byebugでrubyをデバッグする - Qiita のショートカットをプロジェクトに設置しても、使用できな...</p>
+    <p>解決 遷移するパスが正しくなかった。(/api/auth/:provider/setup の様にscopeをネストしていた) デフォルトで遷移する...</p>
   </section>
-  <footer class="entry-footer">January 23, 2020
+  <footer class="entry-footer">February 12, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to docker上のpry-byebugにショートカットを設定したい" href="https://rengotaku.github.io/posts/5d7fa977-1511-4546-aea2-9b7622a4097c/"></a>
+  <a class="entry-link" aria-label="post link to omniauthのTwitterプロバイダーのauthキーをコントローラーで設定" href="https://rengotaku.github.io/posts/4fce0411-7c96-42a2-8d3e-2861e57754e1/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      gitで消えたファイルのコミットIDを特定する
+      omniauthのTwitterプロバイダーのoptionsを動的に変更する
     </h2>
   </header>
   <section class="entry-content">
-    <p>git log でファイルも表示しグレップする $ git log --stat | grep -B 8 hoge.rb | less -B X は要調整 git log で変更・追加されたファイルを表示する - yuumi3のお仕事日記 gre...</p>
+    <p>SETUP_PROC = lambda do |env| request = Rack::Request.new(env) user = User.find_by_subdomain(request.subdomain) env[&#39;omniauth.strategy&#39;].options[:client_id] = user.consumer_key # if using omniauth-oauth2 env[&#39;omniauth.strategy&#39;].options[:client_secret] = user.consumer_secret # if using omniauth-oauth2 env[&#39;omniauth.strategy&#39;].options[:consumer_key] = user.consumer_key # if using omniauth-oauth env[&#39;omniauth.strategy&#39;].options[:consumer_secret] = user.consumer_secret # if using omniauth-oauth end use OmniAuth::Builder.new do provider :twitter, setup: SETUP_PROC, callback_path: &#34;/path/to/callback&#34;, image_size: &#34;original&#34; end Setup Phase · omniauth/omniauth Wiki · GitHub...</p>
   </section>
-  <footer class="entry-footer">January 22, 2020
+  <footer class="entry-footer">February 12, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to gitで消えたファイルのコミットIDを特定する" href="https://rengotaku.github.io/posts/d41bf80a-8abb-4491-8aa2-b7172412c6e7/"></a>
+  <a class="entry-link" aria-label="post link to omniauthのTwitterプロバイダーのoptionsを動的に変更する" href="https://rengotaku.github.io/posts/457eeb3b-3e8a-411b-bca0-38561b0ec80f/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      React.renderのrenderファンクションが存在しない
+      golangでハローワールド
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 react-dom を読み込み、 ReactDOM.render で実行する。 React.render is not a function | 穀風 事象 React.renderの箇所で、 ReactDOM.render is not a function が発生する...</p>
+    <p>$ mkdir -p $HOME/go/src/github.com/user $ vi ~/.bash_profile export GOPATH=$HOME/go export GOROOT=/usr/local/opt/go/libexec export PATH=$PATH:$GOPATH/bin export PATH=$PATH:$GOROOT/bin $ brew install go $ HOME/go/src/github.com/user $ mkdir hello $ cd hello $ go mod init github.com/user/hello $ vi hello.go package main import &#34;fmt&#34; func main() { fmt.Println(&#34;Hello, world.&#34;) } $ go run hello.go macos - Install go with brew, and running the gotour - Stack Overflow How to Write Go Code - The Go...</p>
   </section>
-  <footer class="entry-footer">January 22, 2020
+  <footer class="entry-footer">February 10, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to React.renderのrenderファンクションが存在しない" href="https://rengotaku.github.io/posts/360b751d-7cb8-4f74-8fb9-02b5d09107ff/"></a>
+  <a class="entry-link" aria-label="post link to golangでハローワールド" href="https://rengotaku.github.io/posts/489083dc-7430-49b0-8f84-079472642e90/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
@@ -287,7 +287,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

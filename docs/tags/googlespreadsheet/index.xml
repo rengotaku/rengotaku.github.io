@@ -7,10 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Thu, 28 May 2020 10:31:02 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/googlespreadsheet/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 01 Feb 2021 09:22:00 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/googlespreadsheet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GASで毎日8時ちょうどに起動するサンプル</title>
+      <link>https://rengotaku.github.io/posts/70e22957-4285-4bee-a01d-e2b23bd17655/</link>
+      <pubDate>Mon, 01 Feb 2021 09:22:00 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/70e22957-4285-4bee-a01d-e2b23bd17655/</guid>
+      <description>source //このメソッドをGAS側で直接午前1 ~ 2時にトリガーをセットしてスケジュールをハンドリングする function scheduleTrigger() { // まず全部のtriggerを削除する</description>
+    </item>
     
     <item>
       <title>スプレッドシートで日、時のセルを結合したい</title>

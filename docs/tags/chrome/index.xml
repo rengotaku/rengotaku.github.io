@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Sun, 24 May 2020 22:16:43 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 24 May 2020 22:16:43 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>monacaのcloud IDEでサードパーティクッキーをブロックしないで下さいとエラーが発生する</title>
       <link>https://rengotaku.github.io/posts/3e59e8de-60fa-4ede-a169-6692f08b3224/</link>

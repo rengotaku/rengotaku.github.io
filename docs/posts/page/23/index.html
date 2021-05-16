@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/posts/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/posts/" />
-<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content=""/>
@@ -128,141 +128,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      sedの用途集
+      minitestでprivateメソッドをテスト
     </h2>
   </header>
   <section class="entry-content">
-    <p>数字を特定の文字列に置換 sed -e &#39;s/[0-9]\{1,\}/xxx/g&#39; $ echo test1234 | sed -e &#39;s/[0-9]\{1,\}/xxx/g&#39; testxxx 使いどき /path/area_1 /path/area_200 みたいなパスを集約したい時 regular expression - How to use sed to replace numbers with parenthese? - Unix &amp; Linux Stack Exchange N番目の(.)を削除...</p>
+    <p>解決 __send__を使用する Class Person def initialize(name) @name = name end private def tom(generation) @name = &#39;tom&#39; &#43; generation.to_s end end person = Person.new(&#39;tarou&#39;) person.__send__(:tom, 2) assert { re_inquiry.instance_eval(&#39;@name&#39;).size == &#39;tom2&#39; } #&lt;= インスタンス変数を参照 instance_eval (Object) - Rubyリファレンス send...</p>
   </section>
-  <footer class="entry-footer">August 2, 2019
+  <footer class="entry-footer">August 29, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to sedの用途集" href="https://rengotaku.github.io/posts/7d0ddaff-29ae-4f20-9e8c-4ff6adcf54c7/"></a>
+  <a class="entry-link" aria-label="post link to minitestでprivateメソッドをテスト" href="https://rengotaku.github.io/posts/1a7b69f1-218d-4982-ba5f-a3fee308cdfe/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      awkの各フィールドの値を確認したい
+      docker-composeでmysqlの起動を待機したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 awk &#39;{for (i = 1; i &lt;= NF; i&#43;&#43;) print &#34;$&#34;i&#34;:&#34;$i;}&#39; で確認できる $ head -1 /var/log/https/access_log | awk -F&#39;\t&#39; &#39;{for (i = 1; i &lt;= NF; i&#43;&#43;) print &#34;$&#34;i&#34;:&#34;$i;}&#39; $1:domain:hogehoge $2:host:xxx.xxx.xxx.xxx $3:server:xxx.xxx.xxx.xxx $4:ident:- $5:user:- $6:time:28/Jul/2019:03:21:06 &#43;0900 $7:method:GET $8:path:/sitemap/info.xml $9:protocol:HTTP/1.1 $10:status:200 $11:size:576 $12:referer:- $13:agent:xxxx $14:response_time:3421 $15:cookie:- $16:set_cookie:- AWKのこういう時はどう書く? - Qiita...</p>
+    <p>解決 dockerize を使用する dockerize -wait tcp://mysql-local:3306 -timeout 120s dockerize を使って他のコンテナ内サービス起動を待つ - Qiita...</p>
   </section>
-  <footer class="entry-footer">August 2, 2019
+  <footer class="entry-footer">August 27, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to awkの各フィールドの値を確認したい" href="https://rengotaku.github.io/posts/0f2bcc1d-f221-4848-921c-84c194c6b6fa/"></a>
+  <a class="entry-link" aria-label="post link to docker-composeでmysqlの起動を待機したい" href="https://rengotaku.github.io/posts/07c5e4a3-d964-4917-9972-1520705f3de5/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      ActionMailでmailを実行しない場合は、NullMailが返却される
+      パイプラインで実行された任意のコマンドの実行結果を取得
     </h2>
   </header>
   <section class="entry-content">
-    <p>事象 ActionMailer::Base を継承したクラスのメソッドをコール時に、メソッド内で mail が呼び出されていない場合は、 ActionMailer::Base::NullMail が返却される。（通常は Mail::Message）...</p>
+    <p>解決 PIPESTATUS変数 を使用する $ false | tee -a &#39;/tmp/test&#39; &amp;&amp; if [ &#34;${PIPESTATUS[0]}&#34; -eq 0 ]; then true; else false; fi $ echo $? 1 $ true | tee -a &#39;/tmp/test&#39; &amp;&amp; if [ &#34;${PIPESTATUS[0]}&#34; -eq 0 ]; then true; else false; fi $ echo $? 0 ShellScript Bash 終了コード...</p>
   </section>
-  <footer class="entry-footer">July 31, 2019
+  <footer class="entry-footer">August 27, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to ActionMailでmailを実行しない場合は、NullMailが返却される" href="https://rengotaku.github.io/posts/81d97880-2a3c-4de8-add0-fa3cb5e29c1d/"></a>
+  <a class="entry-link" aria-label="post link to パイプラインで実行された任意のコマンドの実行結果を取得" href="https://rengotaku.github.io/posts/140b2b51-99ad-4e8a-b196-cb95c00c3028/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      記号を英語で書くと
+      bashでslackに通知
     </h2>
   </header>
   <section class="entry-content">
-    <p>記号 日本語 英語 [ ] 鉤括弧、カギカッコ brackets, square brackets ( ) 括弧、カッコ brackets, curl brackets, parentheses 『かぎかっこ』は英語で何？他かっこの英語表現もまとめてみた！ | ラボライブ！...</p>
+    <p>解決 メイン処理 Shell/Bash script for sending slack messages. を使用する。 マッピング #!/bin/bash export APP_SLACK_WEBHOOK=&#34;https://hooks.slack.com/services/XXXX&#34; export APP_SLACK_CHANNEL=channel_name #export APP_SLACK_USERNAME=$(hostname) export APP_SLACK_ICON_EMOJI=&#34;:hoge:&#34; /usr/bin/slack &#34;[$(hostname)] $(cat -)&#34; 使い方 /path/to/shell.sh 2&gt;&amp;1 | /usr/local/bin/crontab-slack 結果 [163-44-175-179] test な感じで送信される。 note どっかで使っていたスク...</p>
   </section>
-  <footer class="entry-footer">July 31, 2019
+  <footer class="entry-footer">August 27, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to 記号を英語で書くと" href="https://rengotaku.github.io/posts/9d78b4b7-b269-4a78-bf44-19917ace9387/"></a>
+  <a class="entry-link" aria-label="post link to bashでslackに通知" href="https://rengotaku.github.io/posts/a4f63bc9-ba1a-4b9b-9745-01ee23b7813d/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      railsタスクを変数に格納して実行したい
+      nginxのリバースプロキシ一例
     </h2>
   </header>
   <section class="entry-content">
-    <p>事象 railsタスクの実行コマンドを変数に入れて実行したいが、予期しないエラーが発生する。 RAILS_TASK=&#39;rbenv exec bundle exec rails hogehoge:hoge1[param1,1,2]&#39; $RAILS_TASK # =&gt; ./test.sh: line 5: [: too many arguments 解決 “...</p>
+    <p>/post/:encryptedId?hoge=1111 -&gt; /posts/:encryptedId?hoge=1111 location ~ ^/post/(?&lt;encryptedId&gt;[a-z1-9]&#43;)/?$ { proxy_pass http://localhost:3000/posts/$encryptedId$is_args$args; } tips match対象を命名したい (?&lt;encryptedId&gt;[a-z1-9]&#43;) のように宣言し、 $encryptedId の変数で値を使用できる。 e.g. /post/a1b2c3 の場合、 $encryptedId =&gt; a1b2c3 nginx location ~ 正規表現でマッチした部分...</p>
   </section>
-  <footer class="entry-footer">July 30, 2019
+  <footer class="entry-footer">August 26, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to railsタスクを変数に格納して実行したい" href="https://rengotaku.github.io/posts/d05bd6f3-f718-4da9-9860-ed437c72f657/"></a>
+  <a class="entry-link" aria-label="post link to nginxのリバースプロキシ一例" href="https://rengotaku.github.io/posts/23387909-2719-4835-930c-4fee4e6ffa82/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      濁点、半濁点の文字を取得
+      pugを使用する際に参考にしたサイト
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 def find_dakuon_and_handakuon(kana) codepoints = kana.codepoints[0] moji = codepoints.chr(Encoding::UTF_8) dakuon = moji &#43; &#34;\u3099&#34; # 濁点 handakuon = moji &#43; &#34;\u309a&#34; # 半濁点 [ ActiveSupport::Multibyte::Unicode.normalize(dakuon, :c), ActiveSupport::Multibyte::Unicode.normalize(handakuon, :c) ] end 実行結果 find_dakuon_and_handakuon(&#39;ハ&#39;) # =&gt;...</p>
+    <p>htmlからの変換 HTML to PUG - Free HTML to PUG Online Converter...</p>
   </section>
-  <footer class="entry-footer">July 30, 2019
+  <footer class="entry-footer">August 23, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to 濁点、半濁点の文字を取得" href="https://rengotaku.github.io/posts/5b8cab5d-c20a-477d-834b-6c2e2f53e670/"></a>
+  <a class="entry-link" aria-label="post link to pugを使用する際に参考にしたサイト" href="https://rengotaku.github.io/posts/2431ed9e-ff55-409a-9588-df18432def81/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      viの基本操作
+      gulp4を使用する際に参考にしたサイト
     </h2>
   </header>
   <section class="entry-content">
-    <p>1文字の移動 操作 結果 h 左 j 下 k 上 l 右 1単語の移動 操作 結果 w 次の単語の先頭 (word) b 現在または前の単語の先頭 e 現在または次の単語の末尾 行での移動 操作...</p>
+    <p>node.js - Cannot find module ‘../lib/completion’ Inspite of installing Completion - Stack Overflow 他のプロジェクトからnode_moduleごと移行したら発生した より便利になった gulp 4.0 への移行方法と変更点をまとめま...</p>
   </section>
-  <footer class="entry-footer">July 24, 2019
+  <footer class="entry-footer">August 22, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to viの基本操作" href="https://rengotaku.github.io/posts/62f7585b-3291-42f9-8f8c-3394e4f37000/"></a>
+  <a class="entry-link" aria-label="post link to gulp4を使用する際に参考にしたサイト" href="https://rengotaku.github.io/posts/52a6e29e-4257-4e78-a33c-32e45fbd0cf6/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      特定のポートで接続が行われていない際に実行する
+      本日の範囲を取得したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>while : do if [ $(netstat -n | fgrep &#39;ESTABLISHED&#39; | fgrep &#39;:21&#39; | wc -l) -eq 0 ]; then echo &#34;nobody users established.&#34; break else echo &#34;wait 1 minute.&#34; sleep 1m fi done vsftpdの再起動時などにユーザ接続していな事を確認する時なんかに利用...</p>
+    <p>解決 all_day を使用する。 `where(created_at: Time.zone.now.all_day)` [1] pry(main)&gt; Time.now.all_day =&gt; 2019-08-19 00:00:00 &#43;0000..2019-08-19 23:59:59 &#43;0000 RailsのActiveRecordで今日・昨日など特定の日に保存されたレコードを取得 | EasyRamble...</p>
   </section>
-  <footer class="entry-footer">July 22, 2019
+  <footer class="entry-footer">August 19, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to 特定のポートで接続が行われていない際に実行する" href="https://rengotaku.github.io/posts/46ecb3df-474e-42de-bdab-24e9d8e0e7c2/"></a>
+  <a class="entry-link" aria-label="post link to 本日の範囲を取得したい" href="https://rengotaku.github.io/posts/9b60faba-13e0-48ab-a745-0392b0374de7/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      FTPまわりのログ確認
+      Let&#39;s Encryptのrenew（自動延長）でportエラー
     </h2>
   </header>
   <section class="entry-content">
-    <p># tail -f /var/log/vsftpd.log # less /var/log/messages # less /var/log/secure...</p>
+    <p>未解決 Problem binding to port 80: Could not bind to IPv4 or IPv6 - Help - Let’s Encrypt Community Support より、portが既に占有されているのが問題らしい。 nginxを止めて、実行すれば問題なく更新され...</p>
   </section>
-  <footer class="entry-footer">July 22, 2019
+  <footer class="entry-footer">August 19, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to FTPまわりのログ確認" href="https://rengotaku.github.io/posts/f512848b-2c16-4d54-8cd5-64b2d6a8c346/"></a>
+  <a class="entry-link" aria-label="post link to Let&#39;s Encryptのrenew（自動延長）でportエラー" href="https://rengotaku.github.io/posts/7c5f7801-561d-4421-9b19-e4ba02ca9ccb/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      ゼロ埋めしたい
+      docker-compose.ymlのcommandに記述ミスがあるとエラーになる
     </h2>
   </header>
   <section class="entry-content">
-    <p>printf &#34;%0Xd\n&#34; を使用する $ printf &#34;%05d\n&#34; 99 00099 numbers - How to zero pad a sequence of integers in bash so that all have the same width? - Stack Overflow...</p>
+    <p>解決 $ を $$ と記述しエスケープする Compose file version 3 reference | Docker Documentation export DOCKER_HOST=`/sbin/ip route|awk &#39;/default/ { print $$3 }&#39;` export DOCKER_HOST=`/sbin/ip route|awk &#39;/default/ { print $3 }&#39;` 事象 command: &gt;/bin/sh -c &#34;rm -f /var/tmp/pids/server.pid &amp;&amp; bundle install &amp;&amp; export DOCKER_HOST=`/sbin/ip route|awk &#39;/default/ { print $3 }&#39;` &amp;&amp; bundle exec rails s&#34; を実行する...</p>
   </section>
-  <footer class="entry-footer">July 19, 2019
+  <footer class="entry-footer">August 19, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to ゼロ埋めしたい" href="https://rengotaku.github.io/posts/d5a6610a-3eb3-4467-9c79-ee0e1cd7ce32/"></a>
+  <a class="entry-link" aria-label="post link to docker-compose.ymlのcommandに記述ミスがあるとエラーになる" href="https://rengotaku.github.io/posts/fd876cdf-6ca0-48c3-b5f0-a4f9572340d4/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
@@ -287,7 +287,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

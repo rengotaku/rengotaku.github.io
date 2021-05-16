@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/docker/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/docker/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/docker/" />
-<meta property="og:updated_time" content="2020-08-13T15:02:13+09:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="docker"/>
 <meta name="twitter:description" content=""/>
@@ -124,6 +124,34 @@ if (!doNotTrack) {
 
 
 
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Docker上のcapistranoから別途立てたローカルサーバにアクセス
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>構図 Capistrano Server[Docker] &lt;=&gt; Local[Mac] &lt;=&gt; SSHD Server[Docker] 接続先(ファイル設置先) サーバ 設定ファイル version: &#34;3&#34; services: ssh: build: dockerfile: Dockerfile command: [&#34;/usr/sbin/sshd&#34;, &#34;-D&#34;] tty: true ports: - &#34;10022:22&#34; Docker 初心者 — ssh で接続できるサーバーを立てる - Qiita FROM ubuntu:16.04 RUN...</p>
+  </section>
+  <footer class="entry-footer">January 17, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to Docker上のcapistranoから別途立てたローカルサーバにアクセス" href="https://rengotaku.github.io/posts/cae07512-deaa-4c5b-94cd-6ea0b68b1ca6/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Knowledge about docker for windows
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Add user for development RUN groupadd -g 1000 developer &amp;&amp; \ useradd -g developer -G sudo -m -s /bin/bash developer &amp;&amp; \ echo &#39;developer:hogehoge&#39; | chpasswd RUN echo &#39;Defaults visiblepw&#39; &gt;&gt; /etc/sudoers RUN echo &#39;developer ALL=(ALL) NOPASSWD:ALL&#39; &gt;&gt; /etc/sudoers Dockerコンテナ内にsudoユーザを追加する - Qiita Docker - Docker run で...</p>
+  </section>
+  <footer class="entry-footer">December 26, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to Knowledge about docker for windows" href="https://rengotaku.github.io/posts/3543a3d7-fc8e-4755-b855-d39fd5cf3010/"></a>
+</article>
 <article class="post-entry tag-entry"> 
 
   <header class="entry-header">
@@ -235,34 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">June 5, 2019
 </footer>
   <a class="entry-link" aria-label="post link to fluentdをdockerで動かす際のチップ集" href="https://rengotaku.github.io/posts/d15ea14f-fed7-4ef3-aab3-8a0e554eae2f/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      dockerで動いているrailsでbetter_errorsのirbが動作しない
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>未解決 画面右側のirbでデバッグできる画面が表示されない。 binding_of_caller が関連しているようだが、原因が不明。 画面を出すようにする BetterErrors::Middleware.allow_ip! &#34;0.0.0.0/0&#34; better_errors not working in a Docker container · Issue #270...</p>
-  </section>
-  <footer class="entry-footer">May 30, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to dockerで動いているrailsでbetter_errorsのirbが動作しない" href="https://rengotaku.github.io/posts/bc3ee1e4-fa92-4af9-bdd1-7dced7696686/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      dockerで動くrailsでデバックを行いたい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>設定 docker-compose.yml services: rails: &amp;app_base tty: true stdin_open: true 操作 アタッチ docker attach [container_name] $ docker-compose run --rm --service-ports [service name] でいけるかと思ったが、再度コンテナを立ち上げる挙動になり期待しない動きをする 便利コマンド...</p>
-  </section>
-  <footer class="entry-footer">May 30, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to dockerで動くrailsでデバックを行いたい" href="https://rengotaku.github.io/posts/b6b89728-605f-40b8-9d57-2bb1cc14b932/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

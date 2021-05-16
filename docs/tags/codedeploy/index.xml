@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Fri, 27 Sep 2019 18:39:58 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/codedeploy/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 27 Sep 2019 18:39:58 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/codedeploy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>codedeployで実際の処理はどこでやっているか確認</title>
       <link>https://rengotaku.github.io/posts/f629646e-f58a-4e3d-927e-a9cacd39e5c0/</link>

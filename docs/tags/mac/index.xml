@@ -7,10 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Fri, 08 May 2020 09:44:57 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 10 Dec 2020 23:18:40 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linuxのターミナルでプロンプトを表示したい</title>
+      <link>https://rengotaku.github.io/posts/d39f01fd-3c8b-441a-9340-b5de5c6fb507/</link>
+      <pubDate>Thu, 10 Dec 2020 23:18:40 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/d39f01fd-3c8b-441a-9340-b5de5c6fb507/</guid>
+      <description>インストール $ brew install newt コマンド $ whiptail --yesno &amp;quot;would you like to continue?&amp;quot; 10 40 ※後方の数値は、&amp;lt;height&amp;gt; &amp;lt;width&amp;gt;です。 参考 6 Lesser-Known Linux Commands You Should</description>
+    </item>
     
     <item>
       <title>macで昨日日付を取得したい</title>
@@ -234,7 +239,7 @@
       <pubDate>Wed, 18 Apr 2018 12:15:08 +0900</pubDate>
       
       <guid>https://rengotaku.github.io/posts/2a3de753-8c67-4cba-8dba-809c9550d48b/</guid>
-      <description>エディタ Visual Studio Code – コード エディター | Microsoft Azure 雑多用 CotEditor -Text Editor for macOS 以前は Download - Sublime Text ターミナル iTerm2 - macOS Terminal Replacement コピペ履歴 Clipy - Clipboard extension app for macOS ペイントツール フリー ペイント</description>
+      <description>エディタ Visual Studio Code – コード エディター | Microsoft Azure 雑多用 CotEditor -Text Editor for macOS 以前は Download - Sublime Text ターミナル iTerm2 - macOS Terminal Replacement コピペ履歴 Clipy - Clipboard extension app for macOS Prefarences-&amp;gt;Shortcuts History: Command + Shif + Space ペイントツール</description>
     </item>
     
   </channel>

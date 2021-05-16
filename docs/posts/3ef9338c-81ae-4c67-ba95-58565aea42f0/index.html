@@ -11,7 +11,7 @@
 <meta name="description" content="deleteExtraFile(dirPath, limit=100){ const files = fs.readdirSync(dirPath).filter(function(file){ // .XXX は除外 return !/^\..&#43;$/.test(file); }); let fileCreatedAts = []; // fileの生成時間を抽出 for (let i = 0; i &lt; files.length; i&#43;&#43;) { const filename = files[i]; const fileStat = fs.statSync(path.join(dirPath, filename)); const filedata = { filename: filename, birthtimeMs: fileStat[&#39;birthtimeMs&#39;], }; fileCreatedAts.push(filedata); } // 日付を降順でソー">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/3ef9338c-81ae-4c67-ba95-58565aea42f0/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "nodejs", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "deleteExtraFile(dirPath, limit=100){\rconst files = fs.readdirSync(dirPath).filter(function(file){\r// .XXX は除外\r return !/^\\..+$/.test(file);\r});\rlet fileCreatedAts = [];\r// fileの生成時間を抽出\r for (let i = 0; i  files.length; i++) {\rconst filename = files[i];\rconst fileStat = fs.statSync(path.join(dirPath, filename));\rconst filedata = {\rfilename: filename,\rbirthtimeMs: fileStat['birthtimeMs'],\r};\rfileCreatedAts.push(filedata);\r}\r// 日付を降順でソート\r fileCreatedAts.sort(function(a, b) {\rreturn b['birthtimeMs'] - a['birthtimeMs'];\r});\rconst deleteFiles = fileCreatedAts.slice(limit);\r// 余分なファイルを削除\r for (let i = 0; i  deleteFiles.length; i++) {\rconst deleteFile = deleteFiles[i];\rfs.unlink(path.join(dirPath, deleteFile['filename']), function (err) {});\r}\r}\r``` ",
+  "articleBody": "deleteExtraFile(dirPath, limit=100){ const files = fs.readdirSync(dirPath).filter(function(file){ // .XXX は除外  return !/^\\..+$/.test(file); }); let fileCreatedAts = []; // fileの生成時間を抽出  for (let i = 0; i  files.length; i++) { const filename = files[i]; const fileStat = fs.statSync(path.join(dirPath, filename)); const filedata = { filename: filename, birthtimeMs: fileStat['birthtimeMs'], }; fileCreatedAts.push(filedata); } // 日付を降順でソート  fileCreatedAts.sort(function(a, b) { return b['birthtimeMs'] - a['birthtimeMs']; }); const deleteFiles = fileCreatedAts.slice(limit); // 余分なファイルを削除  for (let i = 0; i  deleteFiles.length; i++) { const deleteFile = deleteFiles[i]; fs.unlink(path.join(dirPath, deleteFile['filename']), function (err) {}); } } ``` ",
   "wordCount" : "116",
   "inLanguage": "en",
   "datePublished": "2018-06-25T12:25:11+09:00",
@@ -218,7 +218,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

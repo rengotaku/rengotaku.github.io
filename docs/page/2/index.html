@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/" />
-<meta property="og:updated_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vegetable Programing"/>
 <meta name="twitter:description" content=""/>
@@ -138,141 +138,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      可逆式、不可逆式で暗号化したい
+      nginxまでSSLを使用してリバースプロキシー後は使用しない場合に無限リダイレクトされる
     </h2>
   </header>
   <section class="entry-content">
-    <p>不可逆式 Class: BCrypt::Password — Documentation for codahale/bcrypt-ruby (master) encrypted_data = BCrypt::Password.create(&#34;test12345&#34;) # $2a$12$5L9lnrTYgFS5x/pOs15Y3OHTSS1A4ThOlKzbWYJf.AlJMXkeK8AtK encrypted_data == &#34;test12345&#34; # true 可逆式 A simple way to encrypt and decrypt in Rails 5 | by Daveyon Mayne | Medium key = Rails.application.credentials.config[:secret_key_base][1..32] # or ENV[&#34;SECRET_KEY_BASE&#34;][1..32] in trial, staging or production crypt = ActiveSupport::MessageEncryptor.new(key) consumer_key = &#34;test12345&#34; encrypted_data = crypt.encrypt_and_sign(consumer_key, purpose: :campaign_code) # or crypt.encrypt_and_sign(self.consumer_key) puts encrypted_data # UscL3xFA6Lv5Ad/hJz/zl5N37Q==--tgjUj9WFgB1OWIp1--JuYB0iFWEfqYRtfXoZiRvg== puts...</p>
+    <p>解決 Issue with SSL when using nginx reverse proxy | WordPress.org より、wp-config.phpに下記を追記する define(&#39;FORCE_SSL_ADMIN&#39;, true); if ($_SERVER[&#39;HTTP_X_FORWARDED_PROTO&#39;] == &#39;https&#39;) $_SERVER[&#39;HTTPS&#39;]=&#39;on&#39;; Administration Over SSL | WordPress.org の公式にも注意が書いてあった 事象 https://example.com/wp-admin/index.php にアクセス...</p>
   </section>
-  <footer class="entry-footer">September 24, 2020
+  <footer class="entry-footer">March 6, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to 可逆式、不可逆式で暗号化したい" href="https://rengotaku.github.io/posts/ab5008a3-27a0-4053-8632-8b6ff84fd0fe/"></a>
+  <a class="entry-link" aria-label="post link to nginxまでSSLを使用してリバースプロキシー後は使用しない場合に無限リダイレクトされる" href="https://rengotaku.github.io/posts/47c877b7-ce6e-401f-be57-89f43fbba366/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      interactorで引数チェックを行いたい
+      conohaのサーバのアウトバンドが全て塞がれる
     </h2>
   </header>
   <section class="entry-content">
-    <p>Validators for Interactors. In our previous blog post, we talked… | by Manoj M J | reflektive-engineering | Medium より module InteractorValidations def self.included(base) base.extend ClassMethods end module ClassMethods def requires(*attributes) before do attributes.each do |attribute| raise ArgumentError.new(&#34;Required attribute #{attribute}is missing&#34;) if context.public_send(attribute).nil? end end end end end...</p>
+    <p>解決 terraformでサーバを作成した際に、セキュリティグループのegressにCIDR(0.0.0.0/0)を設定していたがDefaul...</p>
   </section>
-  <footer class="entry-footer">September 9, 2020
+  <footer class="entry-footer">March 1, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to interactorで引数チェックを行いたい" href="https://rengotaku.github.io/posts/7c9b4e9d-71b0-4fb6-962e-9d02cd979a9b/"></a>
+  <a class="entry-link" aria-label="post link to conohaのサーバのアウトバンドが全て塞がれる" href="https://rengotaku.github.io/posts/022d8954-06d4-44a1-95ad-188e8b8e8d6d/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      vueプロジェクトをS3＋CloudFrontでSSL証明付きで動かす
+      Capistranoのhookをスキップさせたい場合
     </h2>
   </header>
   <section class="entry-content">
-    <p>メインの記事 Developer Tutorial - Deploying Vue.js to AWS S3 | Level Up Coding CloudFrontでSSL証明を選択できない Unable to select Custom SSL Certificate (stored in AWS IAM) - Intellipaat Community にある、ログアウトをすると選択で...</p>
+    <p>Dynamically skip Capistrano hooks - makandra dev より、 ３の場合は環境変数で行う必要がある(fetchは機能しない) before &#39;deploy:updating&#39;, &#39;db:dump&#39; unless ENV[&#39;SKIP_DUMP&#39;] ※Rails見たく、if文はない。...</p>
   </section>
-  <footer class="entry-footer">September 2, 2020
+  <footer class="entry-footer">February 18, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to vueプロジェクトをS3＋CloudFrontでSSL証明付きで動かす" href="https://rengotaku.github.io/posts/d7ffebf1-bef6-4471-b0ea-9a362456d1cf/"></a>
+  <a class="entry-link" aria-label="post link to Capistranoのhookをスキップさせたい場合" href="https://rengotaku.github.io/posts/e851761c-6113-4a68-8a81-9b56170a4bc9/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      bash作りで一通りやりたいことしているスクリプト
+      bundle updateでエラーが発生する
     </h2>
   </header>
   <section class="entry-content">
-    <p>#!/bin/bash -e script_dir=$(cd $(dirname $0); pwd) #################### # VARIABLES #################### ATHENA_CATALOG=AwsDataCatalog ENVS=(trial staging production) DEFAULT_AWS_PROFILE=hoge #################### # functions #################### containsElement () { local e match=&#34;$1&#34; shift for e; do [[ &#34;$e&#34; == &#34;$match&#34; ]] &amp;&amp; return; done echo &#34;n&#34; } #################### # usage #################### cmdname=`basename $0` function usage() { echo &#34;Usage: ${cmdname}env [OPTIONS]&#34; echo &#34;&#34; echo &#34;env: ${ENVS[@]}&#34; echo &#34;OPTIONS:&#34; echo &#34; --profile name, aws profile, default &#39;$DEFAULT_AWS_PROFILE&#39;.&#34; echo &#34;&#34;...</p>
+    <p>解決 https://github.com/rubygems/rubygems/issues/4380#issuecomment-780128796 より、bundlerのバージョンを指定する。 gem install bundler -v 2.2.9 事象 突如、下記のエラーが発生した。 /usr/local/bundle/gems/bundler-2.2.10/lib/bundler/resolver.rb:470:in `block in validate_resolved_specs!&#39;: The gem &#39;capistrano&#39; was found in multiple relevant sources. (Bundler::SecurityError) * rubygems repository http://hoge.example/ or installed locally * rubygems...</p>
   </section>
-  <footer class="entry-footer">August 27, 2020
+  <footer class="entry-footer">February 17, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to bash作りで一通りやりたいことしているスクリプト" href="https://rengotaku.github.io/posts/8f21c4fe-0f8d-43ff-bf7f-6ba6848bd397/"></a>
+  <a class="entry-link" aria-label="post link to bundle updateでエラーが発生する" href="https://rengotaku.github.io/posts/7ca95d58-467e-4005-9046-b2abfe6efd16/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      bootstrapのNavbarの配置の仕方で困ったとき
+      自前のバリデーションを作成する
     </h2>
   </header>
   <section class="entry-content">
-    <p>Bootstrap 4 Navbar Center Links Examples on Codeply より &lt;!-- 1 - Navbar with brand left, centered links and right aligned links. The center links collapse into the mobile menu and rightside links show underneath --&gt; &lt;nav class=&#34;navbar navbar-expand-md navbar-dark bg-primary&#34;&gt; &lt;div class=&#34;d-flex w-50 order-0&#34;&gt; &lt;a class=&#34;navbar-brand mr-1&#34; href=&#34;#&#34;&gt;Bootstrap 4&lt;/a&gt; &lt;button class=&#34;navbar-toggler&#34; type=&#34;button&#34; data-toggle=&#34;collapse&#34; data-target=&#34;#collapsingNavbar&#34;&gt; &lt;span class=&#34;navbar-toggler-icon&#34;&gt;&lt;/span&gt; &lt;/button&gt; &lt;/div&gt; &lt;div class=&#34;navbar-collapse collapse justify-content-center order-2&#34; id=&#34;collapsingNavbar&#34;&gt; &lt;ul class=&#34;navbar-nav&#34;&gt; &lt;li class=&#34;nav-item...</p>
+    <p>解決 How to Implement Custom ActiveRecord Validations | by Moses Ogwo | Better Programming | Medium の3. Custom Validators (for an Attribute)を参考 concernsに定義 app/models/concerns/type_validator.rb class TypeValidator &lt; ActiveModel::EachValidator def validate_each(record, attribute, value) unless (value === &#34;wood&#34;) || (value === &#34;iron&#34;) # 好きな条...</p>
   </section>
-  <footer class="entry-footer">August 24, 2020
+  <footer class="entry-footer">February 3, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to bootstrapのNavbarの配置の仕方で困ったとき" href="https://rengotaku.github.io/posts/0d6faba8-c360-46f8-81d3-ea4ffc9b1211/"></a>
+  <a class="entry-link" aria-label="post link to 自前のバリデーションを作成する" href="https://rengotaku.github.io/posts/3aad0181-20b1-4f3c-ab4f-0d78fcab067c/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      bootstrapのspacingの書き方の表
+      GASで毎日8時ちょうどに起動するサンプル
     </h2>
   </header>
   <section class="entry-content">
-    <p>React Spacing - Bootstrap 4 &amp; Material Design. Examples &amp; tutorial - Material Design for Bootstrap より Screen Size Class Appears on all .ml-3 Appears only on xs .ml-3 .ml-sm-0 Appears only on sm .ml-sm-3 .ml-md-0 Appears only on md .ml-md-3 .ml-lg-0 Appears only on lg .ml-lg-3 .d-xl-0 Appears only on xl .ml-xl-3...</p>
+    <p>source //このメソッドをGAS側で直接午前1 ~ 2時にトリガーをセットしてスケジュールをハンドリングする function scheduleTrigger() { // まず全部のtriggerを削除する...</p>
   </section>
-  <footer class="entry-footer">August 23, 2020
+  <footer class="entry-footer">February 1, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to bootstrapのspacingの書き方の表" href="https://rengotaku.github.io/posts/2c06040d-2aee-4039-916c-bf48fabf80b3/"></a>
+  <a class="entry-link" aria-label="post link to GASで毎日8時ちょうどに起動するサンプル" href="https://rengotaku.github.io/posts/70e22957-4285-4bee-a01d-e2b23bd17655/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      gitignoreで決まったファイルのみ許容する書き方
+      docker-composeのport設定の挙動確認
     </h2>
   </header>
   <section class="entry-content">
-    <p>working-memo/.gitignore at master · kanagawa41/working-memo * !bin !bin/*.sh...</p>
+    <p>behavior Compose file version 3 reference | Docker Documentation ※3.9で確認。 ports: # 0.0.0.0:55006-&gt;3000/tcp - &#34;3000&#34; # 0.0.0.0:55005-&gt;7000/tcp, 0.0.0.0:55004-&gt;7001/tcp, 0.0.0.0:55003-&gt;7002/tcp, 0.0.0.0:55002-&gt;7003/tcp, 0.0.0.0:55001-&gt;7004/tcp, 0.0.0.0:55000-&gt;7005/tcp - &#34;7000-7005&#34; # 0.0.0.0:8000-&gt;8000/tcp - &#34;8000:8000&#34; # 0.0.0.0:9090-&gt;8080/tcp, 0.0.0.0:9091-&gt;8081/tcp - &#34;9090-9091:8080-8081&#34; # 0.0.0.0:49100-&gt;22/tcp - &#34;49100:22&#34; # 127.0.0.1:8001-&gt;8001/tcp - &#34;127.0.0.1:8001:8001&#34; # 127.0.0.1:5000-5010-&gt;5000-5010/tcp - &#34;127.0.0.1:5000-5010:5000-5010&#34; # 0.0.0.0:6060-&gt;6060/udp - &#34;6060:6060/udp&#34; # 0.0.0.0:12401-&gt;1240/tcp - &#34;12400-12500:1240&#34; 12400-1250...</p>
   </section>
-  <footer class="entry-footer">August 20, 2020
+  <footer class="entry-footer">January 26, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to gitignoreで決まったファイルのみ許容する書き方" href="https://rengotaku.github.io/posts/0da10113-c501-4846-82ca-ceccfa0efb81/"></a>
+  <a class="entry-link" aria-label="post link to docker-composeのport設定の挙動確認" href="https://rengotaku.github.io/posts/8f1e9d0c-79df-49cc-8302-91ffb382af73/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      dockerのみでfluentdを動作させる
+      rubyでoffestを実装してみた
     </h2>
   </header>
   <section class="entry-content">
-    <p>$ docker build -f fluentd/Dockerfile . --tag fluentd $ docker run -d \ -p 24224:24224 \ -p 24224:24224/udp \ --name fluentd_c \ --env-file .env \ fluentd $ docker exec -it fluentd_c /bin/sh $ docker stop fluentd_c $ docker rm fluentd_c...</p>
+    <p>Source def offset(size, chunk_num = 5000) (0...((size / chunk_num) &#43; (size % chunk_num &gt; 0 ? 1 : 0))).to_a.each do |count| start_cnt = chunk_num * count end_cnt = chunk_num * count &#43; chunk_num - 1 end_cnt = size - 1 if end_cnt &gt; size - 1 yield start_cnt, end_cnt end end Usage offset(10000) {|s, e| puts &#34;#{s},#{e}&#34;} 0,4999 5000,9999 offset(10001) {|s, e| puts &#34;#{s},#{e}&#34;} 0,4999 5000,9999 10000,10000...</p>
   </section>
-  <footer class="entry-footer">August 13, 2020
+  <footer class="entry-footer">January 26, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to dockerのみでfluentdを動作させる" href="https://rengotaku.github.io/posts/972bfb28-b80a-4967-a2a4-121abbc464bc/"></a>
+  <a class="entry-link" aria-label="post link to rubyでoffestを実装してみた" href="https://rengotaku.github.io/posts/1c5e79a3-ab8c-4ecd-96e0-187a6b536e09/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      athenaで日付のフォーマットを指定
+      proxyを通してmysqldumpを実行したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 amazon web services - AWS Athena and date_format - Stack Overflow select current_timestamp ,date_format (current_timestamp, &#39;%Y_%m_%d&#39;) ,format_datetime (current_timestamp, &#39;y_M_d&#39;)...</p>
+    <p>解決 mysql - Temporary SSH Tunnel for backup purposes - Server Fault ssh usr@host mysqldump -u dbuser -ppasswd my-database-name &gt;dumpfile ※dumpfileはローカルに出力されます...</p>
   </section>
-  <footer class="entry-footer">August 4, 2020
+  <footer class="entry-footer">January 20, 2021
 </footer>
-  <a class="entry-link" aria-label="post link to athenaで日付のフォーマットを指定" href="https://rengotaku.github.io/posts/3ece5d34-946a-489c-b273-877c384ca09e/"></a>
+  <a class="entry-link" aria-label="post link to proxyを通してmysqldumpを実行したい" href="https://rengotaku.github.io/posts/380688f0-9e0e-49a0-b934-9600c6eede9e/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Sentryへの通知があったあたりのログをcloudwatchから取得する
+      td-agentでtailでログを読み込ませる際にフォーマットが違うのでアウトプットされない
     </h2>
   </header>
   <section class="entry-content">
-    <p>ソース ※awslogsが4/11/2020 04:50の形式で検索が上手く行かない。 function detecte_log { EXPAND_SECONDS=10 if [ &#34;$#&#34; -ne 1 ]; then echo &#34;Need time such as &#39;July 29 2020 17:24:07 JST&#39;&#34; exit 1 fi occured_time=$1 start_time=`date &#43;&#34;%d/%m/%Y %T&#34; --utc...</p>
+    <p>解決 applog.confのsourceのformatをmultilineからjsonに変更 json - Fluentd 起因 type tailで読みとったRailsのlo...</p>
   </section>
-  <footer class="entry-footer">July 29, 2020
+  <footer class="entry-footer">December 23, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to Sentryへの通知があったあたりのログをcloudwatchから取得する" href="https://rengotaku.github.io/posts/d78e5591-d64e-4b11-9410-4342922d7728/"></a>
+  <a class="entry-link" aria-label="post link to td-agentでtailでログを読み込ませる際にフォーマットが違うのでアウトプットされない" href="https://rengotaku.github.io/posts/dd87555c-4df5-4d67-8679-1f17f5e0ed8f/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

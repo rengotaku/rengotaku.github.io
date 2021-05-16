@@ -11,7 +11,7 @@
 <meta name="description" content="&lt;?php $url = &#34;https://qiita.com/api/v2/items&#34;; // cURLセッションを初期化 $ch = curl_init(); // オプションを設定 curl_setopt($ch, CURLOPT_URL, $url); // 取得するURLを指定 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // 実行結果を文字列で返す curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // サーバー証明書">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/80c56d1e-821e-405d-8a8a-97dc72de5c35/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "php", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "\r$url = \"https://qiita.com/api/v2/items\";\r// cURLセッションを初期化\r$ch = curl_init();\r// オプションを設定\rcurl_setopt($ch, CURLOPT_URL, $url); // 取得するURLを指定\rcurl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // 実行結果を文字列で返す\rcurl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // サーバー証明書の検証を行わない\r\r// URLの情報を取得\r$response = curl_exec($ch);\r$errno = curl_errno($ch);\r$error = curl_error($ch);\rcurl_close($ch);\rif (CURLE_OK !== $errno) {\rthrow new RuntimeException($error, $errno);\r}\r// 取得結果を表示\recho $response;\r$result = json_decode($response, true); # 戻り値はハッシュ形式\r\r// セッションを終了\rcurl_close($conn);\r?\r [PHP] cURL関数を使ってWEB APIより情報を取得してみよう | マリンロード\n ",
+  "articleBody": "php $url = \"https://qiita.com/api/v2/items\"; // cURLセッションを初期化 $ch = curl_init(); // オプションを設定 curl_setopt($ch, CURLOPT_URL, $url); // 取得するURLを指定 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // 実行結果を文字列で返す curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // サーバー証明書の検証を行わない  // URLの情報を取得 $response = curl_exec($ch); $errno = curl_errno($ch); $error = curl_error($ch); curl_close($ch); if (CURLE_OK !== $errno) { throw new RuntimeException($error, $errno); } // 取得結果を表示 echo $response; $result = json_decode($response, true); # 戻り値はハッシュ形式  // セッションを終了 curl_close($conn); ? [PHP] cURL関数を使ってWEB APIより情報を取得してみよう | マリンロード\n ",
   "wordCount" : "180",
   "inLanguage": "en",
   "datePublished": "2018-12-13T19:25:36+09:00",
@@ -160,7 +160,7 @@ if (!doNotTrack) {
   </header> 
 
   <div class="post-content">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 $url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://qiita.com/api/v2/items&#34;</span>;
 
@@ -190,8 +190,8 @@ $result <span style="color:#f92672">=</span> <span style="color:#a6e22e">json_de
 <span style="color:#75715e">// セッションを終了
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">curl_close</span>($conn);
 
-<span style="color:#75715e">?&gt;</span>
-</code></pre></div><blockquote>
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><blockquote>
 <p><a href="https://www.marineroad.com/staff-blog/18954.html">[PHP] cURL関数を使ってWEB APIより情報を取得してみよう | マリンロード</a></p>
 </blockquote>
 
@@ -218,7 +218,7 @@ $result <span style="color:#f92672">=</span> <span style="color:#a6e22e">json_de
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/ssl/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/ssl/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/ssl/" />
-<meta property="og:updated_time" content="2018-12-18T19:33:52+09:00" />
+<meta property="og:updated_time" content="2021-03-06T18:50:15+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ssl"/>
 <meta name="twitter:description" content=""/>
@@ -124,6 +124,20 @@ if (!doNotTrack) {
 
 
 
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      nginxまでSSLを使用してリバースプロキシー後は使用しない場合に無限リダイレクトされる
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 Issue with SSL when using nginx reverse proxy | WordPress.org より、wp-config.phpに下記を追記する define(&#39;FORCE_SSL_ADMIN&#39;, true); if ($_SERVER[&#39;HTTP_X_FORWARDED_PROTO&#39;] == &#39;https&#39;) $_SERVER[&#39;HTTPS&#39;]=&#39;on&#39;; Administration Over SSL | WordPress.org の公式にも注意が書いてあった 事象 https://example.com/wp-admin/index.php にアクセス...</p>
+  </section>
+  <footer class="entry-footer">March 6, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to nginxまでSSLを使用してリバースプロキシー後は使用しない場合に無限リダイレクトされる" href="https://rengotaku.github.io/posts/47c877b7-ce6e-401f-be57-89f43fbba366/"></a>
+</article>
 <article class="post-entry tag-entry"> 
 
   <header class="entry-header">

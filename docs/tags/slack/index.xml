@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Fri, 29 Nov 2019 17:48:39 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/slack/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 29 Nov 2019 17:48:39 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/slack/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>slackのWebhookを一覧で確認したい</title>
       <link>https://rengotaku.github.io/posts/579edc76-b055-49aa-8bc4-b6d275b70002/</link>

@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Tue, 20 Nov 2018 11:15:59 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/cloudwatch/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 20 Nov 2018 11:15:59 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/cloudwatch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>get-log-eventsにてクラウドウォッチのログを取得</title>
       <link>https://rengotaku.github.io/posts/fa16caf8-964e-4fa3-a4f5-12f431e7aadb/</link>

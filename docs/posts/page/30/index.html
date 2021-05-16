@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/posts/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/posts/" />
-<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content=""/>
@@ -128,141 +128,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      csvの一行目にcrlfが含まれている為エラーになる
+      factory botでユニークな値を設定
     </h2>
   </header>
   <section class="entry-content">
-    <p>事象 # ファイルから一行ずつ読み込む i_csv = CSV.open(filepath, &#34;rb&#34;, skip_blanks: true, force_quotes: true) processed_position = 0 begin i_csv.each do |row| processed_position = i_csv.pos end rescue CSV::MalformedCSVError =&gt; ex aborted_position = i_csv.pos io = i_csv.to_io io.seek(processed_position) puts &#34;error message: #{ex.message}, stacktrace: #{ex.backtrace.join(&#34;,&#34;)}&#34; puts io.read(aborted_position - processed_position) end エラー error message: Missing or stray quote in line 1,...</p>
+    <p>sequence(:username) { |n| &#34;user#{n}&#34; } FactoryBot.define do factory :user do first_name &#39;John&#39; last_name &#39;Doe&#39; birthdate { 21.years.ago } admin false sequence(:username) { |n| &#34;user#{n}&#34; } end end Factory Bot cheatsheet...</p>
   </section>
-  <footer class="entry-footer">May 16, 2019
+  <footer class="entry-footer">June 26, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to csvの一行目にcrlfが含まれている為エラーになる" href="https://rengotaku.github.io/posts/4db39f95-be1b-4fb1-8503-0560ae376ca6/"></a>
+  <a class="entry-link" aria-label="post link to factory botでユニークな値を設定" href="https://rengotaku.github.io/posts/9b22bf01-bb92-4598-93a2-bd78d7efe635/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      CRLFをカウントしたい
+      mockの使い方
     </h2>
   </header>
   <section class="entry-content">
-    <p>ライン数を数える $ echo $&#39;record 1\r\nrecord\n2\r\nrecord 3&#39; &gt; file $ awk -v RS=&#39;\r\n&#39; &#39;END{print NR}&#39; file 3 linux - Bash script to count CR/LF in a text file - Stack Overflow fileコマンド $ file path/to/file path/to/file: UTF-8 Unicode text, with very long lines, with CRLF, LF line terminators catコマンド cat -e...</p>
+    <p>基本 mock = Minitest::Mock.new.expect(:method_name, &#39;return_value&#39;, [&#39;param1&#39;, &#39;param2&#39;]) mock.method_name(&#39;param1&#39;, &#39;param2&#39;) # &lt;= return value is &#39;return_value&#39; mock.verify # &lt;= true 第一のメソッド名、第二の戻り値までは必須 応用 入れ子 mock2 = Minitest::Mock.new.expect(:second, &#39;second value&#39;) mock1 = Minitest::Mock.new.expect(:first, mock2) mock1.first.second #&lt;= &#39;second value&#39; stubと組み合わせる class...</p>
   </section>
-  <footer class="entry-footer">May 15, 2019
+  <footer class="entry-footer">June 26, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to CRLFをカウントしたい" href="https://rengotaku.github.io/posts/9163f352-2f6d-45c5-a27c-3abe3db54496/"></a>
+  <a class="entry-link" aria-label="post link to mockの使い方" href="https://rengotaku.github.io/posts/333de691-10b6-4078-94a2-75b176921114/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      minitestでmockの引数を厳密にチェックしたくない
+      CircleCIでif文内で複数の処理を行う際に途中で失敗してもパスしてしまう
     </h2>
   </header>
   <section class="entry-content">
-    <p>@mock.expect(:do_something_else, true) do |a1, a2| # nothings end minitest/mock.rb at master · seattlerb/minitest...</p>
+    <p>事象 下記の場合だと、 decrypt1.sh 、 decrypt2.sh で失敗だったとしても、 decrypt3.sh が成功すればパスしてしまう。 if [ &#34;$CIRCLE_BRANCH&#34; = &#34;master&#34; ]; then ./decrypt1.sh ./decrypt2.sh ./decrypt3.sh fi 修正 &amp;&amp; で連結して成功した場合のみ次のステ...</p>
   </section>
-  <footer class="entry-footer">May 14, 2019
+  <footer class="entry-footer">June 21, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to minitestでmockの引数を厳密にチェックしたくない" href="https://rengotaku.github.io/posts/ccbc4a39-2105-4cfa-860a-f6a4c608cbf2/"></a>
+  <a class="entry-link" aria-label="post link to CircleCIでif文内で複数の処理を行う際に途中で失敗してもパスしてしまう" href="https://rengotaku.github.io/posts/4fb84bda-ee4a-483c-91d5-36d05bdbe114/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      docker-composeでvolumeを削除する
+      rubocop_todo.ymlのルールが適用されない
     </h2>
   </header>
   <section class="entry-content">
-    <p>$ docker-compose down -v Docker Composeでボリューム作成 - Qiita...</p>
+    <p>解決 してない。 複数のルールをマージする機能がないと実現しないが、その機能は外されたらしい。 バージョン $ rubocop -v 0.64.0 事象 inherit_from: .rubocop_1.yml AllCops: Exclude: - b.rb AllCops: Exclude: - a.rb 上記の場...</p>
   </section>
-  <footer class="entry-footer">May 10, 2019
+  <footer class="entry-footer">June 14, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to docker-composeでvolumeを削除する" href="https://rengotaku.github.io/posts/529728e8-bd92-4366-85f0-ff3d9a0e8ba0/"></a>
+  <a class="entry-link" aria-label="post link to rubocop_todo.ymlのルールが適用されない" href="https://rengotaku.github.io/posts/efae8a3a-e6f1-4c30-ac6d-262d4cf9e026/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      日付の差分を求めたい
+      DynamoDBでバックアップよりリストアしたい際に必要なポリシー
     </h2>
   </header>
   <section class="entry-content">
-    <p>$datetimePast-&gt;diff($datetimeFeature)-&gt;format(&#39;%a&#39;); 検証 $dateA = new DateTime(&#39;2010-01-01&#39;); $dateB = new DateTime(&#39;2010-03-01&#39;); $interval = $dateB-&gt;diff($dateA); echo $interval-&gt;format(&#39;%a total days&#39;).&#34;\n&#34;; // =&gt; 59 total days echo $interval-&gt;format(&#39;%m month, %d days&#39;); // =&gt; 1 month, 28 days %dだと0~31日までしか表現できない。経過日数を計算する場合は、%aを...</p>
+    <p>{ &#34;Version&#34;: &#34;2012-10-17&#34;, &#34;Statement&#34;: [ { &#34;Sid&#34;: &#34;VisualEditor0&#34;, &#34;Effect&#34;: &#34;Allow&#34;, &#34;Action&#34;: [ &#34;dynamodb:Scan&#34;, &#34;dynamodb:Query&#34;, &#34;dynamodb:UpdateItem&#34;, &#34;dynamodb:PutItem&#34;, &#34;dynamodb:GetItem&#34;, &#34;dynamodb:DeleteItem&#34;, &#34;dynamodb:BatchWriteItem&#34;, &#34;dynamodb:ListTables&#34;, &#34;dynamodb:DescribeTable&#34;, &#34;dynamodb:ListBackups&#34;, &#34;dynamodb:RestoreTableFromBackup&#34;, &#34;dynamodb:CreateBackup&#34;, &#34;dynamodb:DeleteTable&#34;, &#34;dynamodb:DescribeBackup&#34;, &#34;dynamodb:DeleteBackup&#34; ], &#34;Resource&#34;: &#34;*&#34; }, { &#34;Effect&#34;: &#34;Deny&#34;, &#34;Action&#34;: [ &#34;dynamodb:DeleteTable&#34; ], &#34;Resource&#34;: &#34;arn:aws:dynamodb:ap-northeast-1:xxxxxx:table/Production*&#34; } ] } create_table する際に、 Scan~BatchWriteItem が必要 Denyで本番のDBは削除対象とし...</p>
   </section>
-  <footer class="entry-footer">May 8, 2019
+  <footer class="entry-footer">June 14, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to 日付の差分を求めたい" href="https://rengotaku.github.io/posts/2b758ab7-5f14-4932-b67a-61a26e472b47/"></a>
+  <a class="entry-link" aria-label="post link to DynamoDBでバックアップよりリストアしたい際に必要なポリシー" href="https://rengotaku.github.io/posts/45eafdc5-e37d-4568-b1e2-a498d847635e/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      rundeckのログを確認
+      Minitestで&#34;No more expects available for :something_method&#34;が発生
     </h2>
   </header>
   <section class="entry-content">
-    <p>/var/lib/rundeck/logs/rundeck/${project}/job/${job_id}/logs 各変数は下記より当てはめる http://rundeck/project/${project}/job/show/${job_id} Rundeck でジョブが失敗したときに見るべきログの探し方 - Qiita...</p>
+    <p>誤り def test_method Rails.logger.info(&#39;one&#39;) Rails.logger.info(&#39;two&#39;) #&lt;= raise end logger_mock = Minitest::Mock.new info_mock = logger_mock.expect(:info, true, [&#39;one&#39;]) Rails.logger = logger_mock test_method &lt;= No more expects available for :info 正解 logger_mock = Minitest::Mock.new info_mock = logger_mock.expect(:info, true, [&#39;one&#39;]).expect(:info, true, [&#39;two&#39;]) Rails.logger = logger_mock ruby - Minitest: No more expects available - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">May 7, 2019
+  <footer class="entry-footer">June 14, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to rundeckのログを確認" href="https://rengotaku.github.io/posts/0d50cdf6-9d84-4b71-aebb-fc4acc87edf8/"></a>
+  <a class="entry-link" aria-label="post link to Minitestで&#34;No more expects available for :something_method&#34;が発生" href="https://rengotaku.github.io/posts/b3b9ba25-b8e1-4f67-b6f2-884a85b8dfc7/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      特定のgemの更新をGemfile.lockに反映させる
+      minitestで意図的にraise
     </h2>
   </header>
   <section class="entry-content">
-    <p>$ bundle update --source therubyracer bundle updateで特定のgemのみ更新する - Qiita...</p>
+    <p>api_mock = MiniTest::Mock.new api_mock.expect(:get, retval_get) do |args_update| raise StandardError(&#39;Mock#getで例外発生&#39;) end Rails minitest Mockで例外発生パターンのテスト - Qiita...</p>
   </section>
-  <footer class="entry-footer">April 26, 2019
+  <footer class="entry-footer">June 14, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to 特定のgemの更新をGemfile.lockに反映させる" href="https://rengotaku.github.io/posts/78936827-219a-4307-b689-b15ea2b2c91d/"></a>
+  <a class="entry-link" aria-label="post link to minitestで意図的にraise" href="https://rengotaku.github.io/posts/889f9fef-5b01-475d-bc0c-104e2086a684/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      dockerの特定のコンテナのlogファイルパスを取得したい
+      minitestでエラーメッセージを検証
     </h2>
   </header>
   <section class="entry-content">
-    <p>$ docker ps -q --filter &#34;name=target_container_name&#34; | xargs docker inspect --format=&#39;{{.LogPath}}&#39; | xargs ls -hl How I filter and grep Docker containers, images, and volumes, and how you can too docker - Where is a log file with logs from a container? - Stack Overflow...</p>
+    <p>class FooTest &lt; Minitest::Test def test_boo! # RuntimeErrorが発生することを検証 e = assert_raises RuntimeError do Foo.boo! # &lt;= boo!random-messages-continue... end # エラーメッセージを検証 assert { e.message.start_with?(&#34;boo!&#34;) } end end Minitestで例外クラ...</p>
   </section>
-  <footer class="entry-footer">April 24, 2019
+  <footer class="entry-footer">June 14, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to dockerの特定のコンテナのlogファイルパスを取得したい" href="https://rengotaku.github.io/posts/b97d9d6b-7b42-45ce-b6de-b2f88537ca44/"></a>
+  <a class="entry-link" aria-label="post link to minitestでエラーメッセージを検証" href="https://rengotaku.github.io/posts/ca10b1b5-76b1-4c89-868e-f0ee7f32be9c/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      railsプロジェクトの高速化
+      minitestでconstをstub化
     </h2>
   </header>
   <section class="entry-content">
-    <p>設定ファイル version: &#39;2&#39; services: rails: build: front.door.ac/ command: &gt; /bin/sh -c &#34;rm -f /var/tmp/pids/server.pid &amp;&amp; bundle exec rails s&#34; env_file: .env volumes: - .:/var - bundle:/usr/local/bundle:cached # exclude volumes - /var/vendor - /var/tmp - /var/log - /var/.git ports: - 3000:3000 stdin_open: true tty: true マウントの確認 $ docker inspect contailner_name . . . &#34;Mounts&#34;: [ { &#34;Type&#34;: &#34;volume&#34;, &#34;Name&#34;: &#34;doordevelopmentmiddlewares_bundle&#34;,...</p>
+    <p>module Foo BAR = :original end Foo.stub_const(:BAR, :stubbed) do Foo::BAR end # =&gt; :stubbed Foo::BAR # =&gt; :original adammck/minitest-stub-const: Stub constants for the duration of a block in MiniTest...</p>
   </section>
-  <footer class="entry-footer">April 23, 2019
+  <footer class="entry-footer">June 14, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to railsプロジェクトの高速化" href="https://rengotaku.github.io/posts/90bd049a-ee5d-41e2-b71b-75fdd80f913b/"></a>
+  <a class="entry-link" aria-label="post link to minitestでconstをstub化" href="https://rengotaku.github.io/posts/89c7127b-1494-4e7c-b613-d7156ef09fc2/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      ディレクトリへのシンボリックリンクを上書きしたい
+      DynamoDBのポリシー(policy)の一覧
     </h2>
   </header>
   <section class="entry-content">
-    <p>$ ln -nfs [リンク先] [シンボリックリンクのパス] シンボリックリンクの向き先変更（ln -nfs TARGET LINK_NAME） - Qiita...</p>
+    <p>BatchGetItem BatchWriteItem CreateBackup CreateGlobalTable CreateTable DeleteBackup DeleteItem DeleteTable DescribeBackup DescribeContinuousBackups DescribeEndpoints DescribeGlobalTable DescribeGlobalTableSettings DescribeLimits DescribeTable DescribeTimeToLive GetItem ListBackups ListGlobalTables ListTables ListTagsOfResource PutItem Query RestoreTableFromBackup RestoreTableToPointInTime Scan TagResource TransactGetItems TransactWriteItems UntagResource UpdateContinuousBackups UpdateGlobalTable UpdateGlobalTableSettings UpdateItem UpdateTable UpdateTimeToLive Amazon DynamoDB - Amazon DynamoDB...</p>
   </section>
-  <footer class="entry-footer">April 15, 2019
+  <footer class="entry-footer">June 13, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to ディレクトリへのシンボリックリンクを上書きしたい" href="https://rengotaku.github.io/posts/f6a2aa14-6761-4bf7-ab30-837cdc5fbb1e/"></a>
+  <a class="entry-link" aria-label="post link to DynamoDBのポリシー(policy)の一覧" href="https://rengotaku.github.io/posts/753c85de-092b-4807-8863-27065b36d51b/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
@@ -287,7 +287,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

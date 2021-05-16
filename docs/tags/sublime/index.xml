@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Wed, 11 Mar 2020 18:45:23 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/sublime/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 11 Mar 2020 18:45:23 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/sublime/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>rspec、rubocopの結果を色付きでsublimeで閲覧したい</title>
       <link>https://rengotaku.github.io/posts/11cd4e51-d748-4bc5-af69-6068e22b6865/</link>
@@ -27,7 +23,7 @@
       <pubDate>Fri, 05 Oct 2018 12:48:57 +0900</pubDate>
       
       <guid>https://rengotaku.github.io/posts/c24445c1-f62b-4df7-961b-e77a656f3a60/</guid>
-      <description>カーソルを置いている１ワードを選択 windows mac Ctrl + d command + d Sublime Text で格好つけたい時のためのショートカット（windows,mac）</description>
+      <description>カーソルを置いている１ワードを選択 windows mac Ctrl + d command + d Sublime Text で格好つけたい時のためのショートカット（windows,mac） my shortcut [ // 表示しているフ</description>
     </item>
     
     <item>

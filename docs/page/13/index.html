@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/" />
-<meta property="og:updated_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vegetable Programing"/>
 <meta name="twitter:description" content=""/>
@@ -138,141 +138,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      Sentryのtips
+      dockerのリモートのタグ一覧をコマンドで確認したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>エラーのグルーピング Raven.user_context(id: xxx) でエラーをグルーピングできる。 エラー付近のソースを行単位で修正した場合、グルーピングされない（別エラーの扱い）ので気...</p>
+    <p>#!/bin/bash # https://stackoverflow.com/questions/28320134/how-can-i-list-all-tags-for-a-docker-image-on-a-remote-registry if [ $# -lt 1 ] then cat &lt;&lt; HELP dockertags -- list all tags for a Docker image on a remote registry. EXAMPLE: - list all tags for ubuntu: dockertags ubuntu - list all php tags containing apache: dockertags php apache HELP exit 1 fi image=&#34;$1&#34; tags=`curl -L -s &#34;https://registry.hub.docker.com/v2/repositories/library/${image}/tags?page_size=1024&#34; | jq -r &#39;.&#34;results&#34;[][&#34;name&#34;]&#39;` if [ -n &#34;$2&#34; ] then tags=` echo &#34;${tags}&#34; | grep &#34;$2&#34;...</p>
   </section>
-  <footer class="entry-footer">January 15, 2020
+  <footer class="entry-footer">February 4, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to Sentryのtips" href="https://rengotaku.github.io/posts/5ff76547-776f-496d-9fbc-37941617f0c6/"></a>
+  <a class="entry-link" aria-label="post link to dockerのリモートのタグ一覧をコマンドで確認したい" href="https://rengotaku.github.io/posts/89d6aee3-eaa6-4489-855a-a9e6af743728/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      IP指定の場合に複数のサーバに同一の設定を適用させる書き方
+      メソッドの取得の仕方
     </h2>
   </header>
   <section class="entry-content">
-    <p>./ssh/configに Host 192.168.* と記載する。 ssh 192.168.0.1 のような呼び出した際に適用されます。 OpenSSH: Configurations Based On Hosts, Etc. - DEV Community 👩‍💻👨‍💻...</p>
+    <p>class publicメソッド 正解 UsersController.instance_methods(false) =&gt; [:index, :exchange, :logs_external] class privateメソッド 正解 UsersController.private_instance_methods(false) =&gt; [:_layout, :not_found_message, :require_signup_form_parameters] module publicメソッド 正解 UsersController.instance_methods(false) =&gt; [:select_yet_tweets_by_sorted_maps, :select_favorite_yet_tweets] module privateメソッド 正解 UsersController.private_instance_methods(false) =&gt;...</p>
   </section>
-  <footer class="entry-footer">January 14, 2020
+  <footer class="entry-footer">January 30, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to IP指定の場合に複数のサーバに同一の設定を適用させる書き方" href="https://rengotaku.github.io/posts/a00f40d0-d4c2-4adf-b894-f3d019dc232d/"></a>
+  <a class="entry-link" aria-label="post link to メソッドの取得の仕方" href="https://rengotaku.github.io/posts/239ee9a9-586e-4a76-92b3-b9f2dc365658/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      aws-cliを使用する
+      コンフル のページをマークダウンに変換する
     </h2>
   </header>
   <section class="entry-content">
-    <p>インストール $ pip3 install awscli --upgrade --user $ echo &#39;export PATH=&#34;~/Library/Python/3.7/bin:$PATH&#34;&#39; &gt;&gt; ~/.bash_profile ※PATHに追加しているパスは、インストール時のログを確認してください。 AWS CLI をインストールする - Qiita Credential ファ...</p>
+    <p>手順 コンフルのHTMLを取得 画面右上の... から、 ソースを表示 を選択する 大まかに変換 Html2Markdown Converter テーブルタグを変換 markdownTables Html2Markdown Converter ではtable部分を変換して...</p>
   </section>
-  <footer class="entry-footer">January 14, 2020
+  <footer class="entry-footer">January 29, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to aws-cliを使用する" href="https://rengotaku.github.io/posts/c1304da4-1894-4498-850a-57c5ed46a145/"></a>
+  <a class="entry-link" aria-label="post link to コンフル のページをマークダウンに変換する" href="https://rengotaku.github.io/posts/54cdb09a-ccef-4fec-9de4-dceac13d78e0/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      finderで隠しファイルを表示する
+      ロガーの基盤の調査
     </h2>
   </header>
   <section class="entry-content">
-    <p>Command&#43;Shift&#43;.(Dot) How to show hidden files on Mac...</p>
+    <p>調査手順 参考になりそうな資料・サイトを探す ↓ 各手順のメリット、デメリットを洗い出す ↓ 一旦相談数する ↓ （多分）工数の洗い出し 参考資料・サイト fluentd...</p>
   </section>
-  <footer class="entry-footer">January 14, 2020
+  <footer class="entry-footer">January 29, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to finderで隠しファイルを表示する" href="https://rengotaku.github.io/posts/64446da5-f7fa-4ab6-85d8-91a8a95ef1c2/"></a>
+  <a class="entry-link" aria-label="post link to ロガーの基盤の調査" href="https://rengotaku.github.io/posts/aaf9d0da-97a0-4f7a-b694-8863992996d8/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      rspecでスタブを使用
+      macのタッチバーからsiriを消す
     </h2>
   </header>
   <section class="entry-content">
-    <p>staticメソッド describe &#34;comment&#34; do context &#34;サービスがHOGEの場合&#34; do before do allow(Global.application).to receive(:service).and_return(&#34;HOGE&#34;) #&lt;= キモ ... end it &#39;hoge&#39; do ... end end end [RSpec] allow、receive、an...</p>
+    <p>カスタマイズ画面を表示 システム環境設定 -&gt; キーボード -&gt; Touch Barをカスタマイズ siriをタップしてゴミ箱へ How to Remove Siri from Touch Bar on MacBook Pro...</p>
   </section>
-  <footer class="entry-footer">January 14, 2020
+  <footer class="entry-footer">January 28, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to rspecでスタブを使用" href="https://rengotaku.github.io/posts/bd537f3d-6cad-4d94-9efd-d1200b7bd294/"></a>
+  <a class="entry-link" aria-label="post link to macのタッチバーからsiriを消す" href="https://rengotaku.github.io/posts/670ef93f-8448-41e8-97b3-611c1a385388/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      What is it_behaves_like?
+      修正したファイルのみチェック
     </h2>
   </header>
   <section class="entry-content">
-    <p>e.g. RSpec.describe Hoge, type: :model do describe &#34;model validation&#34; do subject { new_comment.validate! } let(:new_comment) { build :comment } describe &#34;comment&#34; do context &#34;コメントが空白&#34; do before { new_comment.comment = &#34;&#34; } it_behaves_like &#34;raise record invalid error&#34; end ... What? it_behaves_like will call the test-case as template. Grep your project with the word shared_examples and...</p>
+    <p>For rubocop $ echo $(git diff origin/master `git branch | grep &#39;*&#39; | cut -d&#39; &#39; -f2` | grep &#39;diff --git&#39; | sed -E &#39;s#diff --git a\/(.&#43;) b\/.&#43;#\1#&#39;) | { read FILES; bundle exec rubocop $FILES; } For rspec $ echo $(git diff origin/master `git branch | grep &#39;*&#39; | cut -d&#39; &#39; -f2` | grep &#39;diff --git&#39; | sed -E &#39;s#diff --git a\/(.&#43;) b\/.&#43;#\1#&#39; | grep spec) | {...</p>
   </section>
-  <footer class="entry-footer">January 10, 2020
+  <footer class="entry-footer">January 28, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to What is it_behaves_like?" href="https://rengotaku.github.io/posts/bacf2ae4-571a-4f97-b217-8771bc382df9/"></a>
+  <a class="entry-link" aria-label="post link to 修正したファイルのみチェック" href="https://rengotaku.github.io/posts/a13365d5-d033-404d-ae83-b8f7fa0dd4c8/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      mysql2のgemのインストールが失敗する
+      railsのenumから値を取得したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 $ export LDFLAGS=&#34;-L/usr/local/opt/openssl/lib&#34; $ export CPPFLAGS=&#34;-I/usr/local/opt/openssl/include&#34; $ bundle config --local build.mysql2 &#34;--with-cppflags=-I/usr/local/opt/openssl/include&#34; $ bundle config --local build.mysql2 &#34;--with-ldflags=-L/usr/local/opt/openssl/lib&#34; $ bundle install 【Rails】MySQL2がbundle installできない時の対応方法 - Qiita 事象 macでmy...</p>
+    <p>enum sale_info: { plan_1: 1, plan_2: 2, plan_3: 3, plan_4: 4, plan_5: 5 } の場合、 Model.sale_infos[:plan_1] で取得 How get integer value from a enum in Rails? - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">January 9, 2020
+  <footer class="entry-footer">January 28, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to mysql2のgemのインストールが失敗する" href="https://rengotaku.github.io/posts/0a030ad1-7817-41e7-9a31-5b3c5623c121/"></a>
+  <a class="entry-link" aria-label="post link to railsのenumから値を取得したい" href="https://rengotaku.github.io/posts/2fdad37c-deb2-46d9-99a5-92a3f5df0b0f/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      グローバルにインストールしたgemの削除
+      Rubyで処理速度の平均を計測したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>$ gem uninstall -axI `gem list --no-versions | egrep -v &#39;rdoc|psych|json|io-console|bigdecimal&#39;` $ rbenv exec gem install bundler ※Bundlerまで消去されてしまため gemを間違えてグローバルにインストールしてしまった場合...</p>
+    <p>計測 require &#39;benchmark&#39; include Benchmark # we need the CAPTION and FORMAT constants nn = 5000000 Benchmark.benchmark(CAPTION, 7, FORMAT, &#34;&gt;total:&#34;, &#34;&gt;avg:&#34;) do |x| tf = x.report(&#34;for:&#34;) { for i in 1..nn; a = &#34;1&#34;; end } tt = x.report(&#34;times:&#34;) { nn.times do ; a = &#34;1&#34;; end } tu = x.report(&#34;upto:&#34;) { 1.upto(nn) do ; a = &#34;1&#34;; end } [tf&#43;tt&#43;tu, (tf&#43;tt&#43;tu)/3] end 結果 user system total real...</p>
   </section>
-  <footer class="entry-footer">January 9, 2020
+  <footer class="entry-footer">January 28, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to グローバルにインストールしたgemの削除" href="https://rengotaku.github.io/posts/6ff9903c-4675-4f7b-b065-45343a171c09/"></a>
+  <a class="entry-link" aria-label="post link to Rubyで処理速度の平均を計測したい" href="https://rengotaku.github.io/posts/9a9f4862-dd9c-4fbd-a90c-bb4551f2ebab/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      macにrbenvをインストール
+      iTerm2で画像を見る
     </h2>
   </header>
   <section class="entry-content">
-    <p>rbenvインストール $ brew update $ brew install rbenv ruby-build $ echo &#39;eval &#34;$(rbenv init -)&#34;&#39; &gt;&gt; ~/.bash_profile $ source ~/.bash_profile $ rbenv --version rubyインストール $ rbenv install --list Available versions: ・ ・ 2.1.1 2.1.2 2.2.0-dev jruby-1.5.6 jruby-1.6.3 jruby-1.6.4 ・ ・ $ rbenv install 2.7.0 全環境のバージ...</p>
+    <p>imgcat のスクリプトを配置 $ vi /usr/local/bin/imgcat #&lt;= スクリプトをコピペ $ chmod 755 /usr/local/bin/imgcat $ imgcat /path/to/image Images - Documentation - iTerm2 - macOS Terminal Replacement...</p>
   </section>
-  <footer class="entry-footer">January 9, 2020
+  <footer class="entry-footer">January 28, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to macにrbenvをインストール" href="https://rengotaku.github.io/posts/234d437a-767d-4df2-9e49-5f4a2674bd40/"></a>
+  <a class="entry-link" aria-label="post link to iTerm2で画像を見る" href="https://rengotaku.github.io/posts/f8720630-e429-41f8-9d7b-31c5eca4a2a3/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      yarnでローカルファイルをインストール対象に含めるとエラーになる
+      リクエストのremote_ipを変更してテストしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 $ yarn add file:hogehoge.tgz --update-checksums yarn install sporadically fails with integrity check failure · Issue #6407 · yarnpkg/yarn · GitHub npm - Yarn: is it possible to ignore the dependency hash validation of just one module (or registry)? - Stack Overflow 事象 &#34;fanmee-base-ui@file:fanmee-base-ui-v0.0.5.tgz&#34;: version &#34;0.0.5&#34; resolved &#34;file:fanmee-base-ui-v0.0.5.tgz#5cdd18a4527b77da7096cebc8e9369913598d7fa&#34; installすると $ yarn install --pure-lockfile yarn install v1.21.1 [1/4] 🔍 Resolving...</p>
+    <p>解決 get &#34;/path&#34;, params: { }, headers: { &#34;REMOTE_ADDR&#34; =&gt; &#34;1.2.3.4&#34; } Change value of request.remote_ip in Ruby on Rails - Stack Overflow 事象 allow_any_instance_of(ActionDispatch::Request).to receive(:remote_ip).and_return(&#34;1.2.3.4&#34;) でも実現可能だが、 rubocopで RSpec/AnyInstance が発生してしまう。(instance_doubl...</p>
   </section>
-  <footer class="entry-footer">January 8, 2020
+  <footer class="entry-footer">January 27, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to yarnでローカルファイルをインストール対象に含めるとエラーになる" href="https://rengotaku.github.io/posts/963a3a67-f9ca-4949-adcb-22594d791c38/"></a>
+  <a class="entry-link" aria-label="post link to リクエストのremote_ipを変更してテストしたい" href="https://rengotaku.github.io/posts/957c64fd-ee2e-4ce6-bb60-093b3a665189/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/ruby/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/ruby/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/ruby/" />
-<meta property="og:updated_time" content="2020-11-20T21:57:49+09:00" />
+<meta property="og:updated_time" content="2021-05-06T18:12:31+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ruby"/>
 <meta name="twitter:description" content=""/>
@@ -128,6 +128,104 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
+      Using scope as specifying API version in path
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Resolution Rails 5 Routes: Scope vs Namespace - Devblast namespace :service do scope :v1 do resource :product do get &#34;/&#34;, to: &#34;v1/product#hoge&#34; Motivation If don’t expect not to change some APIs behavior even its version increase, you should use scoep instead of namespace. namespace :service do namespace :v1 do resource :product do get &#34;/&#34;, to: &#34;product#hoge&#34; Generated path is service_v1_product GET /service/v1/product(.:format) service/v1/product#hoge....</p>
+  </section>
+  <footer class="entry-footer">May 6, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to Using scope as specifying API version in path" href="https://rengotaku.github.io/posts/8d02a24b-4045-411c-8816-1c07f72f3e4d/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      bundle config設定時に--localを使用する際の注意点
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 bundle config set without &#39;development test&#39; --local BUNDLE_WITHOUT: &#34;development:test&#34; 事象 bundle config set without &#39;development test&#39; --localだと.bundle/configに下記のように記されてしまう。 BUNDLE_SET: &#34;without development test&#34;...</p>
+  </section>
+  <footer class="entry-footer">April 14, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to bundle config設定時に--localを使用する際の注意点" href="https://rengotaku.github.io/posts/1a278cf4-2da6-4dc9-ad95-e4ef511a272e/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      HASHのDIFFを取る
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 ruby - How do I compare two hashes? - Stack Overflow より下記 hash3.to_a - hash1.to_a # =&gt; [[&#34;c&#34;, 3]] if (hash3.size &gt; hash1.size) difference = hash3.to_a - hash1.to_a else difference = hash1.to_a - hash3.to_a end Hash[*difference.flatten] # =&gt; {&#34;c&#34;=&gt;3}...</p>
+  </section>
+  <footer class="entry-footer">April 13, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to HASHのDIFFを取る" href="https://rengotaku.github.io/posts/7d29c061-fee9-4f20-8e13-1663c5e00e4d/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      SidekiqのRecurring Jobsの画面に表示される項目を取得したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 sidekiq-scheduler/job_presenter.rb at master · moove-it/sidekiq-scheduler · GitHub を参考 schedules = Sidekiq.schedule! service_schedules = schedules.select { |key, value| true if something compare } presented_jobs = SidekiqScheduler::JobPresenter.build_collection(service_schedules) presented_jobs[0].next_time presented_jobs[0].last_time presented_jobs[0].enabled? presented_jobs[0].queue...</p>
+  </section>
+  <footer class="entry-footer">March 23, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to SidekiqのRecurring Jobsの画面に表示される項目を取得したい" href="https://rengotaku.github.io/posts/30c4cd33-6512-48f0-8091-0e9a123c46d7/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      bundle updateでエラーが発生する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 https://github.com/rubygems/rubygems/issues/4380#issuecomment-780128796 より、bundlerのバージョンを指定する。 gem install bundler -v 2.2.9 事象 突如、下記のエラーが発生した。 /usr/local/bundle/gems/bundler-2.2.10/lib/bundler/resolver.rb:470:in `block in validate_resolved_specs!&#39;: The gem &#39;capistrano&#39; was found in multiple relevant sources. (Bundler::SecurityError) * rubygems repository http://hoge.example/ or installed locally * rubygems...</p>
+  </section>
+  <footer class="entry-footer">February 17, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to bundle updateでエラーが発生する" href="https://rengotaku.github.io/posts/7ca95d58-467e-4005-9046-b2abfe6efd16/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      自前のバリデーションを作成する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 How to Implement Custom ActiveRecord Validations | by Moses Ogwo | Better Programming | Medium の3. Custom Validators (for an Attribute)を参考 concernsに定義 app/models/concerns/type_validator.rb class TypeValidator &lt; ActiveModel::EachValidator def validate_each(record, attribute, value) unless (value === &#34;wood&#34;) || (value === &#34;iron&#34;) # 好きな条...</p>
+  </section>
+  <footer class="entry-footer">February 3, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to 自前のバリデーションを作成する" href="https://rengotaku.github.io/posts/3aad0181-20b1-4f3c-ab4f-0d78fcab067c/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      rubyでoffestを実装してみた
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Source def offset(size, chunk_num = 5000) (0...((size / chunk_num) &#43; (size % chunk_num &gt; 0 ? 1 : 0))).to_a.each do |count| start_cnt = chunk_num * count end_cnt = chunk_num * count &#43; chunk_num - 1 end_cnt = size - 1 if end_cnt &gt; size - 1 yield start_cnt, end_cnt end end Usage offset(10000) {|s, e| puts &#34;#{s},#{e}&#34;} 0,4999 5000,9999 offset(10001) {|s, e| puts &#34;#{s},#{e}&#34;} 0,4999 5000,9999 10000,10000...</p>
+  </section>
+  <footer class="entry-footer">January 26, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to rubyでoffestを実装してみた" href="https://rengotaku.github.io/posts/1c5e79a3-ab8c-4ecd-96e0-187a6b536e09/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
       railsの環境変数を変えたい
     </h2>
   </header>
@@ -165,104 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">September 30, 2020
 </footer>
   <a class="entry-link" aria-label="post link to 更新を行う前に特定の属性に変更があった場合にチェックを行うスマートな方法" href="https://rengotaku.github.io/posts/9c37bd49-cf66-4e7a-9098-ab6ebb71ec51/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      ロックとトランザクションの検証
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>検証結果 lockしたレコードはtransactionがcommitされるまでロックされ続ける。 実行結果 コンソール1 コンソール2 検索前: 03:01:03.185, 100 ↓...</p>
-  </section>
-  <footer class="entry-footer">September 30, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to ロックとトランザクションの検証" href="https://rengotaku.github.io/posts/7a558e73-d48b-4304-b444-74afe9843a67/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      可逆式で暗号化を実装してみた
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>ソース # frozen_string_literal: true # NOTE: 可逆式で暗号化して保存する # 対象をcodeとしたい場合 # * テーブルに encrypted_code を定義する # * テーブルに digested_code を定義する(indexに使用...</p>
-  </section>
-  <footer class="entry-footer">September 28, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to 可逆式で暗号化を実装してみた" href="https://rengotaku.github.io/posts/2012302b-4a4b-4a41-9a5f-28f76481b88e/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      可逆式、不可逆式で暗号化したい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>不可逆式 Class: BCrypt::Password — Documentation for codahale/bcrypt-ruby (master) encrypted_data = BCrypt::Password.create(&#34;test12345&#34;) # $2a$12$5L9lnrTYgFS5x/pOs15Y3OHTSS1A4ThOlKzbWYJf.AlJMXkeK8AtK encrypted_data == &#34;test12345&#34; # true 可逆式 A simple way to encrypt and decrypt in Rails 5 | by Daveyon Mayne | Medium key = Rails.application.credentials.config[:secret_key_base][1..32] # or ENV[&#34;SECRET_KEY_BASE&#34;][1..32] in trial, staging or production crypt = ActiveSupport::MessageEncryptor.new(key) consumer_key = &#34;test12345&#34; encrypted_data = crypt.encrypt_and_sign(consumer_key, purpose: :campaign_code) # or crypt.encrypt_and_sign(self.consumer_key) puts encrypted_data # UscL3xFA6Lv5Ad/hJz/zl5N37Q==--tgjUj9WFgB1OWIp1--JuYB0iFWEfqYRtfXoZiRvg== puts...</p>
-  </section>
-  <footer class="entry-footer">September 24, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to 可逆式、不可逆式で暗号化したい" href="https://rengotaku.github.io/posts/ab5008a3-27a0-4053-8632-8b6ff84fd0fe/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      interactorで引数チェックを行いたい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Validators for Interactors. In our previous blog post, we talked… | by Manoj M J | reflektive-engineering | Medium より module InteractorValidations def self.included(base) base.extend ClassMethods end module ClassMethods def requires(*attributes) before do attributes.each do |attribute| raise ArgumentError.new(&#34;Required attribute #{attribute}is missing&#34;) if context.public_send(attribute).nil? end end end end end...</p>
-  </section>
-  <footer class="entry-footer">September 9, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to interactorで引数チェックを行いたい" href="https://rengotaku.github.io/posts/7c9b4e9d-71b0-4fb6-962e-9d02cd979a9b/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      active_model_serializersでネストが深いreferencesが無視される
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Rails 5, ActiveRecord has_many for nested Serializers not used? · Issue #2011 · rails-api/active_model_serializers より render json: resource, include: &#34;shipment_service_types,shipment_service_types.time_windows&#34; ネスト分をincludeに記載する必要がある。 もし深さが読めない場合は、**とすれば良い。...</p>
-  </section>
-  <footer class="entry-footer">July 16, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to active_model_serializersでネストが深いreferencesが無視される" href="https://rengotaku.github.io/posts/f8c8ca2a-5e46-4336-bc9a-6c0fcec2f58b/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      rspecのcontrollerとrequestのタイプ違い
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 requestは複数のcontrollerを使用した場合に使用する。 controllerは単体の動作の確認をする為に確認する。 request spec - Request specs...</p>
-  </section>
-  <footer class="entry-footer">June 26, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to rspecのcontrollerとrequestのタイプ違い" href="https://rengotaku.github.io/posts/3b804c9b-47db-4e45-aa32-163eb8d9e5bb/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      factorybotで関連テーブルの作成を簡易に行なっているのに引数を渡したい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 FactoryBot.define do factory :user_action_error do user user_action_history { association(:user_action_history, user: user) } end end 参考 Creating associations initialized via ‘build’ no longer works in FactoryBot 5.0 · Issue #1255 · thoughtbot/factory_bot 事象 FactoryBot.define do factory :user_action_error do user user_action_history end end のように、has_many、has_one、bel...</p>
-  </section>
-  <footer class="entry-footer">June 22, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to factorybotで関連テーブルの作成を簡易に行なっているのに引数を渡したい" href="https://rengotaku.github.io/posts/cb6fde25-ff82-4b5b-b2ed-444d26e0da9f/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

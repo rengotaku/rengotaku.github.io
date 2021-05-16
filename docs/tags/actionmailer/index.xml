@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Wed, 31 Jul 2019 15:22:22 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/actionmailer/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 31 Jul 2019 15:22:22 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/actionmailer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ActionMailでmailを実行しない場合は、NullMailが返却される</title>
       <link>https://rengotaku.github.io/posts/81d97880-2a3c-4de8-add0-fa3cb5e29c1d/</link>

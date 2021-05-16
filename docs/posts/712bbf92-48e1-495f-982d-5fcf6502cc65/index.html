@@ -11,7 +11,7 @@
 <meta name="description" content="レバテックプラットフォームの勤怠の自動入力プログラムがあったので、 追加改造して、作業内容に仮入力と入力するようにした。 // 開始終了休憩時間を入">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/712bbf92-48e1-495f-982d-5fcf6502cc65/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "javascript", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "レバテックプラットフォームの勤怠の自動入力プログラムがあったので、 追加改造して、作業内容に仮入力と入力するようにした。\n// 開始終了休憩時間を入力\rvar input_selector = function(type_str){\rreturn 'input[name^=\"data[DailyReport]\"][name$=\"['+type_str+']\"]';\r};\r$( input_selector('start_time') ).val('10:00');\r$( input_selector('end_time') ).val('19:00');\r$( input_selector('relax_time') ).val('1:00');\r$( input_selector('work_content') ).val('仮入力');\r// 休日の枠をクリア\rvar dayoff_tr_selectors = [\r'td.txtNormal:contains(\"（土）\") + .reportDetail__txt ',\r'td.txtNormal:contains(\"（日）\") + .reportDetail__txt ',\r]\r$.each(dayoff_tr_selectors, function(i,selector){\r$(selector).parent().find( input_selector('start_time') ).val('');\r$(selector).parent().find( input_selector('end_time') ).val('');\r$(selector).parent().find( input_selector('relax_time') ).val(''); $(selector).parent().find( input_selector('work_content') ).val('');\r});\r// 作業時間計測を実施させる\r$( input_selector('relax_time') ).trigger('focusout'); ==================================\r レバテックプラットフォームハック - Qiita\n ",
+  "articleBody": "レバテックプラットフォームの勤怠の自動入力プログラムがあったので、 追加改造して、作業内容に仮入力と入力するようにした。\n// 開始終了休憩時間を入力 var input_selector = function(type_str){ return 'input[name^=\"data[DailyReport]\"][name$=\"['+type_str+']\"]'; }; $( input_selector('start_time') ).val('10:00'); $( input_selector('end_time') ).val('19:00'); $( input_selector('relax_time') ).val('1:00'); $( input_selector('work_content') ).val('仮入力'); // 休日の枠をクリア var dayoff_tr_selectors = [ 'td.txtNormal:contains(\"（土）\") + .reportDetail__txt ', 'td.txtNormal:contains(\"（日）\") + .reportDetail__txt ', ] $.each(dayoff_tr_selectors, function(i,selector){ $(selector).parent().find( input_selector('start_time') ).val(''); $(selector).parent().find( input_selector('end_time') ).val(''); $(selector).parent().find( input_selector('relax_time') ).val(''); $(selector).parent().find( input_selector('work_content') ).val(''); }); // 作業時間計測を実施させる $( input_selector('relax_time') ).trigger('focusout'); ==================================  レバテックプラットフォームハック - Qiita\n ",
   "wordCount" : "262",
   "inLanguage": "en",
   "datePublished": "2018-04-18T10:08:02+09:00",
@@ -211,7 +211,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

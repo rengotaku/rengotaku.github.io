@@ -11,7 +11,7 @@
 <meta name="description" content="class SomeController &lt; ApiController private def get_host(request) schema_and_host = &#34;#{request.scheme}://#{request.host}&#34; request.port.blank? ? schema_and_host : &#34;#{schema_and_host}:#{request.port}&#34; end end describe &#34;test.&#34; do def setup @controller = SomeController.new @request = Object.new @request.define_singleton_method(:scheme) { &#39;http&#39; } @request.define_singleton_method(:host) { &#39;localhost&#39; } @request.define_singleton_method(:port) { nil } end test &#34;get url&#34; do assert { @controller.send(:get_host, @request) == &#39;http://localhost&#39; } end end ruby - Add method to an instanced object - Stack Overflow [ruby-on-rails] Rspe">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/7b892c39-d8f1-49ac-b556-c02970e0a10a/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "rails", "minitest", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "class SomeController  ApiController\rprivate\rdef get_host(request)\rschema_and_host = \"#{request.scheme}://#{request.host}\"\rrequest.port.blank? ? schema_and_host : \"#{schema_and_host}:#{request.port}\"\rend\rend\rdescribe \"test.\" do\rdef setup\r@controller = SomeController.new\r@request = Object.new\r@request.define_singleton_method(:scheme) { 'http' }\r@request.define_singleton_method(:host) { 'localhost' }\r@request.define_singleton_method(:port) { nil }\rend\rtest \"get url\" do\rassert { @controller.send(:get_host, @request) == 'http://localhost' }\rend\rend\r ruby - Add method to an instanced object - Stack Overflow\n  [ruby-on-rails] Rspec、Rails：コントローラのプライベートメソッドをテストする方法は？ - CODE Q\u0026A 問題解決\n ",
+  "articleBody": "class SomeController  ApiController private def get_host(request) schema_and_host = \"#{request.scheme}://#{request.host}\" request.port.blank? ? schema_and_host : \"#{schema_and_host}:#{request.port}\" end end describe \"test.\" do def setup @controller = SomeController.new @request = Object.new @request.define_singleton_method(:scheme) { 'http' } @request.define_singleton_method(:host) { 'localhost' } @request.define_singleton_method(:port) { nil } end test \"get url\" do assert { @controller.send(:get_host, @request) == 'http://localhost' } end end  ruby - Add method to an instanced object - Stack Overflow\n  [ruby-on-rails] Rspec、Rails：コントローラのプライベートメソッドをテストする方法は？ - CODE Q\u0026A 問題解決\n ",
   "wordCount" : "112",
   "inLanguage": "en",
   "datePublished": "2018-12-20T14:41:33+09:00",
@@ -213,7 +213,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

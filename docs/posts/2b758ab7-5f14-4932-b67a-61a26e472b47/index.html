@@ -11,7 +11,7 @@
 <meta name="description" content="$datetimePast-&gt;diff($datetimeFeature)-&gt;format(&#39;%a&#39;); 検証 $dateA = new DateTime(&#39;2010-01-01&#39;); $dateB = new DateTime(&#39;2010-03-01&#39;); $interval = $dateB-&gt;diff($dateA); echo $interval-&gt;format(&#39;%a total days&#39;).&#34;\n&#34;; // =&gt; 59 total days echo $interval-&gt;format(&#39;%m month, %d days&#39;); // =&gt; 1 month, 28 days %dだと0~31日までしか表現できない。経過日数を計算する場合は、%aを">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/2b758ab7-5f14-4932-b67a-61a26e472b47/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "php", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "$datetimePast-diff($datetimeFeature)-format('%a');\r検証 $dateA = new DateTime('2010-01-01');\r$dateB = new DateTime('2010-03-01');\r$interval = $dateB-diff($dateA);\recho $interval-format('%a total days').\"\\n\";\r// = 59 total days\recho $interval-format('%m month, %d days');\r// = 1 month, 28 days\r%dだと0~31日までしか表現できない。経過日数を計算する場合は、%aを使用する\r PHP: DateInterval::format - Manual\n ",
+  "articleBody": "$datetimePast-diff($datetimeFeature)-format('%a'); 検証 $dateA = new DateTime('2010-01-01'); $dateB = new DateTime('2010-03-01'); $interval = $dateB-diff($dateA); echo $interval-format('%a total days').\"\\n\"; // = 59 total days  echo $interval-format('%m month, %d days'); // = 1 month, 28 days %dだと0~31日までしか表現できない。経過日数を計算する場合は、%aを使用する\r PHP: DateInterval::format - Manual\n ",
   "wordCount" : "78",
   "inLanguage": "en",
   "datePublished": "2019-05-08T11:31:39+09:00",
@@ -160,18 +160,18 @@ if (!doNotTrack) {
   </header> 
 
   <div class="post-content">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$datetimePast-&gt;diff($datetimeFeature)-&gt;format(&#39;%a&#39;);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$datetimePast<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">diff</span>($datetimeFeature)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#39;%a&#39;</span>);
 </code></pre></div><h1 id="検証">検証<a hidden class="anchor" aria-hidden="true" href="#検証">#</a></h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">    $dateA = new DateTime(&#39;2010-01-01&#39;);
-    $dateB = new DateTime(&#39;2010-03-01&#39;);
-    $interval = $dateB-&gt;diff($dateA);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">    $dateA <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>(<span style="color:#e6db74">&#39;2010-01-01&#39;</span>);
+    $dateB <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DateTime</span>(<span style="color:#e6db74">&#39;2010-03-01&#39;</span>);
+    $interval <span style="color:#f92672">=</span> $dateB<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">diff</span>($dateA);
 
-    echo $interval-&gt;format(&#39;%a total days&#39;).&#34;\n&#34;;
-    // =&gt; 59 total days
-
-    echo $interval-&gt;format(&#39;%m month, %d days&#39;);
-    // =&gt; 1 month, 28 days
-</code></pre></div><pre><code class="language-!" data-lang="!">%dだと0~31日までしか表現できない。経過日数を計算する場合は、%aを使用する
+    <span style="color:#66d9ef">echo</span> $interval<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#39;%a total days&#39;</span>)<span style="color:#f92672">.</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+    <span style="color:#75715e">// =&gt; 59 total days
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">echo</span> $interval<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#39;%m month, %d days&#39;</span>);
+    <span style="color:#75715e">// =&gt; 1 month, 28 days
+</span></code></pre></div><pre><code class="language-!" data-lang="!">%dだと0~31日までしか表現できない。経過日数を計算する場合は、%aを使用する
 </code></pre><blockquote>
 <p><a href="https://www.php.net/manual/ja/dateinterval.format.php">PHP: DateInterval::format - Manual</a></p>
 </blockquote>
@@ -199,7 +199,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

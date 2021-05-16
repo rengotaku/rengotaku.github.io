@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Fri, 27 Jul 2018 16:51:14 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/symfony1.2/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 27 Jul 2018 16:51:14 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/symfony1.2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>バリデーションのエラーを全て取得したい</title>
       <link>https://rengotaku.github.io/posts/ce6bce10-42ad-4949-9a10-ef0dc04b258d/</link>

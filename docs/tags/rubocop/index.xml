@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Tue, 28 Jan 2020 16:15:55 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/rubocop/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 28 Jan 2020 16:15:55 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/rubocop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>修正したファイルのみチェック</title>
       <link>https://rengotaku.github.io/posts/a13365d5-d033-404d-ae83-b8f7fa0dd4c8/</link>

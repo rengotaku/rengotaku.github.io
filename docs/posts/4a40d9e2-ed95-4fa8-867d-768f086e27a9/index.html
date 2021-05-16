@@ -11,7 +11,7 @@
 <meta name="description" content="解決 insert Book.insert_all([ { id: 1, title: &#34;Rework&#34;, author: &#34;David&#34; }, { id: 1, title: &#34;Eloquent Ruby&#34;, author: &#34;Russ&#34; } ]) created_at, updated_atは自動付与されないことに気をつける（DBの設定が自動挿入になっていればOK">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/4a40d9e2-ed95-4fa8-867d-768f086e27a9/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "rails", "ruby", "activerecord", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "解決 insert Book.insert_all([\r{ id: 1, title: \"Rework\", author: \"David\" },\r{ id: 1, title: \"Eloquent Ruby\", author: \"Russ\" }\r])\rcreated_at, updated_atは自動付与されないことに気をつける（DBの設定が自動挿入になっていればOK）\nUpcoming Rails 6 Bulk insert/Upsert feature - Josef Šimánek - Medium で紹介のあるActiveRecord::Persistence::ClassMethods - insert_all\nupdate_all # Update all books with 'Rails' in their title\r Book.where('title LIKE ?', '%Rails%').update_all(author: 'David')\rNote ポイントの加算などを一括で行いたい場合は、下記のように設定できる\nPoint.where(user_id: [1, 2]).update_all(\"point = point + 100\")\rupdate_all (ActiveRecord::Relation) - APIdock\nNote How to convert ActiveRecord results into an array of hashes - Stack Overflow より、serializable_hash を使用して、ModelインスタンスからHashを作成を試みたが、下記の挙動により断念。\n enumが文字列 created_at, update_at がnil  ",
+  "articleBody": "解決 insert Book.insert_all([ { id: 1, title: \"Rework\", author: \"David\" }, { id: 1, title: \"Eloquent Ruby\", author: \"Russ\" } ]) created_at, updated_atは自動付与されないことに気をつける（DBの設定が自動挿入になっていればOK）\nUpcoming Rails 6 Bulk insert/Upsert feature - Josef Šimánek - Medium で紹介のあるActiveRecord::Persistence::ClassMethods - insert_all\nupdate_all # Update all books with 'Rails' in their title Book.where('title LIKE ?', '%Rails%').update_all(author: 'David') Note ポイントの加算などを一括で行いたい場合は、下記のように設定できる\nPoint.where(user_id: [1, 2]).update_all(\"point = point + 100\") update_all (ActiveRecord::Relation) - APIdock\nNote How to convert ActiveRecord results into an array of hashes - Stack Overflow より、serializable_hash を使用して、ModelインスタンスからHashを作成を試みたが、下記の挙動により断念。\n enumが文字列 created_at, update_at がnil  ",
   "wordCount" : "285",
   "inLanguage": "en",
   "datePublished": "2020-05-01T11:15:48+09:00",
@@ -169,7 +169,7 @@ if (!doNotTrack) {
 </code></pre></div><p>created_at, updated_atは自動付与されないことに気をつける（DBの設定が自動挿入になっていればOK）</p>
 <p><a href="https://medium.com/@retrorubies/upcoming-rails-6-bulk-insert-upsert-feature-2d642419557d">Upcoming Rails 6 Bulk insert/Upsert feature - Josef Šimánek - Medium</a> で紹介のある<a href="https://edgeapi.rubyonrails.org/classes/ActiveRecord/Persistence/ClassMethods.html#method-i-insert_all">ActiveRecord::Persistence::ClassMethods - insert_all</a></p>
 <h1 id="update_all">update_all<a hidden class="anchor" aria-hidden="true" href="#update_all">#</a></h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#75715e"># Update all books with &#39;Rails&#39; in their title</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#75715e"># Update all books with &#39;Rails&#39; in their title</span>
 <span style="color:#66d9ef">Book</span><span style="color:#f92672">.</span>where(<span style="color:#e6db74">&#39;title LIKE ?&#39;</span>, <span style="color:#e6db74">&#39;%Rails%&#39;</span>)<span style="color:#f92672">.</span>update_all(<span style="color:#e6db74">author</span>: <span style="color:#e6db74">&#39;David&#39;</span>)
 </code></pre></div><h2 id="note">Note<a hidden class="anchor" aria-hidden="true" href="#note">#</a></h2>
 <p>ポイントの加算などを一括で行いたい場合は、下記のように設定できる</p>
@@ -207,7 +207,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

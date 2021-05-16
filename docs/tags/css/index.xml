@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Mon, 24 Aug 2020 22:06:39 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 24 Aug 2020 22:06:39 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bootstrapのNavbarの配置の仕方で困ったとき</title>
       <link>https://rengotaku.github.io/posts/0d6faba8-c360-46f8-81d3-ea4ffc9b1211/</link>

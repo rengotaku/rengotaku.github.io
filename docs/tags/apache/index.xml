@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Tue, 18 Dec 2018 19:32:52 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/apache/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 18 Dec 2018 19:32:52 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/apache/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>nginxでport:443を受け付け、port:80のhttpdへ、リバースプロキシしたい</title>
       <link>https://rengotaku.github.io/posts/4e13d4bd-7b83-4322-8dae-a8fa9f4f503a/</link>

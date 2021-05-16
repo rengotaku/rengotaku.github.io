@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/shellscript/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/shellscript/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/shellscript/" />
-<meta property="og:updated_time" content="2020-11-04T16:35:36+09:00" />
+<meta property="og:updated_time" content="2021-01-27T10:50:26+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="shellscript"/>
 <meta name="twitter:description" content=""/>
@@ -124,6 +124,20 @@ if (!doNotTrack) {
 
 
 
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      awkの各フィールドの値を確認したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 awk &#39;{for (i = 1; i &lt;= NF; i&#43;&#43;) print &#34;$&#34;i&#34;:&#34;$i;}&#39; で確認できる $ head -1 /var/log/https/access_log | awk -F&#39;\t&#39; &#39;{for (i = 1; i &lt;= NF; i&#43;&#43;) print &#34;$&#34;i&#34;:&#34;$i;}&#39; $1:domain:hogehoge $2:host:xxx.xxx.xxx.xxx $3:server:xxx.xxx.xxx.xxx $4:ident:- $5:user:- $6:time:28/Jul/2019:03:21:06 &#43;0900 $7:method:GET $8:path:/sitemap/info.xml $9:protocol:HTTP/1.1 $10:status:200 $11:size:576 $12:referer:- $13:agent:xxxx $14:response_time:3421 $15:cookie:- $16:set_cookie:- AWKのこういう時はどう書く? - Qiita...</p>
+  </section>
+  <footer class="entry-footer">August 2, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to awkの各フィールドの値を確認したい" href="https://rengotaku.github.io/posts/0f2bcc1d-f221-4848-921c-84c194c6b6fa/"></a>
+</article>
 <article class="post-entry tag-entry"> 
 
   <header class="entry-header">
@@ -249,20 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">June 7, 2019
 </footer>
   <a class="entry-link" aria-label="post link to shellのfunctionで戻り値を取得したい" href="https://rengotaku.github.io/posts/81204ada-4d9b-4611-abf3-0bbdc6422be0/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      CRLFをカウントしたい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>ライン数を数える $ echo $&#39;record 1\r\nrecord\n2\r\nrecord 3&#39; &gt; file $ awk -v RS=&#39;\r\n&#39; &#39;END{print NR}&#39; file 3 linux - Bash script to count CR/LF in a text file - Stack Overflow fileコマンド $ file path/to/file path/to/file: UTF-8 Unicode text, with very long lines, with CRLF, LF line terminators catコマンド cat -e...</p>
-  </section>
-  <footer class="entry-footer">May 15, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to CRLFをカウントしたい" href="https://rengotaku.github.io/posts/9163f352-2f6d-45c5-a27c-3abe3db54496/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/" />
-<meta property="og:updated_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vegetable Programing"/>
 <meta name="twitter:description" content=""/>
@@ -138,141 +138,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      annotateが動かない
+      athenaで日付周りをいじる
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 --models を付与して実行する。 $ bundle exec annotate --models 事象 gemを起動しても何も変更がかからない。 $ bundle exec annotate...</p>
+    <p>解決 select from_iso8601_timestamp(&#39;2020-03-19T18:01:08&#43;09:00&#39;), -- 2020-03-19 18:01:08.000 &#43;09:00 timestamp &#39;2020-03-19 09:01:09 UTC&#39; AT TIME ZONE &#39;Asia/Tokyo&#39;, -- 2020-03-19 18:01:09.000 Asia/Tokyo from_iso8601_timestamp(&#39;2020-03-19T18:01:08&#43;09:00&#39;) &gt; timestamp &#39;2020-03-19 09:01:09 UTC&#39; AT TIME ZONE &#39;Asia/Tokyo&#39;, -- false from_iso8601_timestamp(&#39;2020-03-19T18:01:08&#43;09:00&#39;) &gt; timestamp &#39;2020-03-19 09:01:07 UTC&#39; AT TIME ZONE &#39;Asia/Tokyo&#39; -- true 参考 Presto/Athena Examples: Date and Datetime functions Convert date columns to date type in generated Athena table · Issue #3 · concurrencylabs/aws-cost-analysis 8.13. Date and...</p>
   </section>
-  <footer class="entry-footer">March 25, 2020
+  <footer class="entry-footer">May 26, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to annotateが動かない" href="https://rengotaku.github.io/posts/d8577cb0-53dc-487a-a624-e607a8551e93/"></a>
+  <a class="entry-link" aria-label="post link to athenaで日付周りをいじる" href="https://rengotaku.github.io/posts/87692a75-1722-44e0-b5d2-cda761bf52bd/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      実行されたmiddlewareをロギングしたい
+      monacaのcloud IDEでサードパーティクッキーをブロックしないで下さいとエラーが発生する
     </h2>
   </header>
   <section class="entry-content">
-    <p>config/initializers 配下に下記のファイルを設置する。 # Trace each middleware module entry/exit. Freely adapted from # https://github.com/DataDog/dd-trace-rb/issues/368 &#34;Trace each middleware in the Rails stack&#34; module MiddlewareTracer def call(env) Rails.logger.debug { &#34;MiddleWare: entry #{self.class.name}&#34; } status, headers, response = super(env) Rails.logger.debug { &#34;MiddleWare: #{self.class.name}, returning with status #{status}&#34; } [status, headers, response] end end # Instrument the middleware stack after...</p>
+    <p>解決 chrome://settings/content/cookies?search=site&#43;se を開く。 OFFにする Block third-party cookies When on, sites can’t use your browsing activity across different sites to personalize ads. Some sites may not work properly. 参考 How to enable 3rd-party cookies in Google Chrome browser – cloudHQ Support...</p>
   </section>
-  <footer class="entry-footer">March 17, 2020
+  <footer class="entry-footer">May 24, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to 実行されたmiddlewareをロギングしたい" href="https://rengotaku.github.io/posts/88a0bf8a-defe-4f00-bb73-ddf0daf14044/"></a>
+  <a class="entry-link" aria-label="post link to monacaのcloud IDEでサードパーティクッキーをブロックしないで下さいとエラーが発生する" href="https://rengotaku.github.io/posts/3e59e8de-60fa-4ede-a169-6692f08b3224/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      bashでファイルをウォッチしたい
+      golangをdockerでbuildする際に参考にしたサイト
     </h2>
   </header>
   <section class="entry-content">
-    <p>#!/bin/bash FILE=&#34;$1&#34; CMD=&#34;$2&#34; LAST=`ls -l &#34;$FILE&#34;` while true; do sleep 1 NEW=`ls -l &#34;$FILE&#34;` if [ &#34;$NEW&#34; != &#34;$LAST&#34; ]; then &#34;$CMD&#34; &#34;$FILE&#34; LAST=&#34;$NEW&#34; fi done linux - Shell command to monitor changes in a file - Server Fault mac では `sleep 1m` は機能しない。秒数のみ。 Linuxコマンド【 sleep 】指定...</p>
+    <p>Go build LDFlags Alpine Linux packages Create the smallest and secured golang docker image based on scratch golang/Dockerfile at d57a23e1c68ef0a393ef9c9267bddf0086959e3e · docker-library/golang...</p>
   </section>
-  <footer class="entry-footer">March 13, 2020
+  <footer class="entry-footer">May 20, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to bashでファイルをウォッチしたい" href="https://rengotaku.github.io/posts/ba4099fe-9000-489b-94d5-211f89d11750/"></a>
+  <a class="entry-link" aria-label="post link to golangをdockerでbuildする際に参考にしたサイト" href="https://rengotaku.github.io/posts/62a912a2-35fd-45d9-8fea-8c34a2675445/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Shrineで外部の画像のURLからストレージ（S3など）にアップロードしたい
+      MySQLの最適化で参考になりそうな記事
     </h2>
   </header>
   <section class="entry-content">
-    <p>remote_url を利用する。 attacher = Shrine::Attacher.new(cache: :cache, store: :store) attacher.remote_url = &#34;https://path/to/image.jpg&#34; shrine/attacher.md at master · shrinerb/shrine Remote URL · Shrine...</p>
+    <p>MySQL Explain Example - Explaining MySQL EXPLAIN using StackOverflow data explainの結果の項目を分かりやすく記載してくれている。...</p>
   </section>
-  <footer class="entry-footer">March 12, 2020
+  <footer class="entry-footer">May 20, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to Shrineで外部の画像のURLからストレージ（S3など）にアップロードしたい" href="https://rengotaku.github.io/posts/0833cd6b-bebd-4297-9de3-ce9a251a1c4c/"></a>
+  <a class="entry-link" aria-label="post link to MySQLの最適化で参考になりそうな記事" href="https://rengotaku.github.io/posts/2cb27d73-b7ec-4fac-961e-d061d8150ae9/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      rspec、rubocopの結果を色付きでsublimeで閲覧したい
+      ActiveRecordが発行するSQLをHookしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>目的 sublimeでrspec、rubocopの結果を色付けされた状態(ANSI color sequence) で閲覧したい。 一つのコンソールで行うと、量が膨大だと切れ...</p>
+    <p>解決 config/initializers/active_model_query_debug.rb module ActiveModelQueryDebug def log(query, *args) # &#39;Model Load&#39; are targeted if args.first&amp;.end_with?(&#34;Load&#34;) Rails.logger.debug(&#34;query: #{query}&#34;) end super end end ActiveRecord::ConnectionAdapters::AbstractAdapter.prepend(ActiveModelQueryDebug) 動作 [1] pry(main)&gt; User.first query: SELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1 User Load (1.3ms) SELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1 参考 active_record-sql_analyzer/sql_analyzer.rb at master · square/active_record-sql_analyzer...</p>
   </section>
-  <footer class="entry-footer">March 11, 2020
+  <footer class="entry-footer">May 20, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to rspec、rubocopの結果を色付きでsublimeで閲覧したい" href="https://rengotaku.github.io/posts/11cd4e51-d748-4bc5-af69-6068e22b6865/"></a>
+  <a class="entry-link" aria-label="post link to ActiveRecordが発行するSQLをHookしたい" href="https://rengotaku.github.io/posts/030f1c25-ac39-4e09-8ce6-e5f2ae51e66e/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      rspecでよく見た書き方
+      GitlabのMRをマージするとissueがクローズされる
     </h2>
   </header>
   <section class="entry-content">
-    <p>エラーが発生しないテスト not_to raise_error RSpec.describe &#34;#to_s&#34; do it &#34;does not raise&#34; do expect { Object.new.to_s }.not_to raise_error end end raise_error matcher - Built in matchers - RSpec Expectations - RSpec - Relish モックでエラーを発生させる and_raise RSpec.describe &#34;Making it raise an error&#34; do it &#34;raises the provided exception&#34; do dbl...</p>
+    <p>MR description 文頭に Close #xx ないし Closes #xx, #yy と記載した場合、マージすると自動で対象 issue が close されるという機能です！ 😄...</p>
   </section>
-  <footer class="entry-footer">March 6, 2020
+  <footer class="entry-footer">May 20, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to rspecでよく見た書き方" href="https://rengotaku.github.io/posts/6542ae14-4854-4050-bf96-54b6cc4100d5/"></a>
+  <a class="entry-link" aria-label="post link to GitlabのMRをマージするとissueがクローズされる" href="https://rengotaku.github.io/posts/1116de92-d95f-4ca4-a021-d4968741213c/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Active Jobが失敗した場合のリトライについてテストする
+      ShrineでS3にアップロードする際のmetadataを正しく設定する
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 described_class.perform_later rescue nil RSpec.describe MyJob, type: :job do include ActiveJob::TestHelper context &#39;when `MyError` is raised&#39; do before do allow_any_instance_of(described_class).to receive(:perform).and_raise(MyError.new) end it &#39;makes 4 attempts&#39; do assert_performed_jobs 4 do described_class.perform_later rescue nil end end it &#39;does something in the `retry_on` block&#39; do expect(Something).to receive(:something) perform_enqueued_jobs do described_class.perform_later rescue nil end end end end perform_nowでは再実...</p>
+    <p>解決 image_uri = Addressable::URI.convert_path(&#34;https://path/to/image.jpg&#34;) URI.parse(image_uri).open do |file| metadata = { &#34;mime_type&#34; =&gt; MIME::Types.type_for(@image_uri.to_s).first.content_type, &#34;filename&#34; =&gt; @image_uri.basename, } # metadataが正しく設定されていないと、uploaded_file.metadataも空 uploaded_file = Shrine.upload(file, storage_key, metadata:...</p>
   </section>
-  <footer class="entry-footer">March 6, 2020
+  <footer class="entry-footer">May 18, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to Active Jobが失敗した場合のリトライについてテストする" href="https://rengotaku.github.io/posts/990bd1dc-2f44-46fa-9fa6-91b5914e7669/"></a>
+  <a class="entry-link" aria-label="post link to ShrineでS3にアップロードする際のmetadataを正しく設定する" href="https://rengotaku.github.io/posts/b655ebe5-9784-45db-88cc-341986ee87e2/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      時間を操作してテストを実行したい
+      rails consoleで画像をダウンロードしようとすると、No such file or directoryエラーが発生する
     </h2>
   </header>
   <section class="entry-content">
-    <p>travel などを使用する Time.current # =&gt; Sat, 09 Nov 2013 15:34:49 EST -05:00 travel 1.day do User.create.created_at # =&gt; Sun, 10 Nov 2013 15:34:49 EST -05:00 end Time.current # =&gt; Sat, 09 Nov 2013 15:34:49 EST -05:00 ActiveSupport::Testing::TimeHelpers...</p>
+    <p>解決 require &#39;open-uri&#39; open(&#39;tmp/image.png&#39;, &#39;wb&#39;) do |file| file &lt;&lt; open(&#39;https://pbs.twimg.com/profile_images/xxx.jpg&#39;).read end image_io = open(&#39;tmp/image.png&#39;) 事象 rails内で下記の処理を行えており、コンソールで同様の処理を実行したところ、NoMethodError:...</p>
   </section>
-  <footer class="entry-footer">March 6, 2020
+  <footer class="entry-footer">May 18, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to 時間を操作してテストを実行したい" href="https://rengotaku.github.io/posts/6c1ae6cb-b824-4eb0-bc31-2fa5ca0d089e/"></a>
+  <a class="entry-link" aria-label="post link to rails consoleで画像をダウンロードしようとすると、No such file or directoryエラーが発生する" href="https://rengotaku.github.io/posts/62d115fa-4ce4-4b27-a984-12d947a8f3b8/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      インスタンス変数のメソッドをstubにしたい
+      macで昨日日付を取得したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>let(:hoge_instance) { instance_double(Hoge) } before do allow(Hoge).to receive(:new).and_return(hoge_instance) allow(hoge_instance).to receive(:say).and_return(&#34;night!&#34;) end...</p>
+    <p>解決 date -v-1d &#43;%F を使用する Get yesterday’s date in bash on Linux, DST-safe - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">March 6, 2020
+  <footer class="entry-footer">May 8, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to インスタンス変数のメソッドをstubにしたい" href="https://rengotaku.github.io/posts/2a2be20a-44d0-4ff4-ac0c-0630ee4e6763/"></a>
+  <a class="entry-link" aria-label="post link to macで昨日日付を取得したい" href="https://rengotaku.github.io/posts/5ec56dc2-9091-4aa2-ae9e-f214aba36901/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      JSONをオブジェクトとしてパースしたい
+      gormのデフォルトで作成される項目で検索をしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>object_class: OpenStruct をオプションに設定する object = JSON.parse(json, object_class: OpenStruct) Converting JSON to an Object in Ruby - Someth Victory - Medium...</p>
+    <p>解決 Model: gorm.Model{ID: id} で可能。 c.Ctx.DB.Delete(&amp;models.Address{Model: gorm.Model{ID: id}}) go - How to access gorm.Model.ID? - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">March 2, 2020
+  <footer class="entry-footer">May 5, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to JSONをオブジェクトとしてパースしたい" href="https://rengotaku.github.io/posts/7dc27af9-73c5-4b7b-b5fc-963afeccfb9e/"></a>
+  <a class="entry-link" aria-label="post link to gormのデフォルトで作成される項目で検索をしたい" href="https://rengotaku.github.io/posts/fb74babf-4f82-4b54-a9cc-cf896e841bb0/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -11,7 +11,7 @@
 <meta name="description" content="対象モジュール railsのログにタグづけしたい | ベジタブルプログラム テスト RSpec.describe TaggedLogger do subject { TaggedLogger::Middleware.new(app) } let(:app) { -&gt;(env) { [200, env, &#34;app&#34;] } } let(:request) { Rack::MockRequest.new(subject) } let(:action_dispatch_request) { ActionDispatch::TestRequest.create } before do allow(ActionDispatch::Request).to receive(:new).and_return(action_dispatch_request) allow(action_dispatch_request).to receive(:session).and_return(Struct.new(:user_id, :loaded?).new(*session_methods)) allow(Rails.logger).to receive(:tagged).and_yield">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/a876ea6d-99a6-43fe-b419-71896f26c406/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "rails", "ruby", "rspec", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "対象モジュール  railsのログにタグづけしたい | ベジタブルプログラム\n テスト RSpec.describe TaggedLogger do\rsubject { TaggedLogger::Middleware.new(app) }\rlet(:app) { -(env) { [200, env, \"app\"] } }\rlet(:request) { Rack::MockRequest.new(subject) }\rlet(:action_dispatch_request) { ActionDispatch::TestRequest.create }\rbefore do\rallow(ActionDispatch::Request).to receive(:new).and_return(action_dispatch_request)\rallow(action_dispatch_request).to receive(:session).and_return(Struct.new(:user_id, :loaded?).new(*session_methods))\rallow(Rails.logger).to receive(:tagged).and_yield\rrequest.get(\"/path/to/api\")\rend\rcontext \"user_idが存在する\" do\rlet(:session_methods) { [1, true] }\rit do\raggregate_failures do\rexpect(Rails.logger).to have_received(:tagged).with(\"user_id=1\").ordered\rexpect(Rails.logger).to have_received(:tagged).once\rend\rend\rend\rend\r参考 大まかに参考にした\n ruby on rails - Testing Middleware with Rspec - Stack Overflow\n Middlewareの引数の作成方法\n How to test rack middleware · GitHub\n taggedはblockをゴニョゴニョする必要があった\n RSpecでブロック内部の挙動を確認するテスト · GitHub\n ActionDispatch::Request のモックを作成\n ActionDispatch::TestRequest\n ",
+  "articleBody": "対象モジュール  railsのログにタグづけしたい | ベジタブルプログラム\n テスト RSpec.describe TaggedLogger do subject { TaggedLogger::Middleware.new(app) } let(:app) { -(env) { [200, env, \"app\"] } } let(:request) { Rack::MockRequest.new(subject) } let(:action_dispatch_request) { ActionDispatch::TestRequest.create } before do allow(ActionDispatch::Request).to receive(:new).and_return(action_dispatch_request) allow(action_dispatch_request).to receive(:session).and_return(Struct.new(:user_id, :loaded?).new(*session_methods)) allow(Rails.logger).to receive(:tagged).and_yield request.get(\"/path/to/api\") end context \"user_idが存在する\" do let(:session_methods) { [1, true] } it do aggregate_failures do expect(Rails.logger).to have_received(:tagged).with(\"user_id=1\").ordered expect(Rails.logger).to have_received(:tagged).once end end end end 参考 大まかに参考にした\n ruby on rails - Testing Middleware with Rspec - Stack Overflow\n Middlewareの引数の作成方法\n How to test rack middleware · GitHub\n taggedはblockをゴニョゴニョする必要があった\n RSpecでブロック内部の挙動を確認するテスト · GitHub\n ActionDispatch::Request のモックを作成\n ActionDispatch::TestRequest\n ",
   "wordCount" : "221",
   "inLanguage": "en",
   "datePublished": "2020-02-10T17:41:00+09:00",
@@ -233,7 +233,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

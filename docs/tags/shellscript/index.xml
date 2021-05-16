@@ -7,10 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Wed, 29 Jul 2020 19:37:09 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/shellscript/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 10 Dec 2020 23:18:40 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/shellscript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linuxのターミナルでプロンプトを表示したい</title>
+      <link>https://rengotaku.github.io/posts/d39f01fd-3c8b-441a-9340-b5de5c6fb507/</link>
+      <pubDate>Thu, 10 Dec 2020 23:18:40 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/d39f01fd-3c8b-441a-9340-b5de5c6fb507/</guid>
+      <description>インストール $ brew install newt コマンド $ whiptail --yesno &amp;quot;would you like to continue?&amp;quot; 10 40 ※後方の数値は、&amp;lt;height&amp;gt; &amp;lt;width&amp;gt;です。 参考 6 Lesser-Known Linux Commands You Should</description>
+    </item>
     
     <item>
       <title>Sentryへの通知があったあたりのログをcloudwatchから取得する</title>

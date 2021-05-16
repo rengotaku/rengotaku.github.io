@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Tue, 26 Jun 2018 17:01:03 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/samba/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 26 Jun 2018 17:01:03 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/samba/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>macでサンバにコマンドでマウントする</title>
       <link>https://rengotaku.github.io/posts/6968c0bf-26d2-4cdf-8ea1-7d9a6aa9ed30/</link>

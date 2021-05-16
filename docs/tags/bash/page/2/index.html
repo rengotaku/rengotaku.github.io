@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/bash/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/bash/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/bash/" />
-<meta property="og:updated_time" content="2020-11-04T16:35:36+09:00" />
+<meta property="og:updated_time" content="2020-12-03T12:22:58+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="bash"/>
 <meta name="twitter:description" content=""/>
@@ -124,6 +124,20 @@ if (!doNotTrack) {
 
 
 
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ファイルを一行ずつ処理
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>read を使用する。 $ cat list.txt line 1 line 2 line 3 END $ while read LINE; do echo ${LINE}; done &lt; ./list.txt line 1 line 2 line 3 END...</p>
+  </section>
+  <footer class="entry-footer">December 24, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to ファイルを一行ずつ処理" href="https://rengotaku.github.io/posts/fcb9faca-fcbe-4547-93c4-639f5877b4a4/"></a>
+</article>
 <article class="post-entry tag-entry"> 
 
   <header class="entry-header">
@@ -249,20 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">September 11, 2018
 </footer>
   <a class="entry-link" aria-label="post link to 複数のファイルを一気に作成する" href="https://rengotaku.github.io/posts/82df67e3-3088-4d02-8b05-e7e650a42bcd/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      サイトのステータスコードを定期的に記録する
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>watch -n30 &#34;curl -LkI &#39;https://XXX&#39; -o /dev/null -w &#39;%{http_code}\n&#39; -s | xargs -L 1 -I &#39;{}&#39; date &#39;&#43;[%Y/%m/%d %H:%M:%S] {}&#39; &gt;&gt; result.txt&#34; -n30・・・インターバル(秒) https://XXX・・・参照先 result.txt・・・出力...</p>
-  </section>
-  <footer class="entry-footer">July 5, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to サイトのステータスコードを定期的に記録する" href="https://rengotaku.github.io/posts/af24431e-9837-408f-ad71-cd02fce42b42/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

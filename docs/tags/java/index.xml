@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Wed, 22 Apr 2020 16:56:54 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 27 Jun 2019 11:37:47 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>pom.xmlに記述するpowermockの依存関係</title>
       <link>https://rengotaku.github.io/posts/f5614b24-2ef7-4665-88b7-49b4447f19f4/</link>

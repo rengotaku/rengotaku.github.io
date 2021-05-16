@@ -11,7 +11,7 @@
 <meta name="description" content="解決 メイン処理 Shell/Bash script for sending slack messages. を使用する。 マッピング #!/bin/bash export APP_SLACK_WEBHOOK=&quot;https://hooks.slack.com/services/XXXX&quot; export APP_SLACK_CHANNEL=channel_name #export APP_SLACK_USERNAME=$(hostname) export APP_SLACK_ICON_EMOJI=&quot;:hoge:&quot; /usr/bin/slack &quot;[$(hostname)] $(cat -)&quot; 使い方 /path/to/shell.sh 2&gt;&amp;1 | /usr/local/bin/crontab-slack 結果 [163-44-175-179] test な感じで送信される。 note どっかで使っていたスク">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/a4f63bc9-ba1a-4b9b-9745-01ee23b7813d/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "slack", "shellscript", "bash", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "解決 メイン処理 Shell/Bash script for sending slack messages. を使用する。\nマッピング #!/bin/bash\rexport APP_SLACK_WEBHOOK=\"https://hooks.slack.com/services/XXXX\"\rexport APP_SLACK_CHANNEL=channel_name\r#export APP_SLACK_USERNAME=$(hostname)\rexport APP_SLACK_ICON_EMOJI=\":hoge:\"\r/usr/bin/slack \"[$(hostname)] $(cat -)\"\r使い方 /path/to/shell.sh 2\u00261 | /usr/local/bin/crontab-slack\n結果 [163-44-175-179] test な感じで送信される。\nnote どっかで使っていたスクリプト\n# incoming-webhookのURLに対して通知内容を送ります。\rreadonly USERNAME=\"username\"\rreadonly ICON_EMOJI=\":favorite_icon:\"\rusage_exit() {\recho \"Usage: $(basename $0)-c CHANNEL [-f FROM] [-C COLOR] [-L LEVEL] [-S]MESSAGE\" 1\u00262\recho \" OPTIONS:\" 1\u00262\recho \" -S: suppress script name\" 1\u00262\rexit 1\r}\rfunction post() {\rlocal _channel=\"${1}\"\rshift\rlocal _color=\"${1}\"\rshift\rlocal _displayname=\"${1}\"\rshift\rlocal _level=\"${1}\"\rshift\rlocal _msg=\"${@}\"\rlocal _retry_args=\"--retry 3 --retry-delay 2 --retry-max-time 10\"\rcurl -X POST --data-urlencode \"payload={\\\"channel\\\": \\\"${_channel}\\\", \\\"username\\\": \\\"${USERNAME}\\\", \\\"icon_emoji\\\": \\\"${ICON_EMOJI}\\\", \\\"attachments\\\": [{ \\\"color\\\": \\\"${_color}\\\", \\\"title\\\": \\\"${_level}\\\", \\\"text\\\": \\\"${_msg}\\\" }] }\" ${webhook_url} 2/dev/null\r}\r#\r# MAIN\r#\rCALLED_FROM=\"$(ps -o command= $(ps -o ppid= $$))\"\rCHANNEL=\"devnull\"\rSUPPRESS_SCRIPTNAME=0\rLEVEL=\"INFO\"\r## set default display name with Hipchat compatible\rif [[ \"${SLACK_DISPLAY_NAME:-null}\" != \"null\" ]]; then\rFROM=\"${SLACK_DISPLAY_NAME}(${HOSTNAME%%\\.*})\"\r",
+  "articleBody": "解決 メイン処理 Shell/Bash script for sending slack messages. を使用する。\nマッピング #!/bin/bash\rexport APP_SLACK_WEBHOOK=\"https://hooks.slack.com/services/XXXX\"\rexport APP_SLACK_CHANNEL=channel_name\r#export APP_SLACK_USERNAME=$(hostname)\rexport APP_SLACK_ICON_EMOJI=\":hoge:\"\r/usr/bin/slack \"[$(hostname)] $(cat -)\"\r使い方 /path/to/shell.sh 2\u00261 | /usr/local/bin/crontab-slack\n結果 [163-44-175-179] test な感じで送信される。\nnote どっかで使っていたスクリプト\n# incoming-webhookのURLに対して通知内容を送ります。 readonly USERNAME=\"username\" readonly ICON_EMOJI=\":favorite_icon:\" usage_exit() { echo \"Usage: $(basename $0)-c CHANNEL [-f FROM] [-C COLOR] [-L LEVEL] [-S]MESSAGE\" 1\u00262 echo \" OPTIONS:\" 1\u00262 echo \" -S: suppress script name\" 1\u00262 exit 1 } function post() { local _channel=\"${1}\" shift local _color=\"${1}\" shift local _displayname=\"${1}\" shift local _level=\"${1}\" shift local _msg=\"${@}\" local _retry_args=\"--retry 3 --retry-delay 2 --retry-max-time 10\" curl -X POST --data-urlencode \"payload={\\\"channel\\\": \\\"${_channel}\\\", \\\"username\\\": \\\"${USERNAME}\\\", \\\"icon_emoji\\\": \\\"${ICON_EMOJI}\\\", \\\"attachments\\\": [{ \\\"color\\\": \\\"${_color}\\\", \\\"title\\\": \\\"${_level}\\\", \\\"text\\\": \\\"${_msg}\\\" }] }\" ${webhook_url} 2/dev/null } # # MAIN # CALLED_FROM=\"$(ps -o command= $(ps -o ppid= $$))\" CHANNEL=\"devnull\" SUPPRESS_SCRIPTNAME=0 LEVEL=\"INFO\" ## set default display name with Hipchat compatible if [[ \"${SLACK_DISPLAY_NAME:-null}\" != \"null\" ]]; then FROM=\"${SLACK_DISPLAY_NAME}(${HOSTNAME%%\\.*})\" ",
   "wordCount" : "218",
   "inLanguage": "en",
   "datePublished": "2019-08-27T10:56:29+09:00",
@@ -184,10 +184,10 @@ readonly USERNAME<span style="color:#f92672">=</span><span style="color:#e6db74"
 readonly ICON_EMOJI<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;:favorite_icon:&#34;</span>
 
 usage_exit<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        echo <span style="color:#e6db74">&#34;Usage: </span><span style="color:#66d9ef">$(</span>basename $0<span style="color:#66d9ef">)</span><span style="color:#e6db74"> -c CHANNEL [-f FROM] [-C COLOR] [-L LEVEL] [-S]MESSAGE&#34;</span> 1&gt;&amp;2
-        echo <span style="color:#e6db74">&#34;       OPTIONS:&#34;</span> 1&gt;&amp;2
-        echo <span style="color:#e6db74">&#34;         -S: suppress script name&#34;</span> 1&gt;&amp;2
-        exit 1
+        echo <span style="color:#e6db74">&#34;Usage: </span><span style="color:#66d9ef">$(</span>basename $0<span style="color:#66d9ef">)</span><span style="color:#e6db74"> -c CHANNEL [-f FROM] [-C COLOR] [-L LEVEL] [-S]MESSAGE&#34;</span> 1&gt;&amp;<span style="color:#ae81ff">2</span>
+        echo <span style="color:#e6db74">&#34;       OPTIONS:&#34;</span> 1&gt;&amp;<span style="color:#ae81ff">2</span>
+        echo <span style="color:#e6db74">&#34;         -S: suppress script name&#34;</span> 1&gt;&amp;<span style="color:#ae81ff">2</span>
+        exit <span style="color:#ae81ff">1</span>
 <span style="color:#f92672">}</span>
 
 <span style="color:#66d9ef">function</span> post<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
@@ -206,13 +206,13 @@ usage_exit<span style="color:#f92672">()</span> <span style="color:#f92672">{</s
 <span style="color:#f92672">}</span>
 
 
-#
+<span style="color:#75715e">#</span>
 <span style="color:#75715e"># MAIN</span>
-#
+<span style="color:#75715e">#</span>
 
 CALLED_FROM<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>ps -o command<span style="color:#f92672">=</span> <span style="color:#66d9ef">$(</span>ps -o ppid<span style="color:#f92672">=</span> $$<span style="color:#66d9ef">))</span><span style="color:#e6db74">&#34;</span>
 CHANNEL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;devnull&#34;</span>
-SUPPRESS_SCRIPTNAME<span style="color:#f92672">=</span>0
+SUPPRESS_SCRIPTNAME<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
 LEVEL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;INFO&#34;</span>
 
 <span style="color:#75715e">## set default display name with Hipchat compatible</span>
@@ -244,7 +244,7 @@ LEVEL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;INFO&#
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

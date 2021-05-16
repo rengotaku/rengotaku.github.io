@@ -11,7 +11,7 @@
 <meta name="description" content="def write_csv(filename, data) filepath = &#34;public/#{filename}&#34; Tempfile.create(filename) do |tmpfile| CSV.open(tmpfile.path, &#39;w&#39;) do |csv| csv &lt;&lt; %w(title1 title2 title3) data.each do |d| csv &lt;&lt; d end end # 変換できない文字は?となります File.write( filepath, File.read(tmpfile.path, encoding: &#39;UTF-8&#39;), encoding: Encoding::CP932, invalid: :replace, undef: :replace ) end filepath end 上記は、テンプファイルを作">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/95e77622-d4bc-464d-8dde-334ac6c6905e/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "ruby", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "def write_csv(filename, data)\rfilepath = \"public/#{filename}\"\rTempfile.create(filename) do |tmpfile|\rCSV.open(tmpfile.path, 'w') do |csv|\rcsv  %w(title1 title2 title3)\rdata.each do |d|\rcsv  d\rend\rend\r# 変換できない文字は?となります\r File.write(\rfilepath,\rFile.read(tmpfile.path, encoding: 'UTF-8'),\rencoding: Encoding::CP932,\rinvalid: :replace, undef: :replace\r)\rend\rfilepath\rend\r上記は、テンプファイルを作成して、文字コード変換して新しいファイルを作成する流れです。\r",
+  "articleBody": "def write_csv(filename, data) filepath = \"public/#{filename}\" Tempfile.create(filename) do |tmpfile| CSV.open(tmpfile.path, 'w') do |csv| csv  %w(title1 title2 title3) data.each do |d| csv  d end end # 変換できない文字は?となります File.write( filepath, File.read(tmpfile.path, encoding: 'UTF-8'), encoding: Encoding::CP932, invalid: :replace, undef: :replace ) end filepath end 上記は、テンプファイルを作成して、文字コード変換して新しいファイルを作成する流れです。\r",
   "wordCount" : "100",
   "inLanguage": "en",
   "datePublished": "2019-01-28T17:59:20+09:00",
@@ -170,7 +170,7 @@ if (!doNotTrack) {
       <span style="color:#66d9ef">end</span>
     <span style="color:#66d9ef">end</span>
 
-    <span style="color:#75715e"># 変換できない文字は?となります</span>
+    <span style="color:#75715e"># 変換できない文字は?となります</span>
     <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>write(
       filepath,
       <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>read(tmpfile<span style="color:#f92672">.</span>path, <span style="color:#e6db74">encoding</span>: <span style="color:#e6db74">&#39;UTF-8&#39;</span>),
@@ -206,7 +206,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

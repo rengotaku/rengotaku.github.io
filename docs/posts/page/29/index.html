@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/posts/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/posts/" />
-<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content=""/>
@@ -128,141 +128,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      Let&#39;s Encryptの証明書の自動延長が動作しない
+      ターミナルを再起動
     </h2>
   </header>
   <section class="entry-content">
-    <p>事象 $ sudo /usr/bin/certbot-auto renew --post-hook &#34;sudo systemctl reload nginx&#34; Saving debug log to /var/log/letsencrypt/letsencrypt.log - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Processing /etc/letsencrypt/renewal/www.domain.one.com.conf - - - - - - - - - - - -...</p>
+    <p>コマンド exec $SHELL -l 実行例 $ exec $SHELL -l $ # 何も発生しない シェルを再起動させる簡単な方法 - Qiita...</p>
   </section>
-  <footer class="entry-footer">June 7, 2019
+  <footer class="entry-footer">July 1, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to Let&#39;s Encryptの証明書の自動延長が動作しない" href="https://rengotaku.github.io/posts/f1b70ce0-0550-4a95-a5ec-9490d70085fe/"></a>
+  <a class="entry-link" aria-label="post link to ターミナルを再起動" href="https://rengotaku.github.io/posts/0bc77502-05c2-4f1a-b791-9cc9dda6d4d9/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      shellのfunctionで戻り値を取得したい
+      SQLで日付の計算
     </h2>
   </header>
   <section class="entry-content">
-    <p>例 #!/bin/bash hoge_func() { echo &#39;not output&#39; &gt; /dev/null # こっちは出力しない echo &#39;result&#39; } RESULT=`hoge_func` echo $RESULT # &lt;= result 【Linux】シェルスクリプトの関数の使い方！一通りまとめ...</p>
+    <p>日付を加算・減産 NOW() - INTERVAL 60 SECOND 単位 MICROSECOND SECOND MINUTE HOUR DAY WEEK MONTH 【MySQL】日時の計算（加算・減算） - Qiita ゼロ時から検索したい DATE_FORMAT(NOW() - INTERVAL 60 DAY, &#39;%Y-%m-%d 00:00:00&#39; ) mySQLの日付処...</p>
   </section>
-  <footer class="entry-footer">June 7, 2019
+  <footer class="entry-footer">June 27, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to shellのfunctionで戻り値を取得したい" href="https://rengotaku.github.io/posts/81204ada-4d9b-4611-abf3-0bbdc6422be0/"></a>
+  <a class="entry-link" aria-label="post link to SQLで日付の計算" href="https://rengotaku.github.io/posts/be6a33b1-4871-40f6-b154-b4f8368d9490/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      fluentdをdockerで動かす際のチップ集
+      コンフリクトした際の対応
     </h2>
   </header>
   <section class="entry-content">
-    <p>構成 . ├── README.md ├── docker-compose.yml ├── fluentd │ ├── Dockerfile │ └── conf │ └── fluentd.conf 設定 docker FROM fluent/fluentd:v0.14.25 ADD conf/fluentd.conf /fluentd/etc/ docker-compose version: &#39;2&#39; services: fluentd: build: fluentd/ ports: - &#34;24224:24224&#34; volumes: - ./fluentd/conf:/fluentd/etc environment: FLUENTD_CONF: fluentd.conf fluentdのconf &lt;source&gt; @type forward &lt;/source&gt;...</p>
+    <p>上の方は、コンフリクトしているファイルを別名でブランチを切る手順です。 コンフリクトファイルのみを消したい場合は、半ばくらいから参考にして下さ...</p>
   </section>
-  <footer class="entry-footer">June 5, 2019
+  <footer class="entry-footer">June 27, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to fluentdをdockerで動かす際のチップ集" href="https://rengotaku.github.io/posts/d15ea14f-fed7-4ef3-aab3-8a0e554eae2f/"></a>
+  <a class="entry-link" aria-label="post link to コンフリクトした際の対応" href="https://rengotaku.github.io/posts/799718e7-551a-433b-9578-4a6c8277549d/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      ActionMailerで送信後に送信ログを記録したい
+      eclipseで\（バックスラッシュ）を入力の仕方
     </h2>
   </header>
   <section class="entry-content">
-    <p>未解決 コールバックの仕組みはあるが、引数を増やす事ができず、拡張する仕組みが不明。 Registered observer on one mailer gets called with every email delivering, possible bug? · Issue #29671 · rails/rails は回答ないままクローズ...</p>
+    <p>「option &#43; ￥」で入力しなければいけないようです。 文字のエスケープの際にeclipseに直接いれると￥と入力されつまづきました。...</p>
   </section>
-  <footer class="entry-footer">June 4, 2019
+  <footer class="entry-footer">June 27, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to ActionMailerで送信後に送信ログを記録したい" href="https://rengotaku.github.io/posts/77b571b7-9eab-4c93-95cb-37e97eff8b68/"></a>
+  <a class="entry-link" aria-label="post link to eclipseで\（バックスラッシュ）を入力の仕方" href="https://rengotaku.github.io/posts/6013c8db-1fb0-4ffe-b3e5-dedef130c085/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      指定のメソッドを実行時にフックする
+      コミット入れ替えたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>※未検証 ActiveSupport::Notification.subscribe(&#34;deliver.action_mailer&#34;) do |name, start, finish, id, payload| puts &#34;name: #{name}&#34; puts &#34;payload: #{payload}&#34; end ActionMailer の送信ログをとりたい - Qiita...</p>
+    <p>問題点 994bb38 と 66790c3 を一緒にプッシュしてしまった。 要 望 66790c3 分をプッシュ結果から削除したい。 解決策 994bb38 と 66790c3 のコミットを入れ替えて、最新のコミットを 994b...</p>
   </section>
-  <footer class="entry-footer">June 3, 2019
+  <footer class="entry-footer">June 27, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to 指定のメソッドを実行時にフックする" href="https://rengotaku.github.io/posts/abef202c-814f-469c-b0fc-1f55e20b2f3b/"></a>
+  <a class="entry-link" aria-label="post link to コミット入れ替えたい" href="https://rengotaku.github.io/posts/4e44817f-d5d0-481a-930f-6a591fb92f6f/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      dockerで動いているrailsでbetter_errorsのirbが動作しない
+      pom.xmlに記述するpowermockの依存関係
     </h2>
   </header>
   <section class="entry-content">
-    <p>未解決 画面右側のirbでデバッグできる画面が表示されない。 binding_of_caller が関連しているようだが、原因が不明。 画面を出すようにする BetterErrors::Middleware.allow_ip! &#34;0.0.0.0/0&#34; better_errors not working in a Docker container · Issue #270...</p>
+    <p>&lt;dependency&gt; &lt;groupId&gt;org.powermock&lt;/groupId&gt; &lt;artifactId&gt;powermock-api-mockito&lt;/artifactId&gt; &lt;version&gt;1.6.3&lt;/version&gt; &lt;scope&gt;test&lt;/scope&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.powermock&lt;/groupId&gt; &lt;artifactId&gt;powermock-module-junit4&lt;/artifactId&gt; &lt;version&gt;1.6.3&lt;/version&gt; &lt;scope&gt;test&lt;/scope&gt; &lt;/dependency&gt;...</p>
   </section>
-  <footer class="entry-footer">May 30, 2019
+  <footer class="entry-footer">June 27, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to dockerで動いているrailsでbetter_errorsのirbが動作しない" href="https://rengotaku.github.io/posts/bc3ee1e4-fa92-4af9-bdd1-7dced7696686/"></a>
+  <a class="entry-link" aria-label="post link to pom.xmlに記述するpowermockの依存関係" href="https://rengotaku.github.io/posts/f5614b24-2ef7-4665-88b7-49b4447f19f4/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      dockerで動くrailsでデバックを行いたい
+      Bodyのパラメータのキーを取得する正規表現
     </h2>
   </header>
   <section class="entry-content">
-    <p>設定 docker-compose.yml services: rails: &amp;app_base tty: true stdin_open: true 操作 アタッチ docker attach [container_name] $ docker-compose run --rm --service-ports [service name] でいけるかと思ったが、再度コンテナを立ち上げる挙動になり期待しない動きをする 便利コマンド...</p>
+    <p>ターゲット： (?:(.&#43;?)=.&#43;?&amp;) リプレイス： $1\r...</p>
   </section>
-  <footer class="entry-footer">May 30, 2019
+  <footer class="entry-footer">June 27, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to dockerで動くrailsでデバックを行いたい" href="https://rengotaku.github.io/posts/b6b89728-605f-40b8-9d57-2bb1cc14b932/"></a>
+  <a class="entry-link" aria-label="post link to Bodyのパラメータのキーを取得する正規表現" href="https://rengotaku.github.io/posts/ffa00e50-f23d-4d80-8224-1e363c559752/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      日時をよくあるフォーマットの文字列で取得したい
+      rubyで構造体を使いたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>Time.now.strftime(&#39;%Y-%m-%d %H:%M:%S&#39;) strftime - リファレンス - - Railsドキュメント...</p>
+    <p>require &#34;ostruct&#34; config = OpenStruct.new config.level #=&gt; nil config.level = :debug config.level #=&gt; :debug 手軽に構造体を使いたい時にOpenStruct - Qiita...</p>
   </section>
-  <footer class="entry-footer">May 27, 2019
+  <footer class="entry-footer">June 26, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to 日時をよくあるフォーマットの文字列で取得したい" href="https://rengotaku.github.io/posts/829f1f8c-5a83-4c37-b05d-204b2b2d70d4/"></a>
+  <a class="entry-link" aria-label="post link to rubyで構造体を使いたい" href="https://rengotaku.github.io/posts/2abab715-12a8-4ab0-b451-258c4366fe44/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      loggerを追加
+      ::ClassNameの意味
     </h2>
   </header>
   <section class="entry-content">
-    <p>config.another_logger = Logger.new(Rails.root.join(&#39;log/foo.log&#39;)) [Rails] 任意のファイルにアプリケーションログを吐く - Qiita...</p>
+    <p>定数のスコープ演算子で、トップレベルの定数であることを示す。 A = &#34;::A&#34; class Foo A = &#34;Foo::A&#34; class Bar A = &#34;Foo::Bar::A&#34; p A # =&gt; &#34;Foo::Bar::A&#34; p Foo::A # =&gt; &#34;Foo::A&#34; p ::A # =&gt; &#34;::A&#34; end end chef - ruby でクラス名の先...</p>
   </section>
-  <footer class="entry-footer">May 21, 2019
+  <footer class="entry-footer">June 26, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to loggerを追加" href="https://rengotaku.github.io/posts/2fc7b3ad-e171-49ab-aa4f-abb4e3407a53/"></a>
+  <a class="entry-link" aria-label="post link to ::ClassNameの意味" href="https://rengotaku.github.io/posts/f474b685-0a9a-42b8-9328-462d2fe49945/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      raiseを検証したい
+      rake taskのテスト
     </h2>
   </header>
   <section class="entry-content">
-    <p>assert_raises RuntimeError do # something to do raise error end module MiniTest::Assertions - Documentation for Ruby 2.1.0 https://docs.ruby-lang.org/en/2.1.0/MiniTest/Assertions.html...</p>
+    <p>module Tasks class SampleTest &lt; ActiveSupport::TestCase describe &#39;rake task sample&#39; do before do @rake = Rake::Application.new Rake.application = @rake Rails.application.load_tasks Rake::Task.define_task(:environment) end describe &#39;sample:exec&#39; do it &#39;done without errores.&#39; do assert { @rake[&#39;sample:exec&#39;].execute } end end end end end executeなので一度しか実行されない事象は起きないはずだが...</p>
   </section>
-  <footer class="entry-footer">May 17, 2019
+  <footer class="entry-footer">June 26, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to raiseを検証したい" href="https://rengotaku.github.io/posts/935cf5a3-4605-4c50-96a3-c9f4064f624a/"></a>
+  <a class="entry-link" aria-label="post link to rake taskのテスト" href="https://rengotaku.github.io/posts/576d9cd1-5c40-44df-95d1-0d320a889c95/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
@@ -287,7 +287,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

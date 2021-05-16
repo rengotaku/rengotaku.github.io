@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Mon, 26 Aug 2019 16:53:24 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 26 Aug 2019 16:53:24 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>nginxのリバースプロキシ一例</title>
       <link>https://rengotaku.github.io/posts/23387909-2719-4835-930c-4fee4e6ffa82/</link>

@@ -11,7 +11,7 @@
 <meta name="description" content="staticメソッド describe &#34;comment&#34; do context &#34;サービスがHOGEの場合&#34; do before do allow(Global.application).to receive(:service).and_return(&#34;HOGE&#34;) #&lt;= キモ ... end it &#39;hoge&#39; do ... end end end [RSpec] allow、receive、an">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/bd537f3d-6cad-4d94-9efd-d1200b7bd294/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "ruby", "rspec", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "staticメソッド describe \"comment\" do\rcontext \"サービスがHOGEの場合\" do\rbefore do\rallow(Global.application).to receive(:service).and_return(\"HOGE\") #...\rend\rit 'hoge' do\r...\rend\rend\rend\r [RSpec] allow、receive、and_return メソッドを使って特定のメソッドをスタブ化する - Qiita\n ハッシュ before do\rallow(ENV).to receive(:[]).and_call_original\rallow(ENV).to receive(:[]).with(\"RAILS_ENV\").and_return(\"development\")\rend\r",
+  "articleBody": "staticメソッド describe \"comment\" do context \"サービスがHOGEの場合\" do before do allow(Global.application).to receive(:service).and_return(\"HOGE\") #... end it 'hoge' do ... end end end  [RSpec] allow、receive、and_return メソッドを使って特定のメソッドをスタブ化する - Qiita\n ハッシュ before do allow(ENV).to receive(:[]).and_call_original allow(ENV).to receive(:[]).with(\"RAILS_ENV\").and_return(\"development\") end ",
   "wordCount" : "113",
   "inLanguage": "en",
   "datePublished": "2020-01-14T11:45:29+09:00",
@@ -164,7 +164,7 @@ if (!doNotTrack) {
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">describe <span style="color:#e6db74">&#34;comment&#34;</span> <span style="color:#66d9ef">do</span>
   context <span style="color:#e6db74">&#34;サービスがHOGEの場合&#34;</span> <span style="color:#66d9ef">do</span>
     before <span style="color:#66d9ef">do</span>
-      allow(<span style="color:#66d9ef">Global</span><span style="color:#f92672">.</span>application)<span style="color:#f92672">.</span>to receive(<span style="color:#e6db74">:service</span>)<span style="color:#f92672">.</span>and_return(<span style="color:#e6db74">&#34;HOGE&#34;</span>) <span style="color:#75715e">#&lt;= キモ</span>
+      allow(<span style="color:#66d9ef">Global</span><span style="color:#f92672">.</span>application)<span style="color:#f92672">.</span>to receive(<span style="color:#e6db74">:service</span>)<span style="color:#f92672">.</span>and_return(<span style="color:#e6db74">&#34;HOGE&#34;</span>) <span style="color:#75715e">#&lt;= キモ</span>
       <span style="color:#f92672">...</span>
     <span style="color:#66d9ef">end</span>
 
@@ -206,7 +206,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

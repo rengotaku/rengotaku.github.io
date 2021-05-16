@@ -11,7 +11,7 @@
 <meta name="description" content="設定 class Application &lt; Rails::Application ... require Rails.root.join(&#34;lib/tagged_logger.rb&#34;) initializer &#34;tagged_logger.insert_middleware&#34; do |app| app.config.middleware.use TaggedLogger::Middleware end end # frozen_string_literal: true module TaggedLogger class Middleware def initialize(app) @app = app end def call(env) request = ActionDispatch::Request.new(env) request.session.send(:load!) unless request.session.loaded? if (user_id = request.session[:user_id]) tag = &#34;user_id=#{user_id}&#34; Rails.logger.tagged(tag) do @app.call(env) end else @app.call(env) end end end end アウトプット [user_id=1] が今回付与したタ">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/c8804b8e-6ac2-450c-b5ea-9009c1a43da4/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "rails", "ruby", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "設定 class Application  Rails::Application\r...\rrequire Rails.root.join(\"lib/tagged_logger.rb\")\rinitializer \"tagged_logger.insert_middleware\" do |app|\rapp.config.middleware.use TaggedLogger::Middleware\rend\rend\r# frozen_string_literal: true\r module TaggedLogger\rclass Middleware\rdef initialize(app)\r@app = app\rend\rdef call(env)\rrequest = ActionDispatch::Request.new(env)\rrequest.session.send(:load!) unless request.session.loaded?\rif (user_id = request.session[:user_id])\rtag = \"user_id=#{user_id}\"\rRails.logger.tagged(tag) do\r@app.call(env)\rend\relse\r@app.call(env)\rend\rend\rend\rend\rアウトプット [user_id=1] が今回付与したタグ\n06:08:00 app.1 | Started GET \"/api/v1/hoge\" for 172.18.0.1 at 2020-02-10 06:08:00 +0000\r06:08:00 app.1 | Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1\r06:08:00 app.1 | [user_id=1] Began GET \"/api/v1/hoge\" for 172.18.0.1 at 2020-02-10 06:08:00 +0000\r Rails アプリケーションのデバッグ - Railsガイド\n ",
+  "articleBody": "設定 class Application  Rails::Application ... require Rails.root.join(\"lib/tagged_logger.rb\") initializer \"tagged_logger.insert_middleware\" do |app| app.config.middleware.use TaggedLogger::Middleware end end # frozen_string_literal: true module TaggedLogger class Middleware def initialize(app) @app = app end def call(env) request = ActionDispatch::Request.new(env) request.session.send(:load!) unless request.session.loaded? if (user_id = request.session[:user_id]) tag = \"user_id=#{user_id}\" Rails.logger.tagged(tag) do @app.call(env) end else @app.call(env) end end end end アウトプット [user_id=1] が今回付与したタグ\n06:08:00 app.1 | Started GET \"/api/v1/hoge\" for 172.18.0.1 at 2020-02-10 06:08:00 +0000\r06:08:00 app.1 | Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1\r06:08:00 app.1 | [user_id=1] Began GET \"/api/v1/hoge\" for 172.18.0.1 at 2020-02-10 06:08:00 +0000\r Rails アプリケーションのデバッグ - Railsガイド\n ",
   "wordCount" : "131",
   "inLanguage": "en",
   "datePublished": "2020-02-10T15:38:44+09:00",
@@ -169,7 +169,7 @@ if (!doNotTrack) {
     app<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>middleware<span style="color:#f92672">.</span>use <span style="color:#66d9ef">TaggedLogger</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Middleware</span>
   <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb:lib/tagged_logger.rb" data-lang="rb:lib/tagged_logger.rb"><span style="color:#75715e"># frozen_string_literal: true</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb:lib/tagged_logger.rb" data-lang="rb:lib/tagged_logger.rb"><span style="color:#75715e"># frozen_string_literal: true</span>
 
 <span style="color:#66d9ef">module</span> TaggedLogger
   <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Middleware</span>
@@ -224,7 +224,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

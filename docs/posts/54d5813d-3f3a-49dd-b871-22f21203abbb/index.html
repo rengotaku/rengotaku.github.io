@@ -11,7 +11,7 @@
 <meta name="description" content="採用 Rails.cacheを使用 Rails.cacheについて | 酒と涙とRubyとRailsと 始めは下記で実装しようとしたが、上記で良さそう">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/54d5813d-3f3a-49dd-b871-22f21203abbb/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "rails", "memcached", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "採用 Rails.cacheを使用  Rails.cacheについて | 酒と涙とRubyとRailsと\n 始めは下記で実装しようとしたが、上記で良さそう（細かなメソッドは使用できないけど） petergoldstein/dalli: High performance memcached client for Ruby\nconfig.cache_store = :dalli_store, 'localhost:21211'\rRails.cache.dalli.with do |client|\r# client is a Dalli::Client instance which you can\r# use ONLY within this block\rend\r内部的にはmemcachedを使用します。\rメモリの解放は、 Least Recently Used というサイクルで自動で行なってくれる。\nmemcached - a distributed memory object caching system\n調査 memcachedのcas  【Ruby】【キャッシュ】dalli(memcachedのクライアントgem)を使ってみました - blog.waterlow.work\n 同時書き込みさせて、falseだった方をエラーにすれば実装できそう？\nmultithreading - Is Memcached get and put methods are thread safe - Stack Overflow にて、値の保証はされていると記載されているが、その元のドキュメントのURLが閲覧できない。。。\n redisまたはmemcachedを使用して、PHP同時実行でロック制御を実装します - コードチュートリアル\n Memcached Example も処理が終わるまで待機（ループ）されるようだ。 ちなみに、 $cas はどこからきた？\nredisのsetnx  SETNX Redis\n exist - set を一連で行なってくれると思われる。 multithreading - Redis is single-threaded, then how does it do concurrent I/O? - Stack Overflow より、redisは、 シングルスレッド らしいのでスレッド障害を考えなくてよいっぽい。 ただ今回は、memcachedなのでメモ。\n",
+  "articleBody": "採用 Rails.cacheを使用  Rails.cacheについて | 酒と涙とRubyとRailsと\n 始めは下記で実装しようとしたが、上記で良さそう（細かなメソッドは使用できないけど） petergoldstein/dalli: High performance memcached client for Ruby\nconfig.cache_store = :dalli_store, 'localhost:21211' Rails.cache.dalli.with do |client|\r# client is a Dalli::Client instance which you can\r# use ONLY within this block\rend\r内部的にはmemcachedを使用します。\rメモリの解放は、 Least Recently Used というサイクルで自動で行なってくれる。\nmemcached - a distributed memory object caching system\n調査 memcachedのcas  【Ruby】【キャッシュ】dalli(memcachedのクライアントgem)を使ってみました - blog.waterlow.work\n 同時書き込みさせて、falseだった方をエラーにすれば実装できそう？\nmultithreading - Is Memcached get and put methods are thread safe - Stack Overflow にて、値の保証はされていると記載されているが、その元のドキュメントのURLが閲覧できない。。。\n redisまたはmemcachedを使用して、PHP同時実行でロック制御を実装します - コードチュートリアル\n Memcached Example も処理が終わるまで待機（ループ）されるようだ。 ちなみに、 $cas はどこからきた？\nredisのsetnx  SETNX Redis\n exist - set を一連で行なってくれると思われる。 multithreading - Redis is single-threaded, then how does it do concurrent I/O? - Stack Overflow より、redisは、 シングルスレッド らしいのでスレッド障害を考えなくてよいっぽい。 ただ今回は、memcachedなのでメモ。\n",
   "wordCount" : "538",
   "inLanguage": "en",
   "datePublished": "2019-09-13T15:48:23+09:00",
@@ -219,7 +219,7 @@ end
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

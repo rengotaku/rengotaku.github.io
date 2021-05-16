@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Tue, 18 Dec 2018 16:38:35 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/%E6%A5%AD%E5%8B%99%E9%96%8B%E5%A7%8B/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 18 Dec 2018 16:38:35 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/%E6%A5%AD%E5%8B%99%E9%96%8B%E5%A7%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>web上でPRの更新に対して通知がでるように設定</title>
       <link>https://rengotaku.github.io/posts/d1156c5a-c96c-45d8-8a32-732e1404b1d3/</link>
@@ -27,7 +23,7 @@
       <pubDate>Wed, 18 Apr 2018 12:15:08 +0900</pubDate>
       
       <guid>https://rengotaku.github.io/posts/2a3de753-8c67-4cba-8dba-809c9550d48b/</guid>
-      <description>エディタ Visual Studio Code – コード エディター | Microsoft Azure 雑多用 CotEditor -Text Editor for macOS 以前は Download - Sublime Text ターミナル iTerm2 - macOS Terminal Replacement コピペ履歴 Clipy - Clipboard extension app for macOS ペイントツール フリー ペイント</description>
+      <description>エディタ Visual Studio Code – コード エディター | Microsoft Azure 雑多用 CotEditor -Text Editor for macOS 以前は Download - Sublime Text ターミナル iTerm2 - macOS Terminal Replacement コピペ履歴 Clipy - Clipboard extension app for macOS Prefarences-&amp;gt;Shortcuts History: Command + Shif + Space ペイントツール</description>
     </item>
     
     <item>

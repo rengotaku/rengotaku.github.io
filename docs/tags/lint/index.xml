@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Wed, 02 Oct 2019 13:26:56 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/lint/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 02 Oct 2019 13:26:56 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/lint/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>shellcheck</title>
       <link>https://rengotaku.github.io/posts/e7241df2-4f4b-4af5-b544-246267365cdc/</link>

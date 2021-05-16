@@ -7,10 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Tue, 10 Nov 2020 10:01:21 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jan 2021 18:20:15 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>proxyを通してmysqldumpを実行したい</title>
+      <link>https://rengotaku.github.io/posts/380688f0-9e0e-49a0-b934-9600c6eede9e/</link>
+      <pubDate>Wed, 20 Jan 2021 18:20:15 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/380688f0-9e0e-49a0-b934-9600c6eede9e/</guid>
+      <description>解決 mysql - Temporary SSH Tunnel for backup purposes - Server Fault ssh usr@host mysqldump -u dbuser -ppasswd my-database-name &amp;gt;dumpfile ※dumpfileはローカルに出力されます</description>
+    </item>
     
-	<atom:link href="https://rengotaku.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sharding＝水平分割＝パーティションなの？</title>
+      <link>https://rengotaku.github.io/posts/d1cce510-fb02-4d6e-b981-7ebe82d79b57/</link>
+      <pubDate>Wed, 09 Dec 2020 16:58:20 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/d1cce510-fb02-4d6e-b981-7ebe82d79b57/</guid>
+      <description>解決 Sharding＝水平分割(horizontal partitioning)＝パーティション です。 参考 How Data Sharding Works in a Distributed SQL Database - The Distributed SQL Blog より、s</description>
+    </item>
     
+    <item>
+      <title>nullと文字列の比較でつまづいたこと</title>
+      <link>https://rengotaku.github.io/posts/45b17aeb-5615-495f-a431-3fd1c030e08e/</link>
+      <pubDate>Thu, 26 Nov 2020 11:14:24 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/45b17aeb-5615-495f-a431-3fd1c030e08e/</guid>
+      <description>nullと文字列の比較の返り値は、null select null != &amp;#39;first&amp;#39;, // NULL &amp;#39;first&amp;#39; = &amp;#39;first&amp;#39;, // 1 &amp;#39;&amp;#39; != &amp;#39;first&amp;#39; // 1 ;</description>
+    </item>
     
     <item>
       <title>mysqlの結果をtsvファイルとして保存する</title>
@@ -99,7 +122,7 @@
       <pubDate>Thu, 15 Aug 2019 20:10:20 +0900</pubDate>
       
       <guid>https://rengotaku.github.io/posts/ed0c8993-6fd1-40ee-af28-c51cc75347ca/</guid>
-      <description>解決 username@&amp;quot;%&amp;quot; grant all privileges on xxxdb.* to username@&amp;quot;%&amp;quot; MySQL 外部ホストからアクセスする │ 渋谷生活 tips 書き方色々 コマンド 意味 username@&amp;quot;%&amp;rdquo; 全てのホストからアクセス可能 username@localhost サーバにログインしてからア</description>
+      <description>解決 username@&amp;quot;%&amp;quot; grant all privileges on xxxdb.* to username@&amp;quot;%&amp;quot; MySQL 外部ホストからアクセスする │ 渋谷生活 tips 書き方色々 コマンド 意味 username@&amp;quot;%&amp;quot; 全てのホストからアクセス可能 username@localhost サーバにログインしてからア</description>
     </item>
     
     <item>

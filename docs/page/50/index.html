@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/" />
-<meta property="og:updated_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vegetable Programing"/>
 <meta name="twitter:description" content=""/>
@@ -138,141 +138,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      要素をコピーして他の要素の前に設置する
+      javascriptでファイルをダウンロード
     </h2>
   </header>
   <section class="entry-content">
-    <p>var parent = document.querySelector(&#39;path &gt; to &gt; element&#39;); var inquiry_copy = document.querySelector(&#39;path &gt; to &gt; element&#39;).cloneNode(true); var search_con1 = document.querySelector(&#39;path &gt; to &gt; element&#39;); parent.insertBefore(inquiry_copy, search_con1); element.cloneNode - エレメントを複製する - JavaScriptリファレンス...</p>
+    <p>var downloadAsFile = function(fileName, content) { var blob = new Blob([content]); var url = window.URL || window.webkitURL; var blobURL = url.createObjectURL(blob); var a = document.createElement(&#39;a&#39;); a.download = fileName; a.href = blobURL; a.click(); }; javascript - JavaScriptからファイルをダウンロードさせるのはどうしたら良い...</p>
   </section>
-  <footer class="entry-footer">August 6, 2018
+  <footer class="entry-footer">September 7, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to 要素をコピーして他の要素の前に設置する" href="https://rengotaku.github.io/posts/174418da-364e-413d-9c0f-8f00518d2191/"></a>
+  <a class="entry-link" aria-label="post link to javascriptでファイルをダウンロード" href="https://rengotaku.github.io/posts/1af5e1a3-d374-4430-a097-e5f983ae998f/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      dockerのコンテナ内でcronよりrailsタスクを実行する
+      ラムダの呼び出し回数メトリクスを取得
     </h2>
   </header>
   <section class="entry-content">
-    <p>tips dockerfileに CMD crond と設定しても駄目。dockerを起動する直前に起動する。(docker-composeに記載する)...</p>
+    <p>$ aws cloudwatch list-metrics --namespace AWS/Lambda --metric-name Invocations $ aws cloudwatch get-metric-statistics --namespace AWS/Lambda --metric-name Invocations \ --dimensions Name=FunctionName,Value=XXXXX --statistics Maximum \ --start-time 2018-08-01T00:00:00 --end-time 2018-09-04T23:59:59 --period 360 get-metric-statistics — AWS CLI 1.16.7 Command Reference list-functions — AWS CLI 1.16.7 Command Referenceˆ¨...</p>
   </section>
-  <footer class="entry-footer">August 6, 2018
+  <footer class="entry-footer">September 5, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to dockerのコンテナ内でcronよりrailsタスクを実行する" href="https://rengotaku.github.io/posts/b6987182-f19c-40af-bee8-afc04f3078bb/"></a>
+  <a class="entry-link" aria-label="post link to ラムダの呼び出し回数メトリクスを取得" href="https://rengotaku.github.io/posts/3f178e58-317d-4a14-8595-e18bac3209ca/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      google search consoleで、サイトの確認が行えない
+      slim3をdockerで動かす
     </h2>
   </header>
   <section class="entry-content">
-    <p>対応 DNSにレコードを追加。 タイプ・・・TXT 名称・・・＠ TTL・・・3600 値・・・指定のもの メモ ＨＴＭＬ設置、metaタグなどを記入など...</p>
+    <p>appフォルダを作成して、その中にSlim関連のファイルを詰め込むのが良いかも diarmuidie/docker-compose-php-slim: Sample Slim Skeleton app running with Docker Compose...</p>
   </section>
-  <footer class="entry-footer">August 4, 2018
+  <footer class="entry-footer">September 3, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to google search consoleで、サイトの確認が行えない" href="https://rengotaku.github.io/posts/dfcf6aef-6f2a-456d-83a4-af1f7a911b91/"></a>
+  <a class="entry-link" aria-label="post link to slim3をdockerで動かす" href="https://rengotaku.github.io/posts/a5db633f-bee8-4632-8062-68a079750f53/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      aws-cliを使用してs3からファイルを取得
+      ディレクトリ構成を維持せず出力
     </h2>
   </header>
   <section class="entry-content">
-    <p>$ aws s3 cp --region ap-northeast-1 s3://path/to/bucket/path . 特定のパス配下をダウンロードしたい場合 $ aws s3 cp --region ap-northeast-1 s3://path/to/bucket/path . --recursive S3 から ファイルをAWSCLIでディレクトリごとダウンロード https://qiita.com/FSMS/items/481fa5107b2901a07ec6...</p>
+    <p>gulp.task(&#39;sass&#39;, function() { return sass(&#39;./app/resource/scss/*.scss&#39;, {style: &#39;expanded&#39;}) .pipe(gulp.dest(&#39;./web/css&#39;)); }); 例だと該当するscssファイルが、`web/css`直下に出力される 日記: gulp-ruby-sassのコンパイル先にディ...</p>
   </section>
-  <footer class="entry-footer">July 31, 2018
+  <footer class="entry-footer">September 2, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to aws-cliを使用してs3からファイルを取得" href="https://rengotaku.github.io/posts/d39b79ce-8059-4d89-95f8-2480d8564c85/"></a>
+  <a class="entry-link" aria-label="post link to ディレクトリ構成を維持せず出力" href="https://rengotaku.github.io/posts/67bbdeee-5d50-4506-b1d8-82b3581bdfb0/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      awsのlinux上でcapybaraがインストールできない
+      イメージ・コンテナの一括削除
     </h2>
   </header>
   <section class="entry-content">
-    <p>ruby on rails - Install capyabara-webkit gem on Amazon Linux AMI - Stack Overflow...</p>
+    <p>使用していないイメージ $ docker rmi --no-prune=true $(docker images -a -q) docker で使ってないイメージを全部消す時の Tips 全てのコンテナ $ docker rm $(docker ps -aq) [docker] コンテナを一括削除...</p>
   </section>
-  <footer class="entry-footer">July 31, 2018
+  <footer class="entry-footer">August 29, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to awsのlinux上でcapybaraがインストールできない" href="https://rengotaku.github.io/posts/ac5c5b45-7af9-446c-88db-641bac969061/"></a>
+  <a class="entry-link" aria-label="post link to イメージ・コンテナの一括削除" href="https://rengotaku.github.io/posts/13dfcd27-8979-4289-8a21-07d7fcd8e605/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      tar.gzが解凍できない
+      cpu使用率を降順で表示
     </h2>
   </header>
   <section class="entry-content">
-    <p>$ tar -zxvf test.tar.gz =&gt; gzip: stdin has more than one entry--rest ignored tar: これは tar アーカイブではないようです tar: 次のヘッダをスキップします tar: Child returned status 2 tar: Error is not recoverable: exiting now ファイルの種類を調べる $ file...</p>
+    <p>$ top -o cpu MacOSのtopコマンドでCPU使用順にソート | ex1-lab...</p>
   </section>
-  <footer class="entry-footer">July 31, 2018
+  <footer class="entry-footer">August 29, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to tar.gzが解凍できない" href="https://rengotaku.github.io/posts/16676d53-850c-4fe9-9f17-79e453431e43/"></a>
+  <a class="entry-link" aria-label="post link to cpu使用率を降順で表示" href="https://rengotaku.github.io/posts/d59d0f42-37c7-4da3-b02b-2462fc517a28/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      絵文字を正しく抽出するには
+      画像に白帯びをつける
     </h2>
   </header>
   <section class="entry-content">
-    <p>function stringToArray (str) { return str.match(/[\uD800-\uDBFF][\uDC00-\uDFFF]|[^\uD800-\uDFFF]/g) || []; } JavaScriptでのサロゲートペア文字列のメモ - Qiita...</p>
+    <p>枠を書く HTML5 Canvas Line Color Tutorial drawImage() メソッド - Canvasリファレンス - HTML5.JP 画像のリサイズ クライアント側でcanvasを使って画像をリサイズする 画像を加工する...</p>
   </section>
-  <footer class="entry-footer">July 30, 2018
+  <footer class="entry-footer">August 28, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to 絵文字を正しく抽出するには" href="https://rengotaku.github.io/posts/ca941043-1822-4115-a83a-340aceb8bff8/"></a>
+  <a class="entry-link" aria-label="post link to 画像に白帯びをつける" href="https://rengotaku.github.io/posts/059c9c58-7286-4c0a-b16c-041f9c6c172a/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      nginxのログの加工集
+      Nokogiriでノードを削除
     </h2>
   </header>
   <section class="entry-content">
-    <p>ユニークなエラー内容を取得 ログ [Mon Jul 30 05:10:33.786914 2018] [:error] [pid 5408] [client 40.77.167.180:11290] PHP Notice: Undefined variable: target_name in /home/path/to/dependencies.php on line 216 ワンライナー cat /var/log/httpd/sll_error_log | grep &#34;Mon Jul 30 05:&#34; | awk -F &#39;] &#39; &#39;{print $5}&#39; | uniq -c | sort 結果 1 PHP Notice: Undefined index: is_new in...</p>
+    <p># 最初に見つかった &lt;div&gt; を消す doc.at(:div).&amp;remove puts doc puts &#34;-&#34; * 20 # 全ての &lt;br&gt; を消す doc.search(:br).map &amp;:remove puts doc atの場合、存在しない場合はnilが返却される Nokogiri で任意の node を削除する - Secret Garden(Instrumental)...</p>
   </section>
-  <footer class="entry-footer">July 30, 2018
+  <footer class="entry-footer">August 27, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to nginxのログの加工集" href="https://rengotaku.github.io/posts/7ead2906-7480-4095-90ff-f0b0c9a9c93a/"></a>
+  <a class="entry-link" aria-label="post link to Nokogiriでノードを削除" href="https://rengotaku.github.io/posts/a1ef4360-134c-45a7-9da4-5fb432a0d54e/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      HTMLエスケープせずに変数を出力
+      全文検索で特定のフォルダを検索対象外にしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>&lt;%- &#34;&lt;tags_here&gt;&#34; %&gt; node.js - Print raw html strings on EJS - Stack Overflow...</p>
+    <p>-vendor/*,-test/*,-coverage/*,-log/*...</p>
   </section>
-  <footer class="entry-footer">July 30, 2018
+  <footer class="entry-footer">August 24, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to HTMLエスケープせずに変数を出力" href="https://rengotaku.github.io/posts/1c5c81e3-a71a-48b1-8924-9fac3f2c60c2/"></a>
+  <a class="entry-link" aria-label="post link to 全文検索で特定のフォルダを検索対象外にしたい" href="https://rengotaku.github.io/posts/4078d4dd-2f0a-4db9-adb3-f14c7889e0d0/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      複数個所をコメントアウト(#)
+      cpu使用率が劇的に上がる
     </h2>
   </header>
   <section class="entry-content">
-    <p>:11,20 s/^/#/ vi で範囲を指定してコメントアウト - Bacchus.gif...</p>
+    <p>対策 { &#34;index_files&#34;: false } SublimeText 3がアクティブのときにCPUをバカ喰いしてフリーズする問題の解決方法 - 人生dat落ち...</p>
   </section>
-  <footer class="entry-footer">July 29, 2018
+  <footer class="entry-footer">August 23, 2018
 </footer>
-  <a class="entry-link" aria-label="post link to 複数個所をコメントアウト(#)" href="https://rengotaku.github.io/posts/ead9e6be-4103-4d81-8e8d-561c7632fff6/"></a>
+  <a class="entry-link" aria-label="post link to cpu使用率が劇的に上がる" href="https://rengotaku.github.io/posts/de0dc96b-3ee2-4249-a3e7-f8e982a5a14d/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

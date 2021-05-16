@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Thu, 06 Feb 2020 19:28:19 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/centos/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 06 Feb 2020 19:28:19 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/centos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>0.12系のtd-agentをインストールしたい</title>
       <link>https://rengotaku.github.io/posts/fda62db1-e01b-4b3c-8020-e9d418601235/</link>

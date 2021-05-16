@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/docker/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/docker/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/docker/" />
-<meta property="og:updated_time" content="2020-08-13T15:02:13+09:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="docker"/>
 <meta name="twitter:description" content=""/>
@@ -124,6 +124,34 @@ if (!doNotTrack) {
 
 
 
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Docker don&#39;t work in CentOS
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Resolution iptables failed - No chain/target/match by that name · Issue #16816 · moby/moby $ iptables -t filter -N DOCKER $ systemctl restart docker Motivation $ docker-compose up Creating network &#34;xxxxx_default&#34; with the default driver ERROR: Failed to Setup IP tables: Unable to enable SKIP DNAT rule: (iptables failed: iptables --wait -t nat -I DOCKER -i br-c85d8bcdd123 -j RETURN: iptables: No chain/target/match by that name. (exit status 1))...</p>
+  </section>
+  <footer class="entry-footer">May 15, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to Docker don&#39;t work in CentOS" href="https://rengotaku.github.io/posts/b755aae1-712a-4656-b084-c4ab4fab16fd/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      docker-composeのport設定の挙動確認
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>behavior Compose file version 3 reference | Docker Documentation ※3.9で確認。 ports: # 0.0.0.0:55006-&gt;3000/tcp - &#34;3000&#34; # 0.0.0.0:55005-&gt;7000/tcp, 0.0.0.0:55004-&gt;7001/tcp, 0.0.0.0:55003-&gt;7002/tcp, 0.0.0.0:55002-&gt;7003/tcp, 0.0.0.0:55001-&gt;7004/tcp, 0.0.0.0:55000-&gt;7005/tcp - &#34;7000-7005&#34; # 0.0.0.0:8000-&gt;8000/tcp - &#34;8000:8000&#34; # 0.0.0.0:9090-&gt;8080/tcp, 0.0.0.0:9091-&gt;8081/tcp - &#34;9090-9091:8080-8081&#34; # 0.0.0.0:49100-&gt;22/tcp - &#34;49100:22&#34; # 127.0.0.1:8001-&gt;8001/tcp - &#34;127.0.0.1:8001:8001&#34; # 127.0.0.1:5000-5010-&gt;5000-5010/tcp - &#34;127.0.0.1:5000-5010:5000-5010&#34; # 0.0.0.0:6060-&gt;6060/udp - &#34;6060:6060/udp&#34; # 0.0.0.0:12401-&gt;1240/tcp - &#34;12400-12500:1240&#34; 12400-1250...</p>
+  </section>
+  <footer class="entry-footer">January 26, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to docker-composeのport設定の挙動確認" href="https://rengotaku.github.io/posts/8f1e9d0c-79df-49cc-8302-91ffb382af73/"></a>
+</article>
 <article class="post-entry tag-entry"> 
 
   <header class="entry-header">
@@ -235,34 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">January 23, 2020
 </footer>
   <a class="entry-link" aria-label="post link to docker上のpry-byebugにショートカットを設定したい" href="https://rengotaku.github.io/posts/5d7fa977-1511-4546-aea2-9b7622a4097c/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      Docker上のcapistranoから別途立てたローカルサーバにアクセス
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>構図 Capistrano Server[Docker] &lt;=&gt; Local[Mac] &lt;=&gt; SSHD Server[Docker] 接続先(ファイル設置先) サーバ 設定ファイル version: &#34;3&#34; services: ssh: build: dockerfile: Dockerfile command: [&#34;/usr/sbin/sshd&#34;, &#34;-D&#34;] tty: true ports: - &#34;10022:22&#34; Docker 初心者 — ssh で接続できるサーバーを立てる - Qiita FROM ubuntu:16.04 RUN...</p>
-  </section>
-  <footer class="entry-footer">January 17, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to Docker上のcapistranoから別途立てたローカルサーバにアクセス" href="https://rengotaku.github.io/posts/cae07512-deaa-4c5b-94cd-6ea0b68b1ca6/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      Knowledge about docker for windows
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Add user for development RUN groupadd -g 1000 developer &amp;&amp; \ useradd -g developer -G sudo -m -s /bin/bash developer &amp;&amp; \ echo &#39;developer:hogehoge&#39; | chpasswd RUN echo &#39;Defaults visiblepw&#39; &gt;&gt; /etc/sudoers RUN echo &#39;developer ALL=(ALL) NOPASSWD:ALL&#39; &gt;&gt; /etc/sudoers Dockerコンテナ内にsudoユーザを追加する - Qiita Docker - Docker run で...</p>
-  </section>
-  <footer class="entry-footer">December 26, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to Knowledge about docker for windows" href="https://rengotaku.github.io/posts/3543a3d7-fc8e-4755-b855-d39fd5cf3010/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

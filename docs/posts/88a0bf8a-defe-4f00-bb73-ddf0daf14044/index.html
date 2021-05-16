@@ -11,7 +11,7 @@
 <meta name="description" content="config/initializers 配下に下記のファイルを設置する。 # Trace each middleware module entry/exit. Freely adapted from # https://github.com/DataDog/dd-trace-rb/issues/368 &#34;Trace each middleware in the Rails stack&#34; module MiddlewareTracer def call(env) Rails.logger.debug { &#34;MiddleWare: entry #{self.class.name}&#34; } status, headers, response = super(env) Rails.logger.debug { &#34;MiddleWare: #{self.class.name}, returning with status #{status}&#34; } [status, headers, response] end end # Instrument the middleware stack after">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/88a0bf8a-defe-4f00-bb73-ddf0daf14044/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "rails", "ruby", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "config/initializers 配下に下記のファイルを設置する。\n# Trace each middleware module entry/exit. Freely adapted from\r # https://github.com/DataDog/dd-trace-rb/issues/368 \"Trace each middleware in the Rails stack\"\r module MiddlewareTracer\rdef call(env)\rRails.logger.debug { \"MiddleWare: entry #{self.class.name}\" }\rstatus, headers, response = super(env)\rRails.logger.debug { \"MiddleWare: #{self.class.name}, returning with status #{status}\" }\r[status, headers, response]\rend\rend\r# Instrument the middleware stack after initialization so that we\r # know the stack won't be changed afterwards.\r Rails.configuration.after_initialize do\rRails.application.middleware.each do |middleware|\rklass = middleware.klass\r# There are a few odd middlewares that aren't classes.\r klass.prepend(MiddlewareTracer) if klass.respond_to?(:prepend)\rend\rend\r出力例 06:54:05 app.1 | MiddleWare: entry Webpacker::DevServerProxy\r06:54:05 app.1 | MiddleWare: entry Rack::Cors\r06:54:05 app.1 | MiddleWare: entry Raven::Rack\r06:54:05 app.1 | MiddleWare: entry ActionDispatch::HostAuthorization\r06:54:05 app.1 | MiddleWare: entry Rack::Sendfile\r06:54:05 app.1 | MiddleWare: entry ActionDispatch::Static\r...\r06:54:05 app.1 | MiddleWare: ActionDispatch::Static, returning with status 400\r06:54:05 app.1 | MiddleWare: Rack::Sendfile, returning with status 400\r06:54:05 app.1 | MiddleWare: ActionDispatch::HostAuthorization, returning with status 400\r06:54:05 app.1 | MiddleWare: Raven::Rack, returning with status 400\r06:54:05 app.1 | MiddleWare: Rack::Cors, returning with status 400\r06:54:05 app.1 | MiddleWare: Webpacker::DevServerProxy, returning with status 400\r ruby on rails - Trace Error in Rack Middleware - Stack Overflow\n ",
+  "articleBody": "config/initializers 配下に下記のファイルを設置する。\n# Trace each middleware module entry/exit. Freely adapted from # https://github.com/DataDog/dd-trace-rb/issues/368 \"Trace each middleware in the Rails stack\" module MiddlewareTracer def call(env) Rails.logger.debug { \"MiddleWare: entry #{self.class.name}\" } status, headers, response = super(env) Rails.logger.debug { \"MiddleWare: #{self.class.name}, returning with status #{status}\" } [status, headers, response] end end # Instrument the middleware stack after initialization so that we # know the stack won't be changed afterwards. Rails.configuration.after_initialize do Rails.application.middleware.each do |middleware| klass = middleware.klass # There are a few odd middlewares that aren't classes. klass.prepend(MiddlewareTracer) if klass.respond_to?(:prepend) end end 出力例 06:54:05 app.1 | MiddleWare: entry Webpacker::DevServerProxy\r06:54:05 app.1 | MiddleWare: entry Rack::Cors\r06:54:05 app.1 | MiddleWare: entry Raven::Rack\r06:54:05 app.1 | MiddleWare: entry ActionDispatch::HostAuthorization\r06:54:05 app.1 | MiddleWare: entry Rack::Sendfile\r06:54:05 app.1 | MiddleWare: entry ActionDispatch::Static\r...\r06:54:05 app.1 | MiddleWare: ActionDispatch::Static, returning with status 400\r06:54:05 app.1 | MiddleWare: Rack::Sendfile, returning with status 400\r06:54:05 app.1 | MiddleWare: ActionDispatch::HostAuthorization, returning with status 400\r06:54:05 app.1 | MiddleWare: Raven::Rack, returning with status 400\r06:54:05 app.1 | MiddleWare: Rack::Cors, returning with status 400\r06:54:05 app.1 | MiddleWare: Webpacker::DevServerProxy, returning with status 400\r ruby on rails - Trace Error in Rack Middleware - Stack Overflow\n ",
   "wordCount" : "211",
   "inLanguage": "en",
   "datePublished": "2020-03-17T16:14:59+09:00",
@@ -161,8 +161,8 @@ if (!doNotTrack) {
 
   <div class="post-content">
 <p><code>config/initializers</code> 配下に下記のファイルを設置する。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#75715e"># Trace each middleware module entry/exit. Freely adapted from</span>
-<span style="color:#75715e"># https://github.com/DataDog/dd-trace-rb/issues/368 &#34;Trace each middleware in the Rails stack&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb"><span style="color:#75715e"># Trace each middleware module entry/exit. Freely adapted from</span>
+<span style="color:#75715e"># https://github.com/DataDog/dd-trace-rb/issues/368 &#34;Trace each middleware in the Rails stack&#34;</span>
 <span style="color:#66d9ef">module</span> MiddlewareTracer
   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">call</span>(env)
     <span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>logger<span style="color:#f92672">.</span>debug { <span style="color:#e6db74">&#34;MiddleWare: entry </span><span style="color:#e6db74">#{</span>self<span style="color:#f92672">.</span>class<span style="color:#f92672">.</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> }
@@ -172,13 +172,13 @@ if (!doNotTrack) {
   <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
 
-<span style="color:#75715e"># Instrument the middleware stack after initialization so that we</span>
-<span style="color:#75715e"># know the stack won&#39;t be changed afterwards.</span>
+<span style="color:#75715e"># Instrument the middleware stack after initialization so that we</span>
+<span style="color:#75715e"># know the stack won&#39;t be changed afterwards.</span>
 <span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>configuration<span style="color:#f92672">.</span>after_initialize <span style="color:#66d9ef">do</span>
   <span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>middleware<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>middleware<span style="color:#f92672">|</span>
     klass <span style="color:#f92672">=</span> middleware<span style="color:#f92672">.</span>klass
 
-    <span style="color:#75715e"># There are a few odd middlewares that aren&#39;t classes.</span>
+    <span style="color:#75715e"># There are a few odd middlewares that aren&#39;t classes.</span>
     klass<span style="color:#f92672">.</span>prepend(<span style="color:#66d9ef">MiddlewareTracer</span>) <span style="color:#66d9ef">if</span> klass<span style="color:#f92672">.</span>respond_to?(<span style="color:#e6db74">:prepend</span>)
   <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
@@ -224,7 +224,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

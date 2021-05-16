@@ -11,7 +11,7 @@
 <meta name="description" content="PORT=3000 version: &#39;2&#39; services: app: build: . env_file: .env ports: - $PORT:$PORT env_fileは宣言してもしなくてもよい？（自由な名前が設定できない） docker-compose.ymlの中で環">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/0101a50c-faab-4f7d-bbba-8e328fc640c8/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "docker-compose", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "PORT=3000\rversion: '2'\rservices:\rapp:\rbuild: .\renv_file: .env\rports:\r- $PORT:$PORT\renv_fileは宣言してもしなくてもよい？（自由な名前が設定できない）\r docker-compose.ymlの中で環境変数を展開する\n ",
+  "articleBody": "PORT=3000 version: '2' services: app: build: . env_file: .env ports: - $PORT:$PORT env_fileは宣言してもしなくてもよい？（自由な名前が設定できない）\r docker-compose.ymlの中で環境変数を展開する\n ",
   "wordCount" : "78",
   "inLanguage": "en",
   "datePublished": "2018-10-15T14:49:40+09:00",
@@ -160,14 +160,14 @@ if (!doNotTrack) {
   </header> 
 
   <div class="post-content">
-<pre><code class="language-:.env" data-lang=":.env">PORT=3000
-</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml:docker-compose.yml" data-lang="yaml:docker-compose.yml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;2&#39;</span>
-services:
-  app:
-    <span style="color:#66d9ef">build</span>: .
-    <span style="color:#66d9ef">env_file</span>: .env
-    ports:
-      - $PORT:$PORT
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-:.env" data-lang=":.env">PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">3000</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml:docker-compose.yml" data-lang="yaml:docker-compose.yml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;2&#39;</span>
+<span style="color:#f92672">services</span>:
+  <span style="color:#f92672">app</span>:
+    <span style="color:#f92672">build</span>: <span style="color:#ae81ff">.</span>
+    <span style="color:#f92672">env_file</span>: <span style="color:#ae81ff">.env</span>
+    <span style="color:#f92672">ports</span>:
+      - <span style="color:#ae81ff">$PORT:$PORT</span>
 </code></pre></div><pre><code class="language-!" data-lang="!">env_fileは宣言してもしなくてもよい？（自由な名前が設定できない）
 </code></pre><blockquote>
 <p><a href="https://qiita.com/friedaji/items/c1894821a2c49395cfd7">docker-compose.ymlの中で環境変数を展開する</a></p>
@@ -196,7 +196,7 @@ services:
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

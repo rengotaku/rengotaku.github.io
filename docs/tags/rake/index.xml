@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Wed, 26 Jun 2019 14:30:51 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/rake/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 26 Jun 2019 14:30:51 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/rake/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>rake taskのテスト</title>
       <link>https://rengotaku.github.io/posts/576d9cd1-5c40-44df-95d1-0d320a889c95/</link>

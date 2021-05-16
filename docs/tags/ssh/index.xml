@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Thu, 16 Apr 2020 15:32:52 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 16 Apr 2020 15:32:52 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>gitlabに接続できない場合に尋ねる前にするべきこと</title>
       <link>https://rengotaku.github.io/posts/f2061de8-c51c-4db6-a7ac-26159cf1fdc8/</link>

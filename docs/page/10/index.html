@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/" />
-<meta property="og:updated_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vegetable Programing"/>
 <meta name="twitter:description" content=""/>
@@ -138,141 +138,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      0.12系のtd-agentをインストールしたい
+      rspec、rubocopの結果を色付きでsublimeで閲覧したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>sudo sh &lt;&lt;SCRIPT # add GPG key rpm --import https://packages.treasuredata.com/GPG-KEY-td-agent # add treasure data repository to yum cat &gt;/etc/yum.repos.d/td.repo &lt;&lt;&#39;EOF&#39;; [treasuredata] name=TreasureData baseurl=http://packages.treasuredata.com/2.5/redhat/\$releasever/\$basearch gpgcheck=1 gpgkey=https://packages.treasuredata.com/GPG-KEY-td-agent EOF # update your sources yum check-update # install the toolbelt yes | yum install -y td-agent SCRIPT install-redhat-td-agent2.5.sh Download | Fluentd...</p>
+    <p>目的 sublimeでrspec、rubocopの結果を色付けされた状態(ANSI color sequence) で閲覧したい。 一つのコンソールで行うと、量が膨大だと切れ...</p>
   </section>
-  <footer class="entry-footer">February 6, 2020
+  <footer class="entry-footer">March 11, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to 0.12系のtd-agentをインストールしたい" href="https://rengotaku.github.io/posts/fda62db1-e01b-4b3c-8020-e9d418601235/"></a>
+  <a class="entry-link" aria-label="post link to rspec、rubocopの結果を色付きでsublimeで閲覧したい" href="https://rengotaku.github.io/posts/11cd4e51-d748-4bc5-af69-6068e22b6865/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      docker-composeでサイドカー方式を取りたい
+      rspecでよく見た書き方
     </h2>
   </header>
   <section class="entry-content">
-    <p>結論 ボリュームを共有して擬似的に行う。 kubanetesみたいに、一つのホストに複数プロセスを共存させるやり方はできなさそう。 version: &#39;3&#39; services: tomcat: image: tomcat:alpine container_name:...</p>
+    <p>エラーが発生しないテスト not_to raise_error RSpec.describe &#34;#to_s&#34; do it &#34;does not raise&#34; do expect { Object.new.to_s }.not_to raise_error end end raise_error matcher - Built in matchers - RSpec Expectations - RSpec - Relish モックでエラーを発生させる and_raise RSpec.describe &#34;Making it raise an error&#34; do it &#34;raises the provided exception&#34; do dbl...</p>
   </section>
-  <footer class="entry-footer">February 6, 2020
+  <footer class="entry-footer">March 6, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to docker-composeでサイドカー方式を取りたい" href="https://rengotaku.github.io/posts/f90584af-b2a0-4162-a73f-46ae993cab30/"></a>
+  <a class="entry-link" aria-label="post link to rspecでよく見た書き方" href="https://rengotaku.github.io/posts/6542ae14-4854-4050-bf96-54b6cc4100d5/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      RSpec/MultipleExpectationsを回避
+      Active Jobが失敗した場合のリトライについてテストする
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 aggregate_failures を使用する it &#34;正常動作する&#34; do subject aggregate_failures &#34;最後まで通過&#34; do expect(job_instance).to have_received(:hoge1) expect(job_instance).to have_received(:hoge2).at_least(1).times end end 実用的な新機能が盛りだくさん！RSpe...</p>
+    <p>解決 described_class.perform_later rescue nil RSpec.describe MyJob, type: :job do include ActiveJob::TestHelper context &#39;when `MyError` is raised&#39; do before do allow_any_instance_of(described_class).to receive(:perform).and_raise(MyError.new) end it &#39;makes 4 attempts&#39; do assert_performed_jobs 4 do described_class.perform_later rescue nil end end it &#39;does something in the `retry_on` block&#39; do expect(Something).to receive(:something) perform_enqueued_jobs do described_class.perform_later rescue nil end end end end perform_nowでは再実...</p>
   </section>
-  <footer class="entry-footer">February 6, 2020
+  <footer class="entry-footer">March 6, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to RSpec/MultipleExpectationsを回避" href="https://rengotaku.github.io/posts/74af4a87-af15-46ef-bd8d-2b59f87d850e/"></a>
+  <a class="entry-link" aria-label="post link to Active Jobが失敗した場合のリトライについてテストする" href="https://rengotaku.github.io/posts/990bd1dc-2f44-46fa-9fa6-91b5914e7669/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      fluentdからs3への送信をローカルで検証したい
+      時間を操作してテストを実行したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>概要 dockerで fluentd、 minio を立てて、S3へのログの送信の検証を行う。 構成 . ├── docker-compose.yml ├── fluentd │ ├── Dockerfile │ └── conf │ └── fluentd.conf └── log └...</p>
+    <p>travel などを使用する Time.current # =&gt; Sat, 09 Nov 2013 15:34:49 EST -05:00 travel 1.day do User.create.created_at # =&gt; Sun, 10 Nov 2013 15:34:49 EST -05:00 end Time.current # =&gt; Sat, 09 Nov 2013 15:34:49 EST -05:00 ActiveSupport::Testing::TimeHelpers...</p>
   </section>
-  <footer class="entry-footer">February 5, 2020
+  <footer class="entry-footer">March 6, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to fluentdからs3への送信をローカルで検証したい" href="https://rengotaku.github.io/posts/cd79fa35-ab38-484c-86ec-7b0578610cb7/"></a>
+  <a class="entry-link" aria-label="post link to 時間を操作してテストを実行したい" href="https://rengotaku.github.io/posts/6c1ae6cb-b824-4eb0-bc31-2fa5ca0d089e/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      dockerのリモートのタグ一覧をコマンドで確認したい
+      インスタンス変数のメソッドをstubにしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>#!/bin/bash # https://stackoverflow.com/questions/28320134/how-can-i-list-all-tags-for-a-docker-image-on-a-remote-registry if [ $# -lt 1 ] then cat &lt;&lt; HELP dockertags -- list all tags for a Docker image on a remote registry. EXAMPLE: - list all tags for ubuntu: dockertags ubuntu - list all php tags containing apache: dockertags php apache HELP exit 1 fi image=&#34;$1&#34; tags=`curl -L -s &#34;https://registry.hub.docker.com/v2/repositories/library/${image}/tags?page_size=1024&#34; | jq -r &#39;.&#34;results&#34;[][&#34;name&#34;]&#39;` if [ -n &#34;$2&#34; ] then tags=` echo &#34;${tags}&#34; | grep &#34;$2&#34;...</p>
+    <p>let(:hoge_instance) { instance_double(Hoge) } before do allow(Hoge).to receive(:new).and_return(hoge_instance) allow(hoge_instance).to receive(:say).and_return(&#34;night!&#34;) end...</p>
   </section>
-  <footer class="entry-footer">February 4, 2020
+  <footer class="entry-footer">March 6, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to dockerのリモートのタグ一覧をコマンドで確認したい" href="https://rengotaku.github.io/posts/89d6aee3-eaa6-4489-855a-a9e6af743728/"></a>
+  <a class="entry-link" aria-label="post link to インスタンス変数のメソッドをstubにしたい" href="https://rengotaku.github.io/posts/2a2be20a-44d0-4ff4-ac0c-0630ee4e6763/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      メソッドの取得の仕方
+      JSONをオブジェクトとしてパースしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>class publicメソッド 正解 UsersController.instance_methods(false) =&gt; [:index, :exchange, :logs_external] class privateメソッド 正解 UsersController.private_instance_methods(false) =&gt; [:_layout, :not_found_message, :require_signup_form_parameters] module publicメソッド 正解 UsersController.instance_methods(false) =&gt; [:select_yet_tweets_by_sorted_maps, :select_favorite_yet_tweets] module privateメソッド 正解 UsersController.private_instance_methods(false) =&gt;...</p>
+    <p>object_class: OpenStruct をオプションに設定する object = JSON.parse(json, object_class: OpenStruct) Converting JSON to an Object in Ruby - Someth Victory - Medium...</p>
   </section>
-  <footer class="entry-footer">January 30, 2020
+  <footer class="entry-footer">March 2, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to メソッドの取得の仕方" href="https://rengotaku.github.io/posts/239ee9a9-586e-4a76-92b3-b9f2dc365658/"></a>
+  <a class="entry-link" aria-label="post link to JSONをオブジェクトとしてパースしたい" href="https://rengotaku.github.io/posts/7dc27af9-73c5-4b7b-b5fc-963afeccfb9e/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      コンフル のページをマークダウンに変換する
+      golangのlogのフォーマットを設定したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>手順 コンフルのHTMLを取得 画面右上の... から、 ソースを表示 を選択する 大まかに変換 Html2Markdown Converter テーブルタグを変換 markdownTables Html2Markdown Converter ではtable部分を変換して...</p>
+    <p>type logWriter struct { } func (writer logWriter) Write(bytes []byte) (int, error) { return fmt.Print(time.Now().UTC().Format(&#34;2006-01-02T15:04:05.999Z&#34;) &#43; &#34; [DEBUG] &#34; &#43; string(bytes)) } func main() { log.SetFlags(0) log.SetOutput(new(logWriter)) log.Println(&#34;This is something being logged!&#34;) } How to change the date/time format of Go’s log package - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">January 29, 2020
+  <footer class="entry-footer">February 28, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to コンフル のページをマークダウンに変換する" href="https://rengotaku.github.io/posts/54cdb09a-ccef-4fec-9de4-dceac13d78e0/"></a>
+  <a class="entry-link" aria-label="post link to golangのlogのフォーマットを設定したい" href="https://rengotaku.github.io/posts/628c8107-fb47-45a8-879e-27a7eed73eb5/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      ロガーの基盤の調査
+      initializeの中でdefine_methodを使用したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>調査手順 参考になりそうな資料・サイトを探す ↓ 各手順のメリット、デメリットを洗い出す ↓ 一旦相談数する ↓ （多分）工数の洗い出し 参考資料・サイト fluentd...</p>
+    <p>解決 self.class.send(:define_method, &#34;hoge&#34;) で呼び出す class C def initialize(n) self.class.send(:define_method, n) { puts &#34;some method #{n}&#34; } end end 事象 initialize 内で、 define_method をコールすると NoMethodError: undefined method define_method エラーが発生。 ruby - How to use define_method inside initialize() - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">January 29, 2020
+  <footer class="entry-footer">February 26, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to ロガーの基盤の調査" href="https://rengotaku.github.io/posts/aaf9d0da-97a0-4f7a-b694-8863992996d8/"></a>
+  <a class="entry-link" aria-label="post link to initializeの中でdefine_methodを使用したい" href="https://rengotaku.github.io/posts/9af4843a-02f0-47bf-83c4-d02f53ca81f5/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      macのタッチバーからsiriを消す
+      asc、descが混在したソートをしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>カスタマイズ画面を表示 システム環境設定 -&gt; キーボード -&gt; Touch Barをカスタマイズ siriをタップしてゴミ箱へ How to Remove Siri from Touch Bar on MacBook Pro...</p>
+    <p>解決 複数をソート（asc、descが混在）の場合は、 sort を使用する。 User.all.sort { |a,b| [b.created_at, a.id] &lt;=&gt; [a.created_at, b.id] }.last.id == User.order(created_at: :desc).order(id: :asc).last.id note # gender asc, name asc p(dogs.sort do |a, b| [a[:gender], a[:name]] &lt;=&gt; [b[:gender], b[:name]] end) # gender desc, name asc p(dogs.sort do |a,...</p>
   </section>
-  <footer class="entry-footer">January 28, 2020
+  <footer class="entry-footer">February 20, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to macのタッチバーからsiriを消す" href="https://rengotaku.github.io/posts/670ef93f-8448-41e8-97b3-611c1a385388/"></a>
+  <a class="entry-link" aria-label="post link to asc、descが混在したソートをしたい" href="https://rengotaku.github.io/posts/cdb55f84-3b86-4723-a081-1abaef9ac8c2/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      修正したファイルのみチェック
+      bashの特異な書き方集
     </h2>
   </header>
   <section class="entry-content">
-    <p>For rubocop $ echo $(git diff origin/master `git branch | grep &#39;*&#39; | cut -d&#39; &#39; -f2` | grep &#39;diff --git&#39; | sed -E &#39;s#diff --git a\/(.&#43;) b\/.&#43;#\1#&#39;) | { read FILES; bundle exec rubocop $FILES; } For rspec $ echo $(git diff origin/master `git branch | grep &#39;*&#39; | cut -d&#39; &#39; -f2` | grep &#39;diff --git&#39; | sed -E &#39;s#diff --git a\/(.&#43;) b\/.&#43;#\1#&#39; | grep spec) | {...</p>
+    <p>ファイル作成 touch の代わりに &gt; を使用する。 $ cd lib &amp;&amp; &gt; my_gem.rb Create a Simple Ruby Gem - The Startup - Medium 標準出力に文字を渡す echo の代わりに &lt;&lt;&lt; を使用する。 $ cat &lt;&lt;&lt; &#39;hi there&#39; 理解できていな...</p>
   </section>
-  <footer class="entry-footer">January 28, 2020
+  <footer class="entry-footer">February 20, 2020
 </footer>
-  <a class="entry-link" aria-label="post link to 修正したファイルのみチェック" href="https://rengotaku.github.io/posts/a13365d5-d033-404d-ae83-b8f7fa0dd4c8/"></a>
+  <a class="entry-link" aria-label="post link to bashの特異な書き方集" href="https://rengotaku.github.io/posts/0481bf97-bb64-404e-ade8-1073e7cbeee5/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

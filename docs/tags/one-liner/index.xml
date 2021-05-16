@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Wed, 15 Aug 2018 17:18:37 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 15 Aug 2018 17:18:37 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/one-liner/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ワンライナーでCSVを扱う</title>
       <link>https://rengotaku.github.io/posts/91a083ff-58ad-46fb-9fab-7fccd0066e52/</link>

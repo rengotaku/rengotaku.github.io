@@ -11,7 +11,7 @@
 <meta name="description" content="type logWriter struct { } func (writer logWriter) Write(bytes []byte) (int, error) { return fmt.Print(time.Now().UTC().Format(&#34;2006-01-02T15:04:05.999Z&#34;) &#43; &#34; [DEBUG] &#34; &#43; string(bytes)) } func main() { log.SetFlags(0) log.SetOutput(new(logWriter)) log.Println(&#34;This is something being logged!&#34;) } How to change the date/time format of Go&rsquo;s log package - Stack Overflow">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/628c8107-fb47-45a8-879e-27a7eed73eb5/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "golang", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "type logWriter struct {\r}\rfunc (writer logWriter) Write(bytes []byte) (int, error) {\rreturn fmt.Print(time.Now().UTC().Format(\"2006-01-02T15:04:05.999Z\") + \" [DEBUG] \" + string(bytes))\r}\rfunc main() {\rlog.SetFlags(0)\rlog.SetOutput(new(logWriter))\rlog.Println(\"This is something being logged!\")\r}\r How to change the date/time format of Go’s log package - Stack Overflow\n ",
+  "articleBody": "type logWriter struct { } func (writer logWriter) Write(bytes []byte) (int, error) { return fmt.Print(time.Now().UTC().Format(\"2006-01-02T15:04:05.999Z\") + \" [DEBUG] \" + string(bytes)) } func main() { log.SetFlags(0) log.SetOutput(new(logWriter)) log.Println(\"This is something being logged!\") }  How to change the date/time format of Go’s log package - Stack Overflow\n ",
   "wordCount" : "46",
   "inLanguage": "en",
   "datePublished": "2020-02-28T10:23:36+09:00",
@@ -200,7 +200,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

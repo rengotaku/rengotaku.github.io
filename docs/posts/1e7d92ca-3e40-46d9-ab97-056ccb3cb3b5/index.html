@@ -11,7 +11,7 @@
 <meta name="description" content="修正前 クラス構成 module MailSendLog class Base class &lt;&lt; self def post(param) data = default_data.merge( param: param ) @logger.post(@tag, data) end def default_data { tag: tag, specific_item: specific_item, } end def tag raise NotImplementedError, &#34;must implement #{self.class}##{__method__}&#34; end def specific_item raise NotImplementedError, &#34;must implement #{self.class}##{__method__}&#34; end end end end module MailSendLog class Recommend1 &lt; MailSendLog::Base class &lt;&lt; self protected def tag :recommend1 end def specific_item">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/1e7d92ca-3e40-46d9-ab97-056ccb3cb3b5/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "ruby", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "修正前 クラス構成 module MailSendLog\rclass Base\rclass  self\rdef post(param)\rdata = default_data.merge(\rparam: param\r)\r@logger.post(@tag, data)\rend\rdef default_data\r{\rtag: tag,\rspecific_item: specific_item,\r}\rend\rdef tag\rraise NotImplementedError, \"must implement #{self.class}##{__method__}\"\rend\rdef specific_item\rraise NotImplementedError, \"must implement #{self.class}##{__method__}\"\rend\rend\rend\rend\rmodule MailSendLog\rclass Recommend1  MailSendLog::Base\rclass  self\rprotected\rdef tag\r:recommend1\rend\rdef specific_item\r'固有の値1'\rend\rend\rend\rend\rmodule MailSendLog\rclass Recommend2  MailSendLog::Base\rclass  self\rprotected\rdef tag\r:recommend2\rend\rdef specific_item\r'固有の値2'\rend\rend\rend\rend\r使用時 MailSendLog::Recommend1.post('paramter')\rMailSendLog::Recommend2.post('paramter')\r修正後 class MailSendLog\rMailType = Struct.new(:tag, :specific_item)\rRecommend1 = MailType.new(:recommend1, '固有の値1')\rRecommend2 = MailType.new(:recommend2, '固有の値2')\rdef initialize(mail_type)\r@tag = mail_type.tag\r@max_item_count = mail_type.max_item_count\r@logger = Fluent::Logger::ConsoleLogger.open(STDOUT)\rend\r# continue methods...\r end\r使用時 mail_send_log = MailSendLog.new(MailSendLog::Recommend1)\rmail_send_log.post('paramter')\rmail_send_log = MailSendLog.new(MailSendLog::Recommend2)\rmail_send_log.post('paramter')\r利点  差分を埋める程度で大したことをしていない、無意味な継承をなくせる   class Struct (Ruby 2.6.0)\n ",
+  "articleBody": "修正前 クラス構成 module MailSendLog class Base class  self def post(param) data = default_data.merge( param: param ) @logger.post(@tag, data) end def default_data { tag: tag, specific_item: specific_item, } end def tag raise NotImplementedError, \"must implement #{self.class}##{__method__}\" end def specific_item raise NotImplementedError, \"must implement #{self.class}##{__method__}\" end end end end module MailSendLog class Recommend1  MailSendLog::Base class  self protected def tag :recommend1 end def specific_item '固有の値1' end end end end module MailSendLog class Recommend2  MailSendLog::Base class  self protected def tag :recommend2 end def specific_item '固有の値2' end end end end 使用時 MailSendLog::Recommend1.post('paramter') MailSendLog::Recommend2.post('paramter') 修正後 class MailSendLog MailType = Struct.new(:tag, :specific_item) Recommend1 = MailType.new(:recommend1, '固有の値1') Recommend2 = MailType.new(:recommend2, '固有の値2') def initialize(mail_type) @tag = mail_type.tag @max_item_count = mail_type.max_item_count @logger = Fluent::Logger::ConsoleLogger.open(STDOUT) end # continue methods... end 使用時 mail_send_log = MailSendLog.new(MailSendLog::Recommend1) mail_send_log.post('paramter') mail_send_log = MailSendLog.new(MailSendLog::Recommend2) mail_send_log.post('paramter') 利点  差分を埋める程度で大したことをしていない、無意味な継承をなくせる   class Struct (Ruby 2.6.0)\n ",
   "wordCount" : "241",
   "inLanguage": "en",
   "datePublished": "2019-07-03T16:08:09+09:00",
@@ -237,7 +237,7 @@ if (!doNotTrack) {
     @logger <span style="color:#f92672">=</span> <span style="color:#66d9ef">Fluent</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Logger</span><span style="color:#f92672">::</span><span style="color:#66d9ef">ConsoleLogger</span><span style="color:#f92672">.</span>open(<span style="color:#66d9ef">STDOUT</span>)
   <span style="color:#66d9ef">end</span>
 
-  <span style="color:#75715e"># continue methods...</span>
+  <span style="color:#75715e"># continue methods...</span>
 <span style="color:#66d9ef">end</span>
 </code></pre></div><h2 id="使用時-1">使用時<a hidden class="anchor" aria-hidden="true" href="#使用時-1">#</a></h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rb" data-lang="rb">mail_send_log <span style="color:#f92672">=</span> <span style="color:#66d9ef">MailSendLog</span><span style="color:#f92672">.</span>new(<span style="color:#66d9ef">MailSendLog</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Recommend1</span>)
@@ -275,7 +275,7 @@ mail_send_log<span style="color:#f92672">.</span>post(<span style="color:#e6db74
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/rails/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/rails/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/rails/" />
-<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta property="og:updated_time" content="2021-05-14T10:59:10+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="rails"/>
 <meta name="twitter:description" content=""/>
@@ -128,6 +128,104 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
+      minitestで意図的にraise
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>api_mock = MiniTest::Mock.new api_mock.expect(:get, retval_get) do |args_update| raise StandardError(&#39;Mock#getで例外発生&#39;) end Rails minitest Mockで例外発生パターンのテスト - Qiita...</p>
+  </section>
+  <footer class="entry-footer">June 14, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to minitestで意図的にraise" href="https://rengotaku.github.io/posts/889f9fef-5b01-475d-bc0c-104e2086a684/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      minitestでエラーメッセージを検証
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>class FooTest &lt; Minitest::Test def test_boo! # RuntimeErrorが発生することを検証 e = assert_raises RuntimeError do Foo.boo! # &lt;= boo!random-messages-continue... end # エラーメッセージを検証 assert { e.message.start_with?(&#34;boo!&#34;) } end end Minitestで例外クラ...</p>
+  </section>
+  <footer class="entry-footer">June 14, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to minitestでエラーメッセージを検証" href="https://rengotaku.github.io/posts/ca10b1b5-76b1-4c89-868e-f0ee7f32be9c/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      minitestでconstをstub化
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>module Foo BAR = :original end Foo.stub_const(:BAR, :stubbed) do Foo::BAR end # =&gt; :stubbed Foo::BAR # =&gt; :original adammck/minitest-stub-const: Stub constants for the duration of a block in MiniTest...</p>
+  </section>
+  <footer class="entry-footer">June 14, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to minitestでconstをstub化" href="https://rengotaku.github.io/posts/89c7127b-1494-4e7c-b613-d7156ef09fc2/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ActionMailerで送信後に送信ログを記録したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>未解決 コールバックの仕組みはあるが、引数を増やす事ができず、拡張する仕組みが不明。 Registered observer on one mailer gets called with every email delivering, possible bug? · Issue #29671 · rails/rails は回答ないままクローズ...</p>
+  </section>
+  <footer class="entry-footer">June 4, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to ActionMailerで送信後に送信ログを記録したい" href="https://rengotaku.github.io/posts/77b571b7-9eab-4c93-95cb-37e97eff8b68/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      指定のメソッドを実行時にフックする
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>※未検証 ActiveSupport::Notification.subscribe(&#34;deliver.action_mailer&#34;) do |name, start, finish, id, payload| puts &#34;name: #{name}&#34; puts &#34;payload: #{payload}&#34; end ActionMailer の送信ログをとりたい - Qiita...</p>
+  </section>
+  <footer class="entry-footer">June 3, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 指定のメソッドを実行時にフックする" href="https://rengotaku.github.io/posts/abef202c-814f-469c-b0fc-1f55e20b2f3b/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      dockerで動いているrailsでbetter_errorsのirbが動作しない
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>未解決 画面右側のirbでデバッグできる画面が表示されない。 binding_of_caller が関連しているようだが、原因が不明。 画面を出すようにする BetterErrors::Middleware.allow_ip! &#34;0.0.0.0/0&#34; better_errors not working in a Docker container · Issue #270...</p>
+  </section>
+  <footer class="entry-footer">May 30, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to dockerで動いているrailsでbetter_errorsのirbが動作しない" href="https://rengotaku.github.io/posts/bc3ee1e4-fa92-4af9-bdd1-7dced7696686/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      dockerで動くrailsでデバックを行いたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>設定 docker-compose.yml services: rails: &amp;app_base tty: true stdin_open: true 操作 アタッチ docker attach [container_name] $ docker-compose run --rm --service-ports [service name] でいけるかと思ったが、再度コンテナを立ち上げる挙動になり期待しない動きをする 便利コマンド...</p>
+  </section>
+  <footer class="entry-footer">May 30, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to dockerで動くrailsでデバックを行いたい" href="https://rengotaku.github.io/posts/b6b89728-605f-40b8-9d57-2bb1cc14b932/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
       日時をよくあるフォーマットの文字列で取得したい
     </h2>
   </header>
@@ -165,104 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">April 12, 2019
 </footer>
   <a class="entry-link" aria-label="post link to rspecを導入する上でハマった箇所" href="https://rengotaku.github.io/posts/47e621ef-c154-4be1-9ecb-fdc5795c37ac/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      v4.8.2のnodejsを使用の為にエラーがでる
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>事象 Autoprefixer doesn’t support Node v4.8.2. Update it 対応 セットアップ( https://deb.nodesource.com/setup_10.x )をしてnodejsをインストールすればよい。 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - sudo apt-get install -y nodejs 指定のURLは公式...</p>
-  </section>
-  <footer class="entry-footer">April 10, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to v4.8.2のnodejsを使用の為にエラーがでる" href="https://rengotaku.github.io/posts/5751a135-f83f-4bb6-9fe7-3e052c5a1f06/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      formを使用してhiddenを設定したい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>&lt;%= f.hidden_field :service, :value =&gt; &#34;test&#34; %&gt; Ruby on Rails - hidden_fieldの使い方 - Qiita...</p>
-  </section>
-  <footer class="entry-footer">April 9, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to formを使用してhiddenを設定したい" href="https://rengotaku.github.io/posts/c88be25f-3c75-4f76-9982-890a733fea33/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      ローカルのサーバにアクセスしようとするとpumaがエラーを吐く
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>事象 サーバーを起動 $ rbenv exec bundle exec rails s =&gt; Booting Puma =&gt; Rails 5.0.0.1 application starting in development_share on http://0.0.0.0:3020 =&gt; Run `rails server -h` for more startup options Puma starting in single mode... * Version 3.6.0 (ruby 2.3.7-p456), codename: Sleepy Sunday Serenity * Min threads: 5, max threads: 5 * Environment: development_share * Listening on tcp://0.0.0.0:3020 Use Ctrl-C to stop サ...</p>
-  </section>
-  <footer class="entry-footer">March 18, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to ローカルのサーバにアクセスしようとするとpumaがエラーを吐く" href="https://rengotaku.github.io/posts/7261b61e-185a-4142-8350-8635f5aeefe0/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      capybara-webkit 1.15.1のインストールに失敗する
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>Info マシン macOS High Sierra(10.13.4) Gemfile.lock capybara (2.11.0) addressable mime-types (&gt;= 1.16) nokogiri (&gt;= 1.3.3) rack (&gt;= 1.0.0) rack-test (&gt;= 0.5.4) xpath (~&gt; 2.0) capybara-webkit (1.15.1) capybara (&gt;= 2.3, &lt; 4.0) json 事象 bundle install時にエラー current directory: /Users/300807/workspace/front.door.ac/vendor/bundler/ruby/2.3.0/gems/capybara-webkit-1.15.1 /Users/300807/.rbenv/versions/2.3.7/bin/ruby -r ./siteconf20190308-92868-1cuusvw.rb extconf.rb Info: creating stash file /Users/300807/workspace/front.door.ac/vendor/bundler/ruby/2.3.0/gems/capybara-webkit-1.15.1/.qmake.stash cd src/ &amp;&amp; ( test -e Makefile.webkit_server || /usr/local/opt/qt/bin/qmake...</p>
-  </section>
-  <footer class="entry-footer">March 8, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to capybara-webkit 1.15.1のインストールに失敗する" href="https://rengotaku.github.io/posts/2a9df335-cb6e-46e6-8554-ccf2bb2ab67f/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      routesの:idを別名にしたい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>resourcesのパラメータに、paramを指定 Rails.application.routes.draw do resources :schedules, param: :other_params_name end railsのroutingで出てくる:idを変更する場合 - Qiita...</p>
-  </section>
-  <footer class="entry-footer">March 7, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to routesの:idを別名にしたい" href="https://rengotaku.github.io/posts/a9bce0e9-16b9-4dba-ace2-818960083ae1/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      link_toで、.(ピリオド)が/(スラッシュ)に変わる
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決策 複数系のパスメソッド（admin_update_datas_path(1)）を使用せずに、単数系（admin_update_data_...</p>
-  </section>
-  <footer class="entry-footer">March 7, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to link_toで、.(ピリオド)が/(スラッシュ)に変わる" href="https://rengotaku.github.io/posts/7ed609fb-0de2-4276-b9fa-1e8b60211580/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      railsでanchorを生成
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>&lt;%= link_to &#39;ユーザーA&#39;, user_path %&gt; メソッドを指定したい場合 &lt;%= link_to &#39;ユーザーA&#39;, user_path, method: :post %&gt; Rails の link_to メソッドでアンカーリンクを作成する - kzy52’s blog link_to,b...</p>
-  </section>
-  <footer class="entry-footer">March 7, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to railsでanchorを生成" href="https://rengotaku.github.io/posts/a7446c04-7215-43c6-a03d-20fd22ec2847/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Thu, 29 Aug 2019 15:57:36 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/minitest/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 29 Aug 2019 15:57:36 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/minitest/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>minitestでprivateメソッドをテスト</title>
       <link>https://rengotaku.github.io/posts/1a7b69f1-218d-4982-ba5f-a3fee308cdfe/</link>

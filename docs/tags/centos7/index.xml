@@ -7,10 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Sat, 01 Dec 2018 13:53:06 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/centos7/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 15 May 2021 21:11:27 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/centos7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker don&#39;t work in CentOS</title>
+      <link>https://rengotaku.github.io/posts/b755aae1-712a-4656-b084-c4ab4fab16fd/</link>
+      <pubDate>Sat, 15 May 2021 21:11:27 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/b755aae1-712a-4656-b084-c4ab4fab16fd/</guid>
+      <description>Resolution iptables failed - No chain/target/match by that name · Issue #16816 · moby/moby $ iptables -t filter -N DOCKER $ systemctl restart docker Motivation $ docker-compose up Creating network &amp;quot;xxxxx_default&amp;quot; with the default driver ERROR: Failed to Setup IP tables: Unable to enable SKIP DNAT rule: (iptables failed: iptables --wait -t nat -I DOCKER -i br-c85d8bcdd123 -j RETURN: iptables: No chain/target/match by that name. (exit status 1))</description>
+    </item>
     
     <item>
       <title>etckeeper をインストール</title>

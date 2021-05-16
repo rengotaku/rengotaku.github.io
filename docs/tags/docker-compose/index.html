@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/docker-compose/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/docker-compose/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/docker-compose/" />
-<meta property="og:updated_time" content="2020-05-20T23:21:16+09:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="docker-compose"/>
 <meta name="twitter:description" content=""/>
@@ -124,6 +124,34 @@ if (!doNotTrack) {
 
 
 
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Docker don&#39;t work in CentOS
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Resolution iptables failed - No chain/target/match by that name · Issue #16816 · moby/moby $ iptables -t filter -N DOCKER $ systemctl restart docker Motivation $ docker-compose up Creating network &#34;xxxxx_default&#34; with the default driver ERROR: Failed to Setup IP tables: Unable to enable SKIP DNAT rule: (iptables failed: iptables --wait -t nat -I DOCKER -i br-c85d8bcdd123 -j RETURN: iptables: No chain/target/match by that name. (exit status 1))...</p>
+  </section>
+  <footer class="entry-footer">May 15, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to Docker don&#39;t work in CentOS" href="https://rengotaku.github.io/posts/b755aae1-712a-4656-b084-c4ab4fab16fd/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      docker-composeのport設定の挙動確認
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>behavior Compose file version 3 reference | Docker Documentation ※3.9で確認。 ports: # 0.0.0.0:55006-&gt;3000/tcp - &#34;3000&#34; # 0.0.0.0:55005-&gt;7000/tcp, 0.0.0.0:55004-&gt;7001/tcp, 0.0.0.0:55003-&gt;7002/tcp, 0.0.0.0:55002-&gt;7003/tcp, 0.0.0.0:55001-&gt;7004/tcp, 0.0.0.0:55000-&gt;7005/tcp - &#34;7000-7005&#34; # 0.0.0.0:8000-&gt;8000/tcp - &#34;8000:8000&#34; # 0.0.0.0:9090-&gt;8080/tcp, 0.0.0.0:9091-&gt;8081/tcp - &#34;9090-9091:8080-8081&#34; # 0.0.0.0:49100-&gt;22/tcp - &#34;49100:22&#34; # 127.0.0.1:8001-&gt;8001/tcp - &#34;127.0.0.1:8001:8001&#34; # 127.0.0.1:5000-5010-&gt;5000-5010/tcp - &#34;127.0.0.1:5000-5010:5000-5010&#34; # 0.0.0.0:6060-&gt;6060/udp - &#34;6060:6060/udp&#34; # 0.0.0.0:12401-&gt;1240/tcp - &#34;12400-12500:1240&#34; 12400-1250...</p>
+  </section>
+  <footer class="entry-footer">January 26, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to docker-composeのport設定の挙動確認" href="https://rengotaku.github.io/posts/8f1e9d0c-79df-49cc-8302-91ffb382af73/"></a>
+</article>
 <article class="post-entry tag-entry"> 
 
   <header class="entry-header">
@@ -235,34 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">September 30, 2019
 </footer>
   <a class="entry-link" aria-label="post link to docker-compose logsをtailで早く閲覧したい" href="https://rengotaku.github.io/posts/e892c4e7-9462-4fe3-a644-66faef4b809e/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      docker-composeでmysqlの起動を待機したい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 dockerize を使用する dockerize -wait tcp://mysql-local:3306 -timeout 120s dockerize を使って他のコンテナ内サービス起動を待つ - Qiita...</p>
-  </section>
-  <footer class="entry-footer">August 27, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to docker-composeでmysqlの起動を待機したい" href="https://rengotaku.github.io/posts/07c5e4a3-d964-4917-9972-1520705f3de5/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      docker-compose.ymlのcommandに記述ミスがあるとエラーになる
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 $ を $$ と記述しエスケープする Compose file version 3 reference | Docker Documentation export DOCKER_HOST=`/sbin/ip route|awk &#39;/default/ { print $$3 }&#39;` export DOCKER_HOST=`/sbin/ip route|awk &#39;/default/ { print $3 }&#39;` 事象 command: &gt; /bin/sh -c &#34;rm -f /var/tmp/pids/server.pid &amp;&amp; bundle install &amp;&amp; export DOCKER_HOST=`/sbin/ip route|awk &#39;/default/ { print $3 }&#39;` &amp;&amp; bundle exec rails s&#34; を実行す...</p>
-  </section>
-  <footer class="entry-footer">August 19, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to docker-compose.ymlのcommandに記述ミスがあるとエラーになる" href="https://rengotaku.github.io/posts/fd876cdf-6ca0-48c3-b5f0-a4f9572340d4/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -11,7 +11,7 @@
 <meta name="description" content="前提 お祝い金申請 を受けるためには、商品 を お問い合わせ しておくことが必要。 １問い合わせは１商品と紐づく。 １問い合わせすると、１お祝い金申請がで">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/e164dd09-2da6-416f-b7d0-f5fd9b2dbeaa/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "rails", "activerecord", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "前提  お祝い金申請 を受けるためには、商品 を お問い合わせ しておくことが必要。 １問い合わせは１商品と紐づく。 １問い合わせすると、１お祝い金申請ができる。 問い合わせと、お祝い金申請の関連性は、relationテーブルを参照する必要がある  model # 商品へのお問い合わせ\r # id\r #\r class Inquiry  ApplicationRecord\rhas_one :inquiry_object_relation\rhas_many :object, through: :inquiry_object_relation\rend\r# お問い合わせと購入物のリレーション\r # id\r # inquiry_id\r # object_id\r #\r class InquiryObjectRelation  ApplicationRecord\rbelongs_to :inquiry\rbelongs_to :object\rend\r# 商品\r # id\r #\r class Object  ApplicationRecord\rhas_many :inquiry_object_relations\rhas_many :inquiries, through: :inquiry_object_relations\rend\r# お祝い金申請\r # id\r # inquiry_object_relation_id\r #\r class InquiryReward  ApplicationRecord\rbelongs_to :inquiry_object_relation\rhas_one :inquiry_reward\rend\r引き方 お問い合わせのある商品の確認 Inquiry.find(1).object\n商品がお問い合わせされているか確認 Object.find(1).inquiries\nお問い合わせがお祝い金に申請されているか確認 Inquiry.find(1).inquiry_object_relation.inquiry_reward\nお祝い金がどのお問い合わせから行われた確認 InquiryReward.find(1).inquiry_object_relation.inquiry\n",
+  "articleBody": "前提  お祝い金申請 を受けるためには、商品 を お問い合わせ しておくことが必要。 １問い合わせは１商品と紐づく。 １問い合わせすると、１お祝い金申請ができる。 問い合わせと、お祝い金申請の関連性は、relationテーブルを参照する必要がある  model # 商品へのお問い合わせ # id # class Inquiry  ApplicationRecord has_one :inquiry_object_relation has_many :object, through: :inquiry_object_relation end # お問い合わせと購入物のリレーション # id # inquiry_id # object_id # class InquiryObjectRelation  ApplicationRecord belongs_to :inquiry belongs_to :object end # 商品 # id # class Object  ApplicationRecord has_many :inquiry_object_relations has_many :inquiries, through: :inquiry_object_relations end # お祝い金申請 # id # inquiry_object_relation_id # class InquiryReward  ApplicationRecord belongs_to :inquiry_object_relation has_one :inquiry_reward end 引き方 お問い合わせのある商品の確認 Inquiry.find(1).object\n商品がお問い合わせされているか確認 Object.find(1).inquiries\nお問い合わせがお祝い金に申請されているか確認 Inquiry.find(1).inquiry_object_relation.inquiry_reward\nお祝い金がどのお問い合わせから行われた確認 InquiryReward.find(1).inquiry_object_relation.inquiry\n",
   "wordCount" : "293",
   "inLanguage": "en",
   "datePublished": "2018-09-28T14:04:31+09:00",
@@ -168,36 +168,36 @@ if (!doNotTrack) {
 <li>問い合わせと、お祝い金申請の関連性は、relationテーブルを参照する必要がある</li>
 </ul>
 <h1 id="model">model<a hidden class="anchor" aria-hidden="true" href="#model">#</a></h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># 商品へのお問い合わせ</span>
-<span style="color:#75715e"># id</span>
-<span style="color:#75715e">#</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># 商品へのお問い合わせ</span>
+<span style="color:#75715e"># id</span>
+<span style="color:#75715e">#</span>
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Inquiry</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationRecord</span>
   has_one <span style="color:#e6db74">:inquiry_object_relation</span>
   has_many <span style="color:#e6db74">:object</span>, <span style="color:#e6db74">through</span>: <span style="color:#e6db74">:inquiry_object_relation</span>
 <span style="color:#66d9ef">end</span>
 
-<span style="color:#75715e"># お問い合わせと購入物のリレーション</span>
-<span style="color:#75715e"># id</span>
-<span style="color:#75715e"># inquiry_id</span>
-<span style="color:#75715e"># object_id</span>
-<span style="color:#75715e">#</span>
+<span style="color:#75715e"># お問い合わせと購入物のリレーション</span>
+<span style="color:#75715e"># id</span>
+<span style="color:#75715e"># inquiry_id</span>
+<span style="color:#75715e"># object_id</span>
+<span style="color:#75715e">#</span>
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InquiryObjectRelation</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationRecord</span>
   belongs_to <span style="color:#e6db74">:inquiry</span>
   belongs_to <span style="color:#e6db74">:object</span>
 <span style="color:#66d9ef">end</span>
 
-<span style="color:#75715e"># 商品</span>
-<span style="color:#75715e"># id</span>
-<span style="color:#75715e">#</span>
+<span style="color:#75715e"># 商品</span>
+<span style="color:#75715e"># id</span>
+<span style="color:#75715e">#</span>
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Object</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationRecord</span>
   has_many <span style="color:#e6db74">:inquiry_object_relations</span>
   has_many <span style="color:#e6db74">:inquiries</span>, <span style="color:#e6db74">through</span>: <span style="color:#e6db74">:inquiry_object_relations</span>
 <span style="color:#66d9ef">end</span>
 
-<span style="color:#75715e"># お祝い金申請</span>
-<span style="color:#75715e"># id</span>
-<span style="color:#75715e"># inquiry_object_relation_id</span>
-<span style="color:#75715e">#</span>
+<span style="color:#75715e"># お祝い金申請</span>
+<span style="color:#75715e"># id</span>
+<span style="color:#75715e"># inquiry_object_relation_id</span>
+<span style="color:#75715e">#</span>
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InquiryReward</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationRecord</span>
   belongs_to <span style="color:#e6db74">:inquiry_object_relation</span>
   has_one <span style="color:#e6db74">:inquiry_reward</span>
@@ -236,7 +236,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

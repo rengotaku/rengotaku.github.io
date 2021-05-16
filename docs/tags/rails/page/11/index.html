@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/rails/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/rails/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/rails/" />
-<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta property="og:updated_time" content="2021-05-14T10:59:10+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="rails"/>
 <meta name="twitter:description" content=""/>
@@ -128,6 +128,104 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
+      test中に投入したデータを消えないようにしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>rails5 class FooTest &lt; ActiveSupport::TestCase self.use_transactional_tests = false end 指定のテスト以降もデータが残る為、以降のテストに影響がでる。対象のテスト終了時にデータを削除するのがベター 以前 class FooTest &lt; ActiveSupport::TestCase self.use_transactional_fixtures =...</p>
+  </section>
+  <footer class="entry-footer">January 30, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to test中に投入したデータを消えないようにしたい" href="https://rengotaku.github.io/posts/05fbf34d-d6d3-4399-a072-f8434cb38105/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      画像を表示したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>image_tag(画像ファイルへのパス, [, (オプション or HTMLオプション)]) 参考 &lt;%= image_tag(&#34;icon.png&#34;) %&gt; # &lt;img alt=&#34;Icon&#34; src=&#34;/images/icon.png&#34; /&gt; image_tag - リファレンス - - Railsドキュメ...</p>
+  </section>
+  <footer class="entry-footer">January 24, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 画像を表示したい" href="https://rengotaku.github.io/posts/d0203447-1215-4318-8e12-26220011496c/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      別のDBに接続するモデルを作成したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>修正ファイル app/models/other_db.rb app/models/other_db/o_table.rb config/other_db/database.yml db/other_db/schema.rb db/other_db/seeds.rb 修正内容 モデルの具象クラス module OtherDb class Base &lt; ActiveRecord::Base # 対応する抽象テーブルは設定しない（必ず継承させる） # databases = YAML.load(ERB.new(File.read(&#39;config/other_db/database.yml&#39;)).result) establish_connection(databases[Rails.env]) self.abstract_class = true end end モデル module...</p>
+  </section>
+  <footer class="entry-footer">January 22, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 別のDBに接続するモデルを作成したい" href="https://rengotaku.github.io/posts/da413a68-86ba-4cd4-9640-25114a03698f/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      minitestでApplicationControllerをテストしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>テスト require &#39;test_helper&#39; # Add at runtime an action to ApplicationController ApplicationController.class_eval do def development1 Rails.env = &#39;development&#39; response_boolean(development?) end def development2 Rails.env = &#39;production&#39; response_boolean(development?) end private def response_boolean(equation) render :text =&gt; equation ? &#34;true&#34; : &#34;false&#34; end end # If disable_clear_and_finalize is set to true, Rails will not clear other routes when calling again the draw method. Look at the source code at: http://apidock.com/rails/v4.0.2/ActionDispatch/Routing/RouteSet/draw Rails.application.routes.disable_clear_and_finalize =...</p>
+  </section>
+  <footer class="entry-footer">January 18, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to minitestでApplicationControllerをテストしたい" href="https://rengotaku.github.io/posts/af47cda3-b3a4-46e9-9bae-7776f692421a/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      taskをcontrollerから呼びたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>Rake::Task[&#34;mytask:test&#34;].execute(Rake::TaskArguments.new([:param1, :param2], [&#34;value1&#34;, &#34;value2&#34;])) invokeを使用すると、一度しか呼ばれない事象も発生する為、execute推奨 rakeタスク内で別のタスクを呼び出す - Qiita...</p>
+  </section>
+  <footer class="entry-footer">January 10, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to taskをcontrollerから呼びたい" href="https://rengotaku.github.io/posts/3e8157bd-e0fc-420e-b419-5c7c65dd0edb/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      日付の入力フォームを細かく設定したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>&lt;%= select_year Time.now, {:prefix=&gt;&#34;reserve&#34;, :field_name=&gt;&#34;time(1i)&#34;, :start_year=&gt;Time.now.year, :end_year=&gt;Time.now.year&#43;2} %&gt;年 &lt;%= select_month Time.now, {:prefix=&gt;&#34;reserve&#34;, :field_name=&gt;&#34;time(2i)&#34;, :use_month_numbers=&gt;true} %&gt;月 &lt;%= select_day Time.now, {:prefix=&gt;&#34;reserve&#34;, :field_name=&gt;&#34;time(3i)&#34; } %&gt;日 &lt;%= select_hour Time.now, {:prefix=&gt;&#34;reserve&#34;, :field_name=&gt;&#34;time(4i)&#34; } %&gt;時 &lt;%= select_minute Time.now, {:prefix=&gt;&#34;reserve&#34;, :field_name=&gt;&#34;time(5i)&#34;, :minute_step=&gt;10 } %&gt;分 datetime_select より詳細に日付...</p>
+  </section>
+  <footer class="entry-footer">January 10, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to 日付の入力フォームを細かく設定したい" href="https://rengotaku.github.io/posts/fc0bdd55-dc6b-4a8a-b904-fe01a8185b89/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      getで:idなしのルートを作成したい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>resource :user do get :me, on: :member end # =&gt; me_api_user GET /api/users/me(.:format) api/v1/users#me {:format=&gt;&#34;json&#34;} ruby - Rails routes: GET without param :id - Stack Overflow https://stackoverflow.com/questions/17066637/rails-routes-get-without-param-id...</p>
+  </section>
+  <footer class="entry-footer">January 8, 2019
+</footer>
+  <a class="entry-link" aria-label="post link to getで:idなしのルートを作成したい" href="https://rengotaku.github.io/posts/dd14b9b6-1369-4d82-9e51-733b2ca0a5f6/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
       rails5以前のバージョンでor条件を作成したい
     </h2>
   </header>
@@ -165,104 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">December 20, 2018
 </footer>
   <a class="entry-link" aria-label="post link to コントローラーのrequestをスタブにしてテストしたい" href="https://rengotaku.github.io/posts/7b892c39-d8f1-49ac-b556-c02970e0a10a/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      yamlファイルに記載した設定をconfigとしてロード
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>ロード処理 def load_config(key, filepath) yml = YAML.safe_load(ERB.new(File.read(filepath)).result, [], [], true).symbolize_keys raise &#34;No such file #{filepath}&#34; if yml.blank? config = yml[Rails.env.to_sym] raise &#34;No such environment #{Rails.env}on #{filepath}&#34; if config.blank? Rails.application.config.send(&#34;#{key}=&#34;, ActiveSupport::InheritableOptions.new(config.deep_symbolize_keys)) end load_config(:site_info, Rails.root.join(&#39;config&#39;, &#39;site_info.yml&#39;)) yamlファイルに記載されたrubyの式を展開してロードするよう...</p>
-  </section>
-  <footer class="entry-footer">December 17, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to yamlファイルに記載した設定をconfigとしてロード" href="https://rengotaku.github.io/posts/4a69b6bb-0474-4600-8f72-2ec0ee7efd4b/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      after_findの実行タイミング
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>結論 after_find のfunction内で他モデルをロードするような処理は（N&#43;1問題に繋がるため）入れてはいけない。 モデル class Post &lt; ApplicationRecord has_many :tag_relationships has_many :tags, through: :tag_relationships after_find :find_relate_tags # タグ...</p>
-  </section>
-  <footer class="entry-footer">December 14, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to after_findの実行タイミング" href="https://rengotaku.github.io/posts/18a1b201-414e-4a47-bf02-72e995f22fbc/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      hamlで参考になるサイト
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>決定版!!Haml小技まとめ！！ - Qiita...</p>
-  </section>
-  <footer class="entry-footer">December 13, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to hamlで参考になるサイト" href="https://rengotaku.github.io/posts/a28a6a4a-7af3-4d7b-9363-f267d6465f8f/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      apiのテストケースのサンプル
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>require &#39;test_helper&#39; module Api class SampleControllerTest &lt; ActionDispatch::IntegrationTest describe &#34;something function test.&#34; do describe &#34;OK case&#34; do test &#34;exist&#34; do get &#39;/api/v1/sample_contract_mails/1/example&#39;, params: { page: 2 } assert_response :success body = JSON.parse(response.body) assert { body.size == 1 } end end describe &#34;NG case&#34; do test &#34;dont exist&#34; do get &#39;/api/v1/sample_contract_mails/2/example&#39; assert_response :missing end end end end end...</p>
-  </section>
-  <footer class="entry-footer">December 12, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to apiのテストケースのサンプル" href="https://rengotaku.github.io/posts/7a573d40-4330-42cd-a58d-bf96947f7bc5/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      モデルのテストケースのサンプル
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>require &#39;test_helper&#39; class SampleModelTest &lt; ActiveSupport::TestCase describe &#39;something function test.&#39; do test &#39;get something.&#39; do assert { SampleModel.find(1).present? } end test &#39;dont get something.&#39; do assert { SampleModel.find(2).blank? } end end describe &#39;something2 function test.&#39; do before do puts &#34;be executed in something2 only.&#34; end after do puts &#34;be executed in something2 only.&#34; end test &#39;get something.&#39; do assert { SampleModel.find(1).present? } end end end minitest-power_assert のgem...</p>
-  </section>
-  <footer class="entry-footer">December 12, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to モデルのテストケースのサンプル" href="https://rengotaku.github.io/posts/72789551-4a7b-4a54-a6f3-49e1965faf28/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      指定フォルダ配下の1日前のファイルを削除し、空のフォルダを削除したい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p># 1日前のファイルを削除 Dir.glob(&#39;path/to/dir/**/*.*&#39;). select{ |f| File.mtime(f) &lt; Time.now - 1.day }. each{ |f| FileUtils.rm(f) } # 空のフォルダを削除 Dir.glob(&#34;path/to/dir/**&#34;).each do |fo| next unless FileTest.directory?(fo) next unless Dir.entries(fo).length == 2 puts &#34;#{fo}empty&#34; Dir.rmdir fo end [Ruby] 空のフォルダだけ削除、Dir::en...</p>
-  </section>
-  <footer class="entry-footer">December 12, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to 指定フォルダ配下の1日前のファイルを削除し、空のフォルダを削除したい" href="https://rengotaku.github.io/posts/50477c7a-7a7e-4625-a0f1-5935097b8627/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      fixtureでメールのsourceをDBに登録したい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>概要 メールをファイルとして設置し、fixtureに使用するyaml内にRubyの処理を埋め込み、yamlに書き出す。 必要ファイル yaml &lt;% def mail(file_name) File.open(file_name){ |f|...</p>
-  </section>
-  <footer class="entry-footer">December 12, 2018
-</footer>
-  <a class="entry-link" aria-label="post link to fixtureでメールのsourceをDBに登録したい" href="https://rengotaku.github.io/posts/02db3f8e-903e-4814-a7ac-35e0bb0929b2/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

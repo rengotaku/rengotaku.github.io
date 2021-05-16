@@ -11,7 +11,7 @@
 <meta name="description" content="経緯 5.6系を使う予定が、brewで最新の8系をインストールしていて、謎のエラー[2054] The server requested authentication method unknown to the clientで苦しんだ。 対応 パス">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/f0e97e2b-18eb-4b62-882e-73769a380af4/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "php", "mysql", "pdo", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "経緯 5.6系を使う予定が、brewで最新の8系をインストールしていて、謎のエラー[2054] The server requested authentication method unknown to the clientで苦しんだ。\n対応 パスワード方式を確認 pluginがmysql_native_passwordになっていればOK\nSELECT user, host, plugin FROM mysql.user;\rmysqld.cnfを修正 default-authentication-plugin=mysql_native_passwordを追加 そして、mysqlのリスタート\n phpからMySQL 8.0へPDOで接続時「SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client」 - Symfoware\n そもそもmysqlのバージョンを5.6にする $brew install mysql@5.6\r HomebrewでMySQLをセットアップしたらちょろりとハマった - light log\n ",
+  "articleBody": "経緯 5.6系を使う予定が、brewで最新の8系をインストールしていて、謎のエラー[2054] The server requested authentication method unknown to the clientで苦しんだ。\n対応 パスワード方式を確認 pluginがmysql_native_passwordになっていればOK\nSELECT user, host, plugin FROM mysql.user; mysqld.cnfを修正 default-authentication-plugin=mysql_native_passwordを追加 そして、mysqlのリスタート\n phpからMySQL 8.0へPDOで接続時「SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client」 - Symfoware\n そもそもmysqlのバージョンを5.6にする $brew install mysql@5.6\r HomebrewでMySQLをセットアップしたらちょろりとハマった - light log\n ",
   "wordCount" : "319",
   "inLanguage": "en",
   "datePublished": "2018-07-20T19:16:23+09:00",
@@ -203,7 +203,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

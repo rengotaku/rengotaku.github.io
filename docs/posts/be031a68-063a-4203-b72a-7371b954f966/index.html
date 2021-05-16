@@ -11,7 +11,7 @@
 <meta name="description" content="対策 --max_allowed_packet=100Mをオプションに付ける mysql -uroot -proot database_name --max_allowed_packet=100M -e &#39;select source from some_table where id = 14243;&#39; &gt; /path/to/file SET GLOBAL max_allowed_packet=999999*1024*1024; のように、GLOBALの値を">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/be031a68-063a-4203-b72a-7371b954f966/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "mysql", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "対策 --max_allowed_packet=100Mをオプションに付ける\nmysql -uroot -proot database_name --max_allowed_packet=100M -e 'select source from some_table where id = 14243;'  /path/to/file\rSET GLOBAL max_allowed_packet=999999*1024*1024;\rのように、GLOBALの値を変えるよりは、クライアント(接続する側)が調整すべき。\r事象 mysql select *\r- from some_table\r- where\r- id = 14243\r- ;\rERROR 2020 (HY000): Got packet bigger than 'max_allowed_packet' bytes\r MySQL Error 1153 - Got a packet bigger than ‘max_allowed_packet’ bytes - Stack Overflow https://stackoverflow.com/questions/93128/mysql-error-1153-got-a-packet-bigger-than-max-allowed-packet-bytes\n ",
+  "articleBody": "対策 --max_allowed_packet=100Mをオプションに付ける\nmysql -uroot -proot database_name --max_allowed_packet=100M -e 'select source from some_table where id = 14243;'  /path/to/file\rSET GLOBAL max_allowed_packet=999999*1024*1024;\rのように、GLOBALの値を変えるよりは、クライアント(接続する側)が調整すべき。\r事象 mysql select * - from some_table - where - id = 14243 - ; ERROR 2020 (HY000): Got packet bigger than 'max_allowed_packet' bytes  MySQL Error 1153 - Got a packet bigger than ‘max_allowed_packet’ bytes - Stack Overflow https://stackoverflow.com/questions/93128/mysql-error-1153-got-a-packet-bigger-than-max-allowed-packet-bytes\n ",
   "wordCount" : "137",
   "inLanguage": "en",
   "datePublished": "2018-12-04T14:46:59+09:00",
@@ -200,7 +200,7 @@ ERROR <span style="color:#ae81ff">2020</span> (HY000): Got packet bigger <span s
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

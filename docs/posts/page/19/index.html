@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/posts/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/posts/" />
-<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content=""/>
@@ -128,141 +128,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      EC2のインスタンスタイプの `m4` と `m5` の違い
+      mysqlで既に登録されている値を置換して再登録
     </h2>
   </header>
   <section class="entry-content">
-    <p>インフラ担当者にご教示頂いたこと m4とm5の違い m4 と m5 の違いはスケールアップではなくバージョンの違いです。 m4 系は Xen ベース、 m5 系は KVM ベースの Nitro...</p>
+    <p>REPLACE を利用する。 update users, ( select id from users where name regexp &#39; &#39; ) as having_spaces set name = REPLACE(name, &#34; &#34;, &#34;&#34;) where users.id = having_spaces.id...</p>
   </section>
-  <footer class="entry-footer">September 10, 2019
+  <footer class="entry-footer">November 6, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to EC2のインスタンスタイプの `m4` と `m5` の違い" href="https://rengotaku.github.io/posts/ba137bd3-13cc-4b25-9f04-11f7b474a84e/"></a>
+  <a class="entry-link" aria-label="post link to mysqlで既に登録されている値を置換して再登録" href="https://rengotaku.github.io/posts/baaa474f-9a42-4aae-8cd8-811e581d096d/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      Ruby2.5.6のDocker Imageを使用したら、mysql-clientがインストールできない
+      mysqlで正規表現を使用して検索
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 default-mysql-client を指定すればよい apt-get install -y default-mysql-client Circle CI で mysql-client が apt-get install できなくなってCI環境が壊れた話 - ユアマイスター株式会社エンジニアブログ 事象 FROM ruby:2.5.6 RUN apt-get update -qq \ &amp;&amp; apt-get install...</p>
+    <p>regexp を使用する。 select * from regexptest where str regexp &#39; | &#39;; 正規表現を使ったパターンマッチングを行う(REGEXP演算子) | MySQLの使い方...</p>
   </section>
-  <footer class="entry-footer">September 10, 2019
+  <footer class="entry-footer">November 6, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to Ruby2.5.6のDocker Imageを使用したら、mysql-clientがインストールできない" href="https://rengotaku.github.io/posts/88abf94f-1946-4b02-9a70-9c0e3bbd82a6/"></a>
+  <a class="entry-link" aria-label="post link to mysqlで正規表現を使用して検索" href="https://rengotaku.github.io/posts/316eed96-858c-4429-bd1f-b5ab8dedddd1/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      マージ済みのbranchを一括削除
+      cookieの最大値を確認
     </h2>
   </header>
   <section class="entry-content">
-    <p>$ git branch --merged|egrep -v &#39;\*|develop|master&#39;|xargs git branch -d Gitでマージ済みブランチを一括削除 - Qiita...</p>
+    <p>Browser Cookie Limits...</p>
   </section>
-  <footer class="entry-footer">September 10, 2019
+  <footer class="entry-footer">October 30, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to マージ済みのbranchを一括削除" href="https://rengotaku.github.io/posts/00fe706c-2842-4dae-b2de-1a727b11e09c/"></a>
+  <a class="entry-link" aria-label="post link to cookieの最大値を確認" href="https://rengotaku.github.io/posts/98ee4003-d3eb-46df-a3a6-7e71f2c60e9a/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      phpで配列をechoで出力したい
+      高速な文字検索
     </h2>
   </header>
   <section class="entry-content">
-    <p>var_export($arr , true) を使用する。 $bufArr = array(&#34;aaaa&#34;,&#34;bbbb&#34;,&#34;cccc&#34;); print var_export($bufArr , true); array ( 0 =&gt; &#39;aaaa&#39;, 1 =&gt; &#39;bbbb&#39;, 2 =&gt; &#39;cccc&#39;, } 配列の中身を出力（ログとかで見る場合） - Qiita...</p>
+    <p>ag を使用する。 配下のフォルダでgmailドメインを検索する $ ag &#39;\@example.com&#39; ./ test 1:example@example.com ag (The Silver Searcher) コマンド覚え書き - Qiita...</p>
   </section>
-  <footer class="entry-footer">September 9, 2019
+  <footer class="entry-footer">October 30, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to phpで配列をechoで出力したい" href="https://rengotaku.github.io/posts/e91a0a27-4289-42ad-85e1-d6e70b26e18c/"></a>
+  <a class="entry-link" aria-label="post link to 高速な文字検索" href="https://rengotaku.github.io/posts/b41d38d0-e53d-4569-be09-11f6f211035e/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      テキストを逆順で読み込みたい
+      TOPみたいに等間隔で表示したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 tac を使用する $ printf &#34;1\n2\n3\n&#34; | tac 3 2 1 shell - How can I reverse the order of lines in a file? - Stack Overflow `sort -r` だと値の降順なので違う。`tail -r` はBSDでのみ有効。...</p>
+    <p>解決 column -t を使用 $ COL=$(echo -e &#34;COL1\tCOL2\tCOL3&#34;) $ COL=&#34;$COL\n$(echo -e &#34;VAL1\tVAL2\tVAL3&#34;)&#34; $ COL=&#34;$COL\n$(echo -e &#34;VAL1\tVAL2\tVAL3&#34;)&#34; $ echo -e $COL | column -t COL1 COL2 COL3 VAL1 VAL2 VAL3 VAL1 VAL2 VAL3 awk - How can I format the output of a bash command in neat columns - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">September 6, 2019
+  <footer class="entry-footer">October 29, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to テキストを逆順で読み込みたい" href="https://rengotaku.github.io/posts/312e727e-de38-4002-bb19-14955d6dfd18/"></a>
+  <a class="entry-link" aria-label="post link to TOPみたいに等間隔で表示したい" href="https://rengotaku.github.io/posts/fd5e989c-57bb-4d63-a6eb-98e4af62cac3/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      dockerの負荷率を確認する
+      linuxのリンク集
     </h2>
   </header>
   <section class="entry-content">
-    <p>$docker stats [container_id] CONTAINER ID NAME CPU % MEM USAGE / LIMIT MEM % NET I/O BLOCK I/O PIDS 34be7f4df705 rails_1 0.01% 473.8MiB / 7.787GiB 5.94% 90.6MB / 125MB 2.25MB / 12.3kB 20 [小ネタ]Docker コンテナに CPU 負荷を掛けた時のメモ - Qiita...</p>
+    <p>FrontPage - Linuxと過ごす...</p>
   </section>
-  <footer class="entry-footer">September 5, 2019
+  <footer class="entry-footer">October 25, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to dockerの負荷率を確認する" href="https://rengotaku.github.io/posts/6b176f5b-71d5-4ab8-a0ae-527cc70f35dd/"></a>
+  <a class="entry-link" aria-label="post link to linuxのリンク集" href="https://rengotaku.github.io/posts/da0107d6-1053-4fad-bd04-04181d3fa012/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      kickboxのアカウントを消す依頼をした
+      bashでタブ(\t)を取り扱うtips
     </h2>
   </header>
   <section class="entry-content">
-    <p>Hi. How do I cancel the membership? Because The team I joined created other account, then I have to do that. ------- August 30 Mark profile Hi there, Sorry for the wait. I’ll be happy to get that account closed for you. For security purposes, can you please confirm two of the following? • The current verification balance (you can find this on your account dashboard here:...</p>
+    <p>逆引きUNIXコマンド/grepでタブを検索する方法 - Linuxと過ごす より、 $&#39;\t&#39; を指定してやればよい。 $ grep $&#39;column1\tcolumn2&#39; クォート クォート (quoting) を使うと、特定...</p>
   </section>
-  <footer class="entry-footer">September 5, 2019
+  <footer class="entry-footer">October 25, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to kickboxのアカウントを消す依頼をした" href="https://rengotaku.github.io/posts/0a8ea9fc-ddeb-4490-a4af-6ca921091cfd/"></a>
+  <a class="entry-link" aria-label="post link to bashでタブ(\t)を取り扱うtips" href="https://rengotaku.github.io/posts/54a4bf94-494a-445b-a229-180aea2e07a8/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      rundeckのjobを一括取得するスクリプト
+      cookieの容量を肥大化させたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>ソース function loopSleep(_loopLimit,_interval, _mainFunc){ var loopLimit = _loopLimit; var interval = _interval; var mainFunc = _mainFunc; var i = 0; var loopFunc = function () { var result = mainFunc(i); if (result === false) { // break機能 return; } i = i &#43; 1; if (i &lt; loopLimit) { setTimeout(loopFunc, interval); } } loopFunc(); } const WAIT_COUNT = 3; function download_xml() {...</p>
+    <p>解決 １つの要素に長い文字列を格納するのではなく、要素を分けて程々に長い文字列を格納すればよい。 document.cookie = &#39;test1=aaaaaaaaaaaaaaa...&#39; // 程々に長くする document.cookie = &#39;test2=aaaaaaaaaaaaaaa...&#39; // 程々に長くする 事...</p>
   </section>
-  <footer class="entry-footer">September 4, 2019
+  <footer class="entry-footer">October 24, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to rundeckのjobを一括取得するスクリプト" href="https://rengotaku.github.io/posts/53e606f7-6aec-42c4-b852-c78779d3d90b/"></a>
+  <a class="entry-link" aria-label="post link to cookieの容量を肥大化させたい" href="https://rengotaku.github.io/posts/6394185b-4c81-4010-b77c-ba0f9386df85/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      if文ワンライナー
+      モデルの値を正規化する独自クラス
     </h2>
   </header>
   <section class="entry-content">
-    <p>[ ${PIPESTATUS[0]} == 0 ] のように記載する $ sh -c &#39;true | tee &amp;&amp; [ ${PIPESTATUS[0]} == 0 ]&#39;; echo $? bashの結果の比較 [[ $? == 0 ]] 元 if [ -f ${target} ]; then echo &#39;true&#39; ;fi 簡素なif文は一行で書く - 半径5メー...</p>
+    <p>クラス # 値を設定(setter)する際に、指定の方法で正規化した値を設定する。 # # 宣言方法：string_normalizable :name, :type # name: カ...</p>
   </section>
-  <footer class="entry-footer">September 4, 2019
+  <footer class="entry-footer">October 21, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to if文ワンライナー" href="https://rengotaku.github.io/posts/66a8ff26-6d7c-4b41-89fc-d491fc799047/"></a>
+  <a class="entry-link" aria-label="post link to モデルの値を正規化する独自クラス" href="https://rengotaku.github.io/posts/3fc93131-69e4-43c8-a7af-438cf8ab97a8/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      コンソールで実行するようのスクリプトを書く際のtips
+      大きいファイルを圧縮して分割
     </h2>
   </header>
   <section class="entry-content">
-    <p>セレクト document.querySelector(&#39;div#hoge&#39;); // &lt;- element document.querySelectorAll(&#39;div.fuga&#39;); // &lt;- NodeList jQueryからネイティブJavaScriptへ置き換えの第一歩 - Qiita 属性 document.querySelector(&#39;[title=&#34;element title attribute value&#34;]&#39;); html - Select an element by title with JavaScript and modify it? - Stack Overflow クリッ...</p>
+    <p>パスワード付き圧縮 $ zip -e -r ps_hogedir.zip hogedir/ 【mac】zipファイル操作コマンド - Qiita 分割 $ split -b 45m ps_hogedir.zip ps_hogedir. ps_hogedir.aa ps_hogedir.ab . . . 【Mac】ファイルを指定サイズで分割/結合す...</p>
   </section>
-  <footer class="entry-footer">September 4, 2019
+  <footer class="entry-footer">October 18, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to コンソールで実行するようのスクリプトを書く際のtips" href="https://rengotaku.github.io/posts/5536b5aa-2515-48cb-b52f-ea960450429a/"></a>
+  <a class="entry-link" aria-label="post link to 大きいファイルを圧縮して分割" href="https://rengotaku.github.io/posts/964e6d46-42b2-4d30-be86-76e45bbff5db/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
@@ -287,7 +287,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

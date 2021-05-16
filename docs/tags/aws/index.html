@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/aws/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/aws/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/aws/" />
-<meta property="og:updated_time" content="2020-09-02T09:19:54+09:00" />
+<meta property="og:updated_time" content="2021-04-19T17:24:49+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="aws"/>
 <meta name="twitter:description" content=""/>
@@ -124,6 +124,34 @@ if (!doNotTrack) {
 
 
 
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      S3のObject数をカウントしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 file - How can I tell how many objects I’ve stored in an S3 bucket? - Stack Overflow より、下記を実行する $ aws s3 ls s3://mybucket/ --recursive | wc -l...</p>
+  </section>
+  <footer class="entry-footer">April 19, 2021
+</footer>
+  <a class="entry-link" aria-label="post link to S3のObject数をカウントしたい" href="https://rengotaku.github.io/posts/42b91e94-28d3-4074-84af-5b7f11b40415/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      運用で発生する色々な問題の対応方法が記載された良記事
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>あと2時間でElastiCacheのメモリが枯渇！そのときあなたは何をしますか？...</p>
+  </section>
+  <footer class="entry-footer">December 18, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to 運用で発生する色々な問題の対応方法が記載された良記事" href="https://rengotaku.github.io/posts/9d4c7ffd-2736-4a23-b163-e0fd84d1ab6e/"></a>
+</article>
 <article class="post-entry tag-entry"> 
 
   <header class="entry-header">
@@ -235,34 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">January 14, 2020
 </footer>
   <a class="entry-link" aria-label="post link to aws-cliを使用する" href="https://rengotaku.github.io/posts/c1304da4-1894-4498-850a-57c5ed46a145/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      codedeployで実際の処理はどこでやっているか確認
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 アプリケーションに配置してある appspec.yml の中身を参照。 下記のような記載があるはず。 version: 0.0 os: linux files: - source: / destination: /var/www/sample-app permissions: - object: /var/www/ pattern: &#34;**&#34; mode: 775 hooks: ApplicationStop: - location: scripts/stop_server.sh timeout: 300 runas: root BeforeInstall: - location: scripts/clean.sh...</p>
-  </section>
-  <footer class="entry-footer">September 27, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to codedeployで実際の処理はどこでやっているか確認" href="https://rengotaku.github.io/posts/f629646e-f58a-4e3d-927e-a9cacd39e5c0/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      EC2のインスタンスタイプの `m4` と `m5` の違い
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>インフラ担当者にご教示頂いたこと m4とm5の違い m4 と m5 の違いはスケールアップではなくバージョンの違いです。 m4 系は Xen ベース、 m5 系は KVM ベースの Nitro...</p>
-  </section>
-  <footer class="entry-footer">September 10, 2019
-</footer>
-  <a class="entry-link" aria-label="post link to EC2のインスタンスタイプの `m4` と `m5` の違い" href="https://rengotaku.github.io/posts/ba137bd3-13cc-4b25-9f04-11f7b474a84e/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

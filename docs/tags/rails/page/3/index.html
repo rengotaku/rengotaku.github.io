@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/tags/rails/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/tags/rails/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/tags/rails/" />
-<meta property="og:updated_time" content="2020-11-24T16:07:23+09:00" />
+<meta property="og:updated_time" content="2021-05-14T10:59:10+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="rails"/>
 <meta name="twitter:description" content=""/>
@@ -128,6 +128,104 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
+      ShrineでS3にアップロードする際のmetadataを正しく設定する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 image_uri = Addressable::URI.convert_path(&#34;https://path/to/image.jpg&#34;) URI.parse(image_uri).open do |file| metadata = { &#34;mime_type&#34; =&gt; MIME::Types.type_for(@image_uri.to_s).first.content_type, &#34;filename&#34; =&gt; @image_uri.basename, } # metadataが正しく設定されていないと、uploaded_file.metadataも空 uploaded_file = Shrine.upload(file, storage_key, metadata:...</p>
+  </section>
+  <footer class="entry-footer">May 18, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to ShrineでS3にアップロードする際のmetadataを正しく設定する" href="https://rengotaku.github.io/posts/b655ebe5-9784-45db-88cc-341986ee87e2/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      rails consoleで画像をダウンロードしようとすると、No such file or directoryエラーが発生する
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 require &#39;open-uri&#39; open(&#39;tmp/image.png&#39;, &#39;wb&#39;) do |file| file &lt;&lt; open(&#39;https://pbs.twimg.com/profile_images/xxx.jpg&#39;).read end image_io = open(&#39;tmp/image.png&#39;) 事象 rails内で下記の処理を行えており、コンソールで同様の処理を実行したところ、NoMethodError:...</p>
+  </section>
+  <footer class="entry-footer">May 18, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to rails consoleで画像をダウンロードしようとすると、No such file or directoryエラーが発生する" href="https://rengotaku.github.io/posts/62d115fa-4ce4-4b27-a984-12d947a8f3b8/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      ActiveRecordでbulk insert とupdateしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 insert Book.insert_all([ { id: 1, title: &#34;Rework&#34;, author: &#34;David&#34; }, { id: 1, title: &#34;Eloquent Ruby&#34;, author: &#34;Russ&#34; } ]) created_at, updated_atは自動付与されないことに気をつける（DBの設定が自動挿入になっていればOK...</p>
+  </section>
+  <footer class="entry-footer">May 1, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to ActiveRecordでbulk insert とupdateしたい" href="https://rengotaku.github.io/posts/4a40d9e2-ed95-4fa8-867d-768f086e27a9/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      Active jobのretryの検証
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>ソース # frozen_string_literal: true class RetryTestJob &lt; ActiveJob::Base class RetryOnlyDoError &lt; StandardError; end class RetryRailseExceptionError &lt; StandardError; end class RetryWithoutProcessError &lt; StandardError; end class DiscardError &lt; StandardError; end FILENAME = &#34;#{Rails.root.to_s}/tmp/jobtest.txt&#34; queue_as :high discard_on StandardError do |job, e| RetryTestJob.write_file(&#34;retry_on&#34;, job.job_id, job.executions, &#34;#{e.class}: #{e.message}&#34;) end # attempts が０になっても何も行わない retry_on RetryWithoutProcessError, wait: 1.seconds, attempts: 3 # attempts が...</p>
+  </section>
+  <footer class="entry-footer">April 23, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to Active jobのretryの検証" href="https://rengotaku.github.io/posts/a6545460-7706-4d6b-82b1-70e70a9080bc/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      annotateが動かない
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>解決 --models を付与して実行する。 $ bundle exec annotate --models 事象 gemを起動しても何も変更がかからない。 $ bundle exec annotate...</p>
+  </section>
+  <footer class="entry-footer">March 25, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to annotateが動かない" href="https://rengotaku.github.io/posts/d8577cb0-53dc-487a-a624-e607a8551e93/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      実行されたmiddlewareをロギングしたい
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>config/initializers 配下に下記のファイルを設置する。 # Trace each middleware module entry/exit. Freely adapted from # https://github.com/DataDog/dd-trace-rb/issues/368 &#34;Trace each middleware in the Rails stack&#34; module MiddlewareTracer def call(env) Rails.logger.debug { &#34;MiddleWare: entry #{self.class.name}&#34; } status, headers, response = super(env) Rails.logger.debug { &#34;MiddleWare: #{self.class.name}, returning with status #{status}&#34; } [status, headers, response] end end # Instrument the middleware stack after...</p>
+  </section>
+  <footer class="entry-footer">March 17, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to 実行されたmiddlewareをロギングしたい" href="https://rengotaku.github.io/posts/88a0bf8a-defe-4f00-bb73-ddf0daf14044/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
+      rspecでよく見た書き方
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>エラーが発生しないテスト not_to raise_error RSpec.describe &#34;#to_s&#34; do it &#34;does not raise&#34; do expect { Object.new.to_s }.not_to raise_error end end raise_error matcher - Built in matchers - RSpec Expectations - RSpec - Relish モックでエラーを発生させる and_raise RSpec.describe &#34;Making it raise an error&#34; do it &#34;raises the provided exception&#34; do dbl...</p>
+  </section>
+  <footer class="entry-footer">March 6, 2020
+</footer>
+  <a class="entry-link" aria-label="post link to rspecでよく見た書き方" href="https://rengotaku.github.io/posts/6542ae14-4854-4050-bf96-54b6cc4100d5/"></a>
+</article>
+<article class="post-entry tag-entry"> 
+
+  <header class="entry-header">
+    <h2>
       Active Jobが失敗した場合のリトライについてテストする
     </h2>
   </header>
@@ -165,104 +263,6 @@ if (!doNotTrack) {
   <footer class="entry-footer">March 6, 2020
 </footer>
   <a class="entry-link" aria-label="post link to インスタンス変数のメソッドをstubにしたい" href="https://rengotaku.github.io/posts/2a2be20a-44d0-4ff4-ac0c-0630ee4e6763/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      asc、descが混在したソートをしたい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 複数をソート（asc、descが混在）の場合は、 sort を使用する。 User.all.sort { |a,b| [b.created_at, a.id] &lt;=&gt; [a.created_at, b.id] }.last.id == User.order(created_at: :desc).order(id: :asc).last.id note # gender asc, name asc p(dogs.sort do |a, b| [a[:gender], a[:name]] &lt;=&gt; [b[:gender], b[:name]] end) # gender desc, name asc p(dogs.sort do |a,...</p>
-  </section>
-  <footer class="entry-footer">February 20, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to asc、descが混在したソートをしたい" href="https://rengotaku.github.io/posts/cdb55f84-3b86-4723-a081-1abaef9ac8c2/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      Serializerで特定のfieldだけを出力したい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 fields オプションを使用する。 render json: notifications, fields: [:id, :title] How to filter attributes? · Issue #992 · rails-api/active_model_serializers · GitHub 問題 ActiveModel::MissingAttributeError (missing attribute: description) が発生する。 構成 class NotificationSerializer &lt; ApplicationSerializer attribute :id attribute :title attribute :description end notifications = Notification.select(:id, :title) render json: notifications...</p>
-  </section>
-  <footer class="entry-footer">February 18, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to Serializerで特定のfieldだけを出力したい" href="https://rengotaku.github.io/posts/4b809adb-7e5a-4a4a-9aa5-3904b217ae66/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      railsのrouteでidを必要としないルーティングを追加したい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 collection を使用する。 比較 resources :notifications, only: %i[index] do get &#34;/on_top&#34;, to: &#34;notifications#on_top&#34; # notification_under GET /notifications/:notification_id/under(.:format) notification#under collection do get &#34;/on_top&#34;, to: &#34;notifications#on_top&#34; # under_notifications GET /notifications/under(.:format) notification#under end member do get &#34;/on_top&#34;, to: &#34;notifications#on_top&#34; # under_notification GET /notifications/:id/under(.:format) notification#under end end Rails 5 Routing Cookbook: 10 recipes for the novice Rails developer and beyond 事象 idを必要...</p>
-  </section>
-  <footer class="entry-footer">February 18, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to railsのrouteでidを必要としないルーティングを追加したい" href="https://rengotaku.github.io/posts/24f5619b-95af-4404-b98d-015f0837b896/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      rspecでエラーテストが失敗する
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 export { subject } に変更 context &#34;test&#34; do subject { raise RuntimeError } it { expect { subject }.to raise_error(RuntimeError) } end 事象 Failure/Error: raise RuntimeError が発生する。 context &#34;test&#34; do subject { raise RuntimeError } it { is_expected.to raise_error(RuntimeError) } end RSpec の is_expected で raise_error を検知したかった - Secret Garden(Instrumental) RSpec/ImplicitSubject エラ...</p>
-  </section>
-  <footer class="entry-footer">February 17, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to rspecでエラーテストが失敗する" href="https://rengotaku.github.io/posts/5b43c92f-d394-416c-9877-0ecc11e77366/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      with_optionsでスッキリ
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>after with_options if: :new_record? do before_validation :initialize_hoge1 before_validation :initialize_hoge2 end def initialize_hoge1 hoge1 end def initialize_hoge2 hoge2 end before before_validation :initialize_hoge1 before_validation :initialize_hoge2 def initialize_hoge1 hoge1 if new_record? end def initialize_hoge2 hoge2 if new_record? end Railsで特定の条件下で走るバリデーションを作りたい - Qiita...</p>
-  </section>
-  <footer class="entry-footer">February 14, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to with_optionsでスッキリ" href="https://rengotaku.github.io/posts/1986b108-1c43-464d-9e38-7b1140568b67/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      Omniauthのsetupをテストしたい
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 def setup omniauth_strategy.options[:consumer_key] = Global..twitter.consumer_key omniauth_strategy.options[:consumer_secret] = Global..twitter.consumer_key_secret render json: { message: &#34;Omniauth setup phase.&#34; }, status: :not_found end RSpec.describe SessionController, type: :controller do subject { get :setup, params: { provider: :twitter } } let(:strategy_options) { Struct.new(:options).new({consumer_key: nil, consumer_secret: nil}) } let(:consumer_key) { &#34;twitter-mock-consumer_key&#34; } let(:consumer_secret) { &#34;twitter-mock-consumer_key_secret&#34; } before do allow(Global.twitter).to receive(:consumer_key).and_return(consumer_key) allow(Global.twitter).to receive(:consumer_key_secret).and_return(consumer_secret) allow(controller.request.env).to receive(:[]).and_call_original allow(controller.request.env).to receive(:[]).with(&#34;omniauth.strategy&#34;).and_return(strategy_options) end context &#34;Success&#34; do it &#34;...</p>
-  </section>
-  <footer class="entry-footer">February 14, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to Omniauthのsetupをテストしたい" href="https://rengotaku.github.io/posts/130dacd5-87b4-4877-a521-5623d7b9be6b/"></a>
-</article>
-<article class="post-entry tag-entry"> 
-
-  <header class="entry-header">
-    <h2>
-      omniauthのTwitterプロバイダーのauthキーをコントローラーで設定
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>解決 遷移するパスが正しくなかった。(/api/auth/:provider/setup の様にscopeをネストしていた) デフォルトで遷移する...</p>
-  </section>
-  <footer class="entry-footer">February 12, 2020
-</footer>
-  <a class="entry-link" aria-label="post link to omniauthのTwitterプロバイダーのauthキーをコントローラーで設定" href="https://rengotaku.github.io/posts/4fce0411-7c96-42a2-8d3e-2861e57754e1/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

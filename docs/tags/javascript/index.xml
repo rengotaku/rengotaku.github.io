@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Wed, 22 Apr 2020 16:56:54 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 22 Apr 2020 16:56:54 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gitlabで特定時間以降のコメントを集約したい</title>
       <link>https://rengotaku.github.io/posts/6ed1568a-e614-4e7d-838f-2ce048eb76b6/</link>

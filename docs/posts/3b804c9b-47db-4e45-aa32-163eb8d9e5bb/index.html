@@ -11,7 +11,7 @@
 <meta name="description" content="解決 requestは複数のcontrollerを使用した場合に使用する。 controllerは単体の動作の確認をする為に確認する。 request spec - Request specs">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/3b804c9b-47db-4e45-aa32-163eb8d9e5bb/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "rails", "ruby", "rspec", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "解決 requestは複数のcontrollerを使用した場合に使用する。 controllerは単体の動作の確認をする為に確認する。\nrequest spec - Request specs - RSpec Rails - RSpec - Relish\nrequire \"rails_helper\"\rRSpec.describe \"Widget management\", :type = :request do\rit \"creates a Widget and redirects to the Widget's page\" do\rget \"/widgets/new\"\rexpect(response).to render_template(:new)\rpost \"/widgets\", :params = { :widget = {:name = \"My Widget\"} }\rexpect(response).to redirect_to(assigns(:widget))\rfollow_redirect!\rexpect(response).to render_template(:show)\rexpect(response.body).to include(\"Widget was successfully created.\")\rend\rit \"does not render a different template\" do\rget \"/widgets/new\"\rexpect(response).to_not render_template(:show)\rend\rend\rrender_views - Controller specs - RSpec Rails - RSpec - Relish\nrequire \"rails_helper\"\rRSpec.describe WidgetsController, :type = :controller do\rrender_views\rdescribe \"GET index\" do\rit \"has a widgets related heading\" do\rget :index\rexpect(response.body).to match /.*widgets/im\rend\rend\rend\r経緯 コントローラーのテストが(typeが)requestで作成されていたので慣習で作成していた。 しかし、sessionを操作に難儀する。\nそして、検索するも、大体がcontrollerに関して書かれた物。\n",
+  "articleBody": "解決 requestは複数のcontrollerを使用した場合に使用する。 controllerは単体の動作の確認をする為に確認する。\nrequest spec - Request specs - RSpec Rails - RSpec - Relish\nrequire \"rails_helper\" RSpec.describe \"Widget management\", :type = :request do it \"creates a Widget and redirects to the Widget's page\" do get \"/widgets/new\" expect(response).to render_template(:new) post \"/widgets\", :params = { :widget = {:name = \"My Widget\"} } expect(response).to redirect_to(assigns(:widget)) follow_redirect! expect(response).to render_template(:show) expect(response.body).to include(\"Widget was successfully created.\") end it \"does not render a different template\" do get \"/widgets/new\" expect(response).to_not render_template(:show) end end render_views - Controller specs - RSpec Rails - RSpec - Relish\nrequire \"rails_helper\" RSpec.describe WidgetsController, :type = :controller do render_views describe \"GET index\" do it \"has a widgets related heading\" do get :index expect(response.body).to match /.*widgets/im end end end 経緯 コントローラーのテストが(typeが)requestで作成されていたので慣習で作成していた。 しかし、sessionを操作に難儀する。\nそして、検索するも、大体がcontrollerに関して書かれた物。\n",
   "wordCount" : "278",
   "inLanguage": "en",
   "datePublished": "2020-06-26T17:13:06+09:00",
@@ -229,7 +229,7 @@ controllerは単体の動作の確認をする為に確認する。</p>
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Mon, 06 Aug 2018 11:20:31 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/cron/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 06 Aug 2018 11:20:31 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/cron/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>dockerのコンテナ内でcronよりrailsタスクを実行する</title>
       <link>https://rengotaku.github.io/posts/b6987182-f19c-40af-bee8-afc04f3078bb/</link>

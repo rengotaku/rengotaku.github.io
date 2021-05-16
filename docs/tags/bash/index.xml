@@ -7,10 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Thu, 27 Aug 2020 11:20:04 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 03 Dec 2020 12:22:58 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>bashで特定の行を抽出したい</title>
+      <link>https://rengotaku.github.io/posts/72f52e45-d8af-4d94-a0da-65a83741cc43/</link>
+      <pubDate>Thu, 03 Dec 2020 12:22:58 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/72f52e45-d8af-4d94-a0da-65a83741cc43/</guid>
+      <description>３〜６行の間 $ awk &amp;#39;NR &amp;gt;= 3 &amp;amp;&amp;amp; NR &amp;lt;= 6&amp;#39; /path/to/file ２行目から $ awk &amp;#39;NR &amp;gt;= 2&amp;#39; /path/to/file 参考 To print a specific line from a file Using sed</description>
+    </item>
     
     <item>
       <title>bash作りで一通りやりたいことしているスクリプト</title>

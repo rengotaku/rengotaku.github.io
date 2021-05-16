@@ -11,7 +11,7 @@
 <meta name="description" content="解決 described_class.perform_later rescue nil RSpec.describe MyJob, type: :job do include ActiveJob::TestHelper context &#39;when `MyError` is raised&#39; do before do allow_any_instance_of(described_class).to receive(:perform).and_raise(MyError.new) end it &#39;makes 4 attempts&#39; do assert_performed_jobs 4 do described_class.perform_later rescue nil end end it &#39;does something in the `retry_on` block&#39; do expect(Something).to receive(:something) perform_enqueued_jobs do described_class.perform_later rescue nil end end end end perform_nowでは再実">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/990bd1dc-2f44-46fa-9fa6-91b5914e7669/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "rails", "ruby", "rspec", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "解決 described_class.perform_later rescue nil\nRSpec.describe MyJob, type: :job do\rinclude ActiveJob::TestHelper\rcontext 'when `MyError` is raised' do\rbefore do\rallow_any_instance_of(described_class).to receive(:perform).and_raise(MyError.new)\rend\rit 'makes 4 attempts' do\rassert_performed_jobs 4 do\rdescribed_class.perform_later rescue nil\rend\rend\rit 'does something in the `retry_on` block' do\rexpect(Something).to receive(:something)\rperform_enqueued_jobs do\rdescribed_class.perform_later rescue nil\rend\rend\rend\rend\rperform_nowでは再実施は発生しないよう\r疑問 rescue nil を付与しなくても動きそう？\n ruby on rails - How to properly test ActiveJob’s retry_on method with rspec? - Stack Overflow\n ",
+  "articleBody": "解決 described_class.perform_later rescue nil\nRSpec.describe MyJob, type: :job do include ActiveJob::TestHelper context 'when `MyError` is raised' do before do allow_any_instance_of(described_class).to receive(:perform).and_raise(MyError.new) end it 'makes 4 attempts' do assert_performed_jobs 4 do described_class.perform_later rescue nil end end it 'does something in the `retry_on` block' do expect(Something).to receive(:something) perform_enqueued_jobs do described_class.perform_later rescue nil end end end end perform_nowでは再実施は発生しないよう\r疑問 rescue nil を付与しなくても動きそう？\n ruby on rails - How to properly test ActiveJob’s retry_on method with rspec? - Stack Overflow\n ",
   "wordCount" : "112",
   "inLanguage": "en",
   "datePublished": "2020-03-06T19:49:43+09:00",
@@ -217,7 +217,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

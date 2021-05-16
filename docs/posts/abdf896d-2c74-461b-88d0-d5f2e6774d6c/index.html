@@ -11,7 +11,7 @@
 <meta name="description" content="解決 to_a を使用する。 例 SomeModel.where(id: [0, 1]).to_a ruby-on-rails – Rails：activerecordの関係を配列に変換する正しい方法は？ - コードログ 起因 プログラム results = self. select( &#39;inquiry.id as">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/abdf896d-2c74-461b-88d0-d5f2e6774d6c/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "rails", "activerecord", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "解決 to_a を使用する。\n例 SomeModel.where(id: [0, 1]).to_a\n ruby-on-rails – Rails：activerecordの関係を配列に変換する正しい方法は？ - コードログ\n 起因 プログラム results = self.\rselect(\r'inquiry.id as inquiry_id',\r'model3.id as model3_id'\r).\rjoins(model1: [:model2, { model3: :model4 }]).\rwhere(model1: { id: [0, 1] }).\rdistinct\r# 上記のActiveRecodeに含めればいいが、同テーブルがinner joinとleft joinに混在しエラーとなる。\r # その為、プログラムでleft joinを請け負っている。\r results2 = Model3.eager_load(:model5).where(id: results.map{ |m| m[:model3_id] }).all\rresults.each do |result|\rinquiry_myobject_relations.each.with_index do |inquiry_myobject_relation, i|\rif result[:model3_id] == results2[:id]\rresult[:model5_id] = results2.model5.id\rinquiry_myobject_relations.delete_at(i) # 一度合致したら以降はしないため\r break\rend\rend\rend\rエラー NoMethodError: undefined method `delete_at' for #\rDid you mean? delete_all\rdelete\rfrom /usr/local/bundle/gems/activerecord-5.0.1/lib/active_record/relation/delegation.rb:123:in `method_missing'\rallって配列とばかり思っていたら、正体は ActiveRecord::Relation でした。\nまた、can't modify frozen Array とdelete_atのような破壊はできない。\r",
+  "articleBody": "解決 to_a を使用する。\n例 SomeModel.where(id: [0, 1]).to_a\n ruby-on-rails – Rails：activerecordの関係を配列に変換する正しい方法は？ - コードログ\n 起因 プログラム results = self. select( 'inquiry.id as inquiry_id', 'model3.id as model3_id' ). joins(model1: [:model2, { model3: :model4 }]). where(model1: { id: [0, 1] }). distinct # 上記のActiveRecodeに含めればいいが、同テーブルがinner joinとleft joinに混在しエラーとなる。 # その為、プログラムでleft joinを請け負っている。 results2 = Model3.eager_load(:model5).where(id: results.map{ |m| m[:model3_id] }).all results.each do |result| inquiry_myobject_relations.each.with_index do |inquiry_myobject_relation, i| if result[:model3_id] == results2[:id] result[:model5_id] = results2.model5.id inquiry_myobject_relations.delete_at(i) # 一度合致したら以降はしないため break end end end エラー NoMethodError: undefined method `delete_at' for #\rDid you mean? delete_all\rdelete\rfrom /usr/local/bundle/gems/activerecord-5.0.1/lib/active_record/relation/delegation.rb:123:in `method_missing'\rallって配列とばかり思っていたら、正体は ActiveRecord::Relation でした。\nまた、can't modify frozen Array とdelete_atのような破壊はできない。\r",
   "wordCount" : "294",
   "inLanguage": "en",
   "datePublished": "2019-07-02T11:05:41+09:00",
@@ -177,15 +177,15 @@ select(
 joins(<span style="color:#e6db74">model1</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">:model2</span>, { <span style="color:#e6db74">model3</span>: <span style="color:#e6db74">:model4</span> }<span style="color:#f92672">]</span>)<span style="color:#f92672">.</span>
 where(<span style="color:#e6db74">model1</span>: { id: <span style="color:#f92672">[</span><span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span><span style="color:#f92672">]</span> })<span style="color:#f92672">.</span>
 distinct
-<span style="color:#75715e"># 上記のActiveRecodeに含めればいいが、同テーブルがinner joinとleft joinに混在しエラーとなる。</span>
-<span style="color:#75715e"># その為、プログラムでleft joinを請け負っている。</span>
+<span style="color:#75715e"># 上記のActiveRecodeに含めればいいが、同テーブルがinner joinとleft joinに混在しエラーとなる。</span>
+<span style="color:#75715e"># その為、プログラムでleft joinを請け負っている。</span>
 results2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Model3</span><span style="color:#f92672">.</span>eager_load(<span style="color:#e6db74">:model5</span>)<span style="color:#f92672">.</span>where(id: results<span style="color:#f92672">.</span>map{ <span style="color:#f92672">|</span>m<span style="color:#f92672">|</span> m<span style="color:#f92672">[</span><span style="color:#e6db74">:model3_id</span><span style="color:#f92672">]</span> })<span style="color:#f92672">.</span>all
 
 results<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>result<span style="color:#f92672">|</span>
   inquiry_myobject_relations<span style="color:#f92672">.</span>each<span style="color:#f92672">.</span>with_index <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>inquiry_myobject_relation, i<span style="color:#f92672">|</span>
     <span style="color:#66d9ef">if</span> result<span style="color:#f92672">[</span><span style="color:#e6db74">:model3_id</span><span style="color:#f92672">]</span> <span style="color:#f92672">==</span> results2<span style="color:#f92672">[</span><span style="color:#e6db74">:id</span><span style="color:#f92672">]</span>
       result<span style="color:#f92672">[</span><span style="color:#e6db74">:model5_id</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> results2<span style="color:#f92672">.</span>model5<span style="color:#f92672">.</span>id
-      inquiry_myobject_relations<span style="color:#f92672">.</span>delete_at(i) <span style="color:#75715e"># 一度合致したら以降はしないため</span>
+      inquiry_myobject_relations<span style="color:#f92672">.</span>delete_at(i) <span style="color:#75715e"># 一度合致したら以降はしないため</span>
       <span style="color:#66d9ef">break</span>
     <span style="color:#66d9ef">end</span>
   <span style="color:#66d9ef">end</span>
@@ -222,7 +222,7 @@ from /usr/local/bundle/gems/activerecord-5.0.1/lib/active_record/relation/delega
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

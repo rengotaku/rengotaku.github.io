@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://rengotaku.github.io/index.xml">
 
 
@@ -40,7 +40,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rengotaku.github.io/" />
-<meta property="og:updated_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-05-15T21:11:27+09:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vegetable Programing"/>
 <meta name="twitter:description" content=""/>
@@ -138,141 +138,141 @@ if (!doNotTrack) {
 
   <header class="entry-header">
     <h2>
-      Let&#39;s Encryptのインストールからnginxの設定まで
+      railsタスクを変数に格納して実行したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>ツールをインストール $ sudo curl https://dl.eff.org/certbot-auto -o /usr/bin/certbot-auto $ sudo chmod 700 /usr/bin/certbot-auto 実行結果 $ sudo curl https://dl.eff.org/certbot-auto -o /usr/bin/certbot-auto % Total % Received % Xferd Average Speed Time Time Time Current Dload Upload Total Spent Left Speed 100 68023 100 68023 0 0 51134 0 0:00:01 0:00:01 --:--:-- 51106 $ sudo chmod 700 /usr/bin/certbot-auto ngin...</p>
+    <p>事象 railsタスクの実行コマンドを変数に入れて実行したいが、予期しないエラーが発生する。 RAILS_TASK=&#39;rbenv exec bundle exec rails hogehoge:hoge1[param1,1,2]&#39; $RAILS_TASK # =&gt; ./test.sh: line 5: [: too many arguments 解決 “...</p>
   </section>
-  <footer class="entry-footer">July 3, 2019
+  <footer class="entry-footer">July 30, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to Let&#39;s Encryptのインストールからnginxの設定まで" href="https://rengotaku.github.io/posts/c2a31b1b-732c-4faf-a7be-c52dc67ae44c/"></a>
+  <a class="entry-link" aria-label="post link to railsタスクを変数に格納して実行したい" href="https://rengotaku.github.io/posts/d05bd6f3-f718-4da9-9860-ed437c72f657/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      dockerでrails consoleする際の問題解消
+      濁点、半濁点の文字を取得
     </h2>
   </header>
   <section class="entry-content">
-    <p>日本語が入力できない export LANG=&#34;C.UTF-8&#34;; rails c する 便利alias alias dcrailsconsole=&#34;docker-compose -f ~/path/to/docker-compose.yml exec [rails service name] sh -c &#39;export LANG=\&#34;C.UTF-8\&#34;; rails c&#39;&#34; トラブルシューティング Dockerfileに記述しても、execで...</p>
+    <p>解決 def find_dakuon_and_handakuon(kana) codepoints = kana.codepoints[0] moji = codepoints.chr(Encoding::UTF_8) dakuon = moji &#43; &#34;\u3099&#34; # 濁点 handakuon = moji &#43; &#34;\u309a&#34; # 半濁点 [ ActiveSupport::Multibyte::Unicode.normalize(dakuon, :c), ActiveSupport::Multibyte::Unicode.normalize(handakuon, :c) ] end 実行結果 find_dakuon_and_handakuon(&#39;ハ&#39;) # =&gt;...</p>
   </section>
-  <footer class="entry-footer">July 2, 2019
+  <footer class="entry-footer">July 30, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to dockerでrails consoleする際の問題解消" href="https://rengotaku.github.io/posts/ba5bdc0e-8d02-47cd-8770-1c2b3850b7d3/"></a>
+  <a class="entry-link" aria-label="post link to 濁点、半濁点の文字を取得" href="https://rengotaku.github.io/posts/5b8cab5d-c20a-477d-834b-6c2e2f53e670/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      ActiveRecordの結果を配列に変換
+      viの基本操作
     </h2>
   </header>
   <section class="entry-content">
-    <p>解決 to_a を使用する。 例 SomeModel.where(id: [0, 1]).to_a ruby-on-rails – Rails：activerecordの関係を配列に変換する正しい方法は？ - コードログ 起因 プログラム results = self. select( &#39;inquiry.id as...</p>
+    <p>1文字の移動 操作 結果 h 左 j 下 k 上 l 右 1単語の移動 操作 結果 w 次の単語の先頭 (word) b 現在または前の単語の先頭 e 現在または次の単語の末尾 行での移動 操作...</p>
   </section>
-  <footer class="entry-footer">July 2, 2019
+  <footer class="entry-footer">July 24, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to ActiveRecordの結果を配列に変換" href="https://rengotaku.github.io/posts/abdf896d-2c74-461b-88d0-d5f2e6774d6c/"></a>
+  <a class="entry-link" aria-label="post link to viの基本操作" href="https://rengotaku.github.io/posts/62f7585b-3291-42f9-8f8c-3394e4f37000/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      propがoffにできない
+      特定のポートで接続が行われていない際に実行する
     </h2>
   </header>
   <section class="entry-content">
-    <p>結論 第二引数を ``false(文字列) で渡していた為。 事象 $(&#39;#telephone&#39;).on(&#39;input&#39;, function(e) { if($(this).val().length &gt; 0){ $(&#39;#mail&#39;).prop(&#39;disabled&#39;, &#39;true&#39;); } else { $(&#39;#cashback_search_step1_form_mail&#39;).prop(&#39;disabled&#39;, &#39;false&#39;); } }); 対処 $(&#39;#telephone&#39;).on(&#39;input&#39;, function(e) { if($(this).val().length &gt; 0){ $(&#39;#mail&#39;).prop(&#39;disabled&#39;, true); } else { $(&#39;#cashback_search_step1_form_mail&#39;).prop(&#39;disabled&#39;, false); // &lt;= boolean値で...</p>
+    <p>while : do if [ $(netstat -n | fgrep &#39;ESTABLISHED&#39; | fgrep &#39;:21&#39; | wc -l) -eq 0 ]; then echo &#34;nobody users established.&#34; break else echo &#34;wait 1 minute.&#34; sleep 1m fi done vsftpdの再起動時などにユーザ接続していな事を確認する時なんかに利用...</p>
   </section>
-  <footer class="entry-footer">July 1, 2019
+  <footer class="entry-footer">July 22, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to propがoffにできない" href="https://rengotaku.github.io/posts/b0720322-8cc3-48cf-9f23-cc10ef58076a/"></a>
+  <a class="entry-link" aria-label="post link to 特定のポートで接続が行われていない際に実行する" href="https://rengotaku.github.io/posts/46ecb3df-474e-42de-bdab-24e9d8e0e7c2/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      ターミナルを再起動
+      FTPまわりのログ確認
     </h2>
   </header>
   <section class="entry-content">
-    <p>コマンド exec $SHELL -l 実行例 $ exec $SHELL -l $ # 何も発生しない シェルを再起動させる簡単な方法 - Qiita...</p>
+    <p># tail -f /var/log/vsftpd.log # less /var/log/messages # less /var/log/secure...</p>
   </section>
-  <footer class="entry-footer">July 1, 2019
+  <footer class="entry-footer">July 22, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to ターミナルを再起動" href="https://rengotaku.github.io/posts/0bc77502-05c2-4f1a-b791-9cc9dda6d4d9/"></a>
+  <a class="entry-link" aria-label="post link to FTPまわりのログ確認" href="https://rengotaku.github.io/posts/f512848b-2c16-4d54-8cd5-64b2d6a8c346/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      SQLで日付の計算
+      ゼロ埋めしたい
     </h2>
   </header>
   <section class="entry-content">
-    <p>日付を加算・減産 NOW() - INTERVAL 60 SECOND 単位 MICROSECOND SECOND MINUTE HOUR DAY WEEK MONTH 【MySQL】日時の計算（加算・減算） - Qiita ゼロ時から検索したい DATE_FORMAT(NOW() - INTERVAL 60 DAY, &#39;%Y-%m-%d 00:00:00&#39; ) mySQLの日付処...</p>
+    <p>printf &#34;%0Xd\n&#34; を使用する $ printf &#34;%05d\n&#34; 99 00099 numbers - How to zero pad a sequence of integers in bash so that all have the same width? - Stack Overflow...</p>
   </section>
-  <footer class="entry-footer">June 27, 2019
+  <footer class="entry-footer">July 19, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to SQLで日付の計算" href="https://rengotaku.github.io/posts/be6a33b1-4871-40f6-b154-b4f8368d9490/"></a>
+  <a class="entry-link" aria-label="post link to ゼロ埋めしたい" href="https://rengotaku.github.io/posts/d5a6610a-3eb3-4467-9c79-ee0e1cd7ce32/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      コンフリクトした際の対応
+      ワンライナーでパスワードを生成
     </h2>
   </header>
   <section class="entry-content">
-    <p>上の方は、コンフリクトしているファイルを別名でブランチを切る手順です。 コンフリクトファイルのみを消したい場合は、半ばくらいから参考にして下さ...</p>
+    <p>openssl rand を使用 $ openssl rand -base64 12 6kRz&#43;U9TCFXs5UsI $ openssl rand -base64 12 | cut -c -12 rncJWN21ftbV macOS の標準機能でパスワードをランダム生成する方法 - Qiita...</p>
   </section>
-  <footer class="entry-footer">June 27, 2019
+  <footer class="entry-footer">July 19, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to コンフリクトした際の対応" href="https://rengotaku.github.io/posts/799718e7-551a-433b-9578-4a6c8277549d/"></a>
+  <a class="entry-link" aria-label="post link to ワンライナーでパスワードを生成" href="https://rengotaku.github.io/posts/8d53036e-9ec1-4376-92ee-ede1388c21f8/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      eclipseで\（バックスラッシュ）を入力の仕方
+      クラス内でselfメソッドをクラス名を指定せず呼び出したい
     </h2>
   </header>
   <section class="entry-content">
-    <p>「option &#43; ￥」で入力しなければいけないようです。 文字のエスケープの際にeclipseに直接いれると￥と入力されつまづきました。...</p>
+    <p>解決 self.class.method_name で呼び出す class Person def call(num) puts &#34;#{self.class.name(num)}だよ&#34; end def self.name(num) if num = 1 &#39;田中&#39; else &#39;名無し&#39; end end end...</p>
   </section>
-  <footer class="entry-footer">June 27, 2019
+  <footer class="entry-footer">July 19, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to eclipseで\（バックスラッシュ）を入力の仕方" href="https://rengotaku.github.io/posts/6013c8db-1fb0-4ffe-b3e5-dedef130c085/"></a>
+  <a class="entry-link" aria-label="post link to クラス内でselfメソッドをクラス名を指定せず呼び出したい" href="https://rengotaku.github.io/posts/0a337323-bd67-44b1-b3c9-c5c8ebc05336/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      コミット入れ替えたい
+      日付計算
     </h2>
   </header>
   <section class="entry-content">
-    <p>問題点 994bb38 と 66790c3 を一緒にプッシュしてしまった。 要 望 66790c3 分をプッシュ結果から削除したい。 解決策 994bb38 と 66790c3 のコミットを入れ替えて、最新のコミットを 994b...</p>
+    <p>数日前 since を使用する [1] pry(main)&gt; 2.days.since =&gt; Sun, 21 Jul 2019 14:50:21 JST &#43;09:00 Rails の Time#since で混乱したのでまとめる - 雀巽の日記帳...</p>
   </section>
-  <footer class="entry-footer">June 27, 2019
+  <footer class="entry-footer">July 19, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to コミット入れ替えたい" href="https://rengotaku.github.io/posts/4e44817f-d5d0-481a-930f-6a591fb92f6f/"></a>
+  <a class="entry-link" aria-label="post link to 日付計算" href="https://rengotaku.github.io/posts/85d69365-98ff-48da-9447-89506aa00079/"></a>
 </article>
 <article class="post-entry"> 
 
   <header class="entry-header">
     <h2>
-      pom.xmlに記述するpowermockの依存関係
+      activerecord-importで一括してupsert
     </h2>
   </header>
   <section class="entry-content">
-    <p>&lt;dependency&gt; &lt;groupId&gt;org.powermock&lt;/groupId&gt; &lt;artifactId&gt;powermock-api-mockito&lt;/artifactId&gt; &lt;version&gt;1.6.3&lt;/version&gt; &lt;scope&gt;test&lt;/scope&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.powermock&lt;/groupId&gt; &lt;artifactId&gt;powermock-module-junit4&lt;/artifactId&gt; &lt;version&gt;1.6.3&lt;/version&gt; &lt;scope&gt;test&lt;/scope&gt; &lt;/dependency&gt;...</p>
+    <p>解決 column_names = User.column_names models = [] # datasには[{id: 1, name: &#39;hoge&#39;...}...] datas.each do |data| User.find_or_initialize_by(id: data[:id]) do |model| # FIXME: In this case, new_record is not working model.assign_attributes(data) models &lt;&lt; model end end User.import(models, on_duplicate_key_update: { conflict_target: %i(id), columns: column_names }) new_record?メソッドで...</p>
   </section>
-  <footer class="entry-footer">June 27, 2019
+  <footer class="entry-footer">July 18, 2019
 </footer>
-  <a class="entry-link" aria-label="post link to pom.xmlに記述するpowermockの依存関係" href="https://rengotaku.github.io/posts/f5614b24-2ef7-4665-88b7-49b4447f19f4/"></a>
+  <a class="entry-link" aria-label="post link to activerecord-importで一括してupsert" href="https://rengotaku.github.io/posts/260b671b-41a1-4472-84d7-86aaa3c9d2e3/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

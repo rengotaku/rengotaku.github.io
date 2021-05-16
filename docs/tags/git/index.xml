@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Mon, 09 Nov 2020 14:29:21 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 09 Nov 2020 14:29:21 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cherry-pickをマージコミット、各々のコミットでどのような差分が出るか？</title>
       <link>https://rengotaku.github.io/posts/258130eb-99da-4bcb-ab9f-e50e0813c6cb/</link>

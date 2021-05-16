@@ -11,7 +11,7 @@
 <meta name="description" content="(個人の)開発環境とか本番環境で使用している起動シェル。 使い方は、railsのプロジェクトフォルダに設置します。起動するときは「./up de">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/a218f9ec-4966-42b0-83d0-64a92ea20bd4/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "shellscript", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "(個人の)開発環境とか本番環境で使用している起動シェル。   使い方は、railsのプロジェクトフォルダに設置します。起動するときは「./up dev」とうつだけ。既に起動していたらpidかpsから判断して滅してくれます。\n  同じようなプロジェクトを複数立ち上げたときに、別のプロジェクトのプロセスを滅していたような。。。一つだと問題ないです！\n  #!/bin/sh\r####################\r# 指定した環境に即してプロジェクトを起動する。\r####################\r####################\r# base setting\r####################\r# シェルパス\rSCRIPT_DIR=$(cd $(dirname $0); pwd)\rENVS=(\"dev\" \"test\" \"production\")\r####################\r# usage\r####################\rcmdname=`basename $0`\rfunction usage()\r{\renv_str=\"$(IFS=,; echo \"${ENVS[*]}\")\"\recho \"Usage: ${cmdname}ENV [OPTIONS]\"\recho \"\"\recho \"ENV:\"\recho \" using ${env_str}.\"\recho \"\"\recho \"Options:\"\recho \" -p, Server port(e.g. 3000).\"\recho \" --migrate, If ENV was production, execute 'rails db:migrate'.\"\recho \" --clean, Execute 'rails assets:clean'.\"\recho \" --nokill, Don't kill process of server ahead of up it.\"\recho \"\"\recho \"Examples:\"\recho \" up.sh dev\"\recho \" up.sh dev -p 3000 --migrate --clean --nokill\"\rexit 1\r}\r####################\r# Parameter varidations\r####################\rdeclare -i argc=0\rdeclare -a argv=()\rif ! `echo ${ENVS[@]} | grep -q \"$1\"` ; then\rusage\rexit 1\rfi\rtarget_env=$1\rshift\rwhile (( $#  0 ))\rdo\rcase \"$1\" in\r-*)\rif [[ \"$1\" =~ '-p' ]]; then\rp_flag='TRUE'\rfi\rif [[ \"$1\" =~ '--migrate' ]]; then\rm_flag='TRUE'\rfi\rif [[ \"$1\" =~ '--clean' ]]; then\rc_flag='TRUE'\rfi\rif [[ \"$1\" =~ '--nokill' ]]; then\rnk_flag='TRUE'\rfi\rshift\r;;\r*)\r((++argc))\rargv=(\"${argv[@]}\" \"$1\")\rshift\r;;\resac\rdone\r####################\r# Variables\r####################\r# プロジェクト名\rPROJECT_NAME=`echo ${SCRIPT_DIR} | awk -F \"/\" '{ print $NF }'`\r# ポート\rif [ \"${p_flag}\" = \"TRUE\" ]; then\rPORT=\"-p ${argv[0]}\"\relse\rPORT=\"\"\rfi\rUP_LOG=\"./tmp/_up.log\"\r####################\r# Functions\r####################\r# 存在すれば削除する\rifrm () {\rif [ -e $1 ]; then\recho \"== ${1}exist and delete it. ==\"\rrm -rf $1\rfi\r}\r# タイトルメッセージを出力\rputst () {\rif [ \"${1}\" = \"\" ]; then\recho \"\"\relse\recho \"== ${1}==\"\rfi\r}\r# インフォメッセージを出力\rputsi () {\rif [ \"${1}\" = \"\" ]; then\recho \"\"\relse\recho \"== ${1}\"\rfi\r}\r# 処理終了を出力\rputsd () {\rputsi \"done.\"\r}\r# サーバープロセスをkillする。方法は二つ(1.pidを確認 2.動作しているプロセスを指定文字でグレップ)\r# 引数: pidパス、プロジェクト名\rkills () {\rif [ \"${nk_flag}\" = \"TRUE\" ]; then\rputsi \"Not kill.\"\rreturn 0\rfi\rif [ -e $1 ]; then\rkill `cat \"${1}\"`\rputsi \"The way of pid.\"\rreturn 0\rfi\rpsinfo=`ps aux | grep -w $2 | grep -v grep`\rif [ ! \"${psinfo}\" = \"\" ]; then\r# FIXME: 実行結果を渡そうとするとエラーが発生する\rps aux | grep -w $2 | grep -v grep | awk '{ print \"kill -9\", $2 }' | sh\rputsi \"The way of ps.\"\rreturn 0\rfi\rputsi \"Not kill.\"\r}\r####################\r# Main\r####################\rputst \"**Start stand up**\"\rif [ \"${target_env}\" = \"dev\" ]; then\rtarget_env=development\rputst \"Process kill\"\rkills \"tmp/pids/server.pid\" \"puma\"\rputsd\rif [ \"${c_flag}\" = \"TRUE\" ]; then\rputst \"Clean assets\"\rbundle exec rails tmp:cache:clear RAILS_ENV=${target_env}\rbundle exec rails assets:clobber RAILS_ENV=${target_env}\rputsd\rfi\rputst \"Up server\"\r# 「-d」でデーモン化すると、css、jsの読み込みがされなくなる(precompileすれば大丈夫)\rbundle exec rails s -b 0.0.0.0 $PORT -e ${target_env} 2 $UP_LOG 1/dev/null \u0026\rputsi \"Waiting...\"\rsleep 5s\r# ログファイルにエラーが記載されているか？\rif [ -s $UP_LOG ]; then putsi \"FAILD: set up rails.\"; exit 1; fi\rputsd\rSELF_IP=`hostname -I | cut -f2 -d' '` #自身のＩＰを取得\rif [ \"${PORT}\" = \"\" ]; then\rputsi \"IP is $SELF_IP\"\relse\rputsi \"IP is $SELF_IP:${argv[0]}\"\rfi\rputsd\relif [ \"${target_env}\" = \"test\" ]; then\rtarget_env=test\rputst \"Process kill\"\rkills \"/home/app/run/$PROJECT_NAME.pid\" \"\\[${PROJECT_NAME}\\]\"\rputsd\rif [ \"${c_flag}\" = \"TRUE\" ]; then\rputst \"Clean assets\"\rbundle exec rails assets:clobber RAILS_ENV=${target_env} # クリーンしても直近３バージョンは保持される\rputsd\rfi\rputst \"Assets compile\"\rbundle exec rails assets:precompile RAILS_ENV=${target_env}\rputsd\rputst \"Up server\"\rRAILS_ENV=${target_env} bundle exec puma -w 4 $PORT -d 2 $UP_LOG 1/dev/null\rputsi \"Waiting...\"\rsleep 5s\r# ログファイルにエラーが記載されているか？\rif [ -s $UP_LOG ]; then putsi \"FAILD: set up rails.\"; exit 1; fi\rputsd\relif [ \"${target_env}\" = \"production\" ]; then\rtarget_env=production\rputst \"Process kill\"\rkills \"/home/app/run/$PROJECT_NAME.pid\" \"\\[${PROJECT_NAME}\\]\"\rputsd\rif [ \"${c_flag}\" = \"TRUE\" ]; then\rputst \"Clean assets\"\rbundle exec rails assets:clobber RAILS_ENV=${target_env} # クリーンしても直近３バージョンは保持される\rputsd\rfi\rif [ \"${m_flag}\" = \"TRUE\" ]; then\rputst \"Migration\"\rbundle exec rails db:migrate RAILS_ENV=${target_env}\rbundle exec rails db:migrate:status RAILS_ENV=${target_env}\rputsd\rfi\rputst \"Assets compile\"\rbundle exec rails assets:precompile RAILS_ENV=${target_env}\rputsd\rputst \"Update crontab\"\rRAILS_ENV=${target_env} bundle exec whenever --update-crontab\rputsd\rputst \"Up server\"\r# ポートを指定するとsockが使用できない\rSECRET_KEY_BASE=`bundle exec rails secret` RAILS_SERVE_STATIC_FILES=true RAILS_ENV=${target_env} bundle exec puma -w 4 $PORT -d 2 $UP_LOG 1/dev/null\rputsi \"Waiting...\"\rsleep 5s\r# ログファイルにエラーが記載されているか？\rif [ -s $UP_LOG ]; then putsi \"FAILD: set up rails.\"; exit 1; fi\rputsd\rfi\rputst \"Stand up as ${target_env}\"\r",
+  "articleBody": "(個人の)開発環境とか本番環境で使用している起動シェル。   使い方は、railsのプロジェクトフォルダに設置します。起動するときは「./up dev」とうつだけ。既に起動していたらpidかpsから判断して滅してくれます。\n  同じようなプロジェクトを複数立ち上げたときに、別のプロジェクトのプロセスを滅していたような。。。一つだと問題ないです！\n  #!/bin/sh #################### # 指定した環境に即してプロジェクトを起動する。 #################### #################### # base setting #################### # シェルパス SCRIPT_DIR=$(cd $(dirname $0); pwd) ENVS=(\"dev\" \"test\" \"production\") #################### # usage #################### cmdname=`basename $0` function usage() { env_str=\"$(IFS=,; echo \"${ENVS[*]}\")\" echo \"Usage: ${cmdname}ENV [OPTIONS]\" echo \"\" echo \"ENV:\" echo \" using ${env_str}.\" echo \"\" echo \"Options:\" echo \" -p, Server port(e.g. 3000).\" echo \" --migrate, If ENV was production, execute 'rails db:migrate'.\" echo \" --clean, Execute 'rails assets:clean'.\" echo \" --nokill, Don't kill process of server ahead of up it.\" echo \"\" echo \"Examples:\" echo \" up.sh dev\" echo \" up.sh dev -p 3000 --migrate --clean --nokill\" exit 1 } #################### # Parameter varidations #################### declare -i argc=0 declare -a argv=() if ! `echo ${ENVS[@]} | grep -q \"$1\"` ; then usage exit 1 fi target_env=$1 shift while (( $#  0 )) do case \"$1\" in -*) if [[ \"$1\" =~ '-p' ]]; then p_flag='TRUE' fi if [[ \"$1\" =~ '--migrate' ]]; then m_flag='TRUE' fi if [[ \"$1\" =~ '--clean' ]]; then c_flag='TRUE' fi if [[ \"$1\" =~ '--nokill' ]]; then nk_flag='TRUE' fi shift ;; *) ((++argc)) argv=(\"${argv[@]}\" \"$1\") shift ;; esac done #################### # Variables #################### # プロジェクト名 PROJECT_NAME=`echo ${SCRIPT_DIR} | awk -F \"/\" '{ print $NF }'` # ポート if [ \"${p_flag}\" = \"TRUE\" ]; then PORT=\"-p ${argv[0]}\" else PORT=\"\" fi UP_LOG=\"./tmp/_up.log\" #################### # Functions #################### # 存在すれば削除する ifrm () { if [ -e $1 ]; then echo \"== ${1}exist and delete it. ==\" rm -rf $1 fi } # タイトルメッセージを出力 putst () { if [ \"${1}\" = \"\" ]; then echo \"\" else echo \"== ${1}==\" fi } # インフォメッセージを出力 putsi () { if [ \"${1}\" = \"\" ]; then echo \"\" else echo \"== ${1}\" fi } # 処理終了を出力 putsd () { putsi \"done.\" } # サーバープロセスをkillする。方法は二つ(1.pidを確認 2.動作しているプロセスを指定文字でグレップ) # 引数: pidパス、プロジェクト名 kills () { if [ \"${nk_flag}\" = \"TRUE\" ]; then putsi \"Not kill.\" return 0 fi if [ -e $1 ]; then kill `cat \"${1}\"` putsi \"The way of pid.\" return 0 fi psinfo=`ps aux | grep -w $2 | grep -v grep` if [ ! \"${psinfo}\" = \"\" ]; then # FIXME: 実行結果を渡そうとするとエラーが発生する ps aux | grep -w $2 | grep -v grep | awk '{ print \"kill -9\", $2 }' | sh putsi \"The way of ps.\" return 0 fi putsi \"Not kill.\" } #################### # Main #################### putst \"**Start stand up**\" if [ \"${target_env}\" = \"dev\" ]; then target_env=development putst \"Process kill\" kills \"tmp/pids/server.pid\" \"puma\" putsd if [ \"${c_flag}\" = \"TRUE\" ]; then putst \"Clean assets\" bundle exec rails tmp:cache:clear RAILS_ENV=${target_env} bundle exec rails assets:clobber RAILS_ENV=${target_env} putsd fi putst \"Up server\" # 「-d」でデーモン化すると、css、jsの読み込みがされなくなる(precompileすれば大丈夫) bundle exec rails s -b 0.0.0.0 $PORT -e ${target_env} 2 $UP_LOG 1/dev/null \u0026 putsi \"Waiting...\" sleep 5s # ログファイルにエラーが記載されているか？ if [ -s $UP_LOG ]; then putsi \"FAILD: set up rails.\"; exit 1; fi putsd SELF_IP=`hostname -I | cut -f2 -d' '` #自身のＩＰを取得 if [ \"${PORT}\" = \"\" ]; then putsi \"IP is $SELF_IP\" else putsi \"IP is $SELF_IP:${argv[0]}\" fi putsd elif [ \"${target_env}\" = \"test\" ]; then target_env=test putst \"Process kill\" kills \"/home/app/run/$PROJECT_NAME.pid\" \"\\[${PROJECT_NAME}\\]\" putsd if [ \"${c_flag}\" = \"TRUE\" ]; then putst \"Clean assets\" bundle exec rails assets:clobber RAILS_ENV=${target_env} # クリーンしても直近３バージョンは保持される putsd fi putst \"Assets compile\" bundle exec rails assets:precompile RAILS_ENV=${target_env} putsd putst \"Up server\" RAILS_ENV=${target_env} bundle exec puma -w 4 $PORT -d 2 $UP_LOG 1/dev/null putsi \"Waiting...\" sleep 5s # ログファイルにエラーが記載されているか？ if [ -s $UP_LOG ]; then putsi \"FAILD: set up rails.\"; exit 1; fi putsd elif [ \"${target_env}\" = \"production\" ]; then target_env=production putst \"Process kill\" kills \"/home/app/run/$PROJECT_NAME.pid\" \"\\[${PROJECT_NAME}\\]\" putsd if [ \"${c_flag}\" = \"TRUE\" ]; then putst \"Clean assets\" bundle exec rails assets:clobber RAILS_ENV=${target_env} # クリーンしても直近３バージョンは保持される putsd fi if [ \"${m_flag}\" = \"TRUE\" ]; then putst \"Migration\" bundle exec rails db:migrate RAILS_ENV=${target_env} bundle exec rails db:migrate:status RAILS_ENV=${target_env} putsd fi putst \"Assets compile\" bundle exec rails assets:precompile RAILS_ENV=${target_env} putsd putst \"Update crontab\" RAILS_ENV=${target_env} bundle exec whenever --update-crontab putsd putst \"Up server\" # ポートを指定するとsockが使用できない SECRET_KEY_BASE=`bundle exec rails secret` RAILS_SERVE_STATIC_FILES=true RAILS_ENV=${target_env} bundle exec puma -w 4 $PORT -d 2 $UP_LOG 1/dev/null putsi \"Waiting...\" sleep 5s # ログファイルにエラーが記載されているか？ if [ -s $UP_LOG ]; then putsi \"FAILD: set up rails.\"; exit 1; fi putsd fi putst \"Stand up as ${target_env}\" ",
   "wordCount" : "1184",
   "inLanguage": "en",
   "datePublished": "2018-04-25T10:55:02+09:00",
@@ -202,18 +202,18 @@ cmdname<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>b
   echo <span style="color:#e6db74">&#34;Examples:&#34;</span>
   echo <span style="color:#e6db74">&#34;  up.sh dev&#34;</span>
   echo <span style="color:#e6db74">&#34;  up.sh dev -p 3000 --migrate --clean --nokill&#34;</span>
-  exit 1
+  exit <span style="color:#ae81ff">1</span>
 <span style="color:#f92672">}</span>
 
 <span style="color:#75715e">####################</span>
 <span style="color:#75715e"># Parameter varidations</span>
 <span style="color:#75715e">####################</span>
-declare -i argc<span style="color:#f92672">=</span>0
+declare -i argc<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
 declare -a argv<span style="color:#f92672">=()</span>
 
 <span style="color:#66d9ef">if</span> ! <span style="color:#e6db74">`</span>echo <span style="color:#e6db74">${</span>ENVS[@]<span style="color:#e6db74">}</span> | grep -q <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">`</span> ; <span style="color:#66d9ef">then</span>
   usage
-  exit 1
+  exit <span style="color:#ae81ff">1</span>
 <span style="color:#66d9ef">fi</span>
 target_env<span style="color:#f92672">=</span>$1
 shift
@@ -294,13 +294,13 @@ putsd <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
 kills <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>nk_flag<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;TRUE&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
     putsi <span style="color:#e6db74">&#34;Not kill.&#34;</span>
-    <span style="color:#66d9ef">return</span> 0
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
   <span style="color:#66d9ef">fi</span>
 
   <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -e $1 <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
     kill <span style="color:#e6db74">`</span>cat <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>1<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">`</span>
     putsi <span style="color:#e6db74">&#34;The way of pid.&#34;</span>
-    <span style="color:#66d9ef">return</span> 0
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
   <span style="color:#66d9ef">fi</span>
 
   psinfo<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>ps aux | grep -w $2 | grep -v grep<span style="color:#e6db74">`</span>
@@ -308,7 +308,7 @@ kills <span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e"># FIXME: 実行結果を渡そうとするとエラーが発生する</span>
     ps aux | grep -w $2 | grep -v grep | awk <span style="color:#e6db74">&#39;{ print &#34;kill -9&#34;, $2 }&#39;</span> | sh
     putsi <span style="color:#e6db74">&#34;The way of ps.&#34;</span>
-    <span style="color:#66d9ef">return</span> 0
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
   <span style="color:#66d9ef">fi</span>
 
   putsi <span style="color:#e6db74">&#34;Not kill.&#34;</span>
@@ -442,7 +442,7 @@ putst <span style="color:#e6db74">&#34;Stand up as </span><span style="color:#e6
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

@@ -7,10 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Mon, 10 Feb 2020 11:27:58 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/td-agent/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Wed, 23 Dec 2020 15:55:19 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/td-agent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>td-agentでtailでログを読み込ませる際にフォーマットが違うのでアウトプットされない</title>
+      <link>https://rengotaku.github.io/posts/dd87555c-4df5-4d67-8679-1f17f5e0ed8f/</link>
+      <pubDate>Wed, 23 Dec 2020 15:55:19 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/dd87555c-4df5-4d67-8679-1f17f5e0ed8f/</guid>
+      <description>解決 applog.confのsourceのformatをmultilineからjsonに変更 json - Fluentd 起因 type tailで読みとったRailsのlo</description>
+    </item>
     
     <item>
       <title>td-agentをdockerで動かす</title>

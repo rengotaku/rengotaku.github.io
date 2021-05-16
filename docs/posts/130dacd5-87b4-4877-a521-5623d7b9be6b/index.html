@@ -11,7 +11,7 @@
 <meta name="description" content="解決 def setup omniauth_strategy.options[:consumer_key] = Global..twitter.consumer_key omniauth_strategy.options[:consumer_secret] = Global..twitter.consumer_key_secret render json: { message: &#34;Omniauth setup phase.&#34; }, status: :not_found end RSpec.describe SessionController, type: :controller do subject { get :setup, params: { provider: :twitter } } let(:strategy_options) { Struct.new(:options).new({consumer_key: nil, consumer_secret: nil}) } let(:consumer_key) { &#34;twitter-mock-consumer_key&#34; } let(:consumer_secret) { &#34;twitter-mock-consumer_key_secret&#34; } before do allow(Global.twitter).to receive(:consumer_key).and_return(consumer_key) allow(Global.twitter).to receive(:consumer_key_secret).and_return(consumer_secret) allow(controller.request.env).to receive(:[]).and_call_original allow(controller.request.env).to receive(:[]).with(&#34;omniauth.strategy&#34;).and_return(strategy_options) end context &#34;Success&#34; do it &#34">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/130dacd5-87b4-4877-a521-5623d7b9be6b/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "rails", "ruby", "oauth", "rspec", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "解決 def setup\romniauth_strategy.options[:consumer_key] = Global..twitter.consumer_key\romniauth_strategy.options[:consumer_secret] = Global..twitter.consumer_key_secret\rrender json: { message: \"Omniauth setup phase.\" }, status: :not_found\rend\rRSpec.describe SessionController, type: :controller do\rsubject { get :setup, params: { provider: :twitter } }\rlet(:strategy_options) { Struct.new(:options).new({consumer_key: nil, consumer_secret: nil}) }\rlet(:consumer_key) { \"twitter-mock-consumer_key\" }\rlet(:consumer_secret) { \"twitter-mock-consumer_key_secret\" }\rbefore do\rallow(Global.twitter).to receive(:consumer_key).and_return(consumer_key)\rallow(Global.twitter).to receive(:consumer_key_secret).and_return(consumer_secret)\rallow(controller.request.env).to receive(:[]).and_call_original\rallow(controller.request.env).to receive(:[]).with(\"omniauth.strategy\").and_return(strategy_options)\rend\rcontext \"Success\" do\rit \"カスタムキーのセットアップを行う\" do\rsubject\raggregate_failures do\rexpect(strategy_options.options[:consumer_key]).to eq consumer_key\rexpect(strategy_options.options[:consumer_secret]).to eq consumer_secret\rexpect(response).to have_http_status(:not_found)\rend\rend\rend\rend\r注意点 paramsの設定 subject { get :setup, params: { provider: :twitter } }\n 【Rspec】ネストされているコントローラーのテストについて。「No route matches」と言わせない書き方 - 文系人間がエンジニアを目指すブログ\n 元の値を引用 allow(controller.request.env).to receive(:[]).and_call_original\n Rspec | Make a mock against hash - Qiita\n ",
+  "articleBody": "解決 def setup omniauth_strategy.options[:consumer_key] = Global..twitter.consumer_key omniauth_strategy.options[:consumer_secret] = Global..twitter.consumer_key_secret render json: { message: \"Omniauth setup phase.\" }, status: :not_found end RSpec.describe SessionController, type: :controller do subject { get :setup, params: { provider: :twitter } } let(:strategy_options) { Struct.new(:options).new({consumer_key: nil, consumer_secret: nil}) } let(:consumer_key) { \"twitter-mock-consumer_key\" } let(:consumer_secret) { \"twitter-mock-consumer_key_secret\" } before do allow(Global.twitter).to receive(:consumer_key).and_return(consumer_key) allow(Global.twitter).to receive(:consumer_key_secret).and_return(consumer_secret) allow(controller.request.env).to receive(:[]).and_call_original allow(controller.request.env).to receive(:[]).with(\"omniauth.strategy\").and_return(strategy_options) end context \"Success\" do it \"カスタムキーのセットアップを行う\" do subject aggregate_failures do expect(strategy_options.options[:consumer_key]).to eq consumer_key expect(strategy_options.options[:consumer_secret]).to eq consumer_secret expect(response).to have_http_status(:not_found) end end end end 注意点 paramsの設定 subject { get :setup, params: { provider: :twitter } }\n 【Rspec】ネストされているコントローラーのテストについて。「No route matches」と言わせない書き方 - 文系人間がエンジニアを目指すブログ\n 元の値を引用 allow(controller.request.env).to receive(:[]).and_call_original\n Rspec | Make a mock against hash - Qiita\n ",
   "wordCount" : "217",
   "inLanguage": "en",
   "datePublished": "2020-02-14T14:01:16+09:00",
@@ -231,7 +231,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {

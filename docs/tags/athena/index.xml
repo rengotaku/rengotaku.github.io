@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Tue, 04 Aug 2020 13:15:20 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/athena/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 04 Aug 2020 13:15:20 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/athena/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>athenaで日付のフォーマットを指定</title>
       <link>https://rengotaku.github.io/posts/3ece5d34-946a-489c-b273-877c384ca09e/</link>

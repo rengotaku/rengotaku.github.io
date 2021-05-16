@@ -7,10 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Tue, 09 Oct 2018 13:45:57 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/mysql5.6/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Fri, 14 May 2021 10:59:10 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/mysql5.6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nothing downtime with migrating MySQL</title>
+      <link>https://rengotaku.github.io/posts/7edcfc48-b596-4357-9e8c-791b07cc595f/</link>
+      <pubDate>Fri, 14 May 2021 10:59:10 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/7edcfc48-b596-4357-9e8c-791b07cc595f/</guid>
+      <description>Resolution Intended in Avoiding MySQL ALTER table downtime. In my case of runnning 5.6, I can use ..., ALGORITHM=INPLACE, LOCK=NONE. In details MySQL :: MySQL 5.6 Reference Manual :: 14.13.1 Online DDL Operations. But according to MySQL create index with LOCK=NONE still locks a table - Database Administrators Stack Exchange, you can&amp;rsquo;t this way.</description>
+    </item>
     
     <item>
       <title>ユーザ、DBの追加</title>

@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Fri, 14 Jun 2019 14:08:59 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/dynamodb/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 14 Jun 2019 14:08:59 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/dynamodb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DynamoDBでバックアップよりリストアしたい際に必要なポリシー</title>
       <link>https://rengotaku.github.io/posts/45eafdc5-e37d-4568-b1e2-a498d847635e/</link>

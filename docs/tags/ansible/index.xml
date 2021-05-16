@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Wed, 17 Jul 2019 11:20:50 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 17 Jul 2019 11:20:50 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ansibleで&#34;yum lockfile is held by another process&#34;が発生</title>
       <link>https://rengotaku.github.io/posts/feea2e50-829c-455c-8a2a-cd8c6435cc31/</link>

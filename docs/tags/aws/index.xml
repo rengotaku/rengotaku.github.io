@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Wed, 02 Sep 2020 09:19:54 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 19 Apr 2021 17:24:35 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>S3のObject数をカウントしたい</title>
+      <link>https://rengotaku.github.io/posts/42b91e94-28d3-4074-84af-5b7f11b40415/</link>
+      <pubDate>Mon, 19 Apr 2021 17:24:35 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/42b91e94-28d3-4074-84af-5b7f11b40415/</guid>
+      <description>解決 file - How can I tell how many objects I&amp;rsquo;ve stored in an S3 bucket? - Stack Overflow より、下記を実行する $ aws s3 ls s3://mybucket/ --recursive | wc -l</description>
+    </item>
     
-	<atom:link href="https://rengotaku.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>運用で発生する色々な問題の対応方法が記載された良記事</title>
+      <link>https://rengotaku.github.io/posts/9d4c7ffd-2736-4a23-b163-e0fd84d1ab6e/</link>
+      <pubDate>Fri, 18 Dec 2020 15:27:43 +0900</pubDate>
+      
+      <guid>https://rengotaku.github.io/posts/9d4c7ffd-2736-4a23-b163-e0fd84d1ab6e/</guid>
+      <description>あと2時間でElastiCacheのメモリが枯渇！そのときあなたは何をしますか？</description>
+    </item>
     
     <item>
       <title>vueプロジェクトをS3＋CloudFrontでSSL証明付きで動かす</title>

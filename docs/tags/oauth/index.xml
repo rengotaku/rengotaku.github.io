@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja_JP</language>
     <copyright>©2018-2020 Vegetable Programing.</copyright>
-    <lastBuildDate>Fri, 14 Feb 2020 14:01:16 +0900</lastBuildDate>
-    
-	<atom:link href="https://rengotaku.github.io/tags/oauth/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 14 Feb 2020 14:01:16 +0900</lastBuildDate><atom:link href="https://rengotaku.github.io/tags/oauth/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Omniauthのsetupをテストしたい</title>
       <link>https://rengotaku.github.io/posts/130dacd5-87b4-4877-a521-5623d7b9be6b/</link>

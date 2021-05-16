@@ -11,7 +11,7 @@
 <meta name="description" content="{ &#34;Version&#34;: &#34;2012-10-17&#34;, &#34;Statement&#34;: [ { &#34;Sid&#34;: &#34;VisualEditor0&#34;, &#34;Effect&#34;: &#34;Allow&#34;, &#34;Action&#34;: [ &#34;dynamodb:Scan&#34;, &#34;dynamodb:Query&#34;, &#34;dynamodb:UpdateItem&#34;, &#34;dynamodb:PutItem&#34;, &#34;dynamodb:GetItem&#34;, &#34;dynamodb:DeleteItem&#34;, &#34;dynamodb:BatchWriteItem&#34;, &#34;dynamodb:ListTables&#34;, &#34;dynamodb:DescribeTable&#34;, &#34;dynamodb:ListBackups&#34;, &#34;dynamodb:RestoreTableFromBackup&#34;, &#34;dynamodb:CreateBackup&#34;, &#34;dynamodb:DeleteTable&#34;, &#34;dynamodb:DescribeBackup&#34;, &#34;dynamodb:DeleteBackup&#34; ], &#34;Resource&#34;: &#34;*&#34; }, { &#34;Effect&#34;: &#34;Deny&#34;, &#34;Action&#34;: [ &#34;dynamodb:DeleteTable&#34; ], &#34;Resource&#34;: &#34;arn:aws:dynamodb:ap-northeast-1:xxxxxx:table/Production*&#34; } ] } create_table する際に、 Scan~BatchWriteItem が必要 Denyで本番のDBは削除対象とし">
 <meta name="author" content="">
 <link rel="canonical" href="https://rengotaku.github.io/posts/45eafdc5-e37d-4568-b1e2-a498d847635e/" />
-<link href="https://rengotaku.github.io/assets/css/stylesheet.min.08d6f2005b6ce4ed10207916c0411c66e66f2201e3f7a56e8fb2ccbc4a8b259c.css" integrity="sha256-CNbyAFts5O0QIHkWwEEcZuZvIgHj96Vuj7LMvEqLJZw=" rel="preload stylesheet"
+<link href="https://rengotaku.github.io/assets/css/stylesheet.min.e855f825213afc7aacdf334a190f4ccef15ec9f889837b681633bd7ab2d3f3d8.css" integrity="sha256-6FX4JSE6/Hqs3zNKGQ9MzvFeyfiJg3toFjO9erLT89g=" rel="preload stylesheet"
     as="style">
 
 <link rel="icon" href="https://rengotaku.github.io/favicon.ico">
@@ -21,7 +21,7 @@
 <link rel="mask-icon" href="https://rengotaku.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.83.1" />
 
 
 
@@ -55,7 +55,7 @@ if (!doNotTrack) {
   "keywords": [
     "aws", "dynamodb", "ベジプロ", "プログ", "プログラム"
   ],
-  "articleBody": "{\r\"Version\": \"2012-10-17\",\r\"Statement\": [\r{\r\"Sid\": \"VisualEditor0\",\r\"Effect\": \"Allow\",\r\"Action\": [\r\"dynamodb:Scan\",\r\"dynamodb:Query\",\r\"dynamodb:UpdateItem\",\r\"dynamodb:PutItem\",\r\"dynamodb:GetItem\",\r\"dynamodb:DeleteItem\",\r\"dynamodb:BatchWriteItem\",\r\"dynamodb:ListTables\",\r\"dynamodb:DescribeTable\",\r\"dynamodb:ListBackups\",\r\"dynamodb:RestoreTableFromBackup\",\r\"dynamodb:CreateBackup\",\r\"dynamodb:DeleteTable\",\r\"dynamodb:DescribeBackup\",\r\"dynamodb:DeleteBackup\"\r],\r\"Resource\": \"*\"\r},\r{\r\"Effect\": \"Deny\",\r\"Action\": [\r\"dynamodb:DeleteTable\"\r],\r\"Resource\": \"arn:aws:dynamodb:ap-northeast-1:xxxxxx:table/Production*\"\r}\r]\r}\rcreate_table する際に、 Scan~BatchWriteItem が必要\rDenyで本番のDBは削除対象としない\r ポリシーの評価論理 - AWS Identity and Access Management\n tips Restore権限を特定のテーブルに限定したい 復元先のテーブル名ではなく、復元元（バックアップ元）のテーブルのResourceを許可する必要がある。\n復元元：Production、復元先：Developmentの場合\n{\r\"Effect\": \"Allow\",\r\"Action\": [\r\"dynamodb:RestoreTableFromBackup\"\r],\r\"Resource\": \"arn:aws:dynamodb:ap-northeast-1:xxxxxx:table/Production*\"\r}\r\"Resource\": \"arn:aws:dynamodb:ap-northeast-1:xxxxxx:table/Development*\"\r",
+  "articleBody": "{ \"Version\": \"2012-10-17\", \"Statement\": [ { \"Sid\": \"VisualEditor0\", \"Effect\": \"Allow\", \"Action\": [ \"dynamodb:Scan\", \"dynamodb:Query\", \"dynamodb:UpdateItem\", \"dynamodb:PutItem\", \"dynamodb:GetItem\", \"dynamodb:DeleteItem\", \"dynamodb:BatchWriteItem\", \"dynamodb:ListTables\", \"dynamodb:DescribeTable\", \"dynamodb:ListBackups\", \"dynamodb:RestoreTableFromBackup\", \"dynamodb:CreateBackup\", \"dynamodb:DeleteTable\", \"dynamodb:DescribeBackup\", \"dynamodb:DeleteBackup\" ], \"Resource\": \"*\" }, { \"Effect\": \"Deny\", \"Action\": [ \"dynamodb:DeleteTable\" ], \"Resource\": \"arn:aws:dynamodb:ap-northeast-1:xxxxxx:table/Production*\" } ] } create_table する際に、 Scan~BatchWriteItem が必要\rDenyで本番のDBは削除対象としない\r ポリシーの評価論理 - AWS Identity and Access Management\n tips Restore権限を特定のテーブルに限定したい 復元先のテーブル名ではなく、復元元（バックアップ元）のテーブルのResourceを許可する必要がある。\n復元元：Production、復元先：Developmentの場合\n{\r\"Effect\": \"Allow\",\r\"Action\": [\r\"dynamodb:RestoreTableFromBackup\"\r],\r\"Resource\": \"arn:aws:dynamodb:ap-northeast-1:xxxxxx:table/Production*\"\r}\r\"Resource\": \"arn:aws:dynamodb:ap-northeast-1:xxxxxx:table/Development*\"\r",
   "wordCount" : "207",
   "inLanguage": "en",
   "datePublished": "2019-06-14T14:08:59+09:00",
@@ -236,7 +236,7 @@ if (!doNotTrack) {
 
 
 
-<script defer src="https://rengotaku.github.io/assets/js/highlight.min.27cd435cc9ed6abb4b496581b151804f79f366c412620272bb94e2f5f598ebcc.js" integrity="sha256-J81DXMntartLSWWBsVGAT3nzZsQSYgJyu5Ti9fWY68w="
+<script defer src="https://rengotaku.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <script>
     window.onload = function () {
