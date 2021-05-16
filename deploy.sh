@@ -3,11 +3,11 @@
 # If a command fails then the deploy stops
 set -e
 
-git checkout html
-
 printf "\033[0;32m%s\033[0m\n" "Deploying updates to GitHub..."
 
 cd hugo && HUGO_ENV=production hugo -v -d ../docs && cd -
+
+git checkout html
 
 printf "\033[0;32m%s\033[0m\n" "Done hugo..."
 
