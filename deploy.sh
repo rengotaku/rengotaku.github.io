@@ -3,9 +3,10 @@
 # If a command fails then the deploy stops
 set -e
 
-git checkout html
-
 printf "\033[0;32m%s\033[0m\n" "Deploying updates to GitHub..."
+
+git checkout -b html origin/html
+git merge origin/master -m "Circle CI"
 
 cd hugo && HUGO_ENV=production hugo -v -d ../docs && cd -
 
