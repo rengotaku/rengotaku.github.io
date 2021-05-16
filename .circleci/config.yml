@@ -13,8 +13,8 @@ jobs:
       - checkout
       - setup_remote_docker:
           docker_layer_caching: true
+      - run: git config --global user.name "circle ci"
       - run: git config --global user.email "taku.kisi.1989+circleci@gmail.com"
-      - run: git config --global user.email "circle_ci"
       - run: sudo apt-get update && sudo apt-get install -y git
       - run: git submodule sync && git submodule update --init
       - run: cd hugo && HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
