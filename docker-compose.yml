@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  jekyll:
+    # latest is not working because of the errro about webrick (LoadError)
+    # see: https://github.com/jekyll/jekyll/issues/9066
+    # image: jekyll/jekyll:4.2.0
+    build: .
+    # entrypoint: >
+    #   /bin/sh -c "
+    #   jekyll new --skip-bundle .;
+    #   jekyll serve --watch --force_polling --verbose;
+    #   "
+    # command: tail -f /dev/null
+    # command: bundle exec jekyll serve --livereload
+    command: bundle exec jekyll serve --watch --host=0.0.0.0
+    ports:
+      - 4000:4000
+    volumes:
+      - ./:/srv/jekyll

@@ -1,13 +1,13 @@
-# Usage
-sqliteを読み出して、hugoのテンプレートに合うようにファイルを作成する。
+# usage
+## start process
+```
+$ cd hugo
+$ docker-compose up
+```
+## access
+see `http://localhost:1313/`
 
-# Build
-## Create posts
+# create docs
 ```
-$ cd converter
-$ go run main.go xxxx.sqlite3
-```
-## Create posts
-```
-$ hugo
+$ cd hugo && HUGO_ENV=production hugo -v -d ../docs && cd -
 ```
