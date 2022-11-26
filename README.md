@@ -1,13 +1,14 @@
-# usage
-## start process
+# Usage
+## Check jekyll posts in local
 ```
-$ cd hugo
 $ docker-compose up
 ```
-## access
-see `http://localhost:1313/`
 
-# create docs
+# Markdown template
 ```
-$ cd hugo && HUGO_ENV=production hugo -v -d ../docs && cd -
+---
+title: "title-hogehoge"
+---
+
+something content...
 ```
