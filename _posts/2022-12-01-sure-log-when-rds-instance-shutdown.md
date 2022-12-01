@@ -1,5 +1,5 @@
 ---
-title: "[AWS] Refer to values other threads"
+title: "[AWS] Check error log when RDS was crashed"
 tags: ["rds", "aws", "aurora"]
 ---
 
