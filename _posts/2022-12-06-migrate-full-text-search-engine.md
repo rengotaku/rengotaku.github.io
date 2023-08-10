@@ -35,7 +35,7 @@ https://aws.amazon.com/jp/opensearch-service/pricing/
 * $0.1464 /GB/月
 
 ##### 試算
-* trial, staging環境: (t3.small.search + EBS 20GB) * 2 = ($40.32 + $2.928) * 2 = $86.496
+* staging環境: (t3.small.search + EBS 20GB) * 2 = ($40.32 + $2.928) * 2 = $86.496
 * 本番: m3.large.search + EBS 50GB = $194.4 + $7.32 = $201.72
 * 合計: $288.216
 
@@ -67,7 +67,7 @@ https://aws.amazon.com/jp/cloudsearch/pricing/
   * 最初の10 TB/月:  $0.140/GB
   * 次の40 TB/月:    $0.135/GB
 ##### 試算
-* trial, staging環境: (search.m1.small + 送信 10GB) * 2 = ($59.04 + $1.4) * 2 = $120.88
+* staging環境: (search.m1.small + 送信 10GB) * 2 = ($59.04 + $1.4) * 2 = $120.88
 * 本番: search.m3.large + 送信 50GB = $195.84 + $6.8 = $202.64
 * 合計: $323.52
 
