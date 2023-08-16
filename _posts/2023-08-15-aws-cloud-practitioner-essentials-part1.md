@@ -1,5 +1,5 @@
 ---
-title: "AWS Cloud Practitioner Essentials (Japanese) (Na) 日本語実写版 を受けて"
+title: "AWS Cloud Practitioner Essentials (Japanese) (Na) 日本語実写版 を受けて（パート1）"
 tags: ["aws"]
 ---
 
