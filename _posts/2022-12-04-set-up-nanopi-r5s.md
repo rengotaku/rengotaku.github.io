@@ -37,6 +37,8 @@ You could find "Installation Done" and you shutdown belows and pull Micro SD Car
 Slow Flashing seems turn LED 2 time per a second.
 
 ## Login FriendlyWrt
+Put internet cable to LAN port of NanoPi
+
 Check your default gate IP like below:
 ```
 $ arp -a
