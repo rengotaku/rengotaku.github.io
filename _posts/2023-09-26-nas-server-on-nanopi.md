@@ -16,6 +16,11 @@ tags: ["nas", "linux", "nanopi"]
 `mkdir /mnt/ssd1/share && chomod 777 /mnt/ssd1/share`を実行しておく。
 MACからNASを参照できるけどアップロードできないようなことが権限問題で発生してしまう。
 
+# 自動マウント
+http://192.168.2.1/cgi-bin/luci/admin/system/mounts (`System -> Mount Points`)
+
+`Mount Points`に追加する。（/etc/fstab に記載しても上書きされる模様）
+
 # LANポート側からNASを閲覧できるようにする
 [NanoPi R4S SBC preview with OpenWrt and Ubuntu Core - CNX Software](https://www.cnx-software.com/2020/12/13/nanopi-r4s-sbc-preview-with-openwrt-and-ubuntu-core/)
 `http://192.168.2.1/cgi-bin/luci/admin/network/network`(Network -> Interfaces) にて各種ポートの設定を確認します。
