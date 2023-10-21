@@ -34,7 +34,7 @@ tags: ["security"]
 * テレワークセキュリティーガイドライン
   * [総務省｜テレワークにおけるセキュリティ確保](https://www.soumu.go.jp/main_sosiki/cybersecurity/telework/index.html)
   * [総務省｜テレワークセキュリティに関する手引き（チェックリスト）第3版の公表](https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu02_000479.html)
-* [Cybersecurity Framework | NIST](https://www.nist.gov/cyberframework)
-* [Cybereason Nocturnus | Authors | Malicious Life Network | Cybereason](https://www.cybereason.com/blog/authors/cybereason-nocturnus)
+* [Cybersecurity Framework](https://www.nist.gov/cyberframework)
+* [Cybereason Nocturnus](https://www.cybereason.com/blog/authors/cybereason-nocturnus)
   * 脅威情報を下支えするチームとして、インテリジェンスチーム「Nocturnus」があり、最新のサイバー攻 撃と、その手法について日々研究を行っています。その研究成果は、製品やサービスに役立てるだけではなく、ブ ログやメディアを通して世界に発信しています。
 * CybereasonのEDRとMDRは、ランサムウェアに対して負け知らずで、1度もランサムを実行されたことがない

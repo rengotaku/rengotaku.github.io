@@ -22,6 +22,7 @@ $ cat /etc/logrotate.d/rails_app
   dateformat -%d%m%Y
 }
 ```
+※ [logrotateのcopytruncateによる記入漏れ検証 – 株式会社ルーター](https://rooter.jp/data-format/omission_of_logrotate_copytruncate/) に指定の意味が記載あり
 
 指定のフォルダの配下
 ```

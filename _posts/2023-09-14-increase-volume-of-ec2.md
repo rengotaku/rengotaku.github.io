@@ -32,10 +32,10 @@ Filesystem     Type      Size  Used Avail Use% Mounted on
 
 ## ステータスチェック(オプショナル)
 心配性なので検証中に異常が発生してないかチェックする。
-1秒毎にシステムにアクセスしてダウンの有無を確認。
+1秒毎にシステムにアクセスしてダウンの有無を確認。(最大1秒`-m 1`で接続を切ります)
 ```
-while sleep 1; do
-  echo "`date "+%T"` `curl -Ls -o /dev/null -w "%{http_code}" https://example.com/`" >> http_statuses.log;
+while sleep 0.1; do
+  echo "`date "+%T"` `curl -Ls -o /dev/null -w "%{http_code}" -m 1 https://example.com/`" >> http_statuses.log;
 done
 ```
 
@@ -68,7 +68,8 @@ CHANGED: partition=1 start=2048 old: size=209713119 end=209715167 new: size=4194
 ```
 
 **状態**
-```ubuntu@xxx:~$ lsblk
+```
+ubuntu@xxx:~$ lsblk
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 nvme0n1     259:0    0   200G  0 disk
 └─nvme0n1p1 259:1    0   200G  0 part /

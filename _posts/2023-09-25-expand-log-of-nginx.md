@@ -4,6 +4,7 @@ tags: ["nginx"]
 ---
 
 [Tech Blog: How to configure JSON logging in nginx? - Velebit AI](https://www.velebit.ai/blog/nginx-json-logging/)
+[Configure NGINX logging and monitoring - Splunk Documentation](https://docs.splunk.com/Documentation/AddOns/released/NGINX/Setupv2)
 
 # 設定
 /etc/nginx/nginx.conf
@@ -15,6 +16,9 @@ access_log /var/log/nginx/access.log logger-json;
 
 **出力例**
 nginxの前段にALBがあり、ユーザのIPは`http_x_forwarded_for`を参照するようにしてます。
+
+[Capture client IP addresses in the web server logs behind an ELB | AWS re:Post](https://repost.aws/knowledge-center/elb-capture-client-ip-addresses)
+`2.    In the LogFormat section, add $http_x_forwarded_for, similar to the following:`
 
 ```
 {
