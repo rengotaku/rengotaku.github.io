@@ -97,23 +97,35 @@ ID                          NAME         DRIVER    CREATED          UPDATED
 wxwt8voxxxxxxxxxxxxxxxxxx   secure_one             21 minutes ago   21 minutes ago
 ```
 
-[Secrets top-level element | Docker Docs](https://docs.docker.com/compose/compose-file/09-secrets/)をみると、`external: true`は利用できる風に記載されている。
-[How to use secrets in Docker Compose | Docker Docs](https://docs.docker.com/compose/use-secrets/)には記載ない。前者はdocker-composeのことかと思ったが違う？？？
+[Secrets top-level element](https://docs.docker.com/compose/compose-file/09-secrets/)をみると、`external: true`は利用できる風に記載されている。
+[How to use secrets in Docker Compose](https://docs.docker.com/compose/use-secrets/)には記載ない。前者はdocker-composeのことかと思ったが違う？？？
 
 **対応方法**
+
 [Docker – how do you manage secret values with docker-compose v3.1 – iTecNote](https://itecnote.com/tecnote/r-how-do-you-manage-secret-values-with-docker-compose-v3-1/)をみると、docker-composeの記述をdockerコマンドで読み込んで利用している。（未検証です）どういう場合に利用するか不明。stdin方式はdocker-composeを利用している間は無視して良さそう。
 
 # 考察
-Secret機能は、[The Complete Guide to Ruby on Rails Encrypted Credentials | Web-Crunch](https://web-crunch.com/posts/the-complete-guide-to-ruby-on-rails-encrypted-credentials)のようなものだと思い込みがあり理解が難航した。値を暗号化して誤ってコミットした時も安全である類のものと。
+Secret機能は、[The Complete Guide to Ruby on Rails Encrypted Credentials](https://web-crunch.com/posts/the-complete-guide-to-ruby-on-rails-encrypted-credentials)のようなものだと思い込みがあり理解が難航した。値を暗号化して誤ってコミットした時も安全である類のものと。
 だがやっていることは、秘匿の値をファイルをボリュームにアタッチしている感じ。利用したい場合はそのファイルを読み込む。暗号化とかしているわけではない。
 
 [The Complete Guide to Docker Secrets - Earthly Blog](https://earthly.dev/blog/docker-secrets/)を読むと一般的に利用される環境変数への秘匿情報の埋め込みがいけない理由が記載されている
+
 **分かる**
 > Secrets stored in an environment variable are more vulnerable to accidental exposure.
+
+予期せず秘匿情報を含めるのはあるある
+
 > These variables are available to all processes, and it can be difficult to track access.
 > Secrets can be shared with subprocesses with little oversight.
 
-**なるほど。。。**
+ローカルで動作させるなどの場合は気にしないかな。
+
+**なるほど**
 > Applications might accidentally print the entire collection of .env variables during debugging.
 
 個人的には`.env`を細かく分割するなどして運用して回避もできそうとは思った。
+
+# 所感
+使ってみて思ったが、Secretsを利用することをDockerイメージが対応している必要がある。
+例えば、MySQLの場合は`USER`などのENV変数に値を入れて指定する。
+Secretsの場合はファイルを読み込ませる必要があるので、`USER_FILE`のように変更する必要あり。（対応しているしていないが分かれるのでSecretsはあまり気乗りしない）

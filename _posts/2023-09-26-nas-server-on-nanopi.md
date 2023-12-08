@@ -7,10 +7,12 @@ tags: ["nas", "linux", "nanopi"]
 [【Linux】外付けストレージのフォーマット&マウント方法](https://zenn.dev/tochiman/articles/a3c4ace8e20874)
 
 `fdisk /dev/sda`
+nでdefaultを進める。すでにパーティションあれば、dで消す
+
 `mount /dev/sda1 /mnt/ssd1`
 
 [【ゼロから解説】Linuxのフォーマットの方法](https://eng-entrance.com/linux-format)
-`mkfs -t ext4 /dev/sdb1`を行った方が良いかも。（上記の記事はSSDをフォーマットしている前提）
+`mkfs -t ext4 /dev/sda1`を行った方が良いかも。（上記の記事はSSDをフォーマットしている前提）
 
 ## マウントした先にアクセス可能なフォルダを作成
 `mkdir /mnt/ssd1/share && chomod 777 /mnt/ssd1/share`を実行しておく。

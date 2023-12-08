@@ -21,7 +21,8 @@ and check to make sure that only the key(s) you wanted were added.
 **注意**
 ユーザのパスワード認証は求められる。ユーザにパスワードを設定していない場合でも。
 
-https://askubuntu.com/a/1009687
+ssh-copy-id で行なっているのは
+[security - ssh-copy-id without authentication - Ask Ubuntu](https://askubuntu.com/a/1009687)
 ```
 scp ~/.ssh/id_ed25519_lan.pub pi@192.168.2.50:
 ssh pi@192.168.2.50 'cat id_rsa.pub >> .ssh/authorized_keys'
