@@ -1,0 +1,71 @@
+---
+title: "Rubyエンジニアが利用しているツール"
+tags: ["application", "tool"]
+---
+
+- vscode
+    - テキストエディタ
+- sequel ace
+    - MySQLデータベース管理ツール
+- gyazo
+    - 切り抜きスクショ取得
+- Docker Desktop
+    - Docker環境構築用
+- Image Optim
+    - 画像圧縮ツール
+- FireFox
+    - ウェブブラウザ
+- Postman
+    - API開発で使うツール
+- RubyMine
+    - IDE
+- Notion
+    - Notionのデスクトップアプリ
+- Sublime
+    - テキストエディタ
+- Karabiner-Elements
+    - 入力補助ツール
+- Handbreak
+    - 動画縮小変換
+- Clipy
+    - コピペ補助
+- MySQLworkbench
+    - mysql のデータを見たりするGUIツール
+- LICEcap
+    - gifとれるやつ。挙動確認で使用
+- GitHubDesktop
+    - git,github操作のGUIツール
+- Stay
+    - アプリケーションの配置を記憶し、再配置してくれるソフト。ジェイ
+- Emacs
+    - テキストエディタ
+- Mongo
+    - データベース
+- MongoDB Compass
+    - mongodbを確認する際に私用
+- scroll receiver
+    - トラックパッドとマウスのスクロール方向を逆に設定するツール
+- CompareMerge2
+    - ファイルの差分確認
+- Kindle
+    - 開発時に技術書見るために使用
+- run cat
+    - CPU、メモリ、ネットワーク状況を可視化してくれるソフト。ジェイ
+- homebrew
+    - パッケージ管理システム
+- studio 3T
+    - mongoDBを確認する際に使用
+- iTerm
+    - ターミナル
+- Simple Mind
+    - マインドマップ
+- bit warden
+    - パスワードマネージャー。ジェイ
+- ffmpeg
+    - 動画処理
+- AS Timer
+    - タイマー
+- JustFocus
+    - 効率化タイマー
+- mailcatcher
+    - ローカルでメール確認用のSMTPサーバー
