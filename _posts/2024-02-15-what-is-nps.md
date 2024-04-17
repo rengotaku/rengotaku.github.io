@@ -3,7 +3,7 @@ title: "NPSとは？"
 tags: ["marketing"]
 ---
 
-[NPS®とは（ネットプロモータースコア）顧客満足度に変わる新指標 - NPSソリューション | NTTコム オンライン](https://www.nttcoms.com/service/nps/summary/)
+[NPS®とは（ネットプロモータースコア）顧客満足度に変わる新指標 - NPSソリューション - NTTコム オンライン](https://www.nttcoms.com/service/nps/summary/)
 
 * NPSの誕生の背景
     * 今後の環境

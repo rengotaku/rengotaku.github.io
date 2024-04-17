@@ -10,6 +10,7 @@ OpenSSL系のエラーが原因で `bundle install` に失敗しており、解�
 Ruby2.7とOpenSSL3系の互換性が悪いらしく、一旦OpenSSL@1.1で設定しなおしました。
 
 ## エラー内容(bundle install時)
+
 ```
 OpenSSL::X509::StoreError: system lib
   /Users/hoge/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/bundler-2.4.22/lib/bundler/fetcher.rb:304:in `add_file'
@@ -19,6 +20,7 @@ OpenSSL::X509::StoreError: system lib
 ## 確認内容
 
 1. 証明書の期限は問題なし（最新に更新済み）
+
 ```
 $ openssl s_client -connect example.com:443 < /dev/null 2> /dev/null | openssl x509 -text | grep Not
 
@@ -27,6 +29,7 @@ Not After : Mar  1 23:59:59 2025 GMT
 ```
 
 2. Rubyはopenssl@1.1で再インストール済み
+
 ```
 require 'openssl'
 puts OpenSSL::OPENSSL_VERSION
@@ -38,6 +41,7 @@ OpenSSL 1.1.1w  11 Sep 2023
 ```
 
 3. Ruby側はシステムの証明書を見ている
+
 ```
 $ ruby -ropenssl -e 'p OpenSSL::X509::DEFAULT_CERT_FILE'
 
@@ -45,6 +49,7 @@ $ ruby -ropenssl -e 'p OpenSSL::X509::DEFAULT_CERT_FILE'
 ```
 
 4. 環境変数でシステムのSSLを見に行くように設定している
+
 ```
 $ ENV | grep SSL
 
@@ -53,6 +58,7 @@ SSL_CERT_DIR=/usr/local/etc/openssl@1.1/certs
 ```
 
 5. bundle configにopenssl@1.1のパスを指定
+
 ```
 $ bundle config
 
@@ -71,6 +77,7 @@ Set for the current user (/Users/hoge/.bundle/config): "/usr/local/etc/openssl@1
 ```
 
 別環境でのチェック
+
 ```
 $ openssl version
 OpenSSL 1.1.1u  30 May 2023
