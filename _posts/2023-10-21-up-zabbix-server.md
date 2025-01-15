@@ -109,6 +109,7 @@ services:
       - ./zbx_env/usr/share/zabbix/modules/:/usr/share/zabbix/modules/:ro
     links:
       - mysql-server:mysql-server
+      - zabbix-server:zabbix-server
     deploy:
       resources:
         limits:
@@ -119,6 +120,7 @@ services:
           memory: 256M
     env_file:
       - ./env_vars/.env_db_mysql
+      - ./env_vars/.env_zabbix
     depends_on:
       - mysql-server
       - zabbix-server
@@ -236,8 +238,13 @@ volumes:
 ```
 MYSQL_USER=xxx
 MYSQL_PASSWORD=xxx
-MYSQL_ROOT_USER=xxx
 MYSQL_ROOT_PASSWORD=xxx
+```
+
+./env_vars/.env_zabbix に下記を記載してください
+```
+ZBX_SERVER_HOST=zabbix-server
+ZBX_SERVER_PORT=10051
 ```
 
 ## 別端末をzabbix agentで監視する
@@ -278,3 +285,11 @@ Connection closed by foreign host.
 Trying 192.168.2.10...
 telnet: connect to address 192.168.2.10: Connection refused
 ```
+
+https://blog.silver-cat.info/2021/10/openwrtzabbix-agentzabbix-server.html
+
+`# iptables -A INPUT -p tcp --dport 10050 -j ACCEPT -s <Zabbix ServerのIP>`
+
+**Frontendの表示が遅い**
+
+https://www.initmax.cz/wp-content/uploads/2022/06/zabbix_performance_tuning_6.0.pdf
