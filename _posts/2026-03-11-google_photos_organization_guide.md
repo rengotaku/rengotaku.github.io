@@ -1,3 +1,8 @@
+---
+title: "Google Photoバックアップ整理ガイド"
+tags: ["google-photos", "backup", "organization", "exiftool"]
+---
+
 # Google Photoバックアップ整理ガイド
 
 > 最終更新: 2026-03-11
