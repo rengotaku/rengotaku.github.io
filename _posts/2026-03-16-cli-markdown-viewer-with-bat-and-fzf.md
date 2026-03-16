@@ -31,36 +31,58 @@ brew install glow bat fzf
 
 ```bash
 # Markdown viewer (glow for rendering, bat for fzf preview)
+# 引数なし: VSCode風ブラウザ（左:ファイル一覧 / 右:プレビュー、Enterで全画面、Escで一覧に戻る）
+# 引数あり: 直接表示
 mdv() {
-  local file
-  if [ $# -eq 0 ]; then
-    file=$(find . -name '*.md' -not -path '*/node_modules/*' -not -path '*/.git/*' | fzf --preview 'bat --color=always --style=numbers --language=md {}')
-    [ -z "$file" ] && return
-  else
-    file="$1"
+  if [ $# -ge 1 ]; then
+    glow -w 0 -p "$1"
+    return
   fi
-  glow -w 0 -p "$file"
+  local file
+  while true; do
+    file=$(find . -name '*.md' -not -path '*/node_modules/*' -not -path '*/.git/*' |
+      sed 's|^\./||' | sort |
+      fzf --layout=reverse \
+          --preview 'glow -w 0 {}' \
+          --preview-window 'right:65%:wrap' \
+          --header 'Enter: 全画面表示 / Esc: 終了' \
+          --bind 'ctrl-/:change-preview-window(down:50%|right:65%)')
+    [ -z "$file" ] && break
+    glow -w 0 -p "$file"
+  done
 }
 ```
 
 # 使い方
 
 ```bash
-# 引数なし: fzfでカレントディレクトリ以下の.mdファイルをインタラクティブに選択
+# 引数なし: VSCode風ブラウザで起動
 mdv
 
 # 引数あり: 直接表示
 mdv README.md
 ```
 
-引数なしで実行すると、fzfが起動してファイルを絞り込める。右ペインにbatによるプレビューも表示される。
+## VSCode風ブラウザの操作
+
+| キー | 動作 |
+|------|------|
+| 文字入力 | ファイル名をファジー検索 |
+| `↑` / `↓` | ファイル選択を移動（右ペインのプレビューが連動） |
+| `Enter` | 選択したファイルをglowで全画面表示 |
+| `q` | 全画面表示から一覧に戻る |
+| `Ctrl+/` | プレビュー位置の切り替え（右⇄下） |
+| `Esc` | mdvを終了 |
+
+引数なしで実行すると、左にファイル一覧、右にglowによるプレビューが表示される。
+ファイルを選択するとプレビューがリアルタイムで切り替わり、Enterで全画面表示、qで一覧に戻れる。
 
 # ツール使い分けのポイント
 
 | 用途 | ツール | 理由 |
 |------|--------|------|
-| メイン閲覧 | glow | テーブル・見出しをレンダリング、日本語の幅計算が正確 |
-| fzfプレビュー | bat | 軽快、シンタックスハイライトで視認性良好 |
+| メイン閲覧（全画面） | glow | テーブル・見出しをレンダリング、日本語の幅計算が正確 |
+| fzfプレビュー | glow | メイン閲覧と同じレンダリングで一貫性がある |
 
 # glowのオプション
 
